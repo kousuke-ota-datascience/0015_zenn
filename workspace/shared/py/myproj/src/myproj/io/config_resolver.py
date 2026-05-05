@@ -38,7 +38,11 @@ def resolve_placeholders(value: Any, placeholders: Mapping[str, str]) -> Any:
     return value
 
 
-def load_dataset_definition(path: Path, project_root: Path) -> Mapping[str, Any]:
+def load_dataset_definition(
+    path: Path,
+    project_root: Path,
+    extra_placeholders: Mapping[str, str] | None = None,
+) -> Mapping[str, Any]:
     with path.open(encoding="utf-8") as file:
         dataset_definition = yaml.safe_load(file) or {}
 
@@ -46,4 +50,7 @@ def load_dataset_definition(path: Path, project_root: Path) -> Mapping[str, Any]
         "path_sys_base": str(project_root),
         "path_sysy_base": str(project_root),
     }
+    if extra_placeholders is not None:
+        placeholders.update(extra_placeholders)
+
     return resolve_placeholders(dataset_definition, placeholders)
