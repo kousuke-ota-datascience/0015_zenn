@@ -12,7 +12,7 @@ import pandas as pd
 def load_script_module(project_root: Path) -> ModuleType:
     module_path = (
         project_root
-        / "articles/3771bdc6a25760/notebooks/01_load_completejourney.py"
+        / "articles/3771bdc6a25760/experiment/01_load_completejourney.py"
     )
     spec = importlib.util.spec_from_file_location(
         "test_load_completejourney_script",
@@ -27,51 +27,11 @@ def load_script_module(project_root: Path) -> ModuleType:
     return module
 
 
-def test_resolve_placeholders_preserves_unknown_keys(project_root: Path) -> None:
+def test_script_uses_packaged_project_root_resolver(project_root: Path) -> None:
     module = load_script_module(project_root)
+    start = project_root / "articles/3771bdc6a25760/notebooks"
 
-    resolved = module.resolve_placeholders(
-        {
-            "path": "{path_sys_base}/shared/data",
-            "typo_path": "{path_sysy_base}/shared/data",
-            "unknown": "{not_defined}/x",
-            "nested": ["{path_sys_base}/a"],
-        },
-        {
-            "path_sys_base": str(project_root),
-            "path_sysy_base": str(project_root),
-        },
-    )
-
-    assert resolved["path"] == f"{project_root}/shared/data"
-    assert resolved["typo_path"] == f"{project_root}/shared/data"
-    assert resolved["unknown"] == "{not_defined}/x"
-    assert resolved["nested"] == [f"{project_root}/a"]
-
-
-def test_load_dataset_definition_resolves_project_root_placeholder(
-    project_root: Path,
-    tmp_path: Path,
-) -> None:
-    module = load_script_module(project_root)
-    dataset_yaml = tmp_path / "dataset.yaml"
-    dataset_yaml.write_text(
-        """
-default:
-  file:
-    path: "{path_sys_base}/shared/data"
-    name: ""
-    type: "parquet"
-sample:
-  file:
-    name: "sample.parquet"
-""",
-        encoding="utf-8",
-    )
-
-    data = module.load_dataset_definition(dataset_yaml, project_root)
-
-    assert data["default"]["file"]["path"] == f"{project_root}/shared/data"
+    assert module.find_project_root(start) == project_root
 
 
 def test_load_completejourney_loads_selected_parquet(
@@ -100,8 +60,6 @@ sample:
         encoding="utf-8",
     )
 
-    import myproj.logger.custom_logger as custom_logger
-
     class FakeCustomLogger:
         def __init__(self, *args, **kwargs):
             self._logger = logging.getLogger("test_load_completejourney")
@@ -109,7 +67,7 @@ sample:
         def get_logger(self):
             return self._logger
 
-    monkeypatch.setattr(custom_logger, "CustomLogger", FakeCustomLogger)
+    monkeypatch.setattr(module, "CustomLogger", FakeCustomLogger)
 
     loaded = module.load_completejourney(
         project_root=project_root,
