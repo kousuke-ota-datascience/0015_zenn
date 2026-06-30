@@ -2,7 +2,6 @@
 # coding: utf-8
 # Converted from articles/5132eae5e3dd99/notebooks/03_causal_discovery_completejourney.ipynb
 
-# %% [code] cell 0
 from __future__ import annotations
 
 import argparse
@@ -18,7 +17,6 @@ from myproj.io.file_io import FileConfigRegistry, FileIOUtils
 from myproj.logger.custom_logger import CustomLogger
 
 
-# %% [code] cell 1
 DATASET_YAML = Path("shared/py/myproj/conf/dataset/completejourney/10_interim.yaml")
 DEFAULT_CAMPAIGN_ID = "18"
 DEFAULT_OUTPUT_DIR = Path("articles/3771bdc6a25760/experiment/causal_discovery")
@@ -49,7 +47,6 @@ INCOME_ORDER = {
 }
 
 
-# %% [code] cell 2
 @dataclass(frozen=True)
 class CampaignWindow:
     campaign_id: str
@@ -77,7 +74,6 @@ class DiscoveryResult:
     message: str
 
 
-# %% [code] cell 3
 class CompleteJourneyDataLoader:
     def __init__(self, *, project_root: Path, dataset_yaml: Path) -> None:
         self.project_root = project_root
@@ -103,7 +99,6 @@ class CompleteJourneyDataLoader:
         }
 
 
-# %% [code] cell 4
 class AbstractPreprocessor(ABC):
     @abstractmethod
     def preprocess(self) -> PreprocessingResult:
@@ -706,95 +701,102 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-# %% [code] cell 5
 # Notebook stub for values normally supplied by parse_args().
-args = argparse.Namespace(
-    project_root=find_project_root(Path.cwd()),
-    dataset_yaml=None,
-    campaign_id=DEFAULT_CAMPAIGN_ID,
-    pre_weeks=8,
-    alpha=0.01,
-    collinearity_threshold=0.995,
-    no_background_knowledge=False,
-    algorithms=("pc", "ges", "lingam", "notears"),
-    notears_threshold=0.3,
-    output_dir=None,
-)
+# args = argparse.Namespace(
+#     project_root=find_project_root(Path.cwd()),
+#     dataset_yaml=None,
+#     campaign_id=DEFAULT_CAMPAIGN_ID,
+#     pre_weeks=8,
+#     alpha=0.01,
+#     collinearity_threshold=0.995,
+#     no_background_knowledge=False,
+#     algorithms=("pc", "ges", "lingam", "notears"),
+#     notears_threshold=0.3,
+#     output_dir=None,
+# )
 
-
-# %% [code] cell 6
-project_root = (
-    args.project_root.resolve()
-    if args.project_root is not None
-    else find_project_root(Path.cwd())
-)
-dataset_yaml = (
-    args.dataset_yaml.resolve()
-    if args.dataset_yaml is not None
-    else project_root / DATASET_YAML
-)
-output_dir = (
-    args.output_dir.resolve()
-    if args.output_dir is not None
-    else project_root / DEFAULT_OUTPUT_DIR
-)
-
-
-# %% [code] cell 7
-data_loader = CompleteJourneyDataLoader(
-    project_root=project_root,
-    dataset_yaml=dataset_yaml,
-)
-tables = data_loader.load_tables()
-
-preprocessor = CompleteJourneyPreprocessor(
-    tables=tables,
-    campaign_id=str(args.campaign_id),
-    pre_weeks=args.pre_weeks,
-    collinearity_threshold=args.collinearity_threshold,
-)
-preprocessing_result = preprocessor.preprocess()
-model_frame = preprocessing_result.model_frame
-discovery_frame = preprocessing_result.discovery_frame
-standardized = preprocessing_result.standardized
-
-causal_discovery = CausalDiscovery(
-    alpha=args.alpha,
-    use_background_knowledge=not args.no_background_knowledge,
-    algorithms=args.algorithms,
-    notears_threshold=args.notears_threshold,
-)
-discovery_results = causal_discovery.run_all(standardized)
-causal_discovery.write_outputs(
-    results=discovery_results,
-    discovery_frame=discovery_frame.loc[:, standardized.columns],
-    output_dir=output_dir,
-    collinearity_threshold=args.collinearity_threshold,
-    campaign_id=str(args.campaign_id),
-    pre_weeks=args.pre_weeks,
-)
-summary = pd.DataFrame(
-    {
-        "algorithm": result.algorithm,
-        "status": result.status,
-        "edges": len(result.edges),
-        "message": result.message,
-    }
-    for result in discovery_results.values()
-)
-
-print(f"samples: {len(discovery_frame):,}")
-print(f"variables: {len(standardized.columns):,}")
-print(f"output_dir: {output_dir}")
-print(summary.to_string(index=False))
-
-
-# %% [code] cell 8
 def main() -> None:
-    pass
+    args = parse_args()
+    project_root = (
+        args.project_root.resolve()
+        if args.project_root is not None
+        else find_project_root(Path.cwd())
+    )
+    dataset_yaml = (
+        args.dataset_yaml.resolve()
+        if args.dataset_yaml is not None
+        else project_root / DATASET_YAML
+    )
+    output_dir = (
+        args.output_dir.resolve()
+        if args.output_dir is not None
+        else project_root / DEFAULT_OUTPUT_DIR
+    )
+
+
+    data_loader = CompleteJourneyDataLoader(
+        project_root=project_root,
+        dataset_yaml=dataset_yaml,
+    )
+    tables = data_loader.load_tables()
+
+    preprocessor = CompleteJourneyPreprocessor(
+        tables=tables,
+        campaign_id=str(args.campaign_id),
+        pre_weeks=args.pre_weeks,
+        collinearity_threshold=args.collinearity_threshold,
+    )
+    preprocessing_result = preprocessor.preprocess()
+    model_frame = preprocessing_result.model_frame
+    discovery_frame = preprocessing_result.discovery_frame
+    standardized = preprocessing_result.standardized
+
+    causal_discovery = CausalDiscovery(
+        alpha=args.alpha,
+        use_background_knowledge=not args.no_background_knowledge,
+        algorithms=args.algorithms,
+        notears_threshold=args.notears_threshold,
+    )
+    ## run_all するパターン。これは時間がかかるので、PC のみを実行するパターンに変更。
+    ## discovery_results = causal_discovery.run_all(standardized)
+
+    ## run_pc returns a tuple, so convert it to the DiscoveryResult shape expected by write_outputs.
+    causal_graph, edges = causal_discovery.run_pc(standardized)
+    discovery_results = {
+        "pc": DiscoveryResult(
+            algorithm="pc",
+            causal_graph=causal_graph,
+            edges=edges,
+            status="ok",
+            message="",
+        )
+    }
+
+    causal_discovery.write_outputs(
+        results=discovery_results,
+        discovery_frame=discovery_frame.loc[:, standardized.columns],
+        output_dir=output_dir,
+        collinearity_threshold=args.collinearity_threshold,
+        campaign_id=str(args.campaign_id),
+        pre_weeks=args.pre_weeks
+    )
+    summary = pd.DataFrame(
+        {
+            "algorithm": result.algorithm,
+            "status": result.status,
+            "edges": len(result.edges),
+            "message": result.message,
+        }
+        for result in discovery_results.values()
+    )
+
+    print(f"samples: {len(discovery_frame):,}")
+    print(f"variables: {len(standardized.columns):,}")
+    print(f"output_dir: {output_dir}")
+    print(summary.to_string(index=False))
+
 
 
 if __name__ == "__main__":
     main()
-
 
