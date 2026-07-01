@@ -10,7 +10,6 @@
 # 重要: ここで推定する重みは、発見済みグラフを前提にした線形回帰係数である。因果効果として解釈するには、グラフ構造、調整集合、未観測交絡なし、線形性などの仮定が必要である。
 
 
-# %% [code] cell 1
 from __future__ import annotations
 
 import argparse
@@ -26,7 +25,6 @@ from myproj.io.file_io import FileConfigRegistry, FileIOUtils
 from myproj.logger.custom_logger import CustomLogger
 
 
-# %% [code] cell 2
 DATASET_YAML = Path("shared/py/myproj/conf/dataset/completejourney/10_interim.yaml")
 DEFAULT_CAMPAIGN_ID = "18"
 DEFAULT_DISCOVERY_DIR = Path("articles/5132eae5e3dd99/experiment/causal_discovery")
@@ -57,7 +55,6 @@ INCOME_ORDER = {
 }
 
 
-# %% [code] cell 3
 @dataclass(frozen=True)
 class CampaignWindow:
     campaign_id: str
@@ -87,7 +84,6 @@ class EdgeEffectResult:
     r_squared: float
 
 
-# %% [code] cell 4
 class CompleteJourneyDataLoader:
     def __init__(self, *, project_root: Path, dataset_yaml: Path) -> None:
         self.project_root = project_root
@@ -113,7 +109,6 @@ class CompleteJourneyDataLoader:
         }
 
 
-# %% [code] cell 5
 class AbstractPreprocessor(ABC):
     @abstractmethod
     def preprocess(self) -> PreprocessingResult:
@@ -345,7 +340,6 @@ class CompleteJourneyPreprocessor(AbstractPreprocessor):
         return (standardized - standardized.mean(axis=0)) / standardized.std(axis=0)
 
 
-# %% [code] cell 6
 class CausalInference:
     def __init__(
         self,
@@ -500,7 +494,6 @@ class CausalInference:
         return "\n".join(lines)
 
 
-# %% [code] cell 7
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Estimate edge weights from causal discovery outputs for completejourney.",
@@ -521,79 +514,74 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-# %% [code] cell 8
 # Notebook stub for values normally supplied by parse_args().
-args = argparse.Namespace(
-    project_root=find_project_root(Path.cwd()),
-    dataset_yaml=None,
-    campaign_id=DEFAULT_CAMPAIGN_ID,
-    pre_weeks=8,
-    collinearity_threshold=0.995,
-    discovery_dir=None,
-    output_dir=None,
-    algorithms=("pc", "ges", "lingam", "notears"),
-)
-
-
-# %% [code] cell 9
-project_root = (
-    args.project_root.resolve()
-    if args.project_root is not None
-    else find_project_root(Path.cwd())
-)
-dataset_yaml = (
-    args.dataset_yaml.resolve()
-    if args.dataset_yaml is not None
-    else project_root / DATASET_YAML
-)
-discovery_dir = (
-    args.discovery_dir.resolve()
-    if args.discovery_dir is not None
-    else project_root / DEFAULT_DISCOVERY_DIR
-)
-output_dir = (
-    args.output_dir.resolve()
-    if args.output_dir is not None
-    else project_root / DEFAULT_OUTPUT_DIR
-)
-
-
-# %% [code] cell 10
-data_loader = CompleteJourneyDataLoader(
-    project_root=project_root,
-    dataset_yaml=dataset_yaml,
-)
-tables = data_loader.load_tables()
-
-preprocessor = CompleteJourneyPreprocessor(
-    tables=tables,
-    campaign_id=str(args.campaign_id),
-    pre_weeks=args.pre_weeks,
-    collinearity_threshold=args.collinearity_threshold,
-)
-preprocessing_result = preprocessor.preprocess()
-inference_frame = preprocessing_result.inference_frame
-standardized = preprocessing_result.standardized
-
-causal_inference = CausalInference(
-    frame=standardized,
-    discovery_dir=discovery_dir,
-    output_dir=output_dir,
-    algorithms=tuple(args.algorithms),
-)
-effects = causal_inference.estimate_all()
-causal_inference.write_outputs(effects)
-
-print(f"samples: {len(standardized):,}")
-print(f"variables: {len(standardized.columns):,}")
-print(f"discovery_dir: {discovery_dir}")
-print(f"output_dir: {output_dir}")
-print(effects.to_string(index=False))
-
-
-# %% [code] cell 11
+# args = argparse.Namespace(
+#     project_root=find_project_root(Path.cwd()),
+#     dataset_yaml=None,
+#     campaign_id=DEFAULT_CAMPAIGN_ID,
+#     pre_weeks=8,
+#     collinearity_threshold=0.995,
+#     discovery_dir=None,
+#     output_dir=None,
+#     algorithms=("pc", "ges", "lingam", "notears"),
+# )
 def main() -> None:
-    pass
+    args = parse_args()
+
+    project_root = (
+        args.project_root.resolve()
+        if args.project_root is not None
+        else find_project_root(Path.cwd())
+    )
+    dataset_yaml = (
+        args.dataset_yaml.resolve()
+        if args.dataset_yaml is not None
+        else project_root / DATASET_YAML
+    )
+    discovery_dir = (
+        args.discovery_dir.resolve()
+        if args.discovery_dir is not None
+        else project_root / DEFAULT_DISCOVERY_DIR
+    )
+    output_dir = (
+        args.output_dir.resolve()
+        if args.output_dir is not None
+        else project_root / DEFAULT_OUTPUT_DIR
+    )
+
+
+    data_loader = CompleteJourneyDataLoader(
+        project_root=project_root,
+        dataset_yaml=dataset_yaml,
+    )
+    tables = data_loader.load_tables()
+
+    preprocessor = CompleteJourneyPreprocessor(
+        tables=tables,
+        campaign_id=str(args.campaign_id),
+        pre_weeks=args.pre_weeks,
+        collinearity_threshold=args.collinearity_threshold,
+    )
+    preprocessing_result = preprocessor.preprocess()
+    inference_frame = preprocessing_result.inference_frame
+    standardized = preprocessing_result.standardized
+
+    causal_inference = CausalInference(
+        frame=standardized,
+        discovery_dir=discovery_dir,
+        output_dir=output_dir,
+        algorithms=tuple(args.algorithms),
+    )
+    effects = causal_inference.estimate_all()
+    causal_inference.write_outputs(effects)
+
+    print(f"samples: {len(standardized):,}")
+    print(f"variables: {len(standardized.columns):,}")
+    print(f"discovery_dir: {discovery_dir}")
+    print(f"output_dir: {output_dir}")
+    print(effects.to_string(index=False))
+
+
 
 
 if __name__ == "__main__":
