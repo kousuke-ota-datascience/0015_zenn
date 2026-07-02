@@ -1,0 +1,18 @@
+[project]
+name = "viz-poc-dashboard"
+version = "0.1.0"
+description = "Dash dashboard for the lightweight data visualization PoC"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "dash>=2.18.0",
+    "pandas>=2.2.0",
+    "plotly>=5.24.0",
+    "requests>=2.32.0",
+]
+
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["app"]

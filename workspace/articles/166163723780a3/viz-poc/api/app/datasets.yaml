@@ -1,0 +1,35 @@
+datasets:
+  sales:
+    label: "Sales"
+    source_type: "csv"
+    source: "data/sales.csv"
+    dimensions:
+      region:
+        label: "Region"
+        column: "region"
+        type: "category"
+      product:
+        label: "Product"
+        column: "product"
+        type: "category"
+      month:
+        label: "Month"
+        column: "month"
+        type: "date"
+    metrics:
+      revenue:
+        label: "Revenue"
+        expression: "SUM(revenue)"
+        type: "number"
+      order_count:
+        label: "Order count"
+        expression: "COUNT(*)"
+        type: "integer"
+      quantity:
+        label: "Quantity"
+        expression: "SUM(quantity)"
+        type: "integer"
+      avg_order_value:
+        label: "Average order value"
+        expression: "SUM(revenue) / NULLIF(COUNT(*), 0)"
+        type: "number"

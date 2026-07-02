@@ -1,0 +1,10 @@
+order_id,region,product,month,revenue,quantity
+1,Kanto,A,2026-01,10000,1
+2,Kanto,B,2026-01,15000,2
+3,Kansai,A,2026-01,8000,1
+4,Kansai,C,2026-02,20000,3
+5,Chubu,A,2026-02,12000,1
+6,Chubu,B,2026-02,18000,2
+7,Kanto,A,2026-03,22000,2
+8,Kansai,B,2026-03,16000,1
+9,Chubu,C,2026-03,25000,4
