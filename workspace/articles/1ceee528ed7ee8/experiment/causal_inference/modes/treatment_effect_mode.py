@@ -7,7 +7,6 @@ import pandas as pd
 from ..context import RunContext
 from ..diagnostics.design import DesignDiagnostics
 from ..diagnostics.overlap import summarize_propensity_overlap
-from ..discovery_artifacts.edges import load_discovery_edges
 from ..estimation.treatment_effect import (
     TreatmentEffectEstimator,
     validate_treatment_effect_inputs,
@@ -142,6 +141,8 @@ class TreatmentEffectModeStrategy(AnalysisModeStrategy):
         """
         if context.config.treatment_effect.adjustment_strategy != "graph_parents":
             return None
+        from ..discovery_artifacts.edges import load_discovery_edges
+
         return load_discovery_edges(
             context.discovery_dir,
             context.config.edge_weight.algorithms,

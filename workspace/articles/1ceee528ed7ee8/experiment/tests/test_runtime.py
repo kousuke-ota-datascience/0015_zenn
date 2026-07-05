@@ -73,29 +73,49 @@ def test_cli_validate_only_and_dry_run_smoke() -> None:
     assert "selected_pipeline_strategy" in dry.stdout
 
 
-def test_cli_full_run_smoke_writes_manifests_and_report() -> None:
+def test_cli_full_run_smoke_writes_manifests_and_report(tmp_path: Path) -> None:
+    discovery_output = tmp_path / "causal_discovery"
+    inference_output = tmp_path / "causal_inference"
     subprocess.run(
-        ["uv", "run", "python", str(ENTRYPOINT)],
+        [
+            "uv",
+            "run",
+            "python",
+            str(ENTRYPOINT),
+            "--run-id",
+            "pytest-full-run",
+            "--discovery-output-dir",
+            str(discovery_output),
+            "--inference-output-dir",
+            str(inference_output),
+        ],
         cwd=PROJECT_ROOT,
         check=True,
         text=True,
         capture_output=True,
     )
-    article_dir = EXPERIMENT_DIR.parent
-    discovery_manifest = article_dir / "artifacts/causal_discovery/manifest.yaml"
-    inference_manifest = article_dir / "artifacts/causal_inference/manifest.yaml"
-    inference_report = article_dir / "artifacts/causal_inference/edge_weight/edge_effects.md"
+    discovery_manifest = discovery_output / "manifest.yaml"
+    inference_manifest = inference_output / "manifest.yaml"
+    inference_report = inference_output / "edge_weight/edge_effects.md"
 
     assert discovery_manifest.exists()
     assert inference_manifest.exists()
     assert inference_report.exists()
-    assert load_yaml_mapping(discovery_manifest)["stage"] == "discovery"
-    assert load_yaml_mapping(inference_manifest)["stage"] == "inference"
+    discovery_data = load_yaml_mapping(discovery_manifest)
+    inference_data = load_yaml_mapping(inference_manifest)
+    assert discovery_data["stage"] == "discovery"
+    assert inference_data["stage"] == "inference"
+    assert discovery_data["run_id"] == "pytest-full-run"
+    assert inference_data["run_id"] == "pytest-full-run"
+    assert discovery_data["created_at"]
+    assert inference_data["created_at"]
+    assert Path(discovery_data["resolved_output_dir"]) == discovery_output
+    assert Path(inference_data["resolved_output_dir"]) == inference_output
 
     report_text = inference_report.read_text(encoding="utf-8")
     assert "## Causal Design" in report_text
     assert "## Estimand Summary" in report_text
-    assert "artifact_manifest_path" in report_text
+    assert f"artifact_manifest_path: `{inference_manifest}`" in report_text
 
 
 def test_production_code_has_no_old_package_imports() -> None:
@@ -117,8 +137,8 @@ def test_production_code_has_no_old_package_imports() -> None:
         for path in ([root] if root.is_file() else root.rglob("*.py"))
     )
     assert not any(name in text for name in forbidden)
-    assert not (EXPERIMENT_DIR / "causal_inference/discovery").exists()
-    assert (EXPERIMENT_DIR / "causal_inference/discovery_artifacts").exists()
+    assert not (EXPERIMENT_DIR / "causal_inference" / "discovery").exists()
+    assert (EXPERIMENT_DIR / "causal_inference" / "discovery_artifacts").exists()
 
 
 def test_adjustment_set_validation_uses_feature_semantics(tmp_path: Path) -> None:
