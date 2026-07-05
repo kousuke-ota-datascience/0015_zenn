@@ -1,0 +1,80 @@
+from __future__ import annotations
+
+import numpy as np
+import pandas as pd
+import pytest
+
+from causal_inference.estimation.multiplicity import adjust_p_values
+from causal_inference.estimation.treatment_effect import TreatmentEffectEstimator
+from causal_inference.features.aggregation import AGGREGATION_REGISTRY, get_aggregation
+from causal_inference.features.encoding import ENCODING_REGISTRY
+from causal_inference.features.transforms import TRANSFORM_REGISTRY
+
+
+def test_feature_registries_fail_fast() -> None:
+    assert {"sum", "mean", "count", "nunique", "max", "min"}.issubset(
+        AGGREGATION_REGISTRY
+    )
+    assert {"identity", "log1p", "signed_log1p", "zscore"}.issubset(
+        TRANSFORM_REGISTRY
+    )
+    assert {"one_hot", "ordinal", "binary"}.issubset(ENCODING_REGISTRY)
+    with pytest.raises(ValueError, match="unsupported aggregation"):
+        get_aggregation("bad")
+
+
+def test_estimators_use_explicit_estimand_method_names() -> None:
+    frame = pd.DataFrame(
+        {
+            "treated": [0, 0, 0, 1, 1, 1],
+            "outcome": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+            "x": [0.0, 1.0, 2.0, 0.0, 1.0, 2.0],
+        }
+    )
+    estimator = TreatmentEffectEstimator(
+        frame,
+        treatment="treated",
+        outcome="outcome",
+        covariates=["x"],
+        estimand="ATE",
+    )
+
+    results = estimator.estimate(["ols_coefficient", "g_computation_ate", "ipw_ate"])
+
+    assert results["method"].tolist() == [
+        "ols_coefficient",
+        "g_computation_ate",
+        "ipw_ate",
+    ]
+    assert results.loc[0, "estimand"] == "regression_coefficient"
+    with pytest.raises(ValueError, match="unsupported when estimand=ATE"):
+        estimator.estimate(["ipw_att"])
+
+
+def test_aipw_cross_fitting_is_executed_when_requested() -> None:
+    frame = pd.DataFrame(
+        {
+            "treated": [0, 1] * 10,
+            "outcome": np.linspace(1.0, 20.0, 20),
+            "x": np.tile([0.0, 1.0, 2.0, 3.0], 5),
+        }
+    )
+    estimator = TreatmentEffectEstimator(
+        frame,
+        treatment="treated",
+        outcome="outcome",
+        covariates=["x"],
+        estimand="ATE",
+        cross_fitting_folds=2,
+    )
+
+    result = estimator.estimate(["aipw_ate"])
+
+    assert result.loc[0, "method"] == "aipw_ate"
+    assert "cross_fitted_nuisance_models" in result.loc[0, "notes"]
+
+
+def test_multiplicity_adjustment_is_monotone() -> None:
+    adjusted = adjust_p_values(pd.Series([0.01, 0.02, 0.5]), "bh_fdr")
+
+    assert adjusted.iloc[0] <= adjusted.iloc[1] <= adjusted.iloc[2]
