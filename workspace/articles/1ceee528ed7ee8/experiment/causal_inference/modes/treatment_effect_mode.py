@@ -7,7 +7,7 @@ import pandas as pd
 from ..context import RunContext
 from ..diagnostics.design import DesignDiagnostics
 from ..diagnostics.overlap import summarize_propensity_overlap
-from ..discovery.edges import load_discovery_edges
+from ..discovery_artifacts.edges import load_discovery_edges
 from ..estimation.treatment_effect import (
     TreatmentEffectEstimator,
     validate_treatment_effect_inputs,

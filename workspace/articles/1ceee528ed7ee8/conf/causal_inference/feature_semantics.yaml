@@ -26,6 +26,24 @@ features:
     dtype: binary
     allowed_for_adjustment: true
     post_treatment: false
+  - name: homeowner_yes
+    role: covariate
+    source_table: demographics
+    source_column: home_ownership
+    unit_id: household_id
+    transform: binary_with_unknown
+    dtype: binary
+    allowed_for_adjustment: true
+    post_treatment: false
+  - name: homeowner_unknown
+    role: covariate
+    source_table: demographics
+    source_column: home_ownership
+    unit_id: household_id
+    transform: binary_with_unknown
+    dtype: binary
+    allowed_for_adjustment: true
+    post_treatment: false
   - name: household_size
     role: covariate
     source_table: demographics
@@ -71,6 +89,24 @@ features:
     dtype: binary
     allowed_for_adjustment: true
     post_treatment: false
+  - name: married_yes
+    role: covariate
+    source_table: demographics
+    source_column: marital_status
+    unit_id: household_id
+    transform: binary_with_unknown
+    dtype: binary
+    allowed_for_adjustment: true
+    post_treatment: false
+  - name: married_unknown
+    role: covariate
+    source_table: demographics
+    source_column: marital_status
+    unit_id: household_id
+    transform: binary_with_unknown
+    dtype: binary
+    allowed_for_adjustment: true
+    post_treatment: false
   - name: outcome_baskets
     role: outcome
     source_table: transactions
@@ -85,6 +121,16 @@ features:
     role: outcome
     source_table: transactions
     source_column: coupon_disc
+    unit_id: household_id
+    aggregation: sum
+    transform: signed_log1p
+    dtype: monetary
+    allowed_for_adjustment: false
+    post_treatment: false
+  - name: outcome_coupon_match_disc
+    role: outcome
+    source_table: transactions
+    source_column: coupon_match_disc
     unit_id: household_id
     aggregation: sum
     transform: signed_log1p
@@ -135,6 +181,16 @@ features:
     role: covariate
     source_table: transactions
     source_column: coupon_disc
+    unit_id: household_id
+    aggregation: sum
+    transform: signed_log1p
+    dtype: monetary
+    allowed_for_adjustment: true
+    post_treatment: false
+  - name: pre_coupon_match_disc
+    role: covariate
+    source_table: transactions
+    source_column: coupon_match_disc
     unit_id: household_id
     aggregation: sum
     transform: signed_log1p

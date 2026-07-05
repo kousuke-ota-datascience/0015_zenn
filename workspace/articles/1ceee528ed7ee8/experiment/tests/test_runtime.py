@@ -3,9 +3,12 @@ from __future__ import annotations
 import subprocess
 from pathlib import Path
 
+from causal_core.config import load_yaml_mapping
+from causal_pipeline_runtime.artifacts import ArtifactRegistry
 from causal_pipeline_runtime.orchestration import parse_args
-from causal_pipeline_runtime.planning import PipelinePlanner
+from causal_pipeline_runtime.planning import ExecutionPlan, PipelinePlanner, StagePlan
 from causal_pipeline_runtime.strategies import DryRunStrategy, ValidateOnlyStrategy
+from causal_pipeline_runtime.validation import CrossStageValidator
 
 
 EXPERIMENT_DIR = Path(__file__).resolve().parents[1]
@@ -30,10 +33,11 @@ def test_plan_uses_prefixed_overrides_and_manifest_contract() -> None:
     discovery = plan.stages[0]
     inference = plan.stages[1]
 
-    assert ["--alpha", "0.05"] == discovery.resolved_args[-4:-2]
+    assert arg_value(discovery.resolved_args, "--alpha") == "0.05"
     assert "--discovery-manifest" in inference.resolved_args
     assert "--discovery-dir" not in inference.resolved_args
-    assert ["--mode", "treatment_effect"] == inference.resolved_args[-4:-2]
+    assert arg_value(inference.resolved_args, "--mode") == "treatment_effect"
+    assert arg_value(inference.resolved_args, "--outcome") == "outcome_quantity"
 
 
 def test_pipeline_strategies_validate_and_dry_run() -> None:
@@ -69,6 +73,31 @@ def test_cli_validate_only_and_dry_run_smoke() -> None:
     assert "selected_pipeline_strategy" in dry.stdout
 
 
+def test_cli_full_run_smoke_writes_manifests_and_report() -> None:
+    subprocess.run(
+        ["uv", "run", "python", str(ENTRYPOINT)],
+        cwd=PROJECT_ROOT,
+        check=True,
+        text=True,
+        capture_output=True,
+    )
+    article_dir = EXPERIMENT_DIR.parent
+    discovery_manifest = article_dir / "artifacts/causal_discovery/manifest.yaml"
+    inference_manifest = article_dir / "artifacts/causal_inference/manifest.yaml"
+    inference_report = article_dir / "artifacts/causal_inference/edge_weight/edge_effects.md"
+
+    assert discovery_manifest.exists()
+    assert inference_manifest.exists()
+    assert inference_report.exists()
+    assert load_yaml_mapping(discovery_manifest)["stage"] == "discovery"
+    assert load_yaml_mapping(inference_manifest)["stage"] == "inference"
+
+    report_text = inference_report.read_text(encoding="utf-8")
+    assert "## Causal Design" in report_text
+    assert "## Estimand Summary" in report_text
+    assert "artifact_manifest_path" in report_text
+
+
 def test_production_code_has_no_old_package_imports() -> None:
     forbidden = (
         "common_in_causal_inference",
@@ -88,3 +117,98 @@ def test_production_code_has_no_old_package_imports() -> None:
         for path in ([root] if root.is_file() else root.rglob("*.py"))
     )
     assert not any(name in text for name in forbidden)
+    assert not (EXPERIMENT_DIR / "causal_inference/discovery").exists()
+    assert (EXPERIMENT_DIR / "causal_inference/discovery_artifacts").exists()
+
+
+def test_adjustment_set_validation_uses_feature_semantics(tmp_path: Path) -> None:
+    feature_config = tmp_path / "features.yaml"
+    feature_semantics = tmp_path / "semantics.yaml"
+    feature_config.write_text(
+        """
+adjustment_sets:
+  bad_set:
+    variables:
+      - missing_covariate
+      - treated
+      - outcome
+      - blocked_covariate
+      - post_covariate
+""",
+        encoding="utf-8",
+    )
+    feature_semantics.write_text(
+        """
+features:
+  - name: treated
+    role: treatment
+    source_table: campaigns
+    source_column: campaign_id
+    unit_id: household_id
+    allowed_for_adjustment: false
+    post_treatment: false
+  - name: outcome
+    role: outcome
+    source_table: transactions
+    source_column: sales_value
+    unit_id: household_id
+    allowed_for_adjustment: false
+    post_treatment: false
+  - name: blocked_covariate
+    role: covariate
+    source_table: demographics
+    source_column: age
+    unit_id: household_id
+    allowed_for_adjustment: false
+    post_treatment: false
+  - name: post_covariate
+    role: covariate
+    source_table: transactions
+    source_column: sales_value
+    unit_id: household_id
+    allowed_for_adjustment: true
+    post_treatment: true
+""",
+        encoding="utf-8",
+    )
+    stage = StagePlan(
+        name="inference",
+        enabled=True,
+        input_paths={"discovery_manifest": tmp_path / "manifest.yaml"},
+        output_paths={"output_dir": tmp_path, "manifest": tmp_path / "manifest.yaml"},
+        config_paths={
+            "feature_config": feature_config,
+            "feature_semantics": feature_semantics,
+        },
+        resolved_args=[],
+        metadata={},
+    )
+    plan = ExecutionPlan(
+        run_id="test",
+        strategy="validate_only",
+        stages=[stage],
+        resolved_configs={},
+        artifact_registry=ArtifactRegistry(),
+        validation_checks=[],
+        metadata={},
+    )
+
+    issues = CrossStageValidator().validate_adjustment_sets(plan)
+    codes = {issue.code for issue in issues}
+
+    assert "adjustment_semantics_missing" in codes
+    assert "adjustment_role_invalid" in codes
+    assert "adjustment_not_allowed" in codes
+    assert "adjustment_post_treatment" in codes
+    assert "adjustment_forbidden_role" in codes
+
+
+def arg_value(args: list[str], option: str) -> str | None:
+    """Return one CLI option value without assuming argument order."""
+
+    if option not in args:
+        return None
+    index = args.index(option)
+    if index + 1 >= len(args):
+        return None
+    return args[index + 1]

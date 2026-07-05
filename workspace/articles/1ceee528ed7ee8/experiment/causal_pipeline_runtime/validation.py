@@ -6,7 +6,7 @@ from pathlib import Path
 
 from causal_core.causal_design import CausalDesign
 from causal_core.config import load_yaml_mapping
-from causal_core.features import FeatureSemanticsCatalog, compare_feature_semantics
+from causal_core.features import FeatureRole, FeatureSemanticsCatalog
 from causal_core.validation import ValidationIssue, ValidationResult, ValidationSeverity
 
 from .planning import ExecutionPlan, StagePlan
@@ -96,11 +96,21 @@ class CrossStageValidator:
         if discovery_path is None or inference_path is None or not discovery_path.exists() or not inference_path.exists():
             return []
         try:
-            discovery_catalog = FeatureSemanticsCatalog.from_feature_config_mapping(
-                load_yaml_mapping(discovery_path)
-            )
+            discovery_catalog = FeatureSemanticsCatalog.from_feature_config_mapping(load_yaml_mapping(discovery_path))
             inference_catalog = FeatureSemanticsCatalog.from_mapping(load_yaml_mapping(inference_path))
-            mismatches = compare_feature_semantics(discovery_catalog, inference_catalog)
+            mode = _inference_mode(inference)
+            if mode == "edge_weight":
+                mismatches = _compare_discovery_nodes_to_inference_semantics(
+                    discovery_catalog,
+                    inference_catalog,
+                )
+            elif mode == "treatment_effect":
+                mismatches = self._validate_treatment_effect_semantics_subset(
+                    inference,
+                    inference_catalog,
+                )
+            else:
+                mismatches = [f"unsupported inference mode for semantics validation: {mode}"]
         except Exception as exc:
             return [_error("feature_semantics_invalid", str(exc), "feature_semantics")]
         return [
@@ -150,21 +160,68 @@ class CrossStageValidator:
             config = load_yaml_mapping(feature_config_path)
         except Exception as exc:
             return [_error("feature_config_invalid", str(exc), "inference.feature_config")]
+        semantics_path = inference.config_paths.get("feature_semantics")
+        if semantics_path is None or not semantics_path.exists():
+            return [_error("feature_semantics_missing", f"missing feature semantics: {semantics_path}", "feature_semantics")]
+        try:
+            catalog = FeatureSemanticsCatalog.from_mapping(load_yaml_mapping(semantics_path)).by_name()
+        except Exception as exc:
+            return [_error("feature_semantics_invalid", str(exc), "feature_semantics")]
         adjustment_sets = dict(config.get("adjustment_sets", {}))
-        exclude_patterns = adjustment_sets.get("exclude_patterns", [])
-        import re
-
         issues: list[ValidationIssue] = []
-        treatment_name = str(dict(config.get("treatment", {})).get("name", "treated"))
         for set_name, set_config in adjustment_sets.items():
             if set_name == "exclude_patterns":
                 continue
             variables = list(set_config.get("variables", set_config.get("include", [])))
             for variable in variables:
-                if variable == treatment_name:
-                    issues.append(_error("adjustment_contains_treatment", f"adjustment set contains treatment: {variable}", f"adjustment_sets.{set_name}"))
-                if any(re.search(pattern, str(variable)) for pattern in exclude_patterns):
-                    issues.append(_error("adjustment_contains_post_treatment", f"adjustment set contains excluded/post-treatment variable: {variable}", f"adjustment_sets.{set_name}"))
+                issues.extend(
+                    _validate_adjustment_variable_semantics(
+                        str(variable),
+                        catalog,
+                        f"adjustment_sets.{set_name}",
+                    )
+                )
+        return issues
+
+    def _validate_treatment_effect_semantics_subset(
+        self,
+        inference: StagePlan,
+        inference_catalog: FeatureSemanticsCatalog,
+    ) -> list[str]:
+        """Validate treatment/outcome/selected covariates for treatment-effect mode."""
+
+        catalog = inference_catalog.by_name()
+        config = load_yaml_mapping(inference.config_paths["config"])
+        feature_config = load_yaml_mapping(inference.config_paths["feature_config"])
+        treatment_config = dict(config.get("treatment_effect", {}))
+        treatment = str(_arg_value(inference.resolved_args, "--treatment") or treatment_config.get("treatment", "treated"))
+        outcome = str(_arg_value(inference.resolved_args, "--outcome") or treatment_config.get("outcome", "outcome_sales_value"))
+        strategy = str(
+            _arg_value(inference.resolved_args, "--adjustment-strategy")
+            or treatment_config.get("adjustment_strategy", "pre_treatment_covariates")
+        )
+        covariates = _arg_values(inference.resolved_args, "--covariates")
+        if covariates is None:
+            covariates = _adjustment_variables(feature_config, strategy, treatment_config)
+
+        issues: list[str] = []
+        treatment_spec = catalog.get(treatment)
+        if treatment_spec is None:
+            issues.append(f"treatment missing from feature semantics: {treatment}")
+        elif treatment_spec.role != FeatureRole.TREATMENT:
+            issues.append(f"treatment role is not treatment: {treatment}")
+        outcome_spec = catalog.get(outcome)
+        if outcome_spec is None:
+            issues.append(f"outcome missing from feature semantics: {outcome}")
+        elif outcome_spec.role != FeatureRole.OUTCOME:
+            issues.append(f"outcome role is not outcome: {outcome}")
+        for covariate in covariates:
+            variable_issues = _validate_adjustment_variable_semantics(
+                str(covariate),
+                catalog,
+                f"treatment_effect.{strategy}",
+            )
+            issues.extend(issue.message for issue in variable_issues)
         return issues
 
 
@@ -177,6 +234,129 @@ def _stage_by_name(plan: ExecutionPlan, name: str) -> StagePlan | None:
 
 def _error(code: str, message: str, location: str | None = None) -> ValidationIssue:
     return ValidationIssue(ValidationSeverity.ERROR, code, message, location)
+
+
+def _compare_discovery_nodes_to_inference_semantics(
+    discovery_catalog: FeatureSemanticsCatalog,
+    inference_catalog: FeatureSemanticsCatalog,
+) -> list[str]:
+    """Require strict semantic equality for discovery graph nodes."""
+
+    inference_by_name = inference_catalog.by_name()
+    issues: list[str] = []
+    for feature in discovery_catalog.features:
+        inference_feature = inference_by_name.get(feature.name)
+        if inference_feature is None:
+            issues.append(f"discovery graph node missing from inference feature semantics: {feature.name}")
+            continue
+        left_fields = feature.comparable_fields()
+        right_fields = inference_feature.comparable_fields()
+        for field, left_value in left_fields.items():
+            right_value = right_fields[field]
+            if left_value != right_value:
+                issues.append(
+                    f"discovery graph node semantics mismatch for {feature.name}.{field}: {left_value!r} != {right_value!r}"
+                )
+    return issues
+
+
+def _validate_adjustment_variable_semantics(
+    variable: str,
+    catalog: dict[str, object],
+    location: str,
+) -> list[ValidationIssue]:
+    """Validate one adjustment variable against feature semantics."""
+
+    spec = catalog.get(variable)
+    if spec is None:
+        return [
+            _error(
+                "adjustment_semantics_missing",
+                f"adjustment variable missing from feature semantics: {variable}",
+                location,
+            )
+        ]
+    issues: list[ValidationIssue] = []
+    if spec.role != FeatureRole.COVARIATE:
+        issues.append(
+            _error(
+                "adjustment_role_invalid",
+                f"adjustment variable role must be covariate: {variable} role={spec.role.value}",
+                location,
+            )
+        )
+    if not spec.allowed_for_adjustment:
+        issues.append(
+            _error(
+                "adjustment_not_allowed",
+                f"adjustment variable is not allowed_for_adjustment: {variable}",
+                location,
+            )
+        )
+    if spec.post_treatment:
+        issues.append(
+            _error(
+                "adjustment_post_treatment",
+                f"adjustment variable is post-treatment: {variable}",
+                location,
+            )
+        )
+    if spec.role in {
+        FeatureRole.TREATMENT,
+        FeatureRole.OUTCOME,
+        FeatureRole.MEDIATOR,
+        FeatureRole.COLLIDER,
+    }:
+        issues.append(
+            _error(
+                "adjustment_forbidden_role",
+                f"adjustment variable has forbidden role: {variable} role={spec.role.value}",
+                location,
+            )
+        )
+    return issues
+
+
+def _inference_mode(inference: StagePlan) -> str:
+    override = _arg_value(inference.resolved_args, "--mode")
+    if override is not None:
+        return override
+    config_path = inference.config_paths.get("config")
+    if config_path is not None and config_path.exists():
+        return str(load_yaml_mapping(config_path).get("mode", "edge_weight"))
+    return "edge_weight"
+
+
+def _arg_value(args: list[str], option: str) -> str | None:
+    if option not in args:
+        return None
+    index = args.index(option)
+    if index + 1 >= len(args):
+        return None
+    return args[index + 1]
+
+
+def _arg_values(args: list[str], option: str) -> list[str] | None:
+    if option not in args:
+        return None
+    index = args.index(option) + 1
+    values: list[str] = []
+    while index < len(args) and not args[index].startswith("--"):
+        values.append(args[index])
+        index += 1
+    return values
+
+
+def _adjustment_variables(
+    feature_config: dict[str, object],
+    strategy: str,
+    treatment_config: dict[str, object],
+) -> list[str]:
+    if strategy == "manual":
+        return [str(value) for value in treatment_config.get("covariates") or []]
+    adjustment_sets = dict(feature_config.get("adjustment_sets", {}))
+    selected = dict(adjustment_sets.get(strategy, {}))
+    return [str(value) for value in selected.get("variables", selected.get("include", []))]
 
 
 __all__ = ["CrossStageValidator"]
