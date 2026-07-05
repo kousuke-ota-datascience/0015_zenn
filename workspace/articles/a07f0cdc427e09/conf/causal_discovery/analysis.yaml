@@ -1,0 +1,57 @@
+dataset:
+  yaml_path: shared/py/myproj/conf/dataset/completejourney/10_interim.yaml
+
+run:
+  campaign_id: "18"
+  pre_weeks: 8
+  output_dir: articles/a07f0cdc427e09/artifacts/causal_discovery
+  random_seed: 20260630
+
+preprocessing:
+  collinearity_threshold: 0.995
+
+discovery:
+  algorithms:
+    - pc
+    - ges
+    - lingam
+    - notears
+
+  use_background_knowledge: true
+
+  pc:
+    alpha: 0.01
+    indep_test: fisherz
+    allowed_indep_tests:
+      - fisherz
+      - kci
+      - chisq
+      - gsq
+    discrete_indep_tests:
+      - chisq
+      - gsq
+    discrete_bins: 4
+    alpha_grid:
+      - 0.001
+      - 0.005
+      - 0.01
+      - 0.05
+
+  notears:
+    threshold: 0.3
+
+diagnostics:
+  bootstrap:
+    samples: 100
+    sample_fraction: 1.0
+
+reporting:
+  write_raw_input: true
+  write_processed_input: true
+  write_standardized_input: true
+  write_variable_metadata: true
+  write_variable_diagnostics: true
+  write_algorithm_summary: true
+  write_graph_markdown: true
+  write_alpha_sensitivity: true
+  write_bootstrap_stability: true
