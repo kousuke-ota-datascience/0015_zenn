@@ -7,6 +7,8 @@ import json
 from collections.abc import Sequence
 from pathlib import Path
 
+from causal_core.constants import SUPPORTED_DISCOVERY_ALGORITHMS
+
 from .planning import PipelinePlanner
 from .strategies import format_validation, select_strategy
 
@@ -32,6 +34,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--discovery-analysis-config", type=Path, default=None)
     parser.add_argument("--discovery-feature-config", type=Path, default=None)
     parser.add_argument("--discovery-output-dir", type=Path, default=None)
+    parser.add_argument(
+        "--discovery-algorithms",
+        nargs="+",
+        choices=SUPPORTED_DISCOVERY_ALGORITHMS,
+        default=None,
+        help="Discovery algorithms to run. Choices: %(choices)s.",
+    )
     parser.add_argument("--discovery-alpha", type=float, default=None)
     parser.add_argument("--discovery-alpha-grid", nargs="+", type=float, default=None)
     parser.add_argument("--discovery-pc-indep-test", default=None)

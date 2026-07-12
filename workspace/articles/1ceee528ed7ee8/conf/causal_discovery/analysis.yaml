@@ -11,6 +11,14 @@ preprocessing:
   collinearity_threshold: 0.995
 
 discovery:
+  # Select one or more discovery algorithms.
+  # Supported values:
+  #   - pc: constraint-based PC from causal-learn.
+  #   - ges: score-based GES from causal-learn.
+  #   - lingam: DirectLiNGAM; requires the optional `lingam` package.
+  #   - notears: linear NOTEARS; requires a compatible optional `notears` package.
+  # Example:
+  #   algorithms: [pc, ges]
   algorithms:
     - pc
 
