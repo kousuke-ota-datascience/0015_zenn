@@ -1,12 +1,10 @@
-記載内容については、以下3文書のインストラクションに従う。
+記載内容については、以下3文書のインストラクションに従うこと。
 
 - `docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md`
 - `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
 - `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
 
 伝承内容・典拠・異伝・証拠上の不確実性は、同一ディレクトリの `0089_00_contents.md` を参照する。
-
-本ファイルは、パイロット分析で確定した `Pilot Coding` の値・Statusを文書形式へ移植する。今回の文書化だけを理由にコードを再判定しない。
 
 # 1. 伝承エントリ基本情報
 
@@ -15,11 +13,10 @@
 - `Macro_Category`: 犯罪・社会不安
 - `Entry_Type`: FOAF
 - `Version_Scope`: 海外旅行中の若い女性が失踪し、後に四肢を失った状態で搾取されていると発見されるFOAF型の共有核。国名・失踪場所・搾取目的の異伝を混成しない
-- `Evidence_Rank`: `B`
-- `主な成立・流通期`: 1980-90年代
-- `ネット発祥`: No
 
 # 2. 分析概念次元
+
+各次元は、単にコード値を記録するだけでなく、**当該伝承においてその次元が具体的にどのように現れているか**まで自然言語で記述する。
 
 ## 2.1. 来歴・流通・提示の次元
 
@@ -27,7 +24,9 @@
 
 **いつ成立したか**
 
-- Value: `D01.G4` — 1980年代
+- Primary Child / Value: `D01.G4` — 1980年代
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I` — Inferred
 
 **判定根拠**
@@ -40,7 +39,10 @@
 
 ### 2.1.2. D02: 最古確認流通媒体
 
-- Primary: なし
+**現在の証拠で、伝承が実際に人から人へ流通したことを最も古く確認できる媒体は何か**
+
+- Primary Child / Value: なし
+- Primary Parent: なし
 - Secondary: なし
 - Status: `U` — Unknown
 
@@ -54,7 +56,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.1.3. D03: 確認流通媒体ポートフォリオ（Version Scope）
 
-- Primary Child: `D03.ORL.PEER_ORAL` — 友人・仲間内伝承
+**今回コードするVersion Scopeで、伝承が受容者へ流通したことを確認できる媒体は何か**
+
+- Primary Child / Value: `D03.ORL.PEER_ORAL` — 友人・仲間内伝承
 - Primary Parent: `D03.ORL`
 - Secondary: なし
 - Status: `I`
@@ -65,11 +69,13 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 **この伝承における現れ方**
 
-話は遠い外国のニュースではなく、自分の人間関係から数段だけ離れた人物の体験として届く。その流通形式が、確認困難さと現実感を同時に生む。
+話は遠い外国のニュースではなく、自分の人間関係から数段だけ離れた人物の体験として届く。その流通形式が、確認困難さと現実感を同時に生む。旧レビュー用メモには `D03:U` が残るため、本文値との不整合はtask 3で再確認する。
 
 ### 2.1.4. D04: 生成・変容パターン
 
-- Primary Child: `D04.STB.STABILIZED_CANON` — 定型化・カノン化
+**時間とともにどう変形したか**
+
+- Primary Child / Value: `D04.STB.STABILIZED_CANON` — 定型化・カノン化
 - Primary Parent: `D04.STB`
 - Secondary: なし
 - Status: `I`
@@ -84,7 +90,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.1.5. D05: 提示形式
 
-- Primary Child: `D05.HRS.FOAF` — FOAF
+**どんなコミュニケーション形式で提示されるか**
+
+- Primary Child / Value: `D05.HRS.FOAF` — FOAF
 - Primary Parent: `D05.HRS`
 - Secondary: なし
 - Status: `D`
@@ -99,7 +107,11 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.1.6. D06: 真実性提示
 
-- Value: `D06.T2` — 近接伝聞事実
+**どんな「本当らしさ」を要求するか**
+
+- Primary Child / Value: `D06.T2` — 近接伝聞事実
+- Primary Parent: なし
+- Secondary: なし
 - Status: `D`
 
 **判定根拠**
@@ -114,7 +126,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.2.1. D07: 意味形成対象
 
-- Primary Child: `D07.ICT.STRANGER_THREAT` — 見知らぬ他者の脅威
+**何が不可解・不確実なのか**
+
+- Primary Child / Value: `D07.ICT.STRANGER_THREAT` — 見知らぬ他者の脅威
 - Primary Parent: `D07.ICT`
 - Secondary: なし
 - Status: `I`
@@ -129,7 +143,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.2.2. D08: 意味形成契機
 
-- Primary Child: `D08.STY.FOAF_REPORT` — 近接伝聞
+**何を手掛かりに問題化されるか**
+
+- Primary Child / Value: `D08.STY.FOAF_REPORT` — 近接伝聞
 - Primary Parent: `D08.STY`
 - Secondary: なし
 - Status: `D`
@@ -144,7 +160,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.2.3. D09: 意味付与操作
 
-- Primary Child: `D09.CAT.NAMING` — 命名
+**不可解なものをどう理解可能にするか**
+
+- Primary Child / Value: `D09.CAT.NAMING` — 命名
 - Primary Parent: `D09.CAT`
 - Secondary: なし
 - Status: `I`
@@ -159,7 +177,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.2.4. D10: 因果源存在論
 
-- Primary Child: `D10.HUM.INDIVIDUAL_HUMAN` — 個人
+**原因を何として世界に置くか**
+
+- Primary Child / Value: `D10.HUM.INDIVIDUAL_HUMAN` — 個人
 - Primary Parent: `D10.HUM`
 - Secondary: なし
 - Status: `I`
@@ -176,7 +196,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.3.1. D11: 発動・接触条件
 
-- Primary Child: `D11.SOC.MEET_INTERACT` — 会う・会話する
+**何を契機に因果系へ入るか**
+
+- Primary Child / Value: `D11.SOC.MEET_INTERACT` — 会う・会話する
 - Primary Parent: `D11.SOC`
 - Secondary: なし
 - Status: `I`
@@ -191,7 +213,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.3.2. D12: 作用対象
 
-- Primary Child: `D12.FOC.PROTAGONIST_EXPERIENCER` — 主人公・体験者
+**誰／何に作用するか**
+
+- Primary Child / Value: `D12.FOC.PROTAGONIST_EXPERIENCER` — 主人公・体験者
 - Primary Parent: `D12.FOC`
 - Secondary: なし
 - Status: `I`
@@ -206,7 +230,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.3.3. D13: 作用機構
 
-- Primary Child: `D13.PHY.PHYSICAL_ATTACK` — 物理攻撃
+**因果源が対象へ何をするか**
+
+- Primary Child / Value: `D13.PHY.PHYSICAL_ATTACK` — 物理攻撃
 - Primary Parent: `D13.PHY`
 - Secondary: なし
 - Status: `I`
@@ -221,7 +247,11 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.3.4. D14: 帰結極性
 
-- Value: `D14.NEG` — 負
+**結果は正・負・中立・混合か**
+
+- Primary Child / Value: `D14.NEG` — 負
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I`
 
 **判定根拠**
@@ -234,10 +264,11 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.3.5. D15: 帰結領域
 
-- Primary Child: `D15.BOD.SEVERE_INJURY` — 重傷・障害
+**何の領域が最終的に変わるか**
+
+- Primary Child / Value: `D15.BOD.SEVERE_INJURY` — 重傷・障害
 - Primary Parent: `D15.BOD`
-- Secondary 1 Child: `D15.BOD.DEATH` — 死亡
-- Secondary 1 Parent: `D15.BOD`
+- Secondary: `D15.BOD.DEATH` — 死亡（Parent: `D15.BOD`）
 - Status: `I`
 
 **判定根拠**
@@ -250,7 +281,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.3.6. D16: 因果時間構造
 
-- Primary Child: `D16.PRG.STAGED_PROGRESSION` — 段階進行
+**発動条件・原因成立から主作用／主帰結までの関係は、時間上どのように編成されているか**
+
+- Primary Child / Value: `D16.PRG.STAGED_PROGRESSION` — 段階進行
 - Primary Parent: `D16.PRG`
 - Secondary: なし
 - Status: `I`
@@ -261,11 +294,13 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 **この伝承における現れ方**
 
-恐怖は一瞬の攻撃だけで成立せず、行方不明の時間が長引くほど「見えない間に何をされたのか」という不安が増幅する。最終発見で空白期間が極端な暴力として埋められる。
+恐怖は一瞬の攻撃だけで成立せず、行方不明の時間が長引くほど「見えない間に何をされたのか」という不安が増幅する。最終発見で空白期間が極端な暴力として埋められる。旧レビュー用メモには `D16:U` が残るため、本文値との不整合はtask 3で再確認する。
 
 ### 2.3.7. D17: 回避・制御方式
 
-- Primary Child: `D17.AVO.DO_NOT_ENGAGE` — 接触回避
+**結果をどう回避・制御・利用できるか**
+
+- Primary Child / Value: `D17.AVO.DO_NOT_ENGAGE` — 接触回避
 - Primary Parent: `D17.AVO`
 - Secondary: なし
 - Status: `I`
@@ -280,9 +315,11 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.3.8. D18: 作用レイヤー
 
-- `D18.L1`: `1`
-- `D18.L2`: `0`
-- `D18.L3`: `0`
+**因果効力は伝承内／受容者／社会現実のどこに及ぶか**
+
+- Primary Child / Value: `D18.L1=1; D18.L2=0; D18.L3=0`
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I`
 
 **判定根拠**
@@ -297,7 +334,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.4.1. D19: 流通範囲
 
-- Primary Child: `D19.MAS.NATIONAL_PUBLIC` — 全国的大衆
+**誰の間に伝承が流通するか**
+
+- Primary Child / Value: `D19.MAS.NATIONAL_PUBLIC` — 全国的大衆
 - Primary Parent: `D19.MAS`
 - Secondary: なし
 - Status: `D`
@@ -312,7 +351,9 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.4.2. D20: 特権情報保持者
 
-- Primary Child: `D20.ORG.PERPETRATOR_CRIMINAL` — 加害者・犯罪者
+**誰が真相・追加情報を持つか**
+
+- Primary Child / Value: `D20.ORG.PERPETRATOR_CRIMINAL` — 加害者・犯罪者
 - Primary Parent: `D20.ORG`
 - Secondary: なし
 - Status: `I`
@@ -327,7 +368,11 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 
 ### 2.4.3. D21: 現実アンカー
 
-- Value: `D21.A1` — 一般的現実背景
+**実在世界へどの程度固定されるか**
+
+- Primary Child / Value: `D21.A1` — 一般的現実背景
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I`
 
 **判定根拠**
@@ -337,9 +382,3 @@ FOAFとして口頭再話に適した内容ではあるが、「口承らしい�
 **この伝承における現れ方**
 
 実在し得る旅行行動と犯罪類型を使うことで現実感を得るが、場所や被害者は再話ごとに動く。具体的事件の記録ではなく、一般的現実背景上に構築されたFOAFである。
-
-# 3. パイロット時点のコーディングメモ
-
-- `D03:U; D16:U`
-
-このメモは初回パイロット時点のレビュー用メモを保持する。D03・D16は後続の定義修正後に本文記載の値へ更新されている。
