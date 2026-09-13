@@ -4,7 +4,7 @@
 - `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
 - `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
 
-伝承内容・典拠・異伝・証拠上の不確実性は、同一ディレクトリの `00_contents.md` を参照する。
+伝承内容・典拠・異伝・証拠上の不確実性は、同一ディレクトリの `<4桁ゼロ埋めEntry_ID>_00_contents.md` を参照する。
 
 # 1. 伝承エントリ基本情報
 
