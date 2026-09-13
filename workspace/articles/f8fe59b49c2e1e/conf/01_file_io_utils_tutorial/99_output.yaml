@@ -1,0 +1,30 @@
+default:
+    file:
+        path: "{tutorial_output_dir}/outputs"
+        name: ""
+        type: "parquet"
+    write_option:
+        csv:
+            delimiter: "\t"
+            quotechar: "\""
+            quoting: 1
+            encoding: "utf-8"
+            header: true
+            index: false
+        yaml:
+            encoding: "utf-8"
+
+orders_tsv:
+    file:
+        name: "orders.tsv"
+        type: "csv"
+
+orders_parquet:
+    file:
+        name: "orders_output.parquet"
+        type: "parquet"
+
+orders_metadata:
+    file:
+        name: "orders_metadata.yaml"
+        type: "yaml"
