@@ -1,12 +1,10 @@
-記載内容については、以下3文書のインストラクションに従う。
+記載内容については、以下3文書のインストラクションに従うこと。
 
 - `docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md`
 - `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
 - `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
 
 伝承内容・典拠・異伝・証拠上の不確実性は、同一ディレクトリの `0060_00_contents.md` を参照する。
-
-本ファイルは、パイロット分析で確定した `Pilot Coding` の値・Statusを文書形式へ移植する。今回の文書化だけを理由にコードを再判定しない。
 
 # 1. 伝承エントリ基本情報
 
@@ -15,11 +13,10 @@
 - `Macro_Category`: 交通・インフラ
 - `Entry_Type`: 物語・伝説
 - `Version_Scope`: 全国に反復する「タクシーに乗った客が消え、幽霊・死者だったと理解される」共有核。特定地域版の細部を全国型へ混成しない
-- `Evidence_Rank`: `B`
-- `主な成立・流通期`: 戦後〜
-- `ネット発祥`: No
 
 # 2. 分析概念次元
+
+各次元は、単にコード値を記録するだけでなく、**当該伝承においてその次元が具体的にどのように現れているか**まで自然言語で記述する。
 
 ## 2.1. 来歴・流通・提示の次元
 
@@ -27,7 +24,9 @@
 
 **いつ成立したか**
 
-- Value: `D01.G2` — 1945–1969
+- Primary Child / Value: `D01.G2` — 1945–1969
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
 
 **判定根拠**
@@ -42,7 +41,8 @@
 
 **現在の証拠で、伝承が実際に人から人へ流通したことを最も古く確認できる媒体は何か**
 
-- Primary: なし
+- Primary Child / Value: なし
+- Primary Parent: なし
 - Secondary: なし
 - Status: `U` — Unknown（証拠不足）
 
@@ -58,7 +58,7 @@
 
 **今回コードするVersion Scopeで、伝承が受容者へ流通したことを確認できる媒体は何か**
 
-- Primary Child: `D03.ORL.PEER_ORAL` — 友人・仲間内伝承
+- Primary Child / Value: `D03.ORL.PEER_ORAL` — 友人・仲間内伝承
 - Primary Parent: `D03.ORL` — 口承・限定共同体
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -69,13 +69,13 @@
 
 **この伝承における現れ方**
 
-タクシー運転手という職業集団や、その周辺の知人関係を通じて「こんな客を乗せた運転手がいた」と語られる構図が、物語の実話らしさを支える。固定された一つの原文より、同じ骨格を持つ再話が人から人へ渡ることが重要である。
+タクシー運転手という職業集団や、その周辺の知人関係を通じて「こんな客を乗せた運転手がいた」と語られる構図が、物語の実話らしさを支える。固定された一つの原文より、同じ骨格を持つ再話が人から人へ渡ることが重要である。旧レビュー用メモには `D03:U` が残るため、本文値との不整合はtask 3で再確認する。
 
 ### 2.1.4. D04: 生成・変容パターン
 
 **時間とともにどう変形したか**
 
-- Primary Child: `D04.STB.STABILIZED_CANON` — 定型化・カノン化
+- Primary Child / Value: `D04.STB.STABILIZED_CANON` — 定型化・カノン化
 - Primary Parent: `D04.STB` — 安定・固定
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -92,7 +92,7 @@
 
 **どんなコミュニケーション形式で提示されるか**
 
-- Primary Child: `D05.HRS.LOCAL_HEARSAY` — 地元伝聞
+- Primary Child / Value: `D05.HRS.LOCAL_HEARSAY` — 地元伝聞
 - Primary Parent: `D05.HRS` — 伝聞叙述
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -109,7 +109,9 @@
 
 **どんな「本当らしさ」を要求するか**
 
-- Value: `D06.T6` — 真偽未確定
+- Primary Child / Value: `D06.T6` — 真偽未確定
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
 
 **判定根拠**
@@ -126,7 +128,8 @@
 
 **何が不可解・不確実なのか**
 
-- Primary: なし
+- Primary Child / Value: なし
+- Primary Parent: なし
 - Secondary: なし
 - Status: `U` — Unknown（証拠不足）
 
@@ -142,7 +145,7 @@
 
 **何を手掛かりに問題化されるか**
 
-- Primary Child: `D08.CLM.UNSUPPORTED_ASSERTION` — 根拠未提示の主張
+- Primary Child / Value: `D08.CLM.UNSUPPORTED_ASSERTION` — 根拠未提示の主張
 - Primary Parent: `D08.CLM` — 命題先行
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -159,7 +162,7 @@
 
 **不可解なものをどう理解可能にするか**
 
-- Primary Child: `D09.CAT.NAMING` — 命名
+- Primary Child / Value: `D09.CAT.NAMING` — 命名
 - Primary Parent: `D09.CAT` — カテゴリー化
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -176,7 +179,7 @@
 
 **原因を何として世界に置くか**
 
-- Primary Child: `D10.SUP.GHOST_SPIRIT` — 幽霊・死者霊
+- Primary Child / Value: `D10.SUP.GHOST_SPIRIT` — 幽霊・死者霊
 - Primary Parent: `D10.SUP` — 超自然主体・力
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -195,7 +198,7 @@
 
 **何を契機に因果系へ入るか**
 
-- Primary Child: `D11.MOV.RIDE_BOARD` — 乗る
+- Primary Child / Value: `D11.MOV.RIDE_BOARD` — 乗る
 - Primary Parent: `D11.MOV` — 移動・空間進入
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -212,7 +215,7 @@
 
 **誰／何に作用するか**
 
-- Primary Child: `D12.FOC.PROTAGONIST_EXPERIENCER` — 主人公・体験者
+- Primary Child / Value: `D12.FOC.PROTAGONIST_EXPERIENCER` — 主人公・体験者
 - Primary Parent: `D12.FOC` — 焦点人物
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -229,7 +232,7 @@
 
 **因果源が対象へ何をするか**
 
-- Primary Child: `D13.MAN.MANIFEST_ONLY` — 顕現のみ
+- Primary Child / Value: `D13.MAN.MANIFEST_ONLY` — 顕現のみ
 - Primary Parent: `D13.MAN` — 顕現・観測
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -246,7 +249,9 @@
 
 **結果は正・負・中立・混合か**
 
-- Value: `D14.NEG` — 負
+- Primary Child / Value: `D14.NEG` — 負
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
 
 **判定根拠**
@@ -261,7 +266,7 @@
 
 **何の領域が最終的に変わるか**
 
-- Primary Child: `D15.KNW.UNCERTAINTY_PRESERVED` — 不確実性維持
+- Primary Child / Value: `D15.KNW.UNCERTAINTY_PRESERVED` — 不確実性維持
 - Primary Parent: `D15.KNW` — 世界認識・知識
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -278,7 +283,7 @@
 
 **発動条件・原因成立から主作用／主帰結までの関係は、時間上どのように編成されているか**
 
-- Primary Child: `D16.EVT.SINGLE_OBSERVATION` — 単発観測
+- Primary Child / Value: `D16.EVT.SINGLE_OBSERVATION` — 単発観測
 - Primary Parent: `D16.EVT` — 単一エピソード・事象内
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -295,7 +300,7 @@
 
 **結果をどう回避・制御・利用できるか**
 
-- Primary Child: `D17.NON.OBSERVATIONAL_ONLY` — 観測のみ
+- Primary Child / Value: `D17.NON.OBSERVATIONAL_ONLY` — 観測のみ
 - Primary Parent: `D17.NON` — 制御不要
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -312,9 +317,9 @@
 
 **因果効力は伝承内／受容者／社会現実のどこに及ぶか**
 
-- `D18.L1` — 伝承内因果層: `1`
-- `D18.L2` — 受容者層: `0`
-- `D18.L3` — 社会現実層: `0`
+- Primary Child / Value: `D18.L1=1; D18.L2=0; D18.L3=0`
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
 
 **判定根拠**
@@ -331,7 +336,7 @@
 
 **誰の間に伝承が流通するか**
 
-- Primary Child: `D19.MAS.NATIONAL_PUBLIC` — 全国的大衆
+- Primary Child / Value: `D19.MAS.NATIONAL_PUBLIC` — 全国的大衆
 - Primary Parent: `D19.MAS` — 大衆・広域社会
 - Secondary: なし
 - Status: `D` — Direct（典拠に直接明示）
@@ -348,7 +353,7 @@
 
 **誰が真相・追加情報を持つか**
 
-- Primary Child: `D20.NON.COMMON_KNOWLEDGE` — 一般共有
+- Primary Child / Value: `D20.NON.COMMON_KNOWLEDGE` — 一般共有
 - Primary Parent: `D20.NON` — 特権なし
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -365,7 +370,9 @@
 
 **実在世界へどの程度固定されるか**
 
-- Value: `D21.A1` — 一般的現実背景
+- Primary Child / Value: `D21.A1` — 一般的現実背景
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
 
 **判定根拠**
@@ -375,9 +382,3 @@
 **この伝承における現れ方**
 
 物語の現実感は、誰もが理解できるタクシー営業の状況から生じる。深泥池版のようにA2相当の強い地理固定を持つ個別例もあるが、全国型そのものは一般的現実背景の上に成立する。
-
-# 3. パイロット時点のコーディングメモ
-
-- `D03:U; D07:U`
-
-このメモはパイロットExcelに記録されたレビュー用メモを保持する。D03は第2パイロットで再定義された媒体ポートフォリオの判定を本文で採用し、D02とD07は証拠不足を明示して `U` を保持する。
