@@ -27,7 +27,7 @@
 - 一次資料: https://kako.5ch.io/test/read.cgi/occult/1073411138
 - スレッド内で「きさらぎ駅」に関する実況が始まるのはレス98付近から。
 - 研究上の内容判定は、この一次資料を優先する。
-- 後代のまとめサイト・解説記事・鉄道事業者公式ページは、流通史・後代受容・照合用の二次資料として扱う。
+- 後代の解説記事・鉄道事業者公式ページは、流通史・後代受容・照合用の二次資料として扱う。
 
 参照確認日: 2026-09-13
 
@@ -44,10 +44,8 @@
   https://www.entetsu.co.jp/tetsudou/kisaragieki/
 - Geo-グラフィック「都市伝説 きさらぎ駅」  
   https://geographics.jp/article/17
-- 2MONKEYS.JP「きさらぎ駅〖謎の駅〗」  
-  https://www.2monkeys.jp/archives/29180070.html
-- ゴーストインザヘッド「きさらぎ駅」  
-  https://obake.cc/entry/kisaragi
+
+上記3URLは2026-09-13時点で閲覧可能であることを確認済み。
 
 研究概要側コーディング規則 `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md` では、D02の例として「2004年2ch実況 → D02.WEB.FORUM」、D16の例として「一晩の実況内で段階的に異常が進む → SEQUENTIAL_EPISODE」が明示されている。
 
