@@ -5,9 +5,166 @@ on:
     paths:
       - ".github/workflows/restructure-research-docs.yml"
 
+permissions:
+  contents: write
+
 jobs:
-  validate:
+  restructure:
     runs-on: ubuntu-latest
     steps:
-      - name: Smoke test
-        run: echo "workflow-ok"
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Normalize Markdown structure
+        shell: bash
+        run: |
+          python - <<'PY'
+          from __future__ import annotations
+          from dataclasses import dataclass, field
+          from pathlib import Path
+          import re
+
+          BASE = Path('workspace/articles/f8fe59b49c2e1e/docs/00_research_overview')
+          TARGETS = [
+              BASE / '10_urban_legend_analysis_axes_theoretical_design.md',
+              BASE / '20_urban_legend_parent_child_code_system.md',
+              BASE / '30_urban_legend_analysis_coding_rules.md',
+          ]
+
+          HEADING_RE = re.compile(r'^(#{1,6})\s+(.+?)\s*$')
+          NUM_PREFIX_RE = re.compile(r'^(?:D\d{2}\.?\s+|\d+(?:\.\d+)*\.?\s+)')
+
+          @dataclass
+          class Node:
+              title: str
+              source_level: int
+              body: list[str] = field(default_factory=list)
+              children: list['Node'] = field(default_factory=list)
+
+          def strip_numbering(title: str) -> str:
+              # Preserve semantic Dxx labels inside taxonomy/coding documents.
+              if re.match(r'^D\d{2}\.', title):
+                  return title.strip()
+              return NUM_PREFIX_RE.sub('', title, count=1).strip()
+
+          def parse(text: str):
+              lines = text.splitlines()
+              for i, line in enumerate(lines):
+                  if not line.strip():
+                      continue
+                  m = HEADING_RE.match(line)
+                  if m and len(m.group(1)) == 1:
+                      lines[i] = f'**文書名:** {strip_numbering(m.group(2))}'
+                  break
+
+              root = Node('__ROOT__', 0)
+              stack = [root]
+              for line in lines:
+                  m = HEADING_RE.match(line)
+                  if not m:
+                      stack[-1].body.append(line)
+                      continue
+                  lvl = len(m.group(1))
+                  title = strip_numbering(m.group(2))
+                  while len(stack) > 1 and stack[-1].source_level >= lvl:
+                      stack.pop()
+                  node = Node(title, lvl)
+                  stack[-1].children.append(node)
+                  stack.append(node)
+              return root
+
+          def flatten_singletons(node: Node, is_root=False):
+              for child in list(node.children):
+                  flatten_singletons(child)
+              if is_root:
+                  return
+              while len(node.children) == 1:
+                  child = node.children[0]
+                  if node.body and node.body[-1] != '':
+                      node.body.append('')
+                  node.body.extend([f'**{child.title}**', ''])
+                  node.body.extend(child.body)
+                  node.children = child.children
+                  for gc in node.children:
+                      flatten_singletons(gc)
+
+          def render(root: Node) -> str:
+              out = list(root.body)
+              def emit(node: Node, path: list[int], depth: int):
+                  if depth > 4:
+                      raise RuntimeError(f'Heading depth exceeds H4: {node.title}')
+                  prefix = '.'.join(map(str, path)) + '.'
+                  out.append('#' * depth + f' {prefix} {node.title}')
+                  out.extend(node.body)
+                  for idx, child in enumerate(node.children, 1):
+                      emit(child, path + [idx], depth + 1)
+              for idx, child in enumerate(root.children, 1):
+                  emit(child, [idx], 1)
+              return '\n'.join(out).rstrip() + '\n'
+
+          def validate(text: str, path: Path):
+              headings = []
+              for line in text.splitlines():
+                  m = HEADING_RE.match(line)
+                  if not m:
+                      continue
+                  level = len(m.group(1))
+                  title = m.group(2)
+                  prefix = title.split(' ', 1)[0].rstrip('.')
+                  nums = prefix.split('.')
+                  if len(nums) != level or not all(x.isdigit() for x in nums):
+                      raise RuntimeError(f'{path}: invalid numbered heading: {line}')
+                  headings.append((level, [int(x) for x in nums], title))
+
+              previous_level = 0
+              expected = {}
+              current_path = []
+              child_counts = {}
+              for level, nums, title in headings:
+                  if level > previous_level + 1:
+                      raise RuntimeError(f'{path}: heading level skip before {title}')
+                  previous_level = level
+                  if level > 1 and nums[:-1] != current_path[:level-1]:
+                      raise RuntimeError(f'{path}: numbering inheritance mismatch: {title}')
+                  parent = tuple(nums[:-1])
+                  want = expected.get(parent, 1)
+                  if nums[-1] != want:
+                      raise RuntimeError(f'{path}: sibling numbering mismatch: {title}; expected {want}')
+                  expected[parent] = want + 1
+                  current_path = nums
+                  if level > 1:
+                      child_counts[parent] = child_counts.get(parent, 0) + 1
+
+              singletons = [p for p, count in child_counts.items() if count == 1]
+              if singletons:
+                  raise RuntimeError(f'{path}: redundant singleton heading groups remain: {singletons[:10]}')
+
+          for path in TARGETS:
+              original = path.read_text(encoding='utf-8')
+              root = parse(original)
+              flatten_singletons(root, is_root=True)
+              revised = render(root)
+              validate(revised, path)
+              path.write_text(revised, encoding='utf-8')
+              print(f'updated {path}: {len(original.splitlines())} -> {len(revised.splitlines())} lines')
+          PY
+
+      - name: Commit normalized documentation
+        shell: bash
+        run: |
+          if git diff --quiet -- \
+            workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md \
+            workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/20_urban_legend_parent_child_code_system.md \
+            workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/30_urban_legend_analysis_coding_rules.md; then
+            echo 'No changes required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md \
+            workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/20_urban_legend_parent_child_code_system.md \
+            workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/30_urban_legend_analysis_coding_rules.md
+          git commit -m 'docs: normalize research overview heading structure'
+          git push origin HEAD:main
