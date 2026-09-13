@@ -1,0 +1,200 @@
+name: Restructure research documentation
+
+on:
+  push:
+    paths:
+      - '.github/workflows/restructure-research-docs.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  restructure:
+    if: github.event.head_commit.message == 'chore: add temporary documentation restructuring workflow'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Normalize Markdown structure
+        shell: bash
+        run: |
+          python - <<'PY'
+          from __future__ import annotations
+          from dataclasses import dataclass, field
+          from pathlib import Path
+          import re
+
+          BASE = Path('workspace/articles/f8fe59b49c2e1e/docs/00_research_overview')
+          TARGETS = [
+              BASE / '10_urban_legend_analysis_axes_theoretical_design.md',
+              BASE / '20_urban_legend_parent_child_code_system.md',
+              BASE / '30_urban_legend_analysis_coding_rules.md',
+          ]
+
+          HEADING_RE = re.compile(r'^(#{1,6})\s+(.+?)\s*$')
+          NUM_PREFIX_RE = re.compile(r'^\d+(?:\.\d+)*\.?\s+')
+
+          @dataclass
+          class Node:
+              title: str
+              source_level: int
+              body: list[str] = field(default_factory=list)
+              children: list['Node'] = field(default_factory=list)
+
+          def strip_numbering(title: str) -> str:
+              return NUM_PREFIX_RE.sub('', title, count=1).strip()
+
+          def parse(text: str):
+              lines = text.splitlines()
+              title_text = None
+              title_idx = None
+              # The current files use the first H1 as a document title. Convert only
+              # that first H1 to non-heading metadata; all other H1s remain chapters.
+              for i, line in enumerate(lines):
+                  if not line.strip():
+                      continue
+                  m = HEADING_RE.match(line)
+                  if m and len(m.group(1)) == 1:
+                      title_text = strip_numbering(m.group(2))
+                      title_idx = i
+                  break
+
+              if title_idx is not None:
+                  lines[title_idx] = f'**文書名:** {title_text}'
+
+              root = Node('__ROOT__', 0)
+              stack = [root]
+              for line in lines:
+                  m = HEADING_RE.match(line)
+                  if not m:
+                      stack[-1].body.append(line)
+                      continue
+                  lvl = len(m.group(1))
+                  title = strip_numbering(m.group(2))
+                  while len(stack) > 1 and stack[-1].source_level >= lvl:
+                      stack.pop()
+                  parent = stack[-1]
+                  # Prevent level skipping by attaching to the nearest valid parent;
+                  # rendering will determine final level from tree depth.
+                  node = Node(title, lvl)
+                  parent.children.append(node)
+                  stack.append(node)
+              return root
+
+          def flatten_singletons(node: Node):
+              for child in list(node.children):
+                  flatten_singletons(child)
+              # Metadata rule: a heading level that contains exactly one heading is
+              # structurally redundant. Preserve its label as bold inline text,
+              # preserve all body text, and promote any grandchildren.
+              while len(node.children) == 1:
+                  child = node.children[0]
+                  label = f'**{child.title}**'
+                  promoted_body = []
+                  # Avoid introducing duplicate blank runs around the label.
+                  if node.body and node.body[-1] != '':
+                      promoted_body.append('')
+                  promoted_body.extend([label, ''])
+                  promoted_body.extend(child.body)
+                  node.body.extend(promoted_body)
+                  node.children = child.children
+                  for gc in node.children:
+                      flatten_singletons(gc)
+                  if node.title == '__ROOT__':
+                      # Root singleton would mean only one chapter; do not erase the
+                      # chapter boundary automatically. Current target files have many.
+                      break
+              return node
+
+          def render(root: Node) -> str:
+              out: list[str] = []
+              out.extend(root.body)
+
+              def emit(node: Node, path: list[int], depth: int):
+                  if depth > 4:
+                      raise RuntimeError(f'Heading depth exceeds H4 after normalization: {node.title}')
+                  prefix = '.'.join(str(x) for x in path) + '.'
+                  out.append('#' * depth + f' {prefix} {node.title}')
+                  out.extend(node.body)
+                  for idx, child in enumerate(node.children, 1):
+                      emit(child, path + [idx], depth + 1)
+
+              for idx, child in enumerate(root.children, 1):
+                  emit(child, [idx], 1)
+
+              return '\n'.join(out).rstrip() + '\n'
+
+          def validate(text: str, path: Path):
+              headings = []
+              for line in text.splitlines():
+                  m = HEADING_RE.match(line)
+                  if not m:
+                      continue
+                  level = len(m.group(1))
+                  title = m.group(2)
+                  pat = r'^\d+(?:\.\d+){' + str(level-1) + r'}\.\s+.+'
+                  if not re.match(pat, title):
+                      raise RuntimeError(f'{path}: invalid heading prefix: {line}')
+                  headings.append((level, title))
+
+              # No heading-level skips in document order.
+              prev = 0
+              for level, title in headings:
+                  if level > prev + 1:
+                      raise RuntimeError(f'{path}: heading level skip before {title}')
+                  prev = level
+
+              # Parse generated numbering and verify sibling sequences / inheritance.
+              sibling_next = {}
+              stack_nums = []
+              for level, title in headings:
+                  num = title.split(' ', 1)[0].rstrip('.')
+                  nums = [int(x) for x in num.split('.')]
+                  if len(nums) != level:
+                      raise RuntimeError(f'{path}: prefix depth mismatch: {title}')
+                  if level > 1 and nums[:-1] != stack_nums[:level-1]:
+                      raise RuntimeError(f'{path}: prefix inheritance mismatch: {title}')
+                  parent = tuple(nums[:-1])
+                  expected = sibling_next.get(parent, 1)
+                  if nums[-1] != expected:
+                      raise RuntimeError(f'{path}: non-sequential sibling number: {title}; expected {expected}')
+                  sibling_next[parent] = expected + 1
+                  stack_nums = nums
+
+              # Detect singleton immediate child groups.
+              child_counts = {}
+              for level, title in headings:
+                  num = title.split(' ', 1)[0].rstrip('.')
+                  nums = tuple(int(x) for x in num.split('.'))
+                  if level > 1:
+                      child_counts[nums[:-1]] = child_counts.get(nums[:-1], 0) + 1
+              singles = [parent for parent, count in child_counts.items() if count == 1]
+              if singles:
+                  raise RuntimeError(f'{path}: singleton heading groups remain: {singles[:10]}')
+
+          for path in TARGETS:
+              original = path.read_text(encoding='utf-8')
+              root = parse(original)
+              flatten_singletons(root)
+              revised = render(root)
+              validate(revised, path)
+              path.write_text(revised, encoding='utf-8')
+              print(f'updated {path}: {len(original.splitlines())} -> {len(revised.splitlines())} lines')
+          PY
+
+      - name: Commit normalized documentation
+        shell: bash
+        run: |
+          if git diff --quiet -- workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/20_urban_legend_parent_child_code_system.md workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/30_urban_legend_analysis_coding_rules.md; then
+            echo 'No changes required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md \
+                  workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/20_urban_legend_parent_child_code_system.md \
+                  workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/30_urban_legend_analysis_coding_rules.md
+          git commit -m 'docs: normalize research overview structure'
+          git push origin HEAD:main
