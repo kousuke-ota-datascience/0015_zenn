@@ -1,12 +1,11 @@
-**文書名:** 都市伝説・怪談・現代伝承 分析次元体系 — 理論設計 v3
+**文書名:** 都市伝説・怪談・現代伝承 分析次元体系 — 理論設計 v4
 
-> **ステータス: THEORETICAL DESIGN / v3**  
-> **旧版:** `urban_legend_analysis_axes_theoretical_design_v2.md`  
+> **ステータス: THEORETICAL DESIGN / v4**  
+> **旧版:** v3  
 > **分析単位:** 1行 = 1伝承エントリ  
 > **現行理論モデル:** 21概念次元  
->
-> 本文書では、**概念次元（theoretical dimension）** と **保存フィールド（storage field）** を明確に分離する。  
-> H1/H3でParent・Child、Primary・Secondaryの列が増えても、理論上の次元数は増えない。
+> **測定体系:** `20_urban_legend_parent_child_code_system.md`  
+> **運用規則:** `30_urban_legend_analysis_coding_rules.md`
 
 ---
 
@@ -16,78 +15,65 @@
 
 > **異常・不可解・不確実・偶然・危険・不可視な制度その他の意味形成を要求する対象に対して、人々のあいだで流通する伝承が、どのような手掛かりを用い、どのような説明・因果・規則・予測・対処を与え、それをどのように共有可能な世界モデルへ変換しているか。**
 
-ここでいう「世界モデル」は、精密な因果理論に限らない。
+ここでいう「世界モデル」は、精密な因果理論に限らない。命名、原因帰属、主体・意図帰属、条件付き予測、禁忌、回避規則、属性類型化、制度解釈などを含む。
 
-- 「あれは幽霊だ」という命名
-- 「会社が意図的に壊れるよう設計している」という原因帰属
-- 「20歳まで覚えていると死ぬ」という条件付き予測
-- 「逆回りしてはいけない」という禁忌化
-- 「このメールを転送しないと不幸になる」という行動規則
-- 「血液型によって性格が違う」という属性類型化
-
-を含む。
-
-したがって、本体系は「怪異の種類」を分類するものではなく、**意味形成モデルの構造を分解して比較するための理論次元体系**である。
+したがって、本体系は「怪異の種類」を分類するものではない。**人々が不可解な対象を理解可能・予測可能・対処可能なものへ変換する意味形成モデルの構造を、比較可能な次元へ分解するための理論体系**である。
 
 ---
 
-# 2. 観察単位: 伝承エントリ
+# 2. 文書体系と責務分離
 
-**定義**
+本研究の分析仕様は、次の3文書で分担する。
 
+| 文書 | 責務 |
+|---|---|
+| `10_urban_legend_analysis_axes_theoretical_design.md` | 何を区別して測るのか、なぜその次元が必要なのかを定義する |
+| `20_urban_legend_parent_child_code_system.md` | 各次元をどのParent / Child / Valueで測定するかを定義する |
+| `30_urban_legend_analysis_coding_rules.md` | 証拠から具体的コードへ到達する操作規則を定義する |
+
+この文書では、Child一覧や細かなinclude / exclude条件を重複記載しない。コード値の詳細は`20`、判定フローは`30`を正とする。
+
+---
+
+# 3. 観察単位: 伝承エントリ
 
 > **伝承エントリとは、人々が異常・不可解・不確実な何かを理解可能なものへ変換するために共有する、独立して伝達可能な最小の意味形成モデルである。**
 
-1伝承エントリをExcelの1行とする。
+1伝承エントリをデータ上の1行とする。
 
-## 2.1. 行を増やさないもの
+## 3.1. 行を増やさないもの
 
-- 登場人物が複数いる
-- 被害者が複数いる
-- 因果源が複数ある
-- 作用が複数ある
-- 帰結が複数ある
+- 登場人物・被害者が複数いる
+- 因果源・作用・帰結が複数ある
 - 典拠が複数ある
 - 同一構造の軽微な地域異伝がある
+- 1つの次元でSecondaryが複数必要になる
 
-## 2.2. 別Entryを検討するもの
+## 3.2. 別Entryを検討するもの
 
-同じFamily内でも、次の意味形成核が安定して変化している場合。
+同一Family内でも、以下のいずれかが安定して変化し、**世界のルールそのものが変わる場合**は別Entry候補とする。
 
-- 何を説明しているか
+- 何を説明対象とするか
 - 何を原因として置くか
 - 何を発動条件とするか
 - 何にどのように作用するか
 - どのような帰結・回避規則を持つか
 
-つまり、**人物数や作用数ではなく「世界のルール」が変わる場合**にEntryを分ける。
+人物数・作用数・媒体数ではなく、意味形成核の差を分割基準とする。
 
 ---
 
-# 3. 三層モデル: 理論・コーディング・分析
+# 4. 理論・コーディング・分析の三層モデル
 
-v2では「分析軸」と「Excel列」の関係が曖昧であった。v3では次の三層を分離する。
+## 4.1. 理論層 — Conceptual Dimensions
 
-## 3.1. 理論層 — Conceptual Dimensions
+研究上、互いに区別して問う概念的な変数群である。現行モデルでは**21概念次元**を採用する。
 
-研究上、互いに区別して問う概念的な次元。
+Parent / Child、Primary / Secondary、Excel列数は、この21という理論次元数を増やさない。
 
-例:
+## 4.2. コーディング層 — Atomic Coding Fields
 
-- 因果源存在論
-- 作用機構
-- 作用対象
-- 現実アンカー
-
-**現時点では21次元。**
-
-Parent/ChildやPrimary/Secondaryは、この数を増やさない。
-
-## 3.2. コーディング層 — Atomic Coding Fields
-
-コーダーが実際に入力する原子的な値。
-
-例: Dimension 13「作用機構」がH3なら、入力するのは原則として
+人手で入力する原子的な値である。H3次元では原則として、
 
 ```text
 D13_primary_child
@@ -96,53 +82,38 @@ D13_secondary2_child
 D13_status
 ```
 
-である。
+のように保存する。
 
-`secondary1` と `secondary2` は保存位置にすぎず、**意味上は順不同集合**である。
+Secondary 1 / 2は保存スロットであり、意味上は順不同集合である。
 
-## 3.3. 分析層 — Derived Analysis Fields
+## 4.3. 分析層 — Derived Analysis Fields
 
-Childから自動導出し、集計・entropy・比較に用いる値。
+ParentはChildから一意に導出する。
 
 ```text
-D13_primary_parent       = f(D13_primary_child)
-D13_secondary1_parent    = f(D13_secondary1_child)
-D13_secondary2_parent    = f(D13_secondary2_child)
+Parent = f(Child)
+H(Parent | Child) = 0
 ```
 
-Parentはコーダーが独立に判断する値ではない。
-
-> **Parent = Childの粗視化（coarse-graining）**
-
-である。
+したがって、ParentはChildと独立した理論変数ではない。Parentは比較・統計のための粗視化、Childは同じ次元の精密記述である。
 
 ---
 
-# 4. 「次元」と「列」を区別する
+# 5. データ型
 
-## 4.1. 基本原則
+各概念次元は次の5型のいずれかで実装する。
 
-> **21概念次元 ≠ 21 Excel列**
+| 型 | 名称 | 理論上の値 | 標準入力 |
+|---|---|---|---|
+| `S` | Single nominal | 排他的1値 | value |
+| `O` | Ordinal | 排他的1値・順序あり | value |
+| `H1` | Hierarchical single | Child 1値 | child |
+| `H3` | Hierarchical primary-secondary | Primary 1 + Secondary 0–2 | child×最大3 |
+| `B` | Binary vector | 独立した複数bit | 各bit |
 
-階層分類・主副関係・binary vectorを原子的な列へ展開するため、物理列数は21より多くなる。
+## 5.1. H1 / H3
 
-しかし列が増えても、その列が同じ研究質問の異なる表現なら、新しい理論次元とは数えない。
-
-**例: Dimension 13 作用機構**
-
-
-```text
-主作用 = M1 物理攻撃
-副作用 = {M3 標的化, M21 再発・付着}
-```
-
-これは3次元ではない。すべて
-
-> **「因果源は対象へ何をするか」**
-
-という1つの概念次元に対する複合値である。
-
-数学的にはH3次元を
+H1もH3も1概念次元である。H3は、
 
 ```text
 X_d = (p, S)
@@ -152,152 +123,41 @@ S = unordered set of secondary children, 0 <= |S| <= 2
 
 として扱う。
 
-## 4.2. ParentとChildは独立変数ではない
+Primaryはその次元についてEntryを最も強く規定する値、SecondaryはPrimaryだけでは失われる独立した追加構造である。
 
-childからparentが一意に決まるなら、
+## 5.2. Dimension Status
 
-```text
-Parent = f(Child)
-```
+各次元は値とは別にStatusを持つ。
 
-であり、
+- `D` — Direct: 典拠に直接明示
+- `I` — Inferred: 定義と証拠から合理的に推定
+- `U` — Unknown: 資料不足
+- `NA` — Not applicable: 構造上非該当
+- `C` — Conflict: 同一Version Scope内で競合
 
-```text
-H(Parent | Child) = 0
-```
-
-である。
-
-したがってParent entropyとChild entropyを加算して「この次元はそれだけ多くの情報を持つ」と評価してはならない。
-
-Parentは同一次元を粗い解像度で観測した値、Childは細かい解像度で観測した値である。
-
-## 4.3. PrimaryとSecondaryも別次元ではない
-
-Primary/Secondaryは、同一次元内部での構造的重要度を表す。
-
-- Primary = その次元についてEntryを最も強く規定する値
-- Secondary = Primaryだけでは失われる独立した追加構造
-
-Secondaryが2個あるからといって、次元数を3倍にはしない。
+`U / NA / C`をコード値として扱わない。特に、不明値を最もありそうなカテゴリで埋めることを禁止する。
 
 ---
 
-# 5. メタデータと概念次元を分離する
+# 6. 情報量評価の原則
 
-以下は概念次元ではなく、レコード管理・証拠管理用メタデータとする。
+H1/H3次元の母集団比較では、原則としてParentレベルを標準粒度とする。H3では`primary_parent`を一次分析変数とする。
 
-| メタデータ | 用途 |
-|---|---|
-| Entry_ID | 1行を一意に識別 |
-| Family_ID | 同一伝承ファミリ内の異伝・版を関連付ける |
-| Entry_Type | 物語／命題型噂／俗信・ジンクス／体験モチーフ／流言イベント等 |
-| Version_Scope | 今回どの版・時期・媒体範囲をコードするか |
-| Source / Evidence | コード根拠 |
-| Evidence_Rank | 典拠確度 |
-| Entry_Workflow_Status | 未着手 / コーディング中 / レビュー待ち / 確定等、行全体の作業状態 |
-| Entry_Coding_Memo | 行全体の判定根拠・異伝差・保留事項 |
-| Narrative_Time | 物語型Entryにのみ必要な補助メタデータ |
+## 6.1. Entropy
 
-**Entry_Typeは分析単位の形式であり、21概念次元には数えない。**
-
-**次元ごとの判定状態**
-
-
-各概念次元は、値とは別に `Dxx_status` を持つ。
-
-- `D` = 典拠に直接明示
-- `I` = 規則に基づく推定
-- `U` = 資料不足で不明
-- `NA` = そのEntryには構造上非該当
-- `C` = 同一Version Scope内で競合
-
-これはEntry全体のworkflow statusとは別である。
-
----
-
-# 6. データ型の理論定義
-
-各概念次元は次の5型のいずれかとして実装する。
-
-| 型 | 名称 | 理論上の値 | コーディング入力 | 派生分析値 |
-|---|---|---|---|---|
-| **S** | Single nominal | 排他的1値 | value | なし |
-| **O** | Ordinal | 排他的1値・順序あり | value | 必要なら数値化 |
-| **H1** | Hierarchical single | child 1値 | child | parent=f(child) |
-| **H3** | Hierarchical primary-secondary | primary 1 + secondary 0–2 | child×最大3 | parent×最大3 |
-| **B** | Binary vector | 独立した複数bit | 各bit | 組合せ・合計等 |
-
-## 6.1. H1
-
-H1は**1概念次元**である。
+カテゴリ分布の情報量はShannon entropyで評価する。
 
 ```text
-child = 1値
-parent = f(child)
+H(X) = - Σ p_i log2 p_i
+H_norm = H / log2(K)
+K_eff = 2^H
 ```
 
-Excelで2列使っても、次元数は1。
+ParentとChildは同一次元の異なる解像度なので、`H(Parent) + H(Child)`をその次元の総情報量として加算しない。
 
-## 6.2. H3
+## 6.2. Secondary
 
-H3も**1概念次元**である。
-
-### 6.2.1. Primary
-
-- exactly 1
-- 当該次元でEntryを最も強く規定する値
-
-### 6.2.2. Secondary
-
-- 0–2
-- unordered
-- Primaryだけでは失われる独立した構造がある場合のみ
-- 背景情報は入れない
-
-保存時のみchild code ID順にcanonical sortする。
-
-## 6.3. B
-
-Bは複数列を使うが、同じ理論質問の独立bitを持つ1概念次元である。
-
-Dimension 18「作用レイヤー」の例:
-
-```text
-D18_L1_internal
-D18_L2_receiver
-D18_L3_social_reality
-```
-
-3列だが1次元。
-
----
-
-# 7. 情報量評価の原則
-
-## 7.1. 標準entropy対象
-
-H1/H3次元では、母集団レベルの一次比較は原則として
-
-```text
-primary_parent
-```
-
-を使う。
-
-H1では単に `parent` を使う。
-
-## 7.2. 詳細entropy
-
-必要に応じて `primary_child` のentropyも計算する。
-
-Parent entropyとChild entropyは**別解像度の同じ次元**であり、合算しない。
-
-## 7.3. Secondaryの評価
-
-Secondary集合全体を1カテゴリにしない。
-
-代わりに、各コードについて
+Secondaryは別次元として数えない。分析では、
 
 - primary prevalence
 - secondary prevalence
@@ -305,110 +165,50 @@ Secondary集合全体を1カテゴリにしない。
 - pairwise co-occurrence
 - secondary_count
 
-を見る。
+を用いる。
 
-## 7.4. H3全体の情報量
-
-H3の完全な値は理論上 `(p,S)` だが、その全組合せを名義カテゴリ化すると組合せ爆発を起こす。
-
-したがって、研究の標準統計ではH3全組合せentropyを使わない。
-
-## 7.5. 次元保持の判断
-
-各Parent primary variableについてパイロット後に少なくとも以下を確認する。
-
-- `K_declared`
-- `K_observed`
-- Shannon entropy `H`
-- normalized entropy `H / log2(K)`
-- effective category count `K_eff = 2^H`
-- `K_eff / K_declared`
-- rare code率
-- U率
-- NA率
-- intercoder agreement
-- 次元間冗長性
-
-**コード値数そのものを最大化しない。**
+H3全組合せを1カテゴリにすると組合せ爆発を起こすため、標準分析では採用しない。
 
 ---
 
-# 8. v3で採用する21概念次元
+# 7. 現行21概念次元
 
-旧16軸の複合軸を分解した結果、現時点では21概念次元となる。
+| D | 概念次元 | 型 | 中心質問 | 標準分析表現 |
+|---|---|---|---|---|
+| D01 | 生成年代 | O | いつ成立したか | value |
+| D02 | 最古確認流通媒体 | H1 | 現在の証拠で、実際の流通を最も古く確認できる媒体は何か | parent / child |
+| D03 | 確認流通媒体ポートフォリオ（Version Scope） | H3 | 今回コードするVersion Scopeで、受容者へ流通したことを確認できる媒体は何か | primary_parent |
+| D04 | 生成・変容パターン | H3 | 時間とともにどう変形したか | primary_parent |
+| D05 | 提示形式 | H3 | どんなコミュニケーション形式で提示されるか | primary_parent |
+| D06 | 真実性提示 | S | どんな「本当らしさ」を要求するか | value |
+| D07 | 意味形成対象 | H3 | 何が不可解・不確実なのか | primary_parent |
+| D08 | 意味形成契機 | H3 | 何を手掛かりに問題化されるか | primary_parent |
+| D09 | 意味付与操作 | H3 | 不可解なものをどう理解可能にするか | primary_parent |
+| D10 | 因果源存在論 | H3 | 原因を何として世界に置くか | primary_parent |
+| D11 | 発動・接触条件 | H3 | 何を契機に因果系へ入るか | primary_parent |
+| D12 | 作用対象 | H3 | 誰／何に作用するか | primary_parent |
+| D13 | 作用機構 | H3 | 因果源が対象へ何をするか | primary_parent |
+| D14 | 帰結極性 | S | 結果は正・負・中立・混合か | value |
+| D15 | 帰結領域 | H3 | 何の領域が最終的に変わるか | primary_parent |
+| D16 | 因果時間構造 | H3 | 発動条件・原因成立から主作用／主帰結までの関係は、時間上どのように編成されるか | primary_parent |
+| D17 | 回避・制御方式 | H3 | 結果をどう回避・制御・利用できるか | primary_parent |
+| D18 | 作用レイヤー | B | 因果効力は伝承内／受容者／社会現実のどこに及ぶか | binary vector |
+| D19 | 流通範囲 | H3 | 誰の間に伝承が流通するか | primary_parent |
+| D20 | 特権情報保持者 | H3 | 誰が真相・追加情報を持つか | primary_parent |
+| D21 | 現実アンカー | O | 実在世界へどの程度固定されるか | value |
 
-| # | 概念次元 | 型 | 中心質問 | 標準分析表現 | Parent目安 |
-|---:|---|---|---|---|---:|
-| 1 | 生成年代 | O | いつ成立したか | value | 8–9 |
-| 2 | 初期媒体 | H1 | 最初にどの媒体で伝わったか | parent / child | 5–7 |
-| 3 | 現行・主要流通媒体 | H3 | 現在／主要期にどの媒体で流通するか | primary_parent | 5–7 |
-| 4 | 生成・変容パターン | H3 | 時間とともにどう変形したか | primary_parent | 6–8 |
-| 5 | 提示形式 | H3 | どんなコミュニケーション形式で提示されるか | primary_parent | 5–7 |
-| 6 | 真実性提示 | S | どんな「本当らしさ」を要求するか | value | 6–8 |
-| 7 | 意味形成対象 | H3 | 何が不可解・不確実なのか | primary_parent | 7–9 |
-| 8 | 意味形成契機 | H3 | 何を手掛かりに問題化されるか | primary_parent | 5–7 |
-| 9 | 意味付与操作 | H3 | 不可解なものをどう理解可能にするか | primary_parent | 6–9 |
-| 10 | 因果源存在論 | H3 | 原因を何として世界に置くか | primary_parent | 6–8 |
-| 11 | 発動・接触条件 | H3 | 何を契機に因果系へ入るか | primary_parent | 6–8 |
-| 12 | 作用対象 | H3 | 誰／何に作用するか | primary_parent | 6–8 |
-| 13 | 作用機構 | H3 | 因果源が対象へ何をするか | primary_parent | 8–9 |
-| 14 | 帰結極性 | S | 結果は正・負・中立・混合か | value | 4 |
-| 15 | 帰結領域 | H3 | 何の領域が最終的に変わるか | primary_parent | 6–9 |
-| 16 | 作用時間構造 | H3 | 作用は時間上どう展開するか | primary_parent | 5–7 |
-| 17 | 回避・制御方式 | H3 | 結果をどう回避・制御・利用できるか | primary_parent | 6–8 |
-| 18 | 作用レイヤー | B | 因果効力は伝承内／受容者／社会現実のどこに及ぶか | binary vector | 3 bits |
-| 19 | 流通範囲 | H3 | 誰の間に伝承が流通するか | primary_parent | 5–7 |
-| 20 | 特権情報保持者 | H3 | 誰が真相・追加情報を持つか | primary_parent | 5–7 |
-| 21 | 現実アンカー | O | 実在世界へどの程度固定されるか | value | 5 |
-
-## 8.1. 型別の次元数
-
-- O: 2次元
-- S: 2次元
-- H1: 1次元
-- H3: 15次元
-- B: 1次元
-
-合計 **21概念次元**。
-
-## 8.2. 物理列数の概算
-
-完全にmaterializeしたwide analysis tableでは、21次元よりはるかに多くの列を持つ。
-
-- O/S: 4 value列
-- H1: child + derived parent = 2列
-- H3: 15次元 × 6 value列 = 90列
-- B: 3 binary列
-- status: 21列
-
-合計は概ね **120分析関連列**（メタデータ除外）。
-
-これは「120分析軸」を意味しない。
-
-実運用では、入力シートと分析ビューを分けてよい。
-
-- **Coding Input View**: コーダーはChildとstatusのみ入力
-- **Analysis View**: Parentをlookupでmaterializeして集計・entropy分析に使用
+型別では、O=2、S=2、H1=1、H3=15、B=1で、合計21次元である。
 
 ---
 
-# 9. Block A — 社会的成立・流通
+# 8. 来歴・流通・提示の次元 D01–D06
 
-## 9.1. Dimension 1 — 生成年代
+## 8.1. D01 生成年代 / D02 最古確認流通媒体 / D03 確認流通媒体
 
-### 9.1.1. 型
+D01は伝承の最古の識別可能な形が成立した時期を粗い年代帯で比較する。現行値は9区分である。
 
-O
-
-### 9.1.2. 目的
-
-伝承エントリの**最古の識別可能な形**が成立した時期を比較する。
-
-### 9.1.3. 暫定値
-
-- 前近代
-- 明治〜大正
-- 昭和戦前
+- 前近代（〜1867）
+- 1868–1944
 - 1945–1969
 - 1970年代
 - 1980年代
@@ -417,444 +217,99 @@ O
 - 2010年代
 - 2020年代以降
 
-実測分布を見て隣接年代を統合する。
+D02は**起源媒体を推測する次元ではない**。現在の証拠で「実際に流通した」と最も古く確認できる媒体を測る。古い伝説だから口承、ネット発祥でないから口コミ、といった補完は禁止する。
 
-### 9.1.4. 注意
+D03は「現在の主要媒体」を測らない。**指定Version Scopeにおいて流通したことが確認できる媒体ポートフォリオ**を測る。現在Webで検索可能であること、研究DBに収録されていることは、それ自体では流通媒体の証拠ではない。
 
-現代に再流通した古伝承を「2020年代生成」としない。再燃はDimension 4。
+D02とD03は同じ媒体taxonomyを共有するが、問いが異なる。D02は最古確認点、D03はVersion Scope内の確認ポートフォリオである。
 
----
+## 8.2. D04 生成・変容 / D05 提示形式 / D06 真実性提示
 
-## 9.2. Dimension 2 — 初期媒体
+D04は媒体そのものではなく、時間とともに伝承がどう変形したかを測る。媒体移行、再話・変異、共同生成、再文脈化、反証を伴う再流通などを区別する。
 
-### 9.2.1. 型
+D05は研究者による要約形式ではなく、伝承が受容者へどの形式で提示されるかを測る。体験叙述、伝聞叙述、記録形式、命題形式、規則・警告形式、複合形式を区別する。
 
-H1
+D06は伝承が受容者に要求する認識論的スタンスを測る。現行値は7つである。
 
-### 9.2.2. 目的
+- 直接体験事実
+- 近接伝聞事実
+- 共同体既知事実
+- 一般・制度・科学事実
+- 条件付き信念
+- 真偽未確定
+- 虚構・反証既知の再流通
 
-最初に確認できる流通回路を測る。
-
-### 9.2.3. Parent候補
-
-- ORAL_LOCAL — 口承・ローカル伝承
-- PRINT_CORRESPONDENCE — 手紙・新聞・雑誌・書籍
-- BROADCAST — ラジオ・テレビ
-- EARLY_DIGITAL_TEXT — パソコン通信・BBS・Eメール
-- OPEN_WEB_SOCIAL — Web・掲示板・SNS
-- AUDIOVISUAL_DIGITAL — 動画・配信
-- INSTITUTIONAL_RECORD — 公文書・報告書等を起点とする特殊型
-
-Childは学校内伝承、職場内伝承、新聞、雑誌、BBS、SNS等。
+研究者による真偽判定とは分離する。
 
 ---
 
-## 9.3. Dimension 3 — 現行・主要流通媒体
+# 9. 意味形成の次元 D07–D10
 
-### 9.3.1. 型
+## 9.1. D07 意味形成対象 / D08 意味形成契機
 
-H3
+D07は本研究の中心次元であり、**「この伝承がなければ何が説明されないまま残るか」**を問う。異常体験、死・偶然、場所、対人脅威、身体・健康、技術・製品、制度・組織、属性・規範、情報・社会的不確実性などを区別する。
 
-### 9.3.2. 目的
+D08は、何を徴候・証拠として「説明すべき問題」が立ち上がったかを測る。D07が問題そのもの、D08が問題化の手掛かりである。
 
-Entryが**現在または主要な流通期にどのメディア環境で再生産されるか**を見る。
+## 9.2. D09 意味付与操作 / D10 因果源存在論
 
-Dimension 2と同じ媒体taxonomyを共有できる。
+D09は、不可解な入力を理解可能にするために伝承が行う操作を測る。カテゴリー化、原因帰属、主体・意図帰属、予測、規範化、制御規則化、制度解釈、歴史化、不可知性保持などを区別する。
 
-### 9.3.3. 理論上の意義
+D10は、原因を**何として世界に置くか**を測る。人間・組織、超自然主体、異常生物、物体・情報、場所・時空、自然・生物物理過程、主体を仮定しない現象・体験を区別する。
 
-`初期媒体 != 現行媒体` の差が媒体移行を示す。
-
----
-
-## 9.4. Dimension 4 — 生成・変容パターン
-
-### 9.4.1. 型
-
-H3
-
-### 9.4.2. Parent候補
-
-- STABILITY — 単発固定・低変異
-- VARIATION — 口承変異・再話・定型化・増補
-- MEDIA_MIGRATION — 媒体移行・ネット再増幅
-- COLLABORATIVE_PRODUCTION — 実況共同生成・複数投稿者・シリーズ化
-- MEDIA_EXPANSION — メディアミックス
-- RECONTEXTUALIZATION — 実事件への付着・再燃・再文脈化
-- CONTESTATION — 検証・反証を伴う再流通・起源喪失
-
-### 9.4.3. 境界
-
-Dimension 2–3は「どの媒体か」、Dimension 4は「どう変わったか」。
+D09は説明の操作、D10はその説明が採用する存在論であり、同一ではない。
 
 ---
 
-## 9.5. Dimension 5 — 提示形式
+# 10. 因果・行動モデルの次元 D11–D18
 
-### 9.5.1. 型
+## 10.1. D11 発動条件 / D12 作用対象 / D13 作用機構
 
-H3
+D11は因果系へ入る条件、D12は作用される対象、D13は発動後に因果源が対象へ何をするかを測る。
 
-### 9.5.2. Parent候補
+D13の「顕現・観測」は、作用情報が不足する場合の受け皿ではない。十分な証拠から追加作用が構造上必須でないと判断できる場合のみ使用する。資料不足は`U`として保持する。
 
-- EXPERIENCE_NARRATIVE — 体験談・回想
-- HEARSAY_NARRATIVE — FOAF・地元伝承・職場伝承
-- DOCUMENTARY_RECORD — ログ・日誌・新聞風・記録
-- PROPOSITIONAL_CLAIM — 命題型主張・俗説
-- RULE_WARNING_INSTRUCTION — 警告・ジンクス・儀式・手順
-- COLLECTIVE_HYBRID — 実況・複数証言・複合形式
+## 10.2. D14 帰結極性 / D15 帰結領域 / D16 因果時間構造
 
----
+D14は主帰結の正負中立混合、D15は最終的に何の領域が変わるかを測る。D13が動詞、D15が結果状態である。
 
-## 9.6. Dimension 6 — 真実性提示
+D16は「伝承が何年流通したか」ではなく、**原因成立・発動から主作用／主帰結までの因果関係の時間編成**を測る。現行Parentは7つである。
 
-### 9.6.1. 型
+- `STA` — 無時間的・静的関係
+- `EVT` — 単一エピソード・事象内
+- `DLY` — 遅延・期限・潜伏
+- `PRG` — 段階進行・長期化
+- `REC` — 再発・周期
+- `CON` — 持続
+- `TRN` — 連鎖・世代
 
-S
+このうち`STA`は、血液型と性格の対応、職業と高給の対応、制度上の静的ルールのように、時間進行を必要としない命題型伝承を`U`へ落とさないために設ける。`EVT`は一続きの出来事の内部で作用と帰結が完結する型を扱う。
 
-### 9.6.2. 暫定値
+## 10.3. D17 回避・制御方式 / D18 作用レイヤー
 
-- 直接体験として主張
-- 身近な伝聞として主張
-- 共同体で既知の事実として主張
-- 一般事実・制度・科学的事実として主張
-- 条件付き・蓋然的信念として提示
-- 真偽未確定として提示
-- 否定・反証と併存
-- 虚構起源が既知だが伝承として再流通
+D17は結果をどう回避・制御・利用できるかを測る。資料に対処法が書かれていないことと「不可避」は同義ではない。
 
-### 9.6.3. 注意
+D18は3つの独立binaryで因果効力のレイヤーを測る。
 
-研究者が真偽判定する軸ではない。
+- L1 — 伝承内容内部の人物・物体・環境等に作用
+- L2 — 読む・聞く・受信する現実側の受容者が伝承内容上の因果対象になる
+- L3 — 噂を信じた人間の行動等により、現実社会で確認可能な結果が生じる
+
+L1/L2/L3は排他的カテゴリではない。
 
 ---
 
-# 10. Block B — 意味形成
+# 11. 社会的埋め込みの次元 D19–D21
 
-## 10.1. Dimension 7 — 意味形成対象
+## 11.1. D19 流通範囲 / D20 特権情報保持者
 
-### 10.1.1. 型
+D19は誰の間で伝承が流通するか、D20は誰が真相・追加ルール・隠された情報を持つかを測る。
 
-H3
+同じ共同体が両者に現れる場合があっても、**情報の受容範囲**と**情報非対称性**という異なる理論次元である。
 
-### 10.1.2. 目的
+## 11.2. D21 現実アンカー / 典拠との区別
 
-> **この伝承がなければ、何が説明されないまま残るのか。**
-
-本研究の中心軸。
-
-### 10.1.3. Parent候補
-
-- ANOMALOUS_EXPERIENCE_EXISTENCE — 異常体験・未知存在
-- DEATH_CHANCE_MISFORTUNE — 死・喪失・偶然・不運
-- PLACE_SPACE_ENVIRONMENT — 場所・空間・環境の異常／危険
-- INTERPERSONAL_CRIME_THREAT — 対人・犯罪脅威
-- BODY_HEALTH_FOOD — 身体・健康・食品リスク
-- TECHNOLOGY_PRODUCT_SYSTEM — 技術・製品・システムの不可解
-- INSTITUTION_ORGANIZATION — 制度・組織の不透明性
-- IDENTITY_NORM_GROUP — 人格差・属性・規範・内外集団
-- INFORMATION_SOCIAL_UNCERTAINTY — 情報空白・不足・集団不安
-
-Childで「死後」「スポーツ上の不運」「海外犯罪」「性格差」等を区別する。
-
----
-
-## 10.2. Dimension 8 — 意味形成契機
-
-### 10.2.1. 型
-
-H3
-
-### 10.2.2. 目的
-
-何を徴候・証拠として「説明すべき問題」が立ち上がるか。
-
-### 10.2.3. Parent候補
-
-- DIRECT_EXPERIENCE — 直接経験・身体感覚
-- SOCIAL_TESTIMONY — 他者証言・口コミ
-- PATTERN_CORRELATION — 反復・偶然・経験則・疑似統計
-- MATERIAL_RECORD_TRACE — 写真・録音・文書・物的痕跡
-- EVENT_HISTORY_PLACE_TRACE — 実事件・事故・災害・地名・歴史痕跡
-- TECHNICAL_INSTITUTIONAL_OPACITY — 不具合・非公開性・制度空白
-- CLAIM_FIRST — 手掛かりなし／命題先行
-
----
-
-## 10.3. Dimension 9 — 意味付与操作
-
-### 10.3.1. 型
-
-H3
-
-### 10.3.2. 目的
-
-不可解な入力を**どんな認知・社会的操作で理解可能にするか**。
-
-### 10.3.3. Parent候補
-
-- CATEGORIZATION — 命名・カテゴリー化
-- CAUSAL_ATTRIBUTION — 原因帰属
-- AGENCY_INTENTION — 主体・意図帰属
-- PATTERN_PREDICTION — パターン化・相関化・予兆・予測
-- NORMATIVE_VALUATION — 吉凶化・道徳化・禁忌化
-- CONTROL_RULE_FORMATION — 対処・制御・手順化
-- SOCIAL_SYSTEM_INTERPRETATION — 陰謀化・社会的境界化・制度説明
-- HISTORICIZATION — 由来化・歴史化
-- PRESERVED_UNKNOWABILITY — 空白・不可知性の保持
-
----
-
-## 10.4. Dimension 10 — 因果源存在論
-
-### 10.4.1. 型
-
-H3
-
-### 10.4.2. 目的
-
-伝承が原因を**何として世界に置くか**。
-
-### 10.4.3. Parent候補
-
-- HUMAN_SOCIAL_ACTOR — 人間・共同体・組織
-- SUPERNATURAL_AGENT — 人格怪異・神格・超越主体
-- ANOMALOUS_LIVING_INTERNAL — 未知生物・寄生体・身体内部存在
-- OBJECT_INFORMATION — 呪物・人工物・情報・記号
-- PLACE_SPACETIME — 場所・空間・世界
-- NATURAL_BIOPHYSICAL_PROCESS — 自然・物理・生物学的属性／過程
-- PHENOMENON_EXPERIENCE — 独立主体を仮定しない現象・体験
-
-旧NコードはChild候補として再配置する。
-
----
-
-# 11. Block C — 因果・行動モデル
-
-## 11.1. Dimension 11 — 発動・接触条件
-
-### 11.1.1. 型
-
-H3
-
-### 11.1.2. Parent候補
-
-- SENSORY_EXPOSURE — 見る・聞く・触る等
-- INFORMATION_EXPOSURE — 知る・読む・記憶する等
-- MANIPULATION_RITUAL — 開ける・所有する・儀式をする等
-- MOVEMENT_SPATIAL_ENTRY — 乗る・降りる・入る・通る等
-- SOCIAL_RELATION_TRANSACTION — 会う・雇われる・契約する等
-- TIME_ATTRIBUTE_CONDITION — 時刻・年齢・属性・場所条件
-- PASSIVE_OCCURRENCE — 発症・経験・巻き込まれる・受信する
-- NO_CONTACT_REQUIRED — 接触不要
-
----
-
-## 11.2. Dimension 12 — 作用対象
-
-### 11.2.1. 型
-
-H3
-
-### 11.2.2. Parent候補
-
-- FOCAL_PERSON — 主人公・体験者
-- OTHER_PERSON — 他登場人物・特定被害者
-- KIN_CLOSE_RELATION — 家族・血縁・親密者
-- GROUP_COMMUNITY — 集団・共同体・不特定人群
-- ORGANIZATION_SYSTEM — 組織・制度
-- OBJECT_TECH_DATA — 物体・設備・技術・データ
-- PLACE_ENVIRONMENT_WORLD — 場所・環境・世界状態
-- AUDIENCE_RECEIVER_PUBLIC — 語り手・読者・聞き手・次の受信者・一般社会
-
-### 11.2.3. 規則
-
-主対象1、副対象0–2。別行に分解しない。
-
----
-
-## 11.3. Dimension 13 — 作用機構
-
-### 11.3.1. 型
-
-H3
-
-### 11.3.2. 目的
-
-因果源が対象へ**何をするか**。
-
-### 11.3.3. Parent候補
-
-- MANIFESTATION — 顕現・追加作用なし
-- PHYSICAL_MATERIAL_EFFECT — 身体・物体・環境の物理／生理変化
-- RELATIONAL_TARGETING — 追跡・標的化・誘引・擬態・付着・他怪異との関係
-- INTERNAL_CONTROL — 憑依・寄生・共生
-- COGNITIVE_INFORMATION_EFFECT — 認知災害・精神干渉・記憶改変・情報誘導
-- REALITY_SPACETIME_EFFECT — 現実・空間・時間の改変／置換
-- PROPAGATION — 感染・伝播
-- SOCIAL_INSTITUTIONAL_EFFECT — 隠蔽・排除・脅迫・制度的強制
-- FATE_FORTUNE_EFFECT — 運命固定・吉凶付与
-
-旧M0–M25はChild候補として再配置する。
-
-### 11.3.4. M0相当の厳格化
-
-MANIFESTATIONは、十分な資料から**追加作用が構造上必須でない**と確認できる場合のみ。
-
-`作用情報がない` をMANIFESTATIONへ入れない。
-
----
-
-## 11.4. Dimension 14 — 帰結極性
-
-### 11.4.1. 型
-
-S
-
-### 11.4.2. 値
-
-- 負
-- 中立
-- 正
-- 混合
-
-作用が非該当ならNA。
-
----
-
-## 11.5. Dimension 15 — 帰結領域
-
-### 11.5.1. 型
-
-H3
-
-### 11.5.2. Parent候補
-
-- BODY_HEALTH — 身体・健康
-- MIND_COGNITION — 精神・認知
-- SOCIAL_STATUS_RELATION — 社会関係・地位・信用
-- MATERIAL_TECH_ECONOMIC — 物的・技術的・経済的
-- BEHAVIOR_CHOICE — 行動・選択
-- LIFE_COURSE_IDENTITY — 人生・将来・存在・アイデンティティ
-- WORLD_KNOWLEDGE — 世界認識・知識・説明状態
-- COLLECTIVE_SOCIAL_SYSTEM — 集団・社会・制度
-- OPPORTUNITY_FORTUNE — 吉凶・機会・恋愛・合否等
-
-Childで死亡、身体欠損、データ削除、買い占め等を記述する。
-
----
-
-## 11.6. Dimension 16 — 作用時間構造
-
-### 11.6.1. 型
-
-H3
-
-### 11.6.2. Parent候補
-
-- IMMEDIATE_SINGLE — 即時・単発観測
-- DELAYED_DEADLINE_LATENT — 遅延・期限・潜伏
-- PROGRESSIVE_CHRONIC — 段階進行・長期浸食・生涯
-- RECURRENT_CYCLIC — 再発・周期
-- CONTINUOUS_PURSUIT — 追跡・持続
-- TRANSMISSIVE_INTERGENERATIONAL — 連鎖拡散・世代継承
-
----
-
-## 11.7. Dimension 17 — 回避・制御方式
-
-### 11.7.1. 型
-
-H3
-
-### 11.7.2. Parent候補
-
-- AVOIDANCE — 単純回避・逃走
-- RULE_COMPLIANCE — ルール遵守・正答
-- RITUAL_EXPERT_INTERVENTION — 儀式・専門家介入
-- COST_TRANSFER_MANAGEMENT — 代償・転嫁・管理
-- INFORMATION_TECHNICAL_CORRECTION — 情報検証・訂正・技術復旧
-- USE_EXPLOITATION — 利用可能・願掛け等
-- UNAVOIDABLE — 不可避
-- NO_CONTROL_NEEDED — 回避不要
-
----
-
-## 11.8. Dimension 18 — 作用レイヤー
-
-### 11.8.1. 型
-
-B
-
-### 11.8.2. 実装
-
-3つの独立binary列。
-
-- `L1_internal_model`
-- `L2_receiver`
-- `L3_social_reality`
-
-### 11.8.3. 定義
-
-- **L1** — 伝承内容内部で人物・物体・環境等に作用
-- **L2** — 話を読む・聞く・受信する現実側の受容者が伝承内容上の因果対象になる
-- **L3** — 噂を信じた人間の行動等により現実社会で確認可能な結果が生じる
-
-`L1+L2` のような文字列で保存しない。
-
----
-
-# 12. Block D — 社会的埋め込み
-
-## 12.1. Dimension 19 — 流通範囲
-
-### 12.1.1. 型
-
-H3
-
-### 12.1.2. Parent候補
-
-- PRIVATE_INDIVIDUAL — 個人・ごく限定された経験者
-- KIN_PEER — 家族・友人・学校仲間
-- LOCAL_COMMUNITY — 地域共同体
-- PROFESSIONAL_SPECIALIST — 職業・専門コミュニティ
-- ORGANIZATIONAL_INTERNAL — 組織内部
-- NETWORKED_PUBLIC — 掲示板・SNS・ネット群衆
-- MASS_PUBLIC — 一般社会・全国流通
-
-主流通範囲1、副0–2。
-
----
-
-## 12.2. Dimension 20 — 特権情報保持者
-
-### 12.2.1. 型
-
-H3
-
-### 12.2.2. 目的
-
-誰が**真相・追加ルール・隠された情報**を持つか。
-
-### 12.2.3. Parent候補
-
-- NO_PRIVILEGE — 特権保持者なし
-- PERSONAL_KIN — 当事者・家族
-- LOCAL_PEER_INSIDER — 地元・学校・職場内部者
-- EXPERT_PROFESSIONAL — 専門家・研究者・職人等
-- ORGANIZATION_PERPETRATOR — 組織・加害者・権限主体
-- INACCESSIBLE_UNKNOWN — 誰も知らない／失われた
-- HAZARDOUS_INFORMATION — 情報自体が危険でアクセスが制約される
-
----
-
-## 12.3. Dimension 21 — 現実アンカー
-
-### 12.3.1. 型
-
-O
-
-### 12.3.2. 値
+D21は伝承モデル自体が実在世界へどの程度固定されるかを0–4の序数で測る。
 
 0. 匿名・抽象
 1. 一般的現実背景
@@ -862,426 +317,130 @@ O
 3. 実在制度・社会史がモデル成立条件
 4. 史実・記録・既存伝承を因果構造へ統合
 
-### 12.3.3. 注意
+典拠が実在することと、伝承内容が現実へ強くアンカーされることは別である。
 
-典拠が現実に存在することと、伝承内容の現実アンカーは別。
+---
+
+# 12. 次元間の主要境界規則
+
+| 境界 | 区別 |
+|---|---|
+| D02 vs D03 | 最古確認媒体 vs Version Scope内の確認流通媒体 |
+| D03 vs D04 | どの媒体で流通したか vs その過程でどう変形したか |
+| D07 vs D08 | 何が不可解か vs 何を手掛かりに問題化したか |
+| D08 vs D21 | 意味形成に使う徴候・証拠 vs モデル全体の現実固定度 |
+| D09 vs D10 | どう説明するかという操作 vs 何を原因として置くか |
+| D11 vs D13 | 発動条件 vs 発動後の作用 |
+| D12 vs D18 | 誰／何が対象か vs 作用がどの現実レイヤーに属するか |
+| D13 vs D15 | 何をするか vs 最終的に何が変わるか |
+| D16 vs D01/D04 | 因果系内部の時間構造 vs 伝承自体の成立・変容史 |
+| D19 vs D20 | 誰に流通するか vs 誰が特権情報を持つか |
 
 ---
 
 # 13. 物理データスキーマ
 
-物理スキーマは**概念次元の理論構造を忠実に保存する実装**であり、次元数そのものではない。
+理論次元数と物理列数を混同しない。
 
-## 13.1. S / O
+| 型 | 例 |
+|---|---|
+| S/O | `D06_value`, `D06_status` |
+| H1 | `D02_child`, `D02_parent`, `D02_status` |
+| H3 | `D13_primary_child`, `D13_primary_parent`, `D13_secondary1_child`, `D13_secondary1_parent`, `D13_secondary2_child`, `D13_secondary2_parent`, `D13_status` |
+| B | `D18_L1`, `D18_L2`, `D18_L3`, `D18_status` |
 
-```text
-D06_value
-D06_status
-```
+Parentは入力せず、Child→Parent対応表から自動生成する。これにより親子不整合を構造的に防止する。
 
-1次元、value 1列。
-
-## 13.2. H1
-
-```text
-D02_child
-D02_parent        # derived = f(child)
-D02_status
-```
-
-1次元、入力1列＋派生1列。
-
-## 13.3. H3
-
-```text
-D13_primary_child
-D13_primary_parent       # derived
-D13_secondary1_child
-D13_secondary1_parent    # derived
-D13_secondary2_child
-D13_secondary2_parent    # derived
-D13_status
-```
-
-1次元、Child入力最大3列＋Parent派生最大3列。
-
-`secondary1/2` は意味上unordered。保存時のみchild code ID順でcanonicalizeする。
-
-## 13.4. B
-
-```text
-D18_L1
-D18_L2
-D18_L3
-D18_status
-```
-
-1次元、3 binary field。
-
-## 13.5. 入力ビューと分析ビュー
-
-### 13.5.1. Coding Input View
-
-人手入力の対象を最小化する。
-
-- S/O: value
-- H1: child
-- H3: primary_child, secondary1_child, secondary2_child
-- B: bit列
-- 各次元: status
-
-Parentは入力しない。
-
-### 13.5.2. Analysis View
-
-Child→Parent対応表からParentを自動生成する。
-
-- primary_parent
-- secondary1_parent
-- secondary2_parent
-
-これにより、親子不整合を構造的に防止する。
+完全materializeしたwide tableでは100列を大きく超えるが、それは100以上の理論次元があることを意味しない。
 
 ---
 
-# 14. 統計分析時の標準表現
+# 14. 現在の検証状態
 
-## 14.1. 次元数を数える単位
+本体系は理論提案だけの段階ではない。Parent / Child体系を設計した後、層化パイロット、第2パイロット、正規化406伝承エントリへの本適用を実施している。
 
-理論次元数は21。
+## 14.1. パイロットで確定した修正
 
-Excel列数、Parent列数、Child列数、Secondary列数を理論次元数へ加算しない。
+第1パイロットで、D03は「現行・主要」という概念が証拠から安定して判定できず、D16は非物語型・静的命題を扱えないことが判明した。
 
-## 14.2. 基本分布
+そのため、
 
-H1/H3ではParentレベルを母集団比較の標準粒度とする。
+- D02を「最古確認流通媒体」へ厳格化
+- D03を「確認流通媒体ポートフォリオ（Version Scope）」へ再定義
+- D16を「因果時間構造」へ再定義し、`STA` / `EVT`を導入
 
-H3では原則 `primary_parent` の分布を比較する。
+した。これらは現行仕様であり、旧名称へ戻さない。
 
-## 14.3. Child分析
+## 14.2. 本適用後も残る課題
 
-`primary_child` はParent内部の詳細構造を分析するときに使用する。
+406件への本適用は、21次元が実データ上で使用可能であることを確認するための重要な検証である一方、次を最終確定したものではない。
 
-ParentとChildを同じモデルへ無批判に同時投入しない。ChildがParentを決定するため、強い冗長性を持つ。
+- 406件すべての伝承史・初出史料を完全調査したわけではない
+- D02のような歴史次元では、正当な`U`が残る
+- intercoder reliabilityは別途検証が必要
+- Child粒度・rare code・次元間冗長性は今後も実測に基づいて監査する
 
-## 14.4. Secondary分析
-
-Secondaryは次元内の補助構造であり、独立次元ではない。
-
-各コードについて
-
-- primary prevalence
-- secondary prevalence
-- any-position prevalence
-- pairwise co-occurrence
-- secondary_count
-
-を分析する。
-
-## 14.5. H3の総合表現
-
-個別Entryを記述するときは
-
-```text
-primary = M1
-secondary = [M3, M21]
-```
-
-という概念表現を使ってよい。
-
-ただしExcelではlist文字列にせずatomic columnsへ展開する。
-
-## 14.6. 情報量の二重計上禁止
-
-以下を禁止する。
-
-- `H(parent) + H(child)` を同一次元の総情報量とみなす
-- primary / secondaryを別次元として数える
-- ParentとChildを独立特徴量としてそのまま同じ解析へ投入する
-- secondary集合の全組合せをカテゴリID化する
+したがって、21次元は現行の採用モデルであるが、理論的に永久固定された数ではない。
 
 ---
 
-# 15. 次元間の境界規則
+# 15. この設計で直接分析する研究問い
 
-## 15.1. Dimension 7 vs 8
+| RQ | 問い | 主な次元 |
+|---|---|---|
+| RQ1 | 何の不確実性が、どの種類の原因モデルへ変換されやすいか | D07 × D10 |
+| RQ2 | 意味形成対象によって、使われる意味付与操作は変わるか | D07 × D09 |
+| RQ3 | どの伝承が説明を超えて行動規則・回避規則を与えるか | D09 × D11 × D17 |
+| RQ4 | 超自然・非超自然で因果源が異なっても作用・制御構造を共有するか | D10 × D13 × D17 |
+| RQ5 | 流通媒体・変容・提示形式と意味形成構造はどう関連するか | D02–D06 × D07–D17 |
+| RQ6 | 因果効力は伝承内部だけで完結するか、受容者・社会現実まで及ぶか | D18 |
+| RQ7 | 情報非対称性や現実アンカーは、どの因果モデルと結びつくか | D19–D21 × D10/D13 |
 
-- Dimension 7 = **何が不可解なのか**
-- Dimension 8 = **何を手掛かりに不可解だと考えるのか**
-
-## 15.2. Dimension 8 vs 21
-
-- Dimension 8 = 意味形成で利用される証拠・徴候
-- Dimension 21 = 伝承モデル全体が現実世界にどれだけ固定されるか
-
-## 15.3. Dimension 9 vs 10
-
-- Dimension 9 = **どう説明するかという認知操作**
-- Dimension 10 = **何を原因として置くか**
-
-例:
-
-`S=原因帰属` と `N=企業・制度` は別変数。
-
-## 15.4. Dimension 11 vs 13
-
-- Dimension 11 = 何が発動条件か
-- Dimension 13 = 発動後、何をするか
-
-## 15.5. Dimension 12 vs 18
-
-- Dimension 12 = 誰／何が作用対象か
-- Dimension 18 = その作用が伝承内・受容者・社会現実のどのレイヤーに属するか
-
-## 15.6. Dimension 13 vs 15
-
-- Dimension 13 = 動詞
-- Dimension 15 = 最終状態
-
-`M=物理攻撃` → `Outcome=死亡` を分離する。
-
-## 15.7. Dimension 19 vs 20
-
-- Dimension 19 = 誰の間で噂が流通するか
-- Dimension 20 = 誰が追加情報・真相を持つか
+このコーパスから直接分析できるのは、伝承に埋め込まれた意味形成構造とその共起・分布である。人が心理的に「なぜ」信じる・作る・拡散するかという因果説明には、実験、調査、インタビュー、時系列伝播データ等の別設計が必要である。
 
 ---
 
-# 16. v2 → v3 の主要変更
+# 16. v3 → v4 の主要変更
 
-## 16.1. 「概念次元」と「保存フィールド」を分離
-
-v2で導入した21概念次元を維持しつつ、Parent/Child・Primary/Secondaryによって増えるExcel列を新しい次元として数えないことを正式化した。
-
-## 16.2. 三層モデルを導入
-
-理論層 / コーディング層 / 分析層を分離し、ParentをChildからのderived fieldとして定義した。
-
-## 16.3. 複合軸を分解
-
-### 16.3.1. 旧Dimension 1 来歴・生成変容史
-
-→ 生成年代 / 初期媒体 / 現行媒体 / 生成変容パターン
-
-### 16.3.2. 旧Dimension 2 伝達・提示形式
-
-→ 媒体をDimension 2–3へ、提示形式をDimension 5へ
-
-### 16.3.3. 旧Dimension 11 帰結
-
-→ 帰結極性 / 帰結領域
-
-### 16.3.4. 旧Dimension 15 情報・認識分布
-
-→ 流通範囲 / 特権情報保持者
-
-## 16.4. 作用対象ごとの子レコード化を禁止
-
-1Entry = 1行を維持する。
-
-## 16.5. 文字列multi-labelを廃止
-
-`N2+N8` や `M1+M21` のように1セルへ結合しない。
-
-H3の固定列へ分解する。
-
-## 16.6. 主・副cardinalityを正式化
-
-- 主 = exactly 1
-- 副 = 0–2
-- 副はunordered
-
-## 16.7. Parentはderived variable化
-
-parentとchildを双方手入力しない。
+- D01の年代区分を現行9値へ同期した。
+- D02を「初期媒体」から**最古確認流通媒体**へ更新した。
+- D03を「現行・主要流通媒体」から**確認流通媒体ポートフォリオ（Version Scope）**へ更新し、「現在」「主要」という理論概念を廃止した。
+- D06を現行7値へ同期した。
+- D16を「作用時間構造」から**因果時間構造**へ更新し、7 Parentの現行設計を反映した。
+- Parent / Childを「候補」ではなく、`20`で定義される現行測定体系として位置付け直した。
+- Child一覧・Primary選択・include / excludeを「今後決める」とする旧記述を削除した。
+- 「パイロット前」という旧フェーズ記述を削除し、第2パイロット・406件本適用後の検証状態へ更新した。
+- 旧`M1`等の一時コードを理論設計から除き、コード詳細を`20`へ委譲した。
+- `10` / `20` / `30`の責務分離を明文化した。
 
 ---
 
-# 17. ストレステスト
+# 17. 結論
 
-## 17.1. 猿夢
-
-1Entryのまま保持する。
-
-例:
-
-- D07意味形成対象: 主=異常体験、副=未知存在
-- D10因果源: 主=空間／世界、副=人格怪異または正体不明存在
-- D12作用対象: 主=他登場人物、副=主人公
-- D13作用機構: 主=身体・物質作用(M1物理攻撃)、副=関係操作(M3標的化), 関係操作(M21再発)
-- D15帰結領域: 主=身体、副=精神・認知
-- D18: L1=1
-
-後代の「読者感染型」が独立した意味形成核として安定していれば別Entry化し、L2=1。
-
-## 17.2. ひとりかくれんぼ
-
-- 因果源: 主=物体・情報系の呪物child、副=超自然主体child
-- 発動: 主=儀式・操作
-- 対象: 主=実践者、副=物体／環境
-- 作用: 主=身体・物質作用の環境物理作用child
-- 回避: 主=規則遵守／儀式終了
-- Layer: L1
-
-## 17.3. ソニータイマー
-
-- 意味形成対象: 技術・製品・システム
-- 契機: 技術的不具合＋反復パターン
-- 意味付与: 原因帰属＋主体意図帰属
-- 因果源: HUMAN_SOCIAL_ACTORの企業／組織child
-- 作用対象: 物体・技術
-- 作用機構: 噂内容上は物理・機器作用
-- 帰結: 物的・技術的・経済的
-- Layer: L1。現実の購買行動が確認される場合のみL3
-
-## 17.4. 金縛り
-
-「体験モチーフ」と「霊的原因説明」はFamily内でEntry分割候補。
-
-- 体験モチーフEntry: 因果源=PHENOMENON_EXPERIENCE
-- 霊的説明Entry: 因果源=SUPERNATURAL_AGENT
-
-この差は意味形成核を変更するため、Entry分割に理論的意味がある。
-
-## 17.5. トイレットペーパー不足流言
-
-- 意味形成対象: INFORMATION_SOCIAL_UNCERTAINTY
-- 意味付与: PATTERN_PREDICTION / RISK系child
-- 因果源: OBJECT_INFORMATIONの情報child
-- 対象: AUDIENCE_RECEIVER_PUBLIC
-- 作用: COGNITIVE_INFORMATION_EFFECTの行動誘導child + PROPAGATION
-- 帰結: BEHAVIOR_CHOICE + COLLECTIVE_SOCIAL_SYSTEM
-- Layer: L3=1
-
----
-
-# 18. この設計で直接分析できる研究問い
-
-## 18.1. RQ1
-
-何の不確実性が、どの種類の原因モデルへ変換されやすいか。
-
-`Dimension 7 × Dimension 10`
-
-## 18.2. RQ2
-
-意味形成対象によって、使われる意味付与操作は変わるか。
-
-`Dimension 7 × Dimension 9`
-
-## 18.3. RQ3
-
-どの伝承が単なる説明を超え、行動規則・回避規則を提供するか。
-
-`Dimension 9 × Dimension 11 × Dimension 17`
-
-## 18.4. RQ4
-
-超自然怪談と非超自然都市伝説は、因果源が違っても作用・制御構造を共有するか。
-
-`Dimension 10 × Dimension 13 × Dimension 17`
-
-## 18.5. RQ5
-
-媒体変化によって、提示形式・真実性・意味形成構造は変化するか。
-
-`Dimension 1–6 × Dimension 7–17`
-
-## 18.6. RQ6
-
-伝承は伝承内部だけで完結するか、受容者や現実社会まで因果系へ取り込むか。
-
-`Dimension 18`
-
-## 18.7. RQ7
-
-現実アンカーや情報非対称性は、どの因果モデルと結びつくか。
-
-`Dimension 19–21 × Dimension 10/13`
-
----
-
-# 19. この段階で確定しないこと
-
-本文書は理論設計であり、以下は次のコードブック設計で決める。
-
-- Childコードの最終一覧
-- Parent名の最終語彙
-- include / exclude条件
-- Primary選択の詳細判定フロー
-- Secondary付与閾値
-- Coding statusの軸別規則
-- rare code統合基準
-- intercoder disagreement処理
-
-またParent数も現時点では仮説であり、パイロット分布により統合・分割する。
-
----
-
-# 20. パイロット前の情報量監査方針
-
-本適用前に、40–60件程度の層化パイロットを行い、各Parent primary variableについて確認する。
-
-## 20.1. 保持候補
-
-- 複数値が実際に利用される
-- `K_eff` が2以上
-- 1カテゴリへの極端な集中がない
-- U/NAが許容範囲
-- 他軸と完全冗長でない
-- コーダー一致が確保できる
-
-## 20.2. 再設計候補
-
-- ほぼ1値しか取らない
-- Parentが多いのに実効カテゴリ数が小さい
-- rare categoryが大量に発生
-- U/NAが多数
-- 別軸とほぼ同じ情報を持つ
-- 主コード選択が安定しない
-
-この検証により、21概念次元という数も再度増減してよい。
-
----
-
-# 21. 暫定結論
-
-本研究の分析体系は、軸数を固定することではなく、
+本研究の分析体系は、
 
 > **1伝承エントリ = 1意味形成モデル**
 
-を、相互にできるだけ独立した情報変数へ分解することを目的とする。
+を、相互にできるだけ区別可能な21概念次元へ分解する。
 
-現時点の最適な理論候補は21概念次元である。
+階層型次元では、
 
-そのうち階層型次元では、
+- Parent = 母集団比較・統計の標準粒度
+- Child = 意味構造の精密記述
+- Primary = 次元内の中心構造
+- Secondary = Primaryだけでは失われる独立した追加構造
 
-> **主1 + 副最大2**
+とする。
 
-とし、ParentとChildを分離する。
-
-- Parent = 比較・統計の標準粒度
-- Child = 構造の精密記述
-- 主 = Entryの中心構造
-- 副 = 主だけでは失われる独立した追加構造
-
-これにより、
-
-- 1セルに複雑な文字列を詰め込まない
-- 作用対象ごとに行を増殖させない
-- 分布・エントロピーを直接計算できる
-- Parent/Child両レベルで分析できる
-- rareな構造をChildとして保持しつつParentでは十分な標本数を確保する
-
-という条件を同時に満たす。
+これにより、1行を複数対象へ分解せず、複雑な意味構造を保持しながら、分布・entropy・共起・群間比較へ接続できる。
 
 ---
 
-# 22. 参考文献・方法論
+# 18. 参考文献・方法論
 
-- Krippendorff, K. (2019). *Content Analysis: An Introduction to Its Methodology*, 4th ed. SAGE. Unitizing / recording-coding / reliabilityを分析設計の独立工程として扱う。
-- Wickham, H. (2014). “Tidy Data.” *Journal of Statistical Software*, 59(10), 1–23. DOI: 10.18637/jss.v059.i10. 1変数1列、1観察1行というデータ構造原則。
-- Shannon, C. E. (1948). “A Mathematical Theory of Communication.” *Bell System Technical Journal*, 27, 379–423, 623–656. カテゴリ分布の情報量を評価する基礎。
+- Krippendorff, K. (2019). *Content Analysis: An Introduction to Its Methodology*, 4th ed. SAGE.
+- Wickham, H. (2014). “Tidy Data.” *Journal of Statistical Software*, 59(10), 1–23. DOI: 10.18637/jss.v059.i10.
+- Shannon, C. E. (1948). “A Mathematical Theory of Communication.” *Bell System Technical Journal*, 27, 379–423, 623–656.
 - Weick, K. E., Sutcliffe, K. M., & Obstfeld, D. (2005). “Organizing and the Process of Sensemaking.” *Organization Science*, 16(4), 409–421.
 - Bordia, P., & DiFonzo, N. (2004). “Problem Solving in Social Interactions on the Internet: Rumor as Social Cognition.” *Social Psychology Quarterly*, 67(1), 33–49.
 - DiFonzo, N., & Bordia, P. (2007). “Rumor, Gossip and Urban Legends.” *Diogenes*, 54(1), 19–35.
