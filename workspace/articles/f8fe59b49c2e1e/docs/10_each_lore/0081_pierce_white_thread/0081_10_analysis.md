@@ -1,12 +1,10 @@
-記載内容については、以下3文書のインストラクションに従う。
+記載内容については、以下3文書のインストラクションに従うこと。
 
 - `docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md`
 - `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
 - `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
 
 伝承内容・典拠・異伝・証拠上の不確実性は、同一ディレクトリの `0081_00_contents.md` を参照する。
-
-本ファイルは、パイロット分析で確定した `Pilot Coding` の値・Statusを文書形式へ移植する。今回の文書化だけを理由にコードを再判定しない。
 
 # 1. 伝承エントリ基本情報
 
@@ -15,11 +13,10 @@
 - `Macro_Category`: 身体・医療・食品
 - `Entry_Type`: 物語・伝説
 - `Version_Scope`: 「ピアス穴から白い糸が出て、それを視神経と説明し、引くと失明する」という共有核。後代の細部を混成しない
-- `Evidence_Rank`: `B`
-- `主な成立・流通期`: 1980-90年代
-- `ネット発祥`: No
 
 # 2. 分析概念次元
+
+各次元は、単にコード値を記録するだけでなく、**当該伝承においてその次元が具体的にどのように現れているか**まで自然言語で記述する。
 
 ## 2.1. 来歴・流通・提示の次元
 
@@ -27,7 +24,9 @@
 
 **いつ成立したか**
 
-- Value: `D01.G4` — 1980年代
+- Primary Child / Value: `D01.G4` — 1980年代
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
 
 **判定根拠**
@@ -42,7 +41,8 @@
 
 **現在の証拠で、伝承が実際に人から人へ流通したことを最も古く確認できる媒体は何か**
 
-- Primary: なし
+- Primary Child / Value: なし
+- Primary Parent: なし
 - Secondary: なし
 - Status: `U` — Unknown（証拠不足）
 
@@ -58,7 +58,7 @@
 
 **今回コードするVersion Scopeで、伝承が受容者へ流通したことを確認できる媒体は何か**
 
-- Primary Child: `D03.ORL.PEER_ORAL` — 友人・仲間内伝承
+- Primary Child / Value: `D03.ORL.PEER_ORAL` — 友人・仲間内伝承
 - Primary Parent: `D03.ORL` — 口承・限定共同体
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -69,13 +69,13 @@
 
 **この伝承における現れ方**
 
-身体の秘密を教える警告話として、「白い糸を引くと失明するらしい」と短く伝えられることに適している。長い物語よりも、友人間で危険情報として回覧されることで力を持つ。
+身体の秘密を教える警告話として、「白い糸を引くと失明するらしい」と短く伝えられることに適している。長い物語よりも、友人間で危険情報として回覧されることで力を持つ。旧レビュー用メモには `D03:U` が残るため、本文値との不整合はtask 3で再確認する。
 
 ### 2.1.4. D04: 生成・変容パターン
 
 **時間とともにどう変形したか**
 
-- Primary Child: `D04.STB.STABILIZED_CANON` — 定型化・カノン化
+- Primary Child / Value: `D04.STB.STABILIZED_CANON` — 定型化・カノン化
 - Primary Parent: `D04.STB` — 安定・固定
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -92,7 +92,8 @@
 
 **どんなコミュニケーション形式で提示されるか**
 
-- Primary: なし
+- Primary Child / Value: なし
+- Primary Parent: なし
 - Secondary: なし
 - Status: `U` — Unknown（証拠不足）
 
@@ -108,7 +109,9 @@
 
 **どんな「本当らしさ」を要求するか**
 
-- Value: `D06.T6` — 真偽未確定
+- Primary Child / Value: `D06.T6` — 真偽未確定
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
 
 **判定根拠**
@@ -125,7 +128,7 @@
 
 **何が不可解・不確実なのか**
 
-- Primary Child: `D07.BHF.BODY_ANOMALY` — 身体異常
+- Primary Child / Value: `D07.BHF.BODY_ANOMALY` — 身体異常
 - Primary Parent: `D07.BHF` — 身体・健康・食品
 - Secondary: なし
 - Status: `D` — Direct（典拠に直接明示）
@@ -142,7 +145,7 @@
 
 **何を手掛かりに問題化されるか**
 
-- Primary Child: `D08.CLM.UNSUPPORTED_ASSERTION` — 根拠未提示の主張
+- Primary Child / Value: `D08.CLM.UNSUPPORTED_ASSERTION` — 根拠未提示の主張
 - Primary Parent: `D08.CLM` — 命題先行
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -159,7 +162,7 @@
 
 **不可解なものをどう理解可能にするか**
 
-- Primary Child: `D09.CAT.NAMING` — 命名
+- Primary Child / Value: `D09.CAT.NAMING` — 命名
 - Primary Parent: `D09.CAT` — カテゴリー化
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -176,7 +179,7 @@
 
 **原因を何として世界に置くか**
 
-- Primary Child: `D10.NAT.BIOPHYSIO_PROCESS` — 生理・生物過程
+- Primary Child / Value: `D10.NAT.BIOPHYSIO_PROCESS` — 生理・生物過程
 - Primary Parent: `D10.NAT` — 自然・生物物理過程
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -195,7 +198,7 @@
 
 **何を契機に因果系へ入るか**
 
-- Primary Child: `D11.NCR.INTRINSIC_PROPERTY` — 内在属性のみ
+- Primary Child / Value: `D11.NCR.INTRINSIC_PROPERTY` — 内在属性のみ
 - Primary Parent: `D11.NCR` — 接触不要
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -212,7 +215,7 @@
 
 **誰／何に作用するか**
 
-- Primary Child: `D12.FOC.PROTAGONIST_EXPERIENCER` — 主人公・体験者
+- Primary Child / Value: `D12.FOC.PROTAGONIST_EXPERIENCER` — 主人公・体験者
 - Primary Parent: `D12.FOC` — 焦点人物
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -229,7 +232,7 @@
 
 **因果源が対象へ何をするか**
 
-- Primary Child: `D13.COG.INFORMATION_INDUCED_ACTION` — 情報誘導・行動誘発
+- Primary Child / Value: `D13.COG.INFORMATION_INDUCED_ACTION` — 情報誘導・行動誘発
 - Primary Parent: `D13.COG` — 認知・情報作用
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -246,7 +249,9 @@
 
 **結果は正・負・中立・混合か**
 
-- Value: `D14.NEG` — 負
+- Primary Child / Value: `D14.NEG` — 負
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
 
 **判定根拠**
@@ -261,7 +266,7 @@
 
 **何の領域が最終的に変わるか**
 
-- Primary Child: `D15.BOD.SEVERE_INJURY` — 重傷・障害
+- Primary Child / Value: `D15.BOD.SEVERE_INJURY` — 重傷・障害
 - Primary Parent: `D15.BOD` — 身体・健康
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -278,7 +283,7 @@
 
 **発動条件・原因成立から主作用／主帰結までの関係は、時間上どのように編成されているか**
 
-- Primary Child: `D16.EVT.SEQUENTIAL_EPISODE` — エピソード内段階進行
+- Primary Child / Value: `D16.EVT.SEQUENTIAL_EPISODE` — エピソード内段階進行
 - Primary Parent: `D16.EVT` — 単一エピソード・事象内
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -289,13 +294,14 @@
 
 **この伝承における現れ方**
 
-危険は長期間蓄積するのではなく、一連の行動の順序に沿って顕在化する。特に「糸を引く」という段階が、異常の観察から不可逆的帰結への転換点になる。
+危険は長期間蓄積するのではなく、一連の行動の順序に沿って顕在化する。特に「糸を引く」という段階が、異常の観察から不可逆的帰結への転換点になる。旧レビュー用メモには `D16:U` が残るため、本文値との不整合はtask 3で再確認する。
 
 ### 2.3.7. D17: 回避・制御方式
 
 **結果をどう回避・制御・利用できるか**
 
-- Primary: なし
+- Primary Child / Value: なし
+- Primary Parent: なし
 - Secondary: なし
 - Status: `U` — Unknown（証拠不足）
 
@@ -311,9 +317,9 @@
 
 **因果効力は伝承内／受容者／社会現実のどこに及ぶか**
 
-- `D18.L1` — 伝承内因果層: `1`
-- `D18.L2` — 受容者層: `0`
-- `D18.L3` — 社会現実層: `0`
+- Primary Child / Value: `D18.L1=1; D18.L2=0; D18.L3=0`
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
 
 **判定根拠**
@@ -330,7 +336,7 @@
 
 **誰の間に伝承が流通するか**
 
-- Primary Child: `D19.MAS.NATIONAL_PUBLIC` — 全国的大衆
+- Primary Child / Value: `D19.MAS.NATIONAL_PUBLIC` — 全国的大衆
 - Primary Parent: `D19.MAS` — 大衆・広域社会
 - Secondary: なし
 - Status: `D` — Direct（典拠に直接明示）
@@ -347,7 +353,7 @@
 
 **誰が真相・追加情報を持つか**
 
-- Primary Child: `D20.NON.COMMON_KNOWLEDGE` — 一般共有
+- Primary Child / Value: `D20.NON.COMMON_KNOWLEDGE` — 一般共有
 - Primary Parent: `D20.NON` — 特権なし
 - Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
@@ -364,7 +370,9 @@
 
 **実在世界へどの程度固定されるか**
 
-- Value: `D21.A0` — 匿名・抽象
+- Primary Child / Value: `D21.A0` — 匿名・抽象
+- Primary Parent: なし
+- Secondary: なし
 - Status: `I` — Inferred（定義と証拠から合理的に推定）
 
 **判定根拠**
@@ -374,9 +382,3 @@
 **この伝承における現れ方**
 
 「知り合いの誰か」「ある若者」に起きた話として匿名化され、場所を問わず移植できる。現実感は具体的地名ではなく、誰もが知る身体部位とファッション行為によって支えられる。
-
-# 3. パイロット時点のコーディングメモ
-
-- `D03:U; D05:U; D16:U; D17:U`
-
-このメモは初回パイロットのレビュー用メモを保持する。D03・D16は後続の定義修正後に本文記載の値へ更新されており、D05・D17は現行でも証拠上の不確実性を残す。
