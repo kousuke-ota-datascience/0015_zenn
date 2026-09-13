@@ -1,4 +1,4 @@
-# 都市伝説・怪談・現代伝承 — Parent / Child コード体系設計 v1
+**文書名:** 都市伝説・怪談・現代伝承 — Parent / Child コード体系設計 v1
 
 > **ステータス: CODE TAXONOMY DESIGN / v1**  
 > **対応理論設計:** `urban_legend_analysis_axes_theoretical_design_v3.md`  
@@ -7,9 +7,9 @@
 
 ---
 
-# 0. 設計原則
+# 1. 設計原則
 
-## 0.1 Parent / Child
+## 1.1. Parent / Child
 
 - Parentは406件規模の母集団比較・entropy分析に用いる粗粒度カテゴリ。
 - Childは伝承構造を失わない詳細カテゴリ。
@@ -17,29 +17,29 @@
 - Parentはコーダーが手入力せず、Childから自動導出する。
 - ParentとChildは同一次元の異なる解像度であり、独立次元として情報量を加算しない。
 
-## 0.2 Primary / Secondary
+## 1.2. Primary / Secondary
 
 - H3のPrimaryはexactly 1。
 - Secondaryは0–2。意味上はunordered set。
 - Excelでは`secondary1_child`,`secondary2_child`に分け、保存時のみcode ID順にcanonicalizeする。
 - Secondaryは「少し関係する」ものを付けず、その要素を除くと意味形成モデルが実質的に変わる場合だけ付ける。
 
-## 0.3 S/O/Bには階層を作らない
+## 1.3. S/O/Bには階層を作らない
 
 S/O/B型はフラット値またはbinary bitを使用する。Parent/Childを無理に導入しない。
 
-## 0.4 コードID規則
+## 1.4. コードID規則
 
 H1/H3 Childは原則 `Dnn.PPP.CHILD`。Parentは`Dnn.PPP`。例: `D13.PHY.PHYSICAL_ATTACK` → Parent `D13.PHY`。
 S/Oは `Dnn.CODE`。Bは `D18.L1` 等。ラベル変更時もIDは原則維持する。
 
-## 0.5 不明・非該当
+## 1.5. 不明・非該当
 
 `U / NA / C`はコード値に混ぜず、Dimension-level statusで保持する。したがって「その他」「不明」Childは原則作らない。新しい安定構造が既存Childへ入らない場合はコードブック改訂候補とする。
 
 ---
 
-# 1. 事前粒度監査
+# 2. 事前粒度監査
 
 | D | 概念次元 | 型 | Parent数 | Child/値数 | Child/Parent平均 | 事前判定 |
 |---:|---|---|---:|---:|---:|---|
@@ -69,7 +69,7 @@ S/Oは `Dnn.CODE`。Bは `D18.L1` 等。ラベル変更時もIDは原則維持�
 
 ---
 
-# v2変更要約
+# 3. v2変更要約
 
 - D02: 最古確認流通媒体へ再定義。無根拠な口承推定を禁止。
 - D03: 確認流通媒体ポートフォリオ（Version Scope）へ再定義。
@@ -77,7 +77,7 @@ S/Oは `Dnn.CODE`。Bは `D18.L1` 等。ラベル変更時もIDは原則維持�
 
 ---
 
-# D01. 生成年代
+# 4. D01. 生成年代
 
 **型:** `O`
 
@@ -97,7 +97,7 @@ S/Oは `Dnn.CODE`。Bは `D18.L1` 等。ラベル変更時もIDは原則維持�
 
 ---
 
-# D02. 最古確認流通媒体
+# 5. D02. 最古確認流通媒体
 
 **型:** `H1`
 
@@ -105,7 +105,7 @@ S/Oは `Dnn.CODE`。Bは `D18.L1` 等。ラベル変更時もIDは原則維持�
 
 Parent数: **7**
 
-## 証拠規則
+## 5.1. 証拠規則
 
 - `D`: 同時代資料、原投稿、原メール、採録情報などが媒体を直接示す。
 - `I`: 信頼できる後代資料が「学校で聞いた」「子どもの噂」「口コミで拡散」等、媒体を明示する。
@@ -113,7 +113,7 @@ Parent数: **7**
 - `ネット発祥=No`、伝説の古さ、Entry Typeだけから `口承` を推定してはならない。
 - 後代の研究書・事典が存在するだけで `書籍` を最古媒体にしてはならない。
 
-## `D02.ORL` — 口承・限定共同体
+## 5.2. `D02.ORL` — 口承・限定共同体
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -123,7 +123,7 @@ Parent数: **7**
 | `D02.ORL.FAMILY_ORAL` | 家族内伝承 | 家族・親族内で伝えられる口頭伝承。 |
 | `D02.ORL.PEER_ORAL` | 友人・仲間内伝承 | 友人・同世代・趣味集団等の対人口承。 |
 
-## `D02.PRT` — 印刷・書簡
+## 5.3. `D02.PRT` — 印刷・書簡
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -134,14 +134,14 @@ Parent数: **7**
 | `D02.PRT.BOOK` | 書籍 | 単行本・事典・怪談集等。 |
 | `D02.PRT.LEAFLET` | チラシ・掲示物 | チラシ、掲示、配布文書等の短冊型印刷物。 |
 
-## `D02.BRD` — 放送
+## 5.4. `D02.BRD` — 放送
 
 | Child ID | Child | 定義 |
 |---|---|---|
 | `D02.BRD.RADIO` | ラジオ | ラジオ番組・音声放送。 |
 | `D02.BRD.TELEVISION` | テレビ | テレビ番組・ニュース・バラエティ等。 |
 
-## `D02.EDG` — 初期デジタル文字通信
+## 5.5. `D02.EDG` — 初期デジタル文字通信
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -150,7 +150,7 @@ Parent数: **7**
 | `D02.EDG.EMAIL` | Eメール | 電子メールによる個別・一斉転送。 |
 | `D02.EDG.CHAT_EARLY` | チャット・IRC | 初期チャット、IRC等の同期文字通信。 |
 
-## `D02.WEB` — オープンWeb・ソーシャル
+## 5.6. `D02.WEB` — オープンWeb・ソーシャル
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -160,7 +160,7 @@ Parent数: **7**
 | `D02.WEB.SNS` | SNS | SNS投稿、短文投稿サービス。 |
 | `D02.WEB.MESSAGING` | メッセージングアプリ | LINE等の閉鎖・半閉鎖型メッセージング。 |
 
-## `D02.AVD` — デジタル音声・映像
+## 5.7. `D02.AVD` — デジタル音声・映像
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -168,7 +168,7 @@ Parent数: **7**
 | `D02.AVD.LIVE_STREAM` | ライブ配信 | リアルタイム映像・音声配信。 |
 | `D02.AVD.PODCAST` | Podcast・音声配信 | オンデマンド音声番組・Podcast。 |
 
-## `D02.INS` — 制度・記録媒体
+## 5.8. `D02.INS` — 制度・記録媒体
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -178,7 +178,7 @@ Parent数: **7**
 
 ---
 
-# D03. 確認流通媒体ポートフォリオ（Version Scope）
+# 6. D03. 確認流通媒体ポートフォリオ（Version Scope）
 
 **型:** `H3`
 
@@ -186,7 +186,7 @@ Parent数: **7**
 
 Parent数: **7**
 
-## Primary / Secondary規則
+## 6.1. Primary / Secondary規則
 
 1. Version Scopeの成立に構造的に不可欠な媒体
 2. 資料が明示する主な拡散媒体
@@ -194,13 +194,13 @@ Parent数: **7**
 
 残りの確認媒体をSecondary（0–2、順不同）とする。D02と同じ媒体でもよい。
 
-## 禁止事項
+## 6.2. 禁止事項
 
 - 現在Web検索で見つかるだけで `Web` を付けない。
 - 研究DB・ファクトチェック記事の存在だけでは流通媒体にしない。
 - 複数候補からPrimaryを決められない場合は `C`。
 
-## `D03.ORL` — 口承・限定共同体
+## 6.3. `D03.ORL` — 口承・限定共同体
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -210,7 +210,7 @@ Parent数: **7**
 | `D03.ORL.FAMILY_ORAL` | 家族内伝承 | 家族・親族内で伝えられる口頭伝承。 |
 | `D03.ORL.PEER_ORAL` | 友人・仲間内伝承 | 友人・同世代・趣味集団等の対人口承。 |
 
-## `D03.PRT` — 印刷・書簡
+## 6.4. `D03.PRT` — 印刷・書簡
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -221,14 +221,14 @@ Parent数: **7**
 | `D03.PRT.BOOK` | 書籍 | 単行本・事典・怪談集等。 |
 | `D03.PRT.LEAFLET` | チラシ・掲示物 | チラシ、掲示、配布文書等の短冊型印刷物。 |
 
-## `D03.BRD` — 放送
+## 6.5. `D03.BRD` — 放送
 
 | Child ID | Child | 定義 |
 |---|---|---|
 | `D03.BRD.RADIO` | ラジオ | ラジオ番組・音声放送。 |
 | `D03.BRD.TELEVISION` | テレビ | テレビ番組・ニュース・バラエティ等。 |
 
-## `D03.EDG` — 初期デジタル文字通信
+## 6.6. `D03.EDG` — 初期デジタル文字通信
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -237,7 +237,7 @@ Parent数: **7**
 | `D03.EDG.EMAIL` | Eメール | 電子メールによる個別・一斉転送。 |
 | `D03.EDG.CHAT_EARLY` | チャット・IRC | 初期チャット、IRC等の同期文字通信。 |
 
-## `D03.WEB` — オープンWeb・ソーシャル
+## 6.7. `D03.WEB` — オープンWeb・ソーシャル
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -247,7 +247,7 @@ Parent数: **7**
 | `D03.WEB.SNS` | SNS | SNS投稿、短文投稿サービス。 |
 | `D03.WEB.MESSAGING` | メッセージングアプリ | LINE等の閉鎖・半閉鎖型メッセージング。 |
 
-## `D03.AVD` — デジタル音声・映像
+## 6.8. `D03.AVD` — デジタル音声・映像
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -255,7 +255,7 @@ Parent数: **7**
 | `D03.AVD.LIVE_STREAM` | ライブ配信 | リアルタイム映像・音声配信。 |
 | `D03.AVD.PODCAST` | Podcast・音声配信 | オンデマンド音声番組・Podcast。 |
 
-## `D03.INS` — 制度・記録媒体
+## 6.9. `D03.INS` — 制度・記録媒体
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -265,20 +265,20 @@ Parent数: **7**
 
 ---
 
-# D04. 生成・変容パターン
+# 7. D04. 生成・変容パターン
 
 **型:** `H3`
 
 Parent数: **7**
 
-## `D04.STB` — 安定・固定
+## 7.1. `D04.STB` — 安定・固定
 
 | Child ID | Child | 定義 |
 |---|---|---|
 | `D04.STB.SINGLE_FIXED` | 単発固定 | 確認範囲で構造変化が小さい。 |
 | `D04.STB.STABILIZED_CANON` | 定型化・カノン化 | 多様な形から代表形が固定された。 |
 
-## `D04.VAR` — 再話・変異
+## 7.2. `D04.VAR` — 再話・変異
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -287,7 +287,7 @@ Parent数: **7**
 | `D04.VAR.ACCRETION` | 増補 | 新ルール・新場面・新因果が追加される。 |
 | `D04.VAR.LOCALIZATION` | 地域化 | 地名・施設・人物を地域に合わせて置換する。 |
 
-## `D04.MIG` — 媒体移行
+## 7.3. `D04.MIG` — 媒体移行
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -295,7 +295,7 @@ Parent数: **7**
 | `D04.MIG.DIGITAL_REAMPLIFICATION` | ネット再増幅 | 旧来伝承がネットで再流通・増幅する。 |
 | `D04.MIG.FORMAT_TRANSLATION` | 形式変換 | 口承→ログ、手紙→メール等、提示形式も変わる。 |
 
-## `D04.COL` — 共同・分散生成
+## 7.4. `D04.COL` — 共同・分散生成
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -304,7 +304,7 @@ Parent数: **7**
 | `D04.COL.SERIALIZATION` | シリーズ化 | 同じ核から続編・連作が形成される。 |
 | `D04.COL.DERIVATIVE_PROLIFERATION` | 派生増殖 | パロディ・亜種・派生ルールが多数生成される。 |
 
-## `D04.MED` — メディア展開
+## 7.5. `D04.MED` — メディア展開
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -312,7 +312,7 @@ Parent数: **7**
 | `D04.MED.COMMERCIALIZATION` | 商品・観光化 | 商品、イベント、観光資源等へ転用される。 |
 | `D04.MED.CROSS_MEDIA` | クロスメディア化 | 複数メディア間で内容が相互変換される。 |
 
-## `D04.REC` — 再文脈化
+## 7.6. `D04.REC` — 再文脈化
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -321,7 +321,7 @@ Parent数: **7**
 | `D04.REC.REVIVAL` | 再燃 | 一度衰退後、別時期に再流行する。 |
 | `D04.REC.CONTEXT_UPDATE` | 時代適応 | 技術・制度・社会状況に合わせ内容を更新する。 |
 
-## `D04.CON` — 論争・起源変化
+## 7.7. `D04.CON` — 論争・起源変化
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -332,13 +332,13 @@ Parent数: **7**
 
 ---
 
-# D05. 提示形式
+# 8. D05. 提示形式
 
 **型:** `H3`
 
 Parent数: **6**
 
-## `D05.EXP` — 体験叙述
+## 8.1. `D05.EXP` — 体験叙述
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -347,7 +347,7 @@ Parent数: **6**
 | `D05.EXP.CONFESSION_DIARY` | 告白・日記 | 告白、日記、私記として提示する。 |
 | `D05.EXP.EXPERIENCE_SUMMARY` | 体験要約 | 個人経験を短く要約して提示する。 |
 
-## `D05.HRS` — 伝聞叙述
+## 8.2. `D05.HRS` — 伝聞叙述
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -356,7 +356,7 @@ Parent数: **6**
 | `D05.HRS.LOCAL_HEARSAY` | 地元伝聞 | 地元民・地域内部者の話として提示する。 |
 | `D05.HRS.SCHOOL_WORK_HEARSAY` | 学校・職場伝承 | 学校・職場内部で共有される話として提示する。 |
 
-## `D05.DOC` — 記録・文書形式
+## 8.3. `D05.DOC` — 記録・文書形式
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -365,7 +365,7 @@ Parent数: **6**
 | `D05.DOC.NEWS_STYLE` | 新聞・ニュース風 | 報道・記事形式を取る。 |
 | `D05.DOC.AV_RECORD` | 音声・映像記録 | 録音・動画・監視映像等の記録として提示する。 |
 
-## `D05.PRP` — 命題・主張形式
+## 8.4. `D05.PRP` — 命題・主張形式
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -374,7 +374,7 @@ Parent数: **6**
 | `D05.PRP.PREDICTIVE_CLAIM` | 予測命題 | XならYになる、という予測命題。 |
 | `D05.PRP.CLASSIFICATION_CLAIM` | 類型命題 | A型はBの性質を持つ、という分類命題。 |
 
-## `D05.RUL` — 規則・警告形式
+## 8.5. `D05.RUL` — 規則・警告形式
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -384,7 +384,7 @@ Parent数: **6**
 | `D05.RUL.CHAIN_INSTRUCTION` | 連鎖指示 | 転送・伝達等を要求する。 |
 | `D05.RUL.JINX_RULE` | ジンクス規則 | 行為と吉凶・成功失敗を結ぶ規則。 |
 
-## `D05.HYB` — 集合・複合形式
+## 8.6. `D05.HYB` — 集合・複合形式
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -395,7 +395,7 @@ Parent数: **6**
 
 ---
 
-# D06. 真実性提示
+# 9. D06. 真実性提示
 
 **型:** `S`
 
@@ -411,13 +411,13 @@ Parent数: **6**
 
 ---
 
-# D07. 意味形成対象
+# 10. D07. 意味形成対象
 
 **型:** `H3`
 
 Parent数: **9**
 
-## `D07.ANO` — 異常体験・存在
+## 10.1. `D07.ANO` — 異常体験・存在
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -426,7 +426,7 @@ Parent数: **9**
 | `D07.ANO.UNEXPLAINED_EVENT` | 説明不能事象 | 原因不明の出来事・現象。 |
 | `D07.ANO.DREAM_SLEEP_ANOMALY` | 夢・睡眠異常 | 夢、金縛り、睡眠中の不可解な経験。 |
 
-## `D07.DCF` — 死・偶然・不運
+## 10.2. `D07.DCF` — 死・偶然・不運
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -435,7 +435,7 @@ Parent数: **9**
 | `D07.DCF.MISFORTUNE_STREAK` | 不運・成功失敗の偏り | 連敗、故障、事故等の偏り。 |
 | `D07.DCF.FATE_OMEN` | 運命・予兆 | 将来の死・災厄・成功をどう予測するか。 |
 
-## `D07.PSE` — 場所・空間・環境
+## 10.3. `D07.PSE` — 場所・空間・環境
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -444,7 +444,7 @@ Parent数: **9**
 | `D07.PSE.HIDDEN_VANISHED_PLACE` | 隠れた・消えた場所 | 存在しない／消えた場所の説明。 |
 | `D07.PSE.ENVIRONMENTAL_ANOMALY` | 環境異常 | 音、光、気温、自然環境等の不可解。 |
 
-## `D07.ICT` — 対人・犯罪脅威
+## 10.4. `D07.ICT` — 対人・犯罪脅威
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -453,7 +453,7 @@ Parent数: **9**
 | `D07.ICT.HIDDEN_CRIMINAL_PRACTICE` | 隠れた犯罪慣行 | 臓器売買等、見えない犯罪実務。 |
 | `D07.ICT.OUTGROUP_THREAT` | 外集団脅威 | 外国人・特定集団等への脅威認識。 |
 
-## `D07.BHF` — 身体・健康・食品
+## 10.5. `D07.BHF` — 身体・健康・食品
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -463,7 +463,7 @@ Parent数: **9**
 | `D07.BHF.FOOD_CONTAMINATION` | 食品・摂取リスク | 食品、飲料、異物、汚染等の不安。 |
 | `D07.BHF.SEX_REPRODUCTION` | 性・生殖 | 性行為、妊娠、生殖に関する不確実性。 |
 
-## `D07.TPS` — 技術・製品・システム
+## 10.6. `D07.TPS` — 技術・製品・システム
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -472,7 +472,7 @@ Parent数: **9**
 | `D07.TPS.DIGITAL_SYSTEM_ANOMALY` | デジタル異常 | コンピュータ、ネットワーク、データの不可解。 |
 | `D07.TPS.TECH_RISK_SURVEILLANCE` | 技術リスク・監視 | 電磁波、監視、技術的危険等。 |
 
-## `D07.INO` — 制度・組織
+## 10.7. `D07.INO` — 制度・組織
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -482,7 +482,7 @@ Parent数: **9**
 | `D07.INO.OCCUPATIONAL_HIDDEN_PRACTICE` | 職業内部慣行 | 専門職・職場の隠れた実務・慣習。 |
 | `D07.INO.SYSTEM_CAPACITY_FAILURE` | 制度能力への不安 | 制度が守れない、機能しないことへの不安。 |
 
-## `D07.ING` — 属性・規範・集団
+## 10.8. `D07.ING` — 属性・規範・集団
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -491,7 +491,7 @@ Parent数: **9**
 | `D07.ING.NORM_MORALITY` | 規範・道徳 | なぜしてはいけない／すべきか。 |
 | `D07.ING.BELONGING_BOUNDARY` | 所属・内外境界 | 誰が内部／外部なのか。 |
 
-## `D07.ISU` — 情報・社会的不確実性
+## 10.9. `D07.ISU` — 情報・社会的不確実性
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -502,13 +502,13 @@ Parent数: **9**
 
 ---
 
-# D08. 意味形成契機
+# 11. D08. 意味形成契機
 
 **型:** `H3`
 
 Parent数: **7**
 
-## `D08.DEX` — 直接経験
+## 11.1. `D08.DEX` — 直接経験
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -517,7 +517,7 @@ Parent数: **7**
 | `D08.DEX.DIRECT_EVENT` | 出来事への直接遭遇 | 事故、故障、異常出来事への直接遭遇。 |
 | `D08.DEX.DREAM_SLEEP_EVENT` | 夢・睡眠経験 | 夢、金縛り等の睡眠経験。 |
 
-## `D08.STY` — 社会的証言
+## 11.2. `D08.STY` — 社会的証言
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -526,7 +526,7 @@ Parent数: **7**
 | `D08.STY.COMMUNITY_REPETITION` | 共同体反復証言 | 地域・学校等で繰り返し聞く証言。 |
 | `D08.STY.AUTHORITY_TESTIMONY` | 権威者証言 | 専門家、職員、権威ある人物の証言。 |
 
-## `D08.PAT` — パターン・相関
+## 11.3. `D08.PAT` — パターン・相関
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -535,7 +535,7 @@ Parent数: **7**
 | `D08.PAT.FREQUENCY_PATTERN` | 頻度・偏り | 多い／少ないという観察。 |
 | `D08.PAT.SIMILARITY_ANALOGY` | 類似・対応 | 複数事例の似方を手掛かりにする。 |
 
-## `D08.TRC` — 記録・物的痕跡
+## 11.4. `D08.TRC` — 記録・物的痕跡
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -544,7 +544,7 @@ Parent数: **7**
 | `D08.TRC.PHYSICAL_TRACE` | 物的痕跡 | 物、傷、跡、遺留品等。 |
 | `D08.TRC.MISSING_ALTERED_RECORD` | 欠落・改変記録 | 記録がない／消えた／書き換わったこと。 |
 
-## `D08.HIS` — 事件・歴史・場所痕跡
+## 11.5. `D08.HIS` — 事件・歴史・場所痕跡
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -553,7 +553,7 @@ Parent数: **7**
 | `D08.HIS.DEATH_CRIME_HISTORY` | 死亡・犯罪履歴 | 死亡、殺人、犯罪の履歴。 |
 | `D08.HIS.PLACE_NAME_RUIN` | 地名・遺構・記念物 | 地名、遺構、塚、慰霊碑等。 |
 
-## `D08.OPA` — 技術・制度の不透明性
+## 11.6. `D08.OPA` — 技術・制度の不透明性
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -562,7 +562,7 @@ Parent数: **7**
 | `D08.OPA.RESTRICTED_ACCESS` | 非公開・アクセス制限 | 立入禁止、秘密、非公開性。 |
 | `D08.OPA.DATA_SYSTEM_GAP` | データ・システム空白 | データ不在、説明不能なシステム挙動。 |
 
-## `D08.CLM` — 命題先行
+## 11.7. `D08.CLM` — 命題先行
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -573,13 +573,13 @@ Parent数: **7**
 
 ---
 
-# D09. 意味付与操作
+# 12. D09. 意味付与操作
 
 **型:** `H3`
 
 Parent数: **9**
 
-## `D09.CAT` — カテゴリー化
+## 12.1. `D09.CAT` — カテゴリー化
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -587,7 +587,7 @@ Parent数: **9**
 | `D09.CAT.TYPE_ASSIGNMENT` | 類型化 | 既知カテゴリ・類型へ分類する。 |
 | `D09.CAT.BOUNDARY_CLASSIFICATION` | 境界分類 | 安全／危険、内／外等の境界を作る。 |
 
-## `D09.CAU` — 原因帰属
+## 12.2. `D09.CAU` — 原因帰属
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -595,7 +595,7 @@ Parent数: **9**
 | `D09.CAU.HIDDEN_CAUSE` | 隠れた原因化 | 見えない原因を仮定する。 |
 | `D09.CAU.BLAME_RESPONSIBILITY` | 責任帰属 | 人・組織・集団へ責任を割り当てる。 |
 
-## `D09.AGN` — 主体・意図帰属
+## 12.3. `D09.AGN` — 主体・意図帰属
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -603,7 +603,7 @@ Parent数: **9**
 | `D09.AGN.MOTIVE_ATTRIBUTION` | 動機付与 | 悪意、保護、復讐等の目的を付ける。 |
 | `D09.AGN.COORDINATED_INTENT` | 協調意図・陰謀 | 複数主体の計画的意図を仮定する。 |
 
-## `D09.PPR` — パターン化・予測
+## 12.4. `D09.PPR` — パターン化・予測
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -612,7 +612,7 @@ Parent数: **9**
 | `D09.PPR.RECURRENCE_RULE` | 反復規則 | 周期・再発・順序の規則を作る。 |
 | `D09.PPR.ANALOGICAL_PATTERN` | 類推パターン | 似た事例から一般規則を作る。 |
 
-## `D09.NOR` — 価値・規範化
+## 12.5. `D09.NOR` — 価値・規範化
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -621,7 +621,7 @@ Parent数: **9**
 | `D09.NOR.MORALIZATION` | 道徳化 | 報い・罰・徳等の道徳意味を付ける。 |
 | `D09.NOR.PURITY_CONTAMINATION` | 穢れ・汚染化 | 清浄／不浄、汚染の枠組みで理解する。 |
 
-## `D09.CTL` — 制御規則形成
+## 12.6. `D09.CTL` — 制御規則形成
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -630,7 +630,7 @@ Parent数: **9**
 | `D09.CTL.TRANSMISSION_RULE` | 伝達規則 | 転送・誰かに話す等の規則を作る。 |
 | `D09.CTL.VERIFICATION_RULE` | 検証・訂正规則 | 確認、反証、公式情報照合等の規則を作る。 |
 
-## `D09.SSI` — 社会・制度解釈
+## 12.7. `D09.SSI` — 社会・制度解釈
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -639,7 +639,7 @@ Parent数: **9**
 | `D09.SSI.GROUP_BOUNDARY` | 集団境界化 | 内集団／外集団の差として説明する。 |
 | `D09.SSI.ROLE_RULE` | 役割規則化 | 職業・立場固有の規則として説明する。 |
 
-## `D09.HST` — 由来化・歴史化
+## 12.8. `D09.HST` — 由来化・歴史化
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -647,7 +647,7 @@ Parent数: **9**
 | `D09.HST.HISTORICAL_ANCHOR` | 歴史接続 | 歴史人物・戦争・地域史へ接続する。 |
 | `D09.HST.GENEALOGY_TRADITION` | 系譜・伝統化 | 家系・世代・伝統の連続として説明する。 |
 
-## `D09.UNK` — 不可知性保持
+## 12.9. `D09.UNK` — 不可知性保持
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -657,13 +657,13 @@ Parent数: **9**
 
 ---
 
-# D10. 因果源存在論
+# 13. D10. 因果源存在論
 
 **型:** `H3`
 
 Parent数: **7**
 
-## `D10.HUM` — 人間・社会主体
+## 13.1. `D10.HUM` — 人間・社会主体
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -672,7 +672,7 @@ Parent数: **7**
 | `D10.HUM.ORGANIZATION` | 組織・制度主体 | 企業、国家、学校、病院等。 |
 | `D10.HUM.COLLECTIVE_BEHAVIOR` | 集合行動 | 群衆・市場・社会全体の行動が因果源。 |
 
-## `D10.SUP` — 超自然主体・力
+## 13.2. `D10.SUP` — 超自然主体・力
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -681,7 +681,7 @@ Parent数: **7**
 | `D10.SUP.DEITY_DIVINE` | 神格・超越主体 | 神、神格的存在、超越的意思。 |
 | `D10.SUP.IMPERSONAL_CURSE` | 非人格的呪力 | 人格主体を置かない呪い・祟りの力。 |
 
-## `D10.BIO` — 異常生物・内在存在
+## 13.3. `D10.BIO` — 異常生物・内在存在
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -689,7 +689,7 @@ Parent数: **7**
 | `D10.BIO.PARASITE_INTERNAL` | 寄生体・内在生物 | 身体内部に住む生物・存在。 |
 | `D10.BIO.TRANSFORMED_HYBRID` | 変異・混成生物 | 人面、変身、混成体等。 |
 
-## `D10.OBJ` — 物体・情報・記号
+## 13.4. `D10.OBJ` — 物体・情報・記号
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -698,7 +698,7 @@ Parent数: **7**
 | `D10.OBJ.INFORMATION_CONTENT` | 情報内容 | 文章、知識、噂、意味内容自体。 |
 | `D10.OBJ.SYMBOL_NAME_IMAGE` | 記号・名称・図像 | 名前、数字、画像、記号等。 |
 
-## `D10.SPC` — 場所・時空
+## 13.5. `D10.SPC` — 場所・時空
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -707,7 +707,7 @@ Parent数: **7**
 | `D10.SPC.ALTERNATE_WORLD` | 異界・別世界 | 通常世界とは異なる世界層。 |
 | `D10.SPC.SPATIOTEMPORAL_FIELD` | 時空領域 | 場所・時間の場そのものが原因。 |
 
-## `D10.NAT` — 自然・生物物理過程
+## 13.6. `D10.NAT` — 自然・生物物理過程
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -717,7 +717,7 @@ Parent数: **7**
 | `D10.NAT.PROBABILITY_PROCESS` | 確率・偶然過程 | 確率、偶然、統計的偏り。 |
 | `D10.NAT.TECHNICAL_PROCESS` | 技術・システム過程 | 故障機構、アルゴリズム、非意図的システム作用。 |
 
-## `D10.PHN` — 現象・体験
+## 13.7. `D10.PHN` — 現象・体験
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -728,13 +728,13 @@ Parent数: **7**
 
 ---
 
-# D11. 発動・接触条件
+# 14. D11. 発動・接触条件
 
 **型:** `H3`
 
 Parent数: **8**
 
-## `D11.SEN` — 感覚曝露
+## 14.1. `D11.SEN` — 感覚曝露
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -743,7 +743,7 @@ Parent数: **8**
 | `D11.SEN.TACTILE_EXPOSURE` | 触る | 接触・触知する。 |
 | `D11.SEN.OTHER_SENSORY` | 嗅ぐ・味わう等 | 嗅覚・味覚等の曝露。 |
 
-## `D11.INF` — 情報曝露
+## 14.2. `D11.INF` — 情報曝露
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -753,7 +753,7 @@ Parent数: **8**
 | `D11.INF.UNDERSTAND_RECOGNIZE` | 理解・認識する | 意味を理解・認識することが条件。 |
 | `D11.INF.RECEIVE_MESSAGE` | 通知・メッセージを受ける | メール、電話、通知等を受信する。 |
 
-## `D11.MAN` — 操作・儀式
+## 14.3. `D11.MAN` — 操作・儀式
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -764,7 +764,7 @@ Parent数: **8**
 | `D11.MAN.PERFORM_RITUAL` | 儀式・唱和を行う | 手順、召喚、唱和等を実行する。 |
 | `D11.MAN.RESPOND_CHOOSE` | 答える・選択する | 質問への回答や選択を行う。 |
 
-## `D11.MOV` — 移動・空間進入
+## 14.4. `D11.MOV` — 移動・空間進入
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -773,7 +773,7 @@ Parent数: **8**
 | `D11.MOV.EXIT_ALIGHT` | 降りる・出る | 車両・場所から降りる／出る。 |
 | `D11.MOV.FOLLOW_TURN_ROUTE` | 曲がる・逆回り・経路選択 | 特定方向・順序で移動する。 |
 
-## `D11.SOC` — 社会関係・取引
+## 14.5. `D11.SOC` — 社会関係・取引
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -783,7 +783,7 @@ Parent数: **8**
 | `D11.SOC.CONTRACT_EXCHANGE` | 契約・購入・交換 | 取引・交換・購入を行う。 |
 | `D11.SOC.INVESTIGATE_INQUIRE` | 調査・問い合わせ | 探索、質問、調査を行う。 |
 
-## `D11.CON` — 時刻・属性・状態条件
+## 14.6. `D11.CON` — 時刻・属性・状態条件
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -792,7 +792,7 @@ Parent数: **8**
 | `D11.CON.PERSONAL_ATTRIBUTE` | 個人属性 | 血液型、名前、性別等の属性。 |
 | `D11.CON.LOCATION_STATE` | 位置・状態条件 | 特定場所にいる、特定状態にある。 |
 
-## `D11.PAS` — 受動発生
+## 14.7. `D11.PAS` — 受動発生
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -801,7 +801,7 @@ Parent数: **8**
 | `D11.PAS.ACCIDENT_INVOLVEMENT` | 事故・出来事に巻き込まれる | 非意図的に出来事へ巻き込まれる。 |
 | `D11.PAS.SPONTANEOUS_SELECTION` | 偶然選ばれる・遭遇する | 本人の選択なく対象となる。 |
 
-## `D11.NCR` — 接触不要
+## 14.8. `D11.NCR` — 接触不要
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -810,20 +810,20 @@ Parent数: **8**
 
 ---
 
-# D12. 作用対象
+# 15. D12. 作用対象
 
 **型:** `H3`
 
 Parent数: **8**
 
-## `D12.FOC` — 焦点人物
+## 15.1. `D12.FOC` — 焦点人物
 
 | Child ID | Child | 定義 |
 |---|---|---|
 | `D12.FOC.PROTAGONIST_EXPERIENCER` | 主人公・体験者 | 物語・体験の焦点人物。 |
 | `D12.FOC.PRACTITIONER` | 実践者 | 儀式・行為を実行した人物。 |
 
-## `D12.OTH` — 他者個人
+## 15.2. `D12.OTH` — 他者個人
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -831,14 +831,14 @@ Parent数: **8**
 | `D12.OTH.BYSTANDER_WITNESS` | 傍観者・目撃者 | 居合わせた人物・目撃者。 |
 | `D12.OTH.VICTIM_TARGET` | 特定被害者 | 被害対象として選ばれた人物。 |
 
-## `D12.KIN` — 親密者・血縁
+## 15.3. `D12.KIN` — 親密者・血縁
 
 | Child ID | Child | 定義 |
 |---|---|---|
 | `D12.KIN.FAMILY_BLOODLINE` | 家族・血縁 | 家族、親族、家系。 |
 | `D12.KIN.PARTNER_FRIEND` | 恋人・友人 | 親密な非血縁者。 |
 
-## `D12.GRP` — 集団・共同体
+## 15.4. `D12.GRP` — 集団・共同体
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -847,14 +847,14 @@ Parent数: **8**
 | `D12.GRP.DEMOGRAPHIC_GROUP` | 属性集団 | 特定年代、性別、民族等。 |
 | `D12.GRP.UNSPECIFIED_PEOPLE` | 不特定人群 | 特定されない複数の人々。 |
 
-## `D12.ORG` — 組織・制度
+## 15.5. `D12.ORG` — 組織・制度
 
 | Child ID | Child | 定義 |
 |---|---|---|
 | `D12.ORG.ORGANIZATION` | 組織 | 企業、学校、病院等の組織。 |
 | `D12.ORG.INSTITUTION_SYSTEM` | 制度・社会システム | 制度、規則、市場等。 |
 
-## `D12.OTD` — 物体・技術・データ
+## 15.6. `D12.OTD` — 物体・技術・データ
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -862,7 +862,7 @@ Parent数: **8**
 | `D12.OTD.DEVICE_INFRA` | 機器・インフラ | 機械、車両、設備、インフラ。 |
 | `D12.OTD.DATA_RECORD` | データ・記録 | ファイル、記録、文書データ。 |
 
-## `D12.ENV` — 場所・環境・世界
+## 15.7. `D12.ENV` — 場所・環境・世界
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -870,7 +870,7 @@ Parent数: **8**
 | `D12.ENV.NATURAL_ENVIRONMENT` | 自然環境 | 山、海、森林等。 |
 | `D12.ENV.SPATIAL_WORLD_STATE` | 空間・世界状態 | 経路、空間、世界の状態。 |
 
-## `D12.AUD` — 受容者・公衆
+## 15.8. `D12.AUD` — 受容者・公衆
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -881,7 +881,7 @@ Parent数: **8**
 
 ---
 
-# D13. 作用機構
+# 16. D13. 作用機構
 
 **型:** `H3`
 
@@ -889,13 +889,13 @@ Parent数: **8**
 
 Parent数: **9**
 
-## `D13.MAN` — 顕現・観測
+## 16.1. `D13.MAN` — 顕現・観測
 
 | Child ID | Child | 定義 |
 |---|---|---|
 | `D13.MAN.MANIFEST_ONLY` | 顕現のみ | 現れる／認識されるが追加作用を必須としない。 |
 
-## `D13.PHY` — 身体・物質作用
+## 16.2. `D13.PHY` — 身体・物質作用
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -905,7 +905,7 @@ Parent数: **9**
 | `D13.PHY.BODY_INTRUSION` | 身体侵入 | 異物・存在が身体内部へ侵入する。 |
 | `D13.PHY.ENV_OBJECT_MANIPULATION` | 環境・物体操作 | 物体移動、機器異常、環境変化を起こす。 |
 
-## `D13.REL` — 追跡・対象関係操作
+## 16.3. `D13.REL` — 追跡・対象関係操作
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -916,7 +916,7 @@ Parent数: **9**
 | `D13.REL.PERSISTENT_ATTACHMENT` | 付着・再出現 | 接触後も関係が切れず再出現する。 |
 | `D13.REL.OTHER_ANOMALY_INTERFERENCE` | 他怪異干渉 | 別の怪異を排除・捕食・操作する。 |
 
-## `D13.INT` — 内在・支配
+## 16.4. `D13.INT` — 内在・支配
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -924,7 +924,7 @@ Parent数: **9**
 | `D13.INT.PARASITIC_HABITATION` | 寄生 | 宿主内部に定着し資源を利用する。 |
 | `D13.INT.SYMBIOTIC_DEPENDENCE` | 共生・依存 | 宿主との相互依存関係を形成する。 |
 
-## `D13.COG` — 認知・情報作用
+## 16.5. `D13.COG` — 認知・情報作用
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -933,7 +933,7 @@ Parent数: **9**
 | `D13.COG.MEMORY_ALTERATION` | 記憶改変・欠落 | 記憶を消去・変更する。 |
 | `D13.COG.INFORMATION_INDUCED_ACTION` | 情報誘導・行動誘発 | 信念・判断を変え通常行動を介して結果を起こす。 |
 
-## `D13.RST` — 現実・時空作用
+## 16.6. `D13.RST` — 現実・時空作用
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -942,7 +942,7 @@ Parent数: **9**
 | `D13.RST.SPATIAL_DISTORTION` | 空間異常 | 距離・接続・地理を崩す。 |
 | `D13.RST.TEMPORAL_DISTORTION` | 時間異常 | 時間進行・順序・同期を崩す。 |
 
-## `D13.TRN` — 伝播
+## 16.7. `D13.TRN` — 伝播
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -950,7 +950,7 @@ Parent数: **9**
 | `D13.TRN.MEDIA_OBJECT_TRANSFER` | 媒体・物体媒介伝播 | 物、手紙、媒体等を介して移る。 |
 | `D13.TRN.HEREDITARY_TRANSFER` | 血縁・世代伝播 | 家系・世代を通じて継承される。 |
 
-## `D13.SOC` — 社会・制度作用
+## 16.8. `D13.SOC` — 社会・制度作用
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -959,7 +959,7 @@ Parent数: **9**
 | `D13.SOC.COERCE_CONFINE` | 強制・監禁 | 制度・集団が行動を強制・拘束する。 |
 | `D13.SOC.INSTITUTIONAL_MANIPULATION` | 制度操作 | 制度・市場・組織手続を利用して結果を動かす。 |
 
-## `D13.FAT` — 運命・吉凶作用
+## 16.9. `D13.FAT` — 運命・吉凶作用
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -969,7 +969,7 @@ Parent数: **9**
 
 ---
 
-# D14. 帰結極性
+# 17. D14. 帰結極性
 
 **型:** `S`
 
@@ -982,13 +982,13 @@ Parent数: **9**
 
 ---
 
-# D15. 帰結領域
+# 18. D15. 帰結領域
 
 **型:** `H3`
 
 Parent数: **9**
 
-## `D15.BOD` — 身体・健康
+## 18.1. `D15.BOD` — 身体・健康
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -998,7 +998,7 @@ Parent数: **9**
 | `D15.BOD.DEATH` | 死亡 | 死亡・致死。 |
 | `D15.BOD.BODY_CHANGE_CONTAMINATION` | 身体変化・汚染 | 変容、異物化、汚染。 |
 
-## `D15.MND` — 精神・認知
+## 18.2. `D15.MND` — 精神・認知
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1009,7 +1009,7 @@ Parent数: **9**
 | `D15.MND.COMPULSION_BEHAVIOR` | 強迫・衝動 | 強迫、異常衝動。 |
 | `D15.MND.SELF_IDENTITY_DISRUPTION` | 自我・同一性崩壊 | 自我、人格、自己認識の崩壊。 |
 
-## `D15.SOC` — 社会関係・地位
+## 18.3. `D15.SOC` — 社会関係・地位
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1019,7 +1019,7 @@ Parent数: **9**
 | `D15.SOC.JOB_SCHOOL_STATUS` | 職業・学業地位 | 失職、退学、昇進・合格等。 |
 | `D15.SOC.LEGAL_CRIMINAL_STATUS` | 法的・犯罪者地位 | 逮捕、犯罪者扱い等。 |
 
-## `D15.MAT` — 物的・技術的・経済的
+## 18.4. `D15.MAT` — 物的・技術的・経済的
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1029,7 +1029,7 @@ Parent数: **9**
 | `D15.MAT.RESOURCE_SCARCITY` | 物資不足 | 買い占め、欠品、資源不足。 |
 | `D15.MAT.INFRA_DISRUPTION` | インフラ障害 | 交通、通信等の機能障害。 |
 
-## `D15.BEH` — 行動・選択
+## 18.5. `D15.BEH` — 行動・選択
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1040,7 +1040,7 @@ Parent数: **9**
 | `D15.BEH.RISKY_HARMFUL_ACTION` | 危険行動 | 危険・有害な行為を選ぶ。 |
 | `D15.BEH.COMPLIANCE_DECISION` | 遵守・意思決定変化 | 制度・規則・助言に従う／選択を変える。 |
 
-## `D15.LIF` — 人生・存在・同一性
+## 18.6. `D15.LIF` — 人生・存在・同一性
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1050,7 +1050,7 @@ Parent数: **9**
 | `D15.LIF.IDENTITY_TRANSFORMATION` | 同一性変化 | 人格・身分・存在状態の変化。 |
 | `D15.LIF.EXISTENCE_ERASURE` | 存在履歴消去 | 記録・存在の抹消。 |
 
-## `D15.KNW` — 世界認識・知識
+## 18.7. `D15.KNW` — 世界認識・知識
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1059,7 +1059,7 @@ Parent数: **9**
 | `D15.KNW.REVELATION_KNOWLEDGE` | 真相・知識獲得 | 新たな説明・情報を得る。 |
 | `D15.KNW.REALITY_TRUST_LOSS` | 現実信頼喪失 | 現実・記録への信頼が崩れる。 |
 
-## `D15.COL` — 集団・社会・制度
+## 18.8. `D15.COL` — 集団・社会・制度
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1069,7 +1069,7 @@ Parent数: **9**
 | `D15.COL.MARKET_SOCIAL_BEHAVIOR` | 市場・社会行動変化 | 市場、交通、消費等の集団行動。 |
 | `D15.COL.COMMUNITY_CHANGE` | 共同体変化 | 地域慣習・関係構造の変化。 |
 
-## `D15.OPP` — 吉凶・機会
+## 18.9. `D15.OPP` — 吉凶・機会
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1081,7 +1081,7 @@ Parent数: **9**
 
 ---
 
-# D16. 因果時間構造
+# 19. D16. 因果時間構造
 
 **型:** `H3`
 
@@ -1098,7 +1098,7 @@ Parent数: **7**
 - 対象間・世代間を移る場合は `TRN`。
 - `U` は動的時間構造が重要なのに資料から決められない場合に限定する。
 
-## `D16.STA` — 無時間的・静的関係
+## 19.1. `D16.STA` — 無時間的・静的関係
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1107,7 +1107,7 @@ Parent数: **7**
 | `D16.STA.STATIC_RULE` | 静的規則 | 制度・俗信等の条件規則で、待ち時間・進行過程が重要でない。 |
 | `D16.STA.ENDURING_CONDITION` | 持続状態 | 場所・対象が恒常的に異常状態にあるという主張。 |
 
-## `D16.EVT` — 単一エピソード・事象内
+## 19.2. `D16.EVT` — 単一エピソード・事象内
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1116,7 +1116,7 @@ Parent数: **7**
 | `D16.EVT.SINGLE_EPISODE` | 単一エピソード | 一続きの出来事内で作用・結果が完結する。 |
 | `D16.EVT.SEQUENTIAL_EPISODE` | エピソード内段階進行 | 一つの出来事内で複数段階が順に起きる。 |
 
-## `D16.DLY` — 遅延・期限・潜伏
+## 19.3. `D16.DLY` — 遅延・期限・潜伏
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1124,7 +1124,7 @@ Parent数: **7**
 | `D16.DLY.DEADLINE` | 期限付き | 特定期限までに行動／結果が生じる。 |
 | `D16.DLY.LATENT` | 潜伏 | 潜伏期間後に発現する。 |
 
-## `D16.PRG` — 進行・長期
+## 19.4. `D16.PRG` — 進行・長期
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1132,7 +1132,7 @@ Parent数: **7**
 | `D16.PRG.GRADUAL_EROSION` | 長期浸食 | 徐々に生活・精神等を侵食する。 |
 | `D16.PRG.LIFELONG` | 生涯 | 生涯にわたり作用する。 |
 
-## `D16.REC` — 再発・周期
+## 19.5. `D16.REC` — 再発・周期
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1140,7 +1140,7 @@ Parent数: **7**
 | `D16.REC.PERIODIC` | 周期 | 毎年、毎夜等の周期で起きる。 |
 | `D16.REC.TRIGGERED_RECURRENCE` | 条件再発 | 同じ条件成立のたび再発する。 |
 
-## `D16.CON` — 持続・追跡
+## 19.6. `D16.CON` — 持続・追跡
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1148,7 +1148,7 @@ Parent数: **7**
 | `D16.CON.PURSUIT_DURATION` | 追跡継続 | 追跡関係として持続する。 |
 | `D16.CON.PERSISTENT_ATTACHMENT` | 付着持続 | 対象との関係が切れず続く。 |
 
-## `D16.TRN` — 連鎖・世代
+## 19.7. `D16.TRN` — 連鎖・世代
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1156,7 +1156,7 @@ Parent数: **7**
 | `D16.TRN.SUCCESSIVE_VICTIMS` | 順次対象化 | 順番に複数対象へ作用する。 |
 | `D16.TRN.INTERGENERATIONAL` | 世代継承 | 家系・世代を越えて続く。 |
 
-## v1からの移行
+## 19.8. v1からの移行
 
 - `D16.IMS.IMMEDIATE` → `D16.EVT.IMMEDIATE`
 - `D16.IMS.SINGLE_OBSERVATION` → `D16.EVT.SINGLE_OBSERVATION`
@@ -1164,13 +1164,13 @@ Parent数: **7**
 
 ---
 
-# D17. 回避・制御方式
+# 20. D17. 回避・制御方式
 
 **型:** `H3`
 
 Parent数: **8**
 
-## `D17.AVO` — 回避・逃走
+## 20.1. `D17.AVO` — 回避・逃走
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1178,7 +1178,7 @@ Parent数: **8**
 | `D17.AVO.FLEE_ESCAPE` | 逃走 | 追跡・危険から物理的に逃げる。 |
 | `D17.AVO.DISTANCE_ROUTE_CHANGE` | 距離・経路変更 | 場所・経路を変える。 |
 
-## `D17.RUL` — 規則遵守
+## 20.2. `D17.RUL` — 規則遵守
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1187,7 +1187,7 @@ Parent数: **8**
 | `D17.RUL.TIMING_ORDER` | 時刻・順序遵守 | 指定時間・順番を守る。 |
 | `D17.RUL.PROCEDURAL_RULE` | 手順遵守 | 決められた操作手順を守る。 |
 
-## `D17.RIT` — 儀式・専門介入
+## 20.3. `D17.RIT` — 儀式・専門介入
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1196,7 +1196,7 @@ Parent数: **8**
 | `D17.RIT.MEDICAL_PROFESSIONAL` | 医療介入 | 医師・医療的対応。 |
 | `D17.RIT.LEGAL_OFFICIAL` | 公的・法的介入 | 警察、行政、法制度等。 |
 
-## `D17.CST` — 代償・転嫁・管理
+## 20.4. `D17.CST` — 代償・転嫁・管理
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1205,7 +1205,7 @@ Parent数: **8**
 | `D17.CST.CONTAINMENT` | 封印・隔離 | 対象を封じ込める。 |
 | `D17.CST.ONGOING_MANAGEMENT` | 継続管理 | 完全除去せず管理・共存する。 |
 
-## `D17.INF` — 情報・技術的制御
+## 20.5. `D17.INF` — 情報・技術的制御
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1214,7 +1214,7 @@ Parent数: **8**
 | `D17.INF.TECHNICAL_RESTORE` | 技術復旧 | バックアップ、修復、設定復旧等。 |
 | `D17.INF.SAFETY_EVIDENCE_ACTION` | 安全・科学的対応 | 安全手順、根拠ある予防策を取る。 |
 
-## `D17.USE` — 利用・活用
+## 20.6. `D17.USE` — 利用・活用
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1222,14 +1222,14 @@ Parent数: **8**
 | `D17.USE.LUCK_EXPLOITATION` | 吉兆利用 | 幸運・願掛けとして利用する。 |
 | `D17.USE.STRATEGIC_RULE_USE` | 規則の戦略利用 | ルールを利用し利益を得る。 |
 
-## `D17.UNA` — 不可避
+## 20.7. `D17.UNA` — 不可避
 
 | Child ID | Child | 定義 |
 |---|---|---|
 | `D17.UNA.NO_KNOWN_ESCAPE` | 回避法なし | 知られた回避法がない。 |
 | `D17.UNA.FIXED_OUTCOME` | 固定結果 | 条件成立後は結果が変更不能。 |
 
-## `D17.NON` — 制御不要
+## 20.8. `D17.NON` — 制御不要
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1238,7 +1238,7 @@ Parent数: **8**
 
 ---
 
-# D18. 作用レイヤー
+# 21. D18. 作用レイヤー
 
 **型:** `B`
 
@@ -1252,20 +1252,20 @@ Parent数: **8**
 
 ---
 
-# D19. 流通範囲
+# 22. D19. 流通範囲
 
 **型:** `H3`
 
 Parent数: **7**
 
-## `D19.PRI` — 個人・極小範囲
+## 22.1. `D19.PRI` — 個人・極小範囲
 
 | Child ID | Child | 定義 |
 |---|---|---|
 | `D19.PRI.ISOLATED_EXPERIENCER` | 単独経験者 | ほぼ単一人物・単一証言に限定。 |
 | `D19.PRI.PRIVATE_HOUSEHOLD` | 私的世帯 | 家庭・極小私的範囲。 |
 
-## `D19.KIN` — 家族・仲間
+## 22.2. `D19.KIN` — 家族・仲間
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1273,7 +1273,7 @@ Parent数: **7**
 | `D19.KIN.FRIEND_PEER` | 友人・同輩 | 友人、同世代、仲間集団。 |
 | `D19.KIN.SCHOOL_YOUTH` | 学校・若者集団 | 学校・生徒・学生文化。 |
 
-## `D19.LOC` — 地域共同体
+## 22.3. `D19.LOC` — 地域共同体
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1281,7 +1281,7 @@ Parent数: **7**
 | `D19.LOC.REGIONAL` | 地域・地方 | 市町村・地方圏等。 |
 | `D19.LOC.LOCAL_TRADITION` | 地域伝承圏 | 祭礼・郷土伝承を含む地域文化圏。 |
 
-## `D19.PRO` — 職業・専門コミュニティ
+## 22.4. `D19.PRO` — 職業・専門コミュニティ
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1289,7 +1289,7 @@ Parent数: **7**
 | `D19.PRO.EXPERT_SPECIALIST` | 専門家集団 | 医療、研究、技術等の専門家。 |
 | `D19.PRO.HOBBY_SUBCULTURE` | 趣味・サブカル集団 | ファン、趣味、専門コミュニティ。 |
 
-## `D19.ORG` — 組織内部
+## 22.5. `D19.ORG` — 組織内部
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1297,7 +1297,7 @@ Parent数: **7**
 | `D19.ORG.STATE_MILITARY` | 国家・軍・行政内部 | 国家機関、軍、行政等。 |
 | `D19.ORG.RELIGIOUS_CLOSED_GROUP` | 宗教・閉鎖集団 | 宗教組織、閉鎖的団体等。 |
 
-## `D19.NET` — ネットワーク公開圏
+## 22.6. `D19.NET` — ネットワーク公開圏
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1305,7 +1305,7 @@ Parent数: **7**
 | `D19.NET.OPEN_FORUM_WEB` | 公開Web・掲示板 | 公開掲示板、Webサイト。 |
 | `D19.NET.SNS_VIRAL` | SNS・拡散ネットワーク | SNSによる広域拡散。 |
 
-## `D19.MAS` — 大衆・広域社会
+## 22.7. `D19.MAS` — 大衆・広域社会
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1315,27 +1315,27 @@ Parent数: **7**
 
 ---
 
-# D20. 特権情報保持者
+# 23. D20. 特権情報保持者
 
 **型:** `H3`
 
 Parent数: **7**
 
-## `D20.NON` — 特権なし
+## 23.1. `D20.NON` — 特権なし
 
 | Child ID | Child | 定義 |
 |---|---|---|
 | `D20.NON.COMMON_KNOWLEDGE` | 一般共有 | 特定保持者なく広く共有。 |
 | `D20.NON.NO_HIDDEN_TRUTH` | 隠れた真相なし | 追加の秘密情報を想定しない。 |
 
-## `D20.PER` — 当事者・家族
+## 23.2. `D20.PER` — 当事者・家族
 
 | Child ID | Child | 定義 |
 |---|---|---|
 | `D20.PER.EXPERIENCER` | 体験者本人 | 本人だけが追加情報を持つ。 |
 | `D20.PER.FAMILY_BLOODLINE` | 家族・家系 | 家族・血縁だけが知る。 |
 
-## `D20.INS` — 地元・内部者
+## 23.3. `D20.INS` — 地元・内部者
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1343,7 +1343,7 @@ Parent数: **7**
 | `D20.INS.SCHOOL_WORK_INSIDER` | 学校・職場内部者 | 学校・職場の内部者。 |
 | `D20.INS.SUBCULTURE_VETERAN` | 古参・サブカル内部者 | 特定コミュニティの古参等。 |
 
-## `D20.EXP` — 専門家・職能者
+## 23.4. `D20.EXP` — 専門家・職能者
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1351,7 +1351,7 @@ Parent数: **7**
 | `D20.EXP.TECHNICAL_OCCUPATIONAL` | 技術・職業専門家 | 技術者、職人、乗務員等。 |
 | `D20.EXP.RELIGIOUS_FOLKLORE` | 宗教・伝承専門家 | 僧侶、神職、霊能者、伝承知識者等。 |
 
-## `D20.ORG` — 組織・加害主体
+## 23.5. `D20.ORG` — 組織・加害主体
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1359,7 +1359,7 @@ Parent数: **7**
 | `D20.ORG.PERPETRATOR_CRIMINAL` | 加害者・犯罪者 | 加害者側だけが知る。 |
 | `D20.ORG.SECRET_NETWORK` | 秘密組織・ネットワーク | 陰謀主体、秘密結社等。 |
 
-## `D20.UNK` — 到達不能・不明
+## 23.6. `D20.UNK` — 到達不能・不明
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1367,7 +1367,7 @@ Parent数: **7**
 | `D20.UNK.LOST_ORIGIN` | 失われた情報 | かつての情報が失われている。 |
 | `D20.UNK.DEAD_MISSING_HOLDER` | 死亡・失踪保持者 | 保持者が死亡・失踪しアクセス不能。 |
 
-## `D20.HAZ` — 危険・禁制情報
+## 23.7. `D20.HAZ` — 危険・禁制情報
 
 | Child ID | Child | 定義 |
 |---|---|---|
@@ -1377,7 +1377,7 @@ Parent数: **7**
 
 ---
 
-# D21. 現実アンカー
+# 24. D21. 現実アンカー
 
 **型:** `O`
 
@@ -1391,7 +1391,7 @@ Parent数: **7**
 
 ---
 
-# 22. Parent/Child対応表の実装規則
+# 25. Parent/Child対応表の実装規則
 
 実装ではChild→Parent対応を独立したマスターテーブルとして保持する。
 
@@ -1402,7 +1402,7 @@ D13 | D13.PHY.PHYSICAL_ATTACK | 物理攻撃 | D13.PHY | 身体・物質作用 |
 
 ExcelのParent列はXLOOKUP等、Pythonでは辞書lookupで自動生成する。手入力は禁止する。
 
-# 23. H3保存規則
+# 26. H3保存規則
 
 ```text
 D13_primary_child
@@ -1416,7 +1416,7 @@ D13_status
 
 Secondaryは順不同であり、`secondary1/2`は保存位置にすぎない。入力後にchild ID昇順でcanonicalizeする。
 
-# 24. 情報量・粒度のパイロット判定規則
+# 27. 情報量・粒度のパイロット判定規則
 
 各H1/H3次元について、まずParentレベル、次にChildレベルを評価する。
 
@@ -1426,13 +1426,13 @@ Secondaryは順不同であり、`secondary1/2`は保存位置にすぎない。
 - `K_eff/K_declared`が低い、rare childが多い、coder agreementが低い場合はChild統合またはParent再設計。
 - 逆に1つのParent内でChild分布が安定し、研究上意味ある差を持つならChildを維持する。
 
-# 25. 次工程
+# 28. 次工程
 
 このv1は**理論先行taxonomy**であり、確定版ではない。次工程は、各Blockから層化抽出した40–60 Entryによるパイロット再コードである。
 
 パイロットでは、コード不足・境界競合・Parent偏り・Child希少化・U/NA率・coder agreementを記録し、v2 code taxonomyへ更新する。
 
-# 26. 方法論上の位置づけ
+# 29. 方法論上の位置づけ
 
 階層コードブックは、広いParentの下により具体的なChildを置き、定義・include/exclude・例をパイロットで反復修正する運用と整合する。Parent/Childは理論上の多次元化ではなく、同一概念を異なる粒度で記録するための実装である。
 
@@ -1442,7 +1442,7 @@ Secondaryは順不同であり、`secondary1/2`は保存位置にすぎない。
 - Krippendorff, Content Analysis, unitizing and coding reliability.
 - Wickham (2014), Tidy Data: one variable per column, one observation per row.
 - Team-based hierarchical codebook studies using parent/child code structures and iterative refinement.
-# 27. 事前リスクフラグ
+# 30. 事前リスクフラグ
 
 Parent数は全H1/H3次元で4–9の範囲に収まっている。ただしChild数は次元間で大きく異なる。
 
@@ -1458,7 +1458,8 @@ Parent数は全H1/H3次元で4–9の範囲に収まっている。ただしChil
 | D02/D03 媒体 | 28 | 古い媒体の希少Child、初期媒体の典拠不足 |
 | D10 因果源存在論 | 28 | 超自然主体・現象・場所の境界 |
 
-## D13.MANの単一Childについて
+**D13.MANの単一Childについて**
+
 
 `D13.MAN`（顕現・観測）は現時点でChildが`MANIFEST_ONLY` 1つだけであり、階層としては冗長である。
 しかし、Parentレベルで「追加作用なし」を他作用familyと比較する必要があるため、v1では保持する。
@@ -1470,7 +1471,7 @@ Parent数は全H1/H3次元で4–9の範囲に収まっている。ただしChil
 
 無理にChildを増やして情報量を水増ししない。
 
-# 28. v1確定時点の検証結果
+# 31. v1確定時点の検証結果
 
 - 21概念次元すべてに値体系を定義済み。
 - H1/H3はすべてParent数4–9。
