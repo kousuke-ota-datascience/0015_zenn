@@ -85,7 +85,7 @@ R4はR3 freeze後に旧10を比較、R5で旧Excelを比較する。不一致は
 | R0 baseline固定 | 1 | 0 | 0 | 0 | 0 |
 | R1 Evidence / 00監査 | 9 | 0 | 40 | 0 | 0 |
 | R2 Version Scope再固定 | 9 | 0 | 40 | 0 | 0 |
-| R3 Independent Recode | 8 | 0 | 41 | 0 | 0 |
+| R3 Independent Recode | 9 | 0 | 40 | 0 | 0 |
 | R4 Entry QA | 8 | 0 | 41 | 0 | 0 |
 
 - R5 Global Reconciliation: `未`
@@ -104,7 +104,7 @@ R4はR3 freeze後に旧10を比較、R5で旧Excelを比較する。不一致は
 |0019|小さいおじさん|完了|完了|完了|完了|e7ada0703530358d46b387b4feb149fc9e1b8ad9|b3f91feaba652b5b3b8eeca202bf2bddb4449c34|1f180c1d0fde5100b0cf71d6bc184ad29a562f0d|taxonomy gapなし|
 |0024|幸福の手紙|完了|完了|完了|完了|fc120f41ab98bc1f150f624dcafaaa016e2c6d39|41e27cc1c43d79fa231f32b9e0ffdf80fb296811|362878efa061cd073f48b2cf09d9e006c2af6ba9|R4でD01→U、D08→UNSUPPORTED_ASSERTION、D17→LUCK_EXPLOITATION。taxonomy gapなし。|
 |0025|不幸の手紙|完了|完了|完了|完了|aee0942ab1c70a42008c786670c0c0d5b6e04a1e|7ea7647a2b29cf93687c71109adce9e5637f3e7f|443b8f6a87afd69f2a0276b8677b8f093b7266e2|R1=`c6f78ace8fcd1dd8255b09137330fdca5d2a0c16`。R2=`aa7bde9fad4d2271a3cb4f745e2feec7bef57ba3`。R3=`7ea7647a2b29cf93687c71109adce9e5637f3e7f`。R4=`443b8f6a87afd69f2a0276b8677b8f093b7266e2`。R4でD09 SecondaryをTABOOIZATIONへQA修正。taxonomy gapなし。|
-|0059|深泥池の幽霊タクシー|完了|完了|未|未|4c91bfea47f31b35a5a38799ee145c93f29580f7|未|未|R1=`c206ffeac7eef5a6f52c9b27aec4669d59872d41`（Evidence正本更新）、補助監査=`93ebe06ebfef1fc3528217b40b601f7128d8d250`。R2=`9109efce9b9f6eefb2aaf4b2c0204485f879d9bf`。Scope=1969年新聞確認層の深泥池×タクシー乗客消失最小核。|
+|0059|深泥池の幽霊タクシー|完了|完了|完了|未|4c91bfea47f31b35a5a38799ee145c93f29580f7|67db4d07c94341c71b219b7b6469a4208ea3d39f|未|R1=`c206ffeac7eef5a6f52c9b27aec4669d59872d41`（Evidence正本更新）、補助監査=`93ebe06ebfef1fc3528217b40b601f7128d8d250`。R2=`9109efce9b9f6eefb2aaf4b2c0204485f879d9bf`。R3=`67db4d07c94341c71b219b7b6469a4208ea3d39f`。Scope=1969年新聞確認層の深泥池×タクシー乗客消失最小核。|
 |0060|タクシー幽霊|未|未|未|未|未|未|未||
 |0081|ピアスの白い糸|未|未|未|未|未|未|未||
 |0089|日本だるま／だるま女|未|未|未|未|未|未|未||
