@@ -8,6 +8,7 @@
 - コード体系: `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
 - コーディング規則: `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
 - 文書管理・命名規則: `docs/00_research_overview/90_ducumentation_metadata.md`
+- 母集団・`Entry_ID`・全件コード集約の正本: `docs/20_analysis_summary/urban_legend_parent_child_full_application_v1.xlsx`
 - `00_contents` 記載様式: `docs/10_each_lore/0000_tutorial/0000_00_contents.md`
 - `10_analysis` 記載様式: `docs/10_each_lore/0000_tutorial/0000_10_analysis.md`
 
@@ -26,16 +27,29 @@ Step 0. 対象Entryと分析単位を確定
 → Step 5. D01〜D21をコーディングし *_10_analysis.md を作成
 → Step 6. 00 / 10 横断QA
 → Step 7. GitHub反映・push後検証
-→ Step 8. 必要なプロジェクト固有の進捗管理を更新
+→ Step 8. 全件正本Excelへの同期
+→ Step 9. 必要なプロジェクト固有の進捗管理を更新
 ```
 
 **Evidence収集とコーディングを混ぜない。** D01のために検索し、次にD02のため再検索するのではなく、まず当該伝承の主要Evidenceをまとめて確保し、`00_contents` に整理してから分析する。
 
+また、**全件正本Excelに既存コードがあることと、個別Entryの新規コーディング／再コーディングでそのコードを入力として使うことは別である。** Excelは対象Entry・`Entry_ID`・母集団上の位置を確認し、確定した分析結果を全件集約へ同期するために用いる。既存D01〜D21・Statusを見て同じ値へ合わせることを、Evidenceに基づくコーディングの代用としてはならない。
+
 # 2. Step 0 — 対象Entryと分析単位を確定
 
-## 2.1. Entry_ID
+## 2.1. 全件正本ExcelとEntry_ID
 
-作業開始前に正本データから `Entry_ID` を確認する。
+作業開始前に、以下の全件正本Excelで対象伝承と `Entry_ID` を確認する。
+
+- `docs/20_analysis_summary/urban_legend_parent_child_full_application_v1.xlsx`
+
+このExcelは、以下の正本として扱う。
+
+- 全伝承エントリ母集団
+- `Entry_ID`
+- 全件のD01〜D21・Status等の集約結果
+
+個別伝承ディレクトリと主要ファイルは次の形式とする。
 
 ```text
 <4桁ゼロ埋めEntry_ID>_<伝承識別名>/
@@ -44,6 +58,23 @@ Step 0. 対象Entryと分析単位を確定
 ```
 
 `0000` はtutorial専用であり、実伝承へ使用しない。
+
+### 2.1.1. 新規コーディング／再コーディング時の参照制限
+
+新規コーディングまたは再コーディングでは、作業開始時にExcelから確認するのは、原則として**対象Entryの同定に必要な情報**までとする。
+
+既存のD01〜D21、Primary / Secondary、Status等は、独立判定が完了する前に「正解」として参照してはならない。これらは過去の分析結果であり、`C / H / X / A` Evidenceではない。
+
+分析は、
+
+```text
+外部典拠・原資料
+→ *_00_contents.md
+→ Version Scope
+→ 現行 10 / 20 / 30 によるD01〜D21独立判定
+```
+
+の順で行う。判定完了後に初めて、Excel既存値との比較・差分確認・同期を行う。
 
 ## 2.2. Entry境界
 
@@ -65,13 +96,14 @@ Step 0. 対象Entryと分析単位を確定
 
 作業開始時に少なくとも以下を確認する。
 
-- `10_urban_legend_analysis_axes_theoretical_design.md`
-- `20_urban_legend_parent_child_code_system.md`
-- `30_urban_legend_analysis_coding_rules.md`
-- `0000_00_contents.md`
-- `0000_10_analysis.md`
+- `docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md`
+- `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
+- `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
+- `docs/20_analysis_summary/urban_legend_parent_child_full_application_v1.xlsx`
+- `docs/10_each_lore/0000_tutorial/0000_00_contents.md`
+- `docs/10_each_lore/0000_tutorial/0000_10_analysis.md`
 
-必要に応じて `90_ducumentation_metadata.md` も確認する。
+必要に応じて `docs/00_research_overview/90_ducumentation_metadata.md` も確認する。
 
 確認事項:
 
@@ -82,8 +114,10 @@ Step 0. 対象Entryと分析単位を確定
 - Evidence role (`C / H / X / A`)
 - `00_contents` と `10_analysis` の責務分離
 - tutorialの章構造・項目名・順序
+- Excelが母集団・`Entry_ID`・全件コード集約の正本であること
+- 新規コーディング／再コーディング時はExcel既存コードをEvidenceや答え合わせ用入力として使わないこと
 
-旧コード、Macro Category、ジャンル名から新コードを逆算してはならない。
+旧コード、Macro Category、ジャンル名、Excel既存コードから新しい判定を逆算してはならない。
 
 # 4. Step 2 — 典拠調査とEvidence整理
 
@@ -140,6 +174,7 @@ Web資料は到達可能性を確認し、URL、対象範囲、確認日を可�
 - 反証資料を「伝承が存在しなかった証拠」と扱う
 - 実在地・事件・制度の存在を、そのまま伝承上の因果関係の事実とみなす
 - 文書の詳細さとEvidenceの強さを混同する
+- Excel既存コードを `C / H / X / A` Evidenceとして扱う
 
 書誌ページは資料の存在を示す証拠であり、本文に内容がなければ物語細部の直接証拠ではない。
 
@@ -417,7 +452,7 @@ D01〜D06・D19〜D21は、物語中の展開に無理に限定せず、**成立
 
 再調査により現行コードとEvidenceが明らかに噛み合わない疑いが生じた場合は、留保・再検討候補を明示し、必要なら**再コーディングを別の明示的な作業として行う**。文書増補と再コーディングを黙って同時実行しない。
 
-新規Entryや、最初から再コーディングを目的とする作業では、現行の `10 / 20 / 30` に従いEvidenceからコードを判定する。
+新規Entryや、最初から再コーディングを目的とする作業では、現行の `10 / 20 / 30` に従いEvidenceからコードを判定する。この場合、Excel既存コードは独立判定完了前の入力にしない。
 
 # 8. Step 5で特に注意する次元
 
@@ -505,7 +540,7 @@ L3には `X` Evidenceが必要。「影響しそう」では付けない。通�
 
 ## 9.1. 構造
 
-- Entry_IDが正しい
+- Entry_IDがExcel正本と一致する
 - ディレクトリ・ファイル名が4桁ゼロ埋め
 - tutorialの見出し・項目名・順序を守る
 - 独自フィールドを追加していない
@@ -552,11 +587,21 @@ L3には `X` Evidenceが必要。「影響しそう」では付けない。通�
 
 書き込み直前に最新mainを確認し、commit後は差分を検証して想定外ファイルがないことを確認する。push後に必要に応じてファイルを再取得し、最終状態を確認してから完了とする。
 
-# 11. Step 8 — プロジェクト固有の進捗管理
+# 11. Step 8 — 全件正本Excelへの同期
+
+個別Entryの `*_00_contents.md` / `*_10_analysis.md` が確定した後、確定したD01〜D21・Status等を以下の全件正本へ同期する。
+
+- `docs/20_analysis_summary/urban_legend_parent_child_full_application_v1.xlsx`
+
+この同期は**分析結果の出力反映**であり、コーディング前の入力工程ではない。
+
+プロジェクト運用上、複数EntryをまとめてExcelへ同期する場合は、個別Entry完了時点で同期待ちであることを進捗管理上明確にする。Excel既存値と新しい `10_analysis` が異なる場合、Evidenceに基づく再コーディングとして確定した値を同期対象とし、差分を黙って残さない。
+
+# 12. Step 9 — プロジェクト固有の進捗管理
 
 本Stepは汎用workflowではなく各調査フェーズ固有である。進捗管理文書・台帳・control planeがある場合のみ更新する。
 
-## 11.1. A3パイロット49件の場合
+## 12.1. A3パイロット49件の場合
 
 Entry完了後に以下を**Entry本体とは別commit**で更新する。
 
@@ -564,11 +609,11 @@ Entry完了後に以下を**Entry本体とは別commit**で更新する。
 
 この手順はパイロット固有であり、後続400件以上へ自動適用しない。
 
-# 12. 完了条件
+# 13. 完了条件
 
 以下を満たすまで1 Entryを完了とみなさない。
 
-- Entry境界・Entry_IDが妥当
+- Entry境界が妥当で、`Entry_ID` がExcel正本と一致する
 - `*_00_contents.md` と `*_10_analysis.md` が存在
 - 00/10の責務分離が守られている
 - Evidenceが役割別に整理されている
@@ -577,7 +622,7 @@ Entry完了後に以下を**Entry本体とは別commit**で更新する。
 - 典拠と主要内容を追跡できる
 - 起源・最古確認・後代派生を区別している
 - Version Scopeが既定規則または明示的理由に基づいて固定されている
-- D01〜D21を現行規則で判定している
+- D01〜D21を現行規則で独立判定している
 - `U / NA / C` を無理に埋めていない
 - 21次元すべてに判定根拠と伝承固有の現れ方がある
 - 近接Childのtie-breakが必要な場合、その優先規則に従っている
@@ -585,8 +630,9 @@ Entry完了後に以下を**Entry本体とは別commit**で更新する。
 - 文書増補と再コーディングの目的が混同されていない
 - 1 Entry単位のcommitになっている
 - commit差分を検証した
+- 全件正本Excelへ同期済み、またはプロジェクト上の同期待ちとして明示されている
 
-# 13. 最重要原則
+# 14. 最重要原則
 
 件数消化や文章量そのものを目的化しない。
 
@@ -602,23 +648,25 @@ Evidence
 → Version Scope
 → 分析判断
 → コード
+→ 全件正本Excel
 ```
 
 を再構成できることを重視する。
 
-# 14. Workflow変更時の回帰試験 — 0180 きさらぎ駅
+# 15. Workflow変更時の回帰試験 — 0180 きさらぎ駅
 
 `0180 きさらぎ駅` を、本workflowおよびコーディング規則の**regression test benchmark**とする。
 
 `0000_workflow.md` または `30_urban_legend_analysis_coding_rules.md` の変更が、Entry作成・Version Scope・コード判定へ影響し得る場合は、変更完了条件として次を確認する。
 
-## 14.1. 試験方法
+## 15.1. 試験方法
 
-1. 既存の `0180_00_contents.md` と `0180_10_analysis.md` を参照せず、0180の原資料・外部典拠から本workflowに従って `00_contents` 相当を再構築する。
-2. その再構築結果と現行の `10 / 20 / 30` のみを使い、Version ScopeとD01〜D21を再判定する。
-3. 判定完了後に、正本 `0180_10_analysis.md` と比較する。
+1. 全件正本Excelでは、0180の `Entry_ID`・対象Entry同定に必要な情報だけを確認し、既存D01〜D21・Secondary・Statusは参照しない。
+2. 既存の `0180_00_contents.md` と `0180_10_analysis.md` を参照せず、0180の原資料・外部典拠から本workflowに従って `00_contents` 相当を再構築する。
+3. その再構築結果と現行の `10 / 20 / 30` のみを使い、Version ScopeとD01〜D21を再判定する。
+4. 判定完了後に初めて、正本 `0180_10_analysis.md` および必要に応じて全件正本Excelの0180行と比較する。
 
-## 14.2. 合格基準
+## 15.2. 合格基準
 
 文章表現の一字一句の一致は要求しない。以下を要求する。
 
@@ -631,7 +679,7 @@ Evidence
 
 **21次元のいずれか1つでもコードまたはStatusが異なる場合、回帰試験は未合格とする。**
 
-## 14.3. 不一致時の扱い
+## 15.3. 不一致時の扱い
 
 不一致を「コーダーの好み」で処理しない。次のどちらかを特定する。
 
@@ -640,4 +688,4 @@ Evidence
 
 後者の場合は、**その不一致を生んだ最小の規則だけを補強する**。別の伝承を追加benchmark化したり、全次元の規則を再設計したりして作業を膨張させない。
 
-本回帰試験の目的は、0180を暗記して同じ回答を出すことではなく、**同じEvidenceから独立に同じVersion Scope・21次元へ到達できるworkflowであることを保証すること**である。
+本回帰試験の目的は、0180やExcel既存値を暗記して同じ回答を出すことではなく、**同じEvidenceから独立に同じVersion Scope・21次元へ到達できるworkflowであることを保証すること**である。
