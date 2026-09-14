@@ -57,11 +57,14 @@ Reviewerは正本を直接修正しない。Review成果物を `docs/99_work/rev
 
 `*_00_contents.md` と `*_10_analysis.md` は**両方とも必須レビュー対象**である。一方のみのレビュー／修正でEntryを完了扱いにしてはならない。
 
+**複数Entryを同時並行で再作業しない。1 Entryについて00→10→control plane更新→再レビュー待まで閉じてから次Entryへ進む。**
+
 ## 2.3. 正本関係
 
 - Evidence正本: `*_00_contents.md`
 - Coding正本: `*_10_analysis.md`
 - Review成果物: 正本に対する外部Reviewerの指摘記録。正本そのものではない
+- Coder裁定記録: `docs/99_work/20260914_A3_full_recoding/<Entry_ID>_review_<seq>_adjudication.md`
 - 集約Excel: Coding正本から同期される派生成果物
 - control plane: task status / review lifecycle / checkpoint / baseline管理正本
 
@@ -71,7 +74,7 @@ Reviewerは正本を直接修正しない。Review成果物を `docs/99_work/rev
 - R3 SHA: 旧10参照前の独立判定freeze内容commit
 - R4 SHA: Coder側R4 QA・10更新・旧10比較まで完了した内容commit
 - Review後に正本を修正した場合、旧R4 SHAは履歴checkpointとして保持し、Entry Statusを完了から戻す
-- 再作業後の正本SHAは、再レビュー対象版としてReview成果物側の対象SHAと対応付ける
+- 再作業後の正本blob / commitは、再レビュー対象版としてremarksまたはCoder裁定記録へ残す
 - control plane commitはcheckpointに含めない
 
 # 3. タスク定義
@@ -142,13 +145,13 @@ R4はR3 freeze後に旧10を比較、Review Cycleでは外部Reviewerの指摘�
 |---|---:|
 | 未 | 40 |
 | レビュー待 | 0 |
-| 要修正 | 9 |
+| 要修正 | 8 |
 | 再作業中 | 0 |
-| 再レビュー待 | 0 |
+| 再レビュー待 | 1 |
 | 完了 | 0 |
 | －（対象外） | 0 |
 
-2026-09-14現在、先行9件は00/10の `Review_001` がともに完了し、全9件に修正指摘があるため総合Statusを `要修正` とする。
+2026-09-14現在、先行9件は00/10の `Review_001` がともに完了している。0001はCoder再作業を完了して `再レビュー待`、残り8件は `要修正` である。
 
 ## 5.2. Coder workflow checkpoint
 
@@ -162,7 +165,7 @@ R4はR3 freeze後に旧10を比較、Review Cycleでは外部Reviewerの指摘�
 | R4 Entry QA | 9 | 40 |
 
 - R0 baseline固定: `完了`
-- Review Cycle: `先行9件 要修正 / 40件 未`
+- Review Cycle: `0001 再レビュー待 / 8件 要修正 / 40件 未`
 - R5 Global Reconciliation: `未`
 - R6 Excel Sync: `未`
 - R7 Global QA: `未`
@@ -173,7 +176,7 @@ R1〜R4列はCoder側checkpointの履歴を示す。`Status` はReviewerを含�
 
 | Entry_ID | 伝承 | R1 | R2 | R3 | R4 | Status | pre-SHA | R3 SHA | R4 SHA | remarks |
 |---|---|---|---|---|---|---|---|---|---|---|
-|0001|口裂け女|完了|完了|完了|完了|要修正|4e18c1a977c8c223a26865fac0feeafef5d54b37|9a565a4879688a9a07e6c60a617813e026d46959|134a9ce8394ed0e2e5a7f491c6a52b19cb236c0c|R2=1979年初頭〜春の最小安定核。Review_001: 00/10とも要修正。|
+|0001|口裂け女|完了|完了|完了|完了|再レビュー待|4e18c1a977c8c223a26865fac0feeafef5d54b37|9a565a4879688a9a07e6c60a617813e026d46959|134a9ce8394ed0e2e5a7f491c6a52b19cb236c0c|Review_001裁定・再作業完了。00: commit `68f36206f0fe5d432792ecd5f0ec95081f17498d`, blob `b6a3c80f69e6c4b5b2d09a59615f477984ab3e00`。10: commit `b2f15f74da127b78fa94a021cf1bef1b9c93bde5`, blob `d183407a90cdfd88d6b58b17963bb55ca4f908d3`。`0001_review_001_adjudication.md` 作成。Review_002待ち。|
 |0003|赤い紙・青い紙／赤マント系|完了|完了|完了|完了|要修正|5c577eb3d3acfa3f69fd4ca841875888b27305cf|7e08f01ca3119e71268292513504ff79f6987d60|c0d5fac7edad8edd31f4d768277ce4ae6a11bda3|R2=1986東京都色選択型。Review_001: 00/10とも要修正。|
 |0005|紫の鏡|完了|完了|完了|完了|要修正|c2a37792f12b6c2aa5b8760536b13764d14c714d|74c8f1367a53020c2ff02b3ae5072202ad74e7e9|658b95e6fe5ea8f8b0a3be83314cc851a788e016|D17忘却制御をR5へとしていたが、Review_001で00/10とも要修正。|
 |0006|メリーさんの電話|完了|完了|完了|完了|要修正|89b2865013ecd7fca4b39fa914973a0f55eb3b3b|92bbf26600e52525c2c11398c55d32082f0b3d0e|6a36aebbc047908679f4884d4202da5d7a2efc5b|R4 D04=U。Review_001: 00/10とも要修正。|
@@ -223,29 +226,27 @@ R1〜R4列はCoder側checkpointの履歴を示す。`Status` はReviewerを含�
 |0412|名称未確認|未|未|未|未|未|未|未|未|R1でinventory確認|
 |0413|名称未確認|未|未|未|未|未|未|未|未|R1でinventory確認|
 
-## 6.1. 先行9件 Review_001 状態
+## 6.1. 先行9件 Review状態
 
-| Entry_ID | 00 Review | 10 Review | 総合Status | Review_Seq |
+| Entry_ID | 00 | 10 | 総合Status | 次Review |
 |---|---|---|---|---|
-|0001|要修正|要修正|要修正|001|
-|0003|要修正|要修正|要修正|001|
-|0005|要修正|要修正|要修正|001|
-|0006|要修正|要修正|要修正|001|
-|0011|要修正|要修正|要修正|001|
-|0019|要修正|要修正|要修正|001|
-|0024|要修正|要修正|要修正|001|
-|0025|要修正|要修正|要修正|001|
-|0059|要修正|要修正|要修正|001|
-
-00/10のどちらか一方でも要修正なら、総合Statusは `要修正` とする。Review未実施の残り40件は `未`。
+|0001|Review_001指摘反映済|Review_001指摘反映済|再レビュー待|Review_002|
+|0003|要修正|要修正|要修正|Review_002（修正後）|
+|0005|要修正|要修正|要修正|Review_002（修正後）|
+|0006|要修正|要修正|要修正|Review_002（修正後）|
+|0011|要修正|要修正|要修正|Review_002（修正後）|
+|0019|要修正|要修正|要修正|Review_002（修正後）|
+|0024|要修正|要修正|要修正|Review_002（修正後）|
+|0025|要修正|要修正|要修正|Review_002（修正後）|
+|0059|要修正|要修正|要修正|Review_002（修正後）|
 
 # 7. 実行順序
 
 `0001 → 0003 → 0005 → 0006 → 0011 → 0019 → 0024 → 0025 → 0059 → 0060 → 0081 → 0089 → 0091 → 0101 → 0112 → 0113 → 0118 → 0132 → 0133 → 0137 → 0152 → 0157 → 0158 → 0169 → 0178 → 0179 → 0180 → 0181 → 0188 → 0198 → 0225 → 0250 → 0275 → 0309 → 0319 → 0349 → 0356 → 0362 → 0363 → 0365 → 0366 → 0384 → 0385 → 0394 → 0403 → 0410 → 0411 → 0412 → 0413`
 
-当面は先行9件のReview_001指摘を `00 → 10` の順で再作業し、再レビューで承認されるまでReview Cycleを閉じる。**先行9件が再レビュー待または完了へ進む前に0060以降を新規着手しない。**
+当面は先行9件のReview_001指摘を `00 → 10` の順で、**1 Entryずつ**再作業し、各Entryを `再レビュー待` まで進めてから次Entryへ着手する。0060以降は先行9件の再作業完了後に着手する。
 
-以後は各EntryについてR1→R4→Review Cycle完了後に次へ進む。49件すべてのReview Cycle完了後にR5→R6→R7へ進む。
+49件すべてのReview Cycle完了後にR5→R6→R7へ進む。
 
 # 8. Entry完了条件
 
@@ -276,6 +277,7 @@ R1〜R4列はCoder側checkpointの履歴を示す。`Status` はReviewerを含�
 |2026-09-14|初期baseline固定|−|main `9570faea998905f074e59df1691748b9cc54d03d`|全面再コーディング開始|全49件未から開始|
 |2026-09-14|control plane task構造・正本関係|blob `7740a96b1c6084c4bf22d1ad5a0be6324b0d9dd3`|commit `8ebcb326dc3ec1ba24019a75aa251a1f9b4eb0ad`|R4とR5以降を分離、Coding正本明示|旧Excel比較をR5へ|
 |2026-09-14|Review Cycle・Entry Status導入|`未 / 作業中 / 完了 / 保留 / −`|`未 / レビュー待 / 要修正 / 再作業中 / 再レビュー待 / 完了 / －（対象外）`|CoderとReviewerを分離し、00/10双方の外部レビューを完了条件へ追加|先行9件を `完了` から `要修正` へ変更|
+|2026-09-14|0001 Review_001再作業|Status `要修正`|Status `再レビュー待`|00/10双方のReviewer指摘をCoder裁定・修正|Review_002待ち|
 
 # 10. 最終完了条件
 
