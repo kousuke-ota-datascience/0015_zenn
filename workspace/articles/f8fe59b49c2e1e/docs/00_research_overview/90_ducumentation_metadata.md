@@ -74,6 +74,7 @@
         - ディレクトリ・ファイル命名規則
         - 記載上の共通ルール
         - Appendixの位置付けと正本関係
+        - 個別伝承tutorialの位置付けと正本関係
     - 原則として記載しない内容:
         - 個別の理論内容
         - 個別のコード値・カテゴリ定義
@@ -115,6 +116,8 @@ Research overview文書群は、以下の順に理論から運用・補足へ具
     - Appendixは説明のために `10` / `20` / `30` の現行仕様を独自に変更してはならない。
 - 文書構造・見出し・命名規則などの管理規則変更は `90` を起点として行う。
     - 変更後、対象文書群に対して構造上の整合性を確認する。
+- 個別伝承の標準作業手順変更は `docs/10_each_lore/0000_tutorial/0000_workflow.md` を起点として行う。
+    - 変更後、`0000_00_contents.md`、`0000_10_analysis.md`、`10` / `20` / `30` / `90` と競合しないことを確認する。
 
 ### 1.2.4. 文書間で競合した場合の正本
 
@@ -125,6 +128,9 @@ Research overview文書群は、以下の順に理論から運用・補足へ具
 - 証拠要件・具体的判定・コーディング手順: `30_urban_legend_analysis_coding_rules.md`
 - 理論設計の変更履歴・変更理由・過去版との対応関係: `80_appendix/10_analysis_axes_theory_history/README.md`
 - 文書構造・見出し番号・命名規則・文書管理: `90_ducumentation_metadata.md`
+- 個別伝承エントリ作成の標準作業手順: `docs/10_each_lore/0000_tutorial/0000_workflow.md`
+- 個別伝承 `00_contents` の記載様式: `docs/10_each_lore/0000_tutorial/0000_00_contents.md`
+- 個別伝承 `10_analysis` の記載様式: `docs/10_each_lore/0000_tutorial/0000_10_analysis.md`
 
 `80_appendix/10_analysis_axes_theory_history/` 内の過去版ファイルは、**当時の仕様を保存した凍結済み歴史資料**であり、現行仕様の正本ではない。
 
@@ -203,17 +209,30 @@ Entry_ID = 180
 
 ファイル単体で移動・抽出・参照された場合にも伝承エントリを一意に識別できるよう、`00_contents.md`、`10_analysis.md` のような接頭辞なしファイル名は使用しない。
 
-## 3.3. 予約番号と例外
+## 3.3. 予約番号とtutorial
 
 `0000` はテンプレート・チュートリアル用の予約番号とし、実データの伝承エントリには使用しない。
 
 ```text
 docs/10_each_lore/0000_tutorial/
 ├── 0000_00_contents.md
-└── 0000_10_analysis.md
+├── 0000_10_analysis.md
+└── 0000_workflow.md
 ```
 
+各ファイルの責務は以下とする。
+
+- `0000_workflow.md`
+    - 個別伝承エントリ1件について、Entry確定、方針読込、Evidence調査、`00_contents` 作成、Version Scope固定、コーディング、`10_analysis` 作成、横断QA、GitHub反映までを行う**標準作業手順の正本**。
+    - 特定パイロット・特定調査フェーズに依存しない共通workflowを記載する。
+- `0000_00_contents.md`
+    - Evidence / Content layerの記載様式・章構造・要求密度の正本。
+- `0000_10_analysis.md`
+    - Analytical definition / Coding layerの記載様式・章構造・要求密度の正本。
+
 実データの伝承ディレクトリでは、接頭辞番号とExcel上の `Entry_ID` が一致していることを確認する。ディレクトリ名の伝承識別名部分を変更しても、同一Entryである限り接頭辞番号は変更しない。
+
+`docs/99_work/` 配下のhandoff・control plane・作業メモは、作業途中状態やフェーズ固有運用を記録するものであり、`0000_workflow.md` と競合する恒久的な個別伝承作業規則を正本として保持しない。
 
 # 4. Appendix 管理規則
 
