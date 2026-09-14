@@ -113,13 +113,13 @@
 |---|---:|
 | 未 | 40 |
 | レビュー待 | 0 |
-| 要修正 | 0 |
+| 要修正 | 2 |
 | 再作業中 | 0 |
-| 再レビュー待 | 5 |
-| 完了 | 4 |
+| 再レビュー待 | 0 |
+| 完了 | 7 |
 | －（対象外） | 0 |
 
-2026-09-15現在、先行9件のReview_002は完了し、要修正となった0001・0003・0006・0011・0059もCoder再作業を完了してReview_003待ち。0005・0019・0024・0025はReview Cycle完了。
+2026-09-15現在、先行5件 `0001・0003・0006・0011・0059` のReview_003が完了。`0001・0011・0059` は00/10ともPassとなりReview Cycle完了。`0003・0006` は00 Pass、10要修正のため `要修正` へ戻した。先行9件全体では7件完了、2件要修正である。
 
 ## 5.2. Coder workflow checkpoint
 
@@ -131,7 +131,7 @@
 | R4 Entry QA | 9 | 40 |
 
 - R0: `完了`
-- Review Cycle: `0005/0019/0024/0025 完了 / 0001/0003/0006/0011/0059 再レビュー待 / 40件 未`
+- Review Cycle: `0001/0005/0011/0019/0024/0025/0059 完了 / 0003/0006 要修正 / 40件 未`
 - R5: `未`
 - R6: `未`
 - R7: `未`
@@ -140,15 +140,15 @@
 
 | Entry_ID | 伝承 | R1 | R2 | R3 | R4 | Status | pre-SHA | R3 SHA | R4 SHA | remarks |
 |---|---|---|---|---|---|---|---|---|---|---|
-|0001|口裂け女|完了|完了|完了|完了|再レビュー待|4e18c1a977c8c223a26865fac0feeafef5d54b37|9a565a4879688a9a07e6c60a617813e026d46959|134a9ce8394ed0e2e5a7f491c6a52b19cb236c0c|Review_002再作業済。00 Pass。10 commit `6285afdaaeafac0d79ddbc429bd1fc771a3ad2f5`, blob `29fa0f28bd3f3a6b51680c990d5572f2b7edfd51`; adjudication `98d88f3ca7bf0d99ea0883a031e6268adb082b84`; D10=U、D18 L3=0。Review_003待ち。|
-|0003|赤い紙・青い紙／赤マント系|完了|完了|完了|完了|再レビュー待|5c577eb3d3acfa3f69fd4ca841875888b27305cf|7e08f01ca3119e71268292513504ff79f6987d60|c0d5fac7edad8edd31f4d768277ce4ae6a11bda3|Review_002再作業済。00 Pass。10 commit `1dc5e42a07a987dcf24da952ac3bc77c9f09c41c`, blob `f9f9b95381f6df2c0e8f268e60018028d18556f6`; adjudication `915bfe682b53cc97b93120473dbe7701e13d22d5`; D19 Secondary `REGIONAL`撤回。Review_003待ち。|
+|0001|口裂け女|完了|完了|完了|完了|完了|4e18c1a977c8c223a26865fac0feeafef5d54b37|9a565a4879688a9a07e6c60a617813e026d46959|134a9ce8394ed0e2e5a7f491c6a52b19cb236c0c|Review_003: 00/10ともPass。Review Cycle完了。10 blob `29fa0f28bd3f3a6b51680c990d5572f2b7edfd51`。|
+|0003|赤い紙・青い紙／赤マント系|完了|完了|完了|完了|要修正|5c577eb3d3acfa3f69fd4ca841875888b27305cf|7e08f01ca3119e71268292513504ff79f6987d60|c0d5fac7edad8edd31f4d768277ce4ae6a11bda3|Review_003: 00 Pass / 10 要修正（Moderate）。D01が最古確認年代を生成年代へ変換している点、D04が同時点Variation並存から変容機構を強く推定している点を再裁定する。|
 |0005|紫の鏡|完了|完了|完了|完了|完了|c2a37792f12b6c2aa5b8760536b13764d14c714d|74c8f1367a53020c2ff02b3ae5072202ad74e7e9|658b95e6fe5ea8f8b0a3be83314cc851a788e016|Review_002: 00/10ともPass。D17忘却制御taxonomy gapを保持。|
-|0006|メリーさんの電話|完了|完了|完了|完了|再レビュー待|89b2865013ecd7fca4b39fa914973a0f55eb3b3b|92bbf26600e52525c2c11398c55d32082f0b3d0e|6a36aebbc047908679f4884d4202da5d7a2efc5b|Review_002再作業済。00 Pass。10 commit `a61422dc4cd8a253ad61e458766746335bd0b9b7`, blob `5961b45ebe8eb75add5a28d8d1daf994dae21d22`; adjudication `ae67dbdeef5f2456d6b170a12a710974b010832c`; D03=BOOK維持、D05/D19=U。Review_003待ち。|
-|0011|こっくりさん|完了|完了|完了|完了|再レビュー待|1b24d197f9cb94241e26a368a841bc1071671d23|4254c58c1dc3fab6315f62e2846e31401c89f3fb|0b0f861577ceae5f546d0d3796387e27aa65dfe2|Review_002再作業済。00 Pass。10 commit `558695bff92afc1a25871c032d6db3375f0b94b5`, blob `20642572d572c6dafb0aeca1c9426e50d02bfff9`; adjudication `8c42bb1c66ca3e4e18bb831c75c8bfb10d1ff3f1`; D08=U、D18 L3=0。Review_003待ち。|
+|0006|メリーさんの電話|完了|完了|完了|完了|要修正|89b2865013ecd7fca4b39fa914973a0f55eb3b3b|92bbf26600e52525c2c11398c55d32082f0b3d0e|6a36aebbc047908679f4884d4202da5d7a2efc5b|Review_003: 00 Pass / 10 要修正（Moderate）。D06 `T6` が外部ジャンル判断に依存しており、伝承自身の真実性提示としてゼロベース再判定が必要。|
+|0011|こっくりさん|完了|完了|完了|完了|完了|1b24d197f9cb94241e26a368a841bc1071671d23|4254c58c1dc3fab6315f62e2846e31401c89f3fb|0b0f861577ceae5f546d0d3796387e27aa65dfe2|Review_003: 00/10ともPass。Review Cycle完了。10 blob `20642572d572c6dafb0aeca1c9426e50d02bfff9`。|
 |0019|小さいおじさん|完了|完了|完了|完了|完了|e7ada0703530358d46b387b4feb149fc9e1b8ad9|b3f91feaba652b5b3b8eeca202bf2bddb4449c34|1f180c1d0fde5100b0cf71d6bc184ad29a562f0d|Review_002: 00/10ともPass。|
 |0024|幸福の手紙|完了|完了|完了|完了|完了|fc120f41ab98bc1f150f624dcafaaa016e2c6d39|41e27cc1c43d79fa231f32b9e0ffdf80fb296811|362878efa061cd073f48b2cf09d9e006c2af6ba9|Review_002: 00/10ともPass。|
 |0025|不幸の手紙|完了|完了|完了|完了|完了|aee0942ab1c70a42008c786670c0c0d5b6e04a1e|7ea7647a2b29cf93687c71109adce9e5637f3e7f|443b8f6a87afd69f2a0276b8677b8f093b7266e2|Review_002: 00/10ともPass。D04パラメータ変異taxonomy gapを保持。|
-|0059|深泥池の幽霊タクシー|完了|完了|完了|完了|再レビュー待|4c91bfea47f31b35a5a38799ee145c93f29580f7|67db4d07c94341c71b219b7b6469a4208ea3d39f|60ff1c2a50d75f95f74170a5a9085ee1fb2b5aa3|Review_002再作業済。00 Pass。10 commit `0e66cfe7ffd9730aa75af29ab85a081a1248de1d`, blob `acebf290857c155ab5851922169695dae170426b`; adjudication `820f5cfcad4658a4b94e6771add13497e031e0dd`; D19=U、D21=A1/I、Version Scopeの深泥池結合を保守化。Review_003待ち。|
+|0059|深泥池の幽霊タクシー|完了|完了|完了|完了|完了|4c91bfea47f31b35a5a38799ee145c93f29580f7|67db4d07c94341c71b219b7b6469a4208ea3d39f|60ff1c2a50d75f95f74170a5a9085ee1fb2b5aa3|Review_003: 00/10ともPass。Review Cycle完了。10 blob `acebf290857c155ab5851922169695dae170426b`。|
 |0060|タクシー幽霊|未|未|未|未|未|未|未|未||
 |0081|ピアスの白い糸|未|未|未|未|未|未|未|未||
 |0089|日本だるま／だるま女|未|未|未|未|未|未|未|未||
@@ -194,21 +194,21 @@
 
 | Entry_ID | 00 | 10 | 総合Status | 次Review |
 |---|---|---|---|---|
-|0001|Review_002 Pass|Review_002指摘反映済|再レビュー待|Review_003|
-|0003|Review_002 Pass|Review_002指摘反映済|再レビュー待|Review_003|
+|0001|Review_003 Pass|Review_003 Pass|完了|－|
+|0003|Review_003 Pass|Review_003 要修正（Moderate）|要修正|Coder再作業|
 |0005|Review_002 Pass|Review_002 Pass|完了|－|
-|0006|Review_002 Pass|Review_002指摘反映済|再レビュー待|Review_003|
-|0011|Review_002 Pass|Review_002指摘反映済|再レビュー待|Review_003|
+|0006|Review_003 Pass|Review_003 要修正（Moderate）|要修正|Coder再作業|
+|0011|Review_003 Pass|Review_003 Pass|完了|－|
 |0019|Review_002 Pass|Review_002 Pass|完了|－|
 |0024|Review_002 Pass|Review_002 Pass|完了|－|
 |0025|Review_002 Pass|Review_002 Pass|完了|－|
-|0059|Review_002 Pass|Review_002指摘反映済|再レビュー待|Review_003|
+|0059|Review_003 Pass|Review_003 Pass|完了|－|
 
 # 7. 実行順序
 
 `0001 → 0003 → 0005 → 0006 → 0011 → 0019 → 0024 → 0025 → 0059 → 0060 → 0081 → 0089 → 0091 → 0101 → 0112 → 0113 → 0118 → 0132 → 0133 → 0137 → 0152 → 0157 → 0158 → 0169 → 0178 → 0179 → 0180 → 0181 → 0188 → 0198 → 0225 → 0250 → 0275 → 0309 → 0319 → 0349 → 0356 → 0362 → 0363 → 0365 → 0366 → 0384 → 0385 → 0394 → 0403 → 0410 → 0411 → 0412 → 0413`
 
-Review_002で要修正となった5件 `0001 → 0003 → 0006 → 0011 → 0059` は、すべて1 Entryずつ再作業を完了し `再レビュー待` へ移行した。0005・0019・0024・0025はReview Cycle完了。次の判定はReview_003を受けて行う。
+Review_003の結果、`0001・0011・0059` はReview Cycle完了、`0003・0006` は `要修正` へ戻った。次の再作業は複数Entryを同時処理せず、`0003 → 0006` の順に1 Entryずつ閉じる。
 
 # 8. Entry完了条件
 
@@ -235,6 +235,7 @@ Entry確認、pre-SHA、Evidence正本、Version Scope、独立D01〜D21、R3 fr
 |2026-09-15|0006 Review_002再作業|`要修正 → 再作業中 → 再レビュー待`|
 |2026-09-15|0011 Review_002再作業|`要修正 → 再作業中 → 再レビュー待`|
 |2026-09-15|0059 Review_002再作業|`要修正 → 再作業中 → 再レビュー待`|
+|2026-09-15|先行5件 Review_003|`0001・0011・0059 完了 / 0003・0006 要修正`|
 
 # 10. 最終完了条件
 
