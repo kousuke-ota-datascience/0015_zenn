@@ -113,13 +113,13 @@
 |---|---:|
 | 未 | 40 |
 | レビュー待 | 0 |
-| 要修正 | 0 |
+| 要修正 | 5 |
 | 再作業中 | 0 |
-| 再レビュー待 | 9 |
-| 完了 | 0 |
+| 再レビュー待 | 0 |
+| 完了 | 4 |
 | －（対象外） | 0 |
 
-2026-09-14現在、先行9件のReview_001は00/10とも完了し、9件すべてCoder再作業を完了して `再レビュー待`。Review_002待ちである。
+2026-09-15現在、先行9件のReview_002が00/10とも完了。00は9件すべてPass。10は0005・0019・0024・0025がPass、0001・0003・0006・0011・0059が要修正。
 
 ## 5.2. Coder workflow checkpoint
 
@@ -131,7 +131,7 @@
 | R4 Entry QA | 9 | 40 |
 
 - R0: `完了`
-- Review Cycle: `先行9件すべて 再レビュー待 / 40件 未`
+- Review Cycle: `0005/0019/0024/0025 完了 / 0001/0003/0006/0011/0059 要修正 / 40件 未`
 - R5: `未`
 - R6: `未`
 - R7: `未`
@@ -140,15 +140,15 @@
 
 | Entry_ID | 伝承 | R1 | R2 | R3 | R4 | Status | pre-SHA | R3 SHA | R4 SHA | remarks |
 |---|---|---|---|---|---|---|---|---|---|---|
-|0001|口裂け女|完了|完了|完了|完了|再レビュー待|4e18c1a977c8c223a26865fac0feeafef5d54b37|9a565a4879688a9a07e6c60a617813e026d46959|134a9ce8394ed0e2e5a7f491c6a52b19cb236c0c|Review_001反映済。00 blob `b6a3c80f69e6c4b5b2d09a59615f477984ab3e00`; 10 blob `d183407a90cdfd88d6b58b17963bb55ca4f908d3`; Review_002待ち。|
-|0003|赤い紙・青い紙／赤マント系|完了|完了|完了|完了|再レビュー待|5c577eb3d3acfa3f69fd4ca841875888b27305cf|7e08f01ca3119e71268292513504ff79f6987d60|c0d5fac7edad8edd31f4d768277ce4ae6a11bda3|Review_001反映済。00 commit `e2137a19ba505549d8a664b4b0e285343201d583`, blob `6a6ff6362a3db18fcd100dabc9c10de450d27675`; 10 commit `53952077a5e035ceafe3f26a160e61b8920ae838`, blob `3c52a7b191eade2b5831572f7e53492f56def142`; Review_002待ち。|
-|0005|紫の鏡|完了|完了|完了|完了|再レビュー待|c2a37792f12b6c2aa5b8760536b13764d14c714d|74c8f1367a53020c2ff02b3ae5072202ad74e7e9|658b95e6fe5ea8f8b0a3be83314cc851a788e016|Review_001反映済。00 commit `b14177b1aa8179fc58bdc990d154bc86fd66ce5a`, blob `8d2c360343d74a5fbb77fbc806ed406ba0942199`; 10 commit `7d5f1633b9d287d8cdd034e06411ec262184d254`, blob `2e061436bb859e0db426ef950299325ab5defaff`; adjudication commit `81c09e0b133bba65d41871699c5f7e0536d4f47f`。D17は忘却制御taxonomy gapとして近似Childを撤回。Review_002待ち。|
-|0006|メリーさんの電話|完了|完了|完了|完了|再レビュー待|89b2865013ecd7fca4b39fa914973a0f55eb3b3b|92bbf26600e52525c2c11398c55d32082f0b3d0e|6a36aebbc047908679f4884d4202da5d7a2efc5b|Review_001反映済。00 commit `6b5803970d77a2710355a9bbe8f0ac95c43ea068`, blob `069a34063c3ff822aff09a505ac85ea451e92cc9`; 10 commit `5b7daade198ede1b256009da479355cc0fcc89c4`, blob `e8c57c3cb6c65b93e36f70847a20696b44d430d9`; adjudication commit `4a5bb9e1315344c4bea5c3c580472fb49e24c742`。D11廃棄・放棄発動はtaxonomy gap。Review_002待ち。|
-|0011|こっくりさん|完了|完了|完了|完了|再レビュー待|1b24d197f9cb94241e26a368a841bc1071671d23|4254c58c1dc3fab6315f62e2846e31401c89f3fb|0b0f861577ceae5f546d0d3796387e27aa65dfe2|Review_001反映済。00 commit `f97ff40668b8b77b2b4918d0e2ae81d8f08d0276`, blob `f0ac57c2be12f4e2ab0cb5f638f033dc0b841b3b`; 10 commit `c91ec95b54295367f999af97447e4a064a5134f7`, blob `e826774e81dc51230340c542653e48e649b7401f`; adjudication commit `2dc1784fb5da3a3775c24344484cc1606bf6ef15`。D07/D08再構成、D04/D20 taxonomy gap。Review_002待ち。|
-|0019|小さいおじさん|完了|完了|完了|完了|再レビュー待|e7ada0703530358d46b387b4feb149fc9e1b8ad9|b3f91feaba652b5b3b8eeca202bf2bddb4449c34|1f180c1d0fde5100b0cf71d6bc184ad29a562f0d|Review_001反映済。00 commit `65b92aab5294412a02d9738d70d38707f5444fea`, blob `245cb2be23e4b90c4818c7325040da2732bb0ceb`; 10 commit `2c6c43a1e8e0e747d1375c82880ff7909a80b405`, blob `13af911c74485b83f8ee39c15fb7b08f10bcf72e`; adjudication commit `dc68b12f950aa573e5f87cb8dc5f3b58d281c00f`。D06をT1へ再判定、D20体験詳細限定。Review_002待ち。|
-|0024|幸福の手紙|完了|完了|完了|完了|再レビュー待|fc120f41ab98bc1f150f624dcafaaa016e2c6d39|41e27cc1c43d79fa231f32b9e0ffdf80fb296811|362878efa061cd073f48b2cf09d9e006c2af6ba9|Review_001反映済。00 commit `23bb5be4fabe4b76bababc28c4c5b3d4b4f168d4`, blob `5872238b190f553b8652f31f3615c1e1133ef0b7`; 10 commit `8b2a33d20e279fd49d2c052a59957e341babee30`, blob `b1763483afa095452b491e56bf711c457d298b5a`; adjudication commit `969e979ccdaf13520580bd5a2573f16c5ca151d4`。D12受信者化、D18 L3=0、D19=U。Review_002待ち。|
-|0025|不幸の手紙|完了|完了|完了|完了|再レビュー待|aee0942ab1c70a42008c786670c0c0d5b6e04a1e|7ea7647a2b29cf93687c71109adce9e5637f3e7f|443b8f6a87afd69f2a0276b8677b8f093b7266e2|Review_001反映済。00 commit `2ffb49cfa53ec12c2699edd65f6eaa08ff40eff8`, blob `c6f9cae7ea5b462faa2ad015bf9d83414c26eca2`; 10 commit `3c38c7611873f6179239855f478feac86e7a51ef`, blob `3ff11cb289f8f441a8e80c2dc1e62e6da83682c9`; adjudication commit `b0e3d66c5a13f24ff6aa32ae0cf99025feb87077`。D04パラメータ変異taxonomy gap、0024境界明文化。Review_002待ち。|
-|0059|深泥池の幽霊タクシー|完了|完了|完了|完了|再レビュー待|4c91bfea47f31b35a5a38799ee145c93f29580f7|67db4d07c94341c71b219b7b6469a4208ea3d39f|60ff1c2a50d75f95f74170a5a9085ee1fb2b5aa3|Review_001反映済。00 commit `f88b0f81b8fc737640841640dd4830bd25144757`, blob `383cce593f6afd4af92286d548d06c30d6804b94`; 10 commit `2b08c72dd5222970b080e21096882ad8f3a7060b`, blob `03ff047a67d1cf6947baf1edec71a442d75bfdbc`; adjudication commit `f9bf0b2e736ddbd49d6beda8b720a7cfdfc7b82c`。D12/D13/D15を乗客消失へ再構成、D17=U、D21=A2/I。Review_002待ち。|
+|0001|口裂け女|完了|完了|完了|完了|要修正|4e18c1a977c8c223a26865fac0feeafef5d54b37|9a565a4879688a9a07e6c60a617813e026d46959|134a9ce8394ed0e2e5a7f491c6a52b19cb236c0c|Review_002: 00 Pass / 10 Major。D10存在論、D18 L3 Scope mismatchを再修正。|
+|0003|赤い紙・青い紙／赤マント系|完了|完了|完了|完了|要修正|5c577eb3d3acfa3f69fd4ca841875888b27305cf|7e08f01ca3119e71268292513504ff79f6987d60|c0d5fac7edad8edd31f4d768277ce4ae6a11bda3|Review_002: 00 Pass / 10 Moderate。D19 SecondaryのScope mismatchを再修正。|
+|0005|紫の鏡|完了|完了|完了|完了|完了|c2a37792f12b6c2aa5b8760536b13764d14c714d|74c8f1367a53020c2ff02b3ae5072202ad74e7e9|658b95e6fe5ea8f8b0a3be83314cc851a788e016|Review_002: 00/10ともPass。D17忘却制御taxonomy gapを保持。|
+|0006|メリーさんの電話|完了|完了|完了|完了|要修正|89b2865013ecd7fca4b39fa914973a0f55eb3b3b|92bbf26600e52525c2c11398c55d32082f0b3d0e|6a36aebbc047908679f4884d4202da5d7a2efc5b|Review_002: 00 Pass / 10 Moderate。D03/D05/D19の学校口承Evidence基準を統一する。|
+|0011|こっくりさん|完了|完了|完了|完了|要修正|1b24d197f9cb94241e26a368a841bc1071671d23|4254c58c1dc3fab6315f62e2846e31401c89f3fb|0b0f861577ceae5f546d0d3796387e27aa65dfe2|Review_002: 00 Pass / 10 Major。D08をEvidenceから再判定、D18 L3を再確認。|
+|0019|小さいおじさん|完了|完了|完了|完了|完了|e7ada0703530358d46b387b4feb149fc9e1b8ad9|b3f91feaba652b5b3b8eeca202bf2bddb4449c34|1f180c1d0fde5100b0cf71d6bc184ad29a562f0d|Review_002: 00/10ともPass。|
+|0024|幸福の手紙|完了|完了|完了|完了|完了|fc120f41ab98bc1f150f624dcafaaa016e2c6d39|41e27cc1c43d79fa231f32b9e0ffdf80fb296811|362878efa061cd073f48b2cf09d9e006c2af6ba9|Review_002: 00/10ともPass。|
+|0025|不幸の手紙|完了|完了|完了|完了|完了|aee0942ab1c70a42008c786670c0c0d5b6e04a1e|7ea7647a2b29cf93687c71109adce9e5637f3e7f|443b8f6a87afd69f2a0276b8677b8f093b7266e2|Review_002: 00/10ともPass。D04パラメータ変異taxonomy gapを保持。|
+|0059|深泥池の幽霊タクシー|完了|完了|完了|完了|要修正|4c91bfea47f31b35a5a38799ee145c93f29580f7|67db4d07c94341c71b219b7b6469a4208ea3d39f|60ff1c2a50d75f95f74170a5a9085ee1fb2b5aa3|Review_002: 00 Pass / 10 Moderate。D19/D21を1969年Scope内Evidenceだけで再判定。|
 |0060|タクシー幽霊|未|未|未|未|未|未|未|未||
 |0081|ピアスの白い糸|未|未|未|未|未|未|未|未||
 |0089|日本だるま／だるま女|未|未|未|未|未|未|未|未||
@@ -194,21 +194,21 @@
 
 | Entry_ID | 00 | 10 | 総合Status | 次Review |
 |---|---|---|---|---|
-|0001|Review_001指摘反映済|Review_001指摘反映済|再レビュー待|Review_002|
-|0003|Review_001指摘反映済|Review_001指摘反映済|再レビュー待|Review_002|
-|0005|Review_001指摘反映済|Review_001指摘反映済|再レビュー待|Review_002|
-|0006|Review_001指摘反映済|Review_001指摘反映済|再レビュー待|Review_002|
-|0011|Review_001指摘反映済|Review_001指摘反映済|再レビュー待|Review_002|
-|0019|Review_001指摘反映済|Review_001指摘反映済|再レビュー待|Review_002|
-|0024|Review_001指摘反映済|Review_001指摘反映済|再レビュー待|Review_002|
-|0025|Review_001指摘反映済|Review_001指摘反映済|再レビュー待|Review_002|
-|0059|Review_001指摘反映済|Review_001指摘反映済|再レビュー待|Review_002|
+|0001|Review_002 Pass|Review_002 要修正（Major）|要修正|Review_003（修正後）|
+|0003|Review_002 Pass|Review_002 要修正（Moderate）|要修正|Review_003（修正後）|
+|0005|Review_002 Pass|Review_002 Pass|完了|－|
+|0006|Review_002 Pass|Review_002 要修正（Moderate）|要修正|Review_003（修正後）|
+|0011|Review_002 Pass|Review_002 要修正（Major）|要修正|Review_003（修正後）|
+|0019|Review_002 Pass|Review_002 Pass|完了|－|
+|0024|Review_002 Pass|Review_002 Pass|完了|－|
+|0025|Review_002 Pass|Review_002 Pass|完了|－|
+|0059|Review_002 Pass|Review_002 要修正（Moderate）|要修正|Review_003（修正後）|
 
 # 7. 実行順序
 
 `0001 → 0003 → 0005 → 0006 → 0011 → 0019 → 0024 → 0025 → 0059 → 0060 → 0081 → 0089 → 0091 → 0101 → 0112 → 0113 → 0118 → 0132 → 0133 → 0137 → 0152 → 0157 → 0158 → 0169 → 0178 → 0179 → 0180 → 0181 → 0188 → 0198 → 0225 → 0250 → 0275 → 0309 → 0319 → 0349 → 0356 → 0362 → 0363 → 0365 → 0366 → 0384 → 0385 → 0394 → 0403 → 0410 → 0411 → 0412 → 0413`
 
-先行9件のReview_001指摘は `00 → 10` の順で1 Entryずつ再作業を完了し、9件すべて `再レビュー待` へ移行済み。以後、Review_002の結果を受けて必要なら再作業サイクルへ戻す。0060以降は別途実行する。
+Review_002で要修正となった5件は `0001 → 0003 → 0006 → 0011 → 0059` の順で、**1 Entryずつ**再作業し、各Entryを `再レビュー待` まで進めてから次へ着手する。0005・0019・0024・0025はReview Cycle完了。0060以降はこの5件の再作業完了後に着手する。
 
 # 8. Entry完了条件
 
@@ -229,6 +229,7 @@ Entry確認、pre-SHA、Evidence正本、Version Scope、独立D01〜D21、R3 fr
 |2026-09-14|0024 Review_001再作業|`要修正 → 再作業中 → 再レビュー待`|
 |2026-09-14|0025 Review_001再作業|`要修正 → 再作業中 → 再レビュー待`|
 |2026-09-14|0059 Review_001再作業|`要修正 → 再作業中 → 再レビュー待`|
+|2026-09-15|先行9件 Review_002|`4件 完了 / 5件 要修正`|
 
 # 10. 最終完了条件
 
