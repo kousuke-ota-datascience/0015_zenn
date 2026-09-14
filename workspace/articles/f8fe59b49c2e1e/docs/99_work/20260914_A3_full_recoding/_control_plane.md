@@ -163,7 +163,7 @@ R5でCoding正本側の修正が必要と判明した場合は、Excelへ直接�
 | R1 Evidence / 00監査 | 6 | 0 | 43 | 0 | 0 |
 | R2 Version Scope再固定 | 6 | 0 | 43 | 0 | 0 |
 | R3 Independent Recode | 6 | 0 | 43 | 0 | 0 |
-| R4 Entry QA | 5 | 0 | 44 | 0 | 0 |
+| R4 Entry QA | 6 | 0 | 43 | 0 | 0 |
 
 ## 5.2. A3パイロット49件完了後
 
@@ -192,7 +192,7 @@ R5〜R7は49件横断taskであるため、Entry別進捗表には列を設け�
 |0005|紫の鏡|完了|完了|完了|完了|c2a37792f12b6c2aa5b8760536b13764d14c714d|74c8f1367a53020c2ff02b3ae5072202ad74e7e9|658b95e6fe5ea8f8b0a3be83314cc851a788e016|R1 commit=`0aa8dd98262143462f0d3d3910ad4ed544146e67`。R2 commit=`cd94b96a5841e9d23d3824638f3ff08855e2c613`。R3 commit=`74c8f1367a53020c2ff02b3ae5072202ad74e7e9`。R4 commit=`658b95e6fe5ea8f8b0a3be83314cc851a788e016`。R2 Scope=1998–1999年採録群の「危険語を一定年齢まで記憶していると死亡する」記憶期限型共通核。R3→R4のcode/status変更なし。D17「忘却による制御」をtaxonomy gap候補としてR5横断確認へ送る。旧Excel比較はR5へ移管。|
 |0006|メリーさんの電話|完了|完了|完了|完了|89b2865013ecd7fca4b39fa914973a0f55eb3b3b|92bbf26600e52525c2c11398c55d32082f0b3d0e|6a36aebbc047908679f4884d4202da5d7a2efc5b|R1 commit=`2ec6a0be3c76377206fe4610f3136fc0326f7164`。R2 commit=`e1a4e621185add70510e9d4c791692cf9f59a3b4`。R3 commit=`92bbf26600e52525c2c11398c55d32082f0b3d0e`。R4 commit=`6a36aebbc047908679f4884d4202da5d7a2efc5b`。R2 Scope=1999年までに公刊確認できる「人形メリー＋反復電話」を基礎とし、同一核の後代安定形から現在地通知による段階接近まで含む。襲撃・死亡、リカちゃん直接起源説、媒体更新はScope外。R4ではD04を `ACCRETION / I` から `U` へQA修正。D11「捨てる・放棄する」Child不足は将来Evidenceが得られた場合の監視項目とし、現時点ではtaxonomy gap確定せず。旧Excel比較はR5へ移管。|
 |0011|こっくりさん|完了|完了|完了|完了|1b24d197f9cb94241e26a368a841bc1071671d23|4254c58c1dc3fab6315f62e2846e31401c89f3fb|0b0f861577ceae5f546d0d3796387e27aa65dfe2|過去reproducibility testで差分検出済み。R1 commit=`91b998463051104eac3aac44dfdba95448af6904`。R2 commit=`45a4595e268914971b1b162d387bdfbd6860ee42`。R3 commit=`4254c58c1dc3fab6315f62e2846e31401c89f3fb`。R4 commit=`0b0f861577ceae5f546d0d3796387e27aa65dfe2`。R2 Scope=1886–1887年明治器具型の最小安定核。R4でD04をLOCALIZATION→U、D08をPERCEPTUAL_ANOMALY→DIRECT_EVENTへQA修正。D04「文化的／物質的適応」とD20「超自然的情報保持者」をtaxonomy gap候補としてR5へ送る。R2後control-plane更新がR3内容commit後になった手順偏差は監査注記済み。旧Excel比較はR5へ移管。|
-|0019|小さいおじさん|完了|完了|完了|未|e7ada0703530358d46b387b4feb149fc9e1b8ad9|b3f91feaba652b5b3b8eeca202bf2bddb4449c34|未|R1 commit=`a2386c128ded53fbe88c6af549b00d5a9766c60d`。R2 commit=`a2361fcee3520658f9e45b22540612539fa389ca`。R3 commit=`b3f91feaba652b5b3b8eeca202bf2bddb4449c34`。R2 Scope=2007–2009年の「極小成人男性様存在＋複数目撃報告＋共通名称」の初期共有核。妖精・妖怪・幸運・神社・会話等はScope外。|
+|0019|小さいおじさん|完了|完了|完了|完了|e7ada0703530358d46b387b4feb149fc9e1b8ad9|b3f91feaba652b5b3b8eeca202bf2bddb4449c34|1f180c1d0fde5100b0cf71d6bc184ad29a562f0d|R1 commit=`a2386c128ded53fbe88c6af549b00d5a9766c60d`。R2 commit=`a2361fcee3520658f9e45b22540612539fa389ca`。R3 commit=`b3f91feaba652b5b3b8eeca202bf2bddb4449c34`。R4 commit=`1f180c1d0fde5100b0cf71d6bc184ad29a562f0d`。R2 Scope=2007–2009年の「極小成人男性様存在＋複数目撃報告＋共通名称」の初期共有核。R4ではD06 StatusのみD→IへQA修正。taxonomy gapなし。旧Excel比較はR5へ移管。|
 |0024|幸福の手紙|未|未|未|未|未|未|未||
 |0025|不幸の手紙|未|未|未|未|未|未|未||
 |0059|深泥池の幽霊タクシー|未|未|未|未|未|未|未||
