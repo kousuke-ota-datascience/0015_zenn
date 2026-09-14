@@ -3,7 +3,7 @@
 - 実施日: 2026-09-14
 - 対象Entry: `0001`
 - Evidence正本: `docs/10_each_lore/0001_kuchisake_onna/0001_00_contents.md`（R1確定版）
-- Version Scope正本: `docs/99_work/20260914_0001_R2_version_scope.md`
+- Version Scope正本: `docs/99_work/20260914_A3_full_recoding/0001_R2_version_scope.md`
 - baseline taxonomy: `20_urban_legend_parent_child_code_system.md` blob `192c2f1593e29eb32292a31d564d21ad4aec2427`
 - baseline rules: `30_urban_legend_analysis_coding_rules.md` blob `4fe19cc922840a46367bc6d0162271d2422996a9`
 - 独立性: この判定時点で既存 `0001_10_analysis.md` のD01〜D21および全件正本Excel既存コードは参照していない。
@@ -61,4 +61,6 @@ R3単独では、既存Childへ収まらない安定構造は確認しない。
 
 # 5. R4への引継ぎ
 
-R4で初めて既存 `0001_10_analysis.md` と全件正本Excel既存値を参照し、差分を `Scope mismatch / Evidence mismatch / Code-selection mismatch / Status mismatch / Taxonomy gap / Prior coding error` に分類する。R3値は旧値へ合わせて変更しない。
+R4では、ここまでの独立判定を固定した後にのみ、`再コーディング前 commit SHA` の旧 `0001_10_analysis.md` と比較する。差分は `Scope mismatch / Evidence mismatch / Code-selection mismatch / Status mismatch / Taxonomy gap / Prior coding error` に分類する。R3値は旧値へ合わせて変更しない。
+
+旧Excel既存値との比較はR5 Global Reconciliationへ移管し、R4では参照しない。
