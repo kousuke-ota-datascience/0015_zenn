@@ -85,7 +85,7 @@ R4はR3 freeze後に旧10を比較、R5で旧Excelを比較する。不一致は
 | R0 baseline固定 | 1 | 0 | 0 | 0 | 0 |
 | R1 Evidence / 00監査 | 8 | 0 | 41 | 0 | 0 |
 | R2 Version Scope再固定 | 8 | 0 | 41 | 0 | 0 |
-| R3 Independent Recode | 7 | 0 | 42 | 0 | 0 |
+| R3 Independent Recode | 8 | 0 | 41 | 0 | 0 |
 | R4 Entry QA | 7 | 0 | 42 | 0 | 0 |
 
 - R5 Global Reconciliation: `未`
@@ -103,7 +103,7 @@ R4はR3 freeze後に旧10を比較、R5で旧Excelを比較する。不一致は
 |0011|こっくりさん|完了|完了|完了|完了|1b24d197f9cb94241e26a368a841bc1071671d23|4254c58c1dc3fab6315f62e2846e31401c89f3fb|0b0f861577ceae5f546d0d3796387e27aa65dfe2|D04/D20 gap候補をR5へ|
 |0019|小さいおじさん|完了|完了|完了|完了|e7ada0703530358d46b387b4feb149fc9e1b8ad9|b3f91feaba652b5b3b8eeca202bf2bddb4449c34|1f180c1d0fde5100b0cf71d6bc184ad29a562f0d|taxonomy gapなし|
 |0024|幸福の手紙|完了|完了|完了|完了|fc120f41ab98bc1f150f624dcafaaa016e2c6d39|41e27cc1c43d79fa231f32b9e0ffdf80fb296811|362878efa061cd073f48b2cf09d9e006c2af6ba9|R4でD01→U、D08→UNSUPPORTED_ASSERTION、D17→LUCK_EXPLOITATION。taxonomy gapなし。|
-|0025|不幸の手紙|完了|完了|未|未|aee0942ab1c70a42008c786670c0c0d5b6e04a1e|未|未|R1=`c6f78ace8fcd1dd8255b09137330fdca5d2a0c16`。R2=`aa7bde9fad4d2271a3cb4f745e2feec7bef57ba3`。Scope=1970年前後の制裁前景型郵便チェーン。|
+|0025|不幸の手紙|完了|完了|完了|未|aee0942ab1c70a42008c786670c0c0d5b6e04a1e|7ea7647a2b29cf93687c71109adce9e5637f3e7f|未|R1=`c6f78ace8fcd1dd8255b09137330fdca5d2a0c16`。R2=`aa7bde9fad4d2271a3cb4f745e2feec7bef57ba3`。R3=`7ea7647a2b29cf93687c71109adce9e5637f3e7f`。Scope=1970年前後の制裁前景型郵便チェーン。|
 |0059|深泥池の幽霊タクシー|未|未|未|未|未|未|未||
 |0060|タクシー幽霊|未|未|未|未|未|未|未||
 |0081|ピアスの白い糸|未|未|未|未|未|未|未||
