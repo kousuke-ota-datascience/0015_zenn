@@ -653,20 +653,26 @@ Evidence
 
 を再構成できることを重視する。
 
-# 15. Workflow変更時の回帰試験 — 0180 きさらぎ駅
+# 15. Workflow変更時のGolden Regression — 0180 きさらぎ駅
 
-`0180 きさらぎ駅` を、本workflowおよびコーディング規則の**regression test benchmark**とする。
+`0180 きさらぎ駅` を、本workflowおよびコーディング規則の**golden regression reference**とする。
+
+この試験の目的は、workflow / coding rulesの変更によって、**既知の期待結果から意図しない逸脱が生じていないことを確認すること**である。
+
+ただし、workflowおよびcoding rulesには0180固有の判定例が含まれているため、0180一致を**blind reproducibilityまたはinter-coder reproducibilityの証明として扱ってはならない**。
 
 `0000_workflow.md` または `30_urban_legend_analysis_coding_rules.md` の変更が、Entry作成・Version Scope・コード判定へ影響し得る場合は、変更完了条件として次を確認する。
 
-## 15.1. 試験方法
+## 15.1. Golden Regressionの試験方法
 
 1. 全件正本Excelでは、0180の `Entry_ID`・対象Entry同定に必要な情報だけを確認し、既存D01〜D21・Secondary・Statusは参照しない。
-2. 既存の `0180_00_contents.md` と `0180_10_analysis.md` を参照せず、0180の原資料・外部典拠から本workflowに従って `00_contents` 相当を再構築する。
-3. その再構築結果と現行の `10 / 20 / 30` のみを使い、Version ScopeとD01〜D21を再判定する。
+2. 既存の `0180_00_contents.md` と `0180_10_analysis.md` を先に参照せず、0180の原資料・外部典拠から本workflowに従って `00_contents` 相当を再構築する。
+3. その再構築結果と現行の `10 / 20 / 30` を使い、Version ScopeとD01〜D21を再判定する。
 4. 判定完了後に初めて、正本 `0180_10_analysis.md` および必要に応じて全件正本Excelの0180行と比較する。
 
-## 15.2. 合格基準
+この手順は既存0180文書やExcel既存値への直接的な答え合わせを避けるためのものである。ただし、workflow / coding rules自体に0180の例示があるため、試験全体はblindではない。
+
+## 15.2. Golden Regressionの合格基準
 
 文章表現の一字一句の一致は要求しない。以下を要求する。
 
@@ -677,15 +683,51 @@ Evidence
 - ParentはChildから導出した結果として一致する
 - 主要な判定根拠が同じEvidenceと同じ論理関係に基づく
 
-**21次元のいずれか1つでもコードまたはStatusが異なる場合、回帰試験は未合格とする。**
+**21次元のいずれか1つでもコードまたはStatusが異なる場合、golden regressionは未合格とする。**
 
-## 15.3. 不一致時の扱い
+## 15.3. Golden Regression不一致時の扱い
 
 不一致を「コーダーの好み」で処理しない。次のどちらかを特定する。
 
-- benchmarkである0180側の既存判定が現行Evidence・規則に照らして誤っている
-- workflow / coding rulesに、複数の合理的判定を許す不足・曖昧さが残っている
+- golden referenceである0180側の既存判定が現行Evidence・規則に照らして誤っている
+- workflow / coding rulesに、既知の期待結果から逸脱する変更または複数の合理的判定を許す不足・曖昧さが残っている
 
-後者の場合は、**その不一致を生んだ最小の規則だけを補強する**。別の伝承を追加benchmark化したり、全次元の規則を再設計したりして作業を膨張させない。
+後者の場合は、**その不一致を生んだ最小の規則だけを補強する**。別の伝承を追加golden reference化したり、全次元の規則を再設計したりして作業を膨張させない。
 
-本回帰試験の目的は、0180やExcel既存値を暗記して同じ回答を出すことではなく、**同じEvidenceから独立に同じVersion Scope・21次元へ到達できるworkflowであることを保証すること**である。
+## 15.4. Blind Reproducibility Validation
+
+workflow自体の独立再現性を検証する場合は、0180とは別に**blind validation**を行う。
+
+対象Entryは、tutorial、workflow、codebook、coding rules内で、当該Entryの固有名や正解コード値が判定例として提示されていないものを使用する。
+
+試験時は、独立判定が完了するまで以下を参照しない。
+
+- 対象Entryの既存 `*_00_contents.md`
+- 対象Entryの既存 `*_10_analysis.md`
+- 全件正本Excelの当該Entryに対する既存D01〜D21・Secondary・Status
+
+原資料・外部典拠と現行workflow / `10 / 20 / 30` のみから、`00_contents` 相当、Version Scope、D01〜D21を再構築し、その後に既存正本と比較する。
+
+### 15.4.1. Blind Validationの合格基準
+
+文章表現の一致は要求しない。以下が一致することを合格基準とする。
+
+- Version Scopeが意味的に同一
+- D01〜D21の `Primary Child / Value`
+- Secondary
+- Status
+- Parentの導出結果
+- 主要な判定根拠が同じEvidenceと同じ論理関係に基づく
+
+不一致がある場合は、少なくとも次のいずれかへ分類する。
+
+- `Scope mismatch`
+- `Evidence mismatch`
+- `Code-selection mismatch`
+- `Status mismatch`
+
+この分類によって、Evidence収集差と規則上の曖昧性を分離して確認する。
+
+現段階ではblind validationの件数や類型数を固定しない。まずこの基準で検証し、必要性が確認される前に複数Entry・複数類型へ拡張しない。
+
+**0180のgolden regression合格を、blind / inter-coder reproducibilityの合格として読み替えてはならない。**
