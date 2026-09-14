@@ -162,7 +162,7 @@ R5でCoding正本側の修正が必要と判明した場合は、Excelへ直接�
 | R0 baseline固定 | 1 | 0 | 0 | 0 | 0 |
 | R1 Evidence / 00監査 | 3 | 0 | 46 | 0 | 0 |
 | R2 Version Scope再固定 | 3 | 0 | 46 | 0 | 0 |
-| R3 Independent Recode | 2 | 0 | 47 | 0 | 0 |
+| R3 Independent Recode | 3 | 0 | 46 | 0 | 0 |
 | R4 Entry QA | 2 | 0 | 47 | 0 | 0 |
 
 ## 5.2. A3パイロット49件完了後
@@ -189,7 +189,7 @@ R5〜R7は49件横断taskであるため、Entry別進捗表には列を設け�
 |---|---|---|---|---|---|---|---|---|---|
 |0001|口裂け女|完了|完了|完了|完了|4e18c1a977c8c223a26865fac0feeafef5d54b37|9a565a4879688a9a07e6c60a617813e026d46959|134a9ce8394ed0e2e5a7f491c6a52b19cb236c0c|過去regressionで差分検出済み。R1 commit=`c15b7103aeb0ce5d9fd25a7e2f95c54e86032091`。R2 commit=`e376a94f2240461be938583471ee4259b4bcff90`。R2 Scope=1979年初頭〜春の最小安定共有核。旧Excel比較はR5へ移管。|
 |0003|赤い紙・青い紙／赤マント系|完了|完了|完了|完了|5c577eb3d3acfa3f69fd4ca841875888b27305cf|7e08f01ca3119e71268292513504ff79f6987d60|c0d5fac7edad8edd31f4d768277ce4ae6a11bda3|R1 commit=`2683cbd293fcd1a86b7fc1b0ef5d833a88ec05eb`。R2 commit=`f21827735d4e3073c01e347a3c9b502588f0236d`。R3 commit=`7e08f01ca3119e71268292513504ff79f6987d60`。R4 commit=`c0d5fac7edad8edd31f4d768277ce4ae6a11bda3`。R2 Scope=1986年東京都の色選択型共通核。赤いちゃんちゃんこ／赤マントは近接派生としてScope外。R3 taxonomy検索時に旧D01/D02値のみ偶発表示されたため、R3 work fileにブラインド監査注記を記録。R4ではD04 StatusをD→I、D14をMIX→NEGへQA修正。旧Excel比較はR5へ移管。|
-|0005|紫の鏡|完了|完了|未|未|c2a37792f12b6c2aa5b8760536b13764d14c714d|未|未|R1 commit=`0aa8dd98262143462f0d3d3910ad4ed544146e67`。R2 commit=`cd94b96a5841e9d23d3824638f3ff08855e2c613`。R2 Scope=1998–1999年採録群の「危険語を一定年齢まで記憶していると死亡する」記憶期限型共通核。1995年資料は来歴Evidenceとして保持。|
+|0005|紫の鏡|完了|完了|完了|未|c2a37792f12b6c2aa5b8760536b13764d14c714d|74c8f1367a53020c2ff02b3ae5072202ad74e7e9|未|R1 commit=`0aa8dd98262143462f0d3d3910ad4ed544146e67`。R2 commit=`cd94b96a5841e9d23d3824638f3ff08855e2c613`。R3 commit=`74c8f1367a53020c2ff02b3ae5072202ad74e7e9`。R2 Scope=1998–1999年採録群の「危険語を一定年齢まで記憶していると死亡する」記憶期限型共通核。D17「忘却による制御」をtaxonomy gap候補として記録。|
 |0006|メリーさんの電話|未|未|未|未|未|未|未||
 |0011|こっくりさん|未|未|未|未|未|未|未|過去reproducibility testで差分検出済み。独立再判定後に比較|
 |0019|小さいおじさん|未|未|未|未|未|未|未||
