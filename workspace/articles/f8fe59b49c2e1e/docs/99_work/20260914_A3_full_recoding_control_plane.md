@@ -62,20 +62,31 @@
 最新main確認
 → baseline文書のblobが固定値と一致することを確認
 → Entry_ID・対象Entryを確認
+→ 再コーディング前 commit SHA を確定
 → R1 Evidence / 00_contents監査・必要補強
+→ R1内容commit / push
+→ control plane更新commit / push
 → R2 Version Scope再固定
-→ R3 D01〜D21を独立再コーディング
+→ R2内容commit / push
+→ control plane更新commit / push
+→ R3 Independent Recode
+→ R3内容commit / push
+→ R3 後 commit SHA を記録
+→ control plane更新commit / push
 → R4 Entry QA
    - D12 → D13 → D15 causal QA
    - D18 L3 evidence QA
    - U / NA / C QA
    - taxonomy gap確認
    - *_10_analysis.md 更新
-   - 独立判定後に旧 *_10_analysis.md と差分比較・分類
-→ Entry単位commit・push後検証
-→ 本control plane更新
+   - 再コーディング前snapshotの旧 *_10_analysis.md との差分比較・分類
+→ R4内容commit / push
+→ R4 後 commit SHA を記録
+→ control plane更新commit / push
 → 次Entry
 ```
+
+R1〜R4は**各task完了ごとに内容commit / push、その後control plane更新commit / push**を行う。R3とR4については、独立判定のfreeze点とCoding正本確定点を監査可能にするため専用のSHA列を保持する。
 
 **旧Excelとの比較およびExcelへの同期はEntry完了条件に含めない。** これらはA3パイロット49件のR4完了後、R5以降で一括実施する。
 
@@ -88,9 +99,19 @@
 - **Evidence正本:** 各Entryの `*_00_contents.md`。典拠、Evidence role、traceability、調査終了根拠を保持する。
 - **Coding正本:** 各Entryの `*_10_analysis.md`。Version Scope、D01〜D21、Primary / Secondary / Status、Entry QA結果を保持する。
 - **集約Excel:** `urban_legend_parent_child_full_application_v1.xlsx` はCoding正本から同期される**集約・派生成果物**であり、coding judgmentの正本ではない。
-- **本control plane:** 作業順序、task status、commit snapshot、baseline変更履歴の管理正本とする。
+- **本control plane:** 作業順序、task status、commit checkpoint、baseline変更履歴の管理正本とする。
 
-MarkdownとExcelが不一致の場合、R6 Excel Sync完了前は不一致それ自体を異常とみなさない。R5で原因を監査し、必要なcoding修正がある場合は先に該当 `*_10_analysis.md` を修正して正本を確定し、その後R6でExcelを同期する。
+MarkdownとExcelが不一致の場合、R6 Excel Sync完了前は不一致それ自体を異常とみなさない。R5で原因を監査し、必要なcoding修正がある場合は先に該当 `*_10_analysis.md` を修正してCoding正本を確定し、その後R6でExcelを同期する。
+
+## 2.4. commit SHA checkpointの定義
+
+Entry別に次の3つのfull commit SHAを保持する。
+
+- **再コーディング前 commit SHA:** R1着手以前に、当該Entryの `*_00_contents.md` または `*_10_analysis.md` のいずれかを最後に変更したcommit。2ファイルの最終変更commitが異なる場合は、main履歴上で後のcommitを採用する。このcommitはrepository全体のsnapshotであるため、その時点の両ファイルの旧状態を再現できる。未文書化Entryで両ファイルが存在しない場合は `−` とし、remarksへ新規作成であることを記録する。
+- **R3 後 commit SHA:** R3 Independent Recodeの結果を旧 `*_10_analysis.md` 参照前にfreezeした内容commit。独立判定の監査点とする。R3結果は専用work file等、旧10を参照せず保存可能な成果物へ固定する。
+- **R4 後 commit SHA:** R4 Entry QA、Coding正本 `*_10_analysis.md` 更新、旧 `*_10_analysis.md` との差分比較・分類まで完了した内容commit。Entry単位の最終成果物の監査点とする。
+
+control plane更新commitはこれらのcheckpoint SHAには使用しない。
 
 # 3. タスク定義
 
@@ -99,14 +120,14 @@ MarkdownとExcelが不一致の場合、R6 Excel Sync完了前は不一致それ
 - **R0 baseline固定:** 現行workflow・10/20/30・tutorial・集約Excelの対象ファイルを固定する。`完了`。
 - **R1 Evidence / 00監査:** 外部典拠を再確認し、既存 `00_contents` が現行workflowのEvidence密度・traceability・終了条件を満たすか監査する。不足時は補強する。未文書化Entryは新規作成する。
 - **R2 Version Scope再固定:** R1のEvidenceだけから現行規則でVersion Scopeを固定する。既存Scopeへ合わせない。
-- **R3 Independent Recode:** D01〜D21を既存コードを見ずに独立判定する。Primary / Secondary / Statusをすべて再測定する。
-- **R4 Entry QA:** workflow Step 6相当のEntry内QAを実施する。D12→D13→D15因果列QA、D18 L3 evidence QA、`U / NA / C` QA、taxonomy gap QAを行う。`*_10_analysis.md` をCoding正本として更新した後、再コーディング前snapshotの旧 `*_10_analysis.md` と比較し、不一致を分類する。旧Excelとの比較はR4に含めない。
+- **R3 Independent Recode:** D01〜D21を既存コードを見ずに独立判定する。Primary / Secondary / Statusをすべて再測定し、旧 `*_10_analysis.md` を参照する前にR3結果をcommit / pushしてfreezeする。
+- **R4 Entry QA:** workflow Step 6相当のEntry内QAを実施する。D12→D13→D15因果列QA、D18 L3 evidence QA、`U / NA / C` QA、taxonomy gap QAを行う。`*_10_analysis.md` をCoding正本として更新した後、`再コーディング前 commit SHA` から旧 `*_10_analysis.md` を取得して比較し、不一致を分類する。旧Excelとの比較はR4に含めない。
 
 ## 3.2. A3パイロット49件完了後の集約タスク
 
-- **R5 Global Reconciliation:** 49件すべてのR4完了後に開始する。baseline main commit時点の旧Excelと新Coding正本を比較し、旧 `10_analysis` ↔ 旧Excelの不整合、Entry間coding consistency、taxonomy gapの横断傾向、差分分類の一貫性を監査する。新判定を旧値へ合わせる工程ではない。
+- **R5 Global Reconciliation:** 49件すべてのR4完了後に開始する。baseline時点の旧Excelと新Coding正本を比較し、旧 `10_analysis` ↔ 旧Excelの不整合、Entry間coding consistency、taxonomy gapの横断傾向、差分分類の一貫性を監査する。新判定を旧値へ合わせる工程ではない。
 - **R6 Excel Sync:** R5で確定した新 `*_10_analysis.md` を正として、集約Excelへ49件を一括同期する。
-- **R7 Global QA:** 49件の `00_contents` / `10_analysis` / Excel、baseline適用、差分分類、commit履歴、R5 reconciliation、R6同期結果を最終確認する。
+- **R7 Global QA:** 49件の `00_contents` / `10_analysis` / Excel、baseline適用、差分分類、commit checkpoint、R5 reconciliation、R6同期結果を最終確認する。
 
 statusは `未 / 作業中 / 完了 / 保留 / −` を使用する。
 
@@ -114,8 +135,8 @@ statusは `未 / 作業中 / 完了 / 保留 / −` を使用する。
 
 不一致監査は、独立判定へのアンカリングを防ぐため二段階に分ける。
 
-- **R4:** R3独立判定およびCoding正本更新後に、再コーディング前snapshotの旧 `*_10_analysis.md` と比較する。
-- **R5:** 49件すべてのR4完了後に、baseline main commit時点の旧Excelを含む横断reconciliationを行う。
+- **R4:** R3独立判定を `R3 後 commit SHA` でfreezeした後に、`再コーディング前 commit SHA` の旧 `*_10_analysis.md` を参照して比較する。
+- **R5:** 49件すべてのR4完了後に、旧Excelを含む横断reconciliationを行う。
 
 不一致を少なくとも以下へ分類する。
 
@@ -130,7 +151,7 @@ statusは `未 / 作業中 / 完了 / 保留 / −` を使用する。
 
 単一Entryの不一致だけを理由にworkflow / taxonomyを変更しない。同型の不整合が複数Entryで再発する、または現行規則で一意に決められない構造的欠陥が確認された場合に限り、baseline変更候補とする。
 
-R5でCoding正本側の修正が必要と判明した場合は、Excelへ直接補正を入れず、該当Entryの `*_10_analysis.md` を先に修正し、必要に応じてR4 statusを再オープンする。
+R5でCoding正本側の修正が必要と判明した場合は、Excelへ直接補正を入れず、該当Entryの `*_10_analysis.md` を先に修正し、必要に応じてR4 statusを再オープンする。再オープンした場合はR4後SHAも更新する。
 
 # 5. 進捗集計
 
@@ -152,68 +173,69 @@ R5でCoding正本側の修正が必要と判明した場合は、Excelへ直接�
 
 # 6. Entry別進捗
 
-各Entryについて、再コーディング前後のrepository snapshotをfull commit SHAで記録する。
+各Entryについて、`再コーディング前`、`R3独立判定freeze後`、`R4 Entry QA後` の3つのrepository checkpointをfull commit SHAで記録する。
 
-- `再コーディング前 commit SHA`: 当該Entryの再コーディングによる最初の変更を加える直前のcommit。原則としてEntry単位commitのparent commitを記録する。
-- `再コーディング後 commit SHA`: 当該EntryのR1〜R4による `00_contents` / `10_analysis` 更新を確定した最後のEntry内容commitを記録する。control plane更新commitは含めない。
+- `再コーディング前 commit SHA`: R1着手以前に当該Entryの `*_00_contents.md` / `*_10_analysis.md` のいずれかを最後に変更したEntry固有のcommit。
+- `R3 後 commit SHA`: 独立再コーディング結果を旧10参照前にfreezeした内容commit。
+- `R4 後 commit SHA`: 旧10比較・Entry QA・Coding正本更新まで確定した内容commit。
 - SHAは省略せず40文字のfull SHAを記載する。
-- 1 Entryで複数commitを使用した場合は、再コーディング前には最初のEntry変更直前、再コーディング後には最後のR1〜R4内容変更commitを記載する。
+- control plane更新commitはcheckpoint SHAへ含めない。
 
-これにより、各Entryについて `再コーディング前 commit SHA` → `再コーディング後 commit SHA` の範囲で差分を直接確認できる状態を維持する。
+これにより、`再コーディング前` → `R3 後` で独立再判定の変化を、`R3 後` → `R4 後` で旧10比較・QAによる変更を、それぞれ分離して監査できる。
 
 R5〜R7は49件横断taskであるため、Entry別進捗表には列を設けない。
 
-| Entry_ID | 伝承 | R1 00/Evidence | R2 Scope | R3 Recode | R4 QA | 再コーディング前 commit SHA | 再コーディング後 commit SHA | remarks |
-|---|---|---|---|---|---|---|---|---|
-|0001|口裂け女|完了|完了|完了|完了|3ee9ff1cc9150cec209020f104e9be3e8f190477|134a9ce8394ed0e2e5a7f491c6a52b19cb236c0c|過去regressionで差分検出済み。R1 commit=`c15b7103aeb0ce5d9fd25a7e2f95c54e86032091`。R2 commit=`e376a94f2240461be938583471ee4259b4bcff90`。R3 commit=`9a565a4879688a9a07e6c60a617813e026d46959`。R4内容commit=`134a9ce8394ed0e2e5a7f491c6a52b19cb236c0c`。R2 Scope=1979年初頭〜春の最小安定共有核。旧Excel比較はR5へ移管。|
-|0003|赤い紙・青い紙／赤マント系|未|未|未|未|未|未||
-|0005|紫の鏡|未|未|未|未|未|未||
-|0006|メリーさんの電話|未|未|未|未|未|未||
-|0011|こっくりさん|未|未|未|未|未|未|過去reproducibility testで差分検出済み。独立再判定後に比較|
-|0019|小さいおじさん|未|未|未|未|未|未||
-|0024|幸福の手紙|未|未|未|未|未|未||
-|0025|不幸の手紙|未|未|未|未|未|未||
-|0059|深泥池の幽霊タクシー|未|未|未|未|未|未||
-|0060|タクシー幽霊|未|未|未|未|未|未||
-|0081|ピアスの白い糸|未|未|未|未|未|未||
-|0089|日本だるま／だるま女|未|未|未|未|未|未||
-|0091|ベッドの下の男|未|未|未|未|未|未||
-|0101|海外旅行で臓器を抜かれる|未|未|未|未|未|未||
-|0112|事故物件は一度別人を住ませれば告知義務が消える|未|未|未|未|未|未||
-|0113|井の頭公園のボートに乗ると別れる|未|未|未|未|未|未||
-|0118|函館山の切れない木|未|未|未|未|未|未||
-|0132|八幡の藪知らず|未|未|未|未|未|未||
-|0133|将門塚の祟り|未|未|未|未|未|未||
-|0137|犬鳴村|未|未|未|未|未|未||
-|0152|青木ヶ原樹海で方位磁針が狂う|未|未|未|未|未|未||
-|0157|新郷村キリストの墓|未|未|未|未|未|未||
-|0158|虚舟|未|未|未|未|未|未||
-|0169|ノストラダムスの大予言|未|未|未|未|未|未||
-|0178|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0179|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0180|きさらぎ駅|未|未|未|未|未|未|Golden Regression reference。全件再コーディング工程上は未から開始|
-|0181|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0188|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0198|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0225|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0250|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0275|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0309|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0319|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0349|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0356|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0362|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0363|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0365|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0366|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0384|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0385|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0394|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0403|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0410|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0411|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0412|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
-|0413|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+| Entry_ID | 伝承 | R1 00/Evidence | R2 Scope | R3 Recode | R4 QA | 再コーディング前 commit SHA | R3 後 commit SHA | R4 後 commit SHA | remarks |
+|---|---|---|---|---|---|---|---|---|---|
+|0001|口裂け女|完了|完了|完了|完了|4e18c1a977c8c223a26865fac0feeafef5d54b37|9a565a4879688a9a07e6c60a617813e026d46959|134a9ce8394ed0e2e5a7f491c6a52b19cb236c0c|過去regressionで差分検出済み。R1 commit=`c15b7103aeb0ce5d9fd25a7e2f95c54e86032091`。R2 commit=`e376a94f2240461be938583471ee4259b4bcff90`。R2 Scope=1979年初頭〜春の最小安定共有核。旧Excel比較はR5へ移管。|
+|0003|赤い紙・青い紙／赤マント系|未|未|未|未|5c577eb3d3acfa3f69fd4ca841875888b27305cf|未|未||
+|0005|紫の鏡|未|未|未|未|c2a37792f12b6c2aa5b8760536b13764d14c714d|未|未||
+|0006|メリーさんの電話|未|未|未|未|未|未|未||
+|0011|こっくりさん|未|未|未|未|未|未|未|過去reproducibility testで差分検出済み。独立再判定後に比較|
+|0019|小さいおじさん|未|未|未|未|未|未|未||
+|0024|幸福の手紙|未|未|未|未|未|未|未||
+|0025|不幸の手紙|未|未|未|未|未|未|未||
+|0059|深泥池の幽霊タクシー|未|未|未|未|未|未|未||
+|0060|タクシー幽霊|未|未|未|未|未|未|未||
+|0081|ピアスの白い糸|未|未|未|未|未|未|未||
+|0089|日本だるま／だるま女|未|未|未|未|未|未|未||
+|0091|ベッドの下の男|未|未|未|未|未|未|未||
+|0101|海外旅行で臓器を抜かれる|未|未|未|未|未|未|未||
+|0112|事故物件は一度別人を住ませれば告知義務が消える|未|未|未|未|未|未|未||
+|0113|井の頭公園のボートに乗ると別れる|未|未|未|未|未|未|未||
+|0118|函館山の切れない木|未|未|未|未|未|未|未||
+|0132|八幡の藪知らず|未|未|未|未|未|未|未||
+|0133|将門塚の祟り|未|未|未|未|未|未|未||
+|0137|犬鳴村|未|未|未|未|未|未|未||
+|0152|青木ヶ原樹海で方位磁針が狂う|未|未|未|未|未|未|未||
+|0157|新郷村キリストの墓|未|未|未|未|未|未|未||
+|0158|虚舟|未|未|未|未|未|未|未||
+|0169|ノストラダムスの大予言|未|未|未|未|未|未|未||
+|0178|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0179|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0180|きさらぎ駅|未|未|未|未|未|未|未|Golden Regression reference。全件再コーディング工程上は未から開始|
+|0181|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0188|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0198|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0225|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0250|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0275|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0309|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0319|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0349|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0356|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0362|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0363|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0365|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0366|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0384|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0385|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0394|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0403|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0410|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0411|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0412|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
+|0413|（集約Excel等のinventory sourceで名称確認）|未|未|未|未|未|未|未|未文書化ならR1で新規00作成|
 
 # 7. 実行順序
 
@@ -229,7 +251,9 @@ R5〜R7は49件横断taskであるため、Entry別進捗表には列を設け�
 → 0384 → 0385 → 0394 → 0403 → 0410 → 0411 → 0412 → 0413
 ```
 
-各EntryのR1→R4を完結してから次Entryへ進む。R4完了後に必要なのはCoding正本 `*_10_analysis.md` の確定と旧 `*_10_analysis.md` との差分比較までであり、旧Excel比較・Excel同期は要求しない。
+各EntryのR1→R4を完結してから次Entryへ進む。R4完了後に必要なのはCoding正本 `*_10_analysis.md` の確定と、`再コーディング前 commit SHA` にある旧 `*_10_analysis.md` との差分比較までであり、旧Excel比較・Excel同期は要求しない。
+
+各taskの内容commit / push後にcontrol planeを更新し、次taskへ進む。特にR3完了時には `R3 後 commit SHA`、R4完了時には `R4 後 commit SHA` を記録する。
 
 49件すべてのR4完了後、次の順で集約工程へ進む。
 
@@ -246,22 +270,24 @@ R5開始前まで、旧Excelのcoding値を後続EntryのR1〜R4の判定入力�
 R4完了には最低限、以下を要求する。
 
 - Entry_ID・対象Entryを確認済み
+- `再コーディング前 commit SHA` をEntry固有の最終変更commitとして確認済み
 - Evidenceを現行workflowに従って再確認済み
 - `00_contents` が現行tutorial・Evidence traceabilityを満たす
 - Evidence調査終了条件を満たす
 - Version Scopeを現行規則で再固定済み
 - D01〜D21を既存値を見ずに独立再判定済み
 - Primary / Secondary / Statusを全21次元で確認済み
+- R3独立判定を旧10参照前にcommit / pushし、`R3 後 commit SHA` を記録済み
 - D12→D13→D15因果列QA済み
 - taxonomy gap QA済み
 - D18 L3はX Evidenceの有無を確認済み
 - `U / NA / C` を推測で埋めていない
 - `*_10_analysis.md` をCoding正本として更新済み
-- R3独立判定完了後に、再コーディング前snapshotの旧 `*_10_analysis.md` との差分を確認・分類済み
+- R3独立判定freeze後に、`再コーディング前 commit SHA` の旧 `*_10_analysis.md` との差分を確認・分類済み
 - `00_contents` と `10_analysis` が整合
-- Entry単位commit・push後差分確認済み
-- `再コーディング前 commit SHA` / `再コーディング後 commit SHA` をfull SHAで本control planeへ記録済み
-- 本control planeを更新済み
+- R4内容commit / push後差分確認済み
+- `R4 後 commit SHA` を記録済み
+- 各R1〜R4 task後に本control planeを更新・push済み
 
 **旧Excelとの比較およびExcel同期はR4完了条件ではない。** Excelが未比較・未同期でも上記を満たせば次Entryへ進んでよい。
 
@@ -270,7 +296,7 @@ R4完了には最低限、以下を要求する。
 | 日付 | 変更対象 | 旧blob / commit | 新blob / commit | 理由 | 既完了Entryへの影響 |
 |---|---|---|---|---|---|
 |2026-09-14|初期baseline固定|−|main `9570faea998905f074e59df1691748b9cc54d03d`|全面再コーディング開始|全49件未から開始|
-|2026-09-14|control plane task構造・正本関係|control plane blob `7740a96b1c6084c4bf22d1ad5a0be6324b0d9dd3`|本commit|Entry単位R4と49件後のExcel reconciliation/syncを分離し、Coding正本を `*_10_analysis.md` と明示|0001は既実施内容で新R4完了条件を満たすためR4完了へ読み替え。旧Excel比較はR5へ移管|
+|2026-09-14|control plane task構造・正本関係|control plane blob `7740a96b1c6084c4bf22d1ad5a0be6324b0d9dd3`|commit `8ebcb326dc3ec1ba24019a75aa251a1f9b4eb0ad`|Entry単位R4と49件後のExcel reconciliation/syncを分離し、Coding正本を `*_10_analysis.md` と明示|0001は既実施内容で新R4完了条件を満たすためR4完了へ読み替え。旧Excel比較はR5へ移管|
 
 # 10. 最終完了条件
 
@@ -278,6 +304,7 @@ R4完了には最低限、以下を要求する。
 
 - 49件すべてR1〜R4完了
 - 49件すべて現行baselineによるD01〜D21再測定完了
+- 49件すべて `再コーディング前 commit SHA` / `R3 後 commit SHA` / `R4 後 commit SHA` の監査checkpointが確定
 - 49件すべてCoding正本 `*_10_analysis.md` 確定
 - R5 Global Reconciliation完了
 - R6 Excel Sync完了
@@ -285,4 +312,4 @@ R4完了には最低限、以下を要求する。
 - baseline変更があった場合、必要な再適用を完了
 - R7 Global QA完了
 
-本作業の終了時点で、49件は「過去task3実施済み」ではなく、**同一の現行baselineで独立再測定され、Entry QA・横断reconciliation・Excel同期・Global QAまで完了した状態**として扱えるようにする。
+本作業の終了時点で、49件は「過去task3実施済み」ではなく、**同一の現行baselineで独立再測定され、独立判定freeze・Entry QA・横断reconciliation・Excel同期・Global QAまで監査可能な状態**として扱えるようにする。
