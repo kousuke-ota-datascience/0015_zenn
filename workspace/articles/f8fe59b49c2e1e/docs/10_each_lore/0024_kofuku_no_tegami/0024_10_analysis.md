@@ -4,381 +4,230 @@
 - `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
 - `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
 
-伝承内容・典拠・異伝・証拠上の不確実性は、同一ディレクトリの `0024_00_contents.md` を参照する。
+Evidence正本は同一ディレクトリの `0024_00_contents.md`、R2/R3監査成果物は `docs/99_work/20260914_A3_full_recoding/` 配下を参照する。
 
 # 1. 伝承エントリ基本情報
 
 - `Entry_ID`: `24`
 - `伝承エントリ名称`: 幸福の手紙
 - `Macro_Category`: 情報・メタ伝説
-- `Entry_Type`: 物語・伝説
-- `Version_Scope`: 「規定人数へ複製・転送すれば幸福・幸運が得られる」という自己伝播型チェーンレター。報酬を中心とし、不転送時の災厄を併記する混合型を周辺異伝として参照する。
+- `Entry_Type`: 規則・チェーン伝承
+- `Version_Scope`: 1922年の日本流行層で研究資料から具体的に確認できる、郵便葉書・手紙による自己複製型の「幸福の手紙」。受信者が一定期限内に同一文面を規定枚数・人数へ複写して送れば本人に幸運が訪れ、連鎖を止めれば悪運・災難が訪れ得る、とする報酬前景型のチェーンレター。
 
 # 2. 分析概念次元
 
-各次元は、単にコード値を記録するだけでなく、**当該伝承においてその次元が具体的にどのように現れているか**まで自然言語で記述する。
+## 2.1. 来歴・流通・提示
+
+### D01 生成年代
+- Value: なし
+- Status: `U`
+- 根拠: 1922年は日本で追跡できる古い流行層であり、すでに海外系統から移入された可能性がある。最古確認点を生成時期へ変換しない。
+
+### D02 最古確認流通媒体
+- Primary: `D02.PRT.CHAIN_LETTER`
+- Parent: `D02.PRT`
+- Status: `I`
+- 根拠: 丸山2012が1922年の葉書チェーンを同時代新聞資料から固定するが、本作業では原葉書／新聞原紙を直接閲覧していない。
+
+### D03 確認流通媒体ポートフォリオ
+- Primary: `D03.PRT.CHAIN_LETTER`
+- Parent: `D03.PRT`
+- Status: `I`
+- 根拠: Scoped Versionの成立に、複写・郵送されるチェーン葉書／手紙が構造的に不可欠。1951年の直接資料は同型の継続を補強するが、1922年Scopeの証拠強度は研究資料経由なのでI。
+
+### D04 生成・変容パターン
+- Status: `U`
+- 根拠: 1922年の狭いScope内で安定した時間的変容を確定できない。後代の電子化や「不幸の手紙」化を混ぜない。
+
+### D05 提示形式
+- Primary: `D05.RUL.CHAIN_INSTRUCTION`
+- Parent: `D05.RUL`
+- Secondary: `D05.RUL.JINX_RULE`
+- Status: `I`
+- 根拠: 同文の規定数転送を直接要求し、その行為を幸運／悪運へ結ぶ。
+
+### D06 真実性提示
+- Value: `D06.T5`
+- Status: `I`
+- 根拠: 「この条件を満たせば幸運、破れば悪運」という条件付き信念として提示される。
+
+## 2.2. 意味形成
+
+### D07 意味形成対象
+- Primary: `D07.DCF.FATE_OMEN`
+- Parent: `D07.DCF`
+- Status: `I`
+- 根拠: 不確実な将来の幸運／悪運を予測・制御可能なものとして扱う。
+
+### D08 意味形成契機
+- Primary: `D08.CLM.UNSUPPORTED_ASSERTION`
+- Parent: `D08.CLM`
+- Status: `I`
+- 根拠: 「転送すれば幸運、断てば悪運」という因果主張が文面上で先行提示される。文書という媒体そのものではなく、その根拠未提示の命題が意味形成を開始させる。
+
+### D09 意味付与操作
+- Primary: `D09.CTL.TRANSMISSION_RULE`
+- Parent: `D09.CTL`
+- Secondary: `D09.PPR.CORRELATION_RULE`
+- Status: `I`
+- 根拠: 将来の吉凶を転送規則へ変換し、転送／断絶と幸運／悪運を対応づける。
+
+### D10 因果源存在論
+- Primary: `D10.OBJ.INFORMATION_CONTENT`
+- Parent: `D10.OBJ`
+- Status: `I`
+- 根拠: 人格主体を必要とせず、複製される文面とその規則内容が因果条件を保持して移動する。
+
+## 2.3. 因果・行動モデル
+
+### D11 発動・接触条件
+- Primary: `D11.INF.RECEIVE_MESSAGE`
+- Parent: `D11.INF`
+- Status: `I`
+- 根拠: 手紙を受信することで期限・転送条件と吉凶規則の対象になる。1951年資料も「受取ってから」の期限を例示する。
+
+### D12 作用対象
+- Primary: `D12.FOC.PRACTITIONER`
+- Parent: `D12.FOC`
+- Status: `I`
+- 根拠: D13の幸運／悪運付与が直接向けられるのは、転送規則を実行または不実行する受信者本人。
+
+### D13 作用機構
+- Primary: `D13.FAT.LUCK_BENEFIT`
+- Parent: `D13.FAT`
+- Secondary: `D13.FAT.CURSE_MISFORTUNE`
+- Status: `I`
+- 根拠: 報酬前景型として転送時の幸運付与がPrimary。同じ初期文面に連鎖断絶時の悪運付与が含まれるためSecondary。
+
+### D14 帰結極性
+- Value: `D14.MIX`
+- Status: `I`
+- 根拠: 同一Scoped規則に正の報酬と負の制裁が重要な分岐として併存する。
+
+### D15 帰結領域
+- Primary: `D15.OPP.LUCK_MISFORTUNE`
+- Parent: `D15.OPP`
+- Status: `I`
+- 根拠: 最終的に変わるとされるのは本人の一般的な運勢・吉凶。
+
+### D16 因果時間構造
+- Primary: `D16.DLY.DEADLINE`
+- Parent: `D16.DLY`
+- Secondary: `D16.TRN.CHAIN_SPREAD`
+- Status: `I`
+- 根拠: 明示的な期限が結果条件として重要であり、同時にA→B→Cと受信者間を移る連鎖拡散が成立する。
+
+### D17 回避・制御方式
+- Primary: `D17.USE.LUCK_EXPLOITATION`
+- Parent: `D17.USE`
+- Secondary: `D17.RUL.TIMING_ORDER`
+- Status: `I`
+- 根拠: 幸運を得るために規則を意図的に利用し、指定期限を守ることが伝承内部の制御法となる。
 
-## 2.1. 来歴・流通・提示の次元
-
-### 2.1.1. D01: 生成年代
-
-**いつ成立したか**
-
-- Primary Child / Value: なし
-- Primary Parent: なし
-- Secondary: なし
-- Status: `U` — Unknown（証拠不足）
-
-**判定根拠**
-
-`0024_00_contents.md` では、日本で1922年頃に「幸運の手紙／幸運の葉書」が流通していたことを後代研究から確認できる。しかし、これは現在確認できる流通層であって、当該伝承の生成時期そのものを直接示さない。さらに海外のLucky Chain等との先行系譜があり得るため、1922年を生成年として `D01.G1` へ機械的に写像しない。
-
-**この伝承における現れ方**
-
-幸福の手紙は、少なくとも1920年代には日本で流通していたことが確認できる一方、その時点ですでに完成した形式が移入・再流通していた可能性を排除できない。したがって、生成年代は現証拠から安全に特定できない。
-
-### 2.1.2. D02: 最古確認流通媒体
-
-**現在の証拠で、伝承が実際に人から人へ流通したことを最も古く確認できる媒体は何か**
-
-- Primary Child / Value: `D02.PRT.CHAIN_LETTER` — チェーンレター
-- Primary Parent: `D02.PRT` — 印刷・書簡
-- Secondary: なし
-- Status: `I` — Inferred（信頼できる後代資料から媒体を特定）
-
-**判定根拠**
-
-丸山泰明2012は、1922年頃の日本の「幸運の手紙／幸運の葉書」を歴史的に扱っており、最古確認層が複製・転送を前提とする郵便・葉書型であったことを示す。1922年当時の原文・同時代記事そのものを今回のEvidence layerでは固定していないため、媒体値は保持するがStatusは `D` ではなく `I` とする。
-
-**この伝承における現れ方**
-
-文面そのものが書簡として届き、受信者が複製して別の宛先へ送る。伝承内容と流通回路が同じチェーンレター形式に組み込まれている。
-
-### 2.1.3. D03: 確認流通媒体ポートフォリオ（Version Scope）
-
-**今回コードするVersion Scopeで、伝承が受容者へ流通したことを確認できる媒体は何か**
-
-- Primary Child / Value: `D03.PRT.CHAIN_LETTER` — チェーンレター
-- Primary Parent: `D03.PRT` — 印刷・書簡
-- Secondary: なし
-- Status: `D` — Direct（公的同時代資料でも郵便現象として確認）
-
-**判定根拠**
-
-1951年の参議院郵政委員会会議録では「幸運の手紙等」が郵便上の問題例として具体的に言及されている。Version Scopeの中心も古典的な複製・転送型の手紙・葉書であり、チェーンレターは流通媒体であると同時に伝承構造の成立に不可欠である。
-
-**この伝承における現れ方**
-
-受信者が手紙・葉書を複製して次の人へ送るため、受容者への流通と伝承内の行動命令が一致する。電子メールやSNSへの後代移行は変容史として参照するが、本Version Scopeの中心媒体は物理的チェーンレターである。
-
-### 2.1.4. D04: 生成・変容パターン
-
-**時間とともにどう変形したか**
-
-- Primary Child / Value: `D04.MIG.FORMAT_TRANSLATION` — 形式変換
-- Primary Parent: `D04.MIG` — 媒体移行
-- Secondary: `D04.VAR.ACCRETION` — 増補
-- Status: `I` — Inferred（複数時期・異伝の比較から推定）
-
-**判定根拠**
-
-`0024_00_contents.md` では、物理的な手紙・葉書から電子メール・SNS等へ媒体が移り得る一方、「受信→一定人数へ複製→次の受信者も同じ指示を受ける」という構造が保持される。また、由緒、成功例、不転送時の悪運等が付加される異伝も確認される。
-
-**この伝承における現れ方**
-
-自己複製命令という核を保ちながら、紙の書簡からデジタルメッセージへ提示形式が置き換わる。同時に、報酬だけの型へ由緒や制裁が付加されることで、受信者を転送へ動機付ける説明が増補される。
-
-### 2.1.5. D05: 提示形式
-
-**どんなコミュニケーション形式で提示されるか**
-
-- Primary Child / Value: `D05.RUL.CHAIN_INSTRUCTION` — チェーン指示
-- Primary Parent: `D05.RUL` — 規則・手順提示
-- Secondary: なし
-- Status: `D` — Direct（伝承内容に明示）
-
-**判定根拠**
-
-代表形では、受信者に対して一定人数・部数・期限等を指定し、同じ文面を複製・転送するよう直接命じる。
-
-**この伝承における現れ方**
-
-幸福の手紙は、出来事を読むだけで完結せず、「あなたも次の人へ送れ」という命令を内蔵する。受信者は読者であると同時に、次の送信者になることを要求される。
-
-### 2.1.6. D06: 真実性提示
-
-**どんな「本当らしさ」を要求するか**
-
-- Primary Child / Value: `D06.T6` — 真偽未確定
-- Primary Parent: なし
-- Secondary: なし
-- Status: `I` — Inferred（代表形の提示姿勢から判定）
-
-**判定根拠**
-
-幸運発生の因果は検証されないが、過去の成功例、由緒、巡回履歴等を添えて「本当に効くかもしれない」と思わせる型がある。受信者に確定的な証明ではなく、不確実性を残した信憑性を要求する。
-
-**この伝承における現れ方**
-
-「本当かどうか分からないが、送れば得をするかもしれない」という認識姿勢が、低コストの転送行動を選ばせる余地を作る。
-
-## 2.2. 意味形成の次元
-
-### 2.2.1. D07: 意味形成対象
-
-**何が不可解・不確実なのか**
-
-- Primary Child / Value: `D07.DCF.FATE_OMEN` — 運命・予兆
-- Primary Parent: `D07.DCF` — 死・偶然・不運
-- Secondary: なし
-- Status: `I` — Inferred（伝承の中心問題から判定）
-
-**判定根拠**
-
-この伝承がなければ、受信者の将来に幸運・成功が訪れるかどうかは制御不能な不確実性として残る。幸福の手紙は、その将来結果を情報伝播行為によって予測・制御できるものとして扱う。
-
-**この伝承における現れ方**
-
-金運、仕事、家庭、願望成就等の将来の成否が、偶然のままではなく「この手紙を規定どおり送るか」という現在の行為へ接続される。
-
-### 2.2.2. D08: 意味形成契機
-
-**何を手掛かりに問題化されるか**
-
-- Primary Child / Value: `D08.CLM.UNSUPPORTED_ASSERTION` — 根拠未提示の主張
-- Primary Parent: `D08.CLM` — 命題先行
-- Secondary: なし
-- Status: `I` — Inferred（提示構造から判定）
-
-**判定根拠**
-
-「規定どおり送れば幸運になる」という因果主張が、受信者自身の先行経験を説明する形ではなく、文面上の規則として先に提示される。成功例等が添えられる場合も、その因果を独立に検証する証拠ではない。
-
-**この伝承における現れ方**
-
-受信者はすでに起きた幸運を説明するために伝承へ接触するのではなく、先に将来の吉凶ルールを渡され、その主張を信じるかどうかを迫られる。
-
-### 2.2.3. D09: 意味付与操作
-
-**不可解なものをどう理解可能にするか**
-
-- Primary Child / Value: `D09.CTL.TRANSMISSION_RULE` — 伝達規則
-- Primary Parent: `D09.CTL` — 制御規則形成
-- Secondary: `D09.PPR.CORRELATION_RULE` — 相関規則化
-- Status: `D` — Direct（転送規則が伝承内容に明示）
-
-**判定根拠**
-
-伝承は、将来の幸運という不確実な結果を「一定人数へ転送する」という明示的な制御規則へ変換する。また、転送と幸運の間に反復可能な対応関係を設定する。
-
-**この伝承における現れ方**
-
-受信者は、運任せだった未来を「送る／送らない」という操作可能な選択へ置き換える。転送すれば幸運が来るという規則が、偶然の結果に行動可能な意味を与える。
-
-### 2.2.4. D10: 因果源存在論
-
-**原因を何として世界に置くか**
-
-- Primary Child / Value: `D10.OBJ.INFORMATION_CONTENT` — 情報内容
-- Primary Parent: `D10.OBJ` — 物体・情報・記号
-- Secondary: なし
-- Status: `I` — Inferred（人格主体を置かない因果構造から判定）
-
-**判定根拠**
-
-代表形では、特定の霊・神・人物が幸運を与えるというより、手紙に記された規則と、その情報を規定どおり伝播すること自体に因果効力があるように構成される。
-
-**この伝承における現れ方**
-
-同じ文面・同じ指示を保存し、次の受信者へ渡すことに意味が置かれる。因果源は特定の人格ではなく、複製可能な情報内容として世界内に配置される。
-
-## 2.3. 因果・行動モデルの次元
-
-### 2.3.1. D11: 発動・接触条件
-
-**何を契機に因果系へ入るか**
-
-- Primary Child / Value: `D11.INF.READ_VIEW_MEDIA` — 読む・媒体を見る
-- Primary Parent: `D11.INF` — 情報曝露
-- Secondary: なし
-- Status: `D` — Direct（受信後の読解を前提とする）
-
-**判定根拠**
-
-受信者は手紙・メッセージの内容を読むことで、転送条件と幸運条件を知り、因果規則の対象として自己を位置付ける。単に研究者が伝承を読むという意味ではなく、伝承内容上の受信者が文面へ接触することを指す。
-
-**この伝承における現れ方**
-
-文面を読むと、受信者は「期限内に何人へ送るか」という具体的な選択へ組み込まれる。
-
-### 2.3.2. D12: 作用対象
-
-**誰／何に作用するか**
-
-- Primary Child / Value: `D12.AUD.READER_LISTENER` — 読者・聞き手
-- Primary Parent: `D12.AUD` — 受容者・公衆
-- Secondary: `D12.AUD.NEXT_RECIPIENT` — 次の受信者
-- Status: `D` — Direct（現受信者と次の受信者が規則に組み込まれる）
-
-**判定根拠**
-
-現受信者が幸運条件の直接対象となり、転送後は次の受信者が同じ規則を受け取る。
-
-**この伝承における現れ方**
-
-作用対象は一人で閉じず、受信者から次の受信者へ世代的に増える。各受信者は結果を受ける対象であると同時に、次の対象を作る送信者にもなる。
-
-### 2.3.3. D13: 作用機構
-
-**因果源が対象へ何をするか**
-
-- Primary Child / Value: `D13.FAT.LUCK_BENEFIT` — 幸運・利益付与
-- Primary Parent: `D13.FAT` — 運命・吉凶作用
-- Secondary: `D13.TRN.MEDIA_OBJECT_TRANSFER` — 媒体・物体媒介伝播
-- Status: `D` — Direct（主作用と伝播手段が伝承内容に明示）
-
-**判定根拠**
-
-Version Scopeの中心命題は、規定どおり転送した受信者へ幸運・成功等が与えられることである。チェーンを成立させるため、同じ情報が手紙・メッセージという媒体を介して次の対象へ移る。
-
-**この伝承における現れ方**
-
-伝承内部では、転送行為が受信者の運勢を好転させる。同時に、その因果規則を保持した文面が媒体を介して次の受信者へ渡り、同じ構造が再生産される。
-
-### 2.3.4. D14: 帰結極性
-
-**結果は正・負・中立・混合か**
-
-- Primary Child / Value: `D14.POS` — 正
-- Primary Parent: なし
-- Secondary: なし
-- Status: `I` — Inferred（Version Scopeの主帰結から判定）
-
-**判定根拠**
-
-Version Scopeは「規定どおり転送すれば幸福・幸運を得る」という報酬型を中心に置く。不転送時の不幸を含む型は周辺異伝として参照するため、主帰結は正とする。
-
-**この伝承における現れ方**
-
-転送を促す中心的インセンティブは、金運、成功、幸福、願望成就等の利益である。制裁が中心となる型は別Entry「不幸の手紙」との境界を保つ。
-
-### 2.3.5. D15: 帰結領域
-
-**何の領域が最終的に変わるか**
-
-- Primary Child / Value: `D15.OPP.LUCK_MISFORTUNE` — 幸運・不運
-- Primary Parent: `D15.OPP` — 吉凶・機会
-- Secondary: なし
-- Status: `I` — Inferred（代表的報酬内容から判定）
-
-**判定根拠**
-
-文面で変化するとされる中心結果は、身体状態や特定の物体ではなく、受信者の将来の運勢・成功・幸福である。
-
-**この伝承における現れ方**
-
-金運、仕事、家庭等の具体例は異伝で変わっても、最終的には「運が良くなる」という一般化された吉凶領域へ帰結する。
-
-### 2.3.6. D16: 因果時間構造
-
-**発動条件・原因成立から主作用／主帰結までの関係は、時間上どのように編成されているか**
-
-- Primary Child / Value: `D16.TRN.CHAIN_SPREAD` — 連鎖伝播
-- Primary Parent: `D16.TRN` — 伝播・世代
-- Secondary: なし
-- Status: `D` — Direct（連鎖構造が伝承内容に明示）
-
-**判定根拠**
-
-一人の受信者で因果系列が終了せず、受信者から次の受信者へ同じ規則が世代的に再実行される。
-
-**この伝承における現れ方**
-
-受信→複製→転送→次の受信という構造が反復され、各ノードで同じ選択が繰り返される。因果時間は単一エピソードではなく、伝播系列として伸びる。
-
-### 2.3.7. D17: 回避・制御方式
-
-**結果をどう回避・制御・利用できるか**
-
-- Primary Child / Value: `D17.USE.LUCK_EXPLOITATION` — 吉兆利用
-- Primary Parent: `D17.USE` — 利用・活用
-- Secondary: `D17.RUL.PROCEDURAL_RULE` — 手順遵守
-- Status: `D` — Direct（利益獲得の操作が明示）
-
-**判定根拠**
-
-幸福型では、受信者は災厄を他人へ転嫁することを主目的とせず、規定された人数・期限等の手順に従って転送することで幸運を得ようとする。
-
-**この伝承における現れ方**
-
-受信者は「送れば幸運になる」という規則を意図的に利用し、指定された手順を実行する。混合型では不運回避も加わるが、本Version Scopeでは利益利用をPrimaryとする。
-
-### 2.3.8. D18: 作用レイヤー
-
-**因果効力は伝承内／受容者／社会現実のどこに及ぶか**
-
-- Primary Child / Value: `D18.L1=1; D18.L2=1; D18.L3=1`
-- Primary Parent: なし
-- Secondary: なし
-- Status: `I` — Inferred（一部は直接X証拠あり）
-
-**判定根拠**
-
-L1では、伝承内部で転送行為が幸運をもたらすとされる。L2では、現実の受信者が実際に手紙を複製・転送することで、受容者自身が伝承内容上の因果対象となる。L3については、1951年の参議院郵政委員会で「幸運の手紙等」が郵便上の問題として扱われており、制度側の対応という確認可能な社会現実効果がある。
-
-**この伝承における現れ方**
-
-伝承内の幸運規則が現実の転送行動を作り、その大量流通が郵便制度側の問題認識・公的審議にまで到達する。したがって、作用は物語内部だけで閉じない。
-
-## 2.4. 社会的埋め込みの次元
-
-### 2.4.1. D19: 流通範囲
-
-**誰の間に伝承が流通するか**
-
-- Primary Child / Value: `D19.MAS.NATIONAL_PUBLIC` — 全国的大衆
-- Primary Parent: `D19.MAS` — 大衆・広域社会
-- Secondary: なし
-- Status: `D` — Direct（広域的社会認知を公的資料で確認）
-
-**判定根拠**
-
-1920年代以降の日本で長期的な流通が研究され、1951年には国会審議で郵便上の社会問題として言及されている。特定学校・地域だけに限定された伝承ではない。
-
-**この伝承における現れ方**
-
-郵便・通信網を介して不特定多数へ複製可能であり、送信先を地域共同体へ固定しない構造が全国的な流通を可能にする。
-
-### 2.4.2. D20: 特権情報保持者
-
-**誰が真相・追加情報を持つか**
-
-- Primary Child / Value: `D20.NON.COMMON_KNOWLEDGE` — 一般共有
-- Primary Parent: `D20.NON` — 特権なし
-- Secondary: なし
-- Status: `I` — Inferred（伝承構造から判定）
-
-**判定根拠**
-
-文面の転送条件・報酬条件は受信者へ開示され、成立に専門家、地元古老、秘密組織等の特権情報保持者を必要としない。
-
-**この伝承における現れ方**
-
-受信者は文面を受け取った時点で、行うべき手順と期待される結果を知る。情報が公開され複製可能であること自体がチェーン成立の前提となる。
-
-### 2.4.3. D21: 現実アンカー
-
-**実在世界へどの程度固定されるか**
-
-- Primary Child / Value: `D21.A0` — 匿名・抽象
-- Primary Parent: なし
-- Secondary: なし
-- Status: `I` — Inferred（主張成立に特定実在対象を必要としない）
-
-**判定根拠**
-
-伝承は実在の郵便・通信制度を利用するが、「規定どおり転送すれば幸運」という主張自体は特定の事件、場所、企業、人物へ固定されない。公的審議が存在することは流通史・社会効果の証拠であり、伝承内容の現実アンカーを自動的に高くしない。
-
-**この伝承における現れ方**
-
-固有名、由緒、送信人数、報酬内容を差し替えても核となる規則は成立する。したがって、実在世界への固定は弱い。
+### D18 作用レイヤー
+- `D18.L1=1`
+- `D18.L2=1`
+- `D18.L3=1`
+- Status: `D`
+- 根拠: L1は文面内部の転送→吉凶因果、L2は現実側受信者自身が文面上の因果対象になる自己適用、L3は1951年国会会議録が実際の転送行動と制度的検討を直接記録するX Evidence。
+
+## 2.4. 社会的埋め込み
+
+### D19 流通範囲
+- Primary: `D19.LOC.REGIONAL`
+- Parent: `D19.LOC`
+- Status: `I`
+- 根拠: Scopeの最古層は1922年東京の新聞資料を中心に追跡される。後代の全国認知を初期Scopeへ遡及しない。
+
+### D20 特権情報保持者
+- Primary: `D20.NON.NO_HIDDEN_TRUTH`
+- Parent: `D20.NON`
+- Status: `I`
+- 根拠: 実行条件・報酬・制裁は文面自体に開示され、専門家・内部者だけが持つ追加の真相や解除情報を必要としない。
+
+### D21 現実アンカー
+- Value: `D21.A1`
+- Status: `I`
+- 根拠: 葉書・郵便という一般的現実通信環境を用いるが、特定の制度規則・人物・事件を伝承内因果へ組み込まない。
+
+# 3. R4 Entry QA
+
+## 3.1. D12 → D13 → D15 causal QA
+
+```text
+D12: 転送規則を実行／不実行する受信者本人
+→ D13: 転送時は幸運、断絶時は悪運を付与
+→ D15: 本人の幸運／不運が変化
+```
+
+**結果: Pass。**
+
+## 3.2. D18 L3 evidence QA
+
+1951年3月26日の参議院郵政委員会会議録は、「幸運の手紙」を具体的転送行動を伴う郵便現象として扱い、郵便法・通信上の対応を審議している。
+
+**結果: `L3=1`。Pass。**
+
+## 3.3. U / NA / C QA
+
+- `D01=U`: 1922年確認層を絶対生成時期へ変換しないため妥当。
+- `D04=U`: Scoped Version内の変容史を示すH Evidence不足。
+- `NA`: なし。
+- `C`: なし。
+
+**結果: Pass。**
+
+## 3.4. taxonomy gap QA
+
+現行Scopeは既存taxonomyで表現可能。確定的な新Child要求なし。
+
+**結果: Pass。baseline変更なし。**
+
+## 3.5. R3 → R4 QA差分
+
+| 次元 | R3 freeze | R4確定 | 理由 |
+|---|---|---|---|
+| D01 | `D01.G1 / I` | `U` | 1922年は最古確認流行層であり生成時期そのものではない |
+| D08 | `TEXT_DOCUMENT` + `UNSUPPORTED_ASSERTION / I` | `UNSUPPORTED_ASSERTION / I` | 媒体そのものではなく先行因果主張が意味形成契機 |
+| D17 | `STRATEGIC_RULE_USE` + `TIMING_ORDER / I` | `LUCK_EXPLOITATION` + `TIMING_ORDER / I` | 幸運利用を直接表すより具体的Childを優先 |
+
+その他はR3 freezeを維持した。
+
+# 4. 再コーディング前旧10との差分比較
+
+比較対象: `再コーディング前 commit SHA = fc120f41ab98bc1f150f624dcafaaa016e2c6d39` の旧 `0024_10_analysis.md`。R3 freeze後にのみ参照した。
+
+| 次元 | 旧判定 | R4確定 | 差分分類 | 要点 |
+|---|---|---|---|---|
+| D01 | `U` | `U` | 一致 | 最古確認と生成時期を分離 |
+| D02 | `CHAIN_LETTER / I` | 同左 | 一致 | — |
+| D03 | `CHAIN_LETTER / D` | `CHAIN_LETTER / I` | `Status mismatch` | 1922年Scopeの直接原紙未実見 |
+| D04 | `FORMAT_TRANSLATION + ACCRETION / I` | `U` | `Scope mismatch` / `Evidence mismatch` | 後代電子化・増補を1922年Scopeへ混ぜない |
+| D05 | `CHAIN_INSTRUCTION / D` | `CHAIN_INSTRUCTION + JINX_RULE / I` | `Scope mismatch` / `Code-selection mismatch` / `Status mismatch` | 初期資料の報酬＋制裁をScope内へ固定 |
+| D06 | `T6 / I` | `T5 / I` | `Code-selection mismatch` | 真偽の謎より条件付き信念として提示 |
+| D07 | `FATE_OMEN / I` | 同左 | 一致 | — |
+| D08 | `UNSUPPORTED_ASSERTION / I` | 同左 | 一致 | R4でR3を修正 |
+| D09 | `TRANSMISSION_RULE + CORRELATION_RULE / D` | 同code / `I` | `Status mismatch` | 1922年Scopeは研究資料経由 |
+| D10 | `INFORMATION_CONTENT / I` | 同左 | 一致 | — |
+| D11 | `READ_VIEW_MEDIA / D` | `RECEIVE_MESSAGE / I` | `Code-selection mismatch` / `Status mismatch` | 期限は受信時点から開始する構造 |
+| D12 | `READER_LISTENER + NEXT_RECIPIENT / D` | `PRACTITIONER / I` | `Code-selection mismatch` / `Prior coding error` | D12はD13主作用の直接対象を採る |
+| D13 | `LUCK_BENEFIT + MEDIA_OBJECT_TRANSFER / D` | `LUCK_BENEFIT + CURSE_MISFORTUNE / I` | `Scope mismatch` / `Code-selection mismatch` / `Status mismatch` | 伝播は時間・流通構造へ、初期制裁作用をSecondaryへ |
+| D14 | `POS / I` | `MIX / I` | `Scope mismatch` / `Code-selection mismatch` | 初期文面内に幸運と悪運が併存 |
+| D15 | `LUCK_MISFORTUNE / I` | 同左 | 一致 | — |
+| D16 | `CHAIN_SPREAD / D` | `DEADLINE + CHAIN_SPREAD / I` | `Code-selection mismatch` / `Status mismatch` | 明示期限をPrimary、連鎖をSecondaryに保持 |
+| D17 | `LUCK_EXPLOITATION + PROCEDURAL_RULE / D` | `LUCK_EXPLOITATION + TIMING_ORDER / I` | `Code-selection mismatch` / `Status mismatch` | 制御の具体条件は期限遵守 |
+| D18 | `L1=1,L2=1,L3=1 / I` | 同bit / `D` | `Status mismatch` | L3を国会会議録の直接X Evidenceで固定 |
+| D19 | `NATIONAL_PUBLIC / D` | `REGIONAL / I` | `Scope mismatch` / `Evidence mismatch` / `Code-selection mismatch` / `Status mismatch` | 1922年初期Scopeに限定 |
+| D20 | `COMMON_KNOWLEDGE / I` | `NO_HIDDEN_TRUTH / I` | `Code-selection mismatch` | 共有範囲ではなく特権的追加情報の有無を問う |
+| D21 | `A0 / I` | `A1 / I` | `Code-selection mismatch` | 一般的な葉書・郵便環境へ埋め込まれる |
+
+# 5. R4結論
+
+- D12→D13→D15 causal QA: Pass
+- D18 L3 evidence QA: Pass
+- U / NA / C QA: Pass
+- taxonomy gap QA: Pass、baseline変更候補なし
+- R3→R4修正: D01 / D08 / D17
+- 旧10との差分比較・分類: 完了
+- Coding正本 `0024_10_analysis.md`: 更新済み
+- 旧Excel比較: R5 Global Reconciliationへ移管
