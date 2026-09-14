@@ -86,7 +86,7 @@ R4はR3 freeze後に旧10を比較、R5で旧Excelを比較する。不一致は
 | R1 Evidence / 00監査 | 7 | 0 | 42 | 0 | 0 |
 | R2 Version Scope再固定 | 7 | 0 | 42 | 0 | 0 |
 | R3 Independent Recode | 7 | 0 | 42 | 0 | 0 |
-| R4 Entry QA | 6 | 0 | 43 | 0 | 0 |
+| R4 Entry QA | 7 | 0 | 42 | 0 | 0 |
 
 - R5 Global Reconciliation: `未`
 - R6 Excel Sync: `未`
@@ -102,7 +102,7 @@ R4はR3 freeze後に旧10を比較、R5で旧Excelを比較する。不一致は
 |0006|メリーさんの電話|完了|完了|完了|完了|89b2865013ecd7fca4b39fa914973a0f55eb3b3b|92bbf26600e52525c2c11398c55d32082f0b3d0e|6a36aebbc047908679f4884d4202da5d7a2efc5b|R4 D04=U|
 |0011|こっくりさん|完了|完了|完了|完了|1b24d197f9cb94241e26a368a841bc1071671d23|4254c58c1dc3fab6315f62e2846e31401c89f3fb|0b0f861577ceae5f546d0d3796387e27aa65dfe2|D04/D20 gap候補をR5へ|
 |0019|小さいおじさん|完了|完了|完了|完了|e7ada0703530358d46b387b4feb149fc9e1b8ad9|b3f91feaba652b5b3b8eeca202bf2bddb4449c34|1f180c1d0fde5100b0cf71d6bc184ad29a562f0d|taxonomy gapなし|
-|0024|幸福の手紙|完了|完了|完了|未|fc120f41ab98bc1f150f624dcafaaa016e2c6d39|41e27cc1c43d79fa231f32b9e0ffdf80fb296811|未|R1=`e0df2aab4cc025832de0ee55410e3e60d799edff`。R2=`b69a4f7d4ce1bef13fb9b9b82ef183e1d1a8e87a`。R3=`41e27cc1c43d79fa231f32b9e0ffdf80fb296811`。Scope=1922年郵便型、転送報酬＋断絶制裁の報酬前景型。|
+|0024|幸福の手紙|完了|完了|完了|完了|fc120f41ab98bc1f150f624dcafaaa016e2c6d39|41e27cc1c43d79fa231f32b9e0ffdf80fb296811|362878efa061cd073f48b2cf09d9e006c2af6ba9|R1=`e0df2aab4cc025832de0ee55410e3e60d799edff`。R2=`b69a4f7d4ce1bef13fb9b9b82ef183e1d1a8e87a`。R3=`41e27cc1c43d79fa231f32b9e0ffdf80fb296811`。R4=`362878efa061cd073f48b2cf09d9e006c2af6ba9`。R4でD01→U、D08→UNSUPPORTED_ASSERTION、D17→LUCK_EXPLOITATIONへQA修正。taxonomy gapなし。|
 |0025|不幸の手紙|未|未|未|未|未|未|未||
 |0059|深泥池の幽霊タクシー|未|未|未|未|未|未|未||
 |0060|タクシー幽霊|未|未|未|未|未|未|未||
