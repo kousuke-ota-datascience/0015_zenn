@@ -77,7 +77,7 @@
 | 0060 | タクシー幽霊 | 00 | 完了 | `004` | `01bb8e996a50304ba6689d6a01f5bf957fd85042` | `8b8b4be57a11d36e246599ef03f82cca4856af2b` | Review_004 Pass。正本変更なし。 |
 | 0060 | タクシー幽霊 | 10 | 再レビュー待 | `004` | `22b8b547d7ba1d5ffcb22d0d7c473575b6957b5b` | `a33c7f83f1a8c98d5e511a4f2c0ce58995cc06d2` | Review_004指摘対応。D03を`D03.WEB.WEBSITE`へ正規化し、D05/D06を同一2023 Scopeで再判定、D08 Secondaryを除外、D19を地域流通/Iへ保守化。 |
 | 0081 | ピアスの白い糸 | 00 | 完了 | `004` | `410c9c4bd69a957e0fc0374541444b38ecdfaf73` | `1492f1c0b7e70815674df6dd4d4d44d2d6f6e7e5` | Review_004 Pass。正本変更なし。 |
-| 0081 | ピアスの白い糸 | 10 | 再レビュー待 | `004` | `7ecf24a85960a6fa42065f928d420766f7ff7be5` | `b3f2ea3c7f7fa77b27cc656dfda019efedb99d98` | Review_004指摘対応。D08 Secondary `PHYSICAL_TRACE` とD19 Secondary `NATIONAL_PUBLIC` を除外し、D11根拠をピアス穿孔へ限定。 |
+| 0081 | ピアスの白い糸 | 10 | 再レビュー待 | `004` | `7ecf24a85960a6fa42065f928d420766f7ff7be5` | `56e3c2af2a40dafe3c339f8262600dfaf9b5e9f4` | Review_004指摘対応。D08 `PHYSICAL_TRACE` とD19 `NATIONAL_PUBLIC` を除外、D11根拠をピアス穿孔へ限定。さらに現行taxonomyへ照合し、D19 Primaryを`D19.KIN.SCHOOL_YOUTH`へ正規化。 |
 | 0089 | 日本だるま／だるま女 | 00 | 完了 | `004` | `89a4a64c08e191d410f938c919e8715130790139` | `f0e3abb21018117629c6b817043cb5861e42cf81` | Review_004 Pass。正本変更なし。 |
 | 0089 | 日本だるま／だるま女 | 10 | 再レビュー待 | `004` | `46ae27129bced8b8752e00a87677ab191d26449b` | `cdee7caeb58edbf5269ca3340b96bf853d74e59f` | Review_004指摘対応。D15 Secondary `DISAPPEARANCE` を除外し、D16を再発見時点と主作用時点の不一致からUへ保守化。 |
 | 0091 | ベッドの下の男 | 00 | 完了 | `004` | `693ba24ff2f8e04bfc4b3957c8479a6df4607a92` | `afc764c69fb9eb0dfeb50aaced7d20e75a912ec9` | Review_004 Pass。正本変更なし。 |
@@ -197,5 +197,5 @@
 - 2026-09-15: control planeの責務を現在状態の保持へ限定。作業手順、Status遷移、commit/push規則、Review修正cycle、SHA整合性判定を標準workflowへ移管。
 - 2026-09-15: 対象6 EntryのReview_004返却を反映。6本の00は`完了 / 004`、6本の10は`再作業中 / 004`として修正cycleを開始。
 - 2026-09-15: 0060_10のReview_004指摘対応を完了し、`再レビュー待 / 004`へ移行。
-- 2026-09-15: 0081_10のReview_004指摘対応を完了し、`再レビュー待 / 004`へ移行。
+- 2026-09-15: 0081_10のReview_004指摘対応を完了し、`再レビュー待 / 004`へ移行。後続の現行taxonomy再照合でD19を`D19.KIN.SCHOOL_YOUTH`へ正規化しpost-SHAを更新。
 - 2026-09-15: 0089_10のReview_004指摘対応を完了し、`再レビュー待 / 004`へ移行。
