@@ -115,11 +115,11 @@
 | レビュー待 | 0 |
 | 要修正 | 0 |
 | 再作業中 | 0 |
-| 再レビュー待 | 2 |
-| 完了 | 7 |
+| 再レビュー待 | 0 |
+| 完了 | 9 |
 | －（対象外） | 0 |
 
-2026-09-15現在、Review_003で要修正となった0003・0006のCoder再作業を1 Entryずつ完了し、両EntryをReview_004待ちへ移行した。先行9件全体では7件完了、2件再レビュー待である。
+2026-09-15現在、0003・0006のReview_004は00/10ともPass。これにより先行9件はすべてReview Cycle完了となった。
 
 ## 5.2. Coder workflow checkpoint
 
@@ -131,7 +131,7 @@
 | R4 Entry QA | 9 | 40 |
 
 - R0: `完了`
-- Review Cycle: `0001/0005/0011/0019/0024/0025/0059 完了 / 0003/0006 再レビュー待 / 40件 未`
+- Review Cycle: `0001/0003/0005/0006/0011/0019/0024/0025/0059 完了 / 40件 未`
 - R5: `未`
 - R6: `未`
 - R7: `未`
@@ -141,9 +141,9 @@
 | Entry_ID | 伝承 | R1 | R2 | R3 | R4 | Status | pre-SHA | R3 SHA | R4 SHA | remarks |
 |---|---|---|---|---|---|---|---|---|---|---|
 |0001|口裂け女|完了|完了|完了|完了|完了|4e18c1a977c8c223a26865fac0feeafef5d54b37|9a565a4879688a9a07e6c60a617813e026d46959|134a9ce8394ed0e2e5a7f491c6a52b19cb236c0c|Review_003: 00/10ともPass。Review Cycle完了。10 blob `29fa0f28bd3f3a6b51680c990d5572f2b7edfd51`。|
-|0003|赤い紙・青い紙／赤マント系|完了|完了|完了|完了|再レビュー待|5c577eb3d3acfa3f69fd4ca841875888b27305cf|7e08f01ca3119e71268292513504ff79f6987d60|c0d5fac7edad8edd31f4d768277ce4ae6a11bda3|Review_003再作業済。00 Pass。10 commit `227d35da9fcc6cce75633543f43e93f16a8c8b6b`, blob `5267babadc521d4c5e33c395ea8471cbd396cf35`; adjudication `489e7c316787ef22fd3c599b95102ea998dbca74`; D01=U、D04=U。Review_004待ち。|
+|0003|赤い紙・青い紙／赤マント系|完了|完了|完了|完了|完了|5c577eb3d3acfa3f69fd4ca841875888b27305cf|7e08f01ca3119e71268292513504ff79f6987d60|c0d5fac7edad8edd31f4d768277ce4ae6a11bda3|Review_004: 00/10ともPass。Review Cycle完了。10 blob `5267babadc521d4c5e33c395ea8471cbd396cf35`。D01=U、D04=Uを維持。|
 |0005|紫の鏡|完了|完了|完了|完了|完了|c2a37792f12b6c2aa5b8760536b13764d14c714d|74c8f1367a53020c2ff02b3ae5072202ad74e7e9|658b95e6fe5ea8f8b0a3be83314cc851a788e016|Review_002: 00/10ともPass。D17忘却制御taxonomy gapを保持。|
-|0006|メリーさんの電話|完了|完了|完了|完了|再レビュー待|89b2865013ecd7fca4b39fa914973a0f55eb3b3b|92bbf26600e52525c2c11398c55d32082f0b3d0e|6a36aebbc047908679f4884d4202da5d7a2efc5b|Review_003再作業済。00 Pass。10 commit `f3001dd88355c10959e1295312b8abc340ba1ea9`, blob `0e8829b9d6cc5f1bcde7875f7b1429ec1f3ae178`; adjudication `414aeaa2f3581653ff550632590edd865281e48d`; D06=U。Review_004待ち。|
+|0006|メリーさんの電話|完了|完了|完了|完了|完了|89b2865013ecd7fca4b39fa914973a0f55eb3b3b|92bbf26600e52525c2c11398c55d32082f0b3d0e|6a36aebbc047908679f4884d4202da5d7a2efc5b|Review_004: 00/10ともPass。Review Cycle完了。10 blob `0e8829b9d6cc5f1bcde7875f7b1429ec1f3ae178`。D06=Uを維持。|
 |0011|こっくりさん|完了|完了|完了|完了|完了|1b24d197f9cb94241e26a368a841bc1071671d23|4254c58c1dc3fab6315f62e2846e31401c89f3fb|0b0f861577ceae5f546d0d3796387e27aa65dfe2|Review_003: 00/10ともPass。Review Cycle完了。10 blob `20642572d572c6dafb0aeca1c9426e50d02bfff9`。|
 |0019|小さいおじさん|完了|完了|完了|完了|完了|e7ada0703530358d46b387b4feb149fc9e1b8ad9|b3f91feaba652b5b3b8eeca202bf2bddb4449c34|1f180c1d0fde5100b0cf71d6bc184ad29a562f0d|Review_002: 00/10ともPass。|
 |0024|幸福の手紙|完了|完了|完了|完了|完了|fc120f41ab98bc1f150f624dcafaaa016e2c6d39|41e27cc1c43d79fa231f32b9e0ffdf80fb296811|362878efa061cd073f48b2cf09d9e006c2af6ba9|Review_002: 00/10ともPass。|
@@ -195,9 +195,9 @@
 | Entry_ID | 00 | 10 | 総合Status | 次Review |
 |---|---|---|---|---|
 |0001|Review_003 Pass|Review_003 Pass|完了|－|
-|0003|Review_003 Pass|Review_003指摘反映済|再レビュー待|Review_004|
+|0003|Review_004 Pass|Review_004 Pass|完了|－|
 |0005|Review_002 Pass|Review_002 Pass|完了|－|
-|0006|Review_003 Pass|Review_003指摘反映済|再レビュー待|Review_004|
+|0006|Review_004 Pass|Review_004 Pass|完了|－|
 |0011|Review_003 Pass|Review_003 Pass|完了|－|
 |0019|Review_002 Pass|Review_002 Pass|完了|－|
 |0024|Review_002 Pass|Review_002 Pass|完了|－|
@@ -208,7 +208,7 @@
 
 `0001 → 0003 → 0005 → 0006 → 0011 → 0019 → 0024 → 0025 → 0059 → 0060 → 0081 → 0089 → 0091 → 0101 → 0112 → 0113 → 0118 → 0132 → 0133 → 0137 → 0152 → 0157 → 0158 → 0169 → 0178 → 0179 → 0180 → 0181 → 0188 → 0198 → 0225 → 0250 → 0275 → 0309 → 0319 → 0349 → 0356 → 0362 → 0363 → 0365 → 0366 → 0384 → 0385 → 0394 → 0403 → 0410 → 0411 → 0412 → 0413`
 
-Review_003で要修正となった`0003・0006`は、いずれも1 Entryずつ再作業を完了しReview_004待ちへ移行した。新規Entryへ進む前にReview_004結果を反映する。
+Review_004で`0003・0006`の00/10双方がPassとなり、先行9件はすべてReview Cycle完了。次の新規Entryは`0060`。
 
 # 8. Entry完了条件
 
@@ -238,6 +238,7 @@ Entry確認、pre-SHA、Evidence正本、Version Scope、独立D01〜D21、R3 fr
 |2026-09-15|先行5件 Review_003|`0001・0011・0059 完了 / 0003・0006 要修正`|
 |2026-09-15|0003 Review_003再作業|`要修正 → 再作業中 → 再レビュー待`。D01/D04をUへ保守化。|
 |2026-09-15|0006 Review_003再作業|`要修正 → 再作業中 → 再レビュー待`。D06をUへ保守化。|
+|2026-09-15|0003・0006 Review_004|00/10ともPass。先行9件Review Cycle完了。|
 
 # 10. 最終完了条件
 
