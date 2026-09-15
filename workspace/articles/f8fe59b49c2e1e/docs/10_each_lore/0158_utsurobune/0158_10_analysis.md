@@ -1,257 +1,172 @@
-記載内容については、以下3文書のインストラクションに従う。
+記載内容については、以下3文書のインストラクションに従うこと。
 
 - `docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md`
 - `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
 - `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
 
-伝承内容・典拠・異伝・証拠上の不確実性は、同一ディレクトリの `0158_00_contents.md` を参照する。
+Evidence正本は `0158_00_contents.md`、R1〜R4監査成果物は `docs/99_work/20260914_A3_full_recoding/` 配下を参照する。
 
-本ファイルは、パイロット分析で確定した `Pilot Coding` の値・Statusを文書形式へ移植する。今回の文書化だけを理由にコードを再判定しない。
 # 1. 伝承エントリ基本情報
 
-- `Entry_ID`: `158`
+- `Entry_ID`: `0158`
 - `伝承エントリ名称`: 虚舟
-- `Macro_Category`: 古伝承・民俗
+- `Macro_Category`: 古伝承・怪異遭遇
 - `Entry_Type`: 物語・伝説
-- `Version_Scope`: Candidate Masterの代表形。異伝を混成せず、メモ・主典拠の範囲でコード
-- `Evidence_Rank`: `B`
-- `主な成立・流通期`: 江戸期〜現代
-- `ネット発祥`: Mixed
+- `Version_Scope`: 1803年の出来事として常陸国海岸へ異形舟が漂着し、異国風女性・箱・不明文字が観察され、正体不明のまま海へ戻されたとする江戸期奇談を共有核とする。UFO・宇宙人説は後代再文脈化として含めるが初期説明へ遡及しない。
 
 # 2. 分析概念次元
 
-## 2.1. 来歴・流通・提示の次元
+## 2.1. 来歴・流通・提示
 
-### 2.1.1. D01: 生成年代
-
-**いつ成立したか**
-
-- Value: `D01.G0` — 前近代（〜1867）
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
-
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.1.2. D02: 最古確認流通媒体
-
-**現在の証拠で、伝承が実際に人から人へ流通したことを最も古く確認できる媒体は何か**
-
-- Primary: なし
+### D01 生成年代
+- Primary Child / Value: `D01.G0` — 前近代（〜1867）
+- Primary Parent: なし
 - Secondary: なし
-- Status: `U` — Unknown（証拠不足）
+- Status: `I`
+- 判定根拠: 江戸期資料が1803年の出来事として記録した史料系譜を確認できる。原本本文未固定のためI。
 
-パイロット時点の典拠では、この次元を一意に判定するための証拠が不足しているため `U` を保持する。
-
-### 2.1.3. D03: 確認流通媒体ポートフォリオ（Version Scope）
-
-**今回コードするVersion Scopeで、伝承が受容者へ流通したことを確認できる媒体は何か**
-
-- Primary Child: `D03.PRT.BOOK` — 書籍
-- Primary Parent: `D03.PRT` — 印刷・書簡
+### D02 最古確認流通媒体
+- Primary Child / Value: `D02.PRT.BOOK` — 書籍
+- Primary Parent: `D02.PRT`
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
+- Status: `I`
+- 判定根拠: 現在安全に固定できる最古流通層は『兎園小説』等の江戸期随筆・奇談書。原本未固定のためI。
 
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.1.4. D04: 生成・変容パターン
-
-**時間とともにどう変形したか**
-
-- Primary Child: `D04.MIG.DIGITAL_REAMPLIFICATION` — ネット再増幅
-- Primary Parent: `D04.MIG` — 媒体移行
+### D03 確認流通媒体ポートフォリオ
+- Primary Child / Value: `D03.PRT.BOOK` — 書籍
+- Primary Parent: `D03.PRT`
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
+- Status: `I`
+- 判定根拠: 近世書籍を基盤に後代出版・研究で再流通する。
 
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
+### D04 生成・変容パターン
+- Primary Child / Value: `D04.REC.CONTEXT_UPDATE` — 時代適応
+- Primary Parent: `D04.REC`
+- Secondary: `D04.VAR.ACCRETION` — 増補
+- Status: `I`
+- 判定根拠: 異国・漂着奇談が近現代にUFO・宇宙人という新しい説明枠へ更新される。
 
-### 2.1.5. D05: 提示形式
-
-**どんなコミュニケーション形式で提示されるか**
-
-- Primary Child: `D05.HRS.LOCAL_HEARSAY` — 地元伝聞
-- Primary Parent: `D05.HRS` — 伝聞叙述
+### D05 提示形式
+- Primary Child / Value: `D05.HYB.NARRATIVE_EXPLANATION` — 物語＋解説
+- Primary Parent: `D05.HYB`
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
+- Status: `I`
+- 判定根拠: 漂着・観察・詮議・返送という事件物語と正体推測が結合する。
 
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.1.6. D06: 真実性提示
-
-**どんな「本当らしさ」を要求するか**
-
-- Value: `D06.T3` — 共同体既知事実
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
-
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-## 2.2. 意味形成の次元
-
-### 2.2.1. D07: 意味形成対象
-
-**何が不可解・不確実なのか**
-
-- Primary Child: `D07.ANO.UNKNOWN_EXISTENCE` — 未知存在
-- Primary Parent: `D07.ANO` — 異常体験・存在
+### D06 真実性提示
+- Primary Child / Value: `D06.T6` — 真偽未確定
+- Primary Parent: なし
 - Secondary: なし
-- Status: `D` — Direct（典拠に直接明示）
+- Status: `I`
+- 判定根拠: 奇談・記録として語られるが、出来事の史実性と女性・舟の正体は開かれたまま残る。
 
-`0180` と同様、`Pilot Coding` の既存判定を文書化した。直接証拠の確認先は `*_00_contents.md` の典拠・証拠対応を参照する。
+## 2.2. 意味形成
 
-### 2.2.2. D08: 意味形成契機
+### D07 意味形成対象
+- Primary Child / Value: `D07.ANO.UNKNOWN_EXISTENCE` — 未知存在
+- Primary Parent: `D07.ANO`
+- Secondary: `D07.ANO.UNEXPLAINED_EVENT` — 説明不能事象
+- Status: `D/I`
+- 判定根拠: 未知の舟・女性・文字の正体と漂着事件そのものの説明不能性が中心。
 
-**何を手掛かりに問題化されるか**
+### D08 意味形成契機
+- Primary Child / Value: `D08.DEX.DIRECT_EVENT` — 出来事への直接遭遇
+- Primary Parent: `D08.DEX`
+- Secondary: `D08.TRC.TEXT_DOCUMENT` — 文書・記載
+- Status: `D/I`
+- 判定根拠: 物語内部では村人の直接遭遇、現代受容者には江戸期記録が手掛かりとなる。
 
-- Primary Child: `D08.TRC.TEXT_DOCUMENT` — 文書・記載
-- Primary Parent: `D08.TRC` — 記録・物的痕跡
+### D09 意味付与操作
+- Primary Child / Value: `D09.CAT.TYPE_ASSIGNMENT` — 類型化
+- Primary Parent: `D09.CAT`
+- Secondary: `D09.UNK.DELIBERATE_NONRESOLUTION` — 非解決維持
+- Status: `I`
+- 判定根拠: 異国人・未知舟等の既知カテゴリへ仮分類しつつ、最終的な正体は閉じない。
+
+### D10 因果源存在論
+- Primary Child / Value: `D10.PHN.ANOMALOUS_EXPERIENCE` — 異常体験
+- Primary Parent: `D10.PHN`
+- Secondary: `D10.OBJ.ARTIFACT_DEVICE` — 人工物・機器
+- Status: `C`
+- 判定根拠: 共有核は異常な遭遇現象であり、舟の人工物性や後代UFO解釈をSecondaryで保持する。未知女性を特定存在カテゴリへ固定しない。
+
+## 2.3. 因果・行動モデル
+
+### D11 発動・接触条件
+- Primary Child / Value: `D11.CON.LOCATION_STATE` — 位置・状態条件
+- Primary Parent: `D11.CON`
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
+- Status: `I`
+- 判定根拠: 異形舟が海岸へ漂着して観察可能となる状態が接触条件。
 
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.2.3. D09: 意味付与操作
-
-**不可解なものをどう理解可能にするか**
-
-- Primary Child: `D09.HST.HISTORICAL_ANCHOR` — 歴史接続
-- Primary Parent: `D09.HST` — 由来化・歴史化
+### D12 作用対象
+- Primary Child / Value: `D12.FOC.PROTAGONIST_EXPERIENCER` — 主人公・体験者
+- Primary Parent: `D12.FOC`
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
+- Status: `I`
+- 判定根拠: 漂着物を観察・詮議する漁民・村人が焦点人物。
 
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.2.4. D10: 因果源存在論
-
-**原因を何として世界に置くか**
-
-- Primary Child: `D10.PHN.ANOMALOUS_EXPERIENCE` — 異常体験
-- Primary Parent: `D10.PHN` — 現象・体験
+### D13 作用機構
+- Primary Child / Value: `D13.MAN.MANIFEST_ONLY` — 顕現のみ
+- Primary Parent: `D13.MAN`
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
+- Status: `I`
+- 判定根拠: 未知存在が出現・観測されること自体が主作用で、安定した攻撃・呪詛はない。
 
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-## 2.3. 因果・行動モデルの次元
-
-### 2.3.1. D11: 発動・接触条件
-
-**何を契機に因果系へ入るか**
-
-- Primary Child: `D11.INF.LEARN_KNOW` — 知る
-- Primary Parent: `D11.INF` — 情報曝露
+### D14 帰結極性
+- Primary Child / Value: `D14.NEU` — 中立
+- Primary Parent: なし
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
+- Status: `I`
+- 判定根拠: 共有核は遭遇と不明性であり、明示的な利益・危害を必須としない。
 
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.3.2. D12: 作用対象
-
-**誰／何に作用するか**
-
-- Primary Child: `D12.FOC.PROTAGONIST_EXPERIENCER` — 主人公・体験者
-- Primary Parent: `D12.FOC` — 焦点人物
+### D15 帰結領域
+- Primary Child / Value: `D15.KNW.UNCERTAINTY_PRESERVED` — 不確実性維持
+- Primary Parent: `D15.KNW`
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
+- Status: `I`
+- 判定根拠: 女性・舟・文字の正体は不明のまま去る。
 
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.3.3. D13: 作用機構
-
-**因果源が対象へ何をするか**
-
-- Primary Child: `D13.MAN.MANIFEST_ONLY` — 顕現のみ
-- Primary Parent: `D13.MAN` — 顕現・観測
+### D16 因果時間構造
+- Primary Child / Value: `D16.EVT.SINGLE_OBSERVATION` — 単発観測
+- Primary Parent: `D16.EVT`
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
+- Status: `I`
+- 判定根拠: 主たる怪異は一回の漂着・遭遇イベントとして成立する。
 
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.3.4. D14: 帰結極性
-
-**結果は正・負・中立・混合か**
-
-- Value: `D14.NEU` — 中立
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
-
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.3.5. D15: 帰結領域
-
-**何の領域が最終的に変わるか**
-
-- Primary Child: `D15.KNW.UNCERTAINTY_PRESERVED` — 不確実性維持
-- Primary Parent: `D15.KNW` — 世界認識・知識
+### D17 回避・制御方式
+- Primary Child / Value: `D17.NON.OBSERVATIONAL_ONLY` — 観測のみ
+- Primary Parent: `D17.NON`
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
+- Status: `I`
+- 判定根拠: 共有核に危害解除の固有規則はなく、観察・詮議が中心。海へ返す行為を一般的回避法へ昇格しない。
 
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
+### D18 作用レイヤー
+- `D18.L1`: `1`
+- `D18.L2`: `0`
+- `D18.L3`: `0`
+- Status: `I`
+- 判定根拠: 伝承内部の漂着・遭遇因果はあるが、受容自体の作用や独立した社会現実効果は固定できない。
 
-### 2.3.6. D16: 因果時間構造
+## 2.4. 社会的分布・現実接続
 
-**発動条件・原因成立から主作用／主帰結までの関係は、時間上どのように編成されているか**
+### D19 流通範囲
+- Primary Child / Value: `D19.LOC.LOCAL_TRADITION` — 地域伝承圏
+- Primary Parent: `D19.LOC`
+- Secondary: `D19.MAS.NATIONAL_PUBLIC` — 全国的大衆
+- Status: `I`
+- 判定根拠: 常陸国の漂着伝承を基盤にしつつ、印刷・研究・オカルト再話で地域外へ流通する。
 
-- Primary Child: `D16.EVT.SINGLE_OBSERVATION` — 単発観測
-- Primary Parent: `D16.EVT` — 単一エピソード・事象内
+### D20 特権情報保持者
+- Primary Child / Value: `D20.UNK.NO_ONE_KNOWS` — 誰も知らない
+- Primary Parent: `D20.UNK`
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
+- Status: `I`
+- 判定根拠: 舟・女性・文字の決定的正体を保持する主体は固定されず、謎として継承される。
 
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.3.7. D17: 回避・制御方式
-
-**結果をどう回避・制御・利用できるか**
-
-- Primary Child: `D17.NON.OBSERVATIONAL_ONLY` — 観測のみ
-- Primary Parent: `D17.NON` — 制御不要
+### D21 現実アンカー
+- Primary Child / Value: `D21.A4` — 史実・記録・既存伝承を因果統合
+- Primary Parent: なし
 - Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
-
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.3.8. D18: 作用レイヤー
-
-**因果効力は伝承内／受容者／社会現実のどこに及ぶか**
-
-- `D18.L1` — 伝承内因果層: `1`
-- `D18.L2` — 受容者層: `0`
-- `D18.L3` — 社会現実層: `0`
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
-
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-## 2.4. 社会的埋め込みの次元
-
-### 2.4.1. D19: 流通範囲
-
-**誰の間に伝承が流通するか**
-
-- Primary Child: `D19.LOC.LOCAL_TRADITION` — 地域伝承圏
-- Primary Parent: `D19.LOC` — 地域共同体
-- Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
-
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.4.2. D20: 特権情報保持者
-
-**誰が真相・追加情報を持つか**
-
-- Primary Child: `D20.INS.LOCAL_RESIDENT` — 地元住民
-- Primary Parent: `D20.INS` — 地元・内部者
-- Secondary: なし
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
-
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-### 2.4.3. D21: 現実アンカー
-
-**実在世界へどの程度固定されるか**
-
-- Value: `D21.A4` — 史実・記録・既存伝承を因果統合
-- Status: `I` — Inferred（定義と証拠から合理的に推定）
-
-`0180` と同様、典拠に明示された事実だけでなく、コード定義と記録内容から合理的に推定したパイロット判定を保持する。
-
-# 3. パイロット時点のコーディングメモ
-
-- `D16:U`
-
-このメモはパイロットExcelに記録されたレビュー用メモをそのまま保持する。
+- Status: `I`
+- 判定根拠: 1803年という日時、常陸国の地理、江戸期記録、後代解釈が一つの遭遇伝承へ統合される。
