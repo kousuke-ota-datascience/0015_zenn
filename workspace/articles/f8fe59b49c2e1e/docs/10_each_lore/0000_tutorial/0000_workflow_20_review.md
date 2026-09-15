@@ -1,17 +1,34 @@
-# 0. INTRODUCTION
+# 1. Quick Reference
 
-本書は、`docs/10_each_lore/<Entry>/` 配下の
+本章は、個別伝承Reviewを**決められた順序どおりに実行するための実行手順**である。
+
+Reviewerは本章の順序を変更・省略・統合してはならない。各工程の確認を完了してから次工程へ進む。内容上もっともらしい、意味的に同等、過去ReviewでPassしている等の理由で、先行工程の確認要件を緩和してはならない。
+
+詳細な判断基準・背景・Review mdフォーマットは第2章を参照する。第2章は本章の実行順序を変更しない。
+
+## 1.1. Reviewerの基本原則
+
+本書は、`docs/10_each_lore/<Entry>/` 配下の次の正本成果物をレビューし、その結果をReview mdとして保存するための**個別伝承Review標準作業手順**である。
 
 - `<Entry_ID>_00_contents.md`
 - `<Entry_ID>_10_analysis.md`
 
-をレビューし、その結果をReview mdとして保存するための**個別伝承Review標準作業手順**である。
+必ず次を守る。
 
-Reviewerは対象成果物を修正しない。問題、根拠、分析上の影響、修正方向をReview mdへ記録し、Pass / 要修正を判定する。
+- Reviewerは対象の正本成果物を修正しない。
+- Reviewerはcontrol planeを更新しない。
+- 既存コード値、旧Excel、過去Review、作業メモを正しいものとして前提化しない。
+- 複数Entryでも、**1 Entryずつ 00 → 10 → 保存 → 再確認まで完結**させてから次Entryへ進む。
+- 各Review工程は、前工程の確認完了後にのみ開始する。
+- tutorial構造・必須記載内容・記載粒度は、後続の内容評価とは独立して判定する。
+- 「同じ意味の情報がある」ことを、tutorial所定の見出し・順序・フィールド・ブロック形式を満たすことの代替として扱わない。
+- format上の不適合を発見しても、Findingを確定したうえで残りのQAを継続し、同一Review cycleで他の問題も取り切る。
+- 対象版を固定できない場合だけはReviewを開始せず、停止理由を記録する。
+- Findingが1件でもあればPassにしない。**Passは全QAを完了し、Findingが0件の場合のみ**とする。
 
 本書はCoder側の修正手順、control planeの状態遷移、pre/post-SHA更新規則を定義しない。それらは `0000_workflow_10_each_lore_analysis.md` を正とする。
 
-## 0.1. 実行時入力
+## 1.2. 実行前に固定するもの
 
 Review実行時には、対象Entryに加え、必要に応じて次を外部から指定する。
 
@@ -21,30 +38,168 @@ repository
 使用する control plane
 ```
 
-control planeの実体パスは実行時に外部から与える。本workflow内に特定のcontrol planeパスをハードコードしない。
+control planeの実体パスは実行時に外部から与える。本workflow内から別のcontrol planeを推測・探索しない。
 
-control planeを使用しないReviewでは、レビュー対象commitを別途明示して固定する。
+各Entryについて、Review開始前に次を確定する。
 
-# 1. Review時に確認する正本
+```text
+00 対象commit SHA
+00 対象blob SHA
+10 対象commit SHA
+10 対象blob SHA
+Review_Seq
+```
 
-## 1.1. workflow / tutorial
+control planeを使用する場合は、対象Entry × 成果物行の `post-SHA` と、そのcommit時点の対象ファイルblobを照合する。対象版を確定できない場合はReviewを開始しない。
+
+`Review_Seq` は既存最大Seq+1とし、同一Review cycleの00/10で同じSeqを使う。既存Reviewは上書きしない。
+
+## 1.3. Entryごとの必須実行順序
+
+各Entryを、**必ず次の順序**で処理する。
+
+```text
+1. 対象版固定
+   - control plane確認
+   - 00/10 commit SHA固定
+   - 00/10 blob SHA固定
+   - Review_Seq固定
+
+2. 00 tutorial構造
+   - 必須見出し
+   - 見出し順序
+   - 必須フィールド
+   - 所定の表・ブロック構造
+
+3. 00 tutorial必須記載内容
+
+4. 00 tutorial記載粒度
+   - 第三者が主要な伝承形・Evidence対応を再構成できるか
+
+5. 00 Evidence / Content Review
+
+6. 10 tutorial構造
+   - 基本情報
+   - D01〜D21
+   - 各Dimensionの所定フィールド・ブロック
+   - 見出し・順序
+
+7. 10 tutorial必須記載内容
+
+8. 10 tutorial記載粒度
+
+9. Version Scope Review
+
+10. D01〜D21 Review
+
+11. sense-making / 因果構造QA
+
+12. 00→10 traceability QA
+
+13. Finding重大度・最終判定
+
+14. Review_00 / Review_10 保存
+
+15. 保存したReview mdを再取得して確認
+
+16. Entry完了
+```
+
+**工程2〜12を並べ替えない。工程2〜4を完了する前に00のEvidence / Content判定へ進まず、工程6〜8を完了する前にVersion ScopeやD01〜D21の判定へ進まない。**
+
+ある工程でFAILを確認した場合は、そのFindingを記録したうえで次工程へ進み、後続QAを省略しない。ただし対象版固定に失敗した場合はReview自体を開始しない。
+
+## 1.4. Review時の最小チェック
+
+00では最低限、次を確認する。
+
+- tutorialの必須見出し・順序・フィールドを満たす。
+- summaryから主要な伝承形・命題を再構成できる。
+- 主体、場所、物、条件、規則、禁忌、帰結、不確実性が必要な粒度で記録されている。
+- 最古確認と実際の起源を混同していない。
+- 初期形と後代異伝を区別している。
+- 各内容がどの資料の何をEvidenceとしているか追跡できる。
+- 本文未実見・資料不足・競合を隠していない。
+- Analysis layerをEvidence layerへ混入していない。
+- 後代設定を初期Versionへ遡及していない。
+
+10では最低限、次を確認する。
+
+- 基本情報とVersion Scopeが存在する。
+- D01〜D21がすべて存在する。
+- 各DimensionのPrimary / Value、Parent、Secondary、Statusが所定形式で存在する。
+- 判定根拠が00の具体的Evidenceに接続する。
+- 「この伝承における現れ方」がEntry固有である。
+- `U / NA / C` の理由が具体的である。
+- code ID、Parent / Child、Primary / Secondary、Statusが規則に合う。
+- Evidence不足を推測で埋めていない。
+- taxonomy gapを `U` や近似Childで隠していない。
+- D07〜D17が一つの意味形成・因果モデルとして読める。
+- D12→D13→D15が一本の因果列として読める。
+- D18 L3にScope内の独立X Evidenceがある。
+- D19で公開可能性を全国流通と同一視していない。
+- 00→10の根拠追跡が可能である。
+
+## 1.5. 判定・保存・完了条件
+
+最終判定はFindingの最大重大度で決める。
+
+```text
+Findingなし              → 問題なし（Pass）
+Minorのみ                 → 要修正（Minor）
+Moderateあり、Majorなし   → 要修正（Moderate）
+Majorあり                 → 要修正（Major）
+```
+
+保存形式は次とする。
+
+```text
+docs/99_work/review_10_each_lore/<Entry_ID>/Review_<Entry_ID>_00_<Review_Seq>.md
+docs/99_work/review_10_each_lore/<Entry_ID>/Review_<Entry_ID>_10_<Review_Seq>.md
+```
+
+Entry完了前に、保存したReview mdを再取得し、最低限次を確認する。
+
+- 00/10が同じReview Seqで保存されている。
+- 対象commit SHA / blob SHAが正しい。
+- control plane使用時のpre-SHA / post-SHAが記録されている。
+- 最終判定がFindingsと整合する。
+- Findings、QA、修正優先順位、最終判定が欠落していない。
+
+ここまで完了して初めて次Entryへ進む。
+
+# 2. Detailed Guidance
+
+本章は、第1章の各工程をどのように判断するかを定義する。**実行順序は第1章を正とし、本章の記載を理由に工程を並べ替えない。**
+
+## 2.1. Review時に確認する正本と責務
+
+Reviewでは次を正本として参照する。
+
+workflow / tutorial:
 
 - `docs/10_each_lore/0000_tutorial/0000_workflow_10_each_lore_analysis.md`
 - `docs/10_each_lore/0000_tutorial/0000_00_contents.md`
 - `docs/10_each_lore/0000_tutorial/0000_10_analysis.md`
 
-## 1.2. 理論・コード・分析コード付与規則
+理論・コード・分析コード付与規則:
 
 - `docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md`
 - `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
 - `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
 - 必要に応じ `docs/00_research_overview/80_appendix/20_what_is_sense_making.md`
 
-Reviewでは、既存コード値、旧Excel、過去Review、作業メモを正しいものとして前提化しない。
+文書構造・見出し番号・命名規則は次を正とする。
 
-# 2. Reviewの基本単位
+- `docs/00_research_overview/90_ducumentation_metadata.md`
 
-## 2.1. 1 Entryずつ完結させる
+Reviewでは、既存コード値、旧Excel、過去Review、作業メモを正しいものとして前提化しない。過去ReviewはReview_Seqの決定や履歴確認には使用できるが、現行成果物の適否判定を省略する根拠にはしない。
+
+Reviewerの責務は、対象成果物を修正することではなく、問題、根拠、分析上の影響、修正方向をReview mdへ記録し、Pass / 要修正を判定することである。
+
+Coder側の修正手順、control planeの状態遷移、pre/post-SHA更新規則は `0000_workflow_10_each_lore_analysis.md` を正とする。Reviewerはcontrol planeのcheckpoint修復、Status変更、pre/post-SHA更新を行わない。
+
+## 2.2. Reviewの基本単位とReview_Seq
 
 複数Entryを依頼された場合でも、原則として次の単位で閉じる。
 
@@ -57,22 +212,13 @@ Entry A の 00 をReview
 → 次Entryへ進む
 ```
 
-## 2.2. Review_Seq
-
 `Entry_ID` は4桁ゼロ埋め、`Review_Seq` は3桁ゼロ埋めとする。
-
-保存形式:
-
-```text
-docs/99_work/review_10_each_lore/<Entry_ID>/Review_<Entry_ID>_00_<Review_Seq>.md
-docs/99_work/review_10_each_lore/<Entry_ID>/Review_<Entry_ID>_10_<Review_Seq>.md
-```
 
 同一Review cycleの00/10は同じSeqを使う。既存最大Seq+1を用い、既存Reviewを上書きしない。
 
-# 3. Review対象版の固定
+control planeの「最新レビュー版」は参照情報であり、Reviewer自身が作成した未反映Review等が存在し得るため、Review_Seq決定時は実際のReview保存先にある既存Seqも確認する。
 
-## 3.1. commit SHA / blob SHA
+## 2.3. Review対象版の固定
 
 Review開始時に、00/10それぞれについて次を固定する。
 
@@ -83,9 +229,7 @@ Review開始時に、00/10それぞれについて次を固定する。
 
 commit SHAは履歴上の対象時点、blob SHAは内容同一性を固定する。
 
-## 3.2. control planeが指定されている場合
-
-対象Entry × 成果物行から次を確認する。
+control planeが指定されている場合、対象Entry × 成果物行から次を確認する。
 
 ```text
 Status
@@ -109,40 +253,26 @@ control plane の post-SHA
 
 一致しない場合、Reviewerは最新mainを黙ってReviewしない。対象版を確定できるまでReviewを開始せず、不一致を作業記録へ残す。
 
-control planeのcheckpoint修復、Status変更、pre/post-SHA更新はReviewerの責務ではない。必要な整合性回復は `0000_workflow_10_each_lore_analysis.md` に従ってCoder側で行う。
+control planeを使用しないReviewでは、レビュー対象commitを別途明示して固定する。
 
 legacy checkpointで成果物単独commitではない場合は、そのcommit時点の対象blobとの同一性を確認する。
 
-# 4. Reviewの順序
+対象版を固定できないことは唯一のfail-stop条件である。format・内容・コード上の不適合はReviewを止める理由にはせず、Findingとして記録し、残りのQAも完了させる。
 
-必ず次の順序で確認する。
-
-```text
-00:
-1. tutorial構造
-2. tutorial必須記載内容
-3. tutorial記載粒度
-4. Evidence / Content内容
-
-10:
-1. tutorial構造
-2. tutorial必須記載内容
-3. tutorial記載粒度
-4. Version Scope
-5. D01〜D21
-6. sense-making / 因果構造
-7. 00→10 traceability
-```
-
-構造が合っているだけではtutorial準拠としない。必須内容と、第三者が再構成できる記載粒度まで確認する。
-
-# 5. `00_contents` Review
+## 2.4. `00_contents` Reviewの詳細
 
 `00_contents` は**伝承内容 / Evidence整理の正本**としてReviewする。
 
-最低限、次を確認する。
+第1章の順序どおり、まずtutorial構造、次にtutorial必須記載内容、次にtutorial記載粒度を確認し、その後にEvidence / Content内容へ進む。
 
-- tutorialの必須見出し・順序・フィールドを満たす。
+**tutorial構造**では、`0000_00_contents.md` を正として、必須見出し、見出し順序、フィールド名、表列、固定区分、ブロック構造を照合する。意味的に同等の情報が別形式で存在するだけでは構造準拠としない。
+
+**tutorial必須記載内容**では、各必須節・フィールドに、その節が要求する内容が実際に記載されているかを見る。空欄、別節への暗黙委譲、項目名だけ存在して内容がない状態を準拠としない。
+
+**tutorial記載粒度**では、第三者が00だけから主要な伝承形、Evidenceの役割、初期形と異伝、不確実性を再構成できるかを見る。構造が合っているだけではtutorial準拠としない。
+
+Evidence / Content内容では最低限、次を確認する。
+
 - summaryから主要な伝承形・命題を再構成できる。
 - 主体、場所、物、条件、規則、禁忌、帰結、不確実性が必要な粒度で記録されている。
 - 最古確認と実際の起源を混同していない。
@@ -154,13 +284,19 @@ legacy checkpointで成果物単独commitではない場合は、そのcommit時
 
 Evidence roleや証拠強度の規則は `30_urban_legend_analysis_coding_rules.md` を正とする。
 
-# 6. `10_analysis` Review
+資料分類では、一次資料・同時代資料、原文ミラー・転載・復刻資料、二次資料・研究資料等の区別を、実際の到達資料に即して行う。転載保存を原ページそのものとして扱わず、後代資料から初期時点へ設定を遡及しない。
+
+00でEvidenceとして採用した重要Contentは、第三者が資料名・URL・対象箇所等から追跡できる粒度を要求する。とくに後続10のPrimary、Status、Version Scopeを左右するContentが曖昧な「初期レス群」「後代資料」等に留まる場合は、traceability不足として扱う。
+
+## 2.5. `10_analysis` Reviewの詳細
 
 `10_analysis` は**分析コード付与の正本**としてReviewする。
 
-## 6.1. tutorial準拠
+第1章の順序どおり、まずtutorial構造、次にtutorial必須記載内容、次にtutorial記載粒度を確認し、その後にVersion Scope、D01〜D21、sense-making / 因果構造へ進む。
 
-最低限、次を確認する。
+**tutorial構造**では、`0000_10_analysis.md` を正として、基本情報、Dimension見出し、中心質問、各DimensionのPrimary / Value、Parent、Secondary、Status、`判定根拠`、`この伝承における現れ方` 等の所定構造を照合する。所定の独立ブロックをインラインへ圧縮する等、tutorial所定形式を独自形式へ置換している場合は、内容が存在していても構造上の差分として判定する。
+
+**tutorial必須記載内容**では最低限、次を確認する。
 
 - 基本情報とVersion Scopeが存在する。
 - D01〜D21がすべて存在する。
@@ -169,11 +305,9 @@ Evidence roleや証拠強度の規則は `30_urban_legend_analysis_coding_rules.
 - 「この伝承における現れ方」がコード定義の言い換えではなくEntry固有の説明になっている。
 - `U / NA / C` の理由が具体的に記載されている。
 
-## 6.2. 分析コード妥当性
+**tutorial記載粒度**では、第三者が各Dimensionについて「どのEvidenceから、どの解釈を経て、そのコード・Statusへ到達したか」を再構成できるかを見る。
 
-コードID、Parent / Child、Primary / Secondary、Status、tie-break、taxonomy gap等の詳細は `20 / 30` を正とする。
-
-Reviewでは少なくとも次を確認する。
+分析コード妥当性では、コードID、Parent / Child、Primary / Secondary、Status、tie-break、taxonomy gap等の詳細について `20 / 30` を正とし、少なくとも次を確認する。
 
 - 存在しないcode IDを使用していない。
 - ParentがChildから正しく導出される。
@@ -181,10 +315,12 @@ Reviewでは少なくとも次を確認する。
 - Secondaryが独立した追加構造であり、単なる関連要素ではない。
 - Evidence不足を最もありそうな値で埋めていない。
 - taxonomy gapを `U` や近似Childで隠していない。
+- EvidenceのdirectnessとDimension Statusが整合する。
+- 下位資料しか固定できていない場合に、根拠なく `D` へ引き上げていない。
 
-## 6.3. sense-making / 因果構造QA
+Version Scopeは00 Evidenceから再構成可能でなければならない。Scopeの外にある後代異伝、派生、翻案、別時点のContentを、理由なく分析コードへ混入しない。
 
-特に次を確認する。
+sense-making / 因果構造QAでは特に次を確認する。
 
 ```text
 D07: 何が説明対象か
@@ -202,7 +338,7 @@ D17: 回避・制御・利用
 
 D12→D13→D15は一本の因果列として読めることを要求する。
 
-## 6.4. その他の重点QA
+その他の重点QAは次とする。
 
 - D01: 最古確認資料を生成時期へ自動変換しない。
 - D02: 起源媒体を推測しない。
@@ -215,9 +351,9 @@ D12→D13→D15は一本の因果列として読めることを要求する。
 - D20: 情報がないことを `NO_ONE_KNOWS` と同一視しない。
 - D21: Evidence資料の実在性ではなくScoped Contentの現実アンカーを見る。
 
-# 7. 00 / 10 横断QA
+## 2.6. 00 / 10 横断QA
 
-次を確認する。
+00と10を別々に確認した後、次を確認する。
 
 1. Version Scopeが00 Evidenceから再構成できる。
 2. 10の判定根拠が00の具体内容・典拠へ戻れる。
@@ -236,9 +372,11 @@ D12→D13→D15は一本の因果列として読めることを要求する。
 → D01〜D21
 ```
 
-# 8. Finding重大度と最終判定
+00のEvidence強度・不確実性より10の確信度が高くなっていないかも確認する。00で未固定・転載経由・二次資料依存としている内容を、10でDirect扱いする場合は、独立した根拠がなければ不整合とする。
 
-## 8.1. Major
+## 2.7. Finding重大度と最終判定
+
+Majorは次を目安とする。
 
 - Version Scope、Entry境界、中核の意味形成モデルを変える可能性が高い。
 - Primary / Statusへ直接影響する重大な誤り。
@@ -246,16 +384,16 @@ D12→D13→D15は一本の因果列として読めることを要求する。
 - taxonomy gapを誤コードで隠している。
 - tutorial必須内容・粒度が広範に欠け、再現性を確保できない。
 
-## 8.2. Moderate
+Moderateは次を目安とする。
 
 - 一部Dimension・一部節のコード / Statusへ影響し得る。
 - Evidence directness、Secondary、局所的tutorial不足等の再確認が必要。
 
-## 8.3. Minor
+Minorは次を目安とする。
 
 - 見出し番号、表記、軽微なフォーマット等で、分析判断を変えない局所修正。
 
-## 8.4. 最終判定
+最終判定は次とする。
 
 ```text
 Findingなし              → 問題なし（Pass）
@@ -264,7 +402,9 @@ Moderateあり、Majorなし   → 要修正（Moderate）
 Majorあり                 → 要修正（Major）
 ```
 
-# 9. Review mdの共通記載事項
+複数Findingがある場合、最終判定は最大重大度に従う。内容上維持可能な点が多くてもFindingを相殺しない。format、Evidence、code、traceabilityは独立したQA軸として扱う。
+
+## 2.8. Review mdの記載事項と標準フォーマット
 
 00/10どちらのReview mdにも最低限次を記録する。
 
@@ -294,9 +434,7 @@ QA
 
 Reviewerは修正後コードを勝手に正本へ書き込まず、必要なら「修正方向」または作業仮説として示す。
 
-# 10. Reviewファイル標準フォーマット
-
-## 10.1. 00
+00 Review mdの標準フォーマットは次とする。
 
 ```markdown
 # Review <Entry_ID>_00_<Review_Seq> — Entry <Entry_ID> <伝承名> / `<Entry_ID>_00_contents.md`
@@ -319,7 +457,7 @@ Reviewerは修正後コードを勝手に正本へ書き込まず、必要なら
 ## 6. 最終判定
 ```
 
-## 10.2. 10
+10 Review mdの標準フォーマットは次とする。
 
 ```markdown
 # Review <Entry_ID>_10_<Review_Seq> — Entry <Entry_ID> <伝承名> / `<Entry_ID>_10_analysis.md`
@@ -345,16 +483,16 @@ Reviewerは修正後コードを勝手に正本へ書き込まず、必要なら
 
 FindingがなくてもQAと最終判定を省略しない。
 
-# 11. Review完了チェック
+## 2.9. 保存後確認とReview完了条件
 
 1 EntryのReviewは次をすべて満たした場合のみ完了とする。
 
 - 対象00/10を取得した。
 - 対象commit SHA / blob SHAを固定した。
 - control plane使用時はpost-SHAと対象版を照合した。
-- 00のtutorial構造・内容・粒度を確認した。
+- 00のtutorial構造・内容・粒度を、第1章の順序どおり確認した。
 - 00をEvidence layerとしてReviewした。
-- 10のtutorial構造・内容・粒度を確認した。
+- 10のtutorial構造・内容・粒度を、第1章の順序どおり確認した。
 - Version Scopeを検証した。
 - D01〜D21をReviewした。
 - D07〜D17を一つの意味形成モデルとして確認した。
@@ -362,6 +500,9 @@ FindingがなくてもQAと最終判定を省略しない。
 - taxonomy gap / U / NA / Cを区別した。
 - 00/10で同じReview Seqを使用した。
 - Review mdへ対象commit SHA / blob SHAを記録した。
-- 保存後にReview mdを再確認した。
+- Review mdにFindings、維持可能な点、QA、修正優先順位、最終判定を記録した。
+- 保存後にReview mdを再取得し、保存内容を確認した。
 
-Review完了後のCoder修正、control planeのStatus変更、pre/post-SHA更新は `0000_workflow_10_each_lore_analysis.md` に従う。
+保存後再確認では、Reviewファイルが存在するだけでは完了としない。対象commit SHA / blob SHA、Review Seq、最終判定、Findingsが意図した内容で保存されていることを確認する。
+
+Review完了後のCoder修正、control planeのStatus変更、pre/post-SHA更新は `0000_workflow_10_each_lore_analysis.md` に従う。Reviewerはこれらを代行しない。
