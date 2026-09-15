@@ -128,12 +128,12 @@ Evidence正本は同一ディレクトリの `0081_00_contents.md` を参照す�
 
 - Primary Child / Value: `D07.BHF.BODY_ANOMALY` — 身体異常
 - Primary Parent: `D07.BHF`
-- Secondary: `D07.BHF.MEDICAL_RISK` — 医療リスク
+- Secondary: なし
 - Status: `I`
 
 **判定根拠**
 
-ピアス穴と視覚障害が結び付くこと、白い糸が視神経と説明されることが身体上の不可解さを構成する。
+ピアス穴と視覚障害が結び付くこと、白い糸が視神経と説明されることが身体構造・生理に関する不可解さを構成する。現Version Scopeには、治療・医療行為・病院に関する独立した不確実性は固定できないため、`D07.BHF.MEDICAL_RISK` はSecondaryに置かない。
 
 **この伝承における現れ方**
 
