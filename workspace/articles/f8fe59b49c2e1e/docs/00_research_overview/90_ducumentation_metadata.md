@@ -116,8 +116,10 @@ Research overview文書群は、以下の順に理論から運用・補足へ具
     - Appendixは説明のために `10` / `20` / `30` の現行仕様を独自に変更してはならない。
 - 文書構造・見出し・命名規則などの管理規則変更は `90` を起点として行う。
     - 変更後、対象文書群に対して構造上の整合性を確認する。
-- 個別伝承の標準作業手順変更は `docs/10_each_lore/0000_tutorial/0000_workflow.md` を起点として行う。
-    - 変更後、`0000_00_contents.md`、`0000_10_analysis.md`、`10` / `20` / `30` / `90` と競合しないことを確認する。
+- 個別伝承分析の標準作業手順、control plane interface、Coder側Review修正cycleの変更は `docs/10_each_lore/0000_tutorial/0000_workflow_10_each_lore_analysis.md` を起点として行う。
+    - 変更後、`0000_00_contents.md`、`0000_10_analysis.md`、`0000_workflow_20_review.md`、`10` / `20` / `30` / `90` と競合しないことを確認する。
+- 個別伝承Reviewの標準作業手順変更は `docs/10_each_lore/0000_tutorial/0000_workflow_20_review.md` を起点として行う。
+    - Coder側の状態遷移・pre/post-SHA更新規則をReview workflow側で独自に再定義しない。
 
 ### 1.2.4. 文書間で競合した場合の正本
 
@@ -128,7 +130,8 @@ Research overview文書群は、以下の順に理論から運用・補足へ具
 - 証拠要件・具体的判定・分析コード付与手順: `30_urban_legend_analysis_coding_rules.md`
 - 理論設計の変更履歴・変更理由・過去版との対応関係: `80_appendix/10_analysis_axes_theory_history/README.md`
 - 文書構造・見出し番号・命名規則・文書管理: `90_ducumentation_metadata.md`
-- 個別伝承エントリ作成の標準作業手順: `docs/10_each_lore/0000_tutorial/0000_workflow.md`
+- 個別伝承分析・control plane interface・Coder側Review修正cycle: `docs/10_each_lore/0000_tutorial/0000_workflow_10_each_lore_analysis.md`
+- 個別伝承Review手順・Review Seq・Review結果フォーマット: `docs/10_each_lore/0000_tutorial/0000_workflow_20_review.md`
 - 個別伝承 `00_contents` の記載様式: `docs/10_each_lore/0000_tutorial/0000_00_contents.md`
 - 個別伝承 `10_analysis` の記載様式: `docs/10_each_lore/0000_tutorial/0000_10_analysis.md`
 
@@ -217,22 +220,32 @@ Entry_ID = 180
 docs/10_each_lore/0000_tutorial/
 ├── 0000_00_contents.md
 ├── 0000_10_analysis.md
-└── 0000_workflow.md
+├── 0000_workflow_10_each_lore_analysis.md
+├── 0000_workflow_20_review.md
+├── 0000_workflow.md        # legacy redirect
+└── 0000_review.md          # legacy redirect
 ```
 
 各ファイルの責務は以下とする。
 
-- `0000_workflow.md`
-    - 個別伝承エントリ1件について、Entry確定、方針読込、Evidence調査、`00_contents` 作成、Version Scope固定、分析コード付与、`10_analysis` 作成、横断QA、GitHub反映までを行う**標準作業手順の正本**。
-    - 特定パイロット・特定調査フェーズに依存しない共通workflowを記載する。
+- `0000_workflow_10_each_lore_analysis.md`
+    - 個別伝承エントリ1件について、**伝承内容 / Evidence整理 → 分析コード付与**を実行する標準作業手順の正本。
+    - Coder側のcommit / push、control plane interface、Status / pre-SHA / post-SHA更新、Review返却後の修正cycleを定義する。
+    - control planeの実体パスをハードコードせず、実行時に外部指定されたcontrol planeへ規定フォーマットで読み書きする。
+- `0000_workflow_20_review.md`
+    - 個別伝承00/10のReview標準作業手順の正本。
+    - Review対象commit / blobの固定、Review Seq、Findings、Pass / 要修正判定、Review mdフォーマットを定義する。
+    - Coder成果物の修正やcontrol planeの状態遷移を独自に実行しない。
 - `0000_00_contents.md`
-    - Evidence / Content layerの記載様式・章構造・要求密度の正本。
+    - 伝承内容 / Evidence整理の記載様式・章構造・要求密度の正本。
 - `0000_10_analysis.md`
-    - Analytical definition / Coding layerの記載様式・章構造・要求密度の正本。
+    - 分析コード付与結果の記載様式・章構造・要求密度の正本。
+- `0000_workflow.md` / `0000_review.md`
+    - 過去文書からの参照互換性のためだけに保持するlegacy redirect。現行正本として使用しない。
 
 実データの伝承ディレクトリでは、接頭辞番号とExcel上の `Entry_ID` が一致していることを確認する。ディレクトリ名の伝承識別名部分を変更しても、同一Entryである限り接頭辞番号は変更しない。
 
-`docs/99_work/` 配下のhandoff・control plane・作業メモは、作業途中状態やフェーズ固有運用を記録するものであり、`0000_workflow.md` と競合する恒久的な個別伝承作業規則を正本として保持しない。
+`docs/99_work/` 配下のhandoff・control plane・作業メモは、作業途中状態やフェーズ固有の状態を記録する領域である。control planeは現在状態のインスタンスを保持し、恒久的な作業手順・状態遷移規則・SHA整合性判定を独自に正本化しない。
 
 # 4. Appendix 管理規則
 
