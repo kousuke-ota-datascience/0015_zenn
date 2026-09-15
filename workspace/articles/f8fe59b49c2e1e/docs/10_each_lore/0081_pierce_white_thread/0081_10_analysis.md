@@ -334,8 +334,8 @@ L1は物語内部で身体操作と視覚障害が結び付くため1。L2の自
 
 **誰の間に伝承が流通するか**
 
-- Primary Child / Value: `D19.SOC.YOUTH_STUDENT` — 若者・学生
-- Primary Parent: `D19.SOC`
+- Primary Child / Value: `D19.KIN.SCHOOL_YOUTH` — 学校・若者集団
+- Primary Parent: `D19.KIN`
 - Secondary: なし
 - Status: `I`
 
