@@ -1,142 +1,214 @@
-記載内容は固定baselineの理論設計・Parent/Child code system・coding rulesに従う。Evidenceは `0188_00_contents.md` を参照する。
+記載内容については、以下3文書のインストラクションに従うこと。
+
+- `docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md`
+- `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
+- `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
+
+伝承内容・典拠・異伝・不確実性は `0188_00_contents.md` を参照する。
 
 # 1. 伝承エントリ基本情報
+
 - `Entry_ID`: `0188`
 - `伝承エントリ名称`: 八尺様
 - `Macro_Category`: ネット怪談
 - `Entry_Type`: 物語・伝説
-- `Version_Scope`: 2008年8月26日、2ちゃんねる「死ぬほど洒落にならない怖い話を集めてみない？196」レス908〜916。後代派生は除外。
+- `Version_Scope`: 2008年8月26日付保存転載で確認できるレス908〜916の初期回想譚。後代派生は除外する。
 
 # 2. 分析概念次元
 
-### D01 生成年代
-- Primary: `D01.G6` — 2000年代
-- Status: `D`
-2008年原型を直接確認。
+## 2.1. 来歴・流通・提示の次元
 
-### D02 最古確認流通媒体
-- Primary: `D02.WEB.FORUM`
-- Parent: `D02.WEB`
-- Status: `D`
+### 2.1.1. D01: 生成年代
+**いつ成立したか**
+- Primary Child / Value: なし
+- Primary Parent: なし
+- Secondary: なし
+- Status: `U`
+**判定根拠**: 2008年8月26日は現在確認できる最古級投稿の定点であり、それ以前に存在しなかったことや投稿自体が生成行為であることを示す独立Evidenceはない。
+**この伝承における現れ方**: 少なくとも2008年には一続きの回想譚として流通していた。
 
-### D03 確認流通媒体
-- Primary: `D03.WEB.FORUM`
-- Parent: `D03.WEB`
-- Status: `D`
-原型Scopeは公開掲示板。
+### 2.1.2. D02: 最古確認流通媒体
+**最も古く確認できる流通媒体は何か**
+- Primary Child / Value: `D02.WEB.FORUM`
+- Primary Parent: `D02.WEB`
+- Secondary: なし
+- Status: `I`
+**判定根拠**: 掲示板投稿を保存転載経由で確認する。原スレッド未固定のためI。
+**この伝承における現れ方**: 初期確認形はWeb掲示板上の怪談投稿。
 
-### D04 生成・変容
-- Primary: `D04.STB.SINGLE_FIXED`
-- Parent: `D04.STB`
-- Status: `D`
-9レスに分割された一続きの完成回想譚。
+### 2.1.3. D03: 確認流通媒体ポートフォリオ
+**Version Scopeで確認できる媒体は何か**
+- Primary Child / Value: `D03.WEB.FORUM`
+- Primary Parent: `D03.WEB`
+- Secondary: `D03.WEB.WEBSITE`
+- Status: `I`
+**判定根拠**: 原型は掲示板投稿で、現在は保存Webページから確認する。
+**この伝承における現れ方**: 掲示板発話が転載保存される。
 
-### D05 提示形式
-- Primary: `D05.EXP.RETROSPECTIVE_1P`
-- Parent: `D05.EXP`
-- Status: `D`
-十年以上前の自身の体験を一人称回想する。
+### 2.1.4. D04: 生成・変容パターン
+**時間とともにどう変形したか**
+- Primary Child / Value: なし
+- Primary Parent: なし
+- Secondary: なし
+- Status: `U`
+**判定根拠**: 今回直接比較できるのは2008年保存形のみであり、複数時点間の変容をEvidenceとして固定できない。単一観測版から `SINGLE_FIXED` を推定しない。
+**この伝承における現れ方**: 9レスで完結したことは提示形式の特徴であって、変容パターンの直接Evidenceではない。
 
-### D06 真実性提示
-- Primary: `D06.T1`
+### 2.1.5. D05: 提示形式
+**どんな形式で提示されるか**
+- Primary Child / Value: `D05.EXP.RETROSPECTIVE_1P`
+- Primary Parent: `D05.EXP`
+- Secondary: なし
 - Status: `D`
-自身の直接体験として提示される。
+**判定根拠**: 語り手が十年以上前の自身の体験を一人称回想する。
+**この伝承における現れ方**: 完結した回想譚として提示される。
 
-### D07 意味形成対象
-- Primary: `D07.ANO.UNKNOWN_EXISTENCE`
-- Parent: `D07.ANO`
+### 2.1.6. D06: 真実性提示
+**どんな本当らしさを要求するか**
+- Primary Child / Value: `D06.T1`
+- Primary Parent: なし
+- Secondary: なし
+- Status: `D`
+**判定根拠**: 自身の直接体験として語る。
+**この伝承における現れ方**: 創作宣言ではなく体験談形式。
+
+## 2.2. 意味形成の次元
+
+### 2.2.1. D07: 意味形成対象
+**何が不可解・不確実なのか**
+- Primary Child / Value: `D07.ANO.UNKNOWN_EXISTENCE`
+- Primary Parent: `D07.ANO`
 - Secondary: `D07.DCF.UNEXPLAINED_DEATH_LOSS`
-- Status: `D/I`
-未知存在の正体と、魅入られた若者の死が問題化される。
+- Status: `I`
+**判定根拠**: 中心は異常な女性姿の存在と、その存在に魅入られると死亡するとされる因果である。
+**この伝承における現れ方**: 正体不明の存在が過去被害と現在の追跡を結び付ける。
 
-### D08 意味形成契機
-- Primary: `D08.DEX.DIRECT_EVENT`
-- Parent: `D08.DEX`
+### 2.2.2. D08: 意味形成契機
+**何を手掛かりに問題化されるか**
+- Primary Child / Value: `D08.DEX.DIRECT_EVENT`
+- Primary Parent: `D08.DEX`
 - Secondary: `D08.DEX.PERCEPTUAL_ANOMALY`
 - Status: `D`
-異常に背の高い女性姿と奇妙な声への直接遭遇。
+**判定根拠**: 語り手が高身長の女性姿と奇妙な声へ直接遭遇する。
+**この伝承における現れ方**: 視覚・聴覚異常が入口。
 
-### D09 意味付与操作
-- Primary: `D09.CAT.TYPE_ASSIGNMENT`
-- Parent: `D09.CAT`
+### 2.2.3. D09: 意味付与操作
+**不可解なものをどう理解可能にするか**
+- Primary Child / Value: `D09.CAT.TYPE_ASSIGNMENT`
+- Primary Parent: `D09.CAT`
 - Secondary: `D09.AGN.AGENCY_ATTRIBUTION`
-- Status: `D/I`
-祖母が遭遇を「八尺様」と同定し、過去の死と現在の追跡を同存在へ帰属する。
-
-### D10 因果源存在論
-- Primary: `D10.SUP.YOKAI_ENTITY`
-- Parent: `D10.SUP`
 - Status: `I`
-女性姿、意思、声模倣、追跡を行う人格怪異。幽霊・死者霊までは特定しない。
+**判定根拠**: 祖母が遭遇対象を「八尺様」と同定し、過去被害・声模倣・追跡を同一存在へ帰属する。
+**この伝承における現れ方**: 未知の女性姿が地域固有怪異として分類される。
 
-### D11 発動・接触条件
-- Primary: `D11.SEN.VISUAL_EXPOSURE`
-- Parent: `D11.SEN`
+### 2.2.4. D10: 因果源存在論
+**原因を何として世界に置くか**
+- Primary Child / Value: `D10.SUP.YOKAI_ENTITY`
+- Primary Parent: `D10.SUP`
+- Secondary: なし
+- Status: `I`
+**判定根拠**: 女性姿、意志、声模倣、追跡という人格怪異として描かれる。幽霊・死者霊までは固定しない。
+**この伝承における現れ方**: 自律的に対象へ接近する怪異存在。
+
+## 2.3. 因果・行動モデルの次元
+
+### 2.3.1. D11: 発動・接触条件
+**何を契機に因果系へ入るか**
+- Primary Child / Value: `D11.SEN.VISUAL_EXPOSURE`
+- Primary Parent: `D11.SEN`
 - Secondary: `D11.CON.LOCATION_STATE`
-- Status: `D/I`
-地域内で八尺様を視認した後に「魅入られた」と判定される。
-
-### D12 作用対象
-- Primary: `D12.FOC.PROTAGONIST_EXPERIENCER`
-- Parent: `D12.FOC`
-- Status: `D`
-
-### D13 作用機構
-- Primary: `D13.REL.TARGETING`
-- Parent: `D13.REL`
-- Status: `D/I`
-八尺様が特定主人公を魅入り、声を模倣して誘引し、脱出まで追跡する。
-
-### D14 帰結極性
-- Primary: `D14.NEG`
 - Status: `I`
+**判定根拠**: 地域滞在中に八尺様を視認した後、祖父母が「魅入られた」と判断する。
+**この伝承における現れ方**: 偶発視認と地域内滞在が組み合わさる。
 
-### D15 帰結領域
-- Primary: `D15.LIF.FUTURE_CONSTRAINT`
-- Parent: `D15.LIF`
+### 2.3.2. D12: 作用対象
+**誰／何に作用するか**
+- Primary Child / Value: `D12.FOC.PROTAGONIST_EXPERIENCER`
+- Primary Parent: `D12.FOC`
+- Secondary: なし
+- Status: `D`
+**判定根拠**: 追跡・防御・脱出の中心対象は語り手本人。
+**この伝承における現れ方**: 主人公への個別標的化。
+
+### 2.3.3. D13: 作用機構
+**因果源が対象へ何をするか**
+- Primary Child / Value: `D13.REL.TARGETING`
+- Primary Parent: `D13.REL`
+- Secondary: なし
+- Status: `I`
+**判定根拠**: 八尺様が語り手を魅入り、声を模倣して誘引し、脱出時まで追跡する。
+**この伝承における現れ方**: 特定個人を狙う関係的作用。
+
+### 2.3.4. D14: 帰結極性
+**結果は正・負・中立・混合か**
+- Primary Child / Value: `D14.NEG`
+- Primary Parent: なし
+- Secondary: なし
+- Status: `D`
+**判定根拠**: 死亡危険、恐怖、長期回避を伴う負の帰結。
+**この伝承における現れ方**: 生存しても制約が残る。
+
+### 2.3.5. D15: 帰結領域
+**何の領域が最終的に変わるか**
+- Primary Child / Value: `D15.LIF.FUTURE_CONSTRAINT`
+- Primary Parent: `D15.LIF`
 - Secondary: `D15.BEH.AVOIDANCE_ROUTE_CHANGE`
 - Status: `D`
-主人公は生存するが祖父母の地域へ戻れず、祖父の葬儀にも参加できない。
+**判定根拠**: 主人公は生存するが祖父母地域へ戻れず、祖父の葬儀にも参加できない。
+**この伝承における現れ方**: 長期的な生活・行動制約として残る。
 
-### D16 因果時間構造
-- Primary: `D16.PRG.STAGED_PROGRESSION`
-- Parent: `D16.PRG`
-- Status: `D/I`
-視認→標的化→夜間接近→護衛脱出→長期回避→地蔵破壊後日談と段階進行。
+### 2.3.6. D16: 因果時間構造
+**時間上どう編成されるか**
+- Primary Child / Value: `D16.PRG.STAGED_PROGRESSION`
+- Primary Parent: `D16.PRG`
+- Secondary: なし
+- Status: `I`
+**判定根拠**: 視認→標的化認定→夜間防御→護衛脱出→長期回避→地蔵破損後日談と段階的に進む。
+**この伝承における現れ方**: 単発ではなく複数段階の進行を持つ。
 
-### D17 回避・制御方式
-- Primary: `D17.RUL.OBEY_TABOO`
-- Parent: `D17.RUL`
+### 2.3.7. D17: 回避・制御方式
+**結果をどう回避・制御できるか**
+- Primary Child / Value: `D17.RUL.OBEY_TABOO`
+- Primary Parent: `D17.RUL`
 - Secondary: `D17.RIT.RELIGIOUS_SPECIALIST`
 - Status: `D`
-部屋を出ない、声に応じない、札を持つ、目を開けない等の手順とKの祈祷で脱出する。
+**判定根拠**: 部屋を出ない、声に応じない、札保持、目を開けない等の明示手順とKの祈祷が独立して提示される。
+**この伝承における現れ方**: 禁忌遵守と専門家介入を組み合わせる。
 
-### D18 作用レイヤー
-- Value: `D18.L1=1; D18.L2=0; D18.L3=0`
-- Status: `D/I/I`
-物語内作用のみ。読者感染規則と独立社会現実X Evidenceはない。
-
-### D19 流通範囲
-- Primary: `D19.NET.OPEN_FORUM_WEB`
-- Parent: `D19.NET`
-- Status: `D`
-
-### D20 特権情報保持者
-- Primary: `D20.INS.LOCAL_RESIDENT`
-- Parent: `D20.INS`
-- Secondary: `D20.EXP.RELIGIOUS_FOLKLORE`
-- Status: `D/I`
-祖父母・地域血縁者が規則を知り、Kが専門的対処知を持つ。
-
-### D21 現実アンカー
-- Primary: `D21.A1`
+### 2.3.8. D18: 作用レイヤー
+**因果効力はどこに及ぶか**
+- `D18.L1`: `1`
+- `D18.L2`: `0`
+- `D18.L3`: `0`
 - Status: `I`
-一般的な農村・祖父母宅という実在背景はあるが、地域名は匿名化され具体的実在対象へ固定できない。
+**判定根拠**: 物語内人物への作用は明確。読むだけで作用する規則や独立した社会現実効果はScopeで固定しない。absence判断を含むためvector全体はI。
+**この伝承における現れ方**: 初期形の作用は物語内に限定。
 
-# 3. R4 QA
-- pre-SHA: `4d762489c220d89837df9edf603d84780b2195f9`
-- R3 freeze: `9d59272c2d141ef05a8e4f9ec80633ceb3fb7a21`
-- 旧10なし。
-- 主人公の実現帰結を死亡へ誤拡張せず、D15は長期生活制約。
-- D18=`1/0/0`。
-- H3 Primary exactly 1、Secondary 0–2、Parent derivedを確認。
+## 2.4. 社会的埋め込みの次元
+
+### 2.4.1. D19: 流通範囲
+**誰の間に流通するか**
+- Primary Child / Value: `D19.NET.OPEN_FORUM_WEB`
+- Primary Parent: `D19.NET`
+- Secondary: なし
+- Status: `I`
+**判定根拠**: 公開掲示板投稿を保存転載から確認する。
+**この伝承における現れ方**: 不特定多数が閲覧可能なネット怪談。
+
+### 2.4.2. D20: 特権情報保持者
+**誰が真相・追加情報を持つか**
+- Primary Child / Value: `D20.PER.FAMILY_BLOODLINE`
+- Primary Parent: `D20.PER`
+- Secondary: `D20.EXP.RELIGIOUS_FOLKLORE`
+- Status: `I`
+**判定根拠**: 祖父母・血縁者が八尺様の規則・過去被害・脱出手順を知り、Kが専門的対処知を持つ。地域住民一般へ一般化しない。
+**この伝承における現れ方**: 家族・血縁側の追加知識と専門者知が偏在する。
+
+### 2.4.3. D21: 現実アンカー
+**実在世界へどの程度固定されるか**
+- Primary Child / Value: `D21.A1`
+- Primary Parent: なし
+- Secondary: なし
+- Status: `I`
+**判定根拠**: 一般的な農村・祖父母宅という背景はあるが地域名は匿名化される。
+**この伝承における現れ方**: 具体地点へ固定されない現実背景型。
