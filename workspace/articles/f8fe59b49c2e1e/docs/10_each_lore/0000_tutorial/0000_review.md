@@ -36,6 +36,7 @@
 - `docs/10_each_lore/0000_tutorial/0000_workflow.md`
 - `docs/10_each_lore/0000_tutorial/0000_00_contents.md`
 - `docs/10_each_lore/0000_tutorial/0000_10_analysis.md`
+- `docs/99_work/20260914_A3_full_recoding/_control_plane.md`（当該control planeで管理されるReview Cycleの場合）
 
 ## 1.2. 理論・コード・運用規則
 
@@ -54,9 +55,12 @@
 | 個別Entry作業順序・責務分離・QA | `0000_workflow.md` |
 | `00_contents` の構造・記載内容・記載粒度 | `0000_00_contents.md` |
 | `10_analysis` の構造・記載内容・記載粒度 | `0000_10_analysis.md` |
+| Review Cycleの進捗状態、対象成果物のpre/post commit SHA | `_control_plane.md`（当該control plane管理対象の場合） |
 | sense-makingの理解補助 | `20_what_is_sense_making.md` |
 
 `sense-making` 補助文書と理論設計が競合する場合は理論設計を正とする。
+
+control planeは、**レビュー状態と対象成果物のcommit checkpointを特定する正本**として用いる。Evidence内容、Version Scope、D01〜D21の定義・妥当性をcontrol planeから推定してはならない。
 
 過去の個別Entry、過去レビュー、作業メモ、旧Excel値は正本ではない。
 
@@ -122,7 +126,31 @@ docs/99_work/review_10_each_lore/<Entry_ID>/Review_<Entry_ID>_10_<Review_Seq>.md
 
 # 4. レビュー開始時の入力確認と必須順序
 
-対象Entryについて00/10を取得し、可能なら対象blob SHAを記録する。
+対象Entryについて00/10を取得し、**対象commit SHAと対象blob SHAを必ず記録する。**
+
+control plane管理対象の場合は、Entry_ID × 成果物（00 / 10）の該当行について、`Status`、`最新レビュー版`、`pre-SHA`、`post-SHA`、`remarks` を確認する。
+
+- control planeの `pre-SHA` / `post-SHA` は **Git commit SHA** を指す。
+- `pre-SHA` は当該成果物を変更する直前のmain commit、`post-SHA` は当該成果物変更commitを指す。
+- 原則として、レビュー対象成果物の **対象commit SHA = control planeの `post-SHA`** とする。
+- `pre-SHA → post-SHA` の比較は、前回状態からCoder修正で何が変わったかを確認する手掛かりとして使う。
+- `再レビュー待` の場合、`最新レビュー版` は最後に完了したReview Seqであり、`post-SHA` はその指摘反映後にレビューすべき成果物commitを特定する手掛かりとなる。
+
+レビュー開始前に次を照合する。
+
+```text
+control plane の post-SHA
+→ そのcommitでの対象ファイル内容・blob SHA
+→ main上で取得した対象ファイル内容・blob SHA
+```
+
+対象ファイルのblobが一致する場合、control planeの`post-SHA`を対象commit SHAとしてレビュー結果へ記録する。
+
+一致しない場合は、control plane更新漏れ、post-SHA後の追加修正、またはlegacy checkpoint等の可能性がある。**対象版を確定せずに最新mainを黙ってレビューしてはならない。** `remarks` とcommit履歴を確認し、実際にレビューする対象commitを確定する。control planeの`post-SHA`と異なるcommitを対象とする必要がある場合は、その不一致をレビュー情報または作業記録に明示する。
+
+legacy移行行等で`post-SHA`が成果物単独commitではない場合でも、そのcommit時点の対象ファイルblobがレビュー対象と一致するかを確認する。一致するならcheckpoint commitとして記録できる。一致しないなら、対象ファイルを固定する別commitを特定する。
+
+blob SHAは**内容同一性**、commit SHAは**リポジトリ履歴上の対象時点**を固定する。両方をReviewファイルへ保存する。
 
 レビュー順序は必ず次とする。
 
@@ -774,7 +802,10 @@ Majorあり                 → 要修正（Major）
 - `Entry_ID`: `<Entry_ID>`
 - `Review_Seq`: `<Review_Seq>`
 - 対象: `...`
+- 対象commit SHA: `<...>`
 - 対象blob SHA: `<...>`
+- control plane pre-SHA: `<... / －>`
+- control plane post-SHA: `<... / －>`
 - レビュー日: `YYYY-MM-DD`
 - 判定: **問題なし（Pass） / 要修正（Minor|Moderate|Major）**
 
@@ -796,6 +827,7 @@ Majorあり                 → 要修正（Major）
 
 | 項目 | 結果 | コメント |
 |---|---|---|
+| 対象commit / control plane整合 | PASS / FAIL / REVIEW | post-SHAとレビュー対象版を照合 |
 | tutorial構造 | PASS / FAIL / REVIEW | **最初に確認** |
 | tutorial記載内容・粒度 | PASS / FAIL / REVIEW | **構造とは別に確認** |
 | 一次・二次資料の分離 | PASS / FAIL / REVIEW | |
@@ -824,7 +856,10 @@ FindingなしでもFindings、QA、最終判定を省略しない。
 - `Entry_ID`: `<Entry_ID>`
 - `Review_Seq`: `<Review_Seq>`
 - 対象: `...`
+- 対象commit SHA: `<...>`
 - 対象blob SHA: `<...>`
+- control plane pre-SHA: `<... / －>`
+- control plane post-SHA: `<... / －>`
 - レビュー日: `YYYY-MM-DD`
 - 判定: **問題なし（Pass） / 要修正（Minor|Moderate|Major）**
 
@@ -851,6 +886,7 @@ FindingなしでもFindings、QA、最終判定を省略しない。
 
 | 項目 | 結果 | コメント |
 |---|---|---|
+| 対象commit / control plane整合 | PASS / FAIL / REVIEW | post-SHAとレビュー対象版を照合 |
 | tutorial構造 | PASS / FAIL / REVIEW | **最初に確認** |
 | tutorial記載内容・粒度 | PASS / FAIL / REVIEW | **構造とは別に確認** |
 | Version Scope | PASS / FAIL / REVIEW | |
@@ -882,7 +918,10 @@ FindingなしでもFindings、QA、最終判定を省略しない。
 
 - [ ] Entry_IDを4桁ゼロ埋めで確定した。
 - [ ] 対象00/10を取得した。
+- [ ] 対象commit SHAを記録した。
 - [ ] 対象blob SHAを記録した。
+- [ ] control plane管理対象の場合、対象00/10各行のStatus・最新レビュー版・pre-SHA・post-SHA・remarksを確認した。
+- [ ] control planeのpost-SHA時点の対象ファイルblobと、実際にレビューする対象blobが一致することを確認した。不一致なら対象版を確定するまでレビューを開始していない。
 - [ ] 正本を確認した。
 - [ ] 次Review_Seqを確定した。
 
@@ -912,6 +951,8 @@ FindingなしでもFindings、QA、最終判定を省略しない。
 ## 12.4. Entry完了前
 
 - [ ] 00/10で同じSeqを使用した。
+- [ ] 両Reviewファイルに対象commit SHA・対象blob SHAを記録した。
+- [ ] control plane管理対象の場合、両Reviewファイルのcommit情報と該当行pre/post-SHAの関係を確認した。
 - [ ] 2レビューを保存した。
 - [ ] 保存後に両方を再取得した。
 - [ ] 最終判定と最大Finding重大度が一致する。
@@ -926,6 +967,7 @@ FindingなしでもFindings、QA、最終判定を省略しない。
 - 10でコード値が妥当だから、判定根拠・現れ方が薄くてもPassにする。
 - 「詳細は原典参照」「Evidence不足」等の一言記載を、tutorial要求粒度を満たすとみなす。
 - フォーマット／内容／粒度の非準拠をQA欄だけに書き、必要なFindingを作らない。
+- control planeのpost-SHAと対象版が不一致なのに、対象commitを確定せず最新mainをレビューする。
 - 過去コードや旧ExcelをEvidenceにする。
 - 有名な後代設定を初期Versionへ入れる。
 - 古いから口承、怪談だから幽霊、等のジャンル推定をする。
@@ -946,21 +988,23 @@ FindingなしでもFindings、QA、最終判定を省略しない。
 
 ```text
 1. 対象00/10と正本を確認した
-2. 00のtutorial構造を確認した
-3. 00のtutorial必須記載内容を確認した
-4. 00のtutorial記載粒度を確認した
-5. 00をEvidence / Content layerとしてレビューした
-6. 10のtutorial構造を確認した
-7. 10のtutorial必須記載内容を確認した
-8. 10のtutorial記載粒度を確認した
-9. Version Scopeを検証した
-10. D01〜D21をレビューした
-11. D07〜D17を一つのsense-making modelとして確認した
-12. 00→10 traceabilityを確認した
-13. taxonomy gap / U / NA / Cを区別した
-14. Review_00を保存した
-15. Review_10を保存した
-16. 保存した2ファイルを再取得して確認した
+2. 対象00/10の対象commit SHA・対象blob SHAを固定した
+3. control plane管理対象ではpre-SHA / post-SHA / Status / 最新レビュー版を確認し、post-SHAとレビュー対象版を照合した
+4. 00のtutorial構造を確認した
+5. 00のtutorial必須記載内容を確認した
+6. 00のtutorial記載粒度を確認した
+7. 00をEvidence / Content layerとしてレビューした
+8. 10のtutorial構造を確認した
+9. 10のtutorial必須記載内容を確認した
+10. 10のtutorial記載粒度を確認した
+11. Version Scopeを検証した
+12. D01〜D21をレビューした
+13. D07〜D17を一つのsense-making modelとして確認した
+14. 00→10 traceabilityを確認した
+15. taxonomy gap / U / NA / Cを区別した
+16. Review_00を保存した
+17. Review_10を保存した
+18. 保存した2ファイルを再取得して、対象commit SHA・対象blob SHAを含むレビュー情報と最終判定を確認した
 ```
 
 上記を満たす前に、次のEntryへ進んではならない。
