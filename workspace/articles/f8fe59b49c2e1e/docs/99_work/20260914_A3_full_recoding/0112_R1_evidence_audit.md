@@ -14,7 +14,7 @@
 ### A. Yahoo!知恵袋 2008年投稿 — C / H
 
 - URL: https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1414125864
-- 00記録上、2008年1月の投稿。
+- 00記録上、2008年11月の投稿。
 - 用途: 「一人挟めば告知義務が消える」というルール命題の早期Web確認点。
 
 ### B. 国土交通省「宅地建物取引業者による人の死の告知に関するガイドライン」 — A / correction
