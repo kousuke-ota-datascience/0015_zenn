@@ -37,7 +37,7 @@
 
 - `30_urban_legend_analysis_coding_rules.md`
     - 責務:
-        - コーディング運用規則
+        - 分析コード付与運用規則
     - 主に記載する内容:
         - 実際の資料・証拠からどのようにコードを判定するか
         - Evidence role
@@ -61,7 +61,7 @@
         - `10_analysis_axes_theory_history/`: 現行分析体系に至る設計変更履歴と過去版
         - `20_what_is_sense_making.md`: sense-making / 意味形成の補足説明、本研究での操作的位置付け
     - 原則として記載しない内容:
-        - 現行理論・測定体系・コーディング規則の独自な再定義
+        - 現行理論・測定体系・分析コード付与規則の独自な再定義
         - `10` / `20` / `30`と競合する現行仕様
 
 - `90_ducumentation_metadata.md`
@@ -78,7 +78,7 @@
     - 原則として記載しない内容:
         - 個別の理論内容
         - 個別のコード値・カテゴリ定義
-        - 個別伝承のコーディング判定
+        - 個別伝承の分析コード付与判定
 
 ## 1.2. 責務分担の基本原則
 
@@ -125,7 +125,7 @@ Research overview文書群は、以下の順に理論から運用・補足へ具
 
 - 現行の理論概念・概念次元・次元間境界: `10_urban_legend_analysis_axes_theoretical_design.md`
 - Parent / Child / Value / bit・コードID・カテゴリ定義: `20_urban_legend_parent_child_code_system.md`
-- 証拠要件・具体的判定・コーディング手順: `30_urban_legend_analysis_coding_rules.md`
+- 証拠要件・具体的判定・分析コード付与手順: `30_urban_legend_analysis_coding_rules.md`
 - 理論設計の変更履歴・変更理由・過去版との対応関係: `80_appendix/10_analysis_axes_theory_history/README.md`
 - 文書構造・見出し番号・命名規則・文書管理: `90_ducumentation_metadata.md`
 - 個別伝承エントリ作成の標準作業手順: `docs/10_each_lore/0000_tutorial/0000_workflow.md`
@@ -223,7 +223,7 @@ docs/10_each_lore/0000_tutorial/
 各ファイルの責務は以下とする。
 
 - `0000_workflow.md`
-    - 個別伝承エントリ1件について、Entry確定、方針読込、Evidence調査、`00_contents` 作成、Version Scope固定、コーディング、`10_analysis` 作成、横断QA、GitHub反映までを行う**標準作業手順の正本**。
+    - 個別伝承エントリ1件について、Entry確定、方針読込、Evidence調査、`00_contents` 作成、Version Scope固定、分析コード付与、`10_analysis` 作成、横断QA、GitHub反映までを行う**標準作業手順の正本**。
     - 特定パイロット・特定調査フェーズに依存しない共通workflowを記載する。
 - `0000_00_contents.md`
     - Evidence / Content layerの記載様式・章構造・要求密度の正本。
