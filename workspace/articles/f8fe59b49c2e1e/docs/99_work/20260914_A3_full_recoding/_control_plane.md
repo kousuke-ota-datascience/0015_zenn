@@ -27,7 +27,7 @@
 - 複数Entryを同時並行で再作業しない。00→10→control plane更新まで閉じてから次Entryへ進む。
 - Evidence正本=`*_00_contents.md`、Coding正本=`*_10_analysis.md`、control plane=status/checkpoint正本。
 - `U/NA/C`はDimension-level status。H3はPrimary exactly 1、Secondary 0–2、ParentはChildから一意導出。
-- D18 L3は独立した社会現実X Evidenceがある場合のみ1。
+- D18 L3は同一Version Scopeに対する独立した社会現実X Evidenceがある場合のみ1。
 - Excel比較・同期はR5以降。00/10双方の外部Review承認前はEntryを`完了`にしない。
 
 # 3. タスク定義
@@ -46,20 +46,20 @@ R0 baseline固定 / R1 Evidence監査 / R2 Version Scope / R3 Independent Recode
 
 | Status | 件数 |
 |---|---:|
-| 未 | 23 |
-| レビュー待 | 17 |
+| 未 | 22 |
+| レビュー待 | 18 |
 | 完了 | 9 |
 | 要修正・再作業中・再レビュー待・対象外 | 0 |
 
 | task | R1〜R4到達 | 未到達 |
 |---|---:|---:|
-| R1 Evidence / 00監査 | 26 | 23 |
-| R2 Version Scope再固定 | 26 | 23 |
-| R3 Independent Recode | 26 | 23 |
-| R4 Entry QA | 26 | 23 |
+| R1 Evidence / 00監査 | 27 | 22 |
+| R2 Version Scope再固定 | 27 | 22 |
+| R3 Independent Recode | 27 | 22 |
+| R4 Entry QA | 27 | 22 |
 
 - R0: `完了`
-- Review Cycle: `0001/0003/0005/0006/0011/0019/0024/0025/0059 完了 / 0060・0081・0089・0091・0101・0112・0113・0118・0132・0133・0137・0152・0157・0158・0169・0178・0179 レビュー待 / 23件 未`
+- Review Cycle: `0001/0003/0005/0006/0011/0019/0024/0025/0059 完了 / 0060・0081・0089・0091・0101・0112・0113・0118・0132・0133・0137・0152・0157・0158・0169・0178・0179・0180 レビュー待 / 22件 未`
 - R5/R6/R7: `未`
 
 # 6. Entry別進捗
@@ -92,7 +92,7 @@ R0 baseline固定 / R1 Evidence監査 / R2 Version Scope / R3 Independent Recode
 |0169|ノストラダムスの大予言|完了|完了|完了|完了|レビュー待|f0632eee87636fe2f584511c3544cd443d9290d0|598f41fc79c2871b347c4981d4d9984057b87ae0|50f54b95bb478e739dd93aef58b248828433b285|D01=G3/D、D16=DEADLINE、L3=0。|
 |0178|猿夢|完了|完了|完了|完了|レビュー待|1a85ab52869944c1f8c2ee3a6852fdba832884b6|e7f31217b47a73cf8c226e991b57cbe4c237e914|64429af4d65cfc5b941e6db878f0f6a81779ba01|2000年原型。D17覚醒離脱taxonomy gap、L3=0。|
 |0179|くねくね|完了|完了|完了|完了|レビュー待|b6aac89cc94e864063d2e9cdff332bfa78a61153|c1e1c625fa13c2f1d164fc67703bcc7e09397888|55e44c086c579b9b4a97d21df109addafb828def|2001原型→2003増補。D11=UNDERSTAND_RECOGNIZE、D13認知災害、L3=0。|
-|0180|きさらぎ駅|未|未|未|未|未|未|未|未|Golden Regression reference|
+|0180|きさらぎ駅|完了|完了|完了|完了|レビュー待|390a59182cffc7c6982c45af037e732c514c4fc0|24a7d6ec5a50972f27a2a39fff2a57045023aaf4|0ef39d4cb61802c34fe4e271b3cdc1aa867feeb9|Golden Regression再コード。D09=非解決維持、D11=ACCIDENT_INVOLVEMENT、D17=NO_KNOWN_ESCAPE、L3=0。|
 |0181|コトリバコ|未|未|未|未|未|未|未|未|inventory確認済み: 2005、ネット発祥Yes。|
 |0188|八尺様|未|未|未|未|未|未|未|未|inventory確認済み: 2008、ネット発祥Yes。|
 |0198|一人かくれんぼ|未|未|未|未|未|未|未|未|inventory確認済み: 2006〜、ネット発祥Yes。|
@@ -118,13 +118,13 @@ R0 baseline固定 / R1 Evidence監査 / R2 Version Scope / R3 Independent Recode
 
 ## 6.1. Review状態
 
-完了9件は既存の最終Review Passを維持。レビュー待17件は00/10とも未Review・次Review=`Review_001`。
+完了9件は既存の最終Review Passを維持。レビュー待18件は00/10とも未Review・次Review=`Review_001`。
 
 # 7. 実行順序
 
 `0001 → 0003 → 0005 → 0006 → 0011 → 0019 → 0024 → 0025 → 0059 → 0060 → 0081 → 0089 → 0091 → 0101 → 0112 → 0113 → 0118 → 0132 → 0133 → 0137 → 0152 → 0157 → 0158 → 0169 → 0178 → 0179 → 0180 → 0181 → 0188 → 0198 → 0225 → 0250 → 0275 → 0309 → 0319 → 0349 → 0356 → 0362 → 0363 → 0365 → 0366 → 0384 → 0385 → 0394 → 0403 → 0410 → 0411 → 0412 → 0413`
 
-次の新規Entryは`0180`。
+次の新規Entryは`0181`。
 
 # 8. Entry完了条件
 
@@ -137,6 +137,7 @@ R1〜R4 checkpoint、00/10 Review Cycle、未解決指摘なしを満たして`�
 - 2026-09-15: 0060〜0169を順次Coder R1〜R4完了・レビュー待へ移行。
 - 2026-09-15: 0178 猿夢をレビュー待へ移行。2000原型と後代読者感染型を分離。
 - 2026-09-15: 0179 くねくねをレビュー待へ移行。2001原型→2003増補をEvidence上分離。
+- 2026-09-15: 0180 きさらぎ駅をレビュー待へ移行。2004初期実況Scopeを固定し、後代受容をD18 L3へ混入しない。
 
 # 10. 最終完了条件
 
