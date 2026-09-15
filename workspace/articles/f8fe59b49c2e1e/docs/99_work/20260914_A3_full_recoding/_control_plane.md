@@ -48,7 +48,92 @@
 - 00と10を同一commitへまとめない。
 - Review修正で00/10双方を変更する場合も、成果物ごとにcommitを分離する。
 - control plane自身の更新は成果物commitとは別commitにする。これによりpost-SHAの自己参照を避ける。
+- Review返却や修正開始など、成果物を変更しないStatus遷移だけを記録する場合も、control plane単独commitとして扱う。
 - 本フォーマット移行前のEntryは、旧 `pre-SHA / R3 SHA / R4 SHA` を失わないようlegacy checkpointとして移行する。00単独commitを示さないSHAはremarksで明示する。
+
+## 2.2. Review Cycleの作業手順
+
+Review Cycleでは、**修正対象とReview対象の版を確定してから作業する**。Reviewファイルが存在することだけを根拠に修正を開始してはならない。
+
+本節で `review-SHA` と呼ぶものは、最新Review mdに記録された **`対象commit SHA`**、すなわちReviewerが実際にレビューした正本成果物のcommit SHAを指す。Review md自体を保存したcommit SHAは `review-file-commit-SHA` と呼び、`pre-SHA` / `post-SHA` / `review-SHA` の版照合には使用しない。
+
+SHA文字列に大小関係はない。新旧関係はGit commit graph上の**一致・祖先・子孫・分岐**で判定する。
+
+### 2.2.1. 修正開始前の必須ゲート
+
+Review指摘への修正を開始する前に、必ず以下を順に実施する。
+
+1. 最新mainを取得し、作業開始時点のrepository状態を固定する。
+2. Section 6の対象Entry × 成果物行から `Status`、`最新レビュー版`、`pre-SHA`、`post-SHA`、`remarks` を確認する。
+3. `最新レビュー版` に対応するReview mdを取得し、その `対象commit SHA` を `review-SHA` とする。
+4. `post-SHA` と `review-SHA` をcommit graph上で照合する。
+5. Review指摘を根拠に修正を開始できるのは、原則として **`post-SHA == review-SHA` の場合だけ**とする。
+6. 不一致の場合はReview内容を現在の成果物へ機械的に適用せず、下表の分岐に従って整合性を回復してから作業を開始する。
+
+| 判定 | commit graph上の関係 | 意味 | 修正開始 | 必須対処 |
+|---|---|---|---|---|
+| A. 一致 | `post-SHA == review-SHA` | control planeが指す最新版成果物そのものにReviewが返っている | **可** | Review結果を採用し、修正手順へ進む |
+| B. control plane側が古い | `post-SHA` が `review-SHA` の祖先 | Reviewerはcontrol plane記録より後のcommitをレビューしている | **不可** | control plane更新漏れ、成果物更新後の記録漏れ、並行作業等を調査し、正しいpre/postを復元してSection 6を先に修正する |
+| C. Review対象が古い | `review-SHA` が `post-SHA` の祖先 | Reviewは現在のpost-SHAより古い成果物を対象としている | **不可** | 現在のpost-SHAに対するReviewの有無を確認する。存在しなければ現行成果物を再Review対象とし、古いReviewを最新版への修正根拠として扱わない |
+| D. 分岐 | 相互に祖先関係なし | branch違い、並行編集、rebase/cherry-pick等により履歴が分岐している | **不可** | commit履歴・対象blob・branchを調査し、正本系列を確定するまで作業を停止する |
+
+判定は概念的には次で行う。
+
+```bash
+if [ "$POST_SHA" = "$REVIEW_SHA" ]; then
+  echo "A: exact match"
+elif git merge-base --is-ancestor "$POST_SHA" "$REVIEW_SHA"; then
+  echo "B: control plane post-SHA is older"
+elif git merge-base --is-ancestor "$REVIEW_SHA" "$POST_SHA"; then
+  echo "C: review target is older"
+else
+  echo "D: diverged"
+fi
+```
+
+- B/C/Dはすべて**整合性エラーまたは未解決状態**として扱い、どちらが新しいかだけを理由に作業を継続しない。
+- legacy checkpoint等で成果物単独commitではないSHAを使う場合は、Review手順書に従い対象blob SHAも照合する。blob同一性が確認できても、通常運用へ戻す際はSection 6のcheckpointを正規化し、以後はAのexact matchを修正開始条件とする。
+
+### 2.2.2. 修正→再Reviewの手番
+
+SHA整合性を確認した後、Review指摘への対応は次の順序で実施する。
+
+```text
+Review返却
+→ post-SHA == review-SHA を確認
+→ Review結果を採用
+→ 修正開始
+→ 現在のpost-SHAを次サイクルのpre-SHAとする
+→ 正本成果物を修正
+→ 成果物のみcommit / push
+→ 新しいpost-SHAを取得
+→ control plane更新 / push
+→ 再Review
+→ Reviewerは新しいpost-SHAを対象commit SHAとしてReview mdへ記録
+→ Review返却
+→ 再度 post-SHA == review-SHA を確認
+→ Passなら完了、修正要求なら同じcycleを反復
+```
+
+各修正サイクルでは次の不変条件を維持する。
+
+```text
+Cycle n:
+pre_n
+  ↓ Coder編集
+post_n
+  ↓ Review
+review-SHA_n = post_n
+  ↓ 修正要求
+pre_(n+1) = post_n = review-SHA_n
+  ↓ Coder編集
+post_(n+1)
+```
+
+- Review返却だけでは正本成果物は変更されていないため、`post-SHA` をReviewファイルのcommit SHAへ変更しない。
+- 次のCoder修正開始時に、直前Reviewが対象とした成果物commitを次サイクルの `pre-SHA` とする。
+- 修正後の成果物commitが確定するまでは旧 `post-SHA` を保持し、commit後に新しい `post-SHA` へ置き換える。
+- 再Reviewでは必ず新しい `post-SHA` をレビュー対象として固定する。
 
 # 3. タスク定義
 
@@ -141,114 +226,48 @@ Section 6ではこのStatusを**成果物行単位**で適用する。Entry全�
 
 # 6. Entry別進捗
 
-## 6.1. 正本性とSHA用語
+## 6.1. 表の正本性と更新原則
 
-- Section 6は、Entry × 正本成果物（00 / 10）の**進捗・成果物commit checkpointの正本**とする。Section 5はSection 6から導出する集計であり、独立に状態を決めない。
-- `pre-SHA` / `post-SHA` の意味はSection 2.1に従う。
-- 本節で `review-SHA` と呼ぶものは、最新Review mdに記録された **`対象commit SHA`**、すなわちReviewerが実際にレビューした正本成果物のcommit SHAを指す。Review mdそのものを保存したcommit SHAではない。
-- Review md自体の保存commit SHAが監査上必要な場合は `review-file-commit-SHA` と呼び、`pre-SHA` / `post-SHA` / `review-SHA` との一致判定には使用しない。
-- SHA文字列に大小関係はない。新旧関係はGit commit graph上の**一致・祖先・子孫・分岐**で判定する。
-
-## 6.2. 作成・修正開始前の必須ゲート
-
-既存成果物の作成継続またはReview指摘への修正を開始する前に、必ず以下を順に実施する。
-
-1. 最新mainを取得し、作業開始時点のrepository状態を固定する。
-2. Section 6の対象Entry × 成果物行から `Status`、`最新レビュー版`、`pre-SHA`、`post-SHA`、`remarks` を確認する。
-3. `最新レビュー版` に対応するReview mdが存在する場合、そのReview mdの `対象commit SHA` を `review-SHA` として取得する。
-4. `post-SHA` と `review-SHA` をcommit graph上で照合する。
-5. Review指摘を根拠に修正を開始できるのは、原則として **`post-SHA == review-SHA` の場合だけ**とする。
-6. 不一致の場合は、Review内容を現在の成果物へ機械的に適用せず、下表の分岐に従って整合性を回復してから作業を開始する。
-
-### 6.2.1. `post-SHA` と `review-SHA` の分岐
-
-| 判定 | commit graph上の関係 | 意味 | 作業開始 | 必須対処 |
-|---|---|---|---|---|
-| A. 一致 | `post-SHA == review-SHA` | control planeが指す最新版成果物そのものにReviewが返っている | **可** | Review結果を採用し、6.3以降へ進む |
-| B. control plane側が古い | `post-SHA` が `review-SHA` の祖先 | Reviewerはcontrol plane記録より後のcommitをレビューしている | **不可** | control plane更新漏れ、成果物更新漏れの記録、並行作業等を調査し、正しいpre/postを復元してSection 6を先に修正する |
-| C. Review対象が古い | `review-SHA` が `post-SHA` の祖先 | Reviewは現在のpost-SHAより古い成果物を対象としている | **不可** | 現在のpost-SHAに対するReviewの有無を確認する。存在しなければ現行成果物を再Review対象とし、古いReviewを最新版への修正根拠として扱わない |
-| D. 分岐 | 相互に祖先関係なし | branch違い、並行編集、rebase/cherry-pick等により履歴が分岐している | **不可** | commit履歴・対象blob・branchを調査し、正本系列を確定するまで作業を停止する |
-
-判定は概念的には次で行う。
-
-```bash
-if [ "$POST_SHA" = "$REVIEW_SHA" ]; then
-  echo "A: exact match"
-elif git merge-base --is-ancestor "$POST_SHA" "$REVIEW_SHA"; then
-  echo "B: control plane post-SHA is older"
-elif git merge-base --is-ancestor "$REVIEW_SHA" "$POST_SHA"; then
-  echo "C: review target is older"
-else
-  echo "D: diverged"
-fi
-```
-
-- B/C/Dはすべて**整合性エラーまたは未解決状態**として扱い、どちらが新しいかだけを理由に作業を継続しない。
-- legacy checkpoint等で成果物単独commitではないSHAを使う場合は、Review手順書に従い対象blob SHAも照合する。blob同一性が確認できても、通常運用へ戻す際はSection 6のcheckpointを正規化し、以後はAのexact matchを作業開始条件とする。
-
-## 6.3. Review返却時の更新
-
-Reviewが返却されたら、Review本文の修正指摘を適用する前に6.2のSHA照合を行う。
-
-- `post-SHA == review-SHA` を確認できた場合のみ、そのReviewを現在の成果物に対する有効なReviewとして採用する。
-- Review完了時点で `最新レビュー版` を実施済みReview Seqへ更新する。
-- ReviewがPassなら、対象成果物行を `完了` とする。
-- Reviewが修正要求なら、対象成果物行を `要修正` とする。
-- **Review返却だけでは正本成果物は変更されていないため、`post-SHA` をReviewファイルのcommit SHAへ変更してはならない。** `post-SHA` は引き続きレビュー対象となった成果物commitを保持する。
-- 修正要求を受けて次のCoderサイクルへ入るときに、6.4の規則で `pre-SHA` / `post-SHA` を更新する。
-
-## 6.4. Review指摘修正時のpre/post更新
-
-Review指摘への修正サイクルは次の順序で行う。
-
-```text
-Review返却
-→ post-SHA == review-SHA を確認
-→ Status = 要修正
-→ 修正開始時に pre-SHA := 現在のpost-SHA
-→ Status = 再作業中
-→ 正本成果物を修正
-→ 成果物のみcommit / push
-→ 新commit SHAを取得
-→ post-SHA := 新commit SHA
-→ Status = 再レビュー待
-→ control planeを別commit / push
-```
-
-- 修正開始時点では、直前Reviewが対象とした成果物commitが次サイクルの基点になるため、**`new pre-SHA = old post-SHA = review-SHA`** が成立する。
-- 修正開始から成果物commit完了までの間は `post-SHA` を空欄化しない。新しい成果物commitが確定するまでは旧 `post-SHA` を保持し、commit後に新しい `post-SHA` へ置き換える。
-- 修正後の `再レビュー待` では `最新レビュー版` を先送りしない。たとえばReview_001指摘対応後は `再レビュー待 / 001` とし、Review_002が実際に完了した時点で `002` へ更新する。
-- 次のReviewerは、新しい `post-SHA` をReview mdの `対象commit SHA` として記録する。これにより次サイクルでも `post-SHA == review-SHA` を検証できる。
-
-Review cycleの不変条件は次のとおり。
-
-```text
-Cycle n:
-pre_n
-  ↓ Coder編集
-post_n
-  ↓ Review
-a review-SHA_n = post_n
-  ↓ 修正要求
-pre_(n+1) = post_n = review-SHA_n
-  ↓ Coder編集
-post_(n+1)
-```
-
-## 6.5. control plane更新単位
-
-- 正本成果物のcommit/pushとcontrol plane更新commitはSection 2.1のとおり分離する。
-- 成果物変更後は、成果物commitのSHAを取得してからSection 6の該当行を更新する。
-- Review返却、修正開始、修正完了、Review Passの各状態遷移でSection 6の `Status` / `最新レビュー版` / `pre-SHA` / `post-SHA` の整合を確認する。
-- 例外的なSHA不一致を修復した場合は、原因と修復内容を `remarks` に残す。監査上重要な修復はSection 9のlifecycle変更履歴にも記録する。
+- Section 6は、Entry × 正本成果物（00 / 10）の**進捗・成果物commit checkpointの正本**とする。
+- Section 6の更新はSection 2.2の作業手順に従って発生した状態遷移を記録するものであり、Section 6自体で作業可否やReview対象版を決定しない。
 - 00と10は独立した成果物行として更新し、片方のSHA・Statusを他方へ流用しない。
+- `pre-SHA` / `post-SHA` の定義はSection 2.1に従う。
+- 例外的なSHA不一致をSection 2.2の手順で修復した場合は、原因と修復内容を `remarks` に残す。監査上重要な修復はSection 9のlifecycle変更履歴にも記録する。
 
-## 6.6. Section 5との同期
+## 6.2. 状態遷移ごとの表更新ルール
+
+| Section 2.2で発生したイベント | Status | 最新レビュー版 | pre-SHA | post-SHA | remarks |
+|---|---|---|---|---|---|
+| 初回Coder作業完了・成果物commit済み | `レビュー待` | `－` | 編集直前commit | 成果物commit | 必要に応じ初回作業内容を記録 |
+| Reviewで修正要求確定 | `要修正` | 実施済みReview Seq | **変更しない** | **変更しない** | Review Seq・主要指摘を必要に応じ記録 |
+| Review Pass確定 | `完了` | 実施済みReview Seq | **変更しない** | **変更しない** | Passを必要に応じ記録 |
+| 修正作業開始 | `再作業中` | **変更しない** | `old post-SHA` を設定 | 新commit確定まで `old post-SHA` を保持 | 対応するReview Seqを記録可能 |
+| 修正成果物commit / push完了 | `再レビュー待` | **変更しない** | 修正開始時に設定した値を保持 | 新しい成果物commitへ更新 | 修正内容を要約 |
+| 再Reviewで再修正要求 | `要修正` | 新しいReview Seqへ更新 | **変更しない** | **変更しない** | 新Review Seq・主要指摘を必要に応じ記録 |
+| 再Review Pass | `完了` | 新しいReview Seqへ更新 | **変更しない** | **変更しない** | Passを必要に応じ記録 |
+| Section 2.2でSHA不一致を検出 | 原則**変更しない** | 原則**変更しない** | 原則**変更しない** | 原則**変更しない** | 整合性回復後、必要なcheckpoint修復のみ実施 |
+
+### 6.2.1. Review返却時
+
+- Review返却時は、Section 2.2で `post-SHA == review-SHA` を確認した後に表を更新する。
+- ReviewがPassなら `Status=完了`、修正要求なら `Status=要修正` とする。
+- `最新レビュー版` は、そのReviewが完了した時点で実施済みReview Seqへ更新する。
+- Review返却だけでは正本成果物は変更されていないため、`pre-SHA` / `post-SHA` は変更しない。
+- Review md自体の保存commit SHAを `post-SHA` に記録してはならない。
+
+### 6.2.2. 修正開始・修正完了時
+
+- 修正開始時は `Status=再作業中` とし、`pre-SHA := old post-SHA` とする。
+- 修正開始から成果物commit完了まで、新しい `post-SHA` は未確定であるため、表上は旧 `post-SHA` を保持する。
+- 成果物commit / push完了後に `post-SHA := new artifact commit SHA` とし、`Status=再レビュー待` とする。
+- `最新レビュー版` は次のReviewが実際に完了するまで更新しない。たとえばReview_001指摘対応後は `再レビュー待 / 001` とする。
+
+## 6.3. Section 5との同期
 
 - Section 5はSection 6から導出する。
 - Section 6のStatusを変更したcontrol plane commitでは、**同じcommit内でSection 5.1 / 5.2および状態別Entry一覧も再集計して一致させる。**
 - Entry全体のStatusはSection 3.2に従い00/10から導出する。00/10双方が`完了`の場合のみEntry全体を`完了`とする。
-- Section 5とSection 6が不一致の場合はSection 6を正としてSection 5を修復する。ただしSection 6自体のSHA整合性に疑義がある場合は、先に6.2の検証を完了する。
+- Section 5とSection 6が不一致の場合はSection 6を正としてSection 5を修復する。ただしSection 6自体のSHA整合性に疑義がある場合は、先にSection 2.2の検証を完了する。
 
 | Entry_ID | 伝承 | 成果物 | Status | 最新レビュー版 | pre-SHA | post-SHA | remarks |
 |---|---|---|---|---|---|---|---|
@@ -351,7 +370,7 @@ post_(n+1)
 | 0413 | 名称未確認 | 00 | 未 | － | － | － | R1でinventory確認 |
 | 0413 | 名称未確認 | 10 | 未 | － | － | － | 00確定後に作成 |
 
-## 6.7. 現在のReview状態
+## 6.4. 現在のReview状態
 
 - 完了9件は00/10双方の既存最終Review Passを維持する。Section 6の`最新レビュー版`は実在するReviewファイルの最大連番を記録した。
 - `0060/0081/0089` はReview_002指摘に対する修正を完了し、6成果物を `再レビュー待 / 002` とする。
@@ -396,6 +415,7 @@ post_(n+1)
 - 2026-09-15: 0060・0081・0089のReview_002返却を反映し、00/10の6成果物を`要修正 / 002`へ同期。
 - 2026-09-15: 0060・0081・0089のReview_002指摘対応を完了し、00/10の6成果物を`再レビュー待 / 002`へ移行。
 - 2026-09-15: Section 6にReview駆動の更新プロトコルを追加。`post-SHA` とReview mdの`対象commit SHA`をexact match / ancestor / divergedで検証し、不一致時は作業開始を禁止するゲートを明文化。Review返却・修正開始・修正完了・再Reviewにおけるpre/post-SHA更新規則とSection 5同期規則を固定。
+- 2026-09-15: Review Cycleの実行手順と進捗表更新規則を責務分離。SHA整合性判定・修正→再Reviewの手番をSection 2.2へ移し、Section 6はSection 2.2の状態遷移を表へ反映する規則に限定。
 
 # 10. 最終完了条件
 
