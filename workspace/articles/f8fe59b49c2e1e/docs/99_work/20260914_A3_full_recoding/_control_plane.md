@@ -1,199 +1,24 @@
 # 0. INTRODUCTION
 
-本書は、A3パイロット49件を**現行workflow・現行coding rulesで全面再コーディングするためのコントロールプレーン**である。旧task3完了状態は履歴として保持するが、本再コーディングでは完了判定として引き継がない。49件すべてを同一baselineで再測定する。
+本書は、A3パイロット49件の全面再分析について、**現在状態を保持するcontrol plane**である。
 
-- 集約Excel: `docs/20_analysis_summary/urban_legend_parent_child_full_application_v1.xlsx`
-- 標準workflow: `docs/10_each_lore/0000_tutorial/0000_workflow.md`
-- tutorial 00: `docs/10_each_lore/0000_tutorial/0000_00_contents.md`
-- tutorial 10: `docs/10_each_lore/0000_tutorial/0000_10_analysis.md`
-- 理論設計: `docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md`
-- コード体系: `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
-- コーディング規則: `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
+本書の責務は、対象Entry、baseline、進捗集計、Entry × 正本成果物（00 / 10）の現在Status・Review checkpoint・pre/post-SHA、実行順序、lifecycle履歴を保持することに限定する。
 
-# 1. 再コーディングbaseline
+個別伝承分析の作業手順、control planeのフォーマット定義、Status遷移、commit / push単位、Review返却後の修正cycle、SHA整合性判定は本書では定義しない。これらは実行時に指定される標準workflowに従う。
+
+# 1. baseline
 
 - baseline main commit: `9570faea998905f074e59df1691748b9cc54d03d`
 - theoretical design blob: `64ed9801ecb17c44f39e04c364c23ce5cb682014`
 - code system blob: `192c2f1593e29eb32292a31d564d21ad4aec2427`
 - coding rules blob: `4fe19cc922840a46367bc6d0162271d2422996a9`
-- workflow blob: `4d26549329e3e0d5fb20604217ec5e20080f19c0`
+- workflow blob at baseline: `4d26549329e3e0d5fb20604217ec5e20080f19c0`
 - tutorial 00 blob: `0ed8c22777eb2c213ca0b009016ccc66a01054ce`
 - tutorial 10 blob: `dccc5e4473bc51c484f16ba916d653ea7383f2f5`
 
-# 2. 全面再コーディングの原則
+# 2. 進捗集計
 
-- Evidenceは再利用可能、判定は再利用しない。R3 freeze前に旧10・旧Excel coding値を参照しない。
-- Entry単位で `最新main確認 → baseline確認 → Entry確認 → R1 → R2 → R3 freeze → R4 → 00/10レビュー待` を完結する。
-- 複数Entryを同時並行で再作業しない。00→10→control plane更新まで閉じてから次Entryへ進む。
-- 正本成果物は Evidence=`*_00_contents.md`、Coding=`*_10_analysis.md` の2本とする。
-- R1/R2/R3/R4およびReview Cycleで作成する `docs/99_work/` 配下の文書は、監査・checkpoint・裁定記録であり、Entry別進捗の主単位にはしない。
-- `U/NA/C`はDimension-level status。H3はPrimary exactly 1、Secondary 0–2、ParentはChildから一意導出。
-- D18 L3は同一Version Scopeに対する独立した社会現実X Evidenceがある場合のみ1。
-- Excel比較・同期はR5以降。00/10双方の外部Review承認前はEntryを`完了`にしない。
-
-## 2.1. commit / push 単位
-
-今後は**正本成果物1ファイルを1変更単位**としてcommit→pushする。
-
-```text
-成果物編集
-→ 成果物のみcommit / push
-→ post-SHA取得
-→ control planeの該当行を更新
-→ control planeを別commit / push
-```
-
-- `pre-SHA` / `post-SHA` は Git commit SHA を指す。
-- `pre-SHA` は当該成果物を変更する直前のmain commit、`post-SHA` は当該成果物変更commitを指す。
-- 00と10を同一commitへまとめない。
-- Review修正で00/10双方を変更する場合も、成果物ごとにcommitを分離する。
-- control plane自身の更新は成果物commitとは別commitにする。これによりpost-SHAの自己参照を避ける。
-- Review返却や修正開始など、成果物を変更しないStatus遷移だけを記録する場合も、control plane単独commitとして扱う。
-- 本フォーマット移行前のEntryは、旧 `pre-SHA / R3 SHA / R4 SHA` を失わないようlegacy checkpointとして移行する。00単独commitを示さないSHAはremarksで明示する。
-
-## 2.2. Review Cycleの作業手順
-
-Review Cycleでは、**修正対象とReview対象の版を確定してから作業する**。Reviewファイルが存在することだけを根拠に修正を開始してはならない。
-
-本節で `review-SHA` と呼ぶものは、最新Review mdに記録された **`対象commit SHA`**、すなわちReviewerが実際にレビューした正本成果物のcommit SHAを指す。Review md自体を保存したcommit SHAは `review-file-commit-SHA` と呼び、`pre-SHA` / `post-SHA` / `review-SHA` の版照合には使用しない。
-
-SHA文字列に大小関係はない。新旧関係はGit commit graph上の**一致・祖先・子孫・分岐**で判定する。
-
-### 2.2.1. 修正開始前の必須ゲート
-
-Review指摘への修正を開始する前に、必ず以下を順に実施する。
-
-1. 最新mainを取得し、作業開始時点のrepository状態を固定する。
-2. Section 6の対象Entry × 成果物行から `Status`、`最新レビュー版`、`pre-SHA`、`post-SHA`、`remarks` を確認する。
-3. `最新レビュー版` に対応するReview mdを取得し、その `対象commit SHA` を `review-SHA` とする。
-4. `post-SHA` と `review-SHA` をcommit graph上で照合する。
-5. Review指摘を根拠に修正を開始できるのは、原則として **`post-SHA == review-SHA` の場合だけ**とする。
-6. 不一致の場合はReview内容を現在の成果物へ機械的に適用せず、下表の分岐に従って整合性を回復してから作業を開始する。
-
-| 判定 | commit graph上の関係 | 意味 | 修正開始 | 必須対処 |
-|---|---|---|---|---|
-| A. 一致 | `post-SHA == review-SHA` | control planeが指す最新版成果物そのものにReviewが返っている | **可** | Review結果を採用し、修正手順へ進む |
-| B. control plane側が古い | `post-SHA` が `review-SHA` の祖先 | Reviewerはcontrol plane記録より後のcommitをレビューしている | **不可** | control plane更新漏れ、成果物更新後の記録漏れ、並行作業等を調査し、正しいpre/postを復元してSection 6を先に修正する |
-| C. Review対象が古い | `review-SHA` が `post-SHA` の祖先 | Reviewは現在のpost-SHAより古い成果物を対象としている | **不可** | 現在のpost-SHAに対するReviewの有無を確認する。存在しなければ現行成果物を再Review対象とし、古いReviewを最新版への修正根拠として扱わない |
-| D. 分岐 | 相互に祖先関係なし | branch違い、並行編集、rebase/cherry-pick等により履歴が分岐している | **不可** | commit履歴・対象blob・branchを調査し、正本系列を確定するまで作業を停止する |
-
-判定は概念的には次で行う。
-
-```bash
-if [ "$POST_SHA" = "$REVIEW_SHA" ]; then
-  echo "A: exact match"
-elif git merge-base --is-ancestor "$POST_SHA" "$REVIEW_SHA"; then
-  echo "B: control plane post-SHA is older"
-elif git merge-base --is-ancestor "$REVIEW_SHA" "$POST_SHA"; then
-  echo "C: review target is older"
-else
-  echo "D: diverged"
-fi
-```
-
-- B/C/Dはすべて**整合性エラーまたは未解決状態**として扱い、どちらが新しいかだけを理由に作業を継続しない。
-- legacy checkpoint等で成果物単独commitではないSHAを使う場合は、Review手順書に従い対象blob SHAも照合する。blob同一性が確認できても、通常運用へ戻す際はSection 6のcheckpointを正規化し、以後はAのexact matchを修正開始条件とする。
-
-### 2.2.2. 修正→再Reviewの手番
-
-SHA整合性を確認した後、Review指摘への対応は次の順序で実施する。
-
-```text
-Review返却
-→ post-SHA == review-SHA を確認
-→ Review結果を採用
-→ 修正開始
-→ 現在のpost-SHAを次サイクルのpre-SHAとする
-→ 正本成果物を修正
-→ 成果物のみcommit / push
-→ 新しいpost-SHAを取得
-→ control plane更新 / push
-→ 再Review
-→ Reviewerは新しいpost-SHAを対象commit SHAとしてReview mdへ記録
-→ Review返却
-→ 再度 post-SHA == review-SHA を確認
-→ Passなら完了、修正要求なら同じcycleを反復
-```
-
-各修正サイクルでは次の不変条件を維持する。
-
-```text
-Cycle n:
-pre_n
-  ↓ Coder編集
-post_n
-  ↓ Review
-review-SHA_n = post_n
-  ↓ 修正要求
-pre_(n+1) = post_n = review-SHA_n
-  ↓ Coder編集
-post_(n+1)
-```
-
-- Review返却だけでは正本成果物は変更されていないため、`post-SHA` をReviewファイルのcommit SHAへ変更しない。
-- 次のCoder修正開始時に、直前Reviewが対象とした成果物commitを次サイクルの `pre-SHA` とする。
-- 修正後の成果物commitが確定するまでは旧 `post-SHA` を保持し、commit後に新しい `post-SHA` へ置き換える。
-- 再Reviewでは必ず新しい `post-SHA` をレビュー対象として固定する。
-
-# 3. タスク定義
-
-## 3.1. Step & deliverables
-
-| task ID | task name | 正本deliverables | audit / checkpoint artifacts |
-|---|---|---|---|
-| R0 | baseline固定 | － | control planeのbaseline SHA記録 |
-| R1 | Evidence/00監査 | `*_00_contents.md` | 必要に応じ `*_R1_evidence_audit.md` |
-| R2 | Version Scope | － | `*_R2_version_scope.md` |
-| R3 | Independent Recode | － | `*_R3_independent_recode.md`（freeze対象） |
-| R4 | Entry QA | `*_10_analysis.md` | `*_R4_entry_qa.md` |
-| Review Cycle | 00/10両方の外部Review→Coder修正→再Reviewを承認まで反復 | 修正対象の `*_00_contents.md` / `*_10_analysis.md` | `review_10_each_lore/<Entry_ID>/Review_*`、Coder adjudication |
-| R5 | Global Reconciliation | 必要に応じて各 `*_10_analysis.md` を更新 | global reconciliation記録 |
-| R6 | Excel Sync | `urban_legend_parent_child_full_application_v1.xlsx` | sync / diff確認記録 |
-| R7 | Global QA | 確定した00/10/Excel | global QA記録・control plane最終化 |
-
-R2/R3/R4の補助文書は監査可能性のため保持するが、進捗管理の主単位は正本成果物 `00` / `10` とする。
-
-## 3.2. Entry Status
-
-| Status | 定義 |
-|---|---|
-| `未` | Coder作業未着手 |
-| `レビュー待` | Coder初回作業完了、初回レビュー待ち |
-| `要修正` | Reviewで修正指摘あり、Coder再作業未着手 |
-| `再作業中` | Coder修正中 |
-| `再レビュー待` | Coder修正完了、再レビュー待ち |
-| `完了` | Reviewer承認済み |
-| `－（対象外）` | 適用対象外 |
-
-```text
-未 → レビュー待 → 完了
-未 → レビュー待 → 要修正 → 再作業中 → 再レビュー待 → 完了
-再レビュー待 → 要修正 → 再作業中 → 再レビュー待
-```
-
-Section 6ではこのStatusを**成果物行単位**で適用する。Entry全体の`完了`は00行・10行がともに`完了`の場合のみ成立する。片方だけが承認済みの場合、Entry全体は未承認側の状態に従う。
-
-## 3.3. 最新レビュー版
-
-`最新レビュー版` は、その成果物に対して**最後に完了したReviewの3桁連番**を記録する。
-
-- `－`: 未レビュー。`Review_001` がまだ実施されていない。
-- `001`: `Review_<Entry_ID>_<成果物>_001.md` が最新レビュー。
-- `002`: `Review_<Entry_ID>_<成果物>_002.md` が最新レビュー。以下同様。
-- `完了 / 002`: `Review_002` でPassとなり、その成果物が承認完了したことを表す。
-- `要修正 / 001`: `Review_001` で修正指摘が出て、Coder再作業前であることを表す。
-- `再作業中 / 001`: 最新の完了Reviewは`001`で、その指摘に対するCoder修正中であることを表す。
-- `再レビュー待 / 001`: `Review_001` の指摘に対する修正が完了し、次の `Review_002` を待っていることを表す。
-
-したがって、`最新レビュー版` は「次に作るReview番号」ではなく、「最後に完了したReview番号」である。
-
-# 4. 不一致の扱い
-
-`Scope mismatch / Evidence mismatch / Code-selection mismatch / Status mismatch / Taxonomy gap / Prior coding error / Evidence-Analysis responsibility mismatch / Format mismatch`。
-
-# 5. 進捗集計
-
-## 5.1. Entry単位
+## 2.1. Entry単位
 
 | Status | 件数 |
 |---|---:|
@@ -205,7 +30,7 @@ Section 6ではこのStatusを**成果物行単位**で適用する。Entry全�
 | 完了 | 9 |
 | 対象外 | 0 |
 
-## 5.2. 正本成果物単位
+## 2.2. 正本成果物単位
 
 | Status | 00/10成果物件数 |
 |---|---:|
@@ -222,52 +47,11 @@ Section 6ではこのStatusを**成果物行単位**で適用する。Entry全�
 - 再レビュー待Entry: `0060/0081/0089/0091/0101/0112`
 - 要修正Entry: `0113/0118/0132/0133/0137/0152/0157/0158/0169/0178/0179/0180/0181/0188/0198/0225/0250/0275`
 - 未着手Entry: 16件
-- R5/R6/R7は49件の00/10 Review Cycle確定後に実施する。
+- R5/R6/R7: 未着手
 
-# 6. Entry別進捗
+# 3. Entry別進捗
 
-## 6.1. 表の正本性と更新原則
-
-- Section 6は、Entry × 正本成果物（00 / 10）の**進捗・成果物commit checkpointの正本**とする。
-- Section 6の更新はSection 2.2の作業手順に従って発生した状態遷移を記録するものであり、Section 6自体で作業可否やReview対象版を決定しない。
-- 00と10は独立した成果物行として更新し、片方のSHA・Statusを他方へ流用しない。
-- `pre-SHA` / `post-SHA` の定義はSection 2.1に従う。
-- 例外的なSHA不一致をSection 2.2の手順で修復した場合は、原因と修復内容を `remarks` に残す。監査上重要な修復はSection 9のlifecycle変更履歴にも記録する。
-
-## 6.2. 状態遷移ごとの表更新ルール
-
-| Section 2.2で発生したイベント | Status | 最新レビュー版 | pre-SHA | post-SHA | remarks |
-|---|---|---|---|---|---|
-| 初回Coder作業完了・成果物commit済み | `レビュー待` | `－` | 編集直前commit | 成果物commit | 必要に応じ初回作業内容を記録 |
-| Reviewで修正要求確定 | `要修正` | 実施済みReview Seq | **変更しない** | **変更しない** | Review Seq・主要指摘を必要に応じ記録 |
-| Review Pass確定 | `完了` | 実施済みReview Seq | **変更しない** | **変更しない** | Passを必要に応じ記録 |
-| 修正作業開始 | `再作業中` | **変更しない** | `old post-SHA` を設定 | 新commit確定まで `old post-SHA` を保持 | 対応するReview Seqを記録可能 |
-| 修正成果物commit / push完了 | `再レビュー待` | **変更しない** | 修正開始時に設定した値を保持 | 新しい成果物commitへ更新 | 修正内容を要約 |
-| 再Reviewで再修正要求 | `要修正` | 新しいReview Seqへ更新 | **変更しない** | **変更しない** | 新Review Seq・主要指摘を必要に応じ記録 |
-| 再Review Pass | `完了` | 新しいReview Seqへ更新 | **変更しない** | **変更しない** | Passを必要に応じ記録 |
-| Section 2.2でSHA不一致を検出 | 原則**変更しない** | 原則**変更しない** | 原則**変更しない** | 原則**変更しない** | 整合性回復後、必要なcheckpoint修復のみ実施 |
-
-### 6.2.1. Review返却時
-
-- Review返却時は、Section 2.2で `post-SHA == review-SHA` を確認した後に表を更新する。
-- ReviewがPassなら `Status=完了`、修正要求なら `Status=要修正` とする。
-- `最新レビュー版` は、そのReviewが完了した時点で実施済みReview Seqへ更新する。
-- Review返却だけでは正本成果物は変更されていないため、`pre-SHA` / `post-SHA` は変更しない。
-- Review md自体の保存commit SHAを `post-SHA` に記録してはならない。
-
-### 6.2.2. 修正開始・修正完了時
-
-- 修正開始時は `Status=再作業中` とし、`pre-SHA := old post-SHA` とする。
-- 修正開始から成果物commit完了まで、新しい `post-SHA` は未確定であるため、表上は旧 `post-SHA` を保持する。
-- 成果物commit / push完了後に `post-SHA := new artifact commit SHA` とし、`Status=再レビュー待` とする。
-- `最新レビュー版` は次のReviewが実際に完了するまで更新しない。たとえばReview_001指摘対応後は `再レビュー待 / 001` とする。
-
-## 6.3. Section 5との同期
-
-- Section 5はSection 6から導出する。
-- Section 6のStatusを変更したcontrol plane commitでは、**同じcommit内でSection 5.1 / 5.2および状態別Entry一覧も再集計して一致させる。**
-- Entry全体のStatusはSection 3.2に従い00/10から導出する。00/10双方が`完了`の場合のみEntry全体を`完了`とする。
-- Section 5とSection 6が不一致の場合はSection 6を正としてSection 5を修復する。ただしSection 6自体のSHA整合性に疑義がある場合は、先にSection 2.2の検証を完了する。
+以下の表を、Entry × 正本成果物（00 / 10）の現在状態の正本とする。列定義・状態遷移・更新方法は標準workflowに従う。
 
 | Entry_ID | 伝承 | 成果物 | Status | 最新レビュー版 | pre-SHA | post-SHA | remarks |
 |---|---|---|---|---|---|---|---|
@@ -370,34 +154,20 @@ Section 6ではこのStatusを**成果物行単位**で適用する。Entry全�
 | 0413 | 名称未確認 | 00 | 未 | － | － | － | R1でinventory確認 |
 | 0413 | 名称未確認 | 10 | 未 | － | － | － | 00確定後に作成 |
 
-## 6.4. 現在のReview状態
+# 4. 現在のReview状態
 
-- 完了9件は00/10双方の既存最終Review Passを維持する。Section 6の`最新レビュー版`は実在するReviewファイルの最大連番を記録した。
-- `0060/0081/0089/0091/0101` はReview_003で00がPass。10はReview_003指摘対応を完了し、`再レビュー待 / 003`（次Review_004待）とする。
-- `0112` は00/10双方のReview_003指摘対応を完了し、両成果物を `再レビュー待 / 003`（Review_004待）とする。
-- 残る `0113/0118/0132/0133/0137/0152/0157/0158/0169/0178/0179/0180/0181/0188/0198/0225/0250/0275` は `要修正 / 001`。
-- Reviewで片方のみPassした場合は、その成果物行だけ`完了`へ更新する。もう片方のStatusは独立に管理する。
-- Review完了時は、対象成果物行の`最新レビュー版`を実施済みReview番号へ更新する。修正後の`再レビュー待`では番号を先送りしない。
+- 完了9件は00/10双方の既存最終Review Passを維持する。
+- `0060/0081/0089/0091/0101` はReview_003で00がPass。10はReview_003指摘対応を完了し、`再レビュー待 / 003`（Review_004待）。
+- `0112` は00/10双方のReview_003指摘対応を完了し、両成果物とも `再レビュー待 / 003`（Review_004待）。
+- `0113/0118/0132/0133/0137/0152/0157/0158/0169/0178/0179/0180/0181/0188/0198/0225/0250/0275` は `要修正 / 001`。
 
-# 7. 実行順序
+# 5. 実行順序
 
 `0001 → 0003 → 0005 → 0006 → 0011 → 0019 → 0024 → 0025 → 0059 → 0060 → 0081 → 0089 → 0091 → 0101 → 0112 → 0113 → 0118 → 0132 → 0133 → 0137 → 0152 → 0157 → 0158 → 0169 → 0178 → 0179 → 0180 → 0181 → 0188 → 0198 → 0225 → 0250 → 0275 → 0309 → 0319 → 0349 → 0356 → 0362 → 0363 → 0365 → 0366 → 0384 → 0385 → 0394 → 0403 → 0410 → 0411 → 0412 → 0413`
 
-次の新規Entryは`0309`。
+次の新規Entry: `0309`
 
-# 8. Entry完了条件
-
-以下をすべて満たしてEntryを`完了`とする。
-
-- R1〜R4の工程要件を満たしている。
-- `*_00_contents.md` の成果物行が`完了`。
-- `*_10_analysis.md` の成果物行が`完了`。
-- 00/10双方のReview Cycleで未解決指摘がない。
-- 必要な修正commit / push とcontrol plane更新が完了している。
-
-旧Excel同期はR5以降。
-
-# 9. lifecycle変更履歴
+# 6. lifecycle変更履歴
 
 - 2026-09-14: baseline固定。
 - 2026-09-15: 先行9件Review Cycle完了。
@@ -423,7 +193,4 @@ Section 6ではこのStatusを**成果物行単位**で適用する。Entry全�
 - 2026-09-15: 0091・0101のReview_003指摘対応を完了。10の2成果物を`再レビュー待 / 003`へ移行し、次ReviewをReview_004とする。
 - 2026-09-15: 0112_00のReview_003（Minor）指摘を反映。0.2.3見出しをtutorial正規名称へ戻し、`再レビュー待 / 003`へ移行。
 - 2026-09-15: 0112_10のReview_003（Moderate）指摘を反映。D12 Secondary `SPECIFIC_OTHER` とD13 Secondary `CONCEAL_SUPPRESS` を除外し、`再レビュー待 / 003`へ移行。
-
-# 10. 最終完了条件
-
-49件について00/10 Review Cycleを完了し、全Evidence正本・Coding正本を確定後、R5・R6・R7を完了する。
+- 2026-09-15: control planeの責務を現在状態の保持へ限定。作業手順、Status遷移、commit/push規則、Review修正cycle、SHA整合性判定を標準workflowへ移管。
