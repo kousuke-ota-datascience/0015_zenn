@@ -56,18 +56,18 @@ Evidence正本は同一ディレクトリの `0060_00_contents.md` を参照す�
 
 **今回コードするVersion Scopeで、伝承が受容者へ流通したことを確認できる媒体は何か**
 
-- Primary Child / Value: `D03.PRT.NEWSPAPER` — 新聞
-- Primary Parent: `D03.PRT`
-- Secondary: `D03.NET.WEB_ARTICLE` — Web記事
-- Status: `I`
+- Primary Child / Value: `D03.NET.WEB_ARTICLE` — Web記事
+- Primary Parent: `D03.NET`
+- Secondary: なし
+- Status: `D`
 
 **判定根拠**
 
-1950年代新聞掲載は二次資料による間接確認、2023年webムーでは複数再話を本文で確認できる。
+朝里2023のWeb記事本文では、客の乗車、消失または故人との一致、幽霊客としての理解を含む複数再話を直接確認できる。一方、1950年代新聞は掲載事実のみを後代資料から間接確認しており、現Version Scopeの具体内容が当該新聞で流通したことは固定できないためD03には含めない。
 
 **この伝承における現れ方**
 
-印刷媒体の早期確認点と、後代Web上での再提示が確認できる。
+現在のVersion Scopeに一致する内容を直接確認できる流通媒体は、後代のWeb記事である。
 
 ### 2.1.4. D04: 生成・変容パターン
 
