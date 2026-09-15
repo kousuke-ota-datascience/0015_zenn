@@ -1,133 +1,382 @@
-記載内容については、固定baselineの理論設計・Parent/Child code system・coding rulesに従う。Evidenceは `0178_00_contents.md` を参照する。
+記載内容については、以下3文書のインストラクションに従うこと。
+
+- `docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md`
+- `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
+- `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
+
+伝承内容・典拠・異伝・証拠上の不確実性は、同一ディレクトリの `0178_00_contents.md` を参照する。
 
 # 1. 伝承エントリ基本情報
 
-- `Entry_ID`: `178`
+- `Entry_ID`: `0178`
 - `伝承エントリ名称`: 猿夢
 - `Macro_Category`: ネット怪談
 - `Entry_Type`: 物語・伝説
-- `Version_Scope`: 2000年8月2日の保存転載で確認できる一人称反復夢型。無人駅→お猿さん電車→乗客への順次危害→覚醒による脱出→年月後の夢再開→次回への警告。後代の「読者も同じ夢を見る」型はScope外。
+- `Version_Scope`: 2000年8月2日の保存転載で確認できる一人称反復夢型。薄暗い無人駅→「お猿さん電車」様の乗り物→乗客への順次危害→投稿者への危害接近→覚醒による離脱→年月後の夢再開→再覚醒と次回警告を共有核とする。2003年以降の「読者も同様の夢を見る」受容者感染型はScope外。
 
 # 2. 分析概念次元
 
-## D01 生成年代
-- Value: `D01.G6` — 2000年代
+## 2.1. 来歴・流通・提示の次元
+
+### 2.1.1. D01: 生成年代
+
+**いつ成立したか**
+
+- Primary Child / Value: なし
+- Primary Parent: なし
+- Secondary: なし
+- Status: `U`
+
+**判定根拠**
+
+2000年8月2日は現在確認できる最古級投稿の定点であり、伝承そのものが2000年代に生成したことを独立に示すHistory Evidenceではない。最古確認記録を生成時期へ変換しない。
+
+**この伝承における現れ方**
+
+少なくとも2000年には掲示板投稿として流通していたことは確認できるが、それ以前の形成有無は固定できない。
+
+### 2.1.2. D02: 最古確認流通媒体
+
+**現在の証拠で最も古く確認できる実際の流通媒体は何か**
+
+- Primary Child / Value: `D02.WEB.FORUM` — Web掲示板・フォーラム
+- Primary Parent: `D02.WEB`
+- Secondary: なし
 - Status: `I`
-- 根拠: 2000-08-02投稿を保存転載で確認。原ページ未固定。
 
-## D02 最古確認流通媒体
-- Primary: `D02.WEB.FORUM` — Web掲示板・フォーラム
-- Parent: `D02.WEB`
+**判定根拠**
+
+保存転載が2000年匿名掲示板投稿を示す。原2ちゃんねるページを直接固定していないため `I` とする。
+
+**この伝承における現れ方**
+
+初期確認形は匿名掲示板へ投稿された一人称怪談である。
+
+### 2.1.3. D03: 確認流通媒体ポートフォリオ
+
+**Version Scopeで確認できる流通媒体は何か**
+
+- Primary Child / Value: `D03.WEB.FORUM` — Web掲示板・フォーラム
+- Primary Parent: `D03.WEB`
+- Secondary: `D03.WEB.WEBSITE` — Webサイト
 - Status: `I`
 
-## D03 確認流通媒体ポートフォリオ
-- Primary: `D03.WEB.FORUM`
-- Parent: `D03.WEB`
-- Secondary: `D03.WEB.WEBSITE`
-- Status: `D/I`
+**判定根拠**
 
-## D04 生成・変容パターン
-- Primary: `D04.MIG.DIGITAL_REAMPLIFICATION`
-- Parent: `D04.MIG`
-- Secondary: `D04.VAR.ACCRETION`
+原型は掲示板投稿として保存され、現在は保存Webページから確認できる。直接性の異なる媒体をDimension-level単一Status `I` でまとめる。
+
+**この伝承における現れ方**
+
+掲示板投稿が後代Web保存を介して再閲覧される。
+
+### 2.1.4. D04: 生成・変容パターン
+
+**時間とともにどう変形したか**
+
+- Primary Child / Value: `D04.VAR.ACCRETION` — 増補
+- Primary Parent: `D04.VAR`
+- Secondary: なし
 - Status: `I`
-- 根拠: 後代Web再流通と、2003年以降の読者感染型増補を分離して確認。
 
-## D05 提示形式
-- Primary: `D05.EXP.RETROSPECTIVE_1P` — 一人称回想
-- Parent: `D05.EXP`
+**判定根拠**
+
+2000年型の「投稿者自身の反復夢」に対し、2003年以降には「読者も類似夢を見る」設定が追加される。変容過程は後代資料を介するため `I` とする。
+
+**この伝承における現れ方**
+
+作用対象が原投稿者から受容者へ拡張される派生が生じる。
+
+### 2.1.5. D05: 提示形式
+
+**どんなコミュニケーション形式で提示されるか**
+
+- Primary Child / Value: `D05.EXP.RETROSPECTIVE_1P` — 一人称回想
+- Primary Parent: `D05.EXP`
+- Secondary: なし
 - Status: `D`
 
-## D06 真実性提示
-- Value: `D06.T1` — 直接体験事実
-- Status: `D`
-- 根拠: 語り手自身の夢として提示される。外部事実性判定とは別。
+**判定根拠**
 
-## D07 意味形成対象
-- Primary: `D07.ANO.DREAM_SLEEP_ANOMALY`
-- Parent: `D07.ANO`
-- Secondary: `D07.ANO.UNEXPLAINED_EVENT`
-- Status: `D/I`
+投稿者が自身の夢体験を一人称で回想して語る形式である。
 
-## D08 意味形成契機
-- Primary: `D08.DEX.DREAM_SLEEP_EVENT`
-- Parent: `D08.DEX`
-- Status: `D`
+**この伝承における現れ方**
 
-## D09 意味付与操作
-- Primary: `D09.UNK.DELIBERATE_NONRESOLUTION`
-- Parent: `D09.UNK`
-- Status: `I`
-- 根拠: 夢の原因・主体を確定せず、異常性を未解決のまま保持する。
+外部の噂紹介ではなく、「私は夢を見ていました」という自己体験として提示される。
 
-## D10 因果源存在論
-- Primary: `D10.PHN.ANOMALOUS_EXPERIENCE`
-- Parent: `D10.PHN`
-- Status: `I`
+### 2.1.6. D06: 真実性提示
 
-## D11 発動・接触条件
-- Primary: `D11.CON.LOCATION_STATE`
-- Parent: `D11.CON`
-- Status: `I`
-- 根拠: 睡眠・夢状態にあることが因果系の前提。
+**どんな「本当らしさ」を要求するか**
 
-## D12 作用対象
-- Primary: `D12.FOC.PROTAGONIST_EXPERIENCER`
-- Parent: `D12.FOC`
+- Primary Child / Value: `D06.T1` — 直接体験事実
+- Primary Parent: なし
+- Secondary: なし
 - Status: `D`
 
-## D13 作用機構
-- Primary: `D13.PHY.PHYSICAL_ATTACK`
-- Parent: `D13.PHY`
-- Secondary: `D13.COG.MENTAL_INFLUENCE`
+**判定根拠**
+
+投稿者自身が経験した夢として提示される。これは夢内容の客観的実在性を認定するものではない。
+
+**この伝承における現れ方**
+
+読者には一人称の体験報告として差し出される。
+
+## 2.2. 意味形成の次元
+
+### 2.2.1. D07: 意味形成対象
+
+**何が不可解・不確実なのか**
+
+- Primary Child / Value: `D07.ANO.DREAM_SLEEP_ANOMALY` — 夢・睡眠異常
+- Primary Parent: `D07.ANO`
+- Secondary: `D07.ANO.UNEXPLAINED_EVENT` — 説明不能事象
 - Status: `I`
 
-## D14 帰結極性
-- Value: `D14.NEG`
+**判定根拠**
+
+同じ夢が年月後に前回の続きから再開し、夢内で危害系列と警告が継続する点が異常として読まれる。コード化は分析上の写像を含むため `I`。
+
+**この伝承における現れ方**
+
+単発の悪夢ではなく、連続性を持つ反復夢として問題化される。
+
+### 2.2.2. D08: 意味形成契機
+
+**何を手掛かりに問題化されるか**
+
+- Primary Child / Value: `D08.DEX.DREAM_SLEEP_EVENT` — 夢・睡眠内出来事
+- Primary Parent: `D08.DEX`
+- Secondary: なし
 - Status: `D`
 
-## D15 帰結領域
-- Primary: `D15.MND.FEAR_TRAUMA`
-- Parent: `D15.MND`
-- Secondary: `D15.LIF.FUTURE_CONSTRAINT`
+**判定根拠**
+
+投稿者が直接経験する夢そのものが異常認識の契機である。
+
+**この伝承における現れ方**
+
+外部文書や他人の噂ではなく、睡眠中の経験が出発点になる。
+
+### 2.2.3. D09: 意味付与操作
+
+**不可解なものをどう理解可能にするか**
+
+- Primary Child / Value: `D09.UNK.DELIBERATE_NONRESOLUTION` — 非解決維持
+- Primary Parent: `D09.UNK`
+- Secondary: なし
 - Status: `I`
 
-## D16 因果時間構造
-- Primary: `D16.REC.TRIGGERED_RECURRENCE`
-- Parent: `D16.REC`
+**判定根拠**
+
+夢の原因、車内放送の主体、反復理由は説明されず、怪異性を閉じないまま語りが終わる。
+
+**この伝承における現れ方**
+
+異常な連続夢という事実だけが残り、真相は固定されない。
+
+### 2.2.4. D10: 因果源存在論
+
+**原因を何として世界に置くか**
+
+- Primary Child / Value: `D10.PHN.DREAM_SLEEP_PHENOMENON` — 夢・睡眠現象
+- Primary Parent: `D10.PHN`
+- Secondary: なし
+- Status: `I`
+
+**判定根拠**
+
+独立した怪物・霊・人物主体は固定できない。共有核で安全に置けるのは、連続性を持つ異常な夢現象そのものである。
+
+**この伝承における現れ方**
+
+原因主体を擬人化せず、反復する夢現象として保持する。
+
+## 2.3. 因果・行動モデルの次元
+
+### 2.3.1. D11: 発動・接触条件
+
+**何を契機に因果系へ入るか**
+
+- Primary Child / Value: `D11.PAS.SLEEP_DREAM` — 眠る・夢を見る
+- Primary Parent: `D11.PAS`
+- Secondary: なし
 - Status: `D`
-- 根拠: 年月を置いて同じ夢が続きから再発する。
 
-## D17 回避・制御方式
-- Primary: `D17.AVO.FLEE_ESCAPE`
-- Parent: `D17.AVO`
-- Status: `I`
-- 根拠: 夢だと認識して覚醒し危害から離脱する。物理逃走とは異なるためtaxonomy gap候補。
+**判定根拠**
 
-## D18 作用レイヤー
-- `D18.L1=1`
-- `D18.L2=0`
-- `D18.L3=0`
-- Status: `I`
-- 根拠: 原型内部の夢因果のみ。読者感染型はScope外、独立X Evidenceなし。
+夢の中へ入ることが危害系列への直接条件である。旧 `LOCATION_STATE` より現行taxonomy上直接的である。
 
-## D19 流通範囲
-- Primary: `D19.NET.OPEN_FORUM_WEB`
-- Parent: `D19.NET`
+**この伝承における現れ方**
+
+睡眠・夢状態になることで無人駅と電車の出来事が始まる。
+
+### 2.3.2. D12: 作用対象
+
+**誰／何に作用するか**
+
+- Primary Child / Value: `D12.FOC.PROTAGONIST_EXPERIENCER` — 主人公・体験者
+- Primary Parent: `D12.FOC`
+- Secondary: なし
 - Status: `D`
 
-## D20 特権情報保持者
-- Primary: `D20.UNK.NO_ONE_KNOWS`
-- Parent: `D20.UNK`
+**判定根拠**
+
+危害が最終的に迫る焦点人物は投稿者本人である。
+
+**この伝承における現れ方**
+
+他乗客の処理を目撃した後、投稿者自身の順番が近づく。
+
+### 2.3.3. D13: 作用機構
+
+**因果源が対象へ何をするか**
+
+- Primary Child / Value: `D13.PHY.PHYSICAL_ATTACK` — 物理攻撃
+- Primary Parent: `D13.PHY`
+- Secondary: なし
 - Status: `I`
 
-## D21 現実アンカー
-- Value: `D21.A1`
+**判定根拠**
+
+夢内では乗客へ切断等の身体危害が加えられ、投稿者にも同様の危険が迫る。現実身体への作用ではなく夢内世界の作用なので `I` とする。
+
+**この伝承における現れ方**
+
+危害は抽象的不安だけでなく、夢内で具体的な身体処理として表現される。
+
+### 2.3.4. D14: 帰結極性
+
+**結果は正・負・中立・混合か**
+
+- Primary Child / Value: `D14.NEG` — 負
+- Primary Parent: なし
+- Secondary: なし
 - Status: `D`
-- 根拠: 無人駅・列車等の一般的現実背景で、特定実在地点へ固定されない。
 
-# 3. QAメモ
+**判定根拠**
 
-- 2000年原型と後代読者感染型を混成しない。
-- D17「覚醒による脱出」は現行taxonomyの `FLEE_ESCAPE` への近似であり、Global Reconciliation候補。
-- D18 L3は0。Web上の有名化だけでは社会現実効果としない。
+夢内系列は残酷な身体危害と投稿者への脅威として明示される。
+
+**この伝承における現れ方**
+
+利益・中立ではなく明確な危険として提示される。
+
+### 2.3.5. D15: 帰結領域
+
+**何の領域が最終的に変わるか**
+
+- Primary Child / Value: なし
+- Primary Parent: なし
+- Secondary: なし
+- Status: `U`
+
+**判定根拠**
+
+2000年投稿の投稿者自身について明示される終端は二度の覚醒と次回警告であり、持続的トラウマ、重傷、死亡、失踪等の安定した終端領域は確認できない。恐怖の存在だけから `FEAR_TRAUMA` へ上げない。
+
+**この伝承における現れ方**
+
+危害は迫るが、投稿者の最終的な持続状態は資料内で固定されない。
+
+### 2.3.6. D16: 因果時間構造
+
+**発動条件から主作用／主帰結まで、時間上どう編成されるか**
+
+- Primary Child / Value: `D16.REC.TRIGGERED_RECURRENCE` — 条件付き再発
+- Primary Parent: `D16.REC`
+- Secondary: なし
+- Status: `D`
+
+**判定根拠**
+
+年月を置いて同じ夢が前回の続きから再開することが明示される。
+
+**この伝承における現れ方**
+
+一回限りの夢ではなく、離脱後に再発する構造を持つ。
+
+### 2.3.7. D17: 回避・制御方式
+
+**結果をどう回避・制御・利用できるか**
+
+- Primary Child / Value: なし — **taxonomy gap: 夢から意図的に覚醒して離脱する**
+- Primary Parent: なし
+- Secondary: なし
+- Status: `I`
+
+**判定根拠**
+
+投稿者は「夢だ」と認識して覚醒し、危害場面から離脱する。しかしこれは物理空間から逃走する `FLEE_ESCAPE` とは異なる。Evidenceは存在するが現行D17 Childに直接対応しないためtaxonomy gapとして明示する。
+
+**この伝承における現れ方**
+
+制御は移動逃走ではなく、睡眠状態そのものを終了させることで成立する。
+
+### 2.3.8. D18: 作用レイヤー
+
+**因果効力は伝承内／受容者／社会現実のどこに及ぶか**
+
+- `D18.L1`: `1`
+- `D18.L2`: `0`
+- `D18.L3`: `0`
+- Status: `I`
+
+**判定根拠**
+
+L1では投稿者の夢内に因果作用がある。2000年Scopeでは読むこと自体が受容者へ作用する規則はなくL2=0。独立した社会現実効果も固定しない。absence判断を含むためvector全体は `I`。
+
+**この伝承における現れ方**
+
+怪異作用は2000年型の夢内部へ限定される。
+
+## 2.4. 社会的埋め込みの次元
+
+### 2.4.1. D19: 流通範囲
+
+**誰の間に伝承が流通するか**
+
+- Primary Child / Value: `D19.NET.OPEN_FORUM_WEB` — 公開Web・掲示板
+- Primary Parent: `D19.NET`
+- Secondary: なし
+- Status: `I`
+
+**判定根拠**
+
+匿名掲示板投稿としての流通を保存転載から確認するため `I` とする。
+
+**この伝承における現れ方**
+
+ネット上の不特定閲覧者へ開かれた形で流通する。
+
+### 2.4.2. D20: 特権情報保持者
+
+**誰が真相・追加情報を持つか**
+
+- Primary Child / Value: なし
+- Primary Parent: なし
+- Secondary: なし
+- Status: `U`
+
+**判定根拠**
+
+夢の原因や主体を知る特権保持者は資料から固定できない。「確認できない」ことを `NO_ONE_KNOWS` という強い否定へ変換しない。
+
+**この伝承における現れ方**
+
+投稿者にも原因は分からず、真相保持構造自体が不明である。
+
+### 2.4.3. D21: 現実アンカー
+
+**実在世界へどの程度固定されるか**
+
+- Primary Child / Value: `D21.A1` — 一般的現実背景
+- Primary Parent: なし
+- Secondary: なし
+- Status: `D`
+
+**判定根拠**
+
+駅・電車・遊園地風乗り物等の一般的背景を用いるが、特定実在地点・施設へ固定されない。
+
+**この伝承における現れ方**
+
+現実に馴染みのある交通空間を素材にしつつ、具体地理は持たない。
