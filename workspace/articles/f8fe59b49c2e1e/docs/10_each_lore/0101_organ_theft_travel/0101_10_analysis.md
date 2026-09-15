@@ -12,7 +12,7 @@ Evidence正本は同一ディレクトリの `0101_00_contents.md` を参照す�
 - `伝承エントリ名称`: 海外旅行で臓器を抜かれる
 - `Macro_Category`: 犯罪・社会不安
 - `Entry_Type`: FOAF
-- `Version_Scope`: 1991年Deseret Newsで同時代に確認できる成人旅行者／出張者kidney-heist型。旅行・出張中の成人男性が酒場・ホテルバーで女性と接触し、薬物で無力化された後に腎臓を摘出されたと説明される型を対象とする。同記事内の第1異伝（本人がホテルへ助けを求め、闇市場への売却が説明される型）と追加異伝（背中の新しい傷、警察、医師による腎臓摘出確認を伴う型）をContent Scopeに含める。1990年代後半の初期ネット再増幅を流通史に含めるが、1980年代の子ども臓器盗難rumor一般、浴槽・メモ等の未固定細部は必須条件にしない。
+- `Version_Scope`: 1991年Deseret Newsで同時代に確認できる成人旅行者／出張者kidney-heist型。旅行・出張中の成人男性が酒場・ホテルバーで女性と接触し、薬物で無力化された後に腎臓を摘出されたと説明される型を対象とする。同記事内の第1異伝（本人がホテルへ助けを求め、闇市場への売却が説明される型）と追加異伝（背中の新しい傷、警察、医師による腎臓摘出確認を伴う型）をContent Scopeに含める。1990年代後半のkidney/organ theft関連newsgroup増加は近縁family一般のHistory Evidenceとして保持するが、現Version Scopeの成人旅行者型のBBS流通・ネット再増幅を直接示すものとは扱わない。1980年代の子ども臓器盗難rumor一般、浴槽・メモ等の未固定細部は必須条件にしない。
 
 # 2. 分析概念次元
 
@@ -58,33 +58,33 @@ Evidence正本は同一ディレクトリの `0101_00_contents.md` を参照す�
 
 - Primary Child / Value: `D03.PRT.NEWSPAPER` — 新聞
 - Primary Parent: `D03.PRT`
-- Secondary: `D03.EDG.BBS` — BBS・電子掲示板
-- Status: `I`
+- Secondary: なし
+- Status: `D`
 
 **判定根拠**
 
-1991年新聞はDirect Content Evidenceである。1990年代後半のkidney/organ theft関連newsgroup再増幅はDonovan 2002のHistory Evidenceで確認する。個別newsgroup投稿本文をDirect Content Evidenceとして固定しているわけではないため、媒体ポートフォリオ全体はIとする。
+1991年Deseret News本文で、現Version Scopeの成人旅行者／出張者型を直接確認できる。一方、Donovan 2002が示す1996〜1998年のkidney/organ theft関連newsgroup投稿増加については個別投稿本文を固定しておらず、現Version Scopeと同一内容がBBSで流通したことは確認できないためD03には含めない。
 
 **この伝承における現れ方**
 
-印刷媒体で確認された犯罪伝説が初期インターネット掲示系媒体でも再流通する。
+現Version Scopeの具体内容を直接確認できる流通媒体は新聞である。
 
 ### 2.1.4. D04: 生成・変容パターン
 
 **時間とともにどう変形したか**
 
-- Primary Child / Value: `D04.MIG.DIGITAL_REAMPLIFICATION` — ネット再増幅
-- Primary Parent: `D04.MIG`
+- Primary Child / Value: なし
+- Primary Parent: なし
 - Secondary: なし
-- Status: `I`
+- Status: `U`
 
 **判定根拠**
 
-Donovan 2002は1996〜1998年のkidney/organ theft関連newsgroup投稿の増加を数量的に示す。1991年記事内に複数異伝があることだけから、それらの変容方向は推定しない。
+1991年記事内には複数異伝があるが、その先後・派生方向は固定できない。Donovan 2002の投稿量増加はkidney/organ theft legend family一般のHistory Evidenceであり、現Version Scopeの成人旅行者型そのものがネット上で再増幅したことを固定しないため `DIGITAL_REAMPLIFICATION` は採用しない。
 
 **この伝承における現れ方**
 
-既存の臓器盗難犯罪伝説が初期インターネット上で大量に再提示される。
+複数異伝と近縁familyのネット流通増加は確認できるが、現Version Scopeの変容機構は未確定である。
 
 ### 2.1.5. D05: 提示形式
 
@@ -177,18 +177,18 @@ Donovan 2002は1996〜1998年のkidney/organ theft関連newsgroup投稿の増加
 
 **原因を何として世界に置くか**
 
-- Primary Child / Value: なし
+- Primary Child / Value: なし — **taxonomy gap: 個人／集団／組織未特定の人間加害主体**
 - Primary Parent: なし
 - Secondary: なし
-- Status: `U`
+- Status: `I`
 
 **判定根拠**
 
-1991年Evidenceは、酒場・ホテルバーで接触する女性と、薬物投与・腎臓摘出を行った人間加害主体の存在までは支持する。しかし、接触者と実行者が同一人物か複数人か、非制度的集団・犯罪組織等のどの存在論Childに当たるかは固定できない。人間主体であることだけから `INFORMAL_GROUP` へ具体化しない。
+1991年Content Evidenceから、薬物投与・腎臓摘出の因果源が超自然ではなく人間加害主体であることは明確である。一方、酒場・ホテルバーで接触する女性と摘出実行者が同一人物か複数人か、非制度的集団・組織かは固定できない。これは因果源自体が不明なのではなく、「人間加害主体までは確定するが、個人／集団／組織未特定」という構造を現行D10 Childで表現できないtaxonomy gapである。近似Childへ押し込まない。
 
 **この伝承における現れ方**
 
-超自然ではなく人間犯罪者が原因とされるが、その人数・組織形態は未確定である。
+人間犯罪者が原因であることは明確だが、その人数・組織形態は未特定であり、現行taxonomyでは直接コードできない。
 
 ## 2.3. 因果・行動モデルの次元
 
@@ -298,18 +298,18 @@ Donovan 2002は1996〜1998年のkidney/organ theft関連newsgroup投稿の増加
 
 **結果をどう回避・制御・利用できるか**
 
-- Primary Child / Value: `D17.RIT.MEDICAL_PROFESSIONAL` — 医療介入
-- Primary Parent: `D17.RIT`
+- Primary Child / Value: なし
+- Primary Parent: なし
 - Secondary: なし
-- Status: `I`
+- Status: `U`
 
 **判定根拠**
 
-1991年記事の追加異伝では、病院から同行者へ連絡が入り、警察が背中の傷を認め、医師が診察して腎臓摘出を確認する。したがって医療介入は未固定の後代再話ではなく、00の同時代Content Evidenceに接続できる。ただし第1異伝では同じ制御経路が明示されないためIとする。「見知らぬ人物・飲食物を避ける」という事前回避はEvidenceから逆算しない。
+1991年追加異伝では、警察が背中の傷を認め、医師が診察して既に腎臓が摘出されていることを確認する。しかし、診断・確認によって臓器喪失を解除する、被害を防ぐ、結果を制御するといった機能はScope Evidenceから固定できない。医師の登場だけで `MEDICAL_PROFESSIONAL` を制御方式として採用せず、事前回避規則も因果展開から逆算しない。
 
 **この伝承における現れ方**
 
-一部異伝では、被害後に専門医療へ移ることで身体状態が確認される。
+被害後の診断経路は確認できるが、結果を回避・解除・制御する方法は現Evidenceでは未確定である。
 
 ### 2.3.8. D18: 作用レイヤー
 
@@ -334,18 +334,18 @@ Donovan 2002は1996〜1998年のkidney/organ theft関連newsgroup投稿の増加
 
 **誰の間に伝承が流通するか**
 
-- Primary Child / Value: `D19.MAS.TRANSNATIONAL` — 国際的・越境的大衆
-- Primary Parent: `D19.MAS`
-- Secondary: `D19.NET.OPEN_FORUM_WEB` — 公開Web・掲示板
-- Status: `I`
+- Primary Child / Value: なし
+- Primary Parent: なし
+- Secondary: なし
+- Status: `U`
 
 **判定根拠**
 
-Antonijević 2007は臓器盗難legend/rumorを国際的現象として論じ、Donovan 2002は初期ネット上の大量流通を示す。ただし成人旅行者型だけの全地理分布を直接測定しているわけではないためI。
+1991年Deseret Newsで成人旅行者型が紙面上に存在することは確認できるが、この具体Versionがどの社会集団・地理範囲へどの程度流通したかを独立に固定できない。Antonijević 2007の国際性とDonovan 2002のnewsgroup増加はorgan-theft legend family一般のEvidenceであり、現Version Scopeへ `TRANSNATIONAL` や `OPEN_FORUM_WEB` を移植しない。
 
 **この伝承における現れ方**
 
-国境を越える犯罪伝説として流通し、初期インターネット上でも再増幅する。
+成人旅行者型の存在は確認できるが、その社会的流通範囲は現Evidenceでは未確定である。
 
 ### 2.4.2. D20: 特権情報保持者
 
@@ -383,13 +383,13 @@ Antonijević 2007は臓器盗難legend/rumorを国際的現象として論じ、
 
 # 3. 横断QA
 
-## 3.1. Review_002対応
+## 3.1. Review_003対応
 
-- D10: 人間犯罪者の存在から人数・組織形態を補わず `U` へ保守化。
-- D08: 1991年記事内の追加異伝を00へ位置付きで固定し、背中の新しい傷を直接Content Evidenceとして `PHYSICAL_TRACE` に接続。Scope差のためStatusはI。
-- D13: 推定に依存していたSecondary `COERCE_CONFINE` を除外。
-- D15: 一般医学推論に依存していたSecondary `FUTURE_CONSTRAINT` を除外。
-- D17: 1991年記事内の病院・警察・医師による確認を00へ位置付きで固定し、`MEDICAL_PROFESSIONAL` のtraceabilityを回復。
+- D03: 現Version Scopeの直接Contentを確認できる新聞のみを採用し、個別投稿本文未固定のBBSを除外。
+- D04: organ-theft legend family一般の投稿量増加を現Version Scopeのネット再増幅へ変換せず `U`。
+- D10: 人間加害主体であることを保持しつつ、個人／集団／組織未特定を現行Childで表せないtaxonomy gapとして明示。
+- D17: 医師による診断・確認を回避／制御とみなさず `U`。
+- D19: 近縁family一般の国際性・Web流通を現Version Scopeへ移植せず `U`。
 
 ## 3.2. Sense-making chain
 
@@ -397,12 +397,12 @@ Antonijević 2007は臓器盗難legend/rumorを国際的現象として論じ、
 通常の旅行・出張中に、認識できない時間帯で腎臓を失う犯罪被害
 → 一部異伝では背中の新しい傷、受容者側では被害報告を手掛かりに問題化
 → 薬物・臓器喪失を人間犯罪者の行為へ主体・原因帰属
-→ 人間主体までは支持されるが、個人／集団／組織のChildは未確定
+→ 人間加害主体であることは明確だが、主体形態を表すChildが不足（taxonomy gap）
 → 酒場・ホテルバーで見知らぬ女性と接触
 → 成人旅行者・出張者が被害対象となる
 → 腎臓摘出による身体変容
 → 重傷・障害として終わる
-→ 一部異伝では医師の診察によって身体状態が確認される
+→ 医師による診断は確認できるが、回避・制御方式は未確定
 ```
 
-Evidenceにない犯罪ネットワーク構造、監禁、長期将来制約、浴槽・メモを分析値へ持ち込まない。
+Evidenceにない犯罪ネットワーク構造、監禁、長期将来制約、浴槽・メモ、Scope外familyの国際流通を分析値へ持ち込まない。
