@@ -65,29 +65,30 @@ Step 0. 対象Entryと分析単位を確定
 
 既存Excelコード、過去の `10_analysis`、過去Review、作業メモは、独立判定完了前の「正解」として使用しない。
 
-## 1.1. Step & deliverables
+## 1.1. Step と成果物
 
-現行Stepと正本成果物、audit / checkpoint artifactの対応は次のとおりとする。`legacy task ID` は旧control planeの `R0`〜`R7` との追跡互換のために示すものであり、現行Step番号を置換するものではない。
+現行Stepと、各Stepで作成・更新する正本成果物およびaudit / checkpoint artifactの対応は次のとおりとする。
+この表だけで、各Stepの出力先と成果物の位置づけを判断できることを目的とする。
 
-| 現行Step | 内容 | legacy task ID | 正本deliverables | audit / checkpoint artifacts |
-|---|---|---|---|---|
-| Step 0 | 対象Entry・分析単位の確定 | R0の一部 | － | control plane上の対象・baseline確認。新規artifactは原則作らない |
-| Step 1 | 正本・tutorial・control plane確認 | R0の一部 | － | － |
-| Step 2 | 典拠調査・Evidence整理 | R1の一部 | － | 必要に応じ `<Entry_ID>_R1_evidence_audit.md` |
-| Step 3 | `00_contents` 作成・更新 | R1の一部 | `<Entry_ID>_00_contents.md` | R1 evidence auditを使用する場合は同artifactへ記録 |
-| Step 4 | Version Scope固定 | R2 | － | `<Entry_ID>_R2_version_scope.md` |
-| Step 5 | Independent Recodeを固定し、`10_analysis` を作成・更新 | R3 + R4の一部 | `<Entry_ID>_10_analysis.md` | `<Entry_ID>_R3_independent_recode.md`（freeze checkpoint） |
-| Step 6 | 00 / 10 横断QA | R4の一部 | 必要に応じ `00` / `10` を修正 | `<Entry_ID>_R4_entry_qa.md` |
-| Step 7 | 成果物commit / push・control plane更新 | R4の確定処理 | commit済みの `00` / `10` | control planeのStatus / pre-SHA / post-SHA更新。artifact fileではない |
-| Step 8 | Review / 再Reviewへ引渡し | Review Cycle | － | Reviewer側成果物 `docs/99_work/review_10_each_lore/<Entry_ID>/Review_*.md`。本workflowのanalysis artifactではない |
-| Step 9 | Review返却後のCoder判定・修正cycle | Review Cycle | 修正対象の `00` / `10` | 必要に応じ `<Entry_ID>_review_<Review_Seq>_adjudication.md` |
-| Step 10 | 全件正本Excelへの同期 | R6 | `docs/20_analysis_summary/urban_legend_parent_child_full_application_v1.xlsx` | sync / diff確認記録はプロジェクト側の運用に従う |
+| Step | 作業内容 | 正本成果物 | audit / checkpoint artifact |
+|---|---|---|---|
+| Step 0 | 対象Entry・分析単位の確定 | － | control planeを使用する場合は対象・baselineを確認。新規artifactは原則作らない |
+| Step 1 | 正本・tutorial・control plane確認 | － | － |
+| Step 2 | 典拠調査・Evidence整理 | － | 必要に応じ `<Entry_ID>_02_evidence_audit.md` |
+| Step 3 | `00_contents` 作成・更新 | `<Entry_ID>_00_contents.md` | Step 2のEvidence auditを使用する場合は同artifactへ記録 |
+| Step 4 | Version Scope固定 | － | `<Entry_ID>_04_version_scope.md` |
+| Step 5 | 独立判定を固定し、`10_analysis` を作成・更新 | `<Entry_ID>_10_analysis.md` | `<Entry_ID>_05_independent_recode.md` |
+| Step 6 | 00 / 10 横断QA | 必要に応じ `00` / `10` を修正 | `<Entry_ID>_06_entry_qa.md` |
+| Step 7 | 成果物commit / push・control plane更新 | commit済みの `00` / `10` | control planeのStatus / pre-SHA / post-SHA更新。artifact fileではない |
+| Step 8 | Review / 再Reviewへ引渡し | － | Reviewer側成果物 `docs/99_work/review_10_each_lore/<Entry_ID>/Review_*.md`。本workflowのanalysis artifactではない |
+| Step 9 | Review返却後のCoder判定・修正cycle | 修正対象の `00` / `10` | 必要に応じ `<Entry_ID>_09_review_<Review_Seq>_adjudication.md` |
+| Step 10 | 全件正本Excelへの同期 | `docs/20_analysis_summary/urban_legend_parent_child_full_application_v1.xlsx` | sync / diff確認記録はプロジェクト側の運用に従う |
 
-旧 `R5 Global Reconciliation` と `R7 Global QA` は、複数Entryを横断するプロジェクト工程であり、1 Entryを処理する本workflowのStepへ機械的に割り当てない。必要なプロジェクトではcontrol planeまたは別の横断workflowで管理する。
+複数Entryを横断する照合・全体QAが必要な場合、それらは1 Entryを処理する本workflowのStepではなく、プロジェクト横断工程として、実行時に指定されたcontrol planeまたは別の横断workflowで定義・管理する。
 
 ## 1.2. audit / checkpoint artifact 出力規則
 
-本workflowで作成する `R1` / `R2` / `R3` / `R4` / Coder adjudicationは**正本成果物ではなく、分析側のaudit / checkpoint artifact**である。
+本workflowで作成するEvidence audit、Version Scope、Independent Recode、Entry QA、Coder adjudicationは**正本成果物ではなく、分析側のaudit / checkpoint artifact**である。
 
 analysis artifact rootは次の優先順位で決定する。
 
@@ -109,15 +110,27 @@ docs/99_work/<project>/artifacts/
 
 となる。
 
-artifactの標準ファイル名は次のとおりとする。
+現行workflowで新規作成するartifactの標準ファイル名は次のとおりとする。
 
 ```text
-<Entry_ID>_R1_evidence_audit.md
-<Entry_ID>_R2_version_scope.md
-<Entry_ID>_R3_independent_recode.md
-<Entry_ID>_R4_entry_qa.md
-<Entry_ID>_review_<Review_Seq>_adjudication.md
+<Entry_ID>_02_evidence_audit.md
+<Entry_ID>_04_version_scope.md
+<Entry_ID>_05_independent_recode.md
+<Entry_ID>_06_entry_qa.md
+<Entry_ID>_09_review_<Review_Seq>_adjudication.md
 ```
+
+`Entry_ID` 直後の2桁は、**そのartifactを作成・更新する本workflowのStep番号**を表す。1桁のStepもゼロ埋め2桁で記載し、同一Entryのartifactをファイル名順に並べたとき、workflow上の実行順を判別できるようにする。
+
+本workflowのStep番号が将来変更された場合でも、作成済みartifactを新番号へ遡及renameしない。作成時点のファイル名は監査証跡の一部として保持する。
+
+旧命名規則または旧運用で作成済みのanalysis artifactは、**過去運用artifact（legacy artifact）**として扱う。これらはファイル名・本文を変更せず、analysis artifact root配下の次のディレクトリへ格納する。
+
+```text
+<analysis artifact root>/legacy/
+```
+
+`legacy/` は過去運用artifactの保管専用とし、現行workflowで新規作成するartifactを保存してはならない。過去運用artifactのファイル名や内部識別子は、現行workflowの命名規則を定義するものではない。
 
 `Review_*.md` はReview workflowの成果物であり、analysis artifact rootへ移動しない。Review workflowが定める保存先を使用する。
 
@@ -194,9 +207,9 @@ Evidence role、証拠強度、include / exclude等の詳細は `30_urban_legend
 
 ## 4.3. Evidence audit checkpoint
 
-persistent checkpointを使用するプロジェクトでは、Evidenceの欠落・重複・出典精度・リンク有効性・include / exclude上の論点を、analysis artifact rootの `<Entry_ID>_R1_evidence_audit.md` に記録できる。
+persistent checkpointを使用するプロジェクトでは、Evidenceの欠落・重複・出典精度・リンク有効性・include / exclude上の論点を、analysis artifact rootの `<Entry_ID>_02_evidence_audit.md` に記録できる。
 
-R1 artifactはEvidence上の問題を列挙するだけの代替物ではない。正本へ反映すべき修正はStep 3で `00_contents` へ反映する。
+Evidence audit artifactはEvidence上の問題を列挙するだけの代替物ではない。正本へ反映すべき修正はStep 3で `00_contents` へ反映する。
 
 # 5. Step 3 — `*_00_contents.md`
 
@@ -225,7 +238,7 @@ Scope選択の詳細な分析規則は `10 / 20 / 30` を正とし、本workflow
 
 原則として、成立時または最古に確認できるcoherentな共有核を優先し、世界のルールを変える安定異伝・後代翻案を無理に統合しない。
 
-persistent checkpointを使用するプロジェクトでは、固定したScopeと主要なinclude / exclude判断をanalysis artifact rootの `<Entry_ID>_R2_version_scope.md` に記録する。
+persistent checkpointを使用するプロジェクトでは、固定したScopeと主要なinclude / exclude判断をanalysis artifact rootの `<Entry_ID>_04_version_scope.md` に記録する。
 
 # 7. Step 5 — 分析コード付与 / `*_10_analysis.md`
 
@@ -235,7 +248,7 @@ persistent checkpointを使用するプロジェクトでは、固定したScope
 
 独立判定を固定する前に、既存Excelコード、過去の `10_analysis`、過去Review、作業メモを正解として参照してはならない。既存正本 `10_analysis` を更新する場合も、まず独立判定を固定し、その後に既存値との差分を照合する。
 
-persistent checkpointを使用するプロジェクトでは、この独立判定をanalysis artifact rootの `<Entry_ID>_R3_independent_recode.md` にfreezeする。freeze後に既存分析値との差分を確認し、正本 `10_analysis` へ反映する。
+persistent checkpointを使用するプロジェクトでは、この独立判定をanalysis artifact rootの `<Entry_ID>_05_independent_recode.md` にfreezeする。freeze後に既存分析値との差分を確認し、正本 `10_analysis` へ反映する。
 
 ## 7.2. `10_analysis` の作成・更新
 
@@ -272,7 +285,7 @@ persistent checkpointを使用するプロジェクトでは、この独立判�
 
 Review基準の詳細は `0000_workflow_20_review.md` を参照する。
 
-persistent checkpointを使用するプロジェクトでは、横断QAの結果と修正要否をanalysis artifact rootの `<Entry_ID>_R4_entry_qa.md` に記録する。QAで正本の修正が必要と判明した場合は、artifactへの記録だけで完了とせず、該当する `00` / `10` を修正する。
+persistent checkpointを使用するプロジェクトでは、横断QAの結果と修正要否をanalysis artifact rootの `<Entry_ID>_06_entry_qa.md` に記録する。QAで正本の修正が必要と判明した場合は、artifactへの記録だけで完了とせず、該当する `00` / `10` を修正する。
 
 # 9. Step 7 — commit / push単位
 
@@ -333,7 +346,7 @@ control planeが指定された場合、その文書は少なくともEntry × �
 | `最新レビュー版` | 最後に完了したReview Seq。未レビューは `－` |
 | `pre-SHA` | 現在cycleの入力成果物checkpoint |
 | `post-SHA` | 現在cycleで確定した成果物commit |
-| `remarks` | legacy移行、例外、主要修正等の監査注記 |
+| `remarks` | 旧運用からの移行、例外、主要修正等の監査注記 |
 
 00と10は独立した成果物行として管理し、片方のSHA・Statusを他方へ流用しない。
 
@@ -425,7 +438,7 @@ fi
 
 B/C/DではReview内容を現在の成果物へ機械的に適用しない。
 
-legacy checkpoint等で成果物単独commitではないSHAを使う場合は、Review workflowに従い対象blob SHAも照合する。通常運用へ戻す時点でcheckpointを正規化する。
+旧運用由来など、成果物単独commitではないSHAを使う場合は、Review workflowに従い対象blob SHAも照合する。通常運用へ戻す時点でcheckpointを正規化する。
 
 # 12. Review修正cycle
 
@@ -463,7 +476,7 @@ post_(n+1)
 
 Review結果の判定そのものは `0000_workflow_20_review.md` の責務である。本workflowは、返却されたReviewと現在成果物の対応確認、およびCoder側修正・状態更新を担う。
 
-persistent checkpointを使用するプロジェクトでは、Review Findingごとの採否、修正方針、修正対象成果物をCoder側のanalysis artifactとして `<Entry_ID>_review_<Review_Seq>_adjudication.md` に記録できる。これはReviewerの `Review_*.md` を置換・改変するものではない。
+persistent checkpointを使用するプロジェクトでは、Review Findingごとの採否、修正方針、修正対象成果物をCoder側のanalysis artifactとして `<Entry_ID>_09_review_<Review_Seq>_adjudication.md` に記録できる。これはReviewerの `Review_*.md` を置換・改変するものではない。
 
 # 13. Reviewとの責務境界
 
