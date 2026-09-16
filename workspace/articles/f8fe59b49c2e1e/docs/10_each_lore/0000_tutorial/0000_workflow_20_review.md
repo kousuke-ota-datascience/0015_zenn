@@ -74,7 +74,11 @@ control planeを使用する場合は、対象Entry × 成果物行の `post-SHA
 3. 00 tutorial必須記載内容
 
 4. 00 tutorial記載粒度
-   - 第三者が主要な伝承形・Evidence対応を再構成できるか
+   - 1.1 summaryだけを入力としてBlind Decodeを先に固定
+   - その後、原Evidence / 1.2以降からReference Storyを確認
+   - Blind DecodeとReference Storyへ同一Structural Probeを適用
+   - 分析上の回答が保存されるかAnalysis Invarianceを確認
+   - Probe Matrix / Reconstruction VerdictをReview_00へEvidenceとして保存
 
 5. 00 Evidence / Content Review
 
@@ -107,6 +111,8 @@ control planeを使用する場合は、対象Entry × 成果物行の `post-SHA
 
 **工程2〜12を並べ替えない。工程2〜4を完了する前に00のEvidence / Content判定へ進まず、工程6〜8を完了する前にVersion ScopeやD01〜D21の判定へ進まない。**
 
+工程4では、Blind Decodeを固定した後に限り、記載粒度比較のためReference Storyを原Evidence / 1.2以降から確認してよい。この確認はsummaryの情報保存性を検証するための比較材料の取得であり、工程5のEvidence品質・directness・資料分類の妥当性判定を先取りするものではない。
+
 ある工程でFAILを確認した場合は、そのFindingを記録したうえで次工程へ進み、後続QAを省略しない。ただし対象版固定に失敗した場合はReview自体を開始しない。
 
 ## 1.4. Review時の最小チェック
@@ -114,7 +120,9 @@ control planeを使用する場合は、対象Entry × 成果物行の `post-SHA
 00では最低限、次を確認する。
 
 - tutorialの必須見出し・順序・フィールドを満たす。
-- summaryから主要な伝承形・命題を再構成できる。
+- summaryだけからBlind Decodeした伝承と、原Evidenceから確認できるReference Storyが、主要な構造・分析判断を実質的に保存している。
+- Blind DecodeはReference Story確認前に固定し、比較後に書き換えない。
+- Structural Probe MatrixとAnalysis Invarianceの差分がReview_00にEvidenceとして残っている。
 - 主体、場所、物、条件、規則、禁忌、帰結、不確実性が必要な粒度で記録されている。
 - 最古確認と実際の起源を混同していない。
 - 初期形と後代異伝を区別している。
@@ -164,6 +172,7 @@ Entry完了前に、保存したReview mdを再取得し、最低限次を確認
 - 対象commit SHA / blob SHAが正しい。
 - control plane使用時のpre-SHA / post-SHAが記録されている。
 - 最終判定がFindingsと整合する。
+- 00 ReviewにSummary Reconstruction Evidenceが保存されている。
 - Findings、QA、修正優先順位、最終判定が欠落していない。
 
 ここまで完了して初めて次Entryへ進む。
@@ -271,6 +280,113 @@ legacy checkpointで成果物単独commitではない場合は、そのcommit時
 
 **tutorial記載粒度**では、第三者が00だけから主要な伝承形、Evidenceの役割、初期形と異伝、不確実性を再構成できるかを見る。構造が合っているだけではtutorial準拠としない。
 
+**Summary Reconstruction Equivalence Test**
+
+`1.1. summary` の記載粒度は、summaryの長さ、情報項目数、表面的な文章類似度ではなく、**summaryのみから復元した伝承が原Evidenceから確認できる伝承構造を保存しているか**で検証する。
+
+このテストではEncoderを実施しない。EncoderはCoderがEvidence / 詳細記述からsummaryを作成した時点ですでに行われている。ReviewerはDecoderと比較だけを行う。
+
+実行順序は次とする。
+
+```text
+A. Blind Decode
+   1. `1.1. summary` だけを読む。
+   2. 原Evidence、1.2以降、10_analysis、過去Reviewの知識で補完しない。
+   3. summaryから復元できる伝承ストーリー／論理構造を文章として固定する。
+   4. このBlind DecodeはReference Story確認後に書き換えない。
+
+B. Reference Story確認
+   1. Blind Decode固定後に、原Evidenceおよび00の1.2以降を確認する。
+   2. Evidenceから確認できる伝承ストーリー／論理構造をReference Storyとして整理する。
+   3. この段階ではEvidence資料自体の品質・directness・分類の最終判定は行わない。それは工程5で行う。
+
+C. Structural Probe
+   Blind DecodeとReference Storyへ同一の問いを適用し、回答を並列比較する。
+
+D. Analysis Invariance
+   両ストーリーに同一のDimension中心質問を適用し、主要な分析回答が保存されるか確認する。
+
+E. Reconstruction Verdict
+   Structural / Analysis上の差分をもとにsummary粒度のPASS / FAILを確定する。
+```
+
+Structural Probeは最低限、次を用いる。
+
+| Probe | 問い |
+|---|---|
+| P01 | 主な主体・役割は誰／何か |
+| P02 | 主な作用対象は誰／何か |
+| P03 | 何を契機に異常・中心命題の系列へ入るか |
+| P04 | 原因／作用主体は何として描かれるか |
+| P05 | 対象に具体的に何が起きる／何が作用するか |
+| P06 | 対象は前後でどのような状態遷移をするか |
+| P07 | 出来事はどの順序・反復・遅延・継続関係にあるか |
+| P08 | 条件・規則・禁忌は何か |
+| P09 | 回避・制御・利用方法と、その成否は何か |
+| P10 | 明示された終端状態は何か |
+| P11 | 何が未解決・不明のまま残るか |
+| P12 | 初期形・後代形・主要異伝の境界は何か |
+
+各Probeの差分は次で記録する。
+
+```text
+NONE     = 実質的に同じ構造を復元できる
+LOSS     = ReferenceにはあるがBlind Decodeからは復元できない、または分析上意味のある具体性が失われる
+CONFLICT = Blind DecodeからReferenceとは異なる構造が復元される
+```
+
+`LOSS` があるだけで自動的にFAILとはしない。固有名詞、描写上の装飾、分析に影響しない細部等が省略されてもよい。
+
+次にAnalysis Invarianceを確認する。文章同士の類似度ではなく、Blind DecodeとReference Storyへ**同じDimension中心質問**を適用した場合に、主要な回答が変化するかを見る。この段階では現行10_analysisのコードを正しいものとして参照せず、00のsummary粒度検証用の独立プローブとして実施する。
+
+少なくとも、差分により次が変わり得るかを確認する。
+
+- D07〜D10の意味形成構造
+- D11の発動・接触条件
+- D12の作用対象
+- D13の作用機構またはtaxonomy gapの有無
+- D14の帰結極性
+- D15の帰結領域・状態変化
+- D16の時間構造
+- D17の回避・制御・利用
+- D18の作用レイヤー
+- D19〜D20の流通・情報保持構造
+- D21の現実アンカー
+- Version Scopeまたは主要異伝境界
+
+Blind DecodeとReference Storyの表現が異なっていても、これらの主要分析回答が保存されるならsummaryの圧縮は許容できる。
+
+逆に、Reference Storyを読めば成立する合理的な分析候補・状態遷移・因果構造・Version境界が、Blind Decodeでは成立しない、別の回答になる、または判断不能へ縮退する場合、そのsummaryはanalysis-preservingではない。
+
+判定の中心原則は次である。
+
+> **原Evidenceを読んだ第三者と、summaryだけを読んだ第三者が、実質的に同じ伝承構造と主要な分析可能性を再構成できるか。**
+
+「大筋が分かる」「主要イベント名が存在する」「詳細は1.2にある」「10_analysisを読めば補える」「意味的には似ている」はPassの根拠としない。一方で、原文の全ディテールをsummaryへ移すことも要求しない。
+
+とくに、00へ分析結果そのものを書き込むことと、分析を可能にするContentを保持することを区別する。ある解釈を断定してはならない場合でも、その解釈の成立可否を左右する伝承内の具体的行動・状態変化・規則・終端を削ってはならない。
+
+Summary Reconstruction Equivalence Testの結果は、00 Review mdへ**レビュー判断のEvidence**として保存する。最低限、次を残す。
+
+```text
+Blind Decode
+Structural Probe Matrix
+Analysis Invariance
+Reconstruction Verdict
+```
+
+Structural Probe Matrixは原則として次の形式を用いる。
+
+```markdown
+| Probe | Blind Decode | Reference Story | Difference |
+|---|---|---|---|
+| P01 | ... | ... | NONE / LOSS / CONFLICT |
+| ... | ... | ... | ... |
+| P12 | ... | ... | NONE / LOSS / CONFLICT |
+```
+
+Analysis Invarianceは全Dimensionを長文化する必要はない。差分がない範囲はまとめて記録してよいが、差分があるDimensionは、Blind Decode側とReference Story側で何が変わるかを具体的に残す。
+
 Evidence / Content内容では最低限、次を確認する。
 
 - summaryから主要な伝承形・命題を再構成できる。
@@ -362,6 +478,7 @@ D12→D13→D15は一本の因果列として読めることを要求する。
 5. D07〜D17が同じVersionの一つの意味形成モデルになっている。
 6. D18 L3のX Evidenceが00に記録され、Scope内である。
 7. tutorial構造・内容・粒度の判定とFindingsが整合する。
+8. Summary Reconstruction EvidenceでLOSS / CONFLICTとなった構造が、10の判定根拠で暗黙補完されていない。
 
 理想的なtraceabilityは次である。
 
@@ -388,10 +505,12 @@ Moderateは次を目安とする。
 
 - 一部Dimension・一部節のコード / Statusへ影響し得る。
 - Evidence directness、Secondary、局所的tutorial不足等の再確認が必要。
+- Summary Blind DecodeとReference Storyの差分が、一部の主要Dimension回答または合理的分析候補を変える。
 
 Minorは次を目安とする。
 
 - 見出し番号、表記、軽微なフォーマット等で、分析判断を変えない局所修正。
+- Summary上のLOSSが分析不変性を壊さず、伝承構造の理解にも実質影響しない局所的欠落。
 
 最終判定は次とする。
 
@@ -423,6 +542,16 @@ QA
 修正優先順位
 ```
 
+加えて、00 Review mdには次を必須記録とする。
+
+```text
+Summary Reconstruction Evidence
+- Blind Decode
+- Structural Probe Matrix
+- Analysis Invariance
+- Reconstruction Verdict
+```
+
 各Findingは原則として次を含む。
 
 ```text
@@ -452,9 +581,14 @@ Reviewerは修正後コードを勝手に正本へ書き込まず、必要なら
 ## 1. 結論
 ## 2. Findings
 ## 3. 維持可能な点
-## 4. QA
-## 5. 修正優先順位
-## 6. 最終判定
+## 4. Summary Reconstruction Evidence
+### 4.1. Blind Decode
+### 4.2. Structural Probe Matrix
+### 4.3. Analysis Invariance
+### 4.4. Reconstruction Verdict
+## 5. QA
+## 6. 修正優先順位
+## 7. 最終判定
 ```
 
 10 Review mdの標準フォーマットは次とする。
@@ -491,6 +625,8 @@ FindingがなくてもQAと最終判定を省略しない。
 - 対象commit SHA / blob SHAを固定した。
 - control plane使用時はpost-SHAと対象版を照合した。
 - 00のtutorial構造・内容・粒度を、第1章の順序どおり確認した。
+- 00 Summary Blind DecodeをReference確認前に固定した。
+- 00 Structural Probe Matrix / Analysis Invariance / Reconstruction VerdictをReview mdへ保存した。
 - 00をEvidence layerとしてReviewした。
 - 10のtutorial構造・内容・粒度を、第1章の順序どおり確認した。
 - Version Scopeを検証した。
@@ -503,6 +639,6 @@ FindingがなくてもQAと最終判定を省略しない。
 - Review mdにFindings、維持可能な点、QA、修正優先順位、最終判定を記録した。
 - 保存後にReview mdを再取得し、保存内容を確認した。
 
-保存後再確認では、Reviewファイルが存在するだけでは完了としない。対象commit SHA / blob SHA、Review Seq、最終判定、Findingsが意図した内容で保存されていることを確認する。
+保存後再確認では、Reviewファイルが存在するだけでは完了としない。対象commit SHA / blob SHA、Review Seq、最終判定、Findingsが意図した内容で保存されていることを確認する。00 ReviewではSummary Reconstruction Evidenceも再取得内容に含まれていることを確認する。
 
 Review完了後のCoder修正、control planeのStatus変更、pre/post-SHA更新は `0000_workflow_10_each_lore_analysis.md` に従う。Reviewerはこれらを代行しない。
