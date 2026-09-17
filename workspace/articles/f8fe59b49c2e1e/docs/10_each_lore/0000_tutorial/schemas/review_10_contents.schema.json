@@ -46,7 +46,21 @@
               "difference": {"type": "string", "enum": ["NONE", "LOSS", "CONFLICT"]},
               "notes": {"type": "string"}
             }
-          }
+          },
+          "allOf": [
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P01"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1},
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P02"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1},
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P03"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1},
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P04"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1},
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P05"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1},
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P06"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1},
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P07"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1},
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P08"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1},
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P09"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1},
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P10"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1},
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P11"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1},
+            {"contains": {"type": "object", "properties": {"probe_id": {"const": "P12"}}, "required": ["probe_id"]}, "minContains": 1, "maxContains": 1}
+          ]
         },
         "analysis_invariance": {
           "type": "object",
