@@ -87,3 +87,53 @@ def test_taxonomy_wrong_dimension(valid_analysis, taxonomy_catalog):
     d02["primary"] = copy.deepcopy(d03["primary"])
     issues = validate_taxonomy(analysis, taxonomy_catalog)
     assert "V-CODE-002" in {issue.rule_id for issue in issues}
+
+
+def test_validate_entry_through_00_does_not_require_downstream(tmp_path, monkeypatch, valid_sources):
+    import json
+    from src.validation import validate_entry as ve
+
+    root = tmp_path / "article"
+    canonical = root / "docs/10_each_lore/0001"
+    canonical.mkdir(parents=True)
+    (canonical / "0001_00_sources.json").write_text(
+        json.dumps(valid_sources, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr(ve, "ARTICLE_ROOT", root)
+    monkeypatch.setattr(ve, "CANONICAL_ROOT", root / "docs/10_each_lore")
+    monkeypatch.setattr(
+        ve,
+        "SCHEMA_ROOT",
+        Path(__file__).resolve().parents[1] / "docs/10_each_lore/0000_tutorial/schemas",
+    )
+
+    result = ve.validate_entry("0001", through="00")
+    assert result["result"] == "PASS"
+    assert result["through"] == "00"
+
+
+def test_validate_entry_default_requires_full_chain(tmp_path, monkeypatch, valid_sources):
+    import json
+    from src.validation import validate_entry as ve
+
+    root = tmp_path / "article"
+    canonical = root / "docs/10_each_lore/0001"
+    canonical.mkdir(parents=True)
+    (canonical / "0001_00_sources.json").write_text(
+        json.dumps(valid_sources, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr(ve, "ARTICLE_ROOT", root)
+    monkeypatch.setattr(ve, "CANONICAL_ROOT", root / "docs/10_each_lore")
+    monkeypatch.setattr(
+        ve,
+        "SCHEMA_ROOT",
+        Path(__file__).resolve().parents[1] / "docs/10_each_lore/0000_tutorial/schemas",
+    )
+
+    result = ve.validate_entry("0001")
+    assert result["result"] == "FAIL"
+    assert any("file not found" in issue["message"] for issue in result["errors"])
