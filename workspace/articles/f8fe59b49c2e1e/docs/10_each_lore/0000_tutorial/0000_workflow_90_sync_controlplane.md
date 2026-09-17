@@ -29,6 +29,7 @@
 - canonical artifactは生成しない。
 - 同期結果を `PASS / UPDATED / BLOCKED / ERROR` のいずれかとして返す。
 - 詳細は必要時のみreason / rule ID / remarks / 実行ログへ残す。
+- `PASS / UPDATED / BLOCKED / ERROR` はWorkflow 90の実行結果であり、control planeの `Status` 値ではない。
 
 # 3. 管理単位
 
@@ -47,6 +48,45 @@
 - `post-SHA`
 - `remarks`
 
+## 4.1. Status正本
+
+`Status` は以下の7値のみを許容する。
+
+| Status | 定義 |
+|---|---|
+| `未` | Coder作業未着手 |
+| `レビュー待` | 初回Coder成果物commit完了、初回Review待ち |
+| `要修正` | Reviewで修正要求が確定し、修正成果物commit前 |
+| `再作業中` | CoderがReview指摘への修正作業中 |
+| `再レビュー待` | 修正成果物commit完了、再Review待ち |
+| `完了` | 対象artifactの最新ReviewがPass |
+| `－（対象外）` | 当該成果物を適用対象外と明示した状態 |
+
+- Notion `伝承エントリ調査状況.Status` のSelect optionsを機械的許容値の正本とする。
+- `reconcile.py` は上記7値以外を受け入れずBLOCKする。
+- `－（対象外）` はGit / Review事実だけから自動付与しない。
+
+## 4.2. Status遷移
+
+Legacy標準Workflowで確定していた状態遷移を継承する。
+
+| イベント | Status | 最新レビュー版 | pre-SHA | post-SHA |
+|---|---|---|---|---|
+| 初回Coder成果物commit完了 | `レビュー待` | 変更なし | 編集入力checkpoint | 新成果物commit |
+| Reviewで修正要求確定 | `要修正` | 実施済みReview Seq | 変更なし | 変更なし |
+| Review Pass確定 | `完了` | 実施済みReview Seq | 変更なし | 変更なし |
+| 修正開始 | `再作業中` | 変更なし | `old post-SHA` | commit確定まで`old post-SHA`保持 |
+| 修正成果物commit完了 | `再レビュー待` | 変更なし | 修正開始時の値を保持 | 新成果物commit |
+| 再Reviewで修正要求 | `要修正` | 新Review Seq | 変更なし | 変更なし |
+| 再Review Pass | `完了` | 新Review Seq | 変更なし | 変更なし |
+
+追加規則:
+
+- `再レビュー待` では、最新Review targetが現artifactのancestorであることは正常状態であり、stale ReviewとしてBLOCKしない。
+- `再作業中` では、直前の修正要求Reviewが最新Reviewとして残っていても `要修正` へ巻き戻さない。
+- `完了` 後にcanonical artifactが更新された場合、その版は未Reviewなので `再レビュー待` へ戻す。
+- `要修正 -> 再作業中` は「Coderが修正を開始した」という運用イベントを必要とする。Entry_IDだけの同期事実から開始意思を推測してはならない。
+
 # 5. 実行手順
 
 ## 5.1. Step 0: Python入口実行
@@ -61,7 +101,7 @@ python -m src.status_management.sync_controlplane <Entry_ID>
 
 - `PASS`: 実状態とcontrol planeが整合し、更新不要。
 - `UPDATED`: 事実から一意に導出できるcontrol plane更新を実施し、更新後検証まで完了。
-- `BLOCKED`: divergence、重複、stale state等により安全な自動収束ができない。
+- `BLOCKED`: divergence、重複、未知Status、解釈不能なstale state等により安全な自動収束ができない。
 - `ERROR`: 設定・I/O・実行不能等で同期処理自体を完了できない。
 
 ## 5.3. Step 2: Workflow分岐
@@ -72,17 +112,20 @@ python -m src.status_management.sync_controlplane <Entry_ID>
 
 ## 5.4. Python内部の責務境界
 
-- `notion_controlplane.py`: Notion state取得・更新・更新後確認。
+- `notion_controlplane.py`: Notion state取得・更新・更新後確認。Status enumも検査する。
 - `git_state.py`: artifact commit / blob / commit graph事実取得。
 - `review_state.py`: Review結果JSONを読み、artifactに応じて `review_00_sources.schema.json / review_10_contents.schema.json / review_20_analysis.schema.json` で構造確認したReview事実を取得する。`review_common.schema.json` は共通定義としてのみ利用する。
-- `reconcile.py`: I/Oなしで同期可否とmutation planを決定。
+- `reconcile.py`: I/Oなしで同期可否・Status収束・mutation planを決定。
 - `sync_controlplane.py`: 上記を組み立て、mutation適用と最終結果返却をオーケストレーションする。
 
 # 6. SHA関係の解釈
 
 - `exact`: 対象版一致。
-- control plane SHAがReview対象SHAのancestor: control plane更新漏れ等を疑う。
-- Review対象SHAがcontrol plane SHAのancestor: stale Reviewを疑う。
+- control plane `post-SHA` が現artifact SHAのancestor: control planeが古い。事実から一意に更新可能ならpre/postを前進させる。
+- Review対象SHAが現artifact SHAのancestor:
+  - `再レビュー待` または修正commit直後であれば正常。
+  - その他の状態ではstale ReviewとしてBLOCKする。
+- 現artifact SHAがReview対象SHAのancestor: Review target aheadとしてBLOCKする。
 - `diverged`: 自動修復せず調査対象。
 - Review成果物自身のcommitをcanonical artifactの `post-SHA` として扱わない。
 
@@ -116,6 +159,7 @@ Artifact 20 -> review_20_analysis.schema.json
 
 - current stateはNotionに保持する。
 - Notion stateはGit / Review事実より優先しない。
+- Status enumはNotion Select、Workflow 90、`reconcile.py` で一致させる。
 - 同期はidempotentであること。
 - 不明状態を推測で正常化しないこと。
 - duplicate、malformed Review、divergence、concurrent update等の曖昧状態では自動更新しないこと。
@@ -123,5 +167,5 @@ Artifact 20 -> review_20_analysis.schema.json
 
 # 10. 未確定事項
 
-- `Status` の最終遷移表。
+- `要修正 -> 再作業中` の開始イベントを、Entry_IDだけの公開CLIを維持したままどの内部事実で表現するか。
 - Review Seq採番・Review JSON保存・Verdict集約を担うPython実装ファイルとの境界。
