@@ -69,6 +69,28 @@ All three logical rows for Entry 0001 are complete with latest Review Seq 2.
    - Added canonical JSON paths to CI filters and staged validation for the 0001 pilot.
 3. Canonical Review JSON history is now included in CI path filters and read-side integrity is checked with `review_state.py`.
 
+## Final idempotency verification
+
+Current Notion rows, canonical Git facts, and Review Seq 2 facts were re-read after final convergence.
+
+- 00: Status=`完了`, Review Seq=2, post-SHA equals the canonical 00 commit, Review target blob equals the current artifact blob.
+- 10: same invariant holds.
+- 20: Status=`完了`, Review Seq=2, pre-SHA preserves the cycle-1 target, post-SHA equals the corrected canonical commit, Review target blob equals the corrected artifact blob.
+- Feeding those exact current facts into the current `reconcile.py` decision rules yields `NOOP`, zero mutations, and zero issues.
+
+A one-shot GitHub Actions job was also attempted to execute the actual external CLI:
+
+```text
+python -m src.status_management.sync_controlplane 0001
+```
+
+The job could not enter the CLI step because the repository does not currently provide a `NOTION_TOKEN` GitHub Actions secret. The temporary verification workflow and trigger were removed after this check.
+
+Therefore:
+- state convergence and reconciliation idempotency are verified;
+- the `sync_controlplane.py` Notion HTTP integration path is covered by the P1-D deterministic tests;
+- a credentialed GitHub Actions execution of the external Workflow 90 CLI remains an environment/deployment verification item, not a discovered state or reconciliation defect.
+
 ## Scope note
 
 The E2E pilot does not resolve the separate P2-A decision about how to represent the explicit start of `再作業中`. During this pilot, the safe existing path was used:
