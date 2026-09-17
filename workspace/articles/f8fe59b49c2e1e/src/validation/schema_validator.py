@@ -43,31 +43,20 @@ def _json_path(parts: list[Any]) -> str:
     return out
 
 
-def validate_artifact(
-    artifact_path: str | Path,
+def validate_data(
+    data: Any,
     schema_path: str | Path,
     *,
-    artifact: str | None = None,
+    artifact: str = "data",
 ) -> ValidationResult:
-    artifact_path = Path(artifact_path)
+    """Validate already-parsed data against one JSON Schema."""
     schema_path = Path(schema_path)
-    label = artifact or artifact_path.stem
     errors: list[ValidationIssue] = []
-
-    if not artifact_path.is_file():
-        errors.append(ValidationIssue("V-PARSE-001", label, "$", f"file not found: {artifact_path}"))
-        return ValidationResult(False, None, tuple(errors))
-
-    try:
-        data = json.loads(artifact_path.read_text(encoding="utf-8"))
-    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
-        errors.append(ValidationIssue("V-PARSE-001", label, "$", f"JSON parse failed: {exc}"))
-        return ValidationResult(False, None, tuple(errors))
 
     try:
         schema = json.loads(schema_path.read_text(encoding="utf-8"))
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
-        errors.append(ValidationIssue("V-SCHEMA-000", label, "$", f"schema load failed: {exc}"))
+        errors.append(ValidationIssue("V-SCHEMA-000", artifact, "$", f"schema load failed: {exc}"))
         return ValidationResult(False, data, tuple(errors))
 
     try:
@@ -79,14 +68,14 @@ def validate_artifact(
             key=lambda e: (_json_path(list(e.absolute_path)), str(e.validator), e.message),
         )
     except (SchemaError, OSError, ValueError) as exc:
-        errors.append(ValidationIssue("V-SCHEMA-000", label, "$", f"schema configuration failed: {exc}"))
+        errors.append(ValidationIssue("V-SCHEMA-000", artifact, "$", f"schema configuration failed: {exc}"))
         return ValidationResult(False, data, tuple(errors))
 
     for err in schema_errors:
         errors.append(
             ValidationIssue(
                 "V-SCHEMA-001",
-                label,
+                artifact,
                 _json_path(list(err.absolute_path)),
                 err.message,
                 expected=err.validator_value,
@@ -96,3 +85,25 @@ def validate_artifact(
 
     errors.sort(key=ValidationIssue.sort_key)
     return ValidationResult(not errors, data, tuple(errors))
+
+
+def validate_artifact(
+    artifact_path: str | Path,
+    schema_path: str | Path,
+    *,
+    artifact: str | None = None,
+) -> ValidationResult:
+    artifact_path = Path(artifact_path)
+    label = artifact or artifact_path.stem
+
+    if not artifact_path.is_file():
+        issue = ValidationIssue("V-PARSE-001", label, "$", f"file not found: {artifact_path}")
+        return ValidationResult(False, None, (issue,))
+
+    try:
+        data = json.loads(artifact_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        issue = ValidationIssue("V-PARSE-001", label, "$", f"JSON parse failed: {exc}")
+        return ValidationResult(False, None, (issue,))
+
+    return validate_data(data, schema_path, artifact=label)
