@@ -11,7 +11,17 @@ from urllib.request import Request, urlopen
 
 DEFAULT_DATA_SOURCE_ID = "3dee5855-be39-807e-90c7-000bb6d72cd3"
 NOTION_VERSION = os.environ.get("NOTION_VERSION", "2025-09-03")
-SYNC_PROPERTIES = ("Status", "最新レビュー版", "pre-SHA", "post-SHA", "remarks")
+
+# Current production names are pre/post-commitSHA. The aliases keep the
+# implementation compatible with the redesigned pre/post-SHA naming without
+# making the I/O layer reinterpret domain semantics.
+PROPERTY_NAMES = {
+    "Status": os.environ.get("CONTROLPLANE_STATUS_PROPERTY", "Status"),
+    "最新レビュー版": os.environ.get("CONTROLPLANE_REVIEW_SEQ_PROPERTY", "最新レビュー版"),
+    "pre-SHA": os.environ.get("CONTROLPLANE_PRE_SHA_PROPERTY", "pre-commitSHA"),
+    "post-SHA": os.environ.get("CONTROLPLANE_POST_SHA_PROPERTY", "post-commitSHA"),
+    "remarks": os.environ.get("CONTROLPLANE_REMARKS_PROPERTY", "remarks"),
+}
 
 
 @dataclass(frozen=True)
@@ -84,10 +94,19 @@ def _plain(prop: Any) -> Any:
     return prop.get(ptype)
 
 
+def _prop(props: dict, logical_name: str) -> Any:
+    """Read a logical property using configured current physical name."""
+    return props.get(PROPERTY_NAMES[logical_name])
+
+
 def _fingerprint(row: dict) -> str:
     props = row.get("properties", {})
-    normalized = {key: _plain(props.get(key)) for key in ("Entry_ID", "成果物", *SYNC_PROPERTIES)}
-    normalized["last_edited_time"] = row.get("last_edited_time")
+    normalized = {
+        "Entry_ID": _plain(props.get("Entry_ID")),
+        "成果物": _plain(props.get("成果物")),
+        **{logical: _plain(_prop(props, logical)) for logical in PROPERTY_NAMES},
+        "last_edited_time": row.get("last_edited_time"),
+    }
     return hashlib.sha256(json.dumps(normalized, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
 
 
@@ -125,7 +144,7 @@ def load_entry_state(entry_id: str) -> ControlPlaneSnapshot:
         if artifact in artifacts:
             issues.append(f"duplicate_logical_key:{entry_id}:{artifact}")
             continue
-        latest = _plain(props.get("最新レビュー版"))
+        latest = _plain(_prop(props, "最新レビュー版"))
         try:
             latest_int = int(latest) if latest not in (None, "") else None
         except (TypeError, ValueError):
@@ -135,11 +154,11 @@ def load_entry_state(entry_id: str) -> ControlPlaneSnapshot:
             row_id=row["id"],
             entry_id=entry_id,
             artifact=artifact,
-            status=_plain(props.get("Status")),
+            status=_plain(_prop(props, "Status")),
             latest_review_seq=latest_int,
-            pre_sha=_plain(props.get("pre-SHA")),
-            post_sha=_plain(props.get("post-SHA")),
-            remarks=_plain(props.get("remarks")),
+            pre_sha=_plain(_prop(props, "pre-SHA")),
+            post_sha=_plain(_prop(props, "post-SHA")),
+            remarks=_plain(_prop(props, "remarks")),
             fingerprint=_fingerprint(row),
         )
     for artifact in ("00", "10", "20"):
@@ -148,13 +167,19 @@ def load_entry_state(entry_id: str) -> ControlPlaneSnapshot:
     return ControlPlaneSnapshot(entry_id, artifacts, tuple(sorted(set(issues))))
 
 
-def _property_payload(name: str, value: Any) -> dict:
-    if name == "Status":
-        return {"status": None if value is None else {"name": str(value)}}
-    if name == "最新レビュー版":
-        return {"number": value}
-    text = "" if value is None else str(value)
-    return {"rich_text": [] if value is None else [{"type": "text", "text": {"content": text}}]}
+def _text_payload(value: Any) -> dict:
+    if value is None:
+        return {"rich_text": []}
+    return {"rich_text": [{"type": "text", "text": {"content": str(value)}}]}
+
+
+def _property_payload(logical_name: str, value: Any) -> dict:
+    # Actual current DB: Status=select, review seq=text, SHA/remarks=text.
+    if logical_name == "Status":
+        return {"select": None if value is None else {"name": str(value)}}
+    if logical_name == "最新レビュー版":
+        return _text_payload(value)
+    return _text_payload(value)
 
 
 def apply_mutations(mutations: Iterable[Any], expected_snapshot: ControlPlaneSnapshot) -> ApplyResult:
@@ -174,7 +199,11 @@ def apply_mutations(mutations: Iterable[Any], expected_snapshot: ControlPlaneSna
     try:
         for mutation in mutations:
             row = current.artifacts[mutation.artifact]
-            props = {name: _property_payload(name, value) for name, value in mutation.changes.items() if name in SYNC_PROPERTIES}
+            props = {
+                PROPERTY_NAMES[logical]: _property_payload(logical, value)
+                for logical, value in mutation.changes.items()
+                if logical in PROPERTY_NAMES
+            }
             if not props:
                 continue
             _request("PATCH", f"/v1/pages/{row.row_id}", {"properties": props})
