@@ -8,6 +8,7 @@ on:
       - "workspace/articles/f8fe59b49c2e1e/tests/**"
       - "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0000_tutorial/schemas/**"
       - "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/*/*.json"
+      - "workspace/articles/f8fe59b49c2e1e/reviews/10_each_lore/**/*.json"
       - "workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/taxonomy_catalog.json"
   pull_request:
     paths:
@@ -15,6 +16,7 @@ on:
       - "workspace/articles/f8fe59b49c2e1e/tests/**"
       - "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0000_tutorial/schemas/**"
       - "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/*/*.json"
+      - "workspace/articles/f8fe59b49c2e1e/reviews/10_each_lore/**/*.json"
       - "workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/taxonomy_catalog.json"
   workflow_dispatch:
 
@@ -46,3 +48,26 @@ jobs:
           if test -f docs/10_each_lore/0001_kuchisake_onna/0001_20_analysis.json; then
             python -m src.validation.validate_entry 0001 --through 20
           fi
+      - name: Validate E2E pilot Review history
+        run: |
+          python - <<'PY'
+          from collections import defaultdict
+          from src.status_management.review_state import load_entry_review_state
+
+          snapshot = load_entry_review_state("0001")
+          if snapshot.issues:
+              raise SystemExit(f"Review history issues: {snapshot.issues}")
+          by_seq = defaultdict(set)
+          for fact in snapshot.all_reviews:
+              by_seq[fact.review_seq].add(fact.artifact)
+          expected = {"00", "10", "20"}
+          incomplete = {seq: arts for seq, arts in by_seq.items() if arts != expected}
+          if incomplete:
+              raise SystemExit(f"incomplete Review cycles: {incomplete}")
+          if by_seq and max(by_seq) < 2:
+              raise SystemExit(f"E2E re-review cycle missing: {sorted(by_seq)}")
+          print({
+              "review_cycles": sorted(by_seq),
+              "latest": {k: v.review_seq for k, v in snapshot.latest.items()},
+          })
+          PY
