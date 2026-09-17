@@ -67,6 +67,7 @@
 
 - `docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md`
 - `docs/00_research_overview/20_urban_legend_parent_child_code_system.md`
+- `docs/00_research_overview/taxonomy_catalog.json` — code ID / Parent / Dimensionのmachine-readable構造正本
 - `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md`
 
 ## 3.2. 文書体系
