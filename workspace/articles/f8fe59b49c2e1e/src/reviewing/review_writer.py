@@ -83,7 +83,7 @@ def _require_entry_validation_pass(entry_id: str) -> None:
 def _working_tree_blob_sha(repo: Path, path: Path) -> str:
     rel = path.resolve().relative_to(repo).as_posix()
     proc = subprocess.run(
-        ["git", "-C", str(repo), "hash-object", rel],
+        ["git", "-C", str(repo), "hash-object", f"--path={rel}", rel],
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
