@@ -35,6 +35,22 @@
         - 理論次元そのものの意味変更
         - 証拠からコードへ到達する詳細な操作手順
 
+- `taxonomy_catalog.json`
+    - 責務:
+        - D01〜D21 taxonomyのmachine-readable構造正本
+    - 主に記載する内容:
+        - catalog version
+        - Dimension IDと型
+        - code_id
+        - Child → Parent対応
+        - code_idが属するDimension
+    - 原則として記載しない内容:
+        - コードの意味論的定義・解説
+        - Evidenceからコードへ到達する判定規則
+    - 運用:
+        - Python validatorは本JSONのみをtaxonomy構造検査に使用する
+        - `20_urban_legend_parent_child_code_system.md` はラベル・定義・意味論の正本として維持し、実行時にMarkdownをparseしない
+
 - `30_urban_legend_analysis_coding_rules.md`
     - 責務:
         - 分析コード付与運用規則
