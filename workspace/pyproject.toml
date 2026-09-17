@@ -9,6 +9,7 @@ dependencies = [
     "dask>=2026.3.0",
     "econml>=0.16.0",
     "ipykernel>=7.2.0",
+    "jsonschema>=4.25.1",
     "pandas>=3.0.2",
     "pyarrow>=24.0.0",
     "pytest>=9.0.3",
