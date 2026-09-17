@@ -415,20 +415,18 @@
         "code_id": "D18.L1"
       },
       "secondary": [],
-      "rationale": "L1は、伝承内部で口裂け女が小中学生を襲う作用を持つため1。L2は噂を聞くこと自体が伝承内部の発動条件ではないため0。L3はScopeを1979年初頭〜春に限定し、6月の登校拒否EvidenceをScoped Versionの社会作用へ流用しないため0。",
+      "rationale": "L1は、伝承内部で口裂け女が小中学生を襲う作用を持つため1。L2は噂を聞くこと自体が伝承内部の発動条件ではないため0。L3は1979年初頭〜春のScoped Content内に、噂流通による独立した社会行動・制度変化を支持するX Evidenceがないため0とする。",
       "manifestation": "Scoped Versionでは伝承内部の襲撃作用のみを保持し、受容そのものへの怪異作用やScope内社会制度作用は固定しない。",
       "content_refs": [
-        "CNT-004",
-        "CNT-010"
+        "CNT-004"
       ],
       "evidence_refs": [
-        "EVD-003",
-        "EVD-006"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
       },
-      "notes": "bit型は選択されたcodeRefを1、未選択bitを0として表現する。D18.L1のみ選択。"
+      "notes": "bit型は選択されたcodeRefを1、未選択bitを0として表現する。D18.L1のみ選択。1979年6月の登校拒否はVersion Scope外の後続流通史としてversion_scope.notesにのみ保持する。"
     },
     {
       "dimension_id": "D19",
@@ -500,5 +498,5 @@
       }
     }
   ],
-  "analysis_notes": "E2E pilot。Legacy最終Analysisの意味論を、新canonical Content参照と現taxonomy catalogへ再接続した。Unknownは推測で埋めず、後代代表形・回避異伝をVersion Scopeから分離した。"
+  "analysis_notes": "E2E pilot。Legacy最終Analysisの意味論を、新canonical Content参照と現taxonomy catalogへ再接続した。Unknownは推測で埋めず、後代代表形・回避異伝をVersion Scopeから分離した。Review cycle 1 F001に基づき、D18からScope外の6月Content/Evidence trace refを除去した。"
 }
