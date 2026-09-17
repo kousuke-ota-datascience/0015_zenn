@@ -7,6 +7,8 @@ on:
       - "workspace/articles/f8fe59b49c2e1e/src/**"
       - "workspace/articles/f8fe59b49c2e1e/tests/**"
       - "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0000_tutorial/schemas/**"
+      - "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/*/*.json"
+      - "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/*/*.json"
       - "workspace/articles/f8fe59b49c2e1e/docs/00_research_overview/taxonomy_catalog.json"
   pull_request:
     paths:
