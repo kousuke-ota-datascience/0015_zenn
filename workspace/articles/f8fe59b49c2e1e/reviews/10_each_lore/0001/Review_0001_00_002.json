@@ -1,0 +1,41 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1979-01-26の同時代記事所在と1978年末の後代整理を分離している。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "本文未実見資料は見出し・所在確認を超えて内容を補っていない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "一次資料そのものと公的所蔵・索引確認を混同していない。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "公的レファレンス・記事索引・専門家解説を役割別に区別している。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "各EvidenceはSourceの確認範囲に収まっている。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "初出、本文未実見、異伝共存関係などの不確実性が保持されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [],
+  "review_notes": "E2E pilot Review cycle 2。00 Sources/Evidenceはcycle 1以降変更なし。再確認Pass。",
+  "review_seq": 2,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_00_sources.json",
+    "blob_sha": "f7a72a2b1e55355b5a1c35cd8cea19ae58cbbc32",
+    "commit_sha": "77506286b3aeca1086c5cc0b86a610637f5816f0",
+    "reviewed_at": "2026-09-17T22:46:55Z"
+  },
+  "verdict": "Pass"
+}
