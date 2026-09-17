@@ -26,7 +26,9 @@
 - `<Entry_ID>_00_sources.json` を作成・更新する。
 - `00_sources.json` を根拠として `<Entry_ID>_10_contents.json` を作成・更新する。
 - Content完成後にVersion Scopeを確定する。
+- 作成後 `python -m src.validation.validate_entry <Entry_ID> --through 10` を実行し、00→10の構造・参照整合まで検証する。
 - `10_contents.json` を根拠として `<Entry_ID>_20_analysis.json` を作成・更新する。
+- 作成後 `python -m src.validation.validate_entry <Entry_ID> --through 20` を実行し、00→10→20全体とtaxonomyを検証する。
 - 各canonical artifactについてdeterministic validationを実行する。
 - canonical artifactを成果物単位でGit commit / pushする。
 - 必要地点でWorkflow 90を呼び出し、control planeを実状態へ同期させる。
@@ -82,7 +84,7 @@
 
 ## 3.4. 決定論的処理
 
-- validation外部入口: `python -m src.validation.validate_entry <Entry_ID>`
+- validation外部入口: `python -m src.validation.validate_entry <Entry_ID> [--through 00|10|20]`。省略時は `20` まで全検証。
 - control plane同期: Workflow 90を介して `python -m src.status_management.sync_controlplane <Entry_ID>`
 - `schema_validator.py` / `reference_validator.py` / `taxonomy_validator.py` およびstatus management内部モジュールは本Workflowから直接呼び出さない。
 
@@ -133,14 +135,14 @@
 - Sourceと、そのSourceから実際に利用するEvidence unitを区別して記録する。
 - 短い原文引用は必要最小限とし、参照位置を保持する。
 - SourceのEvidence上の役割、一次資料との関係、不確実性を失わない。
-- 作成後 `validate_entry.py` を実行する。
-- validation failure時はGit確定へ進まない。
+- 作成後 `python -m src.validation.validate_entry <Entry_ID> --through 00` を実行する。
+- validation failure時はGit確定へ進まない.
 - validation通過後、`00_sources.json` だけを対象とするcommitを作成しpushする。
 - commit後にWorkflow 90を実行する。
 
 ## 5.4. Step 3: `10_contents.json` 作成
 
-- `00_sources.json` のEvidenceのみを根拠として伝承内容を再構成する。
+- `00_sources.json` のEvidenceのみを根拠として伝承内容を再構成する.
 - Evidence / Content層とAnalysis層を分離する。
 - summaryは紹介文ではなく、後続分析を再検討できる密度を持つEvidence-faithfulな圧縮表現とする。
 - 物語型では主要な進行、転換、終端、未解決部分を再構成可能にする。
@@ -148,7 +150,7 @@
 - 主要形と異伝・派生を区別する。ただしVersion Scopeはこの段階で確定しない。
 - 「語りが途絶える」「その後不明」を死亡・失踪等へ変換しない。
 - 不明、資料間競合、後代解釈を導入しないと決定できない事項は無理に閉じない。
-- 作成後 `validate_entry.py` を実行する。
+- 作成後、当該段階までを `validate_entry.py` で検証する。
 - validation通過後、`10_contents.json` だけを対象とするcommitを作成しpushする。
 - commit後にWorkflow 90を実行する。
 
@@ -171,7 +173,7 @@
 - Scope外異伝や後代解釈を分析対象へ無断で混入させない。
 - taxonomy gapを既存Childや `U` で隠さない。
 - 既存分析値との差分照合は独立判定完了後に行う。
-- 作成後 `validate_entry.py` を実行する。
+- 作成後、当該段階までを `validate_entry.py` で検証する。
 - validation通過後、`20_analysis.json` だけを対象とするcommitを作成しpushする。
 - commit後にWorkflow 90を実行する。
 
