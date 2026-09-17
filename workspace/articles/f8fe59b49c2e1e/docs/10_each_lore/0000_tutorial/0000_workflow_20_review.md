@@ -69,13 +69,17 @@ Review_<Entry_ID>_20_<Review_Seq>.json -> schemas/review_20_analysis.schema.json
 - 人から明示的な変換指示があった場合のみ `src/rendering/render_review.py` を実行する。
 - 生成Markdownはderived viewであり、Review完了条件・Verdict・control plane状態には影響しない。
 - 旧Review JSONを上書きせずappend-onlyで追加する。
+- Review Seq採番、対象SHA / blob固定、Verdict集約、save-time Schema validation、append-only書込は `src/reviewing/review_writer.py` に委譲する。
+- Reviewerが作成するのはartifact固有のsemantic bodyのみとし、`schema_version / entry_id / artifact / review_seq / target / verdict` はPythonが付与する。
 
 # 3. Review開始条件
 
 - 対象canonical artifactをGit上で一意に固定できること。
 - `python -m src.validation.validate_entry <Entry_ID>` がPASSしていること。
 - Workflow 90により、Review対象版を阻害するcontrol plane不整合がないこと。
-- 対象SHA / blobを固定できない場合はfail-stopとする。
+- Review開始時に内部処理として `python -m src.reviewing.review_writer prepare <Entry_ID>` を実行し、00 / 10 / 20の対象commit SHA / blob SHAと次の共有 `Review_Seq` をcycle snapshotとして固定する。
+- prepare時点でcanonical artifactに未commit差分がある、既存Review履歴がSchema不正・不完全cycleである、対象SHA / blobを固定できない場合はfail-stopとする。
+- semantic Review中はprepareで得たcycle snapshotを保持し、対象版を後から読み替えない。
 
 # 4. Review 10: Summary Reconstruction Review
 
@@ -189,14 +193,19 @@ VerdictはFinding集合から決定論的に再計算可能でなければなら
 
 ReviewerはFindingの意味論的内容を記述し、独自ルールでVerdictを手計算しない。
 
-# 9. 再Review
+# 9. Review保存と再Review
 
-- 修正後は新しい対象SHA / blobを固定し、新Review SeqでReviewする。
+- 00 / 10 / 20のsemantic Reviewが完了したら、prepareで得た `cycle` と3 artifactのsemantic bodyを1つのJSON bundleとして `python -m src.reviewing.review_writer write <Entry_ID>` のstdinへ渡す。
+- writerは保存直前に、Entry validation PASS、次Seq、対象commit/blob、working tree一致を再確認する。prepare後にartifact更新または別Review cycleの追加があれば保存せずERRORとする。
+- writerは3 artifactを同一 `Review_Seq` で一括validationし、3ファイルすべてが有効な場合だけappend-onlyで保存する。
+- 保存後、当該3 Review JSONだけを1つのReview cycle commitとしてcommit / pushする。
+- push後にWorkflow 90を実行してcontrol planeを同期する。
+- 修正後の再Reviewでは再度prepareを行い、新しい対象SHA / blobと新Review Seqを固定する。
 - Review JSON作成・再Review時にMarkdownを自動生成しない。
 - Markdown viewが必要な場合は、人からの明示指示を受けて `render_review.py` を個別実行する。
 - 旧Reviewを上書きしない。
 - stale Review判定・control plane収束はWorkflow 90 / `sync_controlplane.py` へ委譲する。
-- Workflow 20から `notion_controlplane.py` / `git_state.py` / `review_state.py` / `reconcile.py` を直接呼び出さない。
+- Workflow 20から `notion_controlplane.py` / `git_state.py` / `review_state.py` / `reconcile.py` を直接呼び出さず、Review write側のdeterministic処理は `review_writer.py` の公開入口だけを使用する。
 
 # 10. Review結果の監査不変条件
 
@@ -207,6 +216,15 @@ ReviewerはFindingの意味論的内容を記述し、独自ルールでVerdict�
 - artifactとReview Schemaの対応を取り違えない。
 - Review Schemaが必須化したcheck / reconstructionを省略してPass扱いにしない。
 
-# 11. 未確定事項
+# 11. deterministic Review write実装
 
-- Review Seq採番・Review JSON保存・Verdict集約を担うPython実装ファイルの配置。
+- 実装: `src/reviewing/review_writer.py`
+- prepare: `python -m src.reviewing.review_writer prepare <Entry_ID>`
+- write: `python -m src.reviewing.review_writer write <Entry_ID>`。入力bundleはstdinから受ける。
+- Review Seqは既存canonical Review JSONの全artifact共通最大Seq + 1とする。
+- 既存cycleが00 / 10 / 20のexact setでない場合、新規Seqを採番せずfail-stopする。
+- writeは00 / 10 / 20のexact setを1単位とし、一部artifactだけを新cycleとして保存しない。
+- filenameは `Review_<Entry_ID>_<Artifact>_<Review_Seq:03d>.json` とする。
+- 既存destinationが存在する場合は上書きせずERRORとする。
+- save-time Schema validationには `src.validation.schema_validator.validate_data` を使用する。
+- `src/status_management/review_state.py` は引き続きread-onlyとし、write責務を追加しない。
