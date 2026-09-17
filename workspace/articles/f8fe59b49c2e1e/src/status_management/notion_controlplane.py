@@ -11,6 +11,9 @@ from urllib.request import Request, urlopen
 
 DEFAULT_DATA_SOURCE_ID = "3dee5855-be39-807e-90c7-000bb6d72cd3"
 NOTION_VERSION = os.environ.get("NOTION_VERSION", "2025-09-03")
+ALLOWED_STATUSES = frozenset(
+    {"未", "レビュー待", "要修正", "再作業中", "再レビュー待", "完了", "－（対象外）"}
+)
 
 # Current production names are pre/post-commitSHA. The aliases keep the
 # implementation compatible with the redesigned pre/post-SHA naming without
@@ -107,11 +110,15 @@ def _fingerprint(row: dict) -> str:
         **{logical: _plain(_prop(props, logical)) for logical in PROPERTY_NAMES},
         "last_edited_time": row.get("last_edited_time"),
     }
-    return hashlib.sha256(json.dumps(normalized, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
+    return hashlib.sha256(
+        json.dumps(normalized, ensure_ascii=False, sort_keys=True).encode("utf-8")
+    ).hexdigest()
 
 
 def _list_rows() -> list[dict]:
-    ds = os.environ.get("NOTION_CONTROLPLANE_DATA_SOURCE_ID", DEFAULT_DATA_SOURCE_ID).replace("-", "")
+    ds = os.environ.get(
+        "NOTION_CONTROLPLANE_DATA_SOURCE_ID", DEFAULT_DATA_SOURCE_ID
+    ).replace("-", "")
     results: list[dict] = []
     cursor: str | None = None
     while True:
@@ -144,23 +151,30 @@ def load_entry_state(entry_id: str) -> ControlPlaneSnapshot:
         if artifact in artifacts:
             issues.append(f"duplicate_logical_key:{entry_id}:{artifact}")
             continue
+
+        status = _plain(_prop(props, "Status"))
+        if status not in ALLOWED_STATUSES:
+            issues.append(f"invalid_status_value:{artifact}:{status!r}")
+
         latest = _plain(_prop(props, "最新レビュー版"))
         try:
             latest_int = int(latest) if latest not in (None, "") else None
         except (TypeError, ValueError):
             issues.append(f"invalid_latest_review_seq:{artifact}:{latest}")
             latest_int = None
+
         artifacts[artifact] = ControlPlaneArtifact(
             row_id=row["id"],
             entry_id=entry_id,
             artifact=artifact,
-            status=_plain(_prop(props, "Status")),
+            status=status,
             latest_review_seq=latest_int,
             pre_sha=_plain(_prop(props, "pre-SHA")),
             post_sha=_plain(_prop(props, "post-SHA")),
             remarks=_plain(_prop(props, "remarks")),
             fingerprint=_fingerprint(row),
         )
+
     for artifact in ("00", "10", "20"):
         if artifact not in artifacts:
             issues.append(f"missing_row:{entry_id}:{artifact}")
@@ -176,23 +190,33 @@ def _text_payload(value: Any) -> dict:
 def _property_payload(logical_name: str, value: Any) -> dict:
     # Actual current DB: Status=select, review seq=text, SHA/remarks=text.
     if logical_name == "Status":
-        return {"select": None if value is None else {"name": str(value)}}
+        if value not in ALLOWED_STATUSES:
+            raise ValueError(f"invalid Status mutation: {value!r}")
+        return {"select": {"name": str(value)}}
     if logical_name == "最新レビュー版":
         return _text_payload(value)
     return _text_payload(value)
 
 
-def apply_mutations(mutations: Iterable[Any], expected_snapshot: ControlPlaneSnapshot) -> ApplyResult:
+def apply_mutations(
+    mutations: Iterable[Any], expected_snapshot: ControlPlaneSnapshot
+) -> ApplyResult:
     mutations = tuple(mutations)
     if not mutations:
         return ApplyResult(True, ())
+
     current = load_entry_state(expected_snapshot.entry_id)
     if current.issues:
         return ApplyResult(False, (), f"current control plane invalid: {current.issues}")
+
     for mutation in mutations:
         expected = expected_snapshot.artifacts.get(mutation.artifact)
         actual = current.artifacts.get(mutation.artifact)
-        if expected is None or actual is None or expected.fingerprint != actual.fingerprint:
+        if (
+            expected is None
+            or actual is None
+            or expected.fingerprint != actual.fingerprint
+        ):
             return ApplyResult(False, (), f"concurrent_update:{mutation.artifact}")
 
     updated: list[str] = []
