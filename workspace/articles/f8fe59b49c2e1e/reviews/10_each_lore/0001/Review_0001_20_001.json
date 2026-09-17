@@ -1,0 +1,122 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summary/Contentを基準に主要分析可能性は維持される。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "D11→D12→D13→D15で、遭遇→子ども→襲撃→最終帰結Unknownの保守的因果列を保持している。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "作用対象=小中学生、作用=襲撃、最終帰結=UnknownでEvidence強度に整合する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "6月の登校拒否EvidenceはVersion Scope外であり、D18 L3のScoped code supportには使わない旨は正しいが、D18のcontent/evidence refsに残している。",
+      "status": "FINDING"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "記事化自体ではなく、春の京都到達・各地という見出しに基づきREGIONALを付けている。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者が確認できないことをNO_HIDDEN_TRUTHへ短絡せずUnknownとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "Evidence資料の実在性とScoped Contentの現実アンカーを分離している。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D01-D21は概ねScoped Contentとcoding semanticsに整合する。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "全国型怪異・儀式 / 物語・伝説という既存分類は本Entryの広域怪異伝説としての内容と矛盾しない。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "Directは同時代見出しで直接確認できるD12-D14/D19等に限定されている。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "D18のみ、Scope外の6月Content/Evidenceをcode trace refsとして含めており、Scoped Analysisの直接根拠と除外確認が混在する。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "D10/D15/D17/D20をUnknownのまま保持し、欠損情報を強いコードへ変換していない。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "本Entry固有の未収容構造は確認しない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "VAR-001のみをincludedとし、代表会話型・増補群をexcludedにしている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [
+    {
+      "category": "semantic_traceability",
+      "content_refs": [
+        "CNT-010"
+      ],
+      "dimension_refs": [
+        "D18"
+      ],
+      "evidence_refs": [
+        "EVD-006"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D18のcontent_refs/evidence_refsからCNT-010/EVD-006を外し、Scoped Content内にはL3を支持する独立X Evidenceがないため0とする旨へrationaleを簡潔化する。6月の登校拒否はversion_scope.notesまたはanalysis_notesの後続史としてのみ保持する。",
+      "impact": "将来のReviewerや機械処理が、Scope外の社会反応EvidenceをD18 Scoped判定の支持Evidenceと誤読し、Version Scope境界とsemantic traceabilityを曖昧にする。",
+      "rationale": "Version Scopeは1979年初頭〜春のVAR-001を対象とし、1979年6月の登校拒否は後続流通史として明示的にScope外としている。一方D18はcontent_refsにCNT-010、evidence_refsにEVD-006を含めており、L3=0の除外確認とScoped codeの直接根拠が同じtrace ref集合に混在している。",
+      "severity": "Moderate",
+      "summary": "D18がVersion Scope外の6月Content/Evidenceをtrace refsとして保持している。"
+    }
+  ],
+  "review_notes": "E2E pilot Review cycle 1。20 AnalysisはD18 trace scopeだけ要修正。",
+  "review_seq": 1,
+  "schema_version": "1.0",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-002",
+      "EVD-003",
+      "EVD-007"
+    ],
+    "model": "初期Scopeでは、子ども社会に反復される曖昧な対人危険が『口裂け女』という名前付き女性主体へまとめられ、その主体が小中学生を襲うという共有モデルになる。因果入口は偶発的遭遇として最小推定され、直接作用は物理的襲撃、帰結極性は負だが最終被害は未確定。後代の質問・武器・高速走行・回避法はこの初期モデルへ含めない。",
+    "notes": "意味形成モデル自体は整合するが、D18のtrace refsにScope外Contentが混在している。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_20_analysis.json",
+    "blob_sha": "88a026544cd85c68806fa7424bf754c20a1e6380",
+    "commit_sha": "5b3595abe180e038b6c24c1a9579d890e8782b0c",
+    "reviewed_at": "2026-09-17T22:44:47Z"
+  },
+  "verdict": "Moderate"
+}

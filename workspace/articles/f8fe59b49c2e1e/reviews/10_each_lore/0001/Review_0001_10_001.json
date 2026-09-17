@@ -1,0 +1,120 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "各Content unitは参照Evidenceで支持され、見出し以上の細部を補っていない。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01-P12で主要構造の欠落・矛盾を確認しない。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summaryだけで初期核・後代代表形・増補群と主要不確実性を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "起点・本文未実見・異伝初出/共存・社会反応詳細の留保が保持されている。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001/002/003の境界が明示され、後代代表形を初期核へ遡及していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryからでもVersion Scope、D07-D17の主要因果骨格、D18-D21の検討に必要な境界情報を保持できる。",
+      "status": "PASS"
+    },
+    "blind_decode": "1979年初頭〜春には、口が裂けた女性が小中学生を脅かし／襲うという噂が流通し、春までに複数地域へ広がる。後代には、口元を隠した女性との遭遇、容姿への問い、裂けた口の提示、追跡・危害という代表形が成立し、さらに服装・武器・高速走行・弱点・回避法が増補される。初期核の接触条件、回避法、最終帰結、存在論は固定できない。",
+    "probes": [
+      {
+        "blind": "口裂け女という女性主体。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "口裂け女という女性主体。"
+      },
+      {
+        "blind": "小・中学生／子ども。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "小・中学生／子ども。"
+      },
+      {
+        "blind": "初期核では接触条件未固定。後代代表形では日常空間での遭遇。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "同左。初期核と後代代表形を分離。"
+      },
+      {
+        "blind": "口裂け女が危険主体。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "口裂け女が危険主体。存在論は初期核で未固定。"
+      },
+      {
+        "blind": "初期核は子どもを襲う。後代代表形では問いかけ・口の提示・追跡。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "同左。"
+      },
+      {
+        "blind": "日常空間から脅威・襲撃状態へ移る。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "同左。"
+      },
+      {
+        "blind": "1978年末頃の流通整理→1979年1月記事→春の地域拡大→6月全国化。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "同左。"
+      },
+      {
+        "blind": "初期核では固定規則なし。後代に回答規則等。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "同左。"
+      },
+      {
+        "blind": "初期核では回避法未固定。後代にポマード・べっこう飴等。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "同左。"
+      },
+      {
+        "blind": "初期核の最終帰結は未確定。後代には危害と回避成功。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "同左。"
+      },
+      {
+        "blind": "起点、1月本文細部、異伝初出・共存関係などが未確定。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "同左。"
+      },
+      {
+        "blind": "VAR-001初期核、VAR-002会話・正体提示、VAR-003属性・能力・回避法増補。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "同左。"
+      }
+    ],
+    "reference_story": "Evidence全体を参照しても、初期核は『口の裂けた女性が子どもを襲う』という危害型までが安全な共有核である。1978年末の岐阜流通は後代整理、1979年1月26日は記事所在確認、3〜4月は地域拡大と小中学生への襲撃見出し、6月は全国化と社会反応の定点である。代表的会話型・属性・回避法は後代増補として初期核から分離される。",
+    "verdict": "PASS"
+  },
+  "review_notes": "E2E pilot Review cycle 1。10 Contentsは再構成可能性・variant boundaryともPass。",
+  "review_seq": 1,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_10_contents.json",
+    "blob_sha": "4472e8534530bed66d6f5a9ead571b9840aa2d28",
+    "commit_sha": "4e03f88f550693803a56b62e7793640e00734b5a",
+    "reviewed_at": "2026-09-17T22:44:47Z"
+  },
+  "verdict": "Pass"
+}
