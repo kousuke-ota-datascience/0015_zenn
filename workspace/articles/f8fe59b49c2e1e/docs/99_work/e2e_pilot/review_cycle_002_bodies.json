@@ -1,0 +1,233 @@
+{
+  "10": {
+    "checks": {
+      "evidence_content_support": {
+        "status": "PASS",
+        "notes": "各Content unitは参照Evidenceで支持され、見出し以上の細部を補っていない。"
+      },
+      "summary_reconstruction": {
+        "status": "PASS",
+        "notes": "summaryだけで初期核・後代代表形・増補群と主要不確実性を再構成できる。"
+      },
+      "structural_probe": {
+        "status": "PASS",
+        "notes": "P01-P12で主要構造の欠落・矛盾を確認しない。"
+      },
+      "variant_boundary": {
+        "status": "PASS",
+        "notes": "VAR-001/002/003の境界が明示され、後代代表形を初期核へ遡及していない。"
+      },
+      "uncertainty_preservation": {
+        "status": "PASS",
+        "notes": "起点・本文未実見・異伝初出/共存・社会反応詳細の留保が保持されている。"
+      }
+    },
+    "reconstruction": {
+      "blind_decode": "1979年初頭〜春には、口が裂けた女性が小中学生を脅かし／襲うという噂が流通し、春までに複数地域へ広がる。後代には、口元を隠した女性との遭遇、容姿への問い、裂けた口の提示、追跡・危害という代表形が成立し、さらに服装・武器・高速走行・弱点・回避法が増補される。初期核の接触条件、回避法、最終帰結、存在論は固定できない。",
+      "reference_story": "Evidence全体を参照しても、初期核は『口の裂けた女性が子どもを襲う』という危害型までが安全な共有核である。1978年末の岐阜流通は後代整理、1979年1月26日は記事所在確認、3〜4月は地域拡大と小中学生への襲撃見出し、6月は全国化と社会反応の定点である。代表的会話型・属性・回避法は後代増補として初期核から分離される。",
+      "probes": [
+        {
+          "probe_id": "P01",
+          "blind": "口裂け女という女性主体。",
+          "reference": "口裂け女という女性主体。",
+          "difference": "NONE"
+        },
+        {
+          "probe_id": "P02",
+          "blind": "小・中学生／子ども。",
+          "reference": "小・中学生／子ども。",
+          "difference": "NONE"
+        },
+        {
+          "probe_id": "P03",
+          "blind": "初期核では接触条件未固定。後代代表形では日常空間での遭遇。",
+          "reference": "同左。初期核と後代代表形を分離。",
+          "difference": "NONE"
+        },
+        {
+          "probe_id": "P04",
+          "blind": "口裂け女が危険主体。",
+          "reference": "口裂け女が危険主体。存在論は初期核で未固定。",
+          "difference": "NONE"
+        },
+        {
+          "probe_id": "P05",
+          "blind": "初期核は子どもを襲う。後代代表形では問いかけ・口の提示・追跡。",
+          "reference": "同左。",
+          "difference": "NONE"
+        },
+        {
+          "probe_id": "P06",
+          "blind": "日常空間から脅威・襲撃状態へ移る。",
+          "reference": "同左。",
+          "difference": "NONE"
+        },
+        {
+          "probe_id": "P07",
+          "blind": "1978年末頃の流通整理→1979年1月記事→春の地域拡大→6月全国化。",
+          "reference": "同左。",
+          "difference": "NONE"
+        },
+        {
+          "probe_id": "P08",
+          "blind": "初期核では固定規則なし。後代に回答規則等。",
+          "reference": "同左。",
+          "difference": "NONE"
+        },
+        {
+          "probe_id": "P09",
+          "blind": "初期核では回避法未固定。後代にポマード・べっこう飴等。",
+          "reference": "同左。",
+          "difference": "NONE"
+        },
+        {
+          "probe_id": "P10",
+          "blind": "初期核の最終帰結は未確定。後代には危害と回避成功。",
+          "reference": "同左。",
+          "difference": "NONE"
+        },
+        {
+          "probe_id": "P11",
+          "blind": "起点、1月本文細部、異伝初出・共存関係などが未確定。",
+          "reference": "同左。",
+          "difference": "NONE"
+        },
+        {
+          "probe_id": "P12",
+          "blind": "VAR-001初期核、VAR-002会話・正体提示、VAR-003属性・能力・回避法増補。",
+          "reference": "同左。",
+          "difference": "NONE"
+        }
+      ],
+      "analysis_invariance": {
+        "status": "PASS",
+        "notes": "summaryからでもVersion Scope、D07-D17の主要因果骨格、D18-D21の検討に必要な境界情報を保持できる。"
+      },
+      "verdict": "PASS"
+    },
+    "findings": [],
+    "review_notes": "E2E pilot Review cycle 2。10 Contentsはcycle 1以降変更なし。再確認Pass。"
+  },
+  "20": {
+    "checks": {
+      "version_scope": {
+        "status": "PASS",
+        "notes": "VAR-001のみをincludedとし、代表会話型・増補群をexcludedにしている。"
+      },
+      "dimension_semantics": {
+        "status": "PASS",
+        "notes": "D01-D21は概ねScoped Contentとcoding semanticsに整合する。"
+      },
+      "taxonomy_gap": {
+        "status": "PASS",
+        "notes": "本Entry固有の未収容構造は確認しない。"
+      },
+      "causality": {
+        "status": "PASS",
+        "notes": "D11→D12→D13→D15で、遭遇→子ども→襲撃→最終帰結Unknownの保守的因果列を保持している。"
+      },
+      "semantic_traceability": {
+        "status": "PASS",
+        "notes": "D18のtrace refsはScoped Content/EvidenceのCNT-004/EVD-003だけとなり、Scope外の6月社会反応はversion_scope.notesへ分離された。"
+      },
+      "analysis_invariance": {
+        "status": "PASS",
+        "notes": "summary/Contentを基準に主要分析可能性は維持される。"
+      },
+      "status_reasoning": {
+        "status": "PASS",
+        "notes": "D10/D15/D17/D20をUnknownのまま保持し、欠損情報を強いコードへ変換していない。"
+      },
+      "d12_d13_d15_causal_chain": {
+        "status": "PASS",
+        "notes": "作用対象=小中学生、作用=襲撃、最終帰結=UnknownでEvidence強度に整合する。"
+      },
+      "d18_scope_independent_x_evidence": {
+        "status": "PASS",
+        "notes": "Scoped Version内に独立X EvidenceがないためL3=0とし、Scope外の6月登校拒否Evidenceをcode supportへ流用していない。"
+      },
+      "d19_publicability_vs_national_distribution": {
+        "status": "PASS",
+        "notes": "記事化自体ではなく、春の京都到達・各地という見出しに基づきREGIONALを付けている。"
+      },
+      "d20_missing_info_vs_no_one_knows": {
+        "status": "PASS",
+        "notes": "情報保持者が確認できないことをNO_HIDDEN_TRUTHへ短絡せずUnknownとしている。"
+      },
+      "d21_reality_anchor": {
+        "status": "PASS",
+        "notes": "Evidence資料の実在性とScoped Contentの現実アンカーを分離している。"
+      },
+      "evidence_confidence_ceiling": {
+        "status": "PASS",
+        "notes": "Directは同時代見出しで直接確認できるD12-D14/D19等に限定されている。"
+      },
+      "entry_classification": {
+        "status": "PASS",
+        "notes": "全国型怪異・儀式 / 物語・伝説という既存分類は本Entryの広域怪異伝説としての内容と矛盾しない。"
+      }
+    },
+    "sensemaking_reconstruction": {
+      "model": "初期Scopeでは、子ども社会に反復される曖昧な対人危険が『口裂け女』という名前付き女性主体へまとめられ、その主体が小中学生を襲うという共有モデルになる。因果入口は偶発的遭遇として最小推定され、直接作用は物理的襲撃、帰結極性は負だが最終被害は未確定。後代の質問・武器・高速走行・回避法はこの初期モデルへ含めない。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "D18",
+        "D19",
+        "D20",
+        "D21"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003",
+        "EVD-007"
+      ],
+      "status": "PASS",
+      "notes": "cycle 1 F001のscope/traceability混在は解消。意味形成モデルとD18表現の双方がVersion Scopeに整合する。"
+    },
+    "findings": [],
+    "review_notes": "E2E pilot Review cycle 2。cycle 1 F001のD18 trace scope修正を確認し、20 AnalysisをPassとする。"
+  },
+  "00": {
+    "checks": {
+      "source_assessment": {
+        "status": "PASS",
+        "notes": "公的レファレンス・記事索引・専門家解説を役割別に区別している。"
+      },
+      "evidence_integrity": {
+        "status": "PASS",
+        "notes": "本文未実見資料は見出し・所在確認を超えて内容を補っていない。"
+      },
+      "source_evidence_support": {
+        "status": "PASS",
+        "notes": "各EvidenceはSourceの確認範囲に収まっている。"
+      },
+      "primary_source_relation": {
+        "status": "PASS",
+        "notes": "一次資料そのものと公的所蔵・索引確認を混同していない。"
+      },
+      "earliest_attestation": {
+        "status": "PASS",
+        "notes": "1979-01-26の同時代記事所在と1978年末の後代整理を分離している。"
+      },
+      "uncertainty_preservation": {
+        "status": "PASS",
+        "notes": "初出、本文未実見、異伝共存関係などの不確実性が保持されている。"
+      }
+    },
+    "findings": [],
+    "review_notes": "E2E pilot Review cycle 2。00 Sources/Evidenceはcycle 1以降変更なし。再確認Pass。"
+  }
+}
