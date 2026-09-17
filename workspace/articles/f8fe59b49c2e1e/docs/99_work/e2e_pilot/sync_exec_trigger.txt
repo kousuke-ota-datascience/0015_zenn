@@ -1,0 +1,1 @@
+execute python -m src.status_management.sync_controlplane 0001
