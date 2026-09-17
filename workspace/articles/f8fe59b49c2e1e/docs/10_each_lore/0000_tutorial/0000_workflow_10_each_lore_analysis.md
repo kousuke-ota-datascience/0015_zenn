@@ -160,6 +160,7 @@
 
 ## 5.6. Step 5: `20_analysis.json` 作成
 
+- `macro_category` と `entry_type` をEntry内容に基づくcanonical分類として明示する。Notion運用stateへ代替保存しない。
 - Version Scope内のContentを対象としてD01〜D21を独立に判定する。
 - 理論設計、Parent / Child code system、coding rulesを正とし、本Workflow内でコード定義を再定義しない。
 - 各Dimensionはコード値だけで終わらせず、判定根拠と当該伝承における具体的な現れ方を記述する。

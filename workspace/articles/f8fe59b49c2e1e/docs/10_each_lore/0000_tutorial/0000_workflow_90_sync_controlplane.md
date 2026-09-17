@@ -74,7 +74,7 @@ python -m src.status_management.sync_controlplane <Entry_ID>
 
 - `notion_controlplane.py`: Notion state取得・更新・更新後確認。
 - `git_state.py`: artifact commit / blob / commit graph事実取得。
-- `review_state.py`: `review.schema.json` 準拠のReview結果JSONからReview事実を取得。
+- `review_state.py`: Review結果JSONを読み、artifactに応じて `review_00_sources.schema.json / review_10_contents.schema.json / review_20_analysis.schema.json` で構造確認したReview事実を取得する。`review_common.schema.json` は共通定義としてのみ利用する。
 - `reconcile.py`: I/Oなしで同期可否とmutation planを決定。
 - `sync_controlplane.py`: 上記を組み立て、mutation適用と最終結果返却をオーケストレーションする。
 
@@ -95,8 +95,17 @@ reviews/10_each_lore/<Entry_ID>/
 └─ Review_<Entry_ID>_<Artifact>_<Review_Seq>.json
 ```
 
+Schema対応:
+
+```text
+Artifact 00 -> review_00_sources.schema.json
+Artifact 10 -> review_10_contents.schema.json
+Artifact 20 -> review_20_analysis.schema.json
+```
+
 - Markdown derived viewは同期事実源として使用しない。
 - 「最新Review」はmtimeではなくReview Seqを基準とする。
+- artifactとSchemaが不一致のReview JSONはmalformedとして扱い、自動同期の事実源にしない。
 
 # 8. Workflowからの呼出し
 
