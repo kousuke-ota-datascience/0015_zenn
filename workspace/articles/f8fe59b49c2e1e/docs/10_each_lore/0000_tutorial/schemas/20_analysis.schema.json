@@ -4,10 +4,12 @@
   "title": "Urban Legend Analysis",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "entry_id", "version_scope", "dimensions"],
+  "required": ["schema_version", "entry_id", "macro_category", "entry_type", "version_scope", "dimensions"],
   "properties": {
     "schema_version": {"const": "1.0"},
     "entry_id": {"type": "string", "pattern": "^[0-9]{4}$"},
+    "macro_category": {"type": "string", "minLength": 1},
+    "entry_type": {"type": "string", "minLength": 1},
     "version_scope": {"$ref": "#/$defs/versionScope"},
     "dimensions": {
       "type": "array",
