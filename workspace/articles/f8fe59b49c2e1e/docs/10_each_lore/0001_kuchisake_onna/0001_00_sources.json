@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0001",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "国立国会図書館レファレンス協同データベース「口裂け女の記事が『岐阜日日新聞』の1979年1月26日に掲載されているのか知りたい。」",
+      "locator": "1979-01-26 岐阜日日新聞朝刊1面「編集余記」の所蔵マイクロフィルム確認",
+      "accessed_at": "2026-09-14",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "H"
+      ],
+      "url": "https://crd.ndl.go.jp/reference/entry/index.php?id=1000247055&page=ref_view",
+      "notes": "記事本文の細部ではなく、掲載日・紙面・見出しの所在確認に使用。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "reliable_secondary_or_research",
+      "title": "香川県立図書館レファレンス協同データベース「1979年の口裂け女関連記事調査」",
+      "locator": "大宅壮一文庫雑誌記事索引を用いた1979年3月23日・4月5日・6月29日の記事書誌確認",
+      "accessed_at": "2026-09-14",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://crd.ndl.go.jp/reference/entry/index.php?id=2000022445&page=man_view",
+      "notes": "本文未実見の記事について、見出しを超える細部は確定しない。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "reliable_secondary_or_research",
+      "title": "岐阜県図書館レファレンス協同データベース「口裂け女の想像図が載った岐阜新聞記事」",
+      "locator": "1979-06-15夕刊「岐阜で生まれた口裂け女　騒ぎやっと下火へ」の実紙面確認と郷土資料整理",
+      "accessed_at": "2026-09-14",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "H",
+        "A"
+      ],
+      "url": "https://crd.ndl.go.jp/reference/entry/index.php?id=1000034864&page=ref_view"
+    },
+    {
+      "source_id": "SRC-004",
+      "source_type": "reliable_secondary_or_research",
+      "title": "秋田県立図書館デジタルアーカイブ ADEAC 記事見出し目録",
+      "locator": "秋田魁新報 1979-06-15夕刊7面「現代の怪談口裂け女／デマ列島駆けめぐる／子供の登校拒否騒ぎも」",
+      "accessed_at": "2026-09-14",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "H",
+        "X"
+      ],
+      "url": "https://adeac.jp/akita-pref/catalog/01-ref-C-352622",
+      "notes": "記事見出しから確認できる範囲だけを使用。"
+    },
+    {
+      "source_id": "SRC-005",
+      "source_type": "later_summary_or_commentary",
+      "title": "飯倉義之「『口裂け女』から『きさらぎ駅』まで―都市伝説の変容から振り返る昭和・平成の日本社会」",
+      "locator": "nippon.com, 2019-12-27",
+      "accessed_at": "2026-09-14",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://www.nippon.com/ja/japan-topics/g00789/",
+      "notes": "専門家による後代整理。個別異伝の初出を単独で確定する資料とは扱わない。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "レファレンス回答の所蔵確認部分",
+      "content": "国立国会図書館の所蔵マイクロフィルム調査により、1979年1月26日付『岐阜日日新聞』朝刊1面「編集余記」に口裂け女関連記事が存在することが確認されている。",
+      "representation": "paraphrase",
+      "uncertainty": "記事本文はオンラインで直接実見していないため、伝承細部はこのEvidenceから復元しない。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-002",
+      "locator": "週刊朝日 1979-03-23 p.35 の記事索引",
+      "content": "1979年3月23日号『週刊朝日』に「口裂け女伝説前線が京に達す」とする記事が掲載されていたことを確認できる。",
+      "representation": "paraphrase",
+      "uncertainty": "見出し以上の本文内容は固定しない。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-002",
+      "locator": "週刊新潮 1979-04-05 p.128 の記事索引",
+      "content": "1979年4月5日号『週刊新潮』には、各地に飛ぶ噂として「口のさけた女性が小・中学生を襲う」とする見出しが確認できる。",
+      "representation": "paraphrase",
+      "uncertainty": "襲撃方法・武器・最終被害など、見出しにない細部は確定しない。"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-002",
+      "locator": "週刊朝日 1979-06-29 pp.16-20 の記事索引",
+      "content": "1979年6月29日号『週刊朝日』に、全国の小中学生を恐れさせる口裂け女風説を扱う記事が掲載されていたことを確認できる。",
+      "representation": "paraphrase",
+      "uncertainty": "記事本文全体は今回固定していない。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-003",
+      "locator": "岐阜県図書館レファレンス回答",
+      "content": "岐阜県図書館は1979年6月15日夕刊の実紙面に「岐阜で生まれた口裂け女　騒ぎやっと下火へ」とする記事を確認し、郷土資料では1978年暮頃から翌年にかけて岐阜市内で話題化したとの整理も示している。",
+      "representation": "paraphrase",
+      "uncertainty": "1978年暮れという開始時点は後代の郷土資料整理であり、同時代一次資料による起源日確定ではない。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-004",
+      "locator": "秋田魁新報 1979-06-15夕刊7面の記事見出し",
+      "content": "同時代新聞の記事見出しに「デマ列島駆けめぐる」「子供の登校拒否騒ぎも」とあり、噂の広域化と学校生活上の社会的反応が報道対象になっていたことを確認できる。",
+      "representation": "paraphrase",
+      "uncertainty": "人数・学校名・個別の因果経路は記事本文未実見のため補わない。"
+    },
+    {
+      "evidence_id": "EVD-007",
+      "source_id": "SRC-005",
+      "locator": "口裂け女の成立・流通に関する解説部分",
+      "content": "飯倉義之は、1978年暮れ頃の岐阜で子どもの噂として流通し、1979年初頭の地方紙報道を経て広がったと整理している。",
+      "representation": "paraphrase",
+      "uncertainty": "後代の専門家整理であり、1978年暮れという開始時点を一次資料で直接固定するものではない。"
+    },
+    {
+      "evidence_id": "EVD-008",
+      "source_id": "SRC-005",
+      "locator": "流行過程の変容に関する解説部分",
+      "content": "子ども間の反復の中で、マスク、赤いコート、鎌、高速走行、ポマード、べっこう飴などの属性・能力・弱点・回避法が付加されたと整理されている。",
+      "representation": "paraphrase",
+      "uncertainty": "各要素の初出時期や同一Versionでの共存はこの資料だけでは固定しない。"
+    },
+    {
+      "evidence_id": "EVD-009",
+      "source_id": "SRC-005",
+      "locator": "流通経路・社会対応に関する解説部分",
+      "content": "子ども同士の口頭伝達、塾を介した学区横断、電話や新聞・テレビ等への拡張、教師・保護者によるパトロールや集団下校が回顧的に整理されている。",
+      "representation": "paraphrase",
+      "uncertainty": "個別学校・自治体の同時代記録までは今回固定していない。"
+    }
+  ],
+  "notes": "E2E pilotとしてLegacy Evidenceを新canonical構造へ再整理した。書誌所在確認と伝承内容Evidenceを分離し、本文未実見資料から見出し以上の内容を推測しない。"
+}
