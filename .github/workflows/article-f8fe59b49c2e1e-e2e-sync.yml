@@ -1,0 +1,42 @@
+name: f8fe59b49c2e1e E2E sync verification
+
+on:
+  push:
+    paths:
+      - "workspace/articles/f8fe59b49c2e1e/docs/99_work/e2e_pilot/sync_verification_trigger.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  sync-noop:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: workspace/articles/f8fe59b49c2e1e
+    env:
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Install runtime dependencies
+        run: python -m pip install --disable-pip-version-check jsonschema==4.25.1 requests==2.32.5
+      - name: Verify Notion secret is configured
+        run: |
+          test -n "$NOTION_TOKEN" || { echo "NOTION_TOKEN secret is not configured"; exit 3; }
+      - name: Run Workflow 90 and require NOOP PASS
+        run: |
+          set -euo pipefail
+          output="$(python -m src.status_management.sync_controlplane 0001)"
+          echo "$output"
+          OUTPUT="$output" python - <<'PY'
+          import json, os
+          data=json.loads(os.environ["OUTPUT"])
+          assert data["result"] == "PASS", data
+          assert data["mutation_count"] == 0, data
+          assert data["verified"] is True, data
+          PY
