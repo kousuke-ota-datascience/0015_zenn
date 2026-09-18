@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "workspace/articles/f8fe59b49c2e1e/docs/99_work/e2e_pilot/review_cycle_003_bodies.tmp.json"
+      - "workspace/articles/f8fe59b49c2e1e/docs/99_work/e2e_pilot/review_cycle3_trigger.txt"
 
 permissions:
   contents: write
