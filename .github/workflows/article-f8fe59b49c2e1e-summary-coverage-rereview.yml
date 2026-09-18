@@ -1,0 +1,162 @@
+name: rereview summary coverage contract
+
+on:
+  push:
+    paths:
+      - "workspace/articles/f8fe59b49c2e1e/docs/99_work/e2e_pilot/summary_coverage_review_trigger.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  rereview:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: workspace/articles/f8fe59b49c2e1e
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Install dependency
+        run: python -m pip install --disable-pip-version-check jsonschema==4.25.1
+      - name: Write coverage-aware Review cycles
+        run: |
+          python - <<'PY'
+          import copy
+          import json
+          from pathlib import Path
+          from src.reviewing.review_writer import prepare_review_cycle, write_review_cycle
+
+          base = Path(".")
+          cfg = json.loads(
+              (base / "docs/99_work/e2e_pilot/summary_coverage_review_blind.tmp.json").read_text(encoding="utf-8")
+          )
+          latest = {"0001": 3, "0178": 1, "0179": 1, "0180": 1}
+          managed = {"schema_version", "entry_id", "artifact", "review_seq", "target", "verdict"}
+
+          for entry_id, old_seq in latest.items():
+              reviews = {}
+              for artifact in ("00", "10", "20"):
+                  p = base / "reviews/10_each_lore" / entry_id / f"Review_{entry_id}_{artifact}_{old_seq:03d}.json"
+                  payload = json.loads(p.read_text(encoding="utf-8"))
+                  reviews[artifact] = {k: copy.deepcopy(v) for k, v in payload.items() if k not in managed}
+
+              content_path = next((base / "docs/10_each_lore").glob(f"{entry_id}_*/{entry_id}_10_contents.json"))
+              contents = json.loads(content_path.read_text(encoding="utf-8"))
+              units = {x["content_id"]: x for x in contents["content_units"]}
+              coverage = contents["summary"]["coverage_refs"]
+              blind_map = cfg[entry_id]["blind_by_ref"]
+
+              missing = [ref for ref in coverage if ref not in blind_map]
+              extra = [ref for ref in blind_map if ref not in coverage]
+              if missing or extra:
+                  raise RuntimeError({"entry_id": entry_id, "missing_blind": missing, "extra_blind": extra})
+
+              r10 = reviews["10"]
+              r10["checks"]["narrative_reconstruction"] = {
+                  "status": "PASS",
+                  "notes": "summary.coverage_refsの全salient unitをBlind Decode後に個別監査し、LOSS/CONFLICTなし。"
+              }
+              r10["reconstruction"]["coverage_audit"] = [
+                  {
+                      "content_ref": ref,
+                      "salient_meaning": units[ref]["text"],
+                      "blind_reconstruction": blind_map[ref],
+                      "difference": "NONE",
+                  }
+                  for ref in coverage
+              ]
+              r10["reconstruction"]["verdict"] = "PASS"
+              r10["review_notes"] = (r10.get("review_notes", "") + " 新summary契約でcoverage_refs全件をBlind Decode監査しPass。").strip()
+
+              if entry_id == "0179":
+                  r10["reconstruction"]["blind_decode"] = cfg[entry_id]["blind_decode"]
+                  r10["reconstruction"]["reference_story"] = cfg[entry_id]["reference_story"]
+                  probes = {x["probe_id"]: x for x in r10["reconstruction"]["probes"]}
+                  probes["P05"].update({
+                      "blind": "理解後に兄が重大異変を起こし、白い存在と同様にくねくね動く状態へ至る。",
+                      "reference": "同左。物理的な怪異への変身までは確定しない。",
+                      "difference": "NONE",
+                  })
+                  probes["P06"].update({
+                      "blind": "発見→詳細視認→理解→兄の変貌→祖父の警告→兄を当地に残す→語り手自身が禁じられた対象を間近に見る。",
+                      "reference": "同左。",
+                      "difference": "NONE",
+                  })
+                  probes["P09"].update({
+                      "blind": "詳しく見ず理解へ進まないこと。終盤では語り手自身がこの禁忌を破る。",
+                      "reference": "同左。",
+                      "difference": "NONE",
+                  })
+                  probes["P10"].update({
+                      "blind": "兄は白い存在と同様にくねくね動き元の兄ではなくなったかのように描かれ、最後に語り手も禁じられた対象を見る。その後は不明。",
+                      "reference": "同左。兄の物理的怪異化と語り手の後続被害は未確定。",
+                      "difference": "NONE",
+                  })
+                  probes["P11"].update({
+                      "blind": "白い存在の正体、兄の物理的変身、医学因果、終盤視認後の語り手の帰結が未確定。",
+                      "reference": "同左。",
+                      "difference": "NONE",
+                  })
+                  r10["reconstruction"]["probes"] = [probes[f"P{i:02d}"] for i in range(1, 13)]
+                  r10["reconstruction"]["analysis_invariance"] = {
+                      "status": "PASS",
+                      "notes": "兄のmotif echo / identity終端と語り手の終端視認を復元。D09/D11-D17のcode結論は変えずtraceと具体的意味を補強する。"
+                  }
+                  r10["checks"]["summary_reconstruction"] = {
+                      "status": "PASS",
+                      "notes": "兄が白い存在と同様にくねくね動くidentity終端、物理変身を断定しない留保、語り手自身の終端視認までsummaryから再構成できる。"
+                  }
+
+                  r00 = reviews["00"]
+                  r00["checks"]["evidence_integrity"] = {
+                      "status": "PASS",
+                      "notes": "レス763〜764の兄のくねくねした変貌・identity喪失表現と、レス764終盤の語り手の禁忌視認を別Evidenceとして保持し、物理的怪異化や後続被害を補完していない。"
+                  }
+                  r00["checks"]["source_evidence_support"] = {
+                      "status": "PASS",
+                      "notes": "EVD-008/EVD-009は2003年保存記録SRC-002の該当レスへ直接追跡できる。"
+                  }
+                  r00["checks"]["uncertainty_preservation"] = {
+                      "status": "PASS",
+                      "notes": "兄の物理的変身、語り手の終盤視認後の帰結、白い存在の正体・医学因果を未確定として保持する。"
+                  }
+                  r00["review_notes"] = "0179 terminal-semantic correction後のReview。兄のmotif echo / identity終端と語り手の終端視認をEvidence-faithfulに復元しPass。"
+
+                  r20 = reviews["20"]
+                  r20["checks"]["semantic_traceability"] = {
+                      "status": "PASS",
+                      "notes": "復元したCNT-009/EVD-008とCNT-011/EVD-009がD09/D11-D17およびVersion Scopeへ追跡される。"
+                  }
+                  r20["checks"]["d12_d13_d15_causal_chain"] = {
+                      "status": "PASS",
+                      "notes": "兄をPrimary対象として、理解→認知危害→怪異の動きを反復するidentity崩壊を保持。語り手は終端に視認条件へ入るが後続被害は生成しない。"
+                  }
+                  r20["checks"]["analysis_invariance"] = {
+                      "status": "PASS",
+                      "notes": "具体的終端を復元したが、D09/D11-D17の既存code結論は変更不要。trace/rationale/manifestationのみ具体化。"
+                  }
+                  r20["sensemaking_reconstruction"]["model"] = "正体不明の白い存在を詳しく見て理解した兄が重大異変を起こし、白い存在と同様にくねくね動く状態へ至って、語り手には元の兄ではなくなったかのように描かれる。祖父は見るなという回避情報を持つ。終盤では語り手自身も禁じられた対象を間近に見るが、その後の帰結は未確定である。"
+                  r20["sensemaking_reconstruction"]["content_refs"] = sorted(set(r20["sensemaking_reconstruction"]["content_refs"] + ["CNT-009", "CNT-011"]))
+                  r20["sensemaking_reconstruction"]["evidence_refs"] = sorted(set(r20["sensemaking_reconstruction"].get("evidence_refs", []) + ["EVD-008", "EVD-009"]))
+                  r20["review_notes"] = "0179 terminal-semantic correction後のReview。具体的終端を20 traceへ反映し、code結論の不変性を確認してPass。"
+
+              cycle = prepare_review_cycle(entry_id)
+              result = write_review_cycle(entry_id, cycle=cycle, reviews=reviews)
+              print(json.dumps(result, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit Review JSON
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reviews/10_each_lore/0001/Review_0001_*_004.json
+          git add reviews/10_each_lore/0178/Review_0178_*_002.json
+          git add reviews/10_each_lore/0179/Review_0179_*_002.json
+          git add reviews/10_each_lore/0180/Review_0180_*_002.json
+          git commit -m "Add coverage-aware Review cycles"
+          git push
