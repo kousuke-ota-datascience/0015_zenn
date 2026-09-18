@@ -35,39 +35,52 @@ jobs:
         run: python -m pip install --disable-pip-version-check pytest==9.0.3 jsonschema==4.25.1
       - name: Run fixture suite
         run: python -m pytest -q tests
-      - name: Validate E2E pilot stages present in repository
+      - name: Validate E2E regression entries present in repository
         shell: bash
         run: |
           set -euo pipefail
-          if test -f docs/10_each_lore/0001_kuchisake_onna/0001_00_sources.json; then
-            python -m src.validation.validate_entry 0001 --through 00
-          fi
-          if test -f docs/10_each_lore/0001_kuchisake_onna/0001_10_contents.json; then
-            python -m src.validation.validate_entry 0001 --through 10
-          fi
-          if test -f docs/10_each_lore/0001_kuchisake_onna/0001_20_analysis.json; then
-            python -m src.validation.validate_entry 0001 --through 20
-          fi
-      - name: Validate E2E pilot Review history
+          for entry in 0001 0180; do
+            if find docs/10_each_lore -mindepth 2 -maxdepth 2 -name "${entry}_00_sources.json" -print -quit | grep -q .; then
+              python -m src.validation.validate_entry "$entry" --through 00
+            fi
+            if find docs/10_each_lore -mindepth 2 -maxdepth 2 -name "${entry}_10_contents.json" -print -quit | grep -q .; then
+              python -m src.validation.validate_entry "$entry" --through 10
+            fi
+            if find docs/10_each_lore -mindepth 2 -maxdepth 2 -name "${entry}_20_analysis.json" -print -quit | grep -q .; then
+              python -m src.validation.validate_entry "$entry" --through 20
+            fi
+          done
+      - name: Validate E2E regression Review history
         run: |
           python - <<'PY'
           from collections import defaultdict
+          from pathlib import Path
           from src.status_management.review_state import load_entry_review_state
 
-          snapshot = load_entry_review_state("0001")
-          if snapshot.issues:
-              raise SystemExit(f"Review history issues: {snapshot.issues}")
-          by_seq = defaultdict(set)
-          for fact in snapshot.all_reviews:
-              by_seq[fact.review_seq].add(fact.artifact)
-          expected = {"00", "10", "20"}
-          incomplete = {seq: arts for seq, arts in by_seq.items() if arts != expected}
-          if incomplete:
-              raise SystemExit(f"incomplete Review cycles: {incomplete}")
-          if by_seq and max(by_seq) < 3:
-              raise SystemExit(f"E2E legacy-parity re-review cycle missing: {sorted(by_seq)}")
-          print({
-              "review_cycles": sorted(by_seq),
-              "latest": {k: v.review_seq for k, v in snapshot.latest.items()},
-          })
+          minimum_latest = {"0001": 3, "0180": 1}
+          for entry_id, minimum in minimum_latest.items():
+              review_dir = Path("reviews/10_each_lore") / entry_id
+              if not review_dir.is_dir() or not any(review_dir.glob("Review_*.json")):
+                  print({"entry_id": entry_id, "review_cycles": [], "status": "not-yet-reviewed"})
+                  continue
+
+              snapshot = load_entry_review_state(entry_id)
+              if snapshot.issues:
+                  raise SystemExit(f"{entry_id} Review history issues: {snapshot.issues}")
+              by_seq = defaultdict(set)
+              for fact in snapshot.all_reviews:
+                  by_seq[fact.review_seq].add(fact.artifact)
+              expected = {"00", "10", "20"}
+              incomplete = {seq: arts for seq, arts in by_seq.items() if arts != expected}
+              if incomplete:
+                  raise SystemExit(f"{entry_id} incomplete Review cycles: {incomplete}")
+              if max(by_seq) < minimum:
+                  raise SystemExit(
+                      f"{entry_id} expected Review Seq >= {minimum}, got {sorted(by_seq)}"
+                  )
+              print({
+                  "entry_id": entry_id,
+                  "review_cycles": sorted(by_seq),
+                  "latest": {k: v.review_seq for k, v in snapshot.latest.items()},
+              })
           PY
