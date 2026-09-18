@@ -1,0 +1,41 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2004年1月8日深夜〜9日未明の公開掲示板実況を直接固定している。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "レス98〜635の直接確認範囲、参加者発言、投稿停止の限界を保ち、後代情報を初期実況へ逆輸入していない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "一次公式過去ログと後代公式／二次整理を明確に区別している。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "公式過去ログを一次Content Evidenceとして最優先し、遠州鉄道公式とGeo-グラフィックは後代History／照合資料へ分離している。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "各EvidenceはSourceの確認範囲に収まり、レス番号・用途・不確実性が追跡可能。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "現実事実性、異界解釈、投稿停止後、後代帰還法・異界駅一般化の非遡及を保持している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0180",
+  "findings": [],
+  "review_notes": "0180 Golden Reference regression Review cycle 1。旧golden 00のEvidence意味を新canonicalへ移管できているためPass。",
+  "review_seq": 1,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0180_kisaragi_station/0180_00_sources.json",
+    "blob_sha": "d29b5cac465f30ebb909315c7d7c59a9d128f2a9",
+    "commit_sha": "2f0ea85307965bbff293a029ff314ecd708ae598",
+    "reviewed_at": "2026-09-18T00:25:55Z"
+  },
+  "verdict": "Pass"
+}

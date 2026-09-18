@@ -1,0 +1,120 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "列車異常、未知駅、位置特定不能、110番、老人、トンネル、比奈、不審車、投稿停止、参加者応答が00 Evidenceへ接続されている。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01-P12で旧goldenの主要構造と差異なし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summaryだけで初期実況の時系列、共同生成、未解決終端、後代境界を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "投稿停止を失踪・死亡に変換せず、参加者の異界解釈を確定ontologyへ昇格していない。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "2004年初期実況と、後代異界駅一般化・帰還法・翻案・事業者再提示を分離している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0180",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "新10は旧goldenのVersion Scope・D01-D21判定に必要な構造情報を保持している。",
+      "status": "PASS"
+    },
+    "blind_decode": "2004年1月、はすみが通常の帰宅列車で長時間無停車・未知のトンネルを経験し、確認不能な『きさらぎ駅』へ到達する。家族・警察・位置情報でも通常地理へ回収できず、線路移動、異常音、片足の老人、伊佐貫トンネル、不審な車へ段階的に危険が進む。公開掲示板参加者がリアルタイムで検索・助言・異界解釈を返すが、確実な帰還法や原因は確立せず、投稿停止後の帰還・所在・真相は未確定のまま残る。",
+    "probes": [
+      {
+        "blind": "投稿者はすみ。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "投稿者はすみ。"
+      },
+      {
+        "blind": "作用対象ははすみ本人。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "作用対象ははすみ本人。"
+      },
+      {
+        "blind": "通常の帰宅乗車中に非意図的に異常へ巻き込まれる。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "同左。"
+      },
+      {
+        "blind": "原因主体は確定しない。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "異界・霊・経路等の原因源は未確定。"
+      },
+      {
+        "blind": "通常地理との対応が崩れる空間・経路異常。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "同左。"
+      },
+      {
+        "blind": "通常帰宅→長時間無停車→未知駅→位置特定不能→線路移動→老人・トンネル→不審な車→投稿停止。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "同左。"
+      },
+      {
+        "blind": "2004年1月8日深夜〜9日未明の一晩のリアルタイム実況。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "同左。"
+      },
+      {
+        "blind": "安定した世界規則は確定せず、参加者助言は相互不一致。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "同左。"
+      },
+      {
+        "blind": "家族・警察・位置情報・助言等を試すが確実な帰還法は成立しない。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "同左。"
+      },
+      {
+        "blind": "投稿停止時点で帰還・所在・身体状態・真相は未確定。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "同左。"
+      },
+      {
+        "blind": "現実事実性、原因源、投稿停止後、後代ルールの遡及を保留。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "同左。"
+      },
+      {
+        "blind": "VAR-001初期実況、VAR-002異界駅一般化等、VAR-003事業者・翻案再提示。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "同左。"
+      }
+    ],
+    "reference_story": "旧Golden Referenceでも、通常の帰宅移動から説明不能な経路・未知駅へ逸脱し、通常地理への位置特定が失敗すること、参加者との共同実況で進行すること、老人・トンネル・不審な運転者へ段階進行し、投稿停止後を失踪・死亡へ補完しないことが中核である。後代の異界駅ルール・帰還法・翻案・遠州鉄道コンテンツは初期形へ遡及しない。",
+    "verdict": "PASS"
+  },
+  "review_notes": "0180 Golden Reference regression Review cycle 1。render回帰で110番の欠落を1件検出・修正後、旧golden意味との一致を確認しPass。",
+  "review_seq": 1,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0180_kisaragi_station/0180_10_contents.json",
+    "blob_sha": "8342007f5ea894fad81805b859a963bb6f74f8f5",
+    "commit_sha": "2109c5e8d9087c265ed6771ea8536bb0bd26fe6c",
+    "reviewed_at": "2026-09-18T00:25:55Z"
+  },
+  "verdict": "Pass"
+}
