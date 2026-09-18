@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0225",
+  "lore_name": "蛇口からポンジュース",
+  "summary": {
+    "narrative": "愛媛県では、家庭の蛇口をひねると水ではなくポンジュース、または広くみかんジュースが出るという地域ジョーク・都市伝説。後代のえひめ飲料への取材では、昭和50年代頃、全国から人が集まる大学などでのお国自慢の中で愛媛県人が「家庭の蛇口からポンジュースが出る」と冗談で語ったことが広がりの一因と説明されるが、同時代一次資料による厳密な起源・初出は確認できない。2009年の同社担当者証言では「蛇口が三つあり、その一つからポンジュースが出る」という型も確認できる。噂は同社への問い合わせを生み、えひめ飲料は2007年11月に都市伝説を再現する実物の「ポンジュース蛇口」を作り、その後松山空港などでPRイベントとして展開した。",
+    "structure": {
+      "primary_actors": {
+        "status": "known",
+        "value": [
+          "愛媛県の家庭・愛媛県人について語られる地域像"
+        ]
+      },
+      "affected_targets": {
+        "status": "not_applicable",
+        "value": null
+      },
+      "entry_trigger": {
+        "status": "not_applicable",
+        "value": null
+      },
+      "causal_agent": {
+        "status": "known",
+        "value": [
+          "愛媛の家庭にあると語られる蛇口・水道設備"
+        ]
+      },
+      "mechanism": {
+        "status": "known",
+        "value": [
+          "蛇口をひねるとポンジュース／みかんジュースが出るとする"
+        ]
+      },
+      "state_transition": {
+        "status": "not_applicable",
+        "value": null
+      },
+      "temporal_structure": {
+        "status": "known",
+        "value": [
+          "特定の出来事の進行ではなく、愛媛の家庭に恒常的にある属性として提示される"
+        ]
+      },
+      "rules_and_taboos": {
+        "status": "not_applicable",
+        "value": null
+      },
+      "avoidance_control": {
+        "status": "not_applicable",
+        "value": null
+      },
+      "terminal_state": {
+        "status": "not_applicable",
+        "value": null
+      },
+      "uncertainties": {
+        "status": "known",
+        "value": [
+          "同時代一次資料による起源・初出は未確認",
+          "昭和50年代頃という成立説明は後代取材による回想",
+          "果汁タンクの映像が広がりに寄与したという説明は推測的"
+        ]
+      },
+      "variant_boundaries": {
+        "status": "known",
+        "value": [
+          "家庭の蛇口からポンジュース／みかんジュースが出る型を中核とする",
+          "三つの蛇口のうち一つからポンジュースが出る型を具体化variantとして区別する",
+          "2007年以降の実物ポンジュース蛇口は都市伝説を現実側で再現した後代派生として区別する"
+        ]
+      }
+    },
+    "coverage_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005"
+    ]
+  },
+  "content_units": [
+    {
+      "content_id": "CNT-001",
+      "type": "claim",
+      "text": "愛媛県の家庭では、蛇口をひねるとポンジュース、またはみかんジュースが出ると語られる。",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-005",
+        "EVD-006"
+      ]
+    },
+    {
+      "content_id": "CNT-002",
+      "type": "claim",
+      "text": "後代のえひめ飲料への取材回答では、昭和50年代頃、全国から人が集まる大学などのお国自慢の場で、愛媛県人が家庭の蛇口からポンジュースが出ると冗談で話したことが広がりの一因と説明されている。",
+      "evidence_refs": [
+        "EVD-005"
+      ],
+      "notes": "同時代1970年代資料ではなく、後代の回想的説明である。"
+    },
+    {
+      "content_id": "CNT-003",
+      "type": "claim",
+      "text": "2009年のえひめ飲料担当者への取材では、愛媛には蛇口が三つあり、その一つからポンジュースが出るという具体化した噂の型が語られている。",
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "content_id": "CNT-004",
+      "type": "outcome",
+      "text": "この噂について、えひめ飲料には実際に問い合わせが寄せられていたと同社担当者が説明している。",
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "content_id": "CNT-005",
+      "type": "event",
+      "text": "えひめ飲料は都市伝説を再現するため、2007年11月に実物のポンジュース蛇口をデビューさせ、その後松山空港などで体験型PRとして展開した。",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-004",
+        "EVD-006"
+      ],
+      "notes": "元の都市伝説の内容ではなく、噂の流通が現実側の企業行動へ接続した後代の実体化。"
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "VAR-001",
+      "kind": "initial",
+      "description": "愛媛県の家庭の蛇口からポンジュース／みかんジュースが出るという地域属性の命題型。",
+      "attestation": "昭和50年代頃からの流通が後代取材で回想され、2007年以前に噂として存在したことは2009年の企業担当者証言でも確認できる。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-005",
+        "EVD-006"
+      ],
+      "notes": "起源年・初出話者は未確定。"
+    },
+    {
+      "variant_id": "VAR-002",
+      "kind": "other",
+      "description": "愛媛には蛇口が三つあり、その一つからポンジュースが出るとする、蛇口の数を具体化した型。",
+      "attestation": "2009年のえひめ飲料担当者への取材。",
+      "content_refs": [
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "variant_id": "VAR-003",
+      "kind": "later",
+      "description": "都市伝説を実物のポンジュース蛇口として再現し、イベント・観光PRとして体験可能にした現実側の実体化。",
+      "attestation": "2007年11月にえひめ飲料がデビューさせ、その後松山空港等へ展開。",
+      "content_refs": [
+        "CNT-004",
+        "CNT-005"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003",
+        "EVD-004",
+        "EVD-006"
+      ]
+    }
+  ],
+  "uncertainties": [
+    {
+      "text": "昭和50年代頃という流通時期は後代取材に基づき、同時代一次資料で起源・初出を確定できない。",
+      "evidence_refs": [
+        "EVD-005",
+        "EVD-006"
+      ],
+      "content_refs": [
+        "CNT-002"
+      ]
+    },
+    {
+      "text": "大学などのお国自慢の冗談が唯一の起源だったかは確認できず、果汁タンクの映像が寄与したという説明も推測的である。",
+      "evidence_refs": [
+        "EVD-005"
+      ],
+      "content_refs": [
+        "CNT-002"
+      ]
+    },
+    {
+      "text": "「ポンジュース」と「みかんジュース」の呼称差が、時期・地域・媒体による安定した別variantか単なる言い換えかは確定できない。",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-005",
+        "EVD-006"
+      ],
+      "content_refs": [
+        "CNT-001"
+      ]
+    }
+  ]
+}
