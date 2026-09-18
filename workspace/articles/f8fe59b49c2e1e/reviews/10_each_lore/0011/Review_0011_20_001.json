@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0011",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_20_analysis.json",
+    "commit_sha": "92725e87a26568eb7a360292ca0bf79ad4211b77",
+    "blob_sha": "923a7bbcd9801f08324050a448f94c0d87e06af4",
+    "reviewed_at": "2026-09-18T16:54:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "1880年代の初期三脚型のみをScopeとし、五十音表・硬貨型、1970年代以降の学校流行、後代終了作法を除外する。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "初期型の儀式手順・霊的応答・回答獲得を中心に判定し、後代の危険談や手順を混入していない。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "明示的taxonomy gapは不要。最古媒体・初期流通媒体・終了作法はEvidence不足としてUに保持される。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "器具準備・接触→招請→質問→三脚運動→回答解釈の儀式因果がContentと整合する。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "D/I判定はCNT-001/CNT-003と対応EVDへ追跡でき、Scope外の文字盤型は分析根拠へ逆流していない。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Contentsから独立に読み直しても、D05儀式手順、D09儀式ルール、D11儀式実行、D15知識獲得が中心となる点は変わらない。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "研究資料で直接確認できる年代・手順・全国流行はD、解釈的な真実性・意味形成はI、不明な媒体・終了法はUとしている。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12は実践者、D13は三脚器具の運動、D15は回答・知識の獲得で、儀式の作用連鎖が整合する。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "1992年の社会実践Evidenceを初期1880年代ScopeのL3へ遡及せず、D18は伝承内部L1のみとする。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "D19全国公共はWeb公開性ではなく、研究史が1880年代後半の全国流行を明示するEvidenceに基づく。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "特権情報保持者の記載不足からNO_ONE_KNOWSを付けずUとしている。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "特定実在地点・制度を必要としない一般儀式であるためA0。史料が実在することを現実アンカーへ誤算入していない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "1884年伝播を研究史上の整理に限定し、具体的伝播経路・単一起点・後代終了法を断定しない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "全国型怪異・儀式／儀式伝承という分類は、複数人が所定手順で霊的回答を得る構造に整合する。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "1880年代の初期こっくりさんは、複数人が三脚状の器具へ手を置いて霊的存在を招き、質問への応答を三脚の揺れとして読む逐次的儀式。後代の五十音表・硬貨型や学校流行はScope外。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-003",
+      "EVD-006"
+    ],
+    "status": "PASS",
+    "notes": "最古媒体と終了作法はUを維持する。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Version Scope、全21次元、後代設定の非遡及を独立監査しPass。"
+}

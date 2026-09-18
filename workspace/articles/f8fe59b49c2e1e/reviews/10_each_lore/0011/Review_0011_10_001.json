@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0011",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_10_contents.json",
+    "commit_sha": "939afea4d7261422ed75756dea01f629858c648d",
+    "blob_sha": "8f1f9dcef46b984a4cd64db330d711052b6fb228",
+    "reviewed_at": "2026-09-18T16:54:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜006はEVDに追跡でき、三脚型の器具・読み取りと後代硬貨型を混成していない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryのみから、初期三脚型、1884年伝播整理、後代文字盤型、学齢期中心の流通、1970年代再流行を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。初期Scopeで不明な終了作法を後代手順から補完していない。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001初期三脚型、VAR-002後代文字盤型、VAR-003地域・時代差を明確に分離する。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "1884年の具体経路、型移行、1992年調査の歴史的限界を保持する。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "こっくりさんは複数人が器具に触れて霊的存在を招き、質問への応答を器具の動きとして読む交霊・占い実践。初期三脚型は1884年伝播と研究史上整理され、後に五十音表と硬貨を使う文字盤型が広まる。後代の学校流行・手順差は初期形から分離される。",
+    "reference_story": "EvidenceとContentを照合すると、blind decodeは初期器具、手順、回答獲得、後代文字盤型との境界を保持する。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "複数の参加者と、呼び出される霊的存在。",
+        "reference": "primary_actorsと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "質問への回答を求める参加者。",
+        "reference": "affected_targetsと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "器具へ手を置き、霊的存在を招いて質問する。",
+        "reference": "entry_triggerとCNT-001に一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "伝承上は呼び出された霊的存在。",
+        "reference": "causal_agentと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "初期型では三脚の揺れをYes/No等として読む。",
+        "reference": "mechanismとCNT-001に一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "招請前→質問→器具運動→回答解釈。",
+        "reference": "state_transitionと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "所定の手順を順に進める。",
+        "reference": "temporal_structureと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "器具準備・接触・招請・質問・読み取りという規則。",
+        "reference": "rules_and_taboosと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "初期三脚型の終了・回避作法は確認不足。",
+        "reference": "avoidance_control=unknownと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "質問への回答を得る。",
+        "reference": "terminal_stateと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "1884年経路、移行過程、手順差が未確定。",
+        "reference": "uncertaintiesと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "初期三脚型、後代文字盤型、地域・時代差を分離。",
+        "reference": "variant_boundariesとVAR-001〜003に一致。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summary再構成と詳細Content参照後で、1880年代初期三脚型をVersion Scopeとする判断は不変。"
+    },
+    "verdict": "PASS"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。儀式手順の意味保存、初期形と後代形の境界、歴史的不確実性を監査しPass。"
+}

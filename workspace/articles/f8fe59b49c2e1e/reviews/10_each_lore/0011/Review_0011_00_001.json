@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0011",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_00_sources.json",
+    "commit_sha": "86c396ecc051b7467416fcfe8ce762a8ab9cf689",
+    "blob_sha": "8dbb81d081cf4a6dbb4fdf057762908279f0ba60",
+    "reviewed_at": "2026-09-18T16:54:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "1995年の社会心理学的研究を中心に、1887年『妖怪玄談』書誌、2004年科学解説、現代力学研究を補助配置し、歴史Evidenceと説明Evidenceを区別している。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "初期三脚型、後代文字盤型、1992年流通調査、力学説明を別Evidenceとして保持し、現代の硬貨型を1880年代へ遡及していない。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜008は各Sourceの記載範囲に沿い、1884年伝播を研究史上の整理として限定し、単一起点を断定していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "『妖怪玄談』は古典書誌として確認し、本文構造の解釈は1995年研究を介することを明記。1992年調査や2025年力学研究も用途を限定している。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1884年伝播・1887年出版を区別し、1884年の経路や単一起点を完全確定した事実とはしていない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "伝播経路、三脚型から文字盤型への移行、1992年調査の歴史適用限界を保持する。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。明治初期形と後代文字盤型の分離、研究史上の年代表現、Evidence用途を監査しPass。"
+}
