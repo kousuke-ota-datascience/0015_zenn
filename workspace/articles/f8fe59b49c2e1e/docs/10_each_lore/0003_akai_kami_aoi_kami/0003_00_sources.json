@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0003",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース 0700168「お化け」",
+      "locator": "カード0700168／原資料: 柏原夫佐子「おばあさんから聞いた話」『近畿民俗』通巻55号, 1972, p.42",
+      "accessed_at": "2026-09-18",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0700168",
+      "bibliographic_info": "柏原夫佐子「おばあさんから聞いた話」『近畿民俗』通巻55号、近畿民俗学会、1972年2月15日、34–51頁（該当42頁）。",
+      "notes": "日文研DBによる原資料の要約。原誌本文そのものではないため direct_derivative とする。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "reliable_secondary_or_research",
+      "title": "CiNii Books「近畿民俗」",
+      "locator": "近畿民俗 通巻55号, 1972.2",
+      "accessed_at": "2026-09-18",
+      "relation_to_primary": "not_applicable",
+      "evidence_role": [
+        "H"
+      ],
+      "url": "https://ci.nii.ac.jp/ncid/AN00162065",
+      "bibliographic_info": "近畿民俗学会『近畿民俗』通巻55号、1972年2月。",
+      "notes": "原誌の発行年月・号数の書誌確認に使用。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "reliable_secondary_or_research",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース 2470034「トイレ」",
+      "locator": "カード2470034／原資料: 常光徹「学校の世間話―中学生の妖怪伝承にみる異界的空間―」『昔話伝説研究』12, 1986, p.13",
+      "accessed_at": "2026-09-18",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2470034",
+      "bibliographic_info": "常光徹「学校の世間話―中学生の妖怪伝承にみる異界的空間―」『昔話伝説研究』通巻12号、昔話伝説研究会、1986年3月18日、12–34頁（該当13頁）。"
+    },
+    {
+      "source_id": "SRC-004",
+      "source_type": "reliable_secondary_or_research",
+      "title": "国立国会図書館 NDLサーチ『昔話伝説研究 (12)』",
+      "locator": "『昔話伝説研究』12号, 1986-03, NDL PID 7932423",
+      "accessed_at": "2026-09-18",
+      "relation_to_primary": "not_applicable",
+      "evidence_role": [
+        "H"
+      ],
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000000022923-d7932423",
+      "bibliographic_info": "昔話伝説研究会編『昔話伝説研究』12号、昔話伝説研究会、1986年3月。",
+      "notes": "原誌の発行年月・所蔵を公的書誌で確認。"
+    },
+    {
+      "source_id": "SRC-005",
+      "source_type": "reliable_secondary_or_research",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース 2470035「トイレ」",
+      "locator": "カード2470035／原資料: 常光徹「学校の世間話―中学生の妖怪伝承にみる異界的空間―」『昔話伝説研究』12, 1986, p.13",
+      "accessed_at": "2026-09-18",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2470035",
+      "bibliographic_info": "同上、該当13頁。"
+    },
+    {
+      "source_id": "SRC-006",
+      "source_type": "reliable_secondary_or_research",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース 2470038「トイレ，赤いチャンチャンコ」",
+      "locator": "カード2470038／原資料: 常光徹「学校の世間話―中学生の妖怪伝承にみる異界的空間―」『昔話伝説研究』12, 1986, pp.13–15",
+      "accessed_at": "2026-09-18",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2470038",
+      "bibliographic_info": "同上、該当13–15頁。"
+    },
+    {
+      "source_id": "SRC-007",
+      "source_type": "reliable_secondary_or_research",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース 2210103「声」",
+      "locator": "カード2210103／原資料: 林英一「学校の中の非日常空間の位相」『民俗』135, 1990, p.2",
+      "accessed_at": "2026-09-18",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2210103",
+      "bibliographic_info": "林英一「学校の中の非日常空間の位相」『民俗』通巻135号、相模民俗学会、1990年4月、1–5頁（該当2頁）。"
+    },
+    {
+      "source_id": "SRC-008",
+      "source_type": "reliable_secondary_or_research",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース 2610023「赤い紙青い紙黄色い紙白い紙」",
+      "locator": "カード2610023／原資料: 降井直人「現代人と世間話－トイレの怪談を中心にして－」『山陰民俗研究』6, 2001, p.61",
+      "accessed_at": "2026-09-18",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2610023",
+      "bibliographic_info": "降井直人「現代人と世間話－トイレの怪談を中心にして－」『山陰民俗研究』6号、山陰民俗学会、2001年3月、56–81頁（該当61頁）。"
+    },
+    {
+      "source_id": "SRC-009",
+      "source_type": "reliable_secondary_or_research",
+      "title": "大宅壮一文庫「デマ・流言飛語」記事索引",
+      "locator": "No.29 大宅壮一「『赤マント』社会学―活字ジャーナリズムへの抗議」『中央公論』1939年4月, pp.422–427",
+      "accessed_at": "2026-09-18",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "H"
+      ],
+      "url": "https://www.oya-bunko.or.jp/magazine/introduction/tabid/747/Default.aspx",
+      "bibliographic_info": "大宅壮一「『赤マント』社会学―活字ジャーナリズムへの抗議」『中央公論』1939年4月号、422–427頁。",
+      "notes": "1939年東京の『赤マントの男徘徊』流言の同時代記事索引。学校便所の色選択型との系譜関係は本調査では確定しない。"
+    },
+    {
+      "source_id": "SRC-010",
+      "source_type": "later_summary_or_commentary",
+      "title": "YOKAI.JP「赤マント」",
+      "locator": "「民話・伝承」「出典・参考文献」節",
+      "accessed_at": "2026-09-18",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "H"
+      ],
+      "url": "https://yokai.jp/yokai/aka-manto",
+      "bibliographic_info": "2026年8月30日最終監修。松谷みよ子『現代民話考』第2期2（1987）等を参照した後代整理。",
+      "notes": "1930年代回想例の存在確認に限定して使用し、起源確定には使用しない。"
+    },
+    {
+      "source_id": "SRC-011",
+      "source_type": "reliable_secondary_or_research",
+      "title": "国立国会図書館 NDLサーチ『現代民話考 第2期 2』",
+      "locator": "松谷みよ子『現代民話考 第2期2 学校』, 1987.6, NDL PID 12501792",
+      "accessed_at": "2026-09-18",
+      "relation_to_primary": "not_applicable",
+      "evidence_role": [
+        "H"
+      ],
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000001871611",
+      "bibliographic_info": "松谷みよ子『現代民話考 第2期2 学校―笑いと怪談・子供たちの銃後・学童疎開・学徒動員』立風書房、1987年6月。",
+      "notes": "後代回想採録を収める書籍の書誌確認。本文は本調査で直接閲覧していない。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "カード要約／原資料 p.42",
+      "content": "1972年の兵庫県尼崎市の採録では、便所へ行くとお化けが赤い紙か白い紙かを尋ねるという伝説が低学年、とくに1年生の間で広がっていたとされる。",
+      "representation": "paraphrase",
+      "uncertainty": "日文研DBの要約に基づき、原誌本文は直接閲覧していない。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "カード要約／原資料 p.42",
+      "content": "同じ採録は、この伝説のため児童が連なって便所へ行っていたと記録しており、噂が現実の行動に影響したことを示す。",
+      "representation": "paraphrase",
+      "uncertainty": "行動変化の規模・継続期間は要約からは不明。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-002",
+      "locator": "通巻55号",
+      "content": "CiNiiの所蔵・書誌情報では『近畿民俗』通巻55号は1972年2月刊行である。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-003",
+      "locator": "カード要約／原資料 p.13",
+      "content": "1986年に東京都の男子中学生から採録された型では、小学校の端のトイレで紙の色を尋ねられ、赤は血だらけ、青は首を絞められて顔が青くなり、白は何もされないという分岐がある。",
+      "representation": "paraphrase",
+      "uncertainty": "日文研DBの要約に基づく。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-004",
+      "locator": "書誌情報",
+      "content": "国立国会図書館は『昔話伝説研究』12号を1986年3月刊行として所蔵し、常光徹の採録が属する号の書誌を確認できる。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-005",
+      "locator": "カード要約／原資料 p.13",
+      "content": "同じ1986年の東京都男子中学生採録には、赤と紫のどちらが好きかを問われ、赤なら便器へ引きずり込まれ、紫なら怪異が消えて助かる型がある。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-007",
+      "source_id": "SRC-006",
+      "locator": "カード要約／原資料 pp.13–15",
+      "content": "1986年の女子中学生採録には、学校トイレで『赤いチャンチャンコ』を着せるかと声が問い、承諾した婦人警官が首を切られ、血で衣服が赤いちゃんちゃんこのようになる型がある。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-008",
+      "source_id": "SRC-007",
+      "locator": "カード要約／原資料 p.2",
+      "content": "1990年の藤沢市の採録には、女子職員トイレの特定個室で『赤いマント』をかぶせるかと三度問う声があり、生徒には広く知られ、怖がって近づかないとされる型がある。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-009",
+      "source_id": "SRC-008",
+      "locator": "カード要約／原資料 p.61",
+      "content": "2001年の神戸市の高校生採録には、赤・青・黄・白の紙を選び、赤と青は死亡、黄は助かり、白は壁へ引きずり込まれるという多色分岐型がある。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-010",
+      "source_id": "SRC-009",
+      "locator": "No.29 記事索引",
+      "content": "大宅壮一文庫の記事索引は、1939年4月の『中央公論』に、赤マントの男が徘徊する流言が約1か月東京一帯に広がったことを扱う大宅壮一の記事があると記録する。",
+      "representation": "paraphrase",
+      "uncertainty": "これは街路の『赤マントの男』流言であり、学校便所の色選択型との直接系譜は確認できない。"
+    },
+    {
+      "evidence_id": "EVD-011",
+      "source_id": "SRC-010",
+      "locator": "民話・伝承節",
+      "content": "後代整理は、松谷みよ子が1987年に公刊した回想採録に、1930年代の豊科小学校で赤・青のマントを選ばせる便所怪談が語られていると紹介する。",
+      "representation": "paraphrase",
+      "uncertainty": "出来事とされる時期から約半世紀後の回想で、1930年代の同時代記録ではないため生成年代の確定には使わない。"
+    },
+    {
+      "evidence_id": "EVD-012",
+      "source_id": "SRC-011",
+      "locator": "書誌情報",
+      "content": "国立国会図書館の書誌では、松谷みよ子『現代民話考 第2期2 学校』は1987年6月刊行である。",
+      "representation": "paraphrase",
+      "uncertainty": "書誌は回想内容そのものを検証しない。"
+    }
+  ],
+  "notes": "Entry boundaryは『赤い紙・青い紙／赤マント系』。現行Evidenceでは、1972年尼崎の学校便所における赤白の紙質問型が同時代に近い公刊採録として確認できる。1930年代へ遡る赤・青マント型は1987年公刊の回想として後代資料に現れるため、生成年代の確定には用いない。1939年東京の『赤マントの男』流言は同時代記録があるが、学校便所の色選択型との系譜関係は未証明として分離する。なお日文研DB C0411071-000 の『宮城縣史 民俗3』21巻は1956年と記載するが、NDL等の21巻書誌は1973年であり、書誌不一致のため年代Evidenceから除外した。"
+}
