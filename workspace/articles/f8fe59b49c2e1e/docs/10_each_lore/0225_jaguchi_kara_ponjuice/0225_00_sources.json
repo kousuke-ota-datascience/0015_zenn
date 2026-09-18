@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0225",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "primary_or_contemporary",
+      "title": "ポンジュースの歴史",
+      "locator": "株式会社えひめ飲料公式サイト「平成19年（2007年） ポンジュース蛇口誕生！」",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "primary",
+      "evidence_role": [
+        "C",
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://www.ehime-inryo.co.jp/pomstory/index.html",
+      "notes": "えひめ飲料自身による企業史・商品史。2007年の実物蛇口について一次的だが、都市伝説の成立時期そのものについては遡及的な説明。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "primary_or_contemporary",
+      "title": "沿革",
+      "locator": "株式会社えひめ飲料公式サイト「平成19年11月（2007） ポンジュース蛇口デビュー」",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "primary",
+      "evidence_role": [
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://www.ehime-inryo.co.jp/company/history.html",
+      "notes": "えひめ飲料自身の沿革。装置デビュー年月の確認に使用。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "primary_or_contemporary",
+      "title": "蛇口からポンジュース－松山空港で体験型イベント、700人が行列",
+      "locator": "松山経済新聞 2009-01-16、本文21-32行相当",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X"
+      ],
+      "url": "https://matsuyama.keizai.biz/headline/70/",
+      "bibliographic_info": "松山経済新聞、2009年1月16日。",
+      "notes": "えひめ飲料営業企画課担当者への取材を含む同時代報道。"
+    },
+    {
+      "source_id": "SRC-004",
+      "source_type": "later_summary_or_commentary",
+      "title": "蛇口からみかんジュースが出る！？本当にあった愛媛の都市伝説を調べてみたよ！",
+      "locator": "hamanatran 2017-08-12「そもそも、『蛇口からみかんジュース』って誰がいい出したの？」",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://hamanatran.com/archives/1862",
+      "bibliographic_info": "hamanatran、2017年8月12日。",
+      "notes": "えひめ飲料への取材回答を掲載する後代記事。成立時期・起源説明は回想的であり、同時代1970年代資料ではない。"
+    },
+    {
+      "source_id": "SRC-005",
+      "source_type": "reliable_secondary_or_research",
+      "title": "松山空港「蛇口からみかんジュース」が中国人観光客の影響で撤去？ 運営会社が否定【ファクトチェック】",
+      "locator": "日本ファクトチェックセンター 2025-01-30「松山空港『蛇口からみかんジュース』は2008年から」",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://www.factcheckcenter.jp/fact-check/lifestyle/false-matsuyama-juice-removal/",
+      "bibliographic_info": "日本ファクトチェックセンター、2025年1月30日。",
+      "notes": "ラジオ関西、えひめ飲料、国立国会図書館レファレンス協同データベース等を参照した後代の時系列整理。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "「平成19年（2007年） ポンジュース蛇口誕生！」",
+      "representation": "paraphrase",
+      "content": "えひめ飲料は、「愛媛県では蛇口からポンジュースが出る」という都市伝説を再現するためにポンジュース蛇口を作ったと説明している。",
+      "uncertainty": "都市伝説の具体的な初出時点・最初の話者はこの公式説明からは特定できない。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-002",
+      "locator": "沿革「平成19年11月（2007）」",
+      "representation": "paraphrase",
+      "content": "えひめ飲料の沿革では、ポンジュース蛇口のデビューは2007年11月と記録されている。",
+      "uncertainty": "これは装置のデビュー年月であり、伝承の成立年月ではない。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-003",
+      "locator": "本文27-29行相当",
+      "representation": "paraphrase",
+      "content": "2009年の取材でえひめ飲料担当者は、以前から「愛媛には蛇口が三つあり、その一つからポンジュースが出る」という噂があり、同社への問い合わせもあったため、その噂を生かした企画を経てポンジュース蛇口を作ったと説明している。",
+      "uncertainty": "担当者の2009年時点の回想であり、噂の最初の発生時点・流通規模を直接記録した資料ではない。"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-003",
+      "locator": "本文25-30行相当",
+      "representation": "paraphrase",
+      "content": "ポンジュース蛇口は2007年11月のイベントで実施され、その後2008年から松山空港でも体験イベントとして展開され、2009年1月の回には600〜700人が列を作ったと報じられている。",
+      "uncertainty": "これは都市伝説を受けた現実側のPR実践であり、元の伝承内容そのものとは区別する必要がある。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-004",
+      "locator": "「そもそも、『蛇口からみかんジュース』って誰がいい出したの？」",
+      "representation": "paraphrase",
+      "content": "2017年記事に掲載されたえひめ飲料への取材回答では、昭和50年代頃、全国から人が集まる大学などのお国自慢の場で、愛媛県人が「愛媛県の家庭では蛇口からポンジュースが出る」と冗談として話していたことや、果汁タンクの蛇口状コックがテレビに映ったことなどが都市伝説の広がりに関係したのではないかと説明されている。",
+      "uncertainty": "後代の企業取材回答による回想・推測であり、1970年代の同時代記録ではない。厳密な起源や因果関係は確定しない。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-005",
+      "locator": "本文46-59行相当",
+      "representation": "paraphrase",
+      "content": "JFCは、1975年頃から愛媛で「蛇口をひねるとみかんジュースが出る」という都市伝説が広まり、2007年にえひめ飲料が実物のポンジュース蛇口を完成、2008年に松山空港で展開されたという時系列を整理している。",
+      "uncertainty": "1975年頃という年代はJFCが複数の後代資料を整理した値であり、同時代一次資料による初出確定ではない。"
+    }
+  ],
+  "notes": "Entry境界は「愛媛では家庭等の蛇口からポンジュース／みかんジュースが出る」という地域ジョーク・都市伝説。2007年以降の実物蛇口は伝承を受けた現実側の再現・PRとして分離する。成立時期は後代取材で昭和50年代頃とされるが、同時代一次資料による起源・初出は確認できていない。"
+}
