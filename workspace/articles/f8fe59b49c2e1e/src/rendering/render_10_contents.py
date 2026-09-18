@@ -57,6 +57,8 @@ def render(entry_id: str) -> Path:
         ]
         if item.get("attestation"):
             lines += [f"Attestation: {item['attestation']}", ""]
+        if item.get("notes"):
+            lines += [f"Notes: {item['notes']}", ""]
     lines += ["## Uncertainties", ""]
     for item in data.get("uncertainties", []):
         refs = [*(item.get("content_refs", [])), *(item.get("evidence_refs", []))]
