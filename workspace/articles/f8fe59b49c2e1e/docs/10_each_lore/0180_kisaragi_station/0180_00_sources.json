@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0180",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "primary_or_contemporary",
+      "title": "5ちゃんねる公式過去ログ「身のまわりで変なことが起こったら実況するスレ26」",
+      "locator": "レス98から投稿者「はすみ」の最終投稿レス635まで",
+      "accessed_at": "2026-09-16",
+      "relation_to_primary": "primary",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://kako.5ch.io/test/read.cgi/occult/1073411138",
+      "bibliographic_info": "2ちゃんねる オカルト板「身のまわりで変なことが起こったら実況するスレ26」、2004-01-08深夜〜2004-01-09未明の初期実況",
+      "archive_info": "5ちゃんねる公式過去ログ倉庫",
+      "notes": "初期実況のContent・提示形式・参加者発言を直接確認する一次Evidence。投稿内容が現実に起きた出来事であること自体を証明する資料ではない。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "later_summary_or_commentary",
+      "title": "遠州鉄道「きさらぎ駅」公式ページ",
+      "locator": "後代の「きさらぎ駅」コンテンツ展開に関する説明",
+      "accessed_at": "2026-09-16",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://www.entetsu.co.jp/tetsudou/kisaragieki/",
+      "bibliographic_info": "遠州鉄道 公式Webコンテンツ「きさらぎ駅」",
+      "archive_info": "鉄道事業者公式Webページ",
+      "notes": "後代の事業者による再提示・受容史の確認に限定する。2004年初期実況のContent・世界規則・D18 L3へ遡及しない。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "reliable_secondary_or_research",
+      "title": "Geo-グラフィック「都市伝説 きさらぎ駅」",
+      "locator": "初期実況の時系列整理",
+      "accessed_at": "2026-09-16",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "H"
+      ],
+      "url": "https://geographics.jp/article/17",
+      "bibliographic_info": "Geo-グラフィック「都市伝説 きさらぎ駅」",
+      "archive_info": "公開Web記事",
+      "notes": "一次ログ時系列の照合補助。Content判定は公式過去ログを優先する。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "2004-01-08深夜〜09未明、レス98〜635",
+      "content": "投稿者「はすみ」による一連の実況は、2004年1月8日深夜から9日未明にかけて公開掲示板上で進行し、レス98から最終投稿レス635までを直接確認できる。",
+      "representation": "paraphrase",
+      "uncertainty": "ログ上の投稿と時系列は直接確認できるが、投稿内容の現実事実性や創作性は確定しない。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "レス98、101〜107、126、153",
+      "content": "はすみは普段利用する私鉄で帰宅中、通常なら数分ごとに停車する列車が20分以上停車せず、周囲の乗客が眠り、車掌・運転士側を確認できず、通常路線にないはずのトンネルを通過したと逐次報告する。",
+      "representation": "paraphrase",
+      "uncertainty": "異常運行の原因や実際の鉄道路線上の位置は確定しない。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-001",
+      "locator": "レス167、187、204ほか",
+      "content": "列車は見覚えのない無人駅「きさらぎ駅」に停車し、はすみは下車する。駅は通常の駅として検索等で確認できず、周囲の施設も乏しく、家族による位置特定も成立しない。",
+      "representation": "paraphrase",
+      "uncertainty": "「きさらぎ駅」の実在や異世界性をこの報告だけから確定しない。"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-001",
+      "locator": "レス204、259〜280、380ほか",
+      "content": "はすみは家族、タクシー、携帯電話の位置情報、警察への連絡などを試し、線路沿いに移動する。レス380では110番したが位置特定には至らなかったと報告する。",
+      "representation": "paraphrase",
+      "uncertainty": "これらの対処の実施報告は確認できるが、確実な帰還手順として有効性は確認されない。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-001",
+      "locator": "レス386以降、422、516",
+      "content": "線路沿い移動中、太鼓と鈴のような音、片足の老人による警告とその後の消失、「伊佐貫」と読めるトンネルへの到達をはすみが報告する。",
+      "representation": "paraphrase",
+      "uncertainty": "各現象の原因・存在論・現実地理上の位置は確定しない。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-001",
+      "locator": "レス586、606、623〜635",
+      "content": "トンネル通過後、はすみは近くにいた人物の車へ乗る。運転者は現在地を「比奈」と説明するが、車は山側へ進み、運転者は会話をやめ意味不明な独り言を始める。はすみは逃走機会をうかがうと書き、レス635を最後に投稿が途絶える。",
+      "representation": "paraphrase",
+      "uncertainty": "投稿停止後の帰還・所在・失踪・死亡・負傷・最終所在地は初期ログから確定しない。"
+    },
+    {
+      "evidence_id": "EVD-007",
+      "source_id": "SRC-001",
+      "locator": "レス99以降の参加者応答",
+      "content": "スレッド参加者は駅名・地名検索、質問、通常説明、異界・あの世等の解釈、複数の移動・帰還助言をリアルタイムに返し、投稿者の逐次報告と応答の往復で実況が進行する。",
+      "representation": "paraphrase",
+      "uncertainty": "参加者による異界・あの世等の解釈を、投稿者自身の確定世界観や客観的因果説明へ昇格しない。"
+    },
+    {
+      "evidence_id": "EVD-008",
+      "source_id": "SRC-001",
+      "locator": "参加者による移動・帰還助言群",
+      "content": "「振り向くな」「線路を歩くな」「駅へ戻れ」「戻るな」等、参加者の助言は相互に一致せず、初期ログ内で安定した世界規則や検証済みの帰還法へ収束しない。",
+      "representation": "paraphrase",
+      "uncertainty": "後代の確立した帰還手順・異界駅共通ルールを2004年初期実況へ遡及しない。"
+    },
+    {
+      "evidence_id": "EVD-009",
+      "source_id": "SRC-001",
+      "locator": "レス153、167、606ほか",
+      "content": "初期実況は新浜松、静岡県内の私鉄、比奈等の実在地名・交通背景へ具体的に接続する一方、「きさらぎ駅」「伊佐貫トンネル」は通常地理上で確認できない場所として報告される。",
+      "representation": "paraphrase",
+      "uncertainty": "実在地名への接続は「きさらぎ駅」自体の実在を意味しない。"
+    },
+    {
+      "evidence_id": "EVD-010",
+      "source_id": "SRC-001",
+      "locator": "レス98〜635の提示形式",
+      "content": "投稿者は自分が現在経験している事態として逐次報告し、参加者が同じ公開スレッド上で閲覧・応答する一人称実況と共同スレッドの複合形式を形成する。",
+      "representation": "paraphrase",
+      "uncertainty": "直接体験としての提示形式と、投稿内容の客観的真実性認定を区別する。"
+    },
+    {
+      "evidence_id": "EVD-011",
+      "source_id": "SRC-002",
+      "locator": "遠州鉄道公式ページの後代コンテンツ展開部分",
+      "content": "後代に実在の鉄道事業者である遠州鉄道が「きさらぎ駅」を公式Webコンテンツとして再提示している。",
+      "representation": "paraphrase",
+      "uncertainty": "後代受容史のEvidenceであり、2004年初期実況の伝承内容・因果規則・社会作用へ遡及しない。"
+    },
+    {
+      "evidence_id": "EVD-012",
+      "source_id": "SRC-003",
+      "locator": "初期実況の時系列整理部分",
+      "content": "Geo-グラフィックは、列車異常から未知駅、線路移動、老人、トンネル、車、投稿停止へ進む初期実況の時系列を整理している。",
+      "representation": "paraphrase",
+      "uncertainty": "二次整理資料であり、内容裁定は公式過去ログを優先する。"
+    }
+  ],
+  "notes": "旧Golden ReferenceのEvidence意味を新canonicalへ移管。公式過去ログを一次Content Evidenceとして最優先し、後代公式ページ・整理記事はHistory／照合用途へ分離する。後代転載は一次Evidenceへ格上げせず、参加者解釈・投稿停止・後代異界駅ルールを初期実況へ逆輸入しない。"
+}
