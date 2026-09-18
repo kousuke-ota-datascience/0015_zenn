@@ -6,13 +6,14 @@
 
 ## 0.2. 設計原則
 
-- 外部入力は `Entry_ID` のみ。
+- ユーザーからの業務入力は `Entry_ID` のみ。
 - control planeのcurrent state保持先はNotion `伝承エントリ調査状況`。
 - Git上のcanonical artifactとReview結果JSONを事実源としてNotion stateを収束させる。
-- 決定論的同期処理の外部入口は `src/status_management/sync_controlplane.py` とする。
-- Workflow 90から直接呼び出すPythonはこの1入口に限定する。
-- `sync_controlplane.py` の内部で `notion_controlplane.py` / `git_state.py` / `review_state.py` / `reconcile.py` を使用する。
-- Workflow 90自身は研究内容やReview意味論を判定しない。
+- **本番チャット経路のI/OはGitHub / Notion connectorを使用する。**
+- **Status収束・fail-stop・mutation planの唯一の決定論的正本は `src/status_management/reconcile.py` とする。**
+- connector経路でも `reconcile.py::reconcile_payload()` を実行し、LLMが同じstate transition rulesを文章から再実装しない。
+- `sync_controlplane.py` はNotion Public API tokenを持つ外部batch環境向けoptional adapterとし、本番チャット経路の必須入口にはしない。
+- Workflow 90自身は研究内容、Review意味論、D01〜D21を判定しない。
 
 # 1. 目的
 
@@ -22,7 +23,17 @@
 
 ## 2.1. 入力
 
+公開入力:
+
 - `Entry_ID`
+
+内部イベント:
+
+- `correction_started: [Artifact...]`
+  - Workflow 00が実際にcorrection phaseへ遷移した時だけ発行する。
+  - ユーザー入力にはしない。
+  - `Entry_ID` やReview存在だけから推測しない。
+  - `reconcile.py` が適用可能性を決定論的に検査する。
 
 ## 2.2. 出力
 
@@ -85,38 +96,179 @@ Legacy標準Workflowで確定していた状態遷移を継承する。
 - `再レビュー待` では、最新Review targetが現artifactのancestorであることは正常状態であり、stale ReviewとしてBLOCKしない。
 - `再作業中` では、直前の修正要求Reviewが最新Reviewとして残っていても `要修正` へ巻き戻さない。
 - `完了` 後にcanonical artifactが更新された場合、その版は未Reviewなので `再レビュー待` へ戻す。
-- `要修正 -> 再作業中` は「Coderが修正を開始した」という運用イベントを必要とする。Entry_IDだけの同期事実から開始意思を推測してはならない。
+- `要修正 -> 再作業中` は、Workflow 00から明示された `correction_started` eventがあり、current artifact / control plane post-SHA / latest non-Pass Review targetがexact一致する場合だけ許可する。
+- eventの重複実行はidempotentとし、すでに `再作業中` ならNOOPとする。
+- Pass Review、stale Review、artifact更新後、対象外、未知artifactに対するcorrection startはBLOCKする。
 
 # 5. 実行手順
 
-## 5.1. Step 0: Python入口実行
+## 5.1. Step 0: control plane snapshot取得
+
+Notion connectorで `Entry_ID` に一致するlogical rowsを取得する。
+
+logical key:
+
+```text
+(Entry_ID, 成果物)
+```
+
+各 `00 / 10 / 20` についてexact 1 rowを要求する。
+
+取得項目:
+
+- row/page ID
+- `Status`
+- `最新レビュー版`
+- `pre-SHA`
+- `post-SHA`
+- `remarks`
+- 更新競合検知に使えるlast-edited fact
+
+duplicate / missing row / unknown Status / parse不能値はsnapshot issueとして保持し、自動補正しない。
+
+## 5.2. Step 1: Git / Review facts取得
+
+GitHub connectorでcurrent canonical artifactについて次を取得する。
+
+- exists
+- latest artifact commit SHA
+- artifact blob SHA
+
+Reviewについて:
+
+```text
+reviews/10_each_lore/<Entry_ID>/
+```
+
+のcanonical Review JSONを読み、
+
+- filename / payload整合
+- Review Seq
+- target commit SHA
+- target blob SHA
+- verdict
+- artifact別Review Schema
+
+を検査してlatest Review factを作る。
+
+malformed / duplicate / Schema invalid Reviewはsnapshot issueとして扱う。
+
+Markdown Reviewやrendered viewは事実源にしない。
+
+## 5.3. Step 2: SHA relation取得
+
+GitHubのcommit graph事実から各artifactについて必要なrelationを作る。
+
+```text
+cp_post:       exact / left_ancestor / right_ancestor / diverged / missing
+review_target: exact / left_ancestor / right_ancestor / diverged / missing
+```
+
+relationの意味はSection 6に従う。
+
+LLMがcommit時刻や見た目の順序からancestryを推測してはならない。
+
+## 5.4. Step 3: deterministic reconcile実行
+
+connectorで得たfactsをJSON payloadへ正規化し、**current mainの `src/status_management/reconcile.py::reconcile_payload()` をPython execution environmentで実行する。**
+
+payload概念形:
+
+```json
+{
+  "controlplane": {
+    "issues": [],
+    "artifacts": {}
+  },
+  "git": {
+    "artifacts": {}
+  },
+  "review": {
+    "issues": [],
+    "latest": {}
+  },
+  "relations": {
+    "cp_post:00": "exact",
+    "review_target:00": "exact"
+  },
+  "events": {
+    "correction_started": []
+  }
+}
+```
+
+重要:
+
+- state transition rulesをWorkflow Markdown側で再実装しない。
+- Python環境からrepository moduleを直接importできない場合は、GitHub connectorでcurrent `reconcile.py` を取得して同一sourceを実行してよい。
+- current `reconcile.py` を実行できない場合、LLM判断で代替せず `BLOCKED` とする。
+
+reconcile結果:
+
+- `NOOP`
+- `UPDATE`
+- `BLOCKED`
+
+`BLOCKED` の場合はmutationを行わない。
+
+## 5.5. Step 4: mutation直前の競合確認
+
+`UPDATE` の場合、Notionを書き換える直前にmutation対象rowを再取得する。
+
+Step 0 snapshotと以下が一致することを確認する。
+
+- row/page ID
+- Status
+- 最新レビュー版
+- pre-SHA
+- post-SHA
+- remarks
+- last-edited fact
+
+差分があれば `concurrent_update:<Artifact>` としてBLOCKし、古いmutation planを適用しない。
+
+## 5.6. Step 5: Notion mutation適用
+
+`reconcile_payload()` が返したmutationだけをNotion connectorで適用する。
+
+Workflow 90が独自にStatusやSHAを追加変更してはならない。
+
+## 5.7. Step 6: 更新後verify
+
+mutation対象rowを再取得し、mutation planの全key/valueがexact一致することを確認する。
+
+不一致:
+
+```text
+post_update_verification_error
+```
+
+として `ERROR`。
+
+## 5.8. Step 7: Workflow 90結果
+
+- reconcile=`NOOP` → `PASS`
+- reconcile=`UPDATE` かつmutation + verify成功 → `UPDATED`
+- reconcile=`BLOCKED` または競合検知 → `BLOCKED`
+- connector / parse / write / verify実行不能 → `ERROR`
+
+`PASS / UPDATED` の場合のみ呼出元Workflowは後続処理へ進める。
+
+## 5.9. optional external adapter
 
 ```text
 python -m src.status_management.sync_controlplane <Entry_ID>
 ```
 
-- repository path、Notion識別子、Review保存先等を通常のWorkflow引数として要求しない。
+は削除しない。
 
-## 5.2. Step 1: 同期結果受領
+ただしこれは:
 
-- `PASS`: 実状態とcontrol planeが整合し、更新不要。
-- `UPDATED`: 事実から一意に導出できるcontrol plane更新を実施し、更新後検証まで完了。
-- `BLOCKED`: divergence、重複、未知Status、解釈不能なstale state等により安全な自動収束ができない。
-- `ERROR`: 設定・I/O・実行不能等で同期処理自体を完了できない。
+- Notion Public API tokenを持つbatch / CI / external runtime
 
-## 5.3. Step 2: Workflow分岐
+向けのoptional adapterであり、本番チャットWorkflow 00/90の必須経路ではない。
 
-- `PASS / UPDATED` の場合のみ呼出元Workflowは後続処理へ進める。
-- `BLOCKED / ERROR` の場合はreason / rule IDを保持して停止する。
-- Workflow 90自身でSHA比較、Notion更新、Review JSON走査を再実装しない。
-
-## 5.4. Python内部の責務境界
-
-- `notion_controlplane.py`: Notion state取得・更新・更新後確認。Status enumも検査する。
-- `git_state.py`: artifact commit / blob / commit graph事実取得。
-- `review_state.py`: Review結果JSONを読み、artifactに応じて `review_00_sources.schema.json / review_10_contents.schema.json / review_20_analysis.schema.json` で構造確認したReview事実を取得する。`review_common.schema.json` は共通定義としてのみ利用する。
-- `reconcile.py`: I/Oなしで同期可否・Status収束・mutation planを決定。
-- `sync_controlplane.py`: 上記を組み立て、mutation適用と最終結果返却をオーケストレーションする。
+adapterも内部では同じ `reconcile.py` を使用しなければならない。
 
 # 6. SHA関係の解釈
 
@@ -159,13 +311,26 @@ Artifact 20 -> review_20_analysis.schema.json
 
 - current stateはNotionに保持する。
 - Notion stateはGit / Review事実より優先しない。
-- Status enumはNotion Select、Workflow 90、`reconcile.py` で一致させる。
+- Status enumはNotion、Workflow 90、`reconcile.py` で一致させる。
+- **state transition / fail-stop / mutation planは `reconcile.py` を唯一の正本とする。**
+- connectorはI/O adapterであり、state transition ruleを持たない。
 - 同期はidempotentであること。
 - 不明状態を推測で正常化しないこと。
 - duplicate、malformed Review、divergence、concurrent update等の曖昧状態では自動更新しないこと。
+- mutation直前の再読と更新後verifyを省略しないこと。
 - control planeからEvidence内容やD01〜D21妥当性を推定しないこと。
 
-# 10. 未確定事項
+# 10. correction start event
 
-- `要修正 -> 再作業中` の開始イベントを、Entry_IDだけの公開CLIを維持したままどの内部事実で表現するか。
-- Review Seq採番・Review JSON保存・Verdict集約を担うPython実装ファイルとの境界。
+`要修正 -> 再作業中` の未確定事項は解消済みとする。
+
+発生条件:
+
+1. ユーザーがWorkflow 00 + Entry_IDで本番E2E継続を明示依頼している。
+2. Workflow 00が `CORRECTION_REQUIRED` を確認する。
+3. Workflow 00が実際にWorkflow 10 correction phaseへ入る。
+4. その時点で対象artifactに `correction_started` eventを発行する。
+5. `reconcile.py` がcurrent artifact / control plane / non-Pass Reviewのexact一致を検証する。
+
+この5条件を満たした場合だけ `再作業中` へ遷移する。
+
