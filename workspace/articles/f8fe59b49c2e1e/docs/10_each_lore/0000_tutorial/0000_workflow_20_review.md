@@ -85,14 +85,27 @@ Review_<Entry_ID>_20_<Review_Seq>.json -> schemas/review_20_analysis.schema.json
 
 ## 4.1. Blind Decode
 
-- `10_contents.json` の `summary.narrative + summary.structure` だけを入力として伝承構造を再構成する。
-- `content_units / variants / uncertainties` とEvidenceはBlind Decode中に参照しない。
+- `10_contents.json` の `summary.narrative + summary.structure` だけを入力として、**伝承そのものの具体的展開**を再構成する。
+- Blind Decode中は `summary.coverage_refs` のID列、`content_units / variants / uncertainties`、Evidenceを参照しない。ID列を見てReference Storyを推測してはならない。
+- 再構成はAnalysis用抽象概念に縮約せず、「誰／何に、具体的に何が起き、どう変化し、どう終わるか」を記述する。
+- transformation、identity change、terminal scene、motif echoがsummaryに存在する場合は、具体的意味として再構成する。
 
-## 4.2. Reference Story
+## 4.2. Salient Coverage Audit
 
-- Blind Decode後に `content_units / variants / uncertainties` と必要なEvidenceを参照し、基準となるReference Storyを再構成する。
+- Blind Decode完了後に初めて `summary.coverage_refs` を読む。
+- 各 `coverage_ref` が指すContent unitを1件ずつ確認し、そのsalient meaningがBlind Decodeから復元できたかを監査する。
+- 各refについて `content_ref / salient_meaning / blind_reconstruction / difference` を記録する。
+- `difference` は `NONE / LOSS / CONFLICT` とする。
+- **Analysisを再構成できるかどうかとは独立に判定する。** 分析コードが同じでも、具体的終端、transformation、identity、motif echo、variantを決める出来事がsummaryから失われていれば `LOSS` とする。
+- Evidence上の留保がsummaryで強められた場合（例: 「怪異と同様に動く」→「怪異そのものへ変身した」）は `CONFLICT` とする。
+- `coverage_refs` の全件が監査対象であり、人手で別のアンカー集合を後から選んで代替してはならない。
 
-## 4.3. Structural Probe
+## 4.3. Reference Story
+
+- Coverage Audit後に `content_units / variants / uncertainties` と必要なEvidenceを参照し、基準となるReference Storyを再構成する。
+- Reference Storyは `coverage_refs` のsalient meaningをすべて含み、必要な不確実性・variant境界も保持する。
+
+## 4.4. Structural Probe
 
 少なくとも以下をP01〜P12として全件確認する。
 
@@ -109,13 +122,23 @@ Review_<Entry_ID>_20_<Review_Seq>.json -> schemas/review_20_analysis.schema.json
 - P11 unresolved / unknown
 - P12 initial / later / major variant boundaries
 
-## 4.4. 比較と保存
+## 4.5. 二層判定
+
+Review 10では次を独立判定する。
+
+1. **Narrative Reconstruction** — summaryだけから伝承の具体的展開を再構成できるか。
+2. **Analysis Reconstruction / Invariance** — summaryから後続Analysisに必要な構造を再構成できるか。
+
+- Narrative Reconstructionでsalient unitに `LOSS / CONFLICT` がある場合、Analysis ReconstructionがPASSでもsummary ReviewはPASSにしない。
+- 「重大な異変」「危害」「変容」等の抽象語だけでAnalysis codeを再構成できても、Contentで重要な具体的終端・identity変化・怪異との類似が消えている場合はFindingとする。
+
+## 4.6. 比較と保存
 
 - Blind DecodeとReference Storyを比較する。
-- 差分は `NONE / LOSS / CONFLICT` とする。
-- LOSSのみを自動Failにせず、後続分析可能性への影響で判断する。
-- `Review_*_10_*.json` の必須 `reconstruction` に、`blind_decode / reference_story / probes[P01-P12] / analysis_invariance / verdict` を保存する。
-- `checks.summary_reconstruction / checks.structural_probe` は要約状態、`reconstruction` は監査用詳細証跡とする。
+- `Review_*_10_*.json` には、従来の `blind_decode / reference_story / probes[P01-P12] / analysis_invariance / verdict` に加えて、`coverage_audit` を保存する。
+- `checks.narrative_reconstruction` は具体的伝承再構成、`checks.summary_reconstruction` はsummary全体の再構成性、`checks.structural_probe` はP01〜P12の状態を表す。
+- 新契約の `summary.coverage_refs` を持つ対象では、`coverage_audit` はcoverage refsと完全一致しなければならない。
+- `coverage_audit` に `LOSS / CONFLICT` が1件でもある場合、`reconstruction.verdict` は `FINDING` とし、対応Findingを残す。
 
 # 5. Review 00 / 10: Evidence・Content Review
 
