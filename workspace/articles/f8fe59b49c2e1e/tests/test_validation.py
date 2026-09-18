@@ -137,3 +137,34 @@ def test_validate_entry_default_requires_full_chain(tmp_path, monkeypatch, valid
     result = ve.validate_entry("0001")
     assert result["result"] == "FAIL"
     assert any("file not found" in issue["message"] for issue in result["errors"])
+
+
+def test_taxonomy_gap_allows_inferred_dimension_without_primary(
+    valid_analysis, taxonomy_catalog
+):
+    data = copy.deepcopy(valid_analysis)
+    target = next(item for item in data["dimensions"] if item["dimension_id"] == "D13")
+    target["status"] = "I"
+    target["primary"] = None
+    target["secondary"] = []
+    target["taxonomy_gap"] = {
+        "present": True,
+        "description": "Evidence supports an inferred mechanism, but no current taxonomy code represents it.",
+    }
+
+    issues = taxonomy_validator.validate_taxonomy(data, taxonomy_catalog)
+    assert not issues
+
+
+def test_inferred_dimension_without_primary_requires_taxonomy_gap(
+    valid_analysis, taxonomy_catalog
+):
+    data = copy.deepcopy(valid_analysis)
+    target = next(item for item in data["dimensions"] if item["dimension_id"] == "D13")
+    target["status"] = "I"
+    target["primary"] = None
+    target["secondary"] = []
+    target["taxonomy_gap"] = {"present": False}
+
+    issues = taxonomy_validator.validate_taxonomy(data, taxonomy_catalog)
+    assert any(issue.rule == "V-STATUS-001" for issue in issues)
