@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0006",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_20_analysis.json",
+    "commit_sha": "c020a08ce68d1711eca3cb031d4815ef472e349f",
+    "blob_sha": "de89bead6fd401f41e5be40e4c3fa3072738c43d",
+    "reviewed_at": "2026-09-18T16:52:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001の1995年学校内接近型のみをScopeとし、捨てた人形型・メール派生を除外している。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "段階接近という共有構造に対し、受信・追跡・逐次進行を中心に判定し、後代危害や人形設定を混入していない。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "明示的taxonomy gapは不要。Uを用いる次元はコード不足ではなくEvidence不足として処理される。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "電話受信→現在地告知→距離縮小→背後到達の因果・時間列がContentと整合する。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "D/I判定はScope内CNT/EVDへ追跡でき、後代variantのEvidenceを主要判定に使用していない。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Contentsから独立再構成しても、D11受信、D13追跡、D16逐次エピソードが中心となる点は不変。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "成立年代・最古媒体・危害・回避等はUに抑制し、直接確認できる受信・追跡・順次進行はDとしている。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12は電話受信者、D13は追跡、D15は背後到達後の具体結果が不明なためUであり、未確認危害を捏造していない。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "社会現実層を付与する独立X evidenceは採用せず、Scope内の伝承内部作用L1のみに限定する。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公開映画やWeb可視性を全国分布へ読み替えず、Scopeが学校児童集団に由来するという限定的推論に留める。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "情報保持者が書かれていないことからNO_ONE_KNOWSを付与せずUとしている。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "特定実在校ではなく一般的な学校背景なのでA1とし、作品が実在すること自体を高アンカーへ誤算入していない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "1995年を絶対起源とせず、映画以前の流通・危害・回避をEvidence ceiling以上に断定していない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "全国型の電話怪談／物語・伝説という分類はContentの段階接近型怪談に整合する。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "1995年に具体確認できる学校内電話怪談では、正体不明のメリーさんが複数回の電話で位置を告げながら受け手へ接近し、最後に背後へ到達する。後代の捨てた人形導入やメール型は分析対象外。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002"
+    ],
+    "status": "PASS",
+    "notes": "危害・起源・回避を未確定のまま保持する。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Version Scopeと全21次元を独立監査しPass。"
+}

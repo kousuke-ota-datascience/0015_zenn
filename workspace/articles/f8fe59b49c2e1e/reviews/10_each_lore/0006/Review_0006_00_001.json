@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0006",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_00_sources.json",
+    "commit_sha": "dabb7c74190d70f0c399ca628bfd8d60acf7fcc9",
+    "blob_sha": "a4fdc5a67508b258cae64e2b38ca34e135924339",
+    "reviewed_at": "2026-09-18T16:52:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "1995年映画の公的作品情報、出演者本人の作品回想、1999年NDL書誌、2018年事典書誌、後代の標準型要約を役割別に区別している。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "1995年学校内接近型と後代の捨てた人形型を分離し、映画脚色・創作児童書を口承の絶対起源へ格上げしていない。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜005はいずれも各Sourceの確認範囲内で、現在地を告げる段階接近・1999年タイトル流通・後代標準型の要素を過剰統合していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "NFAJ/NDLは作品・書誌の一次的確認、出演者回想は映画場面の直接関係資料、後代記事は標準化した再話の補助と明示される。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1995年映画を『現在確認できる早い具体形の一つ』と限定し、絶対的起源や最初の口承形とはしていない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "起源年、1995年以前の口承詳細、捨てた人形導入の成立時期を未確定のまま保持する。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。早期具体形と後代標準型の分離、出典階層、起源不確実性を監査しPass。"
+}

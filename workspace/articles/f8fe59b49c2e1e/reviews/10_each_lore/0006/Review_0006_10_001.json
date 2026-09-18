@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0006",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_10_contents.json",
+    "commit_sha": "caf6f4873f9dae61601a46cb2cd7c69ff2057b68",
+    "blob_sha": "e98237d442f36ec99df7a119b7dc74589e31e351",
+    "reviewed_at": "2026-09-18T16:52:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜005はEVDへ追跡可能。1995年映画型に後代の『捨てた人形』導入を遡及していない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryから、反復電話→段階接近→背後到達、1995学校型、後代人形型、メール派生、起源不確実性を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。危害を資料以上に追加せず、終端を『背後にいる』で止めている。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001を1995年の早期具体形、VAR-002を後代標準人形型、VAR-003を通信媒体派生として分離。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "起源・初期口承・捨てた人形導入時期を資料以上に閉じていない。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "メリーさんを名乗る相手が電話のたびに現在地を告げながら受け手へ近づき、最後に背後へ到達する電話怪談。1995年映画では学校内の地点を順に移動する形が確認できる。後代には捨てた西洋人形が戻る導入が標準化し、メール等の派生も生じるが、これらは初期形へ遡及しない。",
+    "reference_story": "EvidenceとContentの照合では、blind decodeは段階接近・終端・variant境界を保持し、起源や危害を追加していない。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "メリーさんを名乗る電話主と電話を受ける人物。",
+        "reference": "primary_actorsと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "電話を受ける人物が接近の直接対象。",
+        "reference": "affected_targetsと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "メリーさんを名乗る相手からの電話受信。",
+        "reference": "entry_triggerとCNT-001に一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "メリーさんを名乗る存在。",
+        "reference": "causal_agentと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "電話で現在地を告げ、通話ごとに距離を詰める。",
+        "reference": "mechanismとCNT-001/002に一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "遠方から段階的に接近して最終的に背後へ到達。",
+        "reference": "state_transitionとCNT-002に一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "複数の電話で位置が順次変化する。",
+        "reference": "temporal_structureと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "1995年Scopeから禁忌・固定規則は確認できない。",
+        "reference": "rules_and_taboos=unknownと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "有効な回避策は確認できない。",
+        "reference": "avoidance_control=unknownと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "最終電話で背後にいると告げられる。",
+        "reference": "terminal_stateとCNT-002に一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "起源、1995年以前、捨てた人形導入時期が未確定。",
+        "reference": "uncertaintiesと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "1995学校型、後代人形型、メール等派生を分離。",
+        "reference": "variant_boundariesとVAR-001〜003に一致。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryだけの再構成と詳細Content参照後で、1995年学校内接近型をVersion Scopeとする判断は不変。"
+    },
+    "verdict": "PASS"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。意味保存、段階接近、終端、後代設定の非遡及を監査しPass。"
+}
