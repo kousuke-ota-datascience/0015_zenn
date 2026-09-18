@@ -64,8 +64,8 @@ jobs:
           incomplete = {seq: arts for seq, arts in by_seq.items() if arts != expected}
           if incomplete:
               raise SystemExit(f"incomplete Review cycles: {incomplete}")
-          if by_seq and max(by_seq) < 2:
-              raise SystemExit(f"E2E re-review cycle missing: {sorted(by_seq)}")
+          if by_seq and max(by_seq) < 3:
+              raise SystemExit(f"E2E legacy-parity re-review cycle missing: {sorted(by_seq)}")
           print({
               "review_cycles": sorted(by_seq),
               "latest": {k: v.review_seq for k, v in snapshot.latest.items()},
