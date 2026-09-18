@@ -1,1 +1,0 @@
-refresh rendered markdown after summary coverage contract
