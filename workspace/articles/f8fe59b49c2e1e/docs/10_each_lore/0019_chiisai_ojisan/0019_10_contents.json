@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0019",
+  "lore_name": "小さいおじさん",
+  "summary": {
+    "narrative": "日常的な場所で、通常の人間よりはるかに小さい成人男性のような存在を一時的に目撃するという現代の目撃型怪異。2009年時点の記事では、風呂場、洗濯機の周辺、ベッド付近、車庫・車の下などさまざまな場所で、服装や行動の異なる『小さいおじさん』が見られたという複数の体験談が集められている。存在は話しかける、運動する、隠れる、逃げるなど多様に振る舞い、共通した危害や単一の物語展開はない。正体も妖精、妖怪、UMAなど複数説のまま確定しない。2012年以降には芸能人の反復的な目撃談や全国の報告を集成した書籍が現れ、2014年には題材を使ったフェイクドキュメンタリーも制作されたが、これら後代の個別反復談・創作展開は2009年前後の目撃談群と分離する。",
+    "structure": {
+      "primary_actors": {
+        "status": "known",
+        "value": [
+          "小さい成人男性様の存在",
+          "目撃者"
+        ]
+      },
+      "affected_targets": {
+        "status": "known",
+        "value": [
+          "目撃する人物"
+        ]
+      },
+      "entry_trigger": {
+        "status": "known",
+        "value": [
+          "日常空間で偶然、小さい男性様の存在を視認する"
+        ]
+      },
+      "causal_agent": {
+        "status": "unknown",
+        "value": null
+      },
+      "mechanism": {
+        "status": "known",
+        "value": [
+          "小型の男性様存在が短時間現れ、目撃者に視認される"
+        ]
+      },
+      "state_transition": {
+        "status": "known",
+        "value": [
+          "日常状態→小さい男性様存在の出現・視認→隠れる・逃げる等により目撃が終わる"
+        ]
+      },
+      "temporal_structure": {
+        "status": "known",
+        "value": [
+          "多くは短い単発の目撃エピソード"
+        ]
+      },
+      "rules_and_taboos": {
+        "status": "not_applicable",
+        "value": null
+      },
+      "avoidance_control": {
+        "status": "not_applicable",
+        "value": null
+      },
+      "terminal_state": {
+        "status": "known",
+        "value": [
+          "存在が隠れる・逃げる、または短時間の目撃のみで終わる"
+        ]
+      },
+      "uncertainties": {
+        "status": "known",
+        "value": [
+          "目撃談の客観的事実性は検証されていない",
+          "正体は妖精・妖怪・UMA等に定まらない",
+          "大きさ・服装・行動に統一規則がない",
+          "最初の目撃・語りの年代は未確定"
+        ]
+      },
+      "variant_boundaries": {
+        "status": "known",
+        "value": [
+          "2009年前後に集められた異質な目撃談群",
+          "特定人物が反復して語る後代の個人目撃シリーズ",
+          "フェイクドキュメンタリー等の創作・メディア展開"
+        ]
+      }
+    },
+    "coverage_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ]
+  },
+  "content_units": [
+    {
+      "content_id": "CNT-001",
+      "type": "claim",
+      "text": "2009年時点で『小さいおっさん／小さいおじさん』と呼ばれる小型の成人男性様存在について複数の目撃談が流通しており、正体は妖精・現代妖怪・UMAなど複数説のまま未確定だった。",
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "content_id": "CNT-002",
+      "type": "event",
+      "text": "目撃場所・行動は多様で、風呂場で目撃者を励ます、洗濯機やベッド周辺に現れる、車庫や車の下へ入る、物陰へ隠れる・逃げるなどの異なるエピソードが並存する。",
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ]
+    },
+    {
+      "content_id": "CNT-003",
+      "type": "other",
+      "text": "2012年以降、釈由美子はロボット掃除機に追われる小さいおじさんや、酒を飲む複数の小さいおじさんなど、個人の反復的な目撃談を公開している。",
+      "evidence_refs": [
+        "EVD-004",
+        "EVD-006"
+      ],
+      "notes": "個人の反復談であり、全伝承に共通する必須設定ではない。"
+    },
+    {
+      "content_id": "CNT-004",
+      "type": "other",
+      "text": "2012年には全国の目撃報告や芸能人証言を集成する単行本が刊行され、正体を妖怪・妖精等に確定しないまま伝承カテゴリーとして整理された。",
+      "evidence_refs": [
+        "EVD-005"
+      ]
+    },
+    {
+      "content_id": "CNT-005",
+      "type": "other",
+      "text": "2014年には『小さいおじさん』を題材とするフェイクドキュメンタリー作品が制作され、目撃談から派生したメディア創作が生じている。",
+      "evidence_refs": [
+        "EVD-007"
+      ]
+    },
+    {
+      "content_id": "CNT-006",
+      "type": "claim",
+      "text": "後代の解説では、この都市伝説が2009年前後に広く話題化したと整理される。",
+      "evidence_refs": [
+        "EVD-008"
+      ],
+      "notes": "最初の目撃年・発祥年とは扱わない。"
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "VAR-001",
+      "kind": "initial",
+      "description": "現在確認できる同時代の早い集成である2009年記事に見られる複数目撃型。日常空間で小型の男性様存在を短時間目撃し、外見・場所・行動は統一されない。",
+      "attestation": "2009年の都市伝説収集記事で複数の目撃談を確認。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-006"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003",
+        "EVD-008"
+      ],
+      "notes": "絶対的な起源や最初の目撃を意味しない。"
+    },
+    {
+      "variant_id": "VAR-002",
+      "kind": "later",
+      "description": "釈由美子など特定人物が複数回にわたり異なる小さいおじさん目撃談を語る個人反復型。",
+      "content_refs": [
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-004",
+        "EVD-006"
+      ]
+    },
+    {
+      "variant_id": "VAR-003",
+      "kind": "later",
+      "description": "多数の目撃談を全国的カテゴリーとして集成する出版物や、題材を利用したフェイクドキュメンタリー等のメディア展開。",
+      "content_refs": [
+        "CNT-004",
+        "CNT-005"
+      ],
+      "evidence_refs": [
+        "EVD-005",
+        "EVD-007"
+      ]
+    }
+  ],
+  "uncertainties": [
+    {
+      "text": "2009年は現在確認した早い同時代集成の一つであり、伝承の絶対的起源・最初の目撃年代ではない。",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-008"
+      ],
+      "content_refs": [
+        "CNT-001",
+        "CNT-006"
+      ]
+    },
+    {
+      "text": "目撃談は本人・媒体による体験主張であり、小さい存在の客観的実在を立証するEvidenceではない。",
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003",
+        "EVD-004",
+        "EVD-006"
+      ],
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "text": "サイズ・服装・行動・正体には統一規則がなく、妖精・妖怪・UMA等の存在論を一つに固定できない。",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003",
+        "EVD-005"
+      ],
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-004"
+      ]
+    }
+  ]
+}
