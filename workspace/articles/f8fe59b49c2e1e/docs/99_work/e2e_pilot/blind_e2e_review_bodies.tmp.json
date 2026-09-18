@@ -1,0 +1,1220 @@
+{
+  "0001": {
+    "10": {
+      "checks": {
+        "evidence_content_support": {
+          "status": "PASS",
+          "notes": "全Content unitが00 Evidenceへ追跡でき、Evidenceを超える存在論・因果を生成していない。"
+        },
+        "narrative_reconstruction": {
+          "status": "PASS",
+          "notes": "summaryだけからcoverage対象の具体的伝承展開を再構成できる。"
+        },
+        "summary_reconstruction": {
+          "status": "PASS",
+          "notes": "伝承内容が中心で、流通史・社会反応をsummaryの主内容へ混入していない。"
+        },
+        "structural_probe": {
+          "status": "PASS",
+          "notes": "P01〜P12でLOSS/CONFLICTなし。"
+        },
+        "variant_boundary": {
+          "status": "PASS",
+          "notes": "最初期最小核と後代代表形・増補群を明示的に分離。"
+        },
+        "uncertainty_preservation": {
+          "status": "PASS",
+          "notes": "後代の有名設定を最初期核へ遡及せず、最終帰結も固定していない。"
+        }
+      },
+      "reconstruction": {
+        "blind_decode": "口が耳まで裂けた女性をめぐる噂が核にあり、後代代表形ではマスクの女性が容姿を問い、裂けた口を見せた後に追跡・危害へ進む。回答分岐、俊足・武器・服装、ポマードやべっこう飴、整形由来等は地域・後代異伝で、最初期核へ一括遡及しない。",
+        "reference_story": "初期核は裂けた口の女性まで。後代に質問→口の提示→追跡という代表形と、回答・属性・回避・由来の異伝が増補される。危害の最終帰結は一つに固定しない。",
+        "coverage_audit": [
+          {
+            "content_ref": "CNT-001",
+            "salient_meaning": "口裂け女は口が耳まで裂けた女性として語られる。",
+            "blind_reconstruction": "裂けた口を持つ女性状存在が核。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-002",
+            "salient_meaning": "代表的後代型でマスクの女性が容姿を尋ねる。",
+            "blind_reconstruction": "後代代表形にはマスク越しの質問がある。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-003",
+            "salient_meaning": "肯定回答後にマスクを外し裂けた口を示す型。",
+            "blind_reconstruction": "回答後に裂けた口を見せる。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-004",
+            "salient_meaning": "口を示した後に追跡・危害へ進む型。",
+            "blind_reconstruction": "提示後に追跡・危害へ進む。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-005",
+            "salient_meaning": "回答内容で帰結が変わる異伝。",
+            "blind_reconstruction": "回答分岐は一様でない。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-006",
+            "salient_meaning": "俊足・鎌・赤い服等の属性異伝。",
+            "blind_reconstruction": "能力・武器・服装の地域差がある。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-007",
+            "salient_meaning": "ポマードによる回避異伝。",
+            "blind_reconstruction": "ポマード回避が後代異伝にある。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-008",
+            "salient_meaning": "べっこう飴による回避異伝。",
+            "blind_reconstruction": "べっこう飴回避が後代異伝にある。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-009",
+            "salient_meaning": "整形失敗等の由来異伝。",
+            "blind_reconstruction": "裂けた口の由来説明も後から付く。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-010",
+            "salient_meaning": "反復で細部が増補され地域差を形成。",
+            "blind_reconstruction": "一つの完全版でなく増補・地域差として理解する。",
+            "difference": "NONE"
+          }
+        ],
+        "probes": [
+          {
+            "probe_id": "P01",
+            "blind": "口が耳まで裂けた女性状存在と遭遇者。",
+            "reference": "口が耳まで裂けた女性状存在と遭遇者。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P02",
+            "blind": "後代代表形では通行者・子どもだが、最初期核の作用対象は固定しない。",
+            "reference": "後代代表形では通行者・子どもだが、最初期核の作用対象は固定しない。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P03",
+            "blind": "後代代表形では道等で遭遇して容姿を問われる。",
+            "reference": "後代代表形では道等で遭遇して容姿を問われる。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P04",
+            "blind": "口裂け女と呼ばれる女性状存在。存在論は完全固定しない。",
+            "reference": "口裂け女と呼ばれる女性状存在。存在論は完全固定しない。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P05",
+            "blind": "質問、口の提示、追跡・危害。異伝で武器・俊足等が付く。",
+            "reference": "質問、口の提示、追跡・危害。異伝で武器・俊足等が付く。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P06",
+            "blind": "遭遇→質問→口の提示→追跡・危害／回避。",
+            "reference": "遭遇→質問→口の提示→追跡・危害／回避。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P07",
+            "blind": "最初期核から後代に設定が増補される。",
+            "reference": "最初期核から後代に設定が増補される。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P08",
+            "blind": "回答分岐や回避規則は異伝として存在する。",
+            "reference": "回答分岐や回避規則は異伝として存在する。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P09",
+            "blind": "ポマード・べっこう飴等の回避異伝。",
+            "reference": "ポマード・べっこう飴等の回避異伝。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P10",
+            "blind": "危害の最終帰結は異伝間で一定しない。",
+            "reference": "危害の最終帰結は異伝間で一定しない。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P11",
+            "blind": "代表形・異伝の初出、共存、最初期核への遡及可否が未確定。",
+            "reference": "代表形・異伝の初出、共存、最初期核への遡及可否が未確定。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P12",
+            "blind": "初期最小核、後代代表会話型、地域／後代増補群を分離。",
+            "reference": "初期最小核、後代代表会話型、地域／後代増補群を分離。",
+            "difference": "NONE"
+          }
+        ],
+        "analysis_invariance": {
+          "status": "PASS",
+          "notes": "summaryの具体的意味と後続Analysisに必要な構造が両方保持されている。"
+        },
+        "verdict": "PASS"
+      },
+      "findings": [],
+      "review_notes": "0001 blind E2E Review 10。Blind Decode後にcoverage_refsを開示し全salient unitを監査。"
+    },
+    "20": {
+      "checks": {
+        "version_scope": {
+          "status": "PASS",
+          "notes": "最古のまとまった詳細形を過剰推定せず、1978年末〜1979年初めに安全に確認できる最小核VAR-001へ限定。"
+        },
+        "dimension_semantics": {
+          "status": "PASS",
+          "notes": "D12/D14等は初期核から確定できないためUとし、後代代表形を遡及していない。"
+        },
+        "taxonomy_gap": {
+          "status": "PASS",
+          "notes": "現taxonomy catalogに対してcode ID / Parentを検証し、未表現の安定構造を無理に既存codeへ押し込んでいない。"
+        },
+        "causality": {
+          "status": "PASS",
+          "notes": "初期Scopeでは因果列の細部を固定できないこと自体をUとして保持。"
+        },
+        "semantic_traceability": {
+          "status": "PASS",
+          "notes": "Scoped Content/Evidenceから各Dimensionのrationale/manifestationへ追跡可能。来歴次元は必要に応じて00 Evidenceへ直接traceし、10 Contentへ流通史を混入させていない。"
+        },
+        "analysis_invariance": {
+          "status": "PASS",
+          "notes": "Blind DecodeとScoped Analysisの意味構造に矛盾なし。"
+        },
+        "status_reasoning": {
+          "status": "PASS",
+          "notes": "D/I/UをEvidence強度に応じて使い分け、不明点を推測で埋めていない。"
+        },
+        "d12_d13_d15_causal_chain": {
+          "status": "PASS",
+          "notes": "D12/D13/D15はいずれも初期Scopeで作用対象・作用・終端を確定できないためU。"
+        },
+        "d18_scope_independent_x_evidence": {
+          "status": "PASS",
+          "notes": "作用機構が初期Scopeで未確定のためL1/L2/L3を推測せずU。"
+        },
+        "d19_publicability_vs_national_distribution": {
+          "status": "PASS",
+          "notes": "子ども・同世代間の流通というEvidenceに基づくIで、全国流行を初期Scopeへ混入しない。"
+        },
+        "d20_missing_info_vs_no_one_knows": {
+          "status": "PASS",
+          "notes": "特権情報保持者は確認できずU。"
+        },
+        "d21_reality_anchor": {
+          "status": "PASS",
+          "notes": "一般的生活圏を背景とするA1で、特定発祥地を因果アンカーにしない。"
+        },
+        "evidence_confidence_ceiling": {
+          "status": "PASS",
+          "notes": "1978年末層は後代整理なのでIを上限とし、1979年新聞所在と分離。"
+        },
+        "entry_classification": {
+          "status": "PASS",
+          "notes": "怪人・怪異遭遇／口承都市伝説は現Scopeの性質と矛盾しない。"
+        }
+      },
+      "sensemaking_reconstruction": {
+        "model": "最古層では『口が耳まで裂けた女性』という未知存在をめぐる子ども・同世代の噂が確認できるが、遭遇条件・作用対象・攻撃・帰結・回避規則までは安全に固定できない。後代の有名な会話・追跡・回避設定はScope外へ分離する。",
+        "content_refs": [
+          "CNT-001"
+        ],
+        "dimension_refs": [
+          "D01",
+          "D02",
+          "D03",
+          "D05",
+          "D06",
+          "D07",
+          "D08",
+          "D09",
+          "D10",
+          "D11",
+          "D12",
+          "D13",
+          "D14",
+          "D15",
+          "D16",
+          "D17",
+          "D18",
+          "D19",
+          "D20",
+          "D21"
+        ],
+        "evidence_refs": [
+          "EVD-001",
+          "EVD-002"
+        ],
+        "status": "PASS",
+        "notes": "現行Workflow/coding rulesのみで再構成したblind sense-making model。"
+      },
+      "findings": [],
+      "review_notes": "0001 blind E2E Review 20。旧code/Legacy裁定を期待値として使用していない。"
+    },
+    "00": {
+      "checks": {
+        "source_assessment": {
+          "status": "PASS",
+          "notes": "NDLレファレンス、現代民俗研究者解説、日文研採録DBを役割分離して使用している。"
+        },
+        "evidence_integrity": {
+          "status": "PASS",
+          "notes": "新聞所在、初期噂、代表形、地域異伝を同一強度に扱わず、初出・共存不明を保持している。"
+        },
+        "source_evidence_support": {
+          "status": "PASS",
+          "notes": "EVD-001〜008は各Sourceの確認範囲を超えない。"
+        },
+        "primary_source_relation": {
+          "status": "PASS",
+          "notes": "同時代新聞そのものの本文未実見箇所と、後代研究・採録を区別している。"
+        },
+        "earliest_attestation": {
+          "status": "PASS",
+          "notes": "1978年末頃は後代整理、1979-01-26は新聞掲載所在として別に保持している。"
+        },
+        "uncertainty_preservation": {
+          "status": "PASS",
+          "notes": "代表会話型・武器・回避法・由来説明を最初期核へ遡及していない。"
+        }
+      },
+      "findings": [],
+      "review_notes": "0001 blind E2E。既存canonical/Legacy/過去Review本文を参照せず、新規調査Sources/Evidenceのみで監査。"
+    }
+  },
+  "0178": {
+    "10": {
+      "checks": {
+        "evidence_content_support": {
+          "status": "PASS",
+          "notes": "全Content unitが00 Evidenceへ追跡でき、Evidenceを超える存在論・因果を生成していない。"
+        },
+        "narrative_reconstruction": {
+          "status": "PASS",
+          "notes": "summaryだけからcoverage対象の具体的伝承展開を再構成できる。"
+        },
+        "summary_reconstruction": {
+          "status": "PASS",
+          "notes": "2000年版の具体的進行・4年後の継続・終端警告まで再構成可能。"
+        },
+        "structural_probe": {
+          "status": "PASS",
+          "notes": "P01〜P12でLOSS/CONFLICTなし。"
+        },
+        "variant_boundary": {
+          "status": "PASS",
+          "notes": "2003年『猿夢＋』を初期版の規則へ混入していない。"
+        },
+        "uncertainty_preservation": {
+          "status": "PASS",
+          "notes": "三回目死亡、読者感染、夢の原因を断定しない。"
+        }
+      },
+      "reconstruction": {
+        "blind_decode": "夢だと自覚した投稿者が薄暗い無人駅でお猿さん電車に乗り、放送に従って乗客が順番に残酷な被害を受ける。自分の順番直前に覚醒し、4年後に前回の続きから夢が再開する。再び覚醒するが、次回は逃がさない旨の警告が残る。2003年の読後派生は別variant。",
+        "reference_story": "2000年版は自覚夢・無人駅・猿電車・順次危害・覚醒・4年後の継続夢・再覚醒・終端警告から成る。読者感染と三回目死亡は確定しない。",
+        "coverage_audit": [
+          {
+            "content_ref": "CNT-001",
+            "salient_meaning": "自覚夢の薄暗い無人駅。",
+            "blind_reconstruction": "夢だと分かった状態で無人駅にいる。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-002",
+            "salient_meaning": "お猿さん電車へ乗車。",
+            "blind_reconstruction": "遊園地風の猿電車に乗る。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-003",
+            "salient_meaning": "放送に従い乗客が順番に被害。",
+            "blind_reconstruction": "車内放送どおり順次危害が起こる。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-004",
+            "salient_meaning": "投稿者自身の処理順が迫る。",
+            "blind_reconstruction": "自分の危害直前まで順番が来る。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-005",
+            "salient_meaning": "覚醒を念じて離脱。",
+            "blind_reconstruction": "夢だと認識して目覚める。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-006",
+            "salient_meaning": "4年後に同じ場面の続きから再開。",
+            "blind_reconstruction": "長い間隔後に夢が続きから再開。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-007",
+            "salient_meaning": "再び覚醒して離脱。",
+            "blind_reconstruction": "二度目も目覚めて逃げる。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-008",
+            "salient_meaning": "次回は逃がさない警告、第三回の結果は未描写。",
+            "blind_reconstruction": "終端警告はあるが確定死亡ルールではない。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-009",
+            "salient_meaning": "2003年に別投稿者の読後派生。",
+            "blind_reconstruction": "読者感染的派生は2000年初期版と別。",
+            "difference": "NONE"
+          }
+        ],
+        "probes": [
+          {
+            "probe_id": "P01",
+            "blind": "夢を見ている投稿者、車内の乗客、主体不明の放送／処理側。",
+            "reference": "夢を見ている投稿者、車内の乗客、主体不明の放送／処理側。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P02",
+            "blind": "乗客と投稿者自身。",
+            "reference": "乗客と投稿者自身。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P03",
+            "blind": "夢内で無人駅から猿電車へ乗る。",
+            "reference": "夢内で無人駅から猿電車へ乗る。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P04",
+            "blind": "危害を進める主体や夢の原因は不明。",
+            "reference": "危害を進める主体や夢の原因は不明。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P05",
+            "blind": "放送された順番で乗客へ危害が進む。",
+            "reference": "放送された順番で乗客へ危害が進む。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P06",
+            "blind": "無人駅→乗車→順次危害→自分の順番→覚醒→4年後再開→再覚醒。",
+            "reference": "無人駅→乗車→順次危害→自分の順番→覚醒→4年後再開→再覚醒。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P07",
+            "blind": "4年の間隔を置いて前回の続きから反復する。",
+            "reference": "4年の間隔を置いて前回の続きから反復する。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P08",
+            "blind": "危害は順番に進むが三回目死亡は確定規則ではない。",
+            "reference": "危害は順番に進むが三回目死亡は確定規則ではない。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P09",
+            "blind": "夢だと自覚して強く覚醒を念じる。",
+            "reference": "夢だと自覚して強く覚醒を念じる。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P10",
+            "blind": "二度目も離脱するが次回は逃がさない警告が残る。",
+            "reference": "二度目も離脱するが次回は逃がさない警告が残る。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P11",
+            "blind": "原因主体、再開理由、三回目の帰結は不明。",
+            "reference": "原因主体、再開理由、三回目の帰結は不明。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P12",
+            "blind": "2000年初期版と2003年読後派生を分離。",
+            "reference": "2000年初期版と2003年読後派生を分離。",
+            "difference": "NONE"
+          }
+        ],
+        "analysis_invariance": {
+          "status": "PASS",
+          "notes": "summaryの具体的意味と後続Analysisに必要な構造が両方保持されている。"
+        },
+        "verdict": "PASS"
+      },
+      "findings": [],
+      "review_notes": "0178 blind E2E Review 10。Blind Decode後にcoverage_refsを開示し全salient unitを監査。"
+    },
+    "20": {
+      "checks": {
+        "version_scope": {
+          "status": "PASS",
+          "notes": "2000年投稿VAR-001のみをScopeとし、2003年読後派生を除外。"
+        },
+        "dimension_semantics": {
+          "status": "PASS",
+          "notes": "夢現象・順次危害・反復・覚醒というScoped構造に対応したcodeで、後代ルールを用いていない。"
+        },
+        "taxonomy_gap": {
+          "status": "PASS",
+          "notes": "現taxonomy catalogに対してcode ID / Parentを検証し、未表現の安定構造を無理に既存codeへ押し込んでいない。"
+        },
+        "causality": {
+          "status": "PASS",
+          "notes": "睡眠夢→順次危害→自分の標的化→覚醒離脱→4年後再発の因果・時間構造が一貫。"
+        },
+        "semantic_traceability": {
+          "status": "PASS",
+          "notes": "Scoped Content/Evidenceから各Dimensionのrationale/manifestationへ追跡可能。来歴次元は必要に応じて00 Evidenceへ直接traceし、10 Contentへ流通史を混入させていない。"
+        },
+        "analysis_invariance": {
+          "status": "PASS",
+          "notes": "Blind DecodeとScoped Analysisの意味構造に矛盾なし。"
+        },
+        "status_reasoning": {
+          "status": "PASS",
+          "notes": "D/I/UをEvidence強度に応じて使い分け、不明点を推測で埋めていない。"
+        },
+        "d12_d13_d15_causal_chain": {
+          "status": "PASS",
+          "notes": "対象=投稿者、作用=夢内の物理危害／標的化、帰結=恐怖と将来脅威で整合。"
+        },
+        "d18_scope_independent_x_evidence": {
+          "status": "PASS",
+          "notes": "2000年Scopeは物語内部L1のみ。2003年読後派生をL2へ逆輸入しない。"
+        },
+        "d19_publicability_vs_national_distribution": {
+          "status": "PASS",
+          "notes": "公開掲示板という確認媒体に基づくOPEN_FORUM_WEB。"
+        },
+        "d20_missing_info_vs_no_one_knows": {
+          "status": "PASS",
+          "notes": "体験の追加情報は投稿者自身が保持するというScope内事実に限定。"
+        },
+        "d21_reality_anchor": {
+          "status": "PASS",
+          "notes": "特定実在地点ではなく一般的駅・列車・遊園地記憶なのでA1。"
+        },
+        "evidence_confidence_ceiling": {
+          "status": "PASS",
+          "notes": "原スレ未取得の来歴はI、保存転載で直接読める内容次元はD/Iを使い分ける。"
+        },
+        "entry_classification": {
+          "status": "PASS",
+          "notes": "夢・睡眠怪談／一人称体験怪談はScope内容に整合。"
+        }
+      },
+      "sensemaking_reconstruction": {
+        "model": "一人称で語られる反復悪夢の中で、投稿者が順次危害の対象となるが、自覚夢ゆえの覚醒で二度離脱する。ただし夢は4年後に続きから再開し、次回への警告が残る。",
+        "content_refs": [
+          "CNT-001",
+          "CNT-003",
+          "CNT-004",
+          "CNT-005",
+          "CNT-006",
+          "CNT-008"
+        ],
+        "dimension_refs": [
+          "D07",
+          "D08",
+          "D10",
+          "D11",
+          "D12",
+          "D13",
+          "D15",
+          "D16",
+          "D17",
+          "D18",
+          "D20"
+        ],
+        "evidence_refs": [
+          "EVD-001",
+          "EVD-003",
+          "EVD-004",
+          "EVD-005",
+          "EVD-006"
+        ],
+        "status": "PASS",
+        "notes": "現行Workflow/coding rulesのみで再構成したblind sense-making model。"
+      },
+      "findings": [],
+      "review_notes": "0178 blind E2E Review 20。旧code/Legacy裁定を期待値として使用していない。"
+    },
+    "00": {
+      "checks": {
+        "source_assessment": {
+          "status": "PASS",
+          "notes": "2000年投稿の保存転載、再録付き後代記事、2003年派生保存転載を役割分離。"
+        },
+        "evidence_integrity": {
+          "status": "PASS",
+          "notes": "2000年版と2003年『猿夢＋』を別artifactとして保持し、読者感染を初期版へ逆輸入していない。"
+        },
+        "source_evidence_support": {
+          "status": "PASS",
+          "notes": "無人駅、猿電車、順次危害、覚醒、4年後再開、終端警告は保存転載へ追跡できる。"
+        },
+        "primary_source_relation": {
+          "status": "PASS",
+          "notes": "原スレ未取得を明示し、mirror/reprintとして扱っている。"
+        },
+        "earliest_attestation": {
+          "status": "PASS",
+          "notes": "2000-08-02レス9/12/13の保存時刻を最古確認層として保持。"
+        },
+        "uncertainty_preservation": {
+          "status": "PASS",
+          "notes": "三回目死亡・読者感染を初期版の確定規則にしていない。"
+        }
+      },
+      "findings": [],
+      "review_notes": "0178 blind E2E。既存canonical/Legacy/過去Review本文を参照せず、新規調査Sources/Evidenceのみで監査。"
+    }
+  },
+  "0179": {
+    "10": {
+      "checks": {
+        "evidence_content_support": {
+          "status": "PASS",
+          "notes": "全Content unitが00 Evidenceへ追跡でき、Evidenceを超える存在論・因果を生成していない。"
+        },
+        "narrative_reconstruction": {
+          "status": "PASS",
+          "notes": "summaryだけからcoverage対象の具体的伝承展開を再構成できる。"
+        },
+        "summary_reconstruction": {
+          "status": "PASS",
+          "notes": "原型と2003年型の具体的結末までsummaryから復元できる。"
+        },
+        "structural_probe": {
+          "status": "PASS",
+          "notes": "P01〜P12でLOSS/CONFLICTなし。"
+        },
+        "variant_boundary": {
+          "status": "PASS",
+          "notes": "2003年投稿者自身の混成明示を境界根拠に、原型へ増補要素を逆輸入しない。"
+        },
+        "uncertainty_preservation": {
+          "status": "PASS",
+          "notes": "因果非明示、物理変身非断定、語り手の後続帰結不明を保持。"
+        }
+      },
+      "reconstruction": {
+        "blind_decode": "原型では田舎の家から白い人のような存在が不自然にくねくね動くのを兄弟が見て、兄だけが正体を理解したようになるが『分からないほうがいい』と説明を拒む。後に兄は重大な認知・コミュニケーション上の障害状態にあると伝聞されるが因果は明言されない。2003年型では秋田の田園、双眼鏡、祖父の視認禁忌が加わり、兄は白い存在と同じようにくねくね動いて元の兄ではなくなったかのように描かれる。最後は語り手自身が禁じられた対象を間近に見るが、その後は不明。",
+        "reference_story": "2000/2001原型は正体理解と説明拒否・後の兄の状態を核とし、2003年型は投稿者が先行話との混成を明示して、秋田・双眼鏡・祖父・兄のmotif echo／identity喪失・語り手の最終視認・名称を追加する。",
+        "coverage_audit": [
+          {
+            "content_ref": "CNT-001",
+            "salient_meaning": "原型で白い人物状存在が不自然にくねくね動く。",
+            "blind_reconstruction": "白い人のようなものが人間には不可能な動きをする。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-002",
+            "salient_meaning": "兄が正体を理解したようになるが説明を拒む。",
+            "blind_reconstruction": "兄だけが『分かった』が『分からない方がいい』と隠す。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-003",
+            "salient_meaning": "後日、兄の重大な認知・コミュニケーション障害状態が伝聞されるが因果は非明示。",
+            "blind_reconstruction": "兄は後に重大な障害状態と伝えられるが原因は断定されない。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-004",
+            "salient_meaning": "2003年型は秋田の田園で白い物体が動く。",
+            "blind_reconstruction": "後代型では秋田の田園に白い物体が現れる。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-005",
+            "salient_meaning": "兄が双眼鏡で詳しく見て急変し歪んだ警句を発する。",
+            "blind_reconstruction": "双眼鏡で見た兄が急変する。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-006",
+            "salient_meaning": "祖父が白い物体を詳しく見てはならないと警告。",
+            "blind_reconstruction": "祖父による視認禁忌がある。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-007",
+            "salient_meaning": "兄が白い物体と同じようにくねくね動く。",
+            "blind_reconstruction": "兄自身が怪異の動きを反復する。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-008",
+            "salient_meaning": "以前の兄ではなくなったかのように描かれ、当地に残される。",
+            "blind_reconstruction": "identity喪失として終端化される。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-009",
+            "salient_meaning": "最後に語り手自身が禁じられた白い物体を間近に見る。",
+            "blind_reconstruction": "終端で語り手も視認禁忌を破る。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-010",
+            "salient_meaning": "名称・双眼鏡・祖父・motif echo等は2003年型でまとまる。",
+            "blind_reconstruction": "現在有名な要素を原型へ遡及しない。",
+            "difference": "NONE"
+          }
+        ],
+        "probes": [
+          {
+            "probe_id": "P01",
+            "blind": "白い人／物体、A／語り手、兄。2003年型に祖父。",
+            "reference": "白い人／物体、A／語り手、兄。2003年型に祖父。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P02",
+            "blind": "主に詳しく見て理解した兄。2003年終盤では語り手も危険条件へ入る。",
+            "reference": "主に詳しく見て理解した兄。2003年終盤では語り手も危険条件へ入る。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P03",
+            "blind": "白い存在を視認し、正体を理解すること。",
+            "reference": "白い存在を視認し、正体を理解すること。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P04",
+            "blind": "白い存在の正体・存在論は不明。",
+            "reference": "白い存在の正体・存在論は不明。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P05",
+            "blind": "理解後に兄の重大異変。2003年型では怪異と同様にくねくね動く。",
+            "reference": "理解後に兄の重大異変。2003年型では怪異と同様にくねくね動く。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P06",
+            "blind": "発見→視認→理解→兄の異変。2003年型では警告・identity終端・語り手最終視認まで進む。",
+            "reference": "発見→視認→理解→兄の異変。2003年型では警告・identity終端・語り手最終視認まで進む。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P07",
+            "blind": "各variantは一回の遭遇内で段階進行。",
+            "reference": "各variantは一回の遭遇内で段階進行。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P08",
+            "blind": "正体は分からない方がよい。2003年型では見てはならない。",
+            "reference": "正体は分からない方がよい。2003年型では見てはならない。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P09",
+            "blind": "2003年型では詳しく見ないことが回避。原型に事前回避手順はない。",
+            "reference": "2003年型では詳しく見ないことが回避。原型に事前回避手順はない。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P10",
+            "blind": "原型では兄の重大状態。2003年型では兄のmotif echo／identity喪失と語り手の最終視認。",
+            "reference": "原型では兄の重大状態。2003年型では兄のmotif echo／identity喪失と語り手の最終視認。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P11",
+            "blind": "正体、原型の因果、物理変身、語り手のその後は不明。",
+            "reference": "正体、原型の因果、物理変身、語り手のその後は不明。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P12",
+            "blind": "2000/2001原型と2003年混成・増補型を分離。",
+            "reference": "2000/2001原型と2003年混成・増補型を分離。",
+            "difference": "NONE"
+          }
+        ],
+        "analysis_invariance": {
+          "status": "PASS",
+          "notes": "summaryの具体的意味と後続Analysisに必要な構造が両方保持されている。"
+        },
+        "verdict": "PASS"
+      },
+      "findings": [],
+      "review_notes": "0179 blind E2E Review 10。Blind Decode後にcoverage_refsを開示し全salient unitを監査。"
+    },
+    "20": {
+      "checks": {
+        "version_scope": {
+          "status": "PASS",
+          "notes": "既定規則に従い2000/2001原型VAR-001をScopeとし、2003年で追加された祖父・双眼鏡・motif echo・名称を除外。"
+        },
+        "dimension_semantics": {
+          "status": "PASS",
+          "notes": "原型のEvidence強度に合わせ、認知危害・作用対象等はI、存在論はU、事前回避はUとしている。"
+        },
+        "taxonomy_gap": {
+          "status": "PASS",
+          "notes": "現taxonomy catalogに対してcode ID / Parentを検証し、未表現の安定構造を無理に既存codeへ押し込んでいない。"
+        },
+        "causality": {
+          "status": "PASS",
+          "notes": "視認→理解→後の兄の状態は物語上並置されるが明示因果ではないためIで保持。"
+        },
+        "semantic_traceability": {
+          "status": "PASS",
+          "notes": "Scoped Content/Evidenceから各Dimensionのrationale/manifestationへ追跡可能。来歴次元は必要に応じて00 Evidenceへ直接traceし、10 Contentへ流通史を混入させていない。"
+        },
+        "analysis_invariance": {
+          "status": "PASS",
+          "notes": "Blind DecodeとScoped Analysisの意味構造に矛盾なし。"
+        },
+        "status_reasoning": {
+          "status": "PASS",
+          "notes": "D/I/UをEvidence強度に応じて使い分け、不明点を推測で埋めていない。"
+        },
+        "d12_d13_d15_causal_chain": {
+          "status": "PASS",
+          "notes": "対象=兄(I)、作用=認知誘発危害(I)、帰結=認知・コミュニケーション障害(I)でEvidence ceilingを揃える。"
+        },
+        "d18_scope_independent_x_evidence": {
+          "status": "PASS",
+          "notes": "原型の物語内部L1のみをI。読者感染や2003年の追加作用を混入しない。"
+        },
+        "d19_publicability_vs_national_distribution": {
+          "status": "PASS",
+          "notes": "2001年公開掲示板転載が確認できるためOPEN_FORUM_WEB I。"
+        },
+        "d20_missing_info_vs_no_one_knows": {
+          "status": "PASS",
+          "notes": "正体を理解したように見え説明を拒む兄をEXPERIENCER Iとし、『誰も知らない』へ落とさない。"
+        },
+        "d21_reality_anchor": {
+          "status": "PASS",
+          "notes": "特定地点を示さない一般的田舎の家なのでA1。"
+        },
+        "evidence_confidence_ceiling": {
+          "status": "PASS",
+          "notes": "2000元ページ未取得・2001文面は保存転載のため来歴と因果推論はI上限。"
+        },
+        "entry_classification": {
+          "status": "PASS",
+          "notes": "認知危害怪異／伝聞体験怪談は原型Scopeの構造と整合。"
+        }
+      },
+      "sensemaking_reconstruction": {
+        "model": "原型では正体不明の白い存在を視認し、その正体を理解したように見える兄が説明を拒み、後に重大な認知・コミュニケーション障害状態にあると伝聞される。物語は理解と後の状態を並置するが因果を明言しないため、認知危害はIとして扱う。",
+        "content_refs": [
+          "CNT-001",
+          "CNT-002",
+          "CNT-003"
+        ],
+        "dimension_refs": [
+          "D05",
+          "D06",
+          "D07",
+          "D08",
+          "D09",
+          "D10",
+          "D11",
+          "D12",
+          "D13",
+          "D15",
+          "D17",
+          "D18",
+          "D20"
+        ],
+        "evidence_refs": [
+          "EVD-001",
+          "EVD-002",
+          "EVD-003",
+          "EVD-004"
+        ],
+        "status": "PASS",
+        "notes": "現行Workflow/coding rulesのみで再構成したblind sense-making model。"
+      },
+      "findings": [],
+      "review_notes": "0179 blind E2E Review 20。旧code/Legacy裁定を期待値として使用していない。"
+    },
+    "00": {
+      "checks": {
+        "source_assessment": {
+          "status": "PASS",
+          "notes": "専門家成立史、2001/2003投稿文の長文保存転載、クロスチェック資料を区別。"
+        },
+        "evidence_integrity": {
+          "status": "PASS",
+          "notes": "2001原型と2003混成型を分離し、投稿者自身の『混ぜて書いた』前置きも保持。"
+        },
+        "source_evidence_support": {
+          "status": "PASS",
+          "notes": "白い存在、理解拒否、後の兄の状態、2003年の双眼鏡・祖父・motif echo・終端視認をSourceへ追跡可能。"
+        },
+        "primary_source_relation": {
+          "status": "PASS",
+          "notes": "元スレ／2000元ページ未取得を明示し、後代転載を一次資料扱いしていない。"
+        },
+        "earliest_attestation": {
+          "status": "PASS",
+          "notes": "2000年元サイト掲載は専門家整理、2001年2ch転載は保存文面として区別。"
+        },
+        "uncertainty_preservation": {
+          "status": "PASS",
+          "notes": "原型の因果非明示、2003年の物理変身非断定、語り手終端後の帰結不明を保持。"
+        }
+      },
+      "findings": [],
+      "review_notes": "0179 blind E2E。既存canonical/Legacy/過去Review本文を参照せず、新規調査Sources/Evidenceのみで監査。"
+    }
+  },
+  "0180": {
+    "10": {
+      "checks": {
+        "evidence_content_support": {
+          "status": "PASS",
+          "notes": "全Content unitが00 Evidenceへ追跡でき、Evidenceを超える存在論・因果を生成していない。"
+        },
+        "narrative_reconstruction": {
+          "status": "PASS",
+          "notes": "summaryだけからcoverage対象の具体的伝承展開を再構成できる。"
+        },
+        "summary_reconstruction": {
+          "status": "PASS",
+          "notes": "主要時系列と未解決終端、共同実況の性格をsummaryから再構成可能。"
+        },
+        "structural_probe": {
+          "status": "PASS",
+          "notes": "P01〜P12でLOSS/CONFLICTなし。"
+        },
+        "variant_boundary": {
+          "status": "PASS",
+          "notes": "初期ログと後年の続編・帰還ルールを分離。"
+        },
+        "uncertainty_preservation": {
+          "status": "PASS",
+          "notes": "異界説、事実性、投稿停止後を断定しない。"
+        }
+      },
+      "reconstruction": {
+        "blind_decode": "普段の帰宅列車が長時間停車せず、投稿者は未知の無人駅『きさらぎ駅』で下車する。検索・家族・警察でも位置を通常地理へ回収できず、線路沿いを進んで異常音、片足の老人、伊佐貫トンネルを経験する。トンネル後に乗った車は山側へ進み、運転者が異常な独り言を始める。投稿者は逃走機会をうかがい、電池不足を理由にレス635で実況を終える。その後は不明。参加者はリアルタイムで助言・検索・解釈するが確定規則にはならない。",
+        "reference_story": "2004年レス98〜635は、通常の乗車から空間・経路異常へ逸脱し、位置特定不能、線路移動、老人、トンネル、不審な車、未解決の投稿停止へ至る共同実況である。",
+        "coverage_audit": [
+          {
+            "content_ref": "CNT-001",
+            "salient_meaning": "普段の列車が長時間停車しない異常から実況開始。",
+            "blind_reconstruction": "日常の帰宅列車が通常運行から外れる。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-002",
+            "salient_meaning": "乗務員応答なし、普段通らないトンネル。",
+            "blind_reconstruction": "通常経路ではない走行異常が深まる。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-003",
+            "salient_meaning": "未知の無人駅きさらぎ駅へ下車。",
+            "blind_reconstruction": "存在を知らない駅に降りる。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-004",
+            "salient_meaning": "検索・家族でも位置を通常地理へ置けない。",
+            "blind_reconstruction": "現在地が通常の地図へ回収できない。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-005",
+            "salient_meaning": "家族・タクシー・位置確認・警察・110を試す。",
+            "blind_reconstruction": "現実的な救助策を試すが位置を伝えられない。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-006",
+            "salient_meaning": "線路上で異常音と片足の老人の警告・消失。",
+            "blind_reconstruction": "移動中に異常人物・現象が現れる。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-007",
+            "salient_meaning": "伊佐貫と読めるトンネルへ到達し通過。",
+            "blind_reconstruction": "未知のトンネルを越える。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-008",
+            "salient_meaning": "トンネル後に車へ乗り比奈と説明される。",
+            "blind_reconstruction": "見知らぬ運転者の車へ移る。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-009",
+            "salient_meaning": "車が山側へ進み運転者が異常化、逃走を考える。",
+            "blind_reconstruction": "救助に見えた車も危険化する。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-010",
+            "salient_meaning": "レス635を最後に実況停止し帰結不明。",
+            "blind_reconstruction": "投稿停止を失踪・死亡へ補完しない。",
+            "difference": "NONE"
+          },
+          {
+            "content_ref": "CNT-011",
+            "salient_meaning": "参加者が検索・助言・解釈するが確定規則にはならない。",
+            "blind_reconstruction": "共同実況だが異界説等は推測のまま。",
+            "difference": "NONE"
+          }
+        ],
+        "probes": [
+          {
+            "probe_id": "P01",
+            "blind": "投稿者、参加者、片足の老人らしき人物、車の運転者。",
+            "reference": "投稿者、参加者、片足の老人らしき人物、車の運転者。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P02",
+            "blind": "投稿者。",
+            "reference": "投稿者。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P03",
+            "blind": "通常の帰宅乗車が長時間無停車へ逸脱する。",
+            "reference": "通常の帰宅乗車が長時間無停車へ逸脱する。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P04",
+            "blind": "原因主体は不明。場所・経路接続の異常が一貫する。",
+            "reference": "原因主体は不明。場所・経路接続の異常が一貫する。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P05",
+            "blind": "通常地理へ回収できない空間・経路異常が段階進行。",
+            "reference": "通常地理へ回収できない空間・経路異常が段階進行。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P06",
+            "blind": "長時間無停車→未知駅→位置不明→線路→老人→トンネル→車→投稿停止。",
+            "reference": "長時間無停車→未知駅→位置不明→線路→老人→トンネル→車→投稿停止。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P07",
+            "blind": "一晩の実況として順次進行。",
+            "reference": "一晩の実況として順次進行。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P08",
+            "blind": "参加者助言は複数あるが安定規則に収束しない。",
+            "reference": "参加者助言は複数あるが安定規則に収束しない。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P09",
+            "blind": "家族・警察・参加者助言を試すが確実な帰還法はない。",
+            "reference": "家族・警察・参加者助言を試すが確実な帰還法はない。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P10",
+            "blind": "不審な車内で逃走を考えた後、レス635で投稿が途絶える。",
+            "reference": "不審な車内で逃走を考えた後、レス635で投稿が途絶える。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P11",
+            "blind": "駅の存在論、投稿の事実性、投稿停止後の帰結が未確定。",
+            "reference": "駅の存在論、投稿の事実性、投稿停止後の帰結が未確定。",
+            "difference": "NONE"
+          },
+          {
+            "probe_id": "P12",
+            "blind": "2004年初期実況と後年の続編・異界駅一般化を分離。",
+            "reference": "2004年初期実況と後年の続編・異界駅一般化を分離。",
+            "difference": "NONE"
+          }
+        ],
+        "analysis_invariance": {
+          "status": "PASS",
+          "notes": "summaryの具体的意味と後続Analysisに必要な構造が両方保持されている。"
+        },
+        "verdict": "PASS"
+      },
+      "findings": [],
+      "review_notes": "0180 blind E2E Review 10。Blind Decode後にcoverage_refsを開示し全salient unitを監査。"
+    },
+    "20": {
+      "checks": {
+        "version_scope": {
+          "status": "PASS",
+          "notes": "公式過去ログのレス98〜635だけをScopeとし、後年の続編・一般化・翻案を除外。"
+        },
+        "dimension_semantics": {
+          "status": "PASS",
+          "notes": "実況形式・空間経路異常・未解決終端というScope内構造に対応し、参加者の異界推測を強いontologyへしない。"
+        },
+        "taxonomy_gap": {
+          "status": "PASS",
+          "notes": "現taxonomy catalogに対してcode ID / Parentを検証し、未表現の安定構造を無理に既存codeへ押し込んでいない。"
+        },
+        "causality": {
+          "status": "PASS",
+          "notes": "通常乗車→経路異常→未知駅→位置特定不能→異常遭遇→不審車→投稿停止で一貫。"
+        },
+        "semantic_traceability": {
+          "status": "PASS",
+          "notes": "Scoped Content/Evidenceから各Dimensionのrationale/manifestationへ追跡可能。来歴次元は必要に応じて00 Evidenceへ直接traceし、10 Contentへ流通史を混入させていない。"
+        },
+        "analysis_invariance": {
+          "status": "PASS",
+          "notes": "Blind DecodeとScoped Analysisの意味構造に矛盾なし。"
+        },
+        "status_reasoning": {
+          "status": "PASS",
+          "notes": "D/I/UをEvidence強度に応じて使い分け、不明点を推測で埋めていない。"
+        },
+        "d12_d13_d15_causal_chain": {
+          "status": "PASS",
+          "notes": "対象=投稿者、作用=空間歪み(I)、帰結=未解決性保持(D)で、失踪・死亡を生成しない。"
+        },
+        "d18_scope_independent_x_evidence": {
+          "status": "PASS",
+          "notes": "Scope内作用はL1のみ。読者受容自体への作用や後代社会作用をL2/L3へ入れない。"
+        },
+        "d19_publicability_vs_national_distribution": {
+          "status": "PASS",
+          "notes": "初期artifact自体が公開掲示板なのでOPEN_FORUM_WEB D。"
+        },
+        "d20_missing_info_vs_no_one_knows": {
+          "status": "PASS",
+          "notes": "複数人物が部分情報を持つが真相の特権保持者は固定できずU。"
+        },
+        "d21_reality_anchor": {
+          "status": "PASS",
+          "notes": "静岡私鉄・新浜松周辺・比奈等の具体地理に接続するためA2。"
+        },
+        "evidence_confidence_ceiling": {
+          "status": "PASS",
+          "notes": "Contentは公式過去ログでD、空間ontologyや歪みはI、帰結不明はDとして区別。"
+        },
+        "entry_classification": {
+          "status": "PASS",
+          "notes": "異界・空間怪談／実況型ネット怪談はScope内容に整合。"
+        }
+      },
+      "sensemaking_reconstruction": {
+        "model": "日常の鉄道移動が説明不能な経路・未知駅へ逸脱し、通常地理へ回収できないまま危険が段階進行する。投稿者と参加者は現実的対処と意味付けを共同で試みるが、原因・帰還法・最終帰結は確定しない。",
+        "content_refs": [
+          "CNT-001",
+          "CNT-003",
+          "CNT-004",
+          "CNT-005",
+          "CNT-006",
+          "CNT-007",
+          "CNT-008",
+          "CNT-009",
+          "CNT-010",
+          "CNT-011"
+        ],
+        "dimension_refs": [
+          "D04",
+          "D05",
+          "D07",
+          "D09",
+          "D10",
+          "D11",
+          "D12",
+          "D13",
+          "D15",
+          "D16",
+          "D17",
+          "D18",
+          "D19",
+          "D20",
+          "D21"
+        ],
+        "evidence_refs": [
+          "EVD-001",
+          "EVD-003",
+          "EVD-004",
+          "EVD-005",
+          "EVD-006",
+          "EVD-007",
+          "EVD-008",
+          "EVD-009"
+        ],
+        "status": "PASS",
+        "notes": "現行Workflow/coding rulesのみで再構成したblind sense-making model。"
+      },
+      "findings": [],
+      "review_notes": "0180 blind E2E Review 20。旧code/Legacy裁定を期待値として使用していない。"
+    },
+    "00": {
+      "checks": {
+        "source_assessment": {
+          "status": "PASS",
+          "notes": "5ちゃんねる公式過去ログを一次Evidenceとし、後代調査は範囲確認だけに使用。"
+        },
+        "evidence_integrity": {
+          "status": "PASS",
+          "notes": "レス98〜635の逐次報告・参加者応答を直接区別し、投稿停止後を補完していない。"
+        },
+        "source_evidence_support": {
+          "status": "PASS",
+          "notes": "列車異常、未知駅、位置特定失敗、110、老人、トンネル、車、最終投稿を過去ログへ追跡可能。"
+        },
+        "primary_source_relation": {
+          "status": "PASS",
+          "notes": "初期Contentは公式過去ログへ直接依存し、後代続編を一次ログへ混ぜない。"
+        },
+        "earliest_attestation": {
+          "status": "PASS",
+          "notes": "2004-01-08深夜のレス98以降を直接確認。"
+        },
+        "uncertainty_preservation": {
+          "status": "PASS",
+          "notes": "駅の実在・異世界性、投稿の事実性、レス635後の帰結を未確定として保持。"
+        }
+      },
+      "findings": [],
+      "review_notes": "0180 blind E2E。既存canonical/Legacy/過去Review本文を参照せず、新規調査Sources/Evidenceのみで監査。"
+    }
+  }
+}
