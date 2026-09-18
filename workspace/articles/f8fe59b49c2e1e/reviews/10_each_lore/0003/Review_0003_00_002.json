@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0003",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0003_akai_kami_aoi_kami/0003_00_sources.json",
+    "commit_sha": "d817fd0411a6aad0e2fdd7008989b35d9d192e7b",
+    "blob_sha": "f9bbfe655743504be7cee49786ddec19175aa95b",
+    "reviewed_at": "2026-09-18T14:41:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "日文研DB、CiNii、NDL、大宅壮一文庫等の資料種別は用途に応じて区別され、YOKAI.JPはlater_summary_or_commentaryとして限定使用されている。"
+    },
+    "evidence_integrity": {
+      "status": "FINDING",
+      "notes": "EVD-008はSRC-007の1990年藤沢採録から三度の問いと生徒の忌避を保持する一方、拒否応答後に天井へ現れる人影、背中の12本の剣、赤い血がマント状に流れる終端場面を落としている。VAR-003の終端構造として意味的に重要な欠落である。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "各Evidenceは参照Sourceの記載範囲内で構成され、確認した範囲でSourceに反する断定はない。EVD-008の問題は虚偽ではなく重要部分の省略である。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "日文研DB要約を原誌本文そのものとせずdirect_derivativeとして扱い、NDL/CiNiiの書誌確認とContent Evidenceを分離している。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1972年尼崎採録を現在確認できる早い公刊採録として扱い、1930年代回想や1939年街路流言を絶対的起源または直接系譜へ格上げしていない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "原誌本文未実見、1930年代回想の後代性、1939年街路流言との系譜未証明、書誌不一致除外など主要な不確実性は明示されている。"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F00-001",
+      "severity": "Moderate",
+      "category": "evidence_integrity",
+      "summary": "EVD-008が1990年「赤いマント」型の終端場面を省略している",
+      "rationale": "SRC-007の公式日文研カードは、女子職員トイレの特定個室で三度問いかけることと生徒が近づかないことに加え、拒否応答後に天井へ人影が現れ、その背中に12本の剣が刺さり、赤い血がマントのように流れる場面まで要約している。EVD-008は問いかけと忌避だけを残すため、この採録固有の終端・視覚モチーフを再構成できない。",
+      "impact": "1972年VAR-001を採用する現行Version ScopeとD01〜D21の結論は直ちには変わらないが、VAR-003のContent再構成、terminal_state、衣服型の比較に情報欠落が生じる。",
+      "fix_direction": "SRC-007に対応するEvidenceへ拒否応答後の終端場面を保守的なparaphraseで追加し、そのEvidenceを用いるCNT-006、VAR-003、summary.structure.terminal_state等を再点検する。原資料本文未実見というdirectness留保は維持する。",
+      "source_refs": [
+        "SRC-007"
+      ],
+      "evidence_refs": [
+        "EVD-008"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review cycle 002。Source原文との突合でSRC-007→EVD-008のsalient omissionを1件検出。その他のSource/Evidence対応と不確実性管理は維持可能。"
+}

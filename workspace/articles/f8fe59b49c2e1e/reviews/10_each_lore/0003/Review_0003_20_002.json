@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0003",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0003_akai_kami_aoi_kami/0003_20_analysis.json",
+    "commit_sha": "0da450e372e6f16c0b02d8562d4de03dd7323c00",
+    "blob_sha": "aed4a24e9ee44b7501f23bfec3e6b1719533d4ab",
+    "reviewed_at": "2026-09-18T14:41:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "成立時のまとまった形を直接確認できない条件で、1972年尼崎のVAR-001を最も早い安定共有核として採用し、1986年以降の危害・安全回答・衣服型をScope外へ分離する方針はcoding rules §5.1と整合する。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D01〜D21は1972年Scopeに対してコードされ、後代の有名な赤青分岐や致死帰結を1972年へ遡及していない。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "使用code_idは現行taxonomyで定義され、Scoped核を表現するための新規taxonomy gapは確認しない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "Scoped因果列は学校便所への進入→お化けの顕現・問いかけまで。質問後の身体危害・死亡はEvidence不足としてD14/D15へ補完していない。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "Version Scopeと各Dimensionは主にCNT-001/002およびEVD-001/002へ追跡でき、後代variantを根拠にするDimensionはない。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "10 Contentsから独立再構成した1972年因果核・不確実性と20 AnalysisのPrimary/Statusは整合する。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "生成年代、媒体、変容、終端、帰結領域、回避規則、特権情報保持者など証拠不足の次元をUに保持し、明示性が弱い構造分類はIとしている。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=便所利用者、D13=怪異の顕現・問いかけ、D15=終端帰結不明(U)で、1972年Scopeの情報上限を越えない。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "L3はScope内のEVD-002、すなわち噂のため児童が連なって便所へ行ったという独立した現実行動Evidenceに基づく。話を聞くこと自体が怪異発動条件ではないためL2は選ばない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "1972年Scopeで直接確認できる学校・若者集団を選び、後代の別地域採録を全国的大衆流通へ読み替えていない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "特権情報保持者が資料から確認できないことを「誰も知らない」へ変換せずUとしている。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "資料自体の実在性ではなく、伝承が一般的な学校便所という現実背景に依存することをA1/Iとして表現し、特定学校・制度・史実を成立条件へ格上げしていない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "日文研DBの原資料要約を介する点を00/10で明示し、成立年・媒体・終端をUへ保守化している。D/Iの区別も、Evidenceで明示される関係とtaxonomyへの推論を分けて運用している。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "Macro Category「学校怪談・便所怪談」とEntry Type「物語・伝説」は、学校便所で怪異から問いかけを受ける1972年核と整合する。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "1972年Scopeでは、日常的な学校便所に「お化け」という意思ある怪異主体を置き、便所へ入った児童へ色に関する問いかけを行うことで、その場所の不確実性を怪異として意味づける。質問後の超自然的終端は未確定だが、噂の共有それ自体は児童が連れ立って便所へ行く現実行動を生じさせる。1986年以降の色別危害・安全回答は後代variantとして分離され、Scoped因果核へ遡及しない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "PASS",
+    "notes": "10 Contentsとcoding rules/taxonomyから独立再構成し、1972年Scopeの情報上限を維持した。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。Version Scope、D01〜D21、critical checks、sensemaking reconstructionを再監査しPass。Review 00で検出した1990年EVD-008省略はScope外VAR-003のEvidence integrity問題であり、現行1972年20 Analysisの判定は変えない。"
+}
