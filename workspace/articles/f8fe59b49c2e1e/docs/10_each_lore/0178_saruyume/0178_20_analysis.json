@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "entry_id": "0178",
-  "macro_category": "ネット怪談",
-  "entry_type": "物語・伝説",
+  "macro_category": "夢・睡眠怪談",
+  "entry_type": "一人称体験怪談",
   "version_scope": {
-    "description": "2000年8月2日の保存転載で確認できる一人称反復夢型。無人駅、お猿さん電車、他乗客への順次危害、投稿者への順番接近、覚醒、4年後の続きからの再開、再覚醒、終端警告までを対象とする。2003年『猿夢＋』等の受容者側派生はHistory Evidenceとして分離し、D11〜D18のScopeへ混ぜない。",
+    "description": "2000年8月2日の投稿者自身の『猿夢』体験談をScopeとする。無人駅、お猿さん電車、順番に進む危害、覚醒、4年後の続きからの再開、再覚醒、終端警告までを含む。2003年『猿夢＋』および後代の読者感染・三回目死亡ルールは除外する。",
     "included_variants": [
       "VAR-001"
     ],
@@ -21,19 +21,19 @@
       "CNT-007",
       "CNT-008"
     ],
-    "notes": "2000年原投稿ページは未固定。Contentは保存転載由来であり、現実身体への危害や2003年読者感染型を初期Scopeへ遡及しない。"
+    "notes": "後代派生を初期artifactの因果規則へ逆輸入しない。"
   },
   "dimensions": [
     {
       "dimension_id": "D01",
-      "status": "U",
-      "primary": null,
+      "status": "I",
+      "primary": {
+        "code_id": "D01.G6"
+      },
       "secondary": [],
-      "rationale": "2000年8月2日は保存転載で確認できる最古級定点であり、生成年そのものではない。",
-      "manifestation": "少なくとも2000年には掲示板投稿として流通していたが、それ以前の形成有無は固定できない。",
-      "content_refs": [
-        "CNT-001"
-      ],
+      "rationale": "保存転載に2000年8月2日の投稿時刻が残るため2000年代初頭へ安全に置けるが、原スレッドを直接取得していないためI。",
+      "manifestation": "最古確認artifactは2000年8月の掲示板投稿として保存される。",
+      "content_refs": [],
       "evidence_refs": [
         "EVD-001"
       ],
@@ -49,11 +49,9 @@
         "parent_id": "D02.WEB"
       },
       "secondary": [],
-      "rationale": "保存転載が匿名掲示板投稿を示すが、原ページ未固定である。",
-      "manifestation": "初期確認形は匿名掲示板の一人称怪談である。",
-      "content_refs": [
-        "CNT-001"
-      ],
+      "rationale": "保存転載が2ちゃんねる投稿のレス番号・時刻を保持しており、最古確認媒体はWeb掲示板と判断できる。",
+      "manifestation": "公開Web掲示板上の怪談投稿として確認される。",
+      "content_refs": [],
       "evidence_refs": [
         "EVD-001"
       ],
@@ -68,17 +66,10 @@
         "code_id": "D03.WEB.FORUM",
         "parent_id": "D03.WEB"
       },
-      "secondary": [
-        {
-          "code_id": "D03.WEB.WEBSITE",
-          "parent_id": "D03.WEB"
-        }
-      ],
-      "rationale": "掲示板投稿として保存され、現在は保存Webページから確認できる。原投稿未固定なのでIとする。",
-      "manifestation": "掲示板投稿が後代Web保存を介して再閲覧される。",
-      "content_refs": [
-        "CNT-001"
-      ],
+      "secondary": [],
+      "rationale": "Version Scopeは2000年の掲示板投稿artifactそのものであり、他媒体をScope内の流通媒体へ追加しない。",
+      "manifestation": "初期版はWeb掲示板で受容される。",
+      "content_refs": [],
       "evidence_refs": [
         "EVD-001"
       ],
@@ -88,49 +79,20 @@
     },
     {
       "dimension_id": "D04",
-      "status": "I",
+      "status": "D",
       "primary": {
-        "code_id": "D04.VAR.ACCRETION",
-        "parent_id": "D04.VAR"
+        "code_id": "D04.STB.SINGLE_FIXED",
+        "parent_id": "D04.STB"
       },
       "secondary": [],
-      "rationale": "後代起源検討資料により、少なくとも2003年5月には元話を読んだ別人物が類似夢を語る『猿夢＋』が確認される。絶対的初出は固定しない。",
-      "manifestation": "投稿者自身の反復夢から、読者側へ類似夢が及ぶ派生が追加される。",
-      "content_refs": [
-        "CNT-009"
-      ],
-      "evidence_refs": [
-        "EVD-007"
-      ],
-      "taxonomy_gap": {
-        "present": false
-      }
-    },
-    {
-      "dimension_id": "D05",
-      "status": "I",
-      "primary": {
-        "code_id": "D05.EXP.RETROSPECTIVE_1P",
-        "parent_id": "D05.EXP"
-      },
-      "secondary": [],
-      "rationale": "保存転載では投稿者が自身の夢体験を一人称で回想する。原投稿未固定のためIとする。",
-      "manifestation": "自己体験として語られるネット怪談である。",
+      "rationale": "Scope内では一人の投稿者が一つのまとまった体験談として提示し、別投稿者の2003年派生はScope外へ分離している。",
+      "manifestation": "初期artifact内部では固定された一体の物語として提示される。",
       "content_refs": [
         "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004",
-        "CNT-005",
-        "CNT-006",
-        "CNT-007"
+        "CNT-008"
       ],
       "evidence_refs": [
         "EVD-001",
-        "EVD-002",
-        "EVD-003",
-        "EVD-004",
-        "EVD-005",
         "EVD-006"
       ],
       "taxonomy_gap": {
@@ -138,19 +100,43 @@
       }
     },
     {
+      "dimension_id": "D05",
+      "status": "D",
+      "primary": {
+        "code_id": "D05.EXP.RETROSPECTIVE_1P",
+        "parent_id": "D05.EXP"
+      },
+      "secondary": [],
+      "rationale": "投稿者が自分の過去の夢体験を一人称で回顧して語る。",
+      "manifestation": "自身の反復夢を本人が振り返る体験談形式。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-006"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-005"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
       "dimension_id": "D06",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D06.T1"
       },
       "secondary": [],
-      "rationale": "保存転載上では投稿者自身が経験した夢として提示される。原ページ未固定のためDにはしない。",
-      "manifestation": "読者には一人称の直接体験報告として差し出される。",
+      "rationale": "投稿者は自分が実際に見た夢として体験を提示する。夢内容の現実性ではなく体験提示のスタンスをコードする。",
+      "manifestation": "夢の直接体験として語られる。",
       "content_refs": [
-        "CNT-001"
+        "CNT-001",
+        "CNT-005"
       ],
       "evidence_refs": [
-        "EVD-001"
+        "EVD-001",
+        "EVD-004"
       ],
       "taxonomy_gap": {
         "present": false
@@ -158,25 +144,21 @@
     },
     {
       "dimension_id": "D07",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D07.ANO.DREAM_SLEEP_ANOMALY",
         "parent_id": "D07.ANO"
       },
-      "secondary": [
-        {
-          "code_id": "D07.ANO.UNEXPLAINED_EVENT",
-          "parent_id": "D07.ANO"
-        }
-      ],
-      "rationale": "同じ夢が4年後に前回の続きから再開し、危害系列と警告が継続する。",
-      "manifestation": "単発の悪夢ではなく連続性を持つ反復夢として問題化される。",
+      "secondary": [],
+      "rationale": "説明の中心は、同じ危険な夢が時間を隔てて続きから再開するという異常な夢体験である。",
+      "manifestation": "反復・継続する悪夢の不可解さを意味化する。",
       "content_refs": [
-        "CNT-005",
-        "CNT-007",
+        "CNT-001",
+        "CNT-006",
         "CNT-008"
       ],
       "evidence_refs": [
+        "EVD-001",
         "EVD-005",
         "EVD-006"
       ],
@@ -186,19 +168,23 @@
     },
     {
       "dimension_id": "D08",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D08.DEX.DREAM_SLEEP_EVENT",
         "parent_id": "D08.DEX"
       },
       "secondary": [],
-      "rationale": "投稿者が経験すると語る夢そのものが契機である。Contentは保存転載からの確認なのでI。",
-      "manifestation": "睡眠中の夢経験が異常認識の入口になる。",
+      "rationale": "投稿者自身が夢の中で体験した具体的出来事が意味形成の直接契機になる。",
+      "manifestation": "自覚夢内の無人駅・列車・危害が異常認識の入口になる。",
       "content_refs": [
-        "CNT-001"
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
       ],
       "evidence_refs": [
-        "EVD-001"
+        "EVD-001",
+        "EVD-002",
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -208,17 +194,17 @@
       "dimension_id": "D09",
       "status": "I",
       "primary": {
-        "code_id": "D09.UNK.DELIBERATE_NONRESOLUTION",
+        "code_id": "D09.UNK.MYSTERY_LABEL",
         "parent_id": "D09.UNK"
       },
       "secondary": [],
-      "rationale": "夢の原因、放送主体、反復理由は説明されない。",
-      "manifestation": "異常な連続夢という現象だけが残り、真相は閉じられない。",
+      "rationale": "原因を確定せず、危険な反復夢として一まとまりの不可解体験を把握可能にする。",
+      "manifestation": "説明不能な夢を怪異的な反復体験として保持する。",
       "content_refs": [
+        "CNT-006",
         "CNT-008"
       ],
       "evidence_refs": [
-        "EVD-001",
         "EVD-005",
         "EVD-006"
       ],
@@ -228,20 +214,21 @@
     },
     {
       "dimension_id": "D10",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D10.PHN.DREAM_SLEEP_PHENOMENON",
         "parent_id": "D10.PHN"
       },
       "secondary": [],
-      "rationale": "独立した怪物・霊・人物主体は固定できず、反復する夢現象そのものが最も保守的である。",
-      "manifestation": "原因主体を擬人化せず、異常な夢現象として保持する。",
+      "rationale": "因果源となる人格的主体は確定せず、現象として一貫しているのは夢・睡眠中に生じる異常である。",
+      "manifestation": "危害世界は夢の現象として提示される。",
       "content_refs": [
-        "CNT-008"
+        "CNT-001",
+        "CNT-005"
       ],
       "evidence_refs": [
         "EVD-001",
-        "EVD-005"
+        "EVD-004"
       ],
       "taxonomy_gap": {
         "present": false
@@ -249,19 +236,21 @@
     },
     {
       "dimension_id": "D11",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D11.PAS.SLEEP_DREAM",
         "parent_id": "D11.PAS"
       },
       "secondary": [],
-      "rationale": "睡眠・夢状態になることで無人駅と電車の出来事へ入る。保存転載由来のためI。",
-      "manifestation": "夢を見ることが危害系列への入口になる。",
+      "rationale": "伝承の因果系へ入る条件は睡眠中にこの夢を見ることであり、投稿者は夢内で危害列車に入る。",
+      "manifestation": "睡眠・夢状態が接触条件になる。",
       "content_refs": [
-        "CNT-001"
+        "CNT-001",
+        "CNT-002"
       ],
       "evidence_refs": [
-        "EVD-001"
+        "EVD-001",
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -269,19 +258,22 @@
     },
     {
       "dimension_id": "D12",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D12.FOC.PROTAGONIST_EXPERIENCER",
         "parent_id": "D12.FOC"
       },
       "secondary": [],
-      "rationale": "焦点人物は投稿者本人であり、他乗客は投稿者が目撃する先行被害者である。",
-      "manifestation": "他乗客への危害を目撃した後、投稿者自身へ順番が近づく。",
+      "rationale": "投稿者自身が列車内の危害順序へ入り、覚醒によって離脱する中心的作用対象である。",
+      "manifestation": "体験者本人が危害の順番を待つ対象となる。",
       "content_refs": [
-        "CNT-003"
+        "CNT-003",
+        "CNT-004",
+        "CNT-005"
       ],
       "evidence_refs": [
-        "EVD-003"
+        "EVD-003",
+        "EVD-004"
       ],
       "taxonomy_gap": {
         "present": false
@@ -289,11 +281,19 @@
     },
     {
       "dimension_id": "D13",
-      "status": "I",
-      "primary": null,
-      "secondary": [],
-      "rationale": "他乗客には身体処理が実現するが、投稿者本人は処理される前に覚醒する。D12対象の投稿者に対する作用として既存PHYSICAL_ATTACK等を付けると、実現した他乗客への危害と未実現の投稿者脅威を混同する。",
-      "manifestation": "投稿者は処理順序へ組み込まれ、危害が直前まで迫るが、実害成立前に覚醒する。",
+      "status": "D",
+      "primary": {
+        "code_id": "D13.PHY.PHYSICAL_ATTACK",
+        "parent_id": "D13.PHY"
+      },
+      "secondary": [
+        {
+          "code_id": "D13.REL.TARGETING",
+          "parent_id": "D13.REL"
+        }
+      ],
+      "rationale": "夢内では放送で指定された順番に乗客へ具体的な身体危害が加えられ、投稿者も次の標的として処理されかける。",
+      "manifestation": "順次ターゲット化された乗客へ身体的処理が加わる。",
       "content_refs": [
         "CNT-003",
         "CNT-004"
@@ -303,26 +303,24 @@
         "EVD-004"
       ],
       "taxonomy_gap": {
-        "present": true,
-        "description": "投稿者本人への『危害が迫る／処理対象として順番が来る』を、実害成立前の脅威として表すcodeが現taxonomyにない。"
+        "present": false
       }
     },
     {
       "dimension_id": "D14",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D14.NEG"
       },
       "secondary": [],
-      "rationale": "残酷な危害と投稿者への脅威として提示される。保存転載由来なのでI。",
-      "manifestation": "利益・中立ではなく明確な危険として描かれる。",
+      "rationale": "乗客への残酷な危害と、投稿者自身への切迫した危険が中核である。",
+      "manifestation": "明確に負の帰結を持つ悪夢として語られる。",
       "content_refs": [
         "CNT-003",
-        "CNT-007"
+        "CNT-004"
       ],
       "evidence_refs": [
-        "EVD-003",
-        "EVD-006"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -330,16 +328,26 @@
     },
     {
       "dimension_id": "D15",
-      "status": "U",
-      "primary": null,
-      "secondary": [],
-      "rationale": "投稿者の終端は二度の覚醒と次回警告であり、持続的傷害・死亡・トラウマ等を固定できない。",
-      "manifestation": "危害は迫るが、投稿者の持続的終端状態は不明である。",
+      "status": "I",
+      "primary": {
+        "code_id": "D15.MND.FEAR_TRAUMA",
+        "parent_id": "D15.MND"
+      },
+      "secondary": [
+        {
+          "code_id": "D15.LIF.FUTURE_CONSTRAINT",
+          "parent_id": "D15.LIF"
+        }
+      ],
+      "rationale": "投稿者は恐怖から覚醒を試み、4年後にも再開する夢と次回への警告を受ける。身体危害は直前で回避している。",
+      "manifestation": "強い恐怖と、今後また夢が再開し得るという将来拘束が残る。",
       "content_refs": [
+        "CNT-004",
         "CNT-006",
-        "CNT-007"
+        "CNT-008"
       ],
       "evidence_refs": [
+        "EVD-004",
         "EVD-005",
         "EVD-006"
       ],
@@ -349,21 +357,25 @@
     },
     {
       "dimension_id": "D16",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D16.REC.RECURRENT",
         "parent_id": "D16.REC"
       },
-      "secondary": [],
-      "rationale": "一度覚醒して収束した後、4年後に同じ夢が前回の続きから再び起こる。条件成立のたび必ず再発する規則は示されない。",
-      "manifestation": "一回の夢の後、長い間隔を置いて不定期に同じ系列が再開する。",
+      "secondary": [
+        {
+          "code_id": "D16.EVT.SEQUENTIAL_EPISODE",
+          "parent_id": "D16.EVT"
+        }
+      ],
+      "rationale": "一度覚醒して終わった夢が4年後に同じ場面の続きから再開し、夢内では危害が順番に進む。",
+      "manifestation": "長期の間隔を挟む反復と、夢内の順次進行が共存する。",
       "content_refs": [
-        "CNT-004",
-        "CNT-005",
+        "CNT-003",
         "CNT-006"
       ],
       "evidence_refs": [
-        "EVD-004",
+        "EVD-003",
         "EVD-005"
       ],
       "taxonomy_gap": {
@@ -372,52 +384,48 @@
     },
     {
       "dimension_id": "D17",
-      "status": "I",
-      "primary": null,
-      "secondary": [],
-      "rationale": "投稿者は夢だと認識し、覚醒によって危害場面から離脱する。物理的逃走ではなく睡眠状態から抜ける制御なので、既存FLEE系へ近似しない。",
-      "manifestation": "制御は夢世界内の移動ではなく、睡眠状態そのものから抜けることで行われる。",
-      "content_refs": [
-        "CNT-004",
-        "CNT-006"
-      ],
-      "evidence_refs": [
-        "EVD-004",
-        "EVD-005"
-      ],
-      "taxonomy_gap": {
-        "present": true,
-        "description": "夢から意図的に覚醒して離脱する回避・制御方式を表すcodeが現taxonomyにない。"
-      }
-    },
-    {
-      "dimension_id": "D18",
-      "status": "I",
+      "status": "D",
       "primary": {
-        "code_id": "D18.L1"
+        "code_id": "D17.AVO.FLEE_ESCAPE",
+        "parent_id": "D17.AVO"
       },
       "secondary": [],
-      "rationale": "2000年Scopeでは夢内因果のみ確認する。読者感染型は後代派生なのでL2へ混ぜず、独立した社会現実効果も固定しない。",
-      "manifestation": "怪異作用は2000年型では投稿者の夢内に留まる。",
+      "rationale": "投稿者は夢だと自覚し、覚醒を強く念じることで二度とも危害直前に離脱する。",
+      "manifestation": "覚醒が実際に成立した逃走・離脱手段として描かれる。",
       "content_refs": [
-        "CNT-001",
-        "CNT-003",
-        "CNT-004",
         "CNT-005",
-        "CNT-006",
         "CNT-007"
       ],
       "evidence_refs": [
-        "EVD-001",
-        "EVD-003",
         "EVD-004",
-        "EVD-005",
         "EVD-006"
       ],
       "taxonomy_gap": {
         "present": false
+      }
+    },
+    {
+      "dimension_id": "D18",
+      "status": "D",
+      "primary": {
+        "code_id": "D18.L1"
       },
-      "notes": "L1=1 / L2=0 / L3=0。後代の猿夢＋はScope外。"
+      "secondary": [],
+      "rationale": "作用は夢内で投稿者・乗客に及ぶ。読者が受容しただけで作用するL2や、現実社会へ独立に作用するL3は2000年Scopeに確認しない。",
+      "manifestation": "物語内部の体験者への作用に限定される。",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004",
+        "CNT-005"
+      ],
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-004"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      },
+      "notes": "D18 vectorはL1=1, L2=0, L3=0としてPrimary D18.L1で表現。"
     },
     {
       "dimension_id": "D19",
@@ -427,11 +435,9 @@
         "parent_id": "D19.NET"
       },
       "secondary": [],
-      "rationale": "匿名掲示板投稿として保存されていることから公開Web流通を推定できるが、原ログ未固定のためI。",
-      "manifestation": "ネット掲示板上の不特定受容者へ提示される怪談である。",
-      "content_refs": [
-        "CNT-001"
-      ],
+      "rationale": "最古確認artifactが公開掲示板投稿として保存され、不特定多数が閲覧可能な流通形である。",
+      "manifestation": "公開Web掲示板上のネット怪談として流通する。",
+      "content_refs": [],
       "evidence_refs": [
         "EVD-001"
       ],
@@ -441,17 +447,21 @@
     },
     {
       "dimension_id": "D20",
-      "status": "U",
-      "primary": null,
+      "status": "D",
+      "primary": {
+        "code_id": "D20.PER.EXPERIENCER",
+        "parent_id": "D20.PER"
+      },
       "secondary": [],
-      "rationale": "夢の正体や反復理由を知る主体は固定できない。",
-      "manifestation": "警告は存在するが、真相を説明できる主体は示されない。",
+      "rationale": "夢の具体的展開や4年後の再開を知る情報保持者は体験者である投稿者本人として提示される。",
+      "manifestation": "体験者本人が異常夢の追加情報を保持して語る。",
       "content_refs": [
-        "CNT-007",
-        "CNT-008"
+        "CNT-001",
+        "CNT-006"
       ],
       "evidence_refs": [
-        "EVD-006"
+        "EVD-001",
+        "EVD-005"
       ],
       "taxonomy_gap": {
         "present": false
@@ -459,13 +469,13 @@
     },
     {
       "dimension_id": "D21",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D21.A1"
       },
       "secondary": [],
-      "rationale": "具体的実在地点ではなく匿名掲示板投稿と一般的な駅・乗り物イメージに弱く接続する。",
-      "manifestation": "現実の固有場所より、投稿記録そのものが主な現実接点である。",
+      "rationale": "無人駅・列車・遊園地の乗り物といった一般的現実背景を使うが、特定実在地点を因果へ組み込まない。",
+      "manifestation": "一般的な鉄道・遊園地記憶が夢世界の背景になる。",
       "content_refs": [
         "CNT-001",
         "CNT-002"
@@ -479,5 +489,5 @@
       }
     }
   ],
-  "analysis_notes": "summary情報欠落回帰対象。Legacy最終裁定を新canonicalへ移管し、D13/D17の真のtaxonomy gapを明示的に保持する。"
+  "analysis_notes": "Blind E2E再生成。外部保存資料だけから初期2000年artifactをScope化した。"
 }
