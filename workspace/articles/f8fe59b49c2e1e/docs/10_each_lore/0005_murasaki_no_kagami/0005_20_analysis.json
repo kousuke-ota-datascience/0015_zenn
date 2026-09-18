@@ -62,14 +62,14 @@
     },
     {
       "dimension_id": "D03",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D03.ORL.SCHOOL_ORAL",
         "parent_id": "D03.ORL"
       },
       "secondary": [],
-      "rationale": "Scope内の採録には、小学校で聞いたとの明示と中学生からの採録があり、学校・若者集団での口承流通が確認できる。",
-      "manifestation": "学校年齢の若者が「紫の鏡」の規則を聞き、記憶する。",
+      "rationale": "Scope内の採録には、小学校時に聞いたとの記述と中学生からの採録があり、学校・若者集団での口承流通が示唆される。ただし聞いた場所・相手まで直接確定できないためInferenceとする。",
+      "manifestation": "学校年齢の若者が「紫の鏡」の規則を聞き、記憶するという採録から学校内口承を推定する。",
       "content_refs": [
         "CNT-008"
       ],
@@ -443,14 +443,14 @@
     },
     {
       "dimension_id": "D19",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D19.KIN.SCHOOL_YOUTH",
         "parent_id": "D19.KIN"
       },
       "secondary": [],
-      "rationale": "Scope内Evidenceは若者の俗信として収集され、小学校で聞いた例、中学生からの採録を含む。全国的大衆流通まではEvidenceから確定しない。",
-      "manifestation": "学校年齢の若者集団で共有される俗信。",
+      "rationale": "Evidenceは若者の俗信として収集され、小学校時に聞いた例、中学生からの採録を含むため学校・若者集団での共有を推定できる。ただし流通範囲そのものを直接測定した資料ではない。",
+      "manifestation": "学校年齢の若者集団で共有される俗信として推定する。",
       "content_refs": [
         "CNT-008"
       ],
