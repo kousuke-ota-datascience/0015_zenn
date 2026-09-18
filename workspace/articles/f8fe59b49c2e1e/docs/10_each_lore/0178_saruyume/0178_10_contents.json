@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0178",
+  "lore_name": "猿夢",
+  "summary": {
+    "narrative": "2000年保存転載では、投稿者は夢を見ていると自覚した状態で薄暗い無人駅におり、遊園地の『お猿さん電車』のような乗り物へ乗る。車内放送に従って他の乗客が順番に残酷な処理を受け、投稿者自身にも順番が近づくと、夢であることを認識して覚醒し離脱する。4年後、同じ夢が前回の続きから再開し、投稿者は再び覚醒する。終端では次回は逃がさない旨の警告が示されるが、その後の再発、現実身体への危害、死亡、持続的トラウマ等は確認できない。夢の原因主体、反復機構、警告主体も不明である。2003年『猿夢＋』では、元の猿夢を読んだ人物が数日後に類似する夢を見たと投稿する型が後代資料で確認されるが、これは2000年型の共有核には含めず後代派生として扱い、その絶対的初出も固定しない。",
+    "structure": {
+      "primary_actors": {
+        "status": "known",
+        "value": [
+          "投稿者",
+          "夢内の乗客",
+          "車内放送の話者／作用主体（正体不明）"
+        ]
+      },
+      "affected_targets": {
+        "status": "known",
+        "value": [
+          "投稿者",
+          "夢内の先行被害者"
+        ]
+      },
+      "entry_trigger": {
+        "status": "known",
+        "value": [
+          "睡眠・夢状態に入る"
+        ]
+      },
+      "causal_agent": {
+        "status": "unknown",
+        "value": null
+      },
+      "mechanism": {
+        "status": "known",
+        "value": [
+          "夢内で乗客が順番に危害を受ける",
+          "投稿者自身の処理順が近づく",
+          "4年後に前回の続きから夢が再開する"
+        ]
+      },
+      "state_transition": {
+        "status": "known",
+        "value": [
+          "無人駅→お猿さん電車→他乗客への順次危害→投稿者の順番接近→覚醒→4年後再開→再覚醒→終端警告"
+        ]
+      },
+      "temporal_structure": {
+        "status": "known",
+        "value": [
+          "一度覚醒後、4年の間隔を置いて同じ系列が前回の続きから再開"
+        ]
+      },
+      "rules_and_taboos": {
+        "status": "known",
+        "value": [
+          "夢内では乗客が順番に処理される",
+          "受容者向けの安定した禁忌は2000年型では確認できない"
+        ]
+      },
+      "avoidance_control": {
+        "status": "known",
+        "value": [
+          "投稿者は夢だと認識し覚醒することで危害場面から離脱する"
+        ]
+      },
+      "terminal_state": {
+        "status": "known",
+        "value": [
+          "二度目も覚醒して離脱する",
+          "次回は逃がさない旨の警告",
+          "その後の再発・現実身体危害は未確認"
+        ]
+      },
+      "uncertainties": {
+        "status": "known",
+        "value": [
+          "原2ちゃんねるページ未固定",
+          "実夢体験か創作か未確定",
+          "夢の原因主体・反復機構・警告主体は不明",
+          "2003年猿夢＋の原スレッド未固定"
+        ]
+      },
+      "variant_boundaries": {
+        "status": "known",
+        "value": [
+          "VAR-001: 2000年一人称反復夢型",
+          "VAR-002: 2003年猿夢＋の受容者側派生"
+        ]
+      }
+    }
+  },
+  "content_units": [
+    {
+      "content_id": "CNT-001",
+      "type": "event",
+      "text": "投稿者は夢を見ていると自覚した状態で薄暗い無人駅にいる。",
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "content_id": "CNT-002",
+      "type": "event",
+      "text": "遊園地の『お猿さん電車』のような乗り物が現れ、投稿者は乗車する。",
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "content_id": "CNT-003",
+      "type": "event",
+      "text": "車内放送に従って他の乗客が順番に残酷な処理を受け、投稿者自身にも順番が近づく。",
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "content_id": "CNT-004",
+      "type": "action",
+      "text": "投稿者は夢だと認識し、覚醒して危害場面から離脱する。",
+      "evidence_refs": [
+        "EVD-004"
+      ]
+    },
+    {
+      "content_id": "CNT-005",
+      "type": "event",
+      "text": "4年後、同じ夢が前回の続きから再開する。",
+      "evidence_refs": [
+        "EVD-005"
+      ]
+    },
+    {
+      "content_id": "CNT-006",
+      "type": "action",
+      "text": "再開した夢でも投稿者は再び覚醒して離脱する。",
+      "evidence_refs": [
+        "EVD-005"
+      ]
+    },
+    {
+      "content_id": "CNT-007",
+      "type": "outcome",
+      "text": "終端では次回は逃がさない旨の警告が示される。",
+      "evidence_refs": [
+        "EVD-006"
+      ],
+      "notes": "その後の再発・現実身体危害・死亡等は確認できない。"
+    },
+    {
+      "content_id": "CNT-008",
+      "type": "claim",
+      "text": "夢の原因主体、反復理由、車内放送や終端警告の主体は説明されない。",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-005",
+        "EVD-006"
+      ]
+    },
+    {
+      "content_id": "CNT-009",
+      "type": "claim",
+      "text": "2003年『猿夢＋』では、元の猿夢を読んだ別の人物が数日後に類似する夢を見たと投稿する型が後代資料で確認される。",
+      "evidence_refs": [
+        "EVD-007"
+      ],
+      "notes": "2000年型の共有核には含めず、読者感染型の絶対的初出も固定しない。"
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "VAR-001",
+      "kind": "initial",
+      "description": "2000年8月2日の保存転載で確認できる一人称反復夢型。無人駅、お猿さん電車、順次危害、覚醒、4年後の続きからの再開、再覚醒、終端警告。",
+      "attestation": "obake.cc 2000年8月保存転載で間接確認。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004",
+        "CNT-005",
+        "CNT-006",
+        "CNT-007",
+        "CNT-008"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003",
+        "EVD-004",
+        "EVD-005",
+        "EVD-006"
+      ],
+      "notes": "原投稿未固定。夢内危害を現実身体への作用へ変換しない。"
+    },
+    {
+      "variant_id": "VAR-002",
+      "kind": "later",
+      "description": "2003年『猿夢＋』で確認される、元の猿夢を読んだ受容者が類似夢を見る方向の増補。",
+      "content_refs": [
+        "CNT-009"
+      ],
+      "evidence_refs": [
+        "EVD-007"
+      ],
+      "notes": "History Evidenceとして扱い、2000年型のD11〜D18へ混ぜない。絶対的初出は固定しない。"
+    }
+  ],
+  "uncertainties": [
+    {
+      "text": "2000年の原2ちゃんねる投稿ページは直接固定していない。",
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "content_refs": [
+        "CNT-001"
+      ]
+    },
+    {
+      "text": "投稿が実夢体験か創作かは確定できない。",
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "content_refs": [
+        "CNT-001"
+      ]
+    },
+    {
+      "text": "夢の原因主体、反復機構、終端警告の主体は不明である。",
+      "evidence_refs": [
+        "EVD-005",
+        "EVD-006"
+      ],
+      "content_refs": [
+        "CNT-008"
+      ]
+    },
+    {
+      "text": "2003年『猿夢＋』の原スレッドは未固定で、読者感染型の絶対的初出は固定しない。",
+      "evidence_refs": [
+        "EVD-007"
+      ],
+      "content_refs": [
+        "CNT-009"
+      ]
+    }
+  ]
+}
