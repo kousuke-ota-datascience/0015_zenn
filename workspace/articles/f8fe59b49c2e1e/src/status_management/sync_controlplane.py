@@ -1,4 +1,4 @@
-"""CLI entrypoint for deterministic control-plane synchronization."""
+"""Optional token-based CLI adapter for deterministic control-plane synchronization."""
 from __future__ import annotations
 
 import argparse
