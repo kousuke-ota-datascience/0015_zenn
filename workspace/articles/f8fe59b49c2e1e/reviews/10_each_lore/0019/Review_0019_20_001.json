@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0019",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0019_chiisai_ojisan/0019_20_analysis.json",
+    "commit_sha": "33f4522d74242467d03042ae5bcdc9c430b71b83",
+    "blob_sha": "0bc511d54efc6c34ac4c38fb7b71e29891723401",
+    "reviewed_at": "2026-09-18T16:56:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "2009年の複数目撃型のみをScopeとし、2012年以降の個人反復談、全国集成本、フェイクドキュメンタリーを除外する。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "固定物語ではなく目撃報告群として、視覚遭遇・目撃証言・正体未確定を中心に判定する。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "明示的taxonomy gapは不要。D10/D19等は分類不足ではなくEvidence・存在論の不確定としてUにしている。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "偶発的視認→短時間の出現→隠れる・逃げる等で終了という最小構造に限定し、共通しない行動を因果核へ格上げしていない。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "D/I判定はScopeのCNT/EVDへ追跡可能。後代の全国集成・創作を主要分析へ遡及していない。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Contentsを独立再構成しても、D07未知存在、D08目撃報告、D11視覚曝露、D13出現のみが中心となる点は不変。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "直接確認できる媒体・目撃形式はD、共有構造からの推論はI、成立年代・最古媒体・存在論・流通範囲等はUに抑制する。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12は目撃者、D13は共有核としての出現、D15は目撃後も正体不明が残ること。固定被害を導入せず因果列が整合する。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "社会現実層の独立X evidenceを付与せず、目撃談内部の怪異出現L1のみをIとする。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "Web公開・著名人の存在を全国分布の証明へ読み替えず、2009年Scopeの実分布はUとしている。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "特権保持者の記載がないだけでNO_ONE_KNOWSを付与せずU。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "風呂・寝室・洗濯機周辺等の一般生活空間で成立するためA1。特定地点の実在性を必要条件にしていない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "目撃主張を客観的存在証明へ格上げせず、2009年を絶対起源とせず、妖怪等へ正体を固定しない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "全国型怪異・儀式／物語・伝説という上位分類の下で、実質は非危害中心の目撃型怪異としてContentと整合する。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "2009年に集成された『小さいおじさん』は、日常空間で小型の成人男性様存在を一時的に見る複数の目撃談群で、服装・行動・場所・正体は統一されない。共有核は偶発的な視覚遭遇と正体不明性であり、後代の反復個人談や創作メディアはScope外。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-006"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-008"
+    ],
+    "status": "PASS",
+    "notes": "D10/D19をUに保ち、存在論・全国分布を過大推定しない。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Version Scope、全21次元、存在論と流通範囲のEvidence ceilingを独立監査しPass。"
+}

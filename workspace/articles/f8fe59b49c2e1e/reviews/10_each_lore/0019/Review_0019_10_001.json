@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0019",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0019_chiisai_ojisan/0019_10_contents.json",
+    "commit_sha": "8320a7062cf0835f11e0c7d3b89d835ad6e8d014",
+    "blob_sha": "ee73498f7d9b61d5d372557da39f3a44a4ea43a5",
+    "reviewed_at": "2026-09-18T16:56:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜006はEVDへ追跡でき、複数目撃を一つの固定ストーリーへ統合せず、後代の個人反復談・創作を区別している。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryだけから、小型成人男性様存在の偶発目撃、場面・行動の多様性、非固定の正体、後代集成・創作展開を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。攻撃・召喚・固定能力をEvidenceなしに追加していない。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001を2009年目撃群、VAR-002を特定人物の反復談、VAR-003を集成・創作メディア展開として分離。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "目撃の実在性、正体、外見・行動の非統一、起源年を未確定に保持する。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "日常空間で通常よりはるかに小さい成人男性のような存在を一時的に見るという目撃談群。2009年時点で複数人物の異質な証言が集まり、場所・服装・行動は一定せず、正体も妖精・妖怪・UMA等に確定しない。後代の個人反復談やフェイクドキュメンタリーは別層。",
+    "reference_story": "EvidenceとContentを照合すると、blind decodeは固定ストーリー化を避け、目撃談群としての共有核と不確実性を保持している。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "小さい成人男性様存在と目撃者。",
+        "reference": "primary_actorsと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "直接の被作用者というより、目撃者が経験主体。",
+        "reference": "affected_targetsと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "日常空間で偶然その存在を視認する。",
+        "reference": "entry_triggerと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "共有核として固定された因果主体は不明。",
+        "reference": "causal_agent=unknownと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "小型男性様存在が短時間現れ視認される。",
+        "reference": "mechanismとCNT-001/002に一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "日常→出現・視認→隠れる・逃げる等で終了。",
+        "reference": "state_transitionと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "多くは短い単発目撃。",
+        "reference": "temporal_structureと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "召喚規則・禁忌は共有核にない。",
+        "reference": "rules_and_taboos=not_applicableと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "回避・制御手順を必要としない観察型。",
+        "reference": "avoidance_control=not_applicableと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "隠れる・逃げる、または目撃だけで終了。",
+        "reference": "terminal_stateと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "実在性・正体・外見規則・起源が未確定。",
+        "reference": "uncertaintiesと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "2009目撃群、後代個人反復談、創作展開を分離。",
+        "reference": "variant_boundariesとVAR-001〜003に一致。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summary再構成と詳細Content参照後で、2009年の異質な目撃談群をVersion Scopeにする判断は不変。"
+    },
+    "verdict": "PASS"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。目撃型構造、非固定存在論、variant境界を独立監査しPass。"
+}

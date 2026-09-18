@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0019",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0019_chiisai_ojisan/0019_00_sources.json",
+    "commit_sha": "001c56e86104baaba2c203a75a565a3e6372f179",
+    "blob_sha": "f089d9c64a839d5d6f06aab3e0858fcbf1cd2675",
+    "reviewed_at": "2026-09-18T16:56:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "2009年同時代の目撃談集成、2012/2014年の本人発言報道、2012年集成本、後代の流行時期解説を役割別に配置している。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "個々の目撃主張、伝承カテゴリーの集成、フェイクドキュメンタリー創作を分離し、目撃の客観的実在を証明した扱いにしていない。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜008は各記事・書誌の範囲内で、複数の場所・行動・正体候補を保持し、統一された外見・能力を捏造していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "本人イベント発言の報道は当人の体験主張として扱い、2009年集成記事や2012年書籍は複数証言を束ねる媒体として区別している。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2009年記事を『現在確認できる早い同時代集成の一つ』と限定し、最初の目撃・絶対起源とはしていない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "存在の客観的事実性、正体、サイズ・服装・行動の統一性、起源時期を未確定のまま保持する。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。目撃主張と創作の分離、存在論的不確実性、起源表現を監査しPass。"
+}
