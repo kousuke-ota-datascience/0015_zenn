@@ -138,17 +138,12 @@
       "dimension_id": "D07",
       "status": "I",
       "primary": {
-        "code_id": "D07.ICT.STRANGER_THREAT",
-        "parent_id": "D07.ICT"
+        "code_id": "D07.ANO.UNKNOWN_EXISTENCE",
+        "parent_id": "D07.ANO"
       },
-      "secondary": [
-        {
-          "code_id": "D07.ANO.UNKNOWN_EXISTENCE",
-          "parent_id": "D07.ANO"
-        }
-      ],
-      "rationale": "口の裂けた見知らぬ女性という存在が、日常圏に現れる脅威として意味形成の中心になる。",
-      "manifestation": "身近な空間に現れる正体不確かな女性への恐怖を形にする。",
+      "secondary": [],
+      "rationale": "初期Scopeで安全に確認できるのは、口が耳まで裂けた女性状存在をめぐる噂である。襲撃・遭遇条件は固定できないため、対人脅威より未知存在として保守的にコードする。",
+      "manifestation": "日常圏に語られる正体不確かな女性状存在を意味形成対象とする。",
       "content_refs": [
         "CNT-001"
       ],
@@ -245,14 +240,11 @@
     },
     {
       "dimension_id": "D12",
-      "status": "I",
-      "primary": {
-        "code_id": "D12.GRP.DEMOGRAPHIC_GROUP",
-        "parent_id": "D12.GRP"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "研究者整理では子どもの噂として流通し、代表形も子どもを遭遇者として語る。初期核の対象を子ども集団へ限定することには推論を含む。",
-      "manifestation": "子ども・若年層が脅威の中心的受容・対象として置かれる。",
+      "rationale": "子どもの間で噂が流通したことは確認できるが、それだけでは初期核における怪異の作用対象が子どもだとは確定できない。後代代表形の子ども遭遇者を遡及しない。",
+      "manifestation": "初期Scopeの作用対象は未確定。",
       "content_refs": [
         "CNT-001"
       ],
@@ -284,13 +276,11 @@
     },
     {
       "dimension_id": "D14",
-      "status": "I",
-      "primary": {
-        "code_id": "D14.NEG"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "裂けた口の女性をめぐる恐怖の噂として提示されるため負の極性は安全に読める。",
-      "manifestation": "恐怖・危険を伴う怪異として提示される。",
+      "rationale": "不気味な存在としての噂は確認できるが、初期Scopeには作用・帰結そのものを確定できるContentがないため、結果極性をNEGへ先取りしない。",
+      "manifestation": "初期Scopeの帰結極性は未確定。",
       "content_refs": [
         "CNT-001"
       ],
@@ -430,5 +420,5 @@
       }
     }
   ],
-  "analysis_notes": "Blind E2E再生成。10 Contentsは伝承内部の人物・行動・規則・異伝を中心に構成し、流通史・社会反応はContent Unit化せずEvidenceから来歴次元へ直接traceした。"
+  "analysis_notes": "Blind E2E再生成。10 Contentsは伝承内部の人物・行動・規則・異伝を中心に構成し、流通史・社会反応はContent Unit化せずEvidenceから来歴次元へ直接traceした。 Pre-freeze semantic reviewで、初期核に後代の対象・負の帰結を遡及していたD12/D14をUへ、D07をUNKNOWN_EXISTENCEへ保守化した。"
 }
