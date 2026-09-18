@@ -1,1 +1,1 @@
-verify 0180 golden semantics in rendered markdown
+verify 0180 golden semantics in rendered markdown after 110 detail restoration
