@@ -84,6 +84,19 @@ def validate_references(entry_id: str, artifacts: Mapping[str, ParsedArtifact]) 
         content_ids.update(cvals)
         variant_ids.update(vvals)
 
+        summary = a10.data.get("summary", {})
+        if isinstance(summary, dict):
+            for ref in summary.get("coverage_refs", []):
+                if ref not in content_ids:
+                    errors.append(
+                        _issue(
+                            "V-REF-001",
+                            "10",
+                            "$.summary.coverage_refs",
+                            f"dangling content reference: {ref}",
+                        )
+                    )
+
         if a00:
             for idx, unit in enumerate(units):
                 if isinstance(unit, dict):
