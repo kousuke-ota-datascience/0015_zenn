@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0178",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "mirror_reprint_or_restoration",
+      "title": "obake.cc 2000年8月保存転載「猿夢」",
+      "locator": "2000-08-02 07:03以降の匿名投稿。無人駅、お猿さん電車、順次危害、覚醒、4年後再開、終端警告",
+      "accessed_at": "2026-09-16",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://obake.cc/archive/2000/08",
+      "bibliographic_info": "2000年8月2日の匿名掲示板投稿を保存した転載ページ",
+      "archive_info": "obake.cc保存転載",
+      "notes": "原2ちゃんねる投稿ページは今回未固定。Contentは保存転載からの間接確認として扱う。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "later_summary_or_commentary",
+      "title": "「猿夢はどこから始まったのか｜2000年『洒落怖』と“読むと見る夢”の成立を追う」",
+      "locator": "「2003年『猿夢＋』｜“読んだ人も夢を見る”が現れる」節",
+      "accessed_at": "2026-09-16",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "H",
+        "A"
+      ],
+      "url": "https://peperoncino-y.com/saruyume-origin/",
+      "bibliographic_info": "2000年型と2003年「猿夢＋」の成立差を整理する後代起源検討記事",
+      "archive_info": "公開Web記事",
+      "notes": "2003年5月の『猿夢＋』を後代History Evidenceとして使う。原スレッド未固定のため絶対的初出とはしない。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "2000-08-02 07:03以降の投稿冒頭",
+      "content": "投稿者は夢を見ていると自覚した状態で薄暗い無人駅にいると語る。",
+      "representation": "paraphrase",
+      "uncertainty": "原投稿ページ未固定。保存転載を介した確認であり、実夢体験か創作かは確定しない。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "同投稿前半",
+      "content": "遊園地の『お猿さん電車』のような乗り物が現れ、投稿者は乗車する。",
+      "representation": "paraphrase",
+      "uncertainty": "夢内の具体的実在性・原因は確定しない。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-001",
+      "locator": "同投稿中盤",
+      "content": "車内放送に従って他の乗客が順番に残酷な処理を受け、投稿者自身にも順番が近づく。",
+      "representation": "paraphrase",
+      "uncertainty": "他乗客への危害は夢内描写であり、現実身体への作用を意味しない。"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-001",
+      "locator": "同投稿中盤",
+      "content": "投稿者は自分の順番が近づいたところで夢だと認識し、覚醒して場面から離脱する。",
+      "representation": "paraphrase",
+      "uncertainty": "覚醒が一般化可能な確実な回避法であるとは断定しない。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-001",
+      "locator": "同投稿後半",
+      "content": "4年後、同じ夢が前回の続きから再開し、投稿者は再び覚醒する。",
+      "representation": "paraphrase",
+      "uncertainty": "再発条件・周期・原因は説明されない。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-001",
+      "locator": "同投稿終端",
+      "content": "終端では、次回は逃がさない旨の警告が示される。",
+      "representation": "paraphrase",
+      "uncertainty": "警告主体、次回再発、現実身体への危害は確認できない。"
+    },
+    {
+      "evidence_id": "EVD-007",
+      "source_id": "SRC-002",
+      "locator": "2003年『猿夢＋』節",
+      "content": "2003年5月までに、元の『猿夢』を読んだ人物が数日後に類似する夢を見たと投稿する『猿夢＋』型が後代資料で確認される。",
+      "representation": "paraphrase",
+      "uncertainty": "原スレッド未固定で、読者感染型の絶対的初出を2003年と断定しない。"
+    }
+  ],
+  "notes": "旧0178 Legacyの典拠意味をcanonicalへ移管。2000年型は保存転載由来、2003年『猿夢＋』は後代起源検討資料を介したHistory Evidenceとして区別する。"
+}
