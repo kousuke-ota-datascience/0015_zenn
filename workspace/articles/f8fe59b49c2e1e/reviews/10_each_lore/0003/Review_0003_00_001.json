@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0003",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0003_akai_kami_aoi_kami/0003_00_sources.json",
+    "commit_sha": "d817fd0411a6aad0e2fdd7008989b35d9d192e7b",
+    "blob_sha": "f9bbfe655743504be7cee49786ddec19175aa95b",
+    "reviewed_at": "2026-09-18T13:39:49Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "1972/1986/1990/2001の採録、書誌確認、1939年関連流言、1930年代回想を資料種別ごとに分離している。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "原誌未実見箇所は日文研DBの要約範囲を超えて補完せず、representation=paraphraseとuncertaintyで限界を保持している。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "各Evidenceは対応Sourceの記載範囲に収まり、後代回想・直接系譜未証明・書誌不一致を明記している。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "日文研DB要約を原誌本文そのものとして扱わずdirect_derivativeとし、NDL/CiNii書誌確認を内容Evidenceと混同していない。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1972年尼崎の学校便所型を現在書誌確認できる早い公刊採録として扱う一方、絶対的起源とはしていない。1930年代回想・1939年街路流言は別系統の不確実資料として保持している。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "1930年代起源、1939年赤マントとの系譜、原誌本文未実見、1986年異伝間の派生順序を未確定のまま保持している。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。最古確認と起源、同時代記録と後代回想、学校便所型と街路『赤マント』流言を分離して再監査しPass。"
+}

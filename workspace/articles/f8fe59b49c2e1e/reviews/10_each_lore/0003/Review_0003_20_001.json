@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0003",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0003_akai_kami_aoi_kami/0003_20_analysis.json",
+    "commit_sha": "0da450e372e6f16c0b02d8562d4de03dd7323c00",
+    "blob_sha": "aed4a24e9ee44b7501f23bfec3e6b1719533d4ab",
+    "reviewed_at": "2026-09-18T13:39:49Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "1972年尼崎型だけを既定Scopeとし、1986年以降の致死・安全回答・衣服型を除外している。coding rulesの最も早い安定共有核への縮約と整合する。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D01〜D21は1972年Scopeに対してコードされ、後代有名要素でUnknownを埋めていない。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "使用コードはいずれも現行taxonomyで表現可能で、新規gapはない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "Scoped因果列は便所進入→お化けの顕現・問いかけまで。質問後の身体危害・死亡を追加していない。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "各dimensionはCNT-001/002とEVD-001/002を中心に直接追跡できる。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryとContentから再構成される1972年Scopeの分析構造は20 Analysisと一致する。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D01/D02/D03/D04/D14/D15/D17/D20を資料不足としてUに保持し、もっともらしい値で補完していない。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=便所利用者、D13=怪異の顕現・問いかけ、D15=終端帰結不明(U)で、Contentの情報上限と整合する。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "L3は1972年Scope内で、噂のため児童が連なって便所へ行っていたという現実行動Evidence EVD-002を独立に持つ。L2は選択していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "1972年Scopeでは学校・若者集団のみを選び、後代の広域流通を全国流通として遡及していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "特権情報保持者が確認できないことをNO_ONE_KNOWSへ変換せずUとしている。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "資料自体の実在性ではなく、Scoped Contentが一般的な学校便所背景に依存することからA1をIとしている。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "日文研DB要約を介する箇所は必要に応じI/Uを用い、最古確認を生成時期や直接媒体へ格上げしていない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "『学校怪談・便所怪談』『物語・伝説』は1972年の学校便所伝承と後代同系異伝の内容に整合する。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "学校という日常空間の便所に正体を『お化け』として与え、そこへ入った児童へ色に関する問いかけを行う主体として理解可能にする学校怪談である。1972年Scopeでは危害の終端規則は確定せず、怪異の存在と遭遇規則が共有されることで児童の実際の便所利用行動まで変化している。後代には色選択と危害・回避が規則化されるが、これはScoped因果核へ遡及しない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "PASS",
+    "notes": "1972年Scopeから独立再構成。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。1972年Scopeに限定した保守的Coding、D18 L3のX Evidence、Unknown維持を重点監査しPass。"
+}

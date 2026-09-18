@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0003",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0003_akai_kami_aoi_kami/0003_10_contents.json",
+    "commit_sha": "690209a88d2d7ad1a69cba9559071c496e847c23",
+    "blob_sha": "18a1ca2b70ae3900ce571c8963ec785795340df9",
+    "reviewed_at": "2026-09-18T13:39:49Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜009は各Evidenceの記載範囲を超えず、原誌未実見・回想資料・系譜未証明の留保も保持している。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryだけで1972年の初期核、後代の色分岐・衣服型・多色型、1939年関連流言、1930年代回想と主要不確実性を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12でactor/target/trigger/cause/mechanism/transition/time/rule/control/terminal/unknown/variant境界の欠落なし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "1972年型をinitialとし、1986年以降の危害規則、1939年街路流言、1930年代後代回想を初期核へ遡及していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "生成年代・系譜・原誌本文未実見・異伝派生順序・普遍的安全回答の不存在を明示している。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs 9件をBlind Decode後に個別監査しLOSS/CONFLICTなし。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1972年尼崎では、学校便所へ行くとお化けが赤い紙か白い紙かを尋ねるという伝説が低学年に共有され、その噂のため児童が連なって便所へ行っていた。1986年には赤・青・白、赤・紫の色選択が危害・無事へ分岐する型と、赤いチャンチャンコへの承諾が斬首へつながる型が確認される。1990年には特定個室の赤いマント型と個室回避、2001年には多色・多帰結型がある。1939年の街路『赤マント』流言と1930年代学校便所型の後代回想は関連史料だが、1972年以降の学校便所型との直接系譜は確定しない。",
+    "reference_story": "EvidenceとContentを参照すると、現在書誌確認できる早い学校便所型は1972年尼崎の赤・白質問型であり、回答後の超自然的帰結は現Evidenceから固定できない。1986年以降に色選択と危害／回避の分岐、赤いチャンチャンコ／赤いマントという衣服型、2001年の多色型が確認される。1939年街路流言と1930年代回想は関連するが系譜未証明であり、絶対的起源として統合しない。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "学校便所に現れるお化け／正体不明の声と、便所利用者。",
+        "reference": "学校便所に現れるお化け／正体不明の声と、便所利用者。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "主に児童・生徒。後代には成人例もある。",
+        "reference": "主に児童・生徒。後代には成人例もある。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "便所へ入る・利用する。後代では問いへの回答・選択。",
+        "reference": "便所へ入る・利用する。後代では問いへの回答・選択。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "1972年型は『お化け』、後代には正体不明の声・怪異。",
+        "reference": "1972年型は『お化け』、後代には正体不明の声・怪異。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "色・衣服について問い、後代では回答を危害・回避へ結ぶ。",
+        "reference": "色・衣服について問い、後代では回答を危害・回避へ結ぶ。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "便所進入→問いかけ。後代では回答→危害または回避。",
+        "reference": "便所進入→問いかけ。後代では回答→危害または回避。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "個別遭遇は一回の便所利用内。採録史上は1972→1986→1990→2001と変異を確認。",
+        "reference": "個別遭遇は一回の便所利用内。採録史上は1972→1986→1990→2001と変異を確認。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "後代では色・回答別規則があるが、安全回答は白・紫・黄など一定しない。",
+        "reference": "後代では色・回答別規則があるが、安全回答は白・紫・黄など一定しない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "1972年では連れ立って便所へ行く行動、後代には安全色や特定個室回避がある。",
+        "reference": "1972年では連れ立って便所へ行く行動、後代には安全色や特定個室回避がある。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "1972年型の終端は未確定。後代には出血・絞殺・引き込み・斬首・死亡・無事等。",
+        "reference": "1972年型の終端は未確定。後代には出血・絞殺・引き込み・斬首・死亡・無事等。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "生成時期、1939年との系譜、原誌本文、異伝間の派生順序が未確定。",
+        "reference": "生成時期、1939年との系譜、原誌本文、異伝間の派生順序が未確定。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "1972初期核、1986色分岐、1986-1990衣服型、2001多色型、1939関連流言、1930年代後代回想を分離。",
+        "reference": "1972初期核、1986色分岐、1986-1990衣服型、2001多色型、1939関連流言、1930年代後代回想を分離。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryは1972年初期Scopeと後代異伝境界を保持しており、D01のU、D14/D15/D17のU、D18 L3のScope内社会効果という20 Analysis判断を再構成できる。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "1972年尼崎で、学校便所のお化けが赤い紙か白い紙かを尋ねる伝説が低学年、とくに一年生に広がっていた。",
+        "blind_reconstruction": "1972年尼崎の学校便所で、お化けが赤・白の紙を尋ねる伝説が低学年に共有されていた。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "1972年採録では噂のため児童が連なって便所へ行っていた。",
+        "blind_reconstruction": "同じ噂が児童の便所利用行動を変え、連れ立って行く行動が記録される。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "1986年東京の赤・青・白型では赤=血だらけ、青=絞殺、白=無事。",
+        "blind_reconstruction": "1986年には赤・青・白の選択が危害または無事へ分岐する型が確認される。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "1986年東京の赤・紫型では赤=便器へ引き込み、紫=助かる。",
+        "blind_reconstruction": "別の1986年型では赤と紫の選択が引き込みと回避へ分岐する。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "1986年の赤いチャンチャンコ型では承諾した婦人警官が斬首され、血で衣服が赤くなる。",
+        "blind_reconstruction": "1986年には『赤いチャンチャンコ』への承諾が斬首・出血へ結びつく衣服型もある。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "1990年藤沢の特定個室では赤いマントをかぶせるかと三度問う声があり、生徒が近づかない。",
+        "blind_reconstruction": "1990年には特定個室の『赤いマント』型と、その個室を避ける学校内行動が確認される。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "2001年神戸では赤・青・黄・白の多色選択に死亡・回避・壁への引き込み等が割り当てられる。",
+        "blind_reconstruction": "2001年には四つの色へ異なる死亡・回避・引き込み結果を割り当てる多色型がある。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-008",
+        "salient_meaning": "1939年東京には街路を徘徊する『赤マントの男』流言の同時代記事があるが学校便所型との直接系譜は未確認。",
+        "blind_reconstruction": "1939年の街路『赤マント』流言は関連史料として存在するが、学校便所型への直系関係は固定しない。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-009",
+        "salient_meaning": "1987年公刊資料を参照する後代整理には1930年代豊科小学校の赤・青マント便所怪談の回想例がある。",
+        "blind_reconstruction": "1930年代とされる学校便所型は後代回想として存在するが、同時代記録ではない。",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。summary.coverage_refs全9件を監査し、具体的意味・variant境界・不確実性のLOSS/CONFLICTなし。"
+}
