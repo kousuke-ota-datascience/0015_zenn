@@ -389,9 +389,12 @@ Verdict severity自体から修正artifactを決めない。
 - 追加の公開CLIや追加ユーザー引数を要求しない。
 - Entry_IDが存在するだけで「修正開始」と推測しない。
 - **明示されたWorkflow 00実行要求 + CORRECTION_REQUIRED確認 + correction phaseへの実遷移**の組合せを開始イベントとする。
-- control planeへこの開始イベントを反映するdeterministic手段が必要な場合、その実装責務はWorkflow 90 / status management側へ置く。
+- correction start eventはWorkflow 90へ内部イベントとして渡す。
+- Workflow 90はcurrent `reconcile.py` のdeterministic ruleで適用可否を検査する。
+- current artifact / control plane post-SHA / latest non-Pass Review targetがexact一致しない場合はBLOCKする。
+- 同じeventの重複実行はidempotentとする。
 
-この開始イベントをcontrol planeへ安全に反映できない間は、`要修正 -> 再作業中` の自動遷移を完了扱いにしない。
+これにより `要修正 -> 再作業中` はEntry_IDからの推測ではなく、Workflow 00の実遷移イベントとして決定論化する。
 
 ## 7.7. Phase 6: 最終収束
 
@@ -592,7 +595,7 @@ Workflow 90の `PASS / UPDATED` は後続処理可能。
               sync        汚染しない
 ```
 
-E2E Test ProtocolはWorkflow 00と同じ処理規則を隔離環境で実行し、
+`0000_e2e_test_protocol.md` はWorkflow 00と同じ処理規則を隔離環境で実行し、
 
 - 既存canonical
 - Legacy
@@ -641,12 +644,12 @@ PythonはLLMオーケストレーションの代替ではなく、deterministic 
 python -m src.validation.validate_entry <Entry_ID> [--through 00|10|20]
 python -m src.reviewing.review_writer prepare <Entry_ID>
 python -m src.reviewing.review_writer write <Entry_ID>
-python -m src.status_management.sync_controlplane <Entry_ID>
 ```
 
 - Workflow 00は上記の内部ロジックを再実装しない。
-- Workflow 10 / 20 / 90が定める公開入口・責務境界をそのまま利用する。
-- 意味論上の「次に何をするか」はWorkflow 00を読んだLLMが判断し、機械的に一意な検査・保存・同期だけPythonへ委譲する。
+- Workflow 10 / 20 / 90が定める責務境界をそのまま利用する。
+- Workflow 90の本番I/OはGitHub / Notion connectorを使い、state transitionはcurrent `reconcile.py` をdeterministicに実行する。
+- 意味論上の「次に何をするか」はWorkflow 00を読んだLLMが判断し、機械的に一意なvalidation / Review保存 / control-plane収束は各deterministic実装へ委譲する。
 
 # 17. 完了不変条件
 
