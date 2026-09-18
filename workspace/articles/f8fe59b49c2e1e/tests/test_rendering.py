@@ -52,3 +52,58 @@ def test_review_renderer_does_not_modify_review_json(
 
     assert output.is_file()
     assert source.read_bytes() == before
+
+
+def test_00_renderer_preserves_source_audit_metadata(
+    tmp_path, monkeypatch, valid_sources
+):
+    root = tmp_path / "article"
+    source = root / "docs/10_each_lore/0001/0001_00_sources.json"
+    source.parent.mkdir(parents=True, exist_ok=True)
+    data = copy.deepcopy(valid_sources)
+    data["sources"][0].update(
+        {
+            "accessed_at": "2026-09-18",
+            "bibliographic_info": "Fixture bibliography",
+            "archive_info": "Fixture archive",
+            "notes": "Fixture source note",
+        }
+    )
+    data["evidence"][0]["notes"] = "Fixture evidence note"
+    source.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    monkeypatch.setattr(render_00_sources, "ARTICLE_ROOT", root)
+    monkeypatch.setattr(
+        render_00_sources, "resolve_artifact_path", lambda entry_id, kind: source
+    )
+
+    output = render_00_sources.render("0001")
+    rendered = output.read_text(encoding="utf-8")
+    for expected in (
+        "2026-09-18",
+        "Fixture bibliography",
+        "Fixture archive",
+        "Fixture source note",
+        "Fixture evidence note",
+    ):
+        assert expected in rendered
+
+
+def test_10_renderer_preserves_variant_notes(
+    tmp_path, monkeypatch, valid_contents
+):
+    root = tmp_path / "article"
+    source = root / "docs/10_each_lore/0001/0001_10_contents.json"
+    source.parent.mkdir(parents=True, exist_ok=True)
+    data = copy.deepcopy(valid_contents)
+    data["variants"][0]["notes"] = "Fixture variant note"
+    source.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    monkeypatch.setattr(render_10_contents, "ARTICLE_ROOT", root)
+    monkeypatch.setattr(
+        render_10_contents, "resolve_artifact_path", lambda entry_id, kind: source
+    )
+
+    output = render_10_contents.render("0001")
+    rendered = output.read_text(encoding="utf-8")
+    assert "Fixture variant note" in rendered
