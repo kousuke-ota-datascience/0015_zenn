@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "entry_id": "0001",
-  "macro_category": "全国型怪異・儀式",
-  "entry_type": "物語・伝説",
+  "macro_category": "怪人・怪異遭遇",
+  "entry_type": "口承都市伝説",
   "version_scope": {
-    "description": "1979年初頭〜同年春に確認できる最小安定共有核。日常社会の中に『口が裂けた女性（口裂け女）』が出現し、主として小中学生・子どもを脅かし／襲うとされる遭遇・危害型の噂を分析対象とする。定型質問、二段階の正体提示、特定の服装・武器・超人的能力、ポマード・べっこう飴・特定回答等の回避規則、固定由来譚などは含めない。",
+    "description": "既定Scopeは、1978年末〜1979年初めに確認できる『口が耳まで裂けた女性』という最小の初期核。マスク越しの質問、回答分岐、追跡、俊足、武器、ポマード、べっこう飴、由来説明等の後代・地域異伝は分析Scopeから除外する。",
     "included_variants": [
       "VAR-001"
     ],
@@ -13,12 +13,9 @@
       "VAR-003"
     ],
     "content_refs": [
-      "CNT-001",
-      "CNT-002",
-      "CNT-003",
-      "CNT-004"
+      "CNT-001"
     ],
-    "notes": "1979年6月の全国化・登校拒否Evidenceは後続流通史として保持するが、Scoped VersionのD18 L3には流用しない。"
+    "notes": "詳細な会話型を最古層へ遡及しない。来歴EvidenceはD01-D03等で直接参照するが、伝承内容のContent Unitへ流通史を混入させない。"
   },
   "dimensions": [
     {
@@ -28,16 +25,12 @@
         "code_id": "D01.G3"
       },
       "secondary": [],
-      "rationale": "1978年末頃の岐阜での流通は後代整理だが、1979年1月には同時代新聞記事の所在を確認できるため、成立年代帯は1970年代へ安全に写像できる。",
-      "manifestation": "1970年代末に子ども社会で可視化した現代伝承として扱う。新聞掲載日そのものを起源日とはしない。",
-      "content_refs": [
-        "CNT-001",
-        "CNT-002"
-      ],
+      "rationale": "1978年暮れ頃の噂という後代研究者整理と、1979年1月の同時代新聞掲載所在により1970年代へ安全に置ける。",
+      "manifestation": "最古確認層は1978年末〜1979年初め。",
+      "content_refs": [],
       "evidence_refs": [
         "EVD-001",
-        "EVD-005",
-        "EVD-007"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -51,14 +44,11 @@
         "parent_id": "D02.ORL"
       },
       "secondary": [],
-      "rationale": "後代専門家整理は、1978年末頃の岐阜で子ども同士の噂として流通していたことを示す。原採録ではないためDirectとはしない。",
-      "manifestation": "現時点で最古く再構成できる実流通回路は新聞ではなく子ども・同世代間の対人口承である。",
-      "content_refs": [
-        "CNT-001"
-      ],
+      "rationale": "後代研究者整理が、新聞報道以前に子どもの間で噂が反復されていたことを示す。原口頭記録そのものではないためI。",
+      "manifestation": "最古確認媒体は子ども・同世代間の口頭流通とみる。",
+      "content_refs": [],
       "evidence_refs": [
-        "EVD-005",
-        "EVD-007"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -73,27 +63,16 @@
       },
       "secondary": [
         {
-          "code_id": "D03.PRT.MAGAZINE",
-          "parent_id": "D03.PRT"
-        },
-        {
           "code_id": "D03.PRT.NEWSPAPER",
           "parent_id": "D03.PRT"
         }
       ],
-      "rationale": "子ども同士の口頭伝達が成立・変容に重要であり、1979年1月には新聞、3〜4月には雑誌による再提示も確認できる。",
-      "manifestation": "子ども同士の口承を中心に、新聞・雑誌が噂の存在と拡大を広域社会へ再提示する複合媒体構造を持つ。",
-      "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
-      ],
+      "rationale": "初期Scopeは子どもの噂として成立し、1979年1月には新聞にも再提示されたことが確認できる。",
+      "manifestation": "口頭流通を主とし、早期に新聞記録へ現れる。",
+      "content_refs": [],
       "evidence_refs": [
         "EVD-001",
-        "EVD-002",
-        "EVD-003",
-        "EVD-007"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -101,33 +80,15 @@
     },
     {
       "dimension_id": "D04",
-      "status": "I",
-      "primary": {
-        "code_id": "D04.VAR.ACCRETION",
-        "parent_id": "D04.VAR"
-      },
-      "secondary": [
-        {
-          "code_id": "D04.MIG.MEDIUM_SHIFT",
-          "parent_id": "D04.MIG"
-        },
-        {
-          "code_id": "D04.VAR.ORAL_VARIATION",
-          "parent_id": "D04.VAR"
-        }
-      ],
-      "rationale": "子ども間の反復で属性・能力・弱点が追加されたとの専門家整理があり、口承から新聞・雑誌への媒体移行も確認できる。",
-      "manifestation": "新しい能力・弱点・ルールを付け足す増補に、口承変異と媒体移行が重なる。",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "初期Scopeそのものの生成・変容様式を直接示す資料はなく、後代の設定増補を初期Scopeへ混ぜない。",
+      "manifestation": "後代のaccretionは確認できるが、初期核の変容方式としては未確定。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-006",
-        "CNT-007"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-002",
-        "EVD-007",
         "EVD-008"
       ],
       "taxonomy_gap": {
@@ -138,24 +99,17 @@
       "dimension_id": "D05",
       "status": "I",
       "primary": {
-        "code_id": "D05.HRS.SCHOOL_WORK_HEARSAY",
+        "code_id": "D05.HRS.LOCAL_HEARSAY",
         "parent_id": "D05.HRS"
       },
-      "secondary": [
-        {
-          "code_id": "D05.PRP.FACT_CLAIM",
-          "parent_id": "D05.PRP"
-        }
-      ],
-      "rationale": "子ども・学校・塾圏で共有される噂として流通し、1979年4月の記事見出しでは危険な女性が小中学生を襲うという事実主張型命題として再提示される。",
-      "manifestation": "完成した一人称怪談ではなく、子ども社会の伝聞と危険主体の存在主張が結びつく。",
+      "secondary": [],
+      "rationale": "初期Scopeは地域で語られる噂として後代研究者に整理される。原口頭の実演記録ではないためI。",
+      "manifestation": "地域・同世代の噂話として提示される。",
       "content_refs": [
-        "CNT-001",
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-003",
-        "EVD-007"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -163,18 +117,18 @@
     },
     {
       "dimension_id": "D06",
-      "status": "U",
-      "primary": null,
+      "status": "I",
+      "primary": {
+        "code_id": "D06.T6"
+      },
       "secondary": [],
-      "rationale": "受容者間の原発話・採録本文を固定できておらず、共同体既知事実・条件付き信念・真偽未確定のいずれとして提示されたかを一意に決められない。",
-      "manifestation": "報道側・研究側が『噂』と呼ぶことを、伝承自身の真実性提示へ変換しない。",
+      "rationale": "初期Scopeは『噂』として記録され、真偽を確定した直接体験談や制度事実としては提示されない。",
+      "manifestation": "実在を断定しない怪異の噂として流通する。",
       "content_refs": [
-        "CNT-001",
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-003",
-        "EVD-007"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -189,17 +143,17 @@
       },
       "secondary": [
         {
-          "code_id": "D07.ICT.ABDUCTION_ASSAULT",
-          "parent_id": "D07.ICT"
+          "code_id": "D07.ANO.UNKNOWN_EXISTENCE",
+          "parent_id": "D07.ANO"
         }
       ],
-      "rationale": "Version Scopeで確実に保持できるのは、日常社会に現れる見知らぬ女性が子どもを脅かし／襲うという対人脅威構造である。",
-      "manifestation": "曖昧な対人危険を『口裂け女』という共有可能な脅威対象として切り出す。",
+      "rationale": "口の裂けた見知らぬ女性という存在が、日常圏に現れる脅威として意味形成の中心になる。",
+      "manifestation": "身近な空間に現れる正体不確かな女性への恐怖を形にする。",
       "content_refs": [
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-003"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -212,19 +166,14 @@
         "code_id": "D08.STY.COMMUNITY_REPETITION",
         "parent_id": "D08.STY"
       },
-      "secondary": [
-        {
-          "code_id": "D08.CLM.UNSUPPORTED_ASSERTION",
-          "parent_id": "D08.CLM"
-        }
-      ],
-      "rationale": "初期流通は子ども集団で反復される噂として後代整理され、物的証拠や公的事件記録より根拠未提示の共同体反復が先行する。",
-      "manifestation": "共同体内で繰り返されること自体が、通常の街路や見知らぬ女性を危険として再解釈させる手掛かりになる。",
+      "secondary": [],
+      "rationale": "子どもの間で噂が反復されていたという整理が、意味形成の入口として確認できる。",
+      "manifestation": "共同体内の反復される噂が怪異を可視化する。",
       "content_refs": [
         "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-007"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -243,15 +192,14 @@
           "parent_id": "D09.AGN"
         }
       ],
-      "rationale": "曖昧な対人危険を『口裂け女』という名前付きの識別対象へまとめる操作が意味形成上の中心であり、その脅威を意思ある女性主体へ帰属する構造も残る。",
-      "manifestation": "無名の危険を『口裂け女』と呼べる対象にし、その女性主体が子どもを襲うモデルとして共有する。",
+      "rationale": "『口裂け女』という名称で、裂けた口を持つ女性状の脅威として把握可能にする。",
+      "manifestation": "不定形の不審者・怪異不安を名前付き女性像へ集約する。",
       "content_refs": [
-        "CNT-001",
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-003",
-        "EVD-007"
+        "EVD-001",
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -259,16 +207,19 @@
     },
     {
       "dimension_id": "D10",
-      "status": "U",
-      "primary": null,
+      "status": "I",
+      "primary": {
+        "code_id": "D10.HUM.INDIVIDUAL_HUMAN",
+        "parent_id": "D10.HUM"
+      },
       "secondary": [],
-      "rationale": "Scopeでは『口が裂けた女性が子どもを襲う』という主体構造までは固定できるが、通常人間・妖怪・死者霊などの存在カテゴリーは一意に固定できない。",
-      "manifestation": "危険主体は名前付き女性像として共有されるが、その存在論は初期Scopeでは未決定のまま残る。",
+      "rationale": "初期資料整理では『女性』として語られるが、超自然存在か実在人物かは確定しないため人間状主体として保守的にI。",
+      "manifestation": "口が裂けた女性状主体が因果の中心に置かれる。",
       "content_refs": [
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-003"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -276,39 +227,37 @@
     },
     {
       "dimension_id": "D11",
-      "status": "I",
-      "primary": {
-        "code_id": "D11.PAS.SPONTANEOUS_SELECTION",
-        "parent_id": "D11.PAS"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "Scope内では質問への回答・儀式・場所進入などの再現的発動条件を固定できず、子どもが本人の選択によらず危険主体へ遭遇する構造として読むのが最小仮定である。",
-      "manifestation": "日常生活の中で偶然に危険主体へ遭遇することが因果系への入口となる。",
+      "rationale": "初期Scopeでは遭遇条件・質問・回答等の発動条件を安全に固定できない。",
+      "manifestation": "代表的後代型の遭遇規則はScope外。",
       "content_refs": [
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
+        "EVD-002",
         "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
-      },
-      "notes": "後代代表形の定型質問や回答分岐はVAR-002/VAR-003としてScope外。"
+      }
     },
     {
       "dimension_id": "D12",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D12.GRP.DEMOGRAPHIC_GROUP",
         "parent_id": "D12.GRP"
       },
       "secondary": [],
-      "rationale": "1979年4月の記事見出しが、口の裂けた女性が小・中学生を襲うと直接示す。",
-      "manifestation": "個々の主人公ではなく、子どもという属性群が危険対象として一般化される。",
+      "rationale": "研究者整理では子どもの噂として流通し、代表形も子どもを遭遇者として語る。初期核の対象を子ども集団へ限定することには推論を含む。",
+      "manifestation": "子ども・若年層が脅威の中心的受容・対象として置かれる。",
       "content_refs": [
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
+        "EVD-002",
         "EVD-003"
       ],
       "taxonomy_gap": {
@@ -317,19 +266,17 @@
     },
     {
       "dimension_id": "D13",
-      "status": "D",
-      "primary": {
-        "code_id": "D13.PHY.PHYSICAL_ATTACK",
-        "parent_id": "D13.PHY"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "1979年4月の記事見出しが『小・中学生を襲う』と直接示す。武器や具体的損傷はScope内Evidenceから補わない。",
-      "manifestation": "口裂け女は子どもへ危害を加える攻撃主体として提示される。",
+      "rationale": "初期Scopeでは具体的攻撃・追跡機構を固定できない。",
+      "manifestation": "後代代表形の追跡・攻撃はScope外。",
       "content_refs": [
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-003"
+        "EVD-003",
+        "EVD-004"
       ],
       "taxonomy_gap": {
         "present": false
@@ -337,18 +284,18 @@
     },
     {
       "dimension_id": "D14",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D14.NEG"
       },
       "secondary": [],
-      "rationale": "Scope内の主作用が子どもへの襲撃・脅威であり、利益を含む構造はない。",
-      "manifestation": "遭遇・襲撃は危険な出来事として意味付けられる。",
+      "rationale": "裂けた口の女性をめぐる恐怖の噂として提示されるため負の極性は安全に読める。",
+      "manifestation": "恐怖・危険を伴う怪異として提示される。",
       "content_refs": [
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-003"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -359,13 +306,14 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "『襲う』という作用は確認できるが、重傷・死亡・失踪・逃走など、最終的にどの領域が変化するかはScopeで固定できない。",
-      "manifestation": "危険の存在は固定できる一方、攻撃後の最終帰結領域は未確定のまま保持する。",
+      "rationale": "初期Scopeでは遭遇者に何が最終的に起きるかを固定できない。",
+      "manifestation": "後代異伝の死亡・負傷等を初期核へ遡及しない。",
       "content_refs": [
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-003"
+        "EVD-004",
+        "EVD-006"
       ],
       "taxonomy_gap": {
         "present": false
@@ -373,16 +321,13 @@
     },
     {
       "dimension_id": "D16",
-      "status": "I",
-      "primary": {
-        "code_id": "D16.EVT.SINGLE_EPISODE",
-        "parent_id": "D16.EVT"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "初期Scopeでは一回の遭遇と襲撃として編成され、遅延・周期・長期進行を示す要素は固定されていない。",
-      "manifestation": "一度の遭遇エピソード内で危険が成立する構造として読む。",
+      "rationale": "初期Scopeでは一回遭遇の時系列や反復規則を十分に固定できない。",
+      "manifestation": "代表形の質問→提示→追跡という系列はScope外。",
       "content_refs": [
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
         "EVD-003"
@@ -396,13 +341,13 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "ポマード、べっこう飴、特定回答等の回避規則は後代増補として確認できるが、VAR-001には含めないため、初期共有核の制御可能性は不明である。",
-      "manifestation": "後代の攻略法を初期形へ遡及せず、回避・制御方式はUnknownとして保持する。",
+      "rationale": "初期Scopeでは確立した回避法を確認できない。",
+      "manifestation": "ポマード・べっこう飴は後代・地域異伝として除外する。",
       "content_refs": [
-        "CNT-007"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-008"
+        "EVD-005"
       ],
       "taxonomy_gap": {
         "present": false
@@ -410,46 +355,39 @@
     },
     {
       "dimension_id": "D18",
-      "status": "I",
-      "primary": {
-        "code_id": "D18.L1"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "L1は、伝承内部で口裂け女が小中学生を襲う作用を持つため1。L2は噂を聞くこと自体が伝承内部の発動条件ではないため0。L3は1979年初頭〜春のScoped Content内に、噂流通による独立した社会行動・制度変化を支持するX Evidenceがないため0とする。",
-      "manifestation": "Scoped Versionでは伝承内部の襲撃作用のみを保持し、受容そのものへの怪異作用やScope内社会制度作用は固定しない。",
+      "rationale": "初期Scopeで作用機構自体が十分固定できないため、L1/L2/L3を恣意的に確定しない。",
+      "manifestation": "社会反応や後代受容を作用レイヤーへ逆輸入しない。",
       "content_refs": [
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-003"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
-      },
-      "notes": "bit型は選択されたcodeRefを1、未選択bitを0として表現する。D18.L1のみ選択。1979年6月の登校拒否はVersion Scope外の後続流通史としてversion_scope.notesにのみ保持する。"
+      }
     },
     {
       "dimension_id": "D19",
-      "status": "D",
+      "status": "I",
       "primary": {
-        "code_id": "D19.KIN.SCHOOL_YOUTH",
+        "code_id": "D19.KIN.FRIEND_PEER",
         "parent_id": "D19.KIN"
       },
       "secondary": [
         {
-          "code_id": "D19.LOC.REGIONAL",
-          "parent_id": "D19.LOC"
+          "code_id": "D19.KIN.SCHOOL_YOUTH",
+          "parent_id": "D19.KIN"
         }
       ],
-      "rationale": "小中学生が主要受容集団であることを同時代見出しで確認でき、1979年3月には京都、4月には『各地』への広がりも確認できる。",
-      "manifestation": "学校・若者集団を中核として、春段階で複数地域へ広がる。",
-      "content_refs": [
-        "CNT-003",
-        "CNT-004"
-      ],
+      "rationale": "子ども・同世代間の噂としての流通が後代研究者整理で確認できる。",
+      "manifestation": "若年の友人・仲間ネットワークを中心に流通した初期像。",
+      "content_refs": [],
       "evidence_refs": [
-        "EVD-002",
-        "EVD-003"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -460,15 +398,13 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "特定の専門家・内部者・権威が真相や追加情報を独占する構造は確認できないが、不在確認だけでは『隠れた真相なし』を積極的に確定できない。",
-      "manifestation": "誰が真相や追加情報を持つかはScope内Evidenceから決められない。",
+      "rationale": "初期Scopeに、真相を特権的に知る人物・集団は確認できない。",
+      "manifestation": "起源・正体の情報保持者を生成しない。",
       "content_refs": [
-        "CNT-001",
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-003",
-        "EVD-007"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -481,22 +417,18 @@
         "code_id": "D21.A1"
       },
       "secondary": [],
-      "rationale": "流通史は岐阜・京都等の実在地域に接続するが、Scoped Content自体は特定地点・制度・史実を因果構造へ組み込まなくても成立する。",
-      "manifestation": "学校・街路・子ども・女性という一般的現実背景に依存し、特定地点へ固定されず移植可能である。",
+      "rationale": "特定の一地点や制度を物語因果へ組み込むより、日常の地域・生活圏に現れる女性という一般的現実背景が中心。",
+      "manifestation": "一般的な生活空間へ怪異が侵入する。",
       "content_refs": [
-        "CNT-001",
-        "CNT-003",
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-002",
-        "EVD-003",
-        "EVD-007"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
       }
     }
   ],
-  "analysis_notes": "E2E pilot。Legacy最終Analysisの意味論を、新canonical Content参照と現taxonomy catalogへ再接続した。Unknownは推測で埋めず、後代代表形・回避異伝をVersion Scopeから分離した。Review cycle 1 F001に基づき、D18からScope外の6月Content/Evidence trace refを除去した。"
+  "analysis_notes": "Blind E2E再生成。10 Contentsは伝承内部の人物・行動・規則・異伝を中心に構成し、流通史・社会反応はContent Unit化せずEvidenceから来歴次元へ直接traceした。"
 }
