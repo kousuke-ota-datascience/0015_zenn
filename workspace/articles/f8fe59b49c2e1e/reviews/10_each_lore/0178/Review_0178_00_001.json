@@ -1,0 +1,41 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2000-08-02を最古級確認定点とし、生成年そのものへ変換しない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "無人駅・お猿さん電車・順次危害・覚醒・4年後再開・警告を保存転載の範囲で保持する。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "保存転載を一次原ページへ格上げせずdirect derivativeとして扱う。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "2000年保存転載と2003年後代起源検討資料を区別し、原2ちゃんねるページ未固定を隠していない。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "2000年Contentと2003年猿夢＋History EvidenceがSource役割に沿って追跡可能。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "原投稿未固定、実夢性、原因主体、2003派生初出を保留する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0178",
+  "findings": [],
+  "review_notes": "0178 summary-semantic E2E Review cycle 1。LegacyのEvidence意味を保持しPass。",
+  "review_seq": 1,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_00_sources.json",
+    "blob_sha": "39c1975b7b80916153d2581107a15d5e2f93b73b",
+    "commit_sha": "ee47beb9d4997f84854ae38c9287539ea1a16e91",
+    "reviewed_at": "2026-09-18T00:49:04Z"
+  },
+  "verdict": "Pass"
+}

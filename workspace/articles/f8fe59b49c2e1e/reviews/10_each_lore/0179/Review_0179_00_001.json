@@ -1,0 +1,41 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2001-07-07を最古級定点とし生成時期へ変換しない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "2001原型と2003混成型の差分を資料ごとに保持。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "原ページ未固定を明示し、再録/保存記録を一次へ格上げしない。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "2001年後代再録、2003年保存記録、後代成立経路解説を区別する。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "白い存在・理解後異変・混成明示・秋田/双眼鏡/祖父が追跡可能。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "正体・医学因果・読者作用・原ページ未固定を保持。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "0179 summary-semantic E2E Review cycle 1。Legacy Evidence意味を保持しPass。",
+  "review_seq": 1,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "0f075aa267df3d2ebdac448b436cd28bbac90bb6",
+    "commit_sha": "1d5caa85548f388456fdd4a2c361f3f2ffd842c8",
+    "reviewed_at": "2026-09-18T00:49:04Z"
+  },
+  "verdict": "Pass"
+}

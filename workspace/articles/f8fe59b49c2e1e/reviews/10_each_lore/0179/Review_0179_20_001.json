@@ -1,0 +1,109 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "ID正規化は意味裁定を変えない。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "理解/視認→兄→認知危害/精神影響→自己同一性崩壊の因果列が一貫。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "兄→認知危害→自己同一性崩壊を現taxonomy IDで表現。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L1=1/L2=0/L3=0。読者理解だけで作用する型を混入しない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "公開Web流通に限定。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "祖父は完全な真相ではなく追加回避情報保持者としてFAMILY_BLOODLINE/I。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "秋田は地域名だが地点比定不能のためA1/I。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "旧Review 004で維持可能とされた意味裁定を保持。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "ネット怪談 / 物語・伝説はLegacyと一致。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "保存/再録由来をIへ反映。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各Dimensionが2001/2003 Content/Evidenceへ接続。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "原ログ未固定をI、D01/D10をU、D06をCへ反映。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "必須taxonomy gapなし。旧無効IDは現codebookへ正規化済み。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "2001原型と2003混成型を明示し、増補要素を遡及しない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "旧Review 004 Majorを現taxonomy IDへ正規化し、summary意味保持と合わせてPass。",
+  "review_seq": 1,
+  "schema_version": "1.0",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-006",
+      "CNT-007",
+      "CNT-009"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D20"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-004",
+      "EVD-005"
+    ],
+    "model": "正体不明の白い存在を詳しく見て理解することが認知危害の契機となり、兄の人格・自己状態に重大な異変が生じる。祖父は接触回避情報を持ち、正体そのものは非開示のまま保たれる。",
+    "notes": "旧Review 004のcode ID不整合を正規化後、意味モデルは不変。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "e88453ad21299d7cdece422cd09765f96ab8e837",
+    "commit_sha": "37f326a4280e323e6a722d1409ada7c2697dd4af",
+    "reviewed_at": "2026-09-18T00:49:04Z"
+  },
+  "verdict": "Pass"
+}

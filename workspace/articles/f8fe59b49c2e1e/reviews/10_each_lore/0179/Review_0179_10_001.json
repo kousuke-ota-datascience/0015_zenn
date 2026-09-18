@@ -1,0 +1,120 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "summary/content unitsは2001/2003 Evidenceへ接続される。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01-P12でLegacy主要意味と差異なし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summary narrativeだけで2001原型の理解→異変と2003の意図的混成・増補を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "正体、医学因果、原ログ、読者作用を保留する。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "秋田・田園・双眼鏡・祖父・名称を2003増補として2001へ遡及しない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryからD06-D20の主要構造と2001/2003境界を再構成できる。",
+      "status": "PASS"
+    },
+    "blind_decode": "遠方の白い存在を詳しく見て正体を理解した兄に重大な異変が起こるが、正体は開示されない。2003年型は投稿者自身が先行話と自己体験を混ぜたと明示し、秋田の田園、双眼鏡、祖父の『見てはならない』警告、『くねくね』名称を追加する。",
+    "probes": [
+      {
+        "blind": "兄、語り手、祖父、白い正体不明存在。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "同左。"
+      },
+      {
+        "blind": "詳しく見て理解した兄。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "同左。"
+      },
+      {
+        "blind": "白い存在を詳しく視認し理解する。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "同左。"
+      },
+      {
+        "blind": "白い存在の正体は未確定。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "同左。"
+      },
+      {
+        "blind": "理解を契機に精神・人格上の重大異変。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "同左。"
+      },
+      {
+        "blind": "発見→詳細視認→理解→異変→祖父の警告。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "同左。"
+      },
+      {
+        "blind": "一回の遭遇内で段階進行。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "同左。"
+      },
+      {
+        "blind": "正体理解が危険、2003年型で『見てはならない』。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "同左。"
+      },
+      {
+        "blind": "詳しく見ず理解へ進まない。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "同左。"
+      },
+      {
+        "blind": "兄の通常状態が大きく崩れるが医学診断は固定しない。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "同左。"
+      },
+      {
+        "blind": "原ログ、正体、医学因果、読者作用を不確定として保持。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "同左。"
+      },
+      {
+        "blind": "2001原型と、先行話＋自己体験を混成した2003増補型。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "同左。"
+      }
+    ],
+    "reference_story": "Legacy summaryの2001原型と2003混成・増補境界を同じ粒度で保持する。",
+    "verdict": "PASS"
+  },
+  "review_notes": "summary情報欠落回帰の主対象。JSON narrativeとrendered Summary narrativeの13アンカーを確認しPass。",
+  "review_seq": 1,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_10_contents.json",
+    "blob_sha": "aefb688868ab5bb05349cba55d2332cbb5f8c4de",
+    "commit_sha": "44ddfdf26595fd870dbb25199d61941434506236",
+    "reviewed_at": "2026-09-18T00:49:04Z"
+  },
+  "verdict": "Pass"
+}

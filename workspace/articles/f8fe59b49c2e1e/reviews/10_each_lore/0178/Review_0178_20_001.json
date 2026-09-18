@@ -1,0 +1,110 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summary復元後もLegacy分析結論に意図しない変化なし。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "睡眠→投稿者→危害接近→持続帰結U、覚醒による離脱という因果モデルを保持。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "対象=投稿者、作用=危害が迫るtaxonomy gap、持続終端=Uを区別。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L1=1/L2=0/L3=0。2003読者側派生をL2へ混入しない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "公開掲示板流通のみをIでコード。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "真相保持者不明を強い否定codeへ変換せずU。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "固有実在地ではなく投稿記録中心のA1/I。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "Legacy最終裁定を維持。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "ネット怪談 / 物語・伝説はLegacyと一致。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "原投稿未固定をI/Uへ反映。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各DimensionがScoped Content/Evidenceへ接続される。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "保存転載由来のため主要判断をI、D01/D15/D20をUとして保守化。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "D13とD17はEvidence上Iだが対応codeなしをtaxonomy_gap=true / primary=nullで明示できる。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "2000年反復夢型のみをD11-D18のScopeに含め、2003猿夢＋を除外。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0178",
+  "findings": [],
+  "review_notes": "taxonomy-gap表現修正後の新Schema/validatorでLegacy意味を保持しPass。",
+  "review_seq": 1,
+  "schema_version": "1.0",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-004",
+      "EVD-005",
+      "EVD-006"
+    ],
+    "model": "反復する夢現象の中で投稿者が危害処理の順番へ組み込まれ、夢だと認識して覚醒することで離脱するが、4年後に系列が再開し次回警告が残る。",
+    "notes": "D13/D17のtaxonomy gapを含め、Legacy sense-makingを表現可能。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_20_analysis.json",
+    "blob_sha": "2d7ee40c1cb599befe552b4e6b6e42e5fef20856",
+    "commit_sha": "67d90fa3385e3dd291c5347fbe460a21485ee6cd",
+    "reviewed_at": "2026-09-18T00:49:04Z"
+  },
+  "verdict": "Pass"
+}
