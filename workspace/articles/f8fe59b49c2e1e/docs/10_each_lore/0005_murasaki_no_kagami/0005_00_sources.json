@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0005",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "（俗信），鏡 — 『若者の俗信』収録事例（18歳まで覚えていると死ぬ）",
+      "locator": "国際日本文化研究センター 怪異・妖怪伝承データベース card 0890012_036",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0890012_036",
+      "bibliographic_info": "吉川祐子「若者の俗信」『静岡県民俗学会誌』通巻19号、静岡県民俗学会、1998年12月、pp.111-132。",
+      "notes": "DBカード要約を利用。原誌本文は直接実見していない。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "reliable_secondary_or_research",
+      "title": "紫の鏡 — 『若者の俗信』収録事例（紫地蔵との併記）",
+      "locator": "国際日本文化研究センター 怪異・妖怪伝承データベース card 0641205",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "X"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0641205",
+      "bibliographic_info": "吉川祐子「若者の俗信」『静岡県民俗学会誌』19号、静岡県民俗学会、1998年12月、pp.111-132。",
+      "notes": "DBカード要約を利用。原誌本文は直接実見していない。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "reliable_secondary_or_research",
+      "title": "（俗信），鏡 — 『若者の俗信』収録事例（ピンクの鏡）",
+      "locator": "国際日本文化研究センター 怪異・妖怪伝承データベース card 0890012_039",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "X"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0890012_039",
+      "bibliographic_info": "吉川祐子「若者の俗信」『静岡県民俗学会誌』通巻19号、静岡県民俗学会、1998年12月、pp.111-132。",
+      "notes": "DBカード要約を利用。原誌本文は直接実見していない。"
+    },
+    {
+      "source_id": "SRC-004",
+      "source_type": "reliable_secondary_or_research",
+      "title": "紫の鏡 — 『高校生が知っている不思議な話』収録事例（20歳まで覚えていると死ぬ）",
+      "locator": "国際日本文化研究センター 怪異・妖怪伝承データベース card 0970169",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0970169",
+      "bibliographic_info": "久野俊彦「高校生が知っている不思議な話」『下野民俗』通巻39号、下野民俗研究会、1999年3月20日、pp.40-54（掲載箇所p.54）。",
+      "notes": "DBカード要約を利用。原誌本文は直接実見していない。"
+    },
+    {
+      "source_id": "SRC-005",
+      "source_type": "reliable_secondary_or_research",
+      "title": "紫の鏡 — 『高校生が知っている不思議な話』収録事例（20歳前に忘れる）",
+      "locator": "国際日本文化研究センター 怪異・妖怪伝承データベース card 0970168",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "X"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0970168",
+      "bibliographic_info": "久野俊彦「高校生が知っている不思議な話」『下野民俗』通巻39号、下野民俗研究会、1999年3月20日、pp.40-54（掲載箇所p.54）。",
+      "notes": "DBカード要約を利用。原誌本文は直接実見していない。"
+    },
+    {
+      "source_id": "SRC-006",
+      "source_type": "reliable_secondary_or_research",
+      "title": "紫の鏡 — 『高校生が知っている不思議な話』収録事例（16歳まで）",
+      "locator": "国際日本文化研究センター 怪異・妖怪伝承データベース card 0970171",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "X"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0970171",
+      "bibliographic_info": "久野俊彦「高校生が知っている不思議な話」『下野民俗』通巻39号、下野民俗研究会、1999年3月20日、pp.40-54（掲載箇所p.54）。",
+      "notes": "男子生徒の伝承としてDBに登録。原誌本文は直接実見していない。"
+    },
+    {
+      "source_id": "SRC-007",
+      "source_type": "reliable_secondary_or_research",
+      "title": "紫の鏡，血だらけの女の人 — 『高校生が知っている不思議な話』収録事例",
+      "locator": "国際日本文化研究センター 怪異・妖怪伝承データベース card 0970172",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "X"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0970172",
+      "bibliographic_info": "久野俊彦「高校生が知っている不思議な話」『下野民俗』通巻39号、下野民俗研究会、1999年3月20日、pp.40-54（掲載箇所p.54）。",
+      "notes": "男子生徒が小学校時に聞いた話としてDBに登録。原誌本文は直接実見していない。"
+    },
+    {
+      "source_id": "SRC-008",
+      "source_type": "reliable_secondary_or_research",
+      "title": "紫鏡 — 『現代人と世間話－トイレの怪談を中心にして－』収録事例",
+      "locator": "国際日本文化研究センター 怪異・妖怪伝承データベース card 2610033",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2610033",
+      "bibliographic_info": "降井直人「現代人と世間話－トイレの怪談を中心にして－」『山陰民俗研究』6号、山陰民俗学会、2001年3月、pp.56-81（掲載箇所pp.76-77）。",
+      "notes": "神戸市立魚崎中学校三年男子の伝承としてDBに登録。原誌本文は直接実見していない。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "card 0890012_036 要約",
+      "representation": "paraphrase",
+      "content": "1998年の静岡県の採録では、「紫の鏡」を18歳まで覚えていると死ぬとされる。",
+      "uncertainty": "日文研DBの原資料要約に基づき、原誌本文は直接閲覧していない。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-002",
+      "locator": "card 0641205 要約",
+      "representation": "paraphrase",
+      "content": "1998年の静岡県の採録では、「紫の鏡」と「紫地蔵」という二つの言葉を20歳まで覚えていると死ぬとされる。",
+      "uncertainty": "日文研DBの原資料要約に基づく。二語の関係や成立順序は不明。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-003",
+      "locator": "card 0890012_039 要約",
+      "representation": "paraphrase",
+      "content": "1998年の静岡県の採録では、20歳まで「紫の鏡」を覚えているのは良くない一方、「ピンクの鏡」と覚えていると良いとされる。",
+      "uncertainty": "日文研DBの原資料要約に基づく。『良い』の具体的帰結は示されていない。"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-004",
+      "locator": "card 0970169 要約",
+      "representation": "paraphrase",
+      "content": "1999年の栃木県宇都宮市の採録では、「紫の鏡」を20歳まで覚えていると死ぬとされる。",
+      "uncertainty": "日文研DBの原資料要約に基づく。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-005",
+      "locator": "card 0970168 要約",
+      "representation": "paraphrase",
+      "content": "1999年の栃木県宇都宮市の採録では、「紫の鏡」という言葉を20歳になる前に忘れないと死ぬとされ、期限前に忘れることが条件回避として表現される。",
+      "uncertainty": "日文研DBの原資料要約に基づく。意図的に忘れる具体的方法は示されていない。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-006",
+      "locator": "card 0970171 要約",
+      "representation": "paraphrase",
+      "content": "1999年の栃木県宇都宮市の男子生徒の採録では、「紫の鏡」という話を16歳まで覚えていると死ぬらしいとされる。",
+      "uncertainty": "日文研DBの原資料要約に基づく。20歳型との派生関係は不明。"
+    },
+    {
+      "evidence_id": "EVD-007",
+      "source_id": "SRC-007",
+      "locator": "card 0970172 要約",
+      "representation": "paraphrase",
+      "content": "1999年の栃木県宇都宮市西刑部町の男子生徒は、小学校時に、20歳まで「紫の鏡」を忘れないでいると血だらけの女性が鏡からかみそりを持って現れて殺すという話を聞いたとしている。",
+      "uncertainty": "日文研DBの原資料要約に基づく。この具体的襲撃場面が広域に共有された中核形か、局地的増補かは不明。"
+    },
+    {
+      "evidence_id": "EVD-008",
+      "source_id": "SRC-008",
+      "locator": "card 2610033 要約",
+      "representation": "paraphrase",
+      "content": "2001年の兵庫県神戸市の中学三年男子の採録では、高校に入るまで「紫鏡」という言葉を覚えていると不幸になるとされる。",
+      "uncertainty": "日文研DBの原資料要約に基づく。死ではなく『不幸』、年齢ではなく高校入学が期限となる異型。"
+    }
+  ],
+  "notes": "本調査で確認した公刊採録は1998年以降だが、これは伝承の起源年を意味しない。日文研DBのカード要約を介しており、各原誌本文は直接実見していない。"
+}
