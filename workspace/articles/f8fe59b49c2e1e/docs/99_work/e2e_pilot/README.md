@@ -310,3 +310,50 @@ Control plane:
 - Notion post-SHA, Review target commit/blob, and current canonical artifact all match.
 
 Rendered Markdown commit: `c914105`.
+
+
+## Legacy difference classification
+
+The Legacy documents were used as comparison material after the redesigned E2E had been evaluated under the current schema / taxonomy / validation rules. Differences are classified by origin rather than treating Legacy as the expected output.
+
+### 0178 猿夢
+
+| Difference | Classification | Reason |
+|---|---|---|
+| Legacy Review 005 was Moderate, redesigned Review Seq 1 is Pass | Legacy document-format defect | Legacy's remaining finding was the incomplete tutorial explanation block under the analysis section. The D01-D21 semantic decisions themselves were considered maintainable. JSON no longer depends on that Markdown tutorial prose block. |
+| D13 / D17 are represented as `status=I, primary=null, taxonomy_gap.present=true` | Representation normalization, not a Legacy semantic defect | Legacy intentionally identified both as taxonomy gaps. The redesigned canonical preserves that semantic judgment explicitly instead of forcing an approximate code. |
+| Redesigned summary is more explicit about uncertainties and the 2003 derivative boundary | Intentional canonical normalization | No core meaning changes. The semantic regression confirms the 2000 narrative sequence and the 2003 `猿夢＋` boundary are preserved. |
+
+No material 0178 summary difference was found that should be attributed to a Legacy content error.
+
+### 0179 くねくね
+
+| Difference | Classification | Reason |
+|---|---|---|
+| `D11.COG.UNDERSTAND_RECOGNIZE` -> `D11.INF.UNDERSTAND_RECOGNIZE` | **Legacy defect** | Legacy used a non-current / invalid taxonomy ID and Parent namespace. Review 004 had already identified it. |
+| `D11.SNS.VISUAL_EXPOSURE` -> `D11.SEN.VISUAL_EXPOSURE` | **Legacy defect** | Legacy namespace was invalid. Review 004 had already identified it. |
+| `D12.FOC.SPECIFIC_OTHER` -> `D12.OTH.SPECIFIC_OTHER` | **Legacy defect** | Legacy Child / Parent namespace was invalid. Review 004 had already identified it. |
+| `D13.MNT.MENTAL_INFLUENCE` -> `D13.COG.MENTAL_INFLUENCE` | **Legacy defect** | Legacy used a non-existent code ID. Review 004 had already identified it. |
+| `D15.PSY.SELF_IDENTITY_DISRUPTION` -> `D15.MND.SELF_IDENTITY_DISRUPTION` | **Legacy defect** | Legacy used a non-current namespace. Review 004 had already identified it. |
+| `D04.REC.RETELLING` -> `D04.VAR.RETELLING` | **Legacy defect discovered during migration** | The Legacy code was not present in the current catalog. The intended retelling semantics are retained with the valid current code. |
+| `D17.RUL.DO_NOT_ENGAGE` -> `D17.AVO.DO_NOT_ENGAGE` | **Legacy defect discovered during migration** | The Legacy namespace was not present in the current catalog. The explicit grandfather warning still supports the same "do not engage / do not look" meaning. |
+| Legacy Review 004 was Major, redesigned Review Seq 1 is Pass | Consequence of Legacy defects above | The Major finding was primarily invalid taxonomy IDs / Parent namespaces, plus the old Markdown tutorial-block issue. Those defects are absent in the redesigned canonical. |
+
+The following important 0179 semantic judgments are unchanged despite code-ID normalization:
+- D06 remains `C`: direct-experience presentation and deliberate mixing with a prior story coexist.
+- D10 remains `U`: the white entity's ontology is not fixed.
+- D18 remains L1=1 / L2=0 / L3=0.
+- D20 remains family/bloodline additional-information holder at `I`, not a claim that the grandfather knows the full truth.
+- The 2001 form and the 2003 mixed/accreted form remain separated; Akita / fields / binoculars / grandfather / the `くねくね` name are not retrojected into 2001.
+
+### Defect found in the redesigned system, not in Legacy
+
+The 0178 E2E exposed a separate redesigned-system defect: the 20 Analysis schema / taxonomy validator initially could not represent a legitimate inferred/direct taxonomy gap with `status=D/I`, `primary=null`, and `taxonomy_gap.present=true`.
+
+That was **not a Legacy defect**. The redesigned schema and validator were corrected, fixtures were added, and final CI passed afterward.
+
+Therefore the comparison result is:
+- summary meaning: preserved for both 0178 and 0179;
+- 0178 differences: mainly representation / old Markdown-format differences;
+- 0179 code differences: largely attributable to identifiable Legacy taxonomy-ID defects;
+- one additional defect was found in the redesigned schema/validator itself and corrected separately.
