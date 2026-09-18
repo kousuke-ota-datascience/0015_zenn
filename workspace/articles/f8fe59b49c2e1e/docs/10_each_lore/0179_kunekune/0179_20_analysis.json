@@ -1,45 +1,36 @@
 {
   "schema_version": "1.0",
   "entry_id": "0179",
-  "macro_category": "ネット怪談",
-  "entry_type": "物語・伝説",
+  "macro_category": "認知危害怪異",
+  "entry_type": "伝聞体験怪談",
   "version_scope": {
-    "description": "2001年後代再録で確認される『分からないほうがいい』型と、2003年obake.cc保存記録で投稿者自身が先行話と自身の体験を混ぜたと明示する『くねくね』型。秋田・田園・双眼鏡・祖父・『くねくね』という名称は2003年増補として扱い、2001年型へ遡及しない。",
+    "description": "既定Scopeは、2000年『怪談投稿』に掲載されたとされ、2001年2ちゃんねる転載で文面を確認できる『分からないほうがいい』原型。白い人物状存在、不自然な動き、兄の理解と説明拒否、後の重大な障害状態までを含む。2003年の秋田・田園・双眼鏡・祖父・兄のmotif echo・『くねくね』名称を備えた混成型は除外する。",
     "included_variants": [
-      "VAR-001",
+      "VAR-001"
+    ],
+    "excluded_variants": [
       "VAR-002"
     ],
-    "excluded_variants": [],
     "content_refs": [
       "CNT-001",
       "CNT-002",
-      "CNT-003",
-      "CNT-004",
-      "CNT-005",
-      "CNT-006",
-      "CNT-007",
-      "CNT-008",
-      "CNT-009",
-      "CNT-010",
-      "CNT-011"
+      "CNT-003"
     ],
-    "notes": "2001/2003原ページは未固定。2003年型は直接体験提示と先行怪談の意図的混成が共存する。読者感染型はScopeに含めない。"
+    "notes": "2003年型は意味形成核を継承するが、発動条件・回避情報・identity終端・名称を追加変更するため既定Scope外。"
   },
   "dimensions": [
     {
       "dimension_id": "D01",
-      "status": "U",
-      "primary": null,
+      "status": "I",
+      "primary": {
+        "code_id": "D01.G6"
+      },
       "secondary": [],
-      "rationale": "2001年7月7日は後代再録で確認できる最古級定点であり、生成年を直接示さない。",
-      "manifestation": "少なくとも2001年には原型が投稿されたと後代再録から確認できるが、それ以前の形成は不明である。",
-      "content_refs": [
-        "CNT-001",
-        "CNT-002"
-      ],
+      "rationale": "専門家整理では原型が2000年3月のWeb投稿、2001年7月に2ちゃんねる転載とされる。元ページを今回直接取得していないためI。",
+      "manifestation": "原型は2000年代初頭に成立する。",
+      "content_refs": [],
       "evidence_refs": [
-        "EVD-001",
-        "EVD-002"
+        "EVD-004"
       ],
       "taxonomy_gap": {
         "present": false
@@ -49,19 +40,15 @@
       "dimension_id": "D02",
       "status": "I",
       "primary": {
-        "code_id": "D02.WEB.FORUM",
+        "code_id": "D02.WEB.WEBSITE",
         "parent_id": "D02.WEB"
       },
       "secondary": [],
-      "rationale": "2001年レス212は後代Web再録から確認するため、媒体写像は可能だがDirectとはしない。",
-      "manifestation": "初期確認形は匿名Web掲示板の怪談投稿である。",
-      "content_refs": [
-        "CNT-001",
-        "CNT-002"
-      ],
+      "rationale": "専門家整理が2000年のWebサイト『怪談投稿』掲載を最古層として示すため、原ページ未取得の留保付きでWebサイトをIとする。",
+      "manifestation": "最古確認層は独立Webサイトへの怪談投稿。",
+      "content_refs": [],
       "evidence_refs": [
-        "EVD-001",
-        "EVD-002"
+        "EVD-004"
       ],
       "taxonomy_gap": {
         "present": false
@@ -71,24 +58,21 @@
       "dimension_id": "D03",
       "status": "I",
       "primary": {
-        "code_id": "D03.WEB.FORUM",
+        "code_id": "D03.WEB.WEBSITE",
         "parent_id": "D03.WEB"
       },
       "secondary": [
         {
-          "code_id": "D03.WEB.WEBSITE",
+          "code_id": "D03.WEB.FORUM",
           "parent_id": "D03.WEB"
         }
       ],
-      "rationale": "原型・2003年型はいずれも掲示板由来だが、現時点では後代再録・保存Webを介して確認する。",
-      "manifestation": "掲示板投稿が保存サイト・再録記事を通じて後代へ残る。",
-      "content_refs": [
-        "CNT-001",
-        "CNT-004"
-      ],
+      "rationale": "同一原型がWebサイト掲載後、2001年に公開掲示板へ転載されたと整理される。",
+      "manifestation": "初期原型はWebサイトから公開掲示板へ再流通する。",
+      "content_refs": [],
       "evidence_refs": [
         "EVD-001",
-        "EVD-003"
+        "EVD-004"
       ],
       "taxonomy_gap": {
         "present": false
@@ -98,52 +82,15 @@
       "dimension_id": "D04",
       "status": "I",
       "primary": {
-        "code_id": "D04.VAR.ACCRETION",
-        "parent_id": "D04.VAR"
-      },
-      "secondary": [
-        {
-          "code_id": "D04.VAR.RETELLING",
-          "parent_id": "D04.VAR"
-        }
-      ],
-      "rationale": "2003年投稿者が先行話と自身の体験を混ぜて詳しく書いたと保存記録上で明示し、秋田・双眼鏡・祖父・名称等を追加する。",
-      "manifestation": "先行する匿名怪談を再話しつつ、自身の体験要素を加えて現在型に近い形へ増補する。",
-      "content_refs": [
-        "CNT-004",
-        "CNT-005",
-        "CNT-006",
-        "CNT-007",
-        "CNT-008"
-      ],
-      "evidence_refs": [
-        "EVD-003",
-        "EVD-004",
-        "EVD-005",
-        "EVD-006",
-        "EVD-007"
-      ],
-      "taxonomy_gap": {
-        "present": false
-      }
-    },
-    {
-      "dimension_id": "D05",
-      "status": "I",
-      "primary": {
-        "code_id": "D05.EXP.RETROSPECTIVE_1P",
-        "parent_id": "D05.EXP"
+        "code_id": "D04.MIG.MEDIUM_SHIFT",
+        "parent_id": "D04.MIG"
       },
       "secondary": [],
-      "rationale": "2003年型は投稿者自身の子供時代の体験を一人称で語るが、保存記録経由なのでI。",
-      "manifestation": "自己体験を材料にした回想形式で提示される。",
-      "content_refs": [
-        "CNT-004",
-        "CNT-005",
-        "CNT-006"
-      ],
+      "rationale": "原型内容がWebサイトから2ちゃんねるへ転載され、媒体をまたいで継承されたことが確認できる。",
+      "manifestation": "同一原型がWebサイト→掲示板へ媒体移行する。",
+      "content_refs": [],
       "evidence_refs": [
-        "EVD-003",
+        "EVD-001",
         "EVD-004"
       ],
       "taxonomy_gap": {
@@ -151,17 +98,39 @@
       }
     },
     {
-      "dimension_id": "D06",
-      "status": "C",
-      "primary": null,
+      "dimension_id": "D05",
+      "status": "D",
+      "primary": {
+        "code_id": "D05.HRS.FOAF",
+        "parent_id": "D05.HRS"
+      },
       "secondary": [],
-      "rationale": "2003年投稿者は自身の体験を材料にする一方、先行する『分からないほうがいい』と混ぜて詳しく書いたと明示する。完成した2003年型全体を純粋な直接体験事実へ単純化できず、直接体験提示と再構成・混成提示が競合する。",
-      "manifestation": "『自分の体験』であることを示しながら、既存怪談を意識的に混ぜた再構成でもある。",
+      "rationale": "2001年転載文は『弟から聞いた、弟の友達Aの実体験』という複数段階の伝聞形式を明示する。",
+      "manifestation": "語り手→弟→弟の友人AというFOAF型で提示される。",
       "content_refs": [
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-003"
+        "EVD-001"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D06",
+      "status": "D",
+      "primary": {
+        "code_id": "D06.T2"
+      },
+      "secondary": [],
+      "rationale": "身近な人物から聞いた実体験として提示し、語り手自身の直接体験ではない。",
+      "manifestation": "近接伝聞事実として真実性を要求する。",
+      "content_refs": [
+        "CNT-001"
+      ],
+      "evidence_refs": [
+        "EVD-001"
       ],
       "taxonomy_gap": {
         "present": false
@@ -169,7 +138,7 @@
     },
     {
       "dimension_id": "D07",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D07.ANO.UNKNOWN_EXISTENCE",
         "parent_id": "D07.ANO"
@@ -180,16 +149,15 @@
           "parent_id": "D07.ANO"
         }
       ],
-      "rationale": "遠方の白い存在が何者か分からず、不自然な動き自体も異常知覚として語られる。",
-      "manifestation": "見えているのに正体を確定できない対象が怪異の中心になる。",
+      "rationale": "窓外の白い人間状存在が何なのか分からず、人間には不可能な動きをすることが中心的不可解さである。",
+      "manifestation": "正体不明の白い存在と異常な視覚体験を意味化する。",
       "content_refs": [
         "CNT-001",
-        "CNT-003",
-        "CNT-006"
+        "CNT-002"
       ],
       "evidence_refs": [
         "EVD-001",
-        "EVD-004"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -197,26 +165,19 @@
     },
     {
       "dimension_id": "D08",
-      "status": "I",
+      "status": "D",
       "primary": {
-        "code_id": "D08.DEX.DIRECT_EVENT",
+        "code_id": "D08.DEX.PERCEPTUAL_ANOMALY",
         "parent_id": "D08.DEX"
       },
-      "secondary": [
-        {
-          "code_id": "D08.DEX.PERCEPTUAL_ANOMALY",
-          "parent_id": "D08.DEX"
-        }
-      ],
-      "rationale": "人物が白い存在を直接視認することが問題化の入口だが、Contentは保存記録・後代再録から確認するためI。",
-      "manifestation": "遠方の異常な対象を目撃するところから謎が始まる。",
+      "secondary": [],
+      "rationale": "白い人影が人間には不可能な方向へ身体を曲げて動くという視覚異常が、意味形成を開始する直接cueである。",
+      "manifestation": "遠方の白い人影の不自然な動きが異常認識の入口になる。",
       "content_refs": [
-        "CNT-001",
-        "CNT-006"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-001",
-        "EVD-004"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -224,29 +185,19 @@
     },
     {
       "dimension_id": "D09",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D09.UNK.FORBIDDEN_INQUIRY",
         "parent_id": "D09.UNK"
       },
-      "secondary": [
-        {
-          "code_id": "D09.UNK.DELIBERATE_NONRESOLUTION",
-          "parent_id": "D09.UNK"
-        }
-      ],
-      "rationale": "正体を理解すること自体が危険として扱われ、祖父も『見てはならない』と警告する。終盤では語り手自身がその禁忌を破って対象を間近に見るが、その後の帰結は開示されないため、謎と危険は解消されない。",
-      "manifestation": "『知る／見るべきではない』という境界が、兄の変貌と語り手の終端視認の双方を通じて保持される。",
+      "secondary": [],
+      "rationale": "兄は正体を理解したように見えるが『分かった。でも、分からない方がいい』として説明を拒み、知ること自体に境界を置く。",
+      "manifestation": "正体を明示せず、理解・追究を危険な領域として閉じる。",
       "content_refs": [
-        "CNT-002",
-        "CNT-003",
-        "CNT-007",
-        "CNT-011"
+        "CNT-002"
       ],
       "evidence_refs": [
-        "EVD-002",
-        "EVD-005",
-        "EVD-009"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -257,13 +208,13 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "白い存在の正体は確定されず、妖怪・霊等へ固定できない。",
-      "manifestation": "作用主体は『正体不明の白い何か』のまま残る。",
+      "rationale": "白い存在の正体や存在論は明かされず、人間・妖怪・霊・現象のいずれにも固定できない。",
+      "manifestation": "因果源のontologyは未確定。",
       "content_refs": [
-        "CNT-003"
+        "CNT-001",
+        "CNT-002"
       ],
       "evidence_refs": [
-        "EVD-001",
         "EVD-002"
       ],
       "taxonomy_gap": {
@@ -283,17 +234,16 @@
           "parent_id": "D11.SEN"
         }
       ],
-      "rationale": "詳しく視認し『何であるか』を理解することが兄の異変に先行する。さらに終盤では語り手自身も禁じられた対象を間近に見る。原ログ未固定のためI。",
-      "manifestation": "詳細視認・理解が主要な発動条件で、最終場面ではその視認禁忌を語り手自身が踏む。",
+      "rationale": "兄は白い存在を見た後、それが何かを理解したように描かれ、その後の重大な状態変化と並置される。ただし因果は明言されないためI。",
+      "manifestation": "詳細な視認と理解が危険の契機として暗示される。",
       "content_refs": [
+        "CNT-001",
         "CNT-002",
-        "CNT-006",
-        "CNT-011"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002",
-        "EVD-004",
-        "EVD-009"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -312,19 +262,15 @@
           "parent_id": "D12.FOC"
         }
       ],
-      "rationale": "明示的な重大異変を受ける中心は、詳しく見て理解した兄である。語り手は兄の変化を観察するが、終盤では自らも対象を間近に見るためSecondaryの経験主体として残る。",
-      "manifestation": "兄が実現被害の中心で、語り手は最後に危険な視認条件へ入るが、その後の被害成立までは描かれない。",
+      "rationale": "重大な変化を受けるのはAではなくAの兄であり、Aは観察・伝達側に残る。",
+      "manifestation": "詳しく見て理解した特定人物である兄が主要対象。",
       "content_refs": [
         "CNT-002",
-        "CNT-006",
-        "CNT-009",
-        "CNT-011"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002",
-        "EVD-004",
-        "EVD-008",
-        "EVD-009"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -343,17 +289,15 @@
           "parent_id": "D13.COG"
         }
       ],
-      "rationale": "対象を理解したことと精神・行動上の異変が物語内で結び付けられ、2003年型では兄が白い存在と同様にくねくね動く状態へ至る。現実医学的因果や怪異への物理変身は主張しない。",
-      "manifestation": "『知ること』が危害契機となり、兄の行動・人格状態が怪異の運動を反復するほど大きく変化する。",
+      "rationale": "理解したことと後の重大な認知・コミュニケーション上の障害状態が物語上連続して配置され、認知危害を示唆するが、因果は明示されない。",
+      "manifestation": "『何であるかを分かる』ことが危害契機であるかのように構成される。",
       "content_refs": [
         "CNT-002",
-        "CNT-006",
-        "CNT-009"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002",
-        "EVD-004",
-        "EVD-008"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -361,23 +305,20 @@
     },
     {
       "dimension_id": "D14",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D14.NEG"
       },
       "secondary": [],
-      "rationale": "兄の重大なidentity崩壊、家族との分離、さらに語り手自身が終盤に禁じられた対象を見てしまう展開として提示されるため負である。保存資料由来なのでI。",
-      "manifestation": "兄の変貌と喪失に加え、語り手にも次の危険が開かれたまま終わる。",
+      "rationale": "兄の重大な後続状態と、正体を知らない方がよいという終わり方から明確に負の帰結を持つ。",
+      "manifestation": "知った兄だけが深刻な状態へ移る恐怖として語られる。",
       "content_refs": [
         "CNT-002",
-        "CNT-009",
-        "CNT-011"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002",
-        "EVD-004",
-        "EVD-008",
-        "EVD-009"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -387,20 +328,17 @@
       "dimension_id": "D15",
       "status": "I",
       "primary": {
-        "code_id": "D15.MND.SELF_IDENTITY_DISRUPTION",
+        "code_id": "D15.MND.MEMORY_COGNITION",
         "parent_id": "D15.MND"
       },
       "secondary": [],
-      "rationale": "兄は白い存在と同様にくねくね動く状態となり、語り手には以前の兄ではなくなったかのように描かれる。特定の医学診断や怪異への物理変身は生成しない。",
-      "manifestation": "兄の人格・自己同一性が大きく崩れ、怪異の動きを反復する『変わり果てた兄』として終端化される。",
+      "rationale": "物語は兄が後に重い認知・コミュニケーション上の障害状態にあると伝えるが、医学診断を独立検証できないためI。",
+      "manifestation": "兄の認知・コミュニケーション能力が重大に損なわれたと語られる。",
       "content_refs": [
-        "CNT-002",
-        "CNT-009"
+        "CNT-003"
       ],
       "evidence_refs": [
-        "EVD-002",
-        "EVD-004",
-        "EVD-008"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -410,27 +348,19 @@
       "dimension_id": "D16",
       "status": "I",
       "primary": {
-        "code_id": "D16.EVT.SEQUENTIAL_EPISODE",
-        "parent_id": "D16.EVT"
+        "code_id": "D16.DLY.DELAYED",
+        "parent_id": "D16.DLY"
       },
       "secondary": [],
-      "rationale": "発見→詳細視認→理解→兄の異変→怪異と同様のくねくねした状態→祖父の警告→兄を当地に残す→語り手自身の終端視認、という段階系列で進行する。保存資料由来なのでI。",
-      "manifestation": "一回の遭遇が兄の変貌で終わらず、語り手自身が禁忌へ触れる終端まで段階的に進む。",
+      "rationale": "遭遇時に兄が理解した後、語り手が後日に兄の重大な状態を伝聞する構造であり、影響は同一場面で即時完結しない。",
+      "manifestation": "理解の場面と、後に知らされる兄の状態が時間的に分かれる。",
       "content_refs": [
-        "CNT-001",
         "CNT-002",
-        "CNT-006",
-        "CNT-007",
-        "CNT-009",
-        "CNT-011"
+        "CNT-003"
       ],
       "evidence_refs": [
-        "EVD-001",
         "EVD-002",
-        "EVD-004",
-        "EVD-005",
-        "EVD-008",
-        "EVD-009"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -438,21 +368,16 @@
     },
     {
       "dimension_id": "D17",
-      "status": "I",
-      "primary": {
-        "code_id": "D17.AVO.DO_NOT_ENGAGE",
-        "parent_id": "D17.AVO"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "2003年型で祖父が『見てはならない』と独立に警告するため明示的接触回避として扱う。終盤で語り手がその禁忌を破って対象を間近に見ることも、この規則の物語上の重要性を補強する。",
-      "manifestation": "対象を詳しく見ず理解へ進まないことが回避として示されるが、最終場面では語り手自身がそれを破る。",
+      "rationale": "原型内には、遭遇前に有効な回避法を教える人物や、検証された制御手順は存在しない。兄の『分からない方がいい』は正体説明の拒否であり、明示的な事前回避手順ではない。",
+      "manifestation": "2003年型の祖父の警告を原型へ遡及しない。",
       "content_refs": [
-        "CNT-007",
-        "CNT-011"
+        "CNT-002"
       ],
       "evidence_refs": [
-        "EVD-005",
-        "EVD-009"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -465,22 +390,20 @@
         "code_id": "D18.L1"
       },
       "secondary": [],
-      "rationale": "危害は物語内人物へ作用する。読者が記事を理解しただけで作用する型や独立した社会現実効果は今回Scopeで固定しない。",
-      "manifestation": "作用は白い存在を見た物語内人物に限定される。",
+      "rationale": "Scope内では物語内部の兄に重大な状態変化が示唆される。読者受容だけで作用するL2や独立社会作用L3は確認しない。",
+      "manifestation": "作用は物語内部の経験者に限定して描かれる。",
       "content_refs": [
         "CNT-002",
-        "CNT-006",
-        "CNT-009",
-        "CNT-010"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002",
-        "EVD-004"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
       },
-      "notes": "L1=1 / L2=0 / L3=0。"
+      "notes": "D18 vectorはL1=1, L2=0, L3=0としてPrimary D18.L1で表現。"
     },
     {
       "dimension_id": "D19",
@@ -490,15 +413,12 @@
         "parent_id": "D19.NET"
       },
       "secondary": [],
-      "rationale": "掲示板投稿由来であることを保存・再録資料から確認するため、公開Web流通としてI。",
-      "manifestation": "匿名掲示板を介して不特定受容者へ流通する。",
-      "content_refs": [
-        "CNT-001",
-        "CNT-004"
-      ],
+      "rationale": "2001年には公開2ちゃんねる掲示板へ転載され、不特定多数へ流通したことを確認できる。",
+      "manifestation": "オープンなWeb怪談流通へ入る。",
+      "content_refs": [],
       "evidence_refs": [
         "EVD-001",
-        "EVD-003"
+        "EVD-004"
       ],
       "taxonomy_gap": {
         "present": false
@@ -508,17 +428,17 @@
       "dimension_id": "D20",
       "status": "I",
       "primary": {
-        "code_id": "D20.PER.FAMILY_BLOODLINE",
+        "code_id": "D20.PER.EXPERIENCER",
         "parent_id": "D20.PER"
       },
       "secondary": [],
-      "rationale": "2003年型の祖父は、他の人物より先に『見てはならない』という危険回避情報を保持し、視認の有無を確認する。対象の完全な正体知識までは固定しない。",
-      "manifestation": "祖父が正体そのものではなく、危険な接触を避けるための追加情報を偏在的に持つ。",
+      "rationale": "兄だけが白い存在の正体を理解したように描かれ、説明を拒むため、経験者である兄が特権情報保持者として機能する。",
+      "manifestation": "兄は『分かった』と示すが内容を他者へ渡さない。",
       "content_refs": [
-        "CNT-007"
+        "CNT-002"
       ],
       "evidence_refs": [
-        "EVD-005"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
@@ -526,24 +446,23 @@
     },
     {
       "dimension_id": "D21",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D21.A1"
       },
       "secondary": [],
-      "rationale": "秋田という地域名はあるが具体地点は比定不能で、主な現実接点は匿名掲示板投稿・保存記録である。",
-      "manifestation": "実在地域名を持つ一方、怪異地点そのものは特定されない。",
+      "rationale": "母親の田舎、家、窓外という一般的現実背景を使うが、特定地点・制度を因果構造へ組み込まない。",
+      "manifestation": "一般的な田舎の生活空間に未知存在が現れる。",
       "content_refs": [
-        "CNT-005"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-004",
-        "EVD-006"
+        "EVD-001"
       ],
       "taxonomy_gap": {
         "present": false
       }
     }
   ],
-  "analysis_notes": "summary情報欠落回帰対象。旧Review 004で指摘された無効code IDを現taxonomyへ正規化（D04.VAR.RETELLING、D11.INF/SEN、D12.OTH、D13.COG.MENTAL_INFLUENCE、D15.MND、D17.AVO.DO_NOT_ENGAGE）。意味裁定は維持する。 0179 summary-semantic correctionで、兄が怪異と同様にくねくね動くidentity終端と、語り手自身の終端視認を10へ復元した。D09/D11-D17の結論は維持しつつtraceを更新。"
+  "analysis_notes": "Blind E2E再生成。原型を既定Scopeとし、現在有名な2003年型を後代major variantとして分離した。"
 }
