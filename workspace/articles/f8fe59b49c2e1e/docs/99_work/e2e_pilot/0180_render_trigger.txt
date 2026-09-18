@@ -1,0 +1,1 @@
+verify 0180 golden semantics in rendered markdown
