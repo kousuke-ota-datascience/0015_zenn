@@ -152,7 +152,7 @@ def test_taxonomy_gap_allows_inferred_dimension_without_primary(
         "description": "Evidence supports an inferred mechanism, but no current taxonomy code represents it.",
     }
 
-    issues = taxonomy_validator.validate_taxonomy(data, taxonomy_catalog)
+    issues = validate_taxonomy(data, taxonomy_catalog)
     assert not issues
 
 
@@ -166,5 +166,5 @@ def test_inferred_dimension_without_primary_requires_taxonomy_gap(
     target["secondary"] = []
     target["taxonomy_gap"] = {"present": False}
 
-    issues = taxonomy_validator.validate_taxonomy(data, taxonomy_catalog)
+    issues = validate_taxonomy(data, taxonomy_catalog)
     assert any(issue.rule == "V-STATUS-001" for issue in issues)
