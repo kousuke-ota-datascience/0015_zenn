@@ -1,0 +1,112 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "具体的終端を復元したが、D09/D11-D17の既存code結論は変更不要。trace/rationale/manifestationのみ具体化。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "理解/視認→兄→認知危害/精神影響→自己同一性崩壊の因果列が一貫。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "兄をPrimary対象として、理解→認知危害→怪異の動きを反復するidentity崩壊を保持。語り手は終端に視認条件へ入るが後続被害は生成しない。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L1=1/L2=0/L3=0。読者理解だけで作用する型を混入しない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "公開Web流通に限定。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "祖父は完全な真相ではなく追加回避情報保持者としてFAMILY_BLOODLINE/I。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "秋田は地域名だが地点比定不能のためA1/I。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "旧Review 004で維持可能とされた意味裁定を保持。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "ネット怪談 / 物語・伝説はLegacyと一致。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "保存/再録由来をIへ反映。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "復元したCNT-009/EVD-008とCNT-011/EVD-009がD09/D11-D17およびVersion Scopeへ追跡される。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "原ログ未固定をI、D01/D10をU、D06をCへ反映。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "必須taxonomy gapなし。旧無効IDは現codebookへ正規化済み。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "2001原型と2003混成型を明示し、増補要素を遡及しない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "0179 terminal-semantic correction後のReview。具体的終端を20 traceへ反映し、code結論の不変性を確認してPass。",
+  "review_seq": 2,
+  "schema_version": "1.0",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-006",
+      "CNT-007",
+      "CNT-009",
+      "CNT-011"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D20"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-004",
+      "EVD-005",
+      "EVD-008",
+      "EVD-009"
+    ],
+    "model": "正体不明の白い存在を詳しく見て理解した兄が重大異変を起こし、白い存在と同様にくねくね動く状態へ至って、語り手には元の兄ではなくなったかのように描かれる。祖父は見るなという回避情報を持つ。終盤では語り手自身も禁じられた対象を間近に見るが、その後の帰結は未確定である。",
+    "notes": "旧Review 004のcode ID不整合を正規化後、意味モデルは不変。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "c740bfb7dd13346c8ae78b835ec6d7eff3780d1d",
+    "commit_sha": "b9db7d690250d56b2696211a39dc144f5e51cfe2",
+    "reviewed_at": "2026-09-18T01:31:33Z"
+  },
+  "verdict": "Pass"
+}

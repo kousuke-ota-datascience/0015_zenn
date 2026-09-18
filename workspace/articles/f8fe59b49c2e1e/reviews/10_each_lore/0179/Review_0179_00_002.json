@@ -1,0 +1,41 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2001-07-07を最古級定点とし生成時期へ変換しない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "レス763〜764の兄のくねくねした変貌・identity喪失表現と、レス764終盤の語り手の禁忌視認を別Evidenceとして保持し、物理的怪異化や後続被害を補完していない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "原ページ未固定を明示し、再録/保存記録を一次へ格上げしない。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "2001年後代再録、2003年保存記録、後代成立経路解説を区別する。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-008/EVD-009は2003年保存記録SRC-002の該当レスへ直接追跡できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "兄の物理的変身、語り手の終盤視認後の帰結、白い存在の正体・医学因果を未確定として保持する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "0179 terminal-semantic correction後のReview。兄のmotif echo / identity終端と語り手の終端視認をEvidence-faithfulに復元しPass。",
+  "review_seq": 2,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "3f48ddca17e7c9eef25c086e24582d1f163a9b7a",
+    "commit_sha": "a6f0b5e194edf5020ed5a8a533e99a4a7425ab79",
+    "reviewed_at": "2026-09-18T01:31:33Z"
+  },
+  "verdict": "Pass"
+}

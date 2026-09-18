@@ -1,0 +1,41 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1979-01-26の最古確実メディア定点と、1978年末頃の後代整理を分離している。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "本文未実見資料は存在・日付・見出し・書誌を超えて内容を補っていない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "一次・同時代資料そのものと、図書館レファレンス/記事索引による所在確認を混同していない。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "同時代資料、所在確認レファレンス、研究・後代解説を区別し、月刊教育の森を含むLegacy典拠監査情報を保持している。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "各EvidenceはSourceの確認範囲に収まり、発信地複数説・由来/終端異伝の不確実性も明示される。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "単一起源地点、本文未実見、個別異伝初出、社会対応一次記録などLegacyの保留事項を保持している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [],
+  "review_notes": "Review cycle 3。Legacy比較で不足していたSource audit semanticsをcanonical 00へ復元。rendererでもbibliographic/archive/notesを表示することを確認しPass。",
+  "review_seq": 4,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_00_sources.json",
+    "blob_sha": "7e32a8f0fa0d066e2614d57b68db6a8bce9f523e",
+    "commit_sha": "cefbc79b5f99fcc39884f545fab3c331a98d0223",
+    "reviewed_at": "2026-09-18T01:31:33Z"
+  },
+  "verdict": "Pass"
+}

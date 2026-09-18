@@ -1,0 +1,186 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "summary/content unitsは2001/2003 Evidenceへ接続される。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "summary.coverage_refsの全salient unitをBlind Decode後に個別監査し、LOSS/CONFLICTなし。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01-P12でLegacy主要意味と差異なし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "兄が白い存在と同様にくねくね動くidentity終端、物理変身を断定しない留保、語り手自身の終端視認までsummaryから再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "正体、医学因果、原ログ、読者作用を保留する。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "秋田・田園・双眼鏡・祖父・名称を2003増補として2001へ遡及しない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "兄のmotif echo / identity終端と語り手の終端視認を復元。D09/D11-D17のcode結論は変えずtraceと具体的意味を補強する。",
+      "status": "PASS"
+    },
+    "blind_decode": "遠方の白い存在を詳しく見て正体を理解した兄に重大な異変が起こる。2003年型では投稿者が先行話と自己体験を混成し、秋田の田園、双眼鏡、祖父の警告等を加える。兄は最終的に白い存在と同じようにくねくね動く状態となり、語り手には以前の兄ではなくなったかのように描かれるが、怪異そのものへの物理的変身とは確定しない。家族は兄を当地に残し、物語の最後には語り手自身も禁じられた白い物体を間近に見てしまう。その後の語り手の帰結は不明である。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "2001年型では田舎から遠方の白い人影のような存在を発見する。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "2001年再録では、田舎の家から遠方に白い人影のようなものが見える。"
+      },
+      {
+        "blind_reconstruction": "兄が詳しく見て理解した後、『分からないほうがいい』と語り重大な異変へ進む。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "兄が白い存在を詳しく見て正体を理解した後、『分かった。でも、分からないほうがいい』と語り、その後に重大な精神・行動上の異変が起きたとされる。"
+      },
+      {
+        "blind_reconstruction": "白い存在の正体は妖怪・霊等へ確定されない。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "白い存在の正体は説明されず、妖怪・霊等へ固定できない。"
+      },
+      {
+        "blind_reconstruction": "2003年投稿者は先行話と自身の子供時代の体験を混ぜたと明示する。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "2003年投稿者は、先行する『分からないほうがいい』話と自身の子供時代の体験を混ぜて詳しく書いたと明示する。"
+      },
+      {
+        "blind_reconstruction": "2003年型では白く細長い存在がくねくね動き、兄が双眼鏡で詳しく見た後に異変する。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "2003年型では白く細長いものが不自然にくねくね動き、兄が双眼鏡で詳しく見た後に精神・行動上の異変を示す。"
+      },
+      {
+        "blind_reconstruction": "祖父は白い存在を見てはならないと警告する。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "祖父は対象を『見てはならない』と警告し、危険な視認・理解を避ける追加情報を示す。"
+      },
+      {
+        "blind_reconstruction": "秋田・田園・双眼鏡・祖父・名称は2003年増補で2001年型へ遡及しない。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "秋田・田園・双眼鏡・祖父・『くねくね』という名称は2003年型で確認される増補要素である。"
+      },
+      {
+        "blind_reconstruction": "兄は白い存在と同様にくねくね動く状態となり、語り手には元の兄ではなくなったかのように描かれる。物理的変身とは断定しない。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "2003年型では、兄は白い存在を詳しく見た後、白い物体と同じようにくねくね動く状態となる。語り手には以前の兄の姿は失われ、もはや元の兄ではなくなったかのように描かれる。家族は兄を当地に残す判断をする。"
+      },
+      {
+        "blind_reconstruction": "記事を読んだだけで受容者へ作用する読者感染型とは区別される。",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "今回Scopeでは、読者が記事を理解しただけで作用する読者感染型は確認しない。"
+      },
+      {
+        "blind_reconstruction": "最後に語り手自身が見てはならない白い物体を間近に見てしまうが、その後は描かれない。",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "終盤、語り手は帰路で双眼鏡を覗き続けた末、見てはならない白い物体を間近に見てしまうところで物語が終わる。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "兄、語り手、祖父、白い正体不明存在。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "同左。"
+      },
+      {
+        "blind": "詳しく見て理解した兄。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "同左。"
+      },
+      {
+        "blind": "白い存在を詳しく視認し理解する。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "同左。"
+      },
+      {
+        "blind": "白い存在の正体は未確定。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "同左。"
+      },
+      {
+        "blind": "理解後に兄が重大異変を起こし、白い存在と同様にくねくね動く状態へ至る。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "同左。物理的な怪異への変身までは確定しない。"
+      },
+      {
+        "blind": "発見→詳細視認→理解→兄の変貌→祖父の警告→兄を当地に残す→語り手自身が禁じられた対象を間近に見る。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "同左。"
+      },
+      {
+        "blind": "一回の遭遇内で段階進行。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "同左。"
+      },
+      {
+        "blind": "正体理解が危険、2003年型で『見てはならない』。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "同左。"
+      },
+      {
+        "blind": "詳しく見ず理解へ進まないこと。終盤では語り手自身がこの禁忌を破る。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "同左。"
+      },
+      {
+        "blind": "兄は白い存在と同様にくねくね動き元の兄ではなくなったかのように描かれ、最後に語り手も禁じられた対象を見る。その後は不明。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "同左。兄の物理的怪異化と語り手の後続被害は未確定。"
+      },
+      {
+        "blind": "白い存在の正体、兄の物理的変身、医学因果、終盤視認後の語り手の帰結が未確定。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "同左。"
+      },
+      {
+        "blind": "2001原型と、先行話＋自己体験を混成した2003増補型。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "同左。"
+      }
+    ],
+    "reference_story": "2001年原型は遠方の白い存在を詳しく見て理解した人物の重大異変と正体非開示を核とする。2003年型は先行話と投稿者自身の体験の意図的混成で、秋田・田園・双眼鏡・祖父・『くねくね』名称を増補する。兄は白い存在と同様にくねくね動く状態へ変貌し、元の兄ではなくなったかのように描かれる一方、物理的な怪異化は断定しない。祖父の視認禁忌が示され、終盤では語り手自身がその禁忌を破って白い物体を間近に見るところで終わる。",
+    "verdict": "PASS"
+  },
+  "review_notes": "summary情報欠落回帰の主対象。JSON narrativeとrendered Summary narrativeの13アンカーを確認しPass。 新summary契約でcoverage_refs全件をBlind Decode監査しPass。",
+  "review_seq": 2,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_10_contents.json",
+    "blob_sha": "5a3bd4c04587a8cdfe9a3bee0d39edb07459bc81",
+    "commit_sha": "5eebbfc48e713739b55138bf52e1225ee8e32c5c",
+    "reviewed_at": "2026-09-18T01:31:33Z"
+  },
+  "verdict": "Pass"
+}

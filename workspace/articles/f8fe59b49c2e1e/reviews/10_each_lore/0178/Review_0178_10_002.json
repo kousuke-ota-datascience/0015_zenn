@@ -1,0 +1,180 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "summary/content unitsは00 Evidenceに接続される。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "summary.coverage_refsの全salient unitをBlind Decode後に個別監査し、LOSS/CONFLICTなし。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01-P12でLegacy主要意味と差異なし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summary narrativeだけで無人駅→お猿さん電車→順次危害→覚醒→4年後続き→再覚醒→警告と2003猿夢＋境界を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "実夢性、原因、反復機構、警告主体、派生初出を保持する。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "2000年型と2003年読者側派生を分離し、L2等へ逆輸入しない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0178",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryからD07-D18の主要分析構造とVersion Scope境界を再構成できる。",
+      "status": "PASS"
+    },
+    "blind_decode": "夢を自覚する投稿者が無人駅からお猿さん電車へ乗り、他乗客が順番に処理され自分の順番が迫ると覚醒する。4年後に同じ夢が前回の続きから再開し、再度覚醒した後に次回は逃がさない旨の警告が残る。2003年には元話を読んだ別受容者が類似夢を見る派生が確認されるが初期核から分離される。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "投稿者は夢だと自覚した薄暗い無人駅から始まる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "投稿者は夢を見ていると自覚した状態で薄暗い無人駅にいる。"
+      },
+      {
+        "blind_reconstruction": "遊園地の『お猿さん電車』のような乗り物へ乗る。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "遊園地の『お猿さん電車』のような乗り物が現れ、投稿者は乗車する。"
+      },
+      {
+        "blind_reconstruction": "他乗客が順番に残酷な処理を受け、投稿者自身の順番も近づく。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "車内放送に従って他の乗客が順番に残酷な処理を受け、投稿者自身にも順番が近づく。"
+      },
+      {
+        "blind_reconstruction": "投稿者は夢だと認識して覚醒し、その場から離脱する。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "投稿者は夢だと認識し、覚醒して危害場面から離脱する。"
+      },
+      {
+        "blind_reconstruction": "4年後、同じ夢が前回の続きから再開する。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "4年後、同じ夢が前回の続きから再開する。"
+      },
+      {
+        "blind_reconstruction": "再開後も再び覚醒して離脱する。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "再開した夢でも投稿者は再び覚醒して離脱する。"
+      },
+      {
+        "blind_reconstruction": "終端に次回は逃がさない旨の警告が残る。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "終端では次回は逃がさない旨の警告が示される。"
+      },
+      {
+        "blind_reconstruction": "夢の原因・反復理由・放送や警告の主体は説明されない。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "夢の原因主体、反復理由、車内放送や終端警告の主体は説明されない。"
+      },
+      {
+        "blind_reconstruction": "2003年には元話を読んだ別人物が類似夢を見る『猿夢＋』派生が現れるが2000年核とは分離される。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "2003年『猿夢＋』では、元の猿夢を読んだ別の人物が数日後に類似する夢を見たと投稿する型が後代資料で確認される。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "投稿者。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "投稿者。"
+      },
+      {
+        "blind": "投稿者本人。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "投稿者本人。"
+      },
+      {
+        "blind": "睡眠・夢状態。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "睡眠・夢状態。"
+      },
+      {
+        "blind": "原因主体は固定せず反復夢現象として扱う。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "同左。"
+      },
+      {
+        "blind": "順次処理の列へ投稿者の順番が近づくが実害前に覚醒。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "同左。taxonomy gap。"
+      },
+      {
+        "blind": "無人駅→お猿さん電車→順次危害→覚醒→4年後再開→再覚醒→警告。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "同左。"
+      },
+      {
+        "blind": "4年を挟む不定期反復。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "同左。"
+      },
+      {
+        "blind": "2000年型に受容者向け安定禁忌なし。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "同左。"
+      },
+      {
+        "blind": "夢と認識して覚醒し離脱。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "同左。taxonomy gap。"
+      },
+      {
+        "blind": "二度覚醒するが次回警告後の持続的帰結は不明。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "同左。"
+      },
+      {
+        "blind": "原投稿、実夢性、原因・反復・警告主体、2003派生初出が不確定。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "同左。"
+      },
+      {
+        "blind": "VAR-001 2000反復夢型 / VAR-002 2003猿夢＋読者側派生。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "同左。"
+      }
+    ],
+    "reference_story": "Legacy summaryも同じ因果・時系列・派生境界を保持する。",
+    "verdict": "PASS"
+  },
+  "review_notes": "summary情報欠落回帰の主対象。JSON narrativeとrendered Summary narrativeの11アンカーを確認しPass。 新summary契約でcoverage_refs全件をBlind Decode監査しPass。",
+  "review_seq": 2,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_10_contents.json",
+    "blob_sha": "ed109495b673c3136621e35af57bb5b3822353c5",
+    "commit_sha": "cb1c58518bcd2e194b6c7e5b7db6a3d3a4666efd",
+    "reviewed_at": "2026-09-18T01:31:33Z"
+  },
+  "verdict": "Pass"
+}

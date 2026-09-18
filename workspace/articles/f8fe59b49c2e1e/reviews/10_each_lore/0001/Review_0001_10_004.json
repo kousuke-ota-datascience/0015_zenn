@@ -1,0 +1,204 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "追加した発信地複数説、社会対応、流通回路、1979年9月分析記事、由来/終端異伝は00 Evidenceへ接続されている。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "summary.coverage_refsの全salient unitをBlind Decode後に個別監査し、LOSS/CONFLICTなし。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01-P12でLegacyの主要意味と差異なし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summaryだけで初期核・後代代表形・増補群に加え、起源競合、流通史、社会反応、主要保留事項を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "単一起源地点、媒体因果寄与、社会対応一次記録、異伝初出/共存等の保留を保持している。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001/002/003の境界を維持し、由来説明・終端異伝等を初期共有核へ遡及していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "Legacyから復元した情報はVersion Scope境界と主要分析可能性を補強するが、Scoped VAR-001のD01-D21結論を変更しない。",
+      "status": "PASS"
+    },
+    "blind_decode": "1979年初頭〜春には、口が裂けた女性が小中学生を脅かし／襲うという噂が流通し複数地域へ広がった。1978年末頃の岐阜流通は後代整理で、発信地には複数説がある。後代には会話・正体提示型、服装・武器・高速走行・弱点・回避法・由来説明・終端異伝が増補された。子ども、塾、電話、新聞・雑誌・テレビ等が流通回路として整理され、6月には登校拒否騒ぎ、後代整理ではパトロール・集団下校も確認されるが、媒体の因果寄与や個別一次記録は固定しない。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "1978年末頃の岐阜流通は後代整理として保持される。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "1978年末頃の岐阜で、子どもの噂として口裂け女が流通していたと後代の専門家・郷土資料整理は示す。"
+      },
+      {
+        "blind_reconstruction": "1979年1月26日が確実な新聞上の定点である。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "1979年1月26日付『岐阜日日新聞』朝刊1面「編集余記」に口裂け女関連記事が存在する。"
+      },
+      {
+        "blind_reconstruction": "1979年春には口の裂けた女性が小中学生を襲う危害型が各地へ拡大している。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "1979年4月には、口の裂けた女性が小・中学生を襲うという危害型の噂が各地に広がっていることを示す雑誌記事見出しがある。"
+      },
+      {
+        "blind_reconstruction": "後代代表形では容姿への問い、裂けた口の提示、追跡・危害へ進む。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "後代の代表形では、口元を隠した女性が遭遇者へ容姿を問い、裂けた口を示し、追跡・危害へ進む型が整理される。"
+      },
+      {
+        "blind_reconstruction": "マスク・赤いコート・鎌・高速走行等の属性や能力は流行過程の増補である。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "流行過程では、マスク、赤いコート、鎌、高速走行などの属性・能力が追加されたと専門家整理にある。"
+      },
+      {
+        "blind_reconstruction": "ポマード・べっこう飴等の弱点・回避法も後代増補である。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "流行過程では、ポマードやべっこう飴などの弱点・回避法が付加されたと専門家整理にある。"
+      },
+      {
+        "blind_reconstruction": "1979年6月には全国の小中学生を恐れさせる風説として記事化されている。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "1979年6月には全国の小中学生を恐れさせる風説として週刊誌に記事化されていた。"
+      },
+      {
+        "blind_reconstruction": "同時期に登校拒否騒ぎも報道対象となる。",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "1979年6月15日の同時代新聞記事見出しには、噂の広域化とともに子どもの登校拒否騒ぎが報道対象になっていたことが示される。"
+      },
+      {
+        "blind_reconstruction": "発信地には複数説があり単一起源地点は確定しない。",
+        "content_ref": "CNT-012",
+        "difference": "NONE",
+        "salient_meaning": "口裂け女の発信地については、美濃加茂市・八百津町・岐阜市など複数の候補・説がある。"
+      },
+      {
+        "blind_reconstruction": "教師・保護者によるパトロールや集団下校が後代整理にある。",
+        "content_ref": "CNT-013",
+        "difference": "NONE",
+        "salient_meaning": "教師・保護者によるパトロールや集団下校が実施されたと、後代の専門家整理にある。"
+      },
+      {
+        "blind_reconstruction": "子ども・塾・電話・新聞雑誌テレビ等の複数流通回路があるが媒体の因果寄与は未確定。",
+        "content_ref": "CNT-014",
+        "difference": "NONE",
+        "salient_meaning": "子ども同士、塾、電話、新聞・雑誌・テレビ等が複数の流通回路として整理される。"
+      },
+      {
+        "blind_reconstruction": "流行過程で由来説明も増殖する。",
+        "content_ref": "CNT-016",
+        "difference": "NONE",
+        "salient_meaning": "流行過程では、怪異の由来説明も含めて複数の説明・設定が増殖したと整理される。"
+      },
+      {
+        "blind_reconstruction": "具体的な終端異伝や回答分岐を最初期共有核へ一括して遡及しない。",
+        "content_ref": "CNT-017",
+        "difference": "NONE",
+        "salient_meaning": "後代異伝では追跡・危害後の具体的な帰結や回答分岐にも差があり、初期共有核の最終帰結として一括固定できない。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "口裂け女という女性主体。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "口裂け女という女性主体。"
+      },
+      {
+        "blind": "小・中学生／子ども。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "小・中学生／子ども。"
+      },
+      {
+        "blind": "初期核では接触条件未固定。後代代表形では日常空間での遭遇。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "同左。初期核と後代代表形を分離。"
+      },
+      {
+        "blind": "口裂け女が危険主体。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "口裂け女が危険主体。存在論は初期核で未固定。"
+      },
+      {
+        "blind": "初期核は子どもを襲う。後代代表形では問いかけ・口の提示・追跡。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "同左。"
+      },
+      {
+        "blind": "日常空間から脅威・襲撃状態へ移る。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "同左。"
+      },
+      {
+        "blind": "1978年末頃の流通整理→1979年1月記事→春の地域拡大→6月全国化→9月社会・教育現象分析。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "同左。起源地点は複数説。"
+      },
+      {
+        "blind": "初期核では固定規則なし。後代に回答規則等。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "同左。"
+      },
+      {
+        "blind": "初期核では回避法未固定。後代にポマード・べっこう飴等。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "同左。"
+      },
+      {
+        "blind": "初期核の最終帰結は未確定。後代には複数の危害終端・回避成功。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "同左。"
+      },
+      {
+        "blind": "起点、単一起源地点、1月本文細部、異伝初出・共存、媒体因果寄与、社会対応一次記録が未確定。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "同左。"
+      },
+      {
+        "blind": "VAR-001初期核、VAR-002会話・正体提示、VAR-003属性・能力・回避法・説明の増補。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "同左。"
+      }
+    ],
+    "reference_story": "Legacy調査と照合すると、最初期安全核は『口の裂けた女性が子どもを襲う』まで。1979-01-26が確実なメディア定点で、3〜4月に地域拡大、6月に全国化と社会反応、9月には社会・教育現象分析記事が存在する。代表会話型・属性・能力・回避法・由来説明・詳細終端は後代増補として初期核から分離し、発信地・媒体寄与・社会対応の詳細は不確実性として保持する。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Review cycle 3。Legacy比較で欠落していた伝承史・社会反応・流通因果保留・由来/終端異伝をcanonical 10へ復元しPass。 新summary契約でcoverage_refs全件をBlind Decode監査しPass。",
+  "review_seq": 4,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_10_contents.json",
+    "blob_sha": "9c967dbf96508fc7d16df92c8b5f273342db610f",
+    "commit_sha": "3b98c49a42fc9a661931aad13ddf53f8af4915c7",
+    "reviewed_at": "2026-09-18T01:31:33Z"
+  },
+  "verdict": "Pass"
+}

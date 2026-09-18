@@ -1,0 +1,119 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "旧goldenのコード裁定を新Schemaへ移しても結論変化なし。旧Review 004のModerateはMarkdown tutorial説明ブロック不足で、コード意味の不一致ではない。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "D11非意図的巻き込まれ→D12はすみ→D13空間異常→D15不確実性維持の因果列が一貫する。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "作用対象=はすみ、作用=空間異常、終端=不確実性維持で初期ログに整合。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L1=1、L2=0、L3=0。遠州鉄道の後代展開はScope外でありL3 supportへ流用しない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19は初期公開掲示板流通そのものをOPEN_FORUM_WEBとして直接固定している。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "誰も真相を確実に保持すると固定できないが、NO_ONE_KNOWSへ強くコードせずUとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "新浜松・比奈・私鉄という実在アンカーと、確認不能なきさらぎ駅・伊佐貫トンネルを分離している。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D01〜D21は最終Legacy Golden Referenceの裁定と意味的に一致する。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "Macro Category=ネット怪談、Entry Type=物語・伝説は旧goldenと一致。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "Directは公式過去ログで直接確認できる年代・媒体・提示・対象・時系列等に限定され、推論次元はI/Uを用いる。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各DimensionはScoped Content/Evidenceへ接続され、後代事業者展開をD18 L3へ混入していない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D10/D20はUを維持し、原因源・真相保持者を補完していない。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "旧goldenで用いる全code IDは現taxonomy catalogに存在しParentも一致する。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "2004年1月8日深夜〜9日未明、レス98〜635の初期実況に限定し、後代派生をScope外へ分離している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0180",
+  "findings": [],
+  "review_notes": "0180 Golden Reference regression Review cycle 1。最終Legacy Golden Referenceの意味裁定と現canonical 20を比較しPass。",
+  "review_seq": 2,
+  "schema_version": "1.0",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-009",
+      "CNT-010",
+      "CNT-011",
+      "CNT-012"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-004",
+      "EVD-005",
+      "EVD-006",
+      "EVD-007",
+      "EVD-008"
+    ],
+    "model": "日常的な帰宅列車に乗っていたはすみが非意図的に通常地理へ回収できない経路・駅へ入り、公開掲示板参加者とリアルタイムに意味付けと対処を試みる。原因源は確定せず、空間異常と危険だけが段階進行し、確実な脱出法を得ないまま投稿が途絶えて不確実性が終端として残る。",
+    "notes": "旧goldenのsense-making構造と一致。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0180_kisaragi_station/0180_20_analysis.json",
+    "blob_sha": "035f2a9612e8359e71ab7c54d756a5f5256cdb27",
+    "commit_sha": "923db9271c41faf110b899611fac4ad5fd78a747",
+    "reviewed_at": "2026-09-18T01:31:33Z"
+  },
+  "verdict": "Pass"
+}
