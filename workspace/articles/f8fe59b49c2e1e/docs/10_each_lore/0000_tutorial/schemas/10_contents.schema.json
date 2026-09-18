@@ -4,32 +4,63 @@
   "title": "Urban Legend Reconstructed Content",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "entry_id", "lore_name", "summary", "content_units", "variants", "uncertainties"],
+  "required": [
+    "schema_version",
+    "entry_id",
+    "lore_name",
+    "summary",
+    "content_units",
+    "variants",
+    "uncertainties"
+  ],
   "properties": {
-    "schema_version": {"const": "1.0"},
-    "entry_id": {"type": "string", "pattern": "^[0-9]{4}$"},
-    "lore_name": {"type": "string", "minLength": 1},
-    "summary": {"$ref": "#/$defs/summary"},
+    "schema_version": {
+      "const": "1.0"
+    },
+    "entry_id": {
+      "type": "string",
+      "pattern": "^[0-9]{4}$"
+    },
+    "lore_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "$ref": "#/$defs/summary"
+    },
     "content_units": {
       "type": "array",
-      "items": {"$ref": "#/$defs/contentUnit"}
+      "items": {
+        "$ref": "#/$defs/contentUnit"
+      }
     },
     "variants": {
       "type": "array",
-      "items": {"$ref": "#/$defs/variant"}
+      "items": {
+        "$ref": "#/$defs/variant"
+      }
     },
     "uncertainties": {
       "type": "array",
-      "items": {"$ref": "#/$defs/uncertainty"}
+      "items": {
+        "$ref": "#/$defs/uncertainty"
+      }
     }
   },
   "$defs": {
     "summary": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["narrative", "structure"],
+      "required": [
+        "narrative",
+        "structure",
+        "coverage_refs"
+      ],
       "properties": {
-        "narrative": {"type": "string", "minLength": 1},
+        "narrative": {
+          "type": "string",
+          "minLength": 1
+        },
         "structure": {
           "type": "object",
           "additionalProperties": false,
@@ -48,18 +79,51 @@
             "variant_boundaries"
           ],
           "properties": {
-            "primary_actors": {"$ref": "#/$defs/structuredValue"},
-            "affected_targets": {"$ref": "#/$defs/structuredValue"},
-            "entry_trigger": {"$ref": "#/$defs/structuredValue"},
-            "causal_agent": {"$ref": "#/$defs/structuredValue"},
-            "mechanism": {"$ref": "#/$defs/structuredValue"},
-            "state_transition": {"$ref": "#/$defs/structuredValue"},
-            "temporal_structure": {"$ref": "#/$defs/structuredValue"},
-            "rules_and_taboos": {"$ref": "#/$defs/structuredValue"},
-            "avoidance_control": {"$ref": "#/$defs/structuredValue"},
-            "terminal_state": {"$ref": "#/$defs/structuredValue"},
-            "uncertainties": {"$ref": "#/$defs/structuredValue"},
-            "variant_boundaries": {"$ref": "#/$defs/structuredValue"}
+            "primary_actors": {
+              "$ref": "#/$defs/structuredValue"
+            },
+            "affected_targets": {
+              "$ref": "#/$defs/structuredValue"
+            },
+            "entry_trigger": {
+              "$ref": "#/$defs/structuredValue"
+            },
+            "causal_agent": {
+              "$ref": "#/$defs/structuredValue"
+            },
+            "mechanism": {
+              "$ref": "#/$defs/structuredValue"
+            },
+            "state_transition": {
+              "$ref": "#/$defs/structuredValue"
+            },
+            "temporal_structure": {
+              "$ref": "#/$defs/structuredValue"
+            },
+            "rules_and_taboos": {
+              "$ref": "#/$defs/structuredValue"
+            },
+            "avoidance_control": {
+              "$ref": "#/$defs/structuredValue"
+            },
+            "terminal_state": {
+              "$ref": "#/$defs/structuredValue"
+            },
+            "uncertainties": {
+              "$ref": "#/$defs/structuredValue"
+            },
+            "variant_boundaries": {
+              "$ref": "#/$defs/structuredValue"
+            }
+          }
+        },
+        "coverage_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^CNT-[0-9]{3,}$"
           }
         }
       }
@@ -67,85 +131,207 @@
     "structuredValue": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["status", "value"],
+      "required": [
+        "status",
+        "value"
+      ],
       "properties": {
-        "status": {"type": "string", "enum": ["known", "unknown", "not_applicable"]},
+        "status": {
+          "type": "string",
+          "enum": [
+            "known",
+            "unknown",
+            "not_applicable"
+          ]
+        },
         "value": {
           "oneOf": [
-            {"type": "string"},
-            {"type": "array", "items": {"type": "string"}},
-            {"type": "null"}
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "null"
+            }
           ]
         }
       },
       "allOf": [
         {
-          "if": {"properties": {"status": {"const": "known"}}, "required": ["status"]},
-          "then": {"properties": {"value": {"not": {"type": "null"}}}}
+          "if": {
+            "properties": {
+              "status": {
+                "const": "known"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "not": {
+                  "type": "null"
+                }
+              }
+            }
+          }
         },
         {
-          "if": {"properties": {"status": {"enum": ["unknown", "not_applicable"]}}, "required": ["status"]},
-          "then": {"properties": {"value": {"type": "null"}}}
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "unknown",
+                  "not_applicable"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "null"
+              }
+            }
+          }
         }
       ]
     },
     "contentUnit": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["content_id", "type", "text", "evidence_refs"],
+      "required": [
+        "content_id",
+        "type",
+        "text",
+        "evidence_refs"
+      ],
       "properties": {
-        "content_id": {"type": "string", "pattern": "^CNT-[0-9]{3,}$"},
+        "content_id": {
+          "type": "string",
+          "pattern": "^CNT-[0-9]{3,}$"
+        },
         "type": {
           "type": "string",
-          "enum": ["event", "claim", "rule", "action", "outcome", "actor", "location", "object", "condition", "other"]
+          "enum": [
+            "event",
+            "claim",
+            "rule",
+            "action",
+            "outcome",
+            "actor",
+            "location",
+            "object",
+            "condition",
+            "other"
+          ]
         },
-        "text": {"type": "string", "minLength": 1},
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
         "evidence_refs": {
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
-          "items": {"type": "string", "pattern": "^EVD-[0-9]{3,}$"}
+          "items": {
+            "type": "string",
+            "pattern": "^EVD-[0-9]{3,}$"
+          }
         },
-        "notes": {"type": "string"}
+        "notes": {
+          "type": "string"
+        }
       }
     },
     "variant": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["variant_id", "kind", "description", "content_refs", "evidence_refs"],
+      "required": [
+        "variant_id",
+        "kind",
+        "description",
+        "content_refs",
+        "evidence_refs"
+      ],
       "properties": {
-        "variant_id": {"type": "string", "pattern": "^VAR-[0-9]{3,}$"},
-        "kind": {"type": "string", "enum": ["initial", "later", "major", "other"]},
-        "description": {"type": "string", "minLength": 1},
-        "attestation": {"type": "string"},
+        "variant_id": {
+          "type": "string",
+          "pattern": "^VAR-[0-9]{3,}$"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "initial",
+            "later",
+            "major",
+            "other"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attestation": {
+          "type": "string"
+        },
         "content_refs": {
           "type": "array",
           "uniqueItems": true,
-          "items": {"type": "string", "pattern": "^CNT-[0-9]{3,}$"}
+          "items": {
+            "type": "string",
+            "pattern": "^CNT-[0-9]{3,}$"
+          }
         },
         "evidence_refs": {
           "type": "array",
           "uniqueItems": true,
-          "items": {"type": "string", "pattern": "^EVD-[0-9]{3,}$"}
+          "items": {
+            "type": "string",
+            "pattern": "^EVD-[0-9]{3,}$"
+          }
         },
-        "notes": {"type": "string"}
+        "notes": {
+          "type": "string"
+        }
       }
     },
     "uncertainty": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["text"],
+      "required": [
+        "text"
+      ],
       "properties": {
-        "text": {"type": "string", "minLength": 1},
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
         "evidence_refs": {
           "type": "array",
           "uniqueItems": true,
-          "items": {"type": "string", "pattern": "^EVD-[0-9]{3,}$"}
+          "items": {
+            "type": "string",
+            "pattern": "^EVD-[0-9]{3,}$"
+          }
         },
         "content_refs": {
           "type": "array",
           "uniqueItems": true,
-          "items": {"type": "string", "pattern": "^CNT-[0-9]{3,}$"}
+          "items": {
+            "type": "string",
+            "pattern": "^CNT-[0-9]{3,}$"
+          }
         }
       }
     }
