@@ -144,7 +144,19 @@
 
 - `00_sources.json` のEvidenceのみを根拠として伝承内容を再構成する.
 - Evidence / Content層とAnalysis層を分離する。
-- summaryは紹介文ではなく、後続分析を再検討できる密度を持つEvidence-faithfulな圧縮表現とする。
+- 先に `content_units` をEvidence-faithfulに作成し、その後にsummaryへ残すべきsalient unitを選定する。
+- salient unitは `summary.coverage_refs` に列挙する。全Contentを機械的に列挙せず、次のいずれかに該当し、欠落すると伝承の具体的意味・展開・境界が変わるunitを選ぶ。
+  - 発動・遭遇・主要作用・主要転換・終端に必要な出来事／行動／帰結。
+  - transformation、identity change、人物・対象の最終状態。
+  - terminal scene、終端警告、最後の行動や余韻など、結末の意味を決める要素。
+  - motif echo（怪異と被作用者の形態・行動・言語等の反復／類似）が意味形成上重要な場合の対応要素。
+  - 禁忌・回避・制御規則のうち、物語展開または帰結を変えるもの。
+  - variant境界を決める増補・脱落・再構成上の差。
+  - 原因・正体・結末等について、断定可否を左右する主要な不確実性。
+- summaryは**意味保存圧縮**であり、紹介文でもAnalysis用の概念要約でもない。`coverage_refs` の各Content unitについて、具体的に「何が起きるか」「何がどう変わるか」「どう終わるか」をsummaryだけから再構成できる密度を保つ。
+- 分析コードに都合のよい抽象語へ置換して具体的意味を消してはならない。例えば「人格異変」「危害」「変容」とだけ要約して、怪異との類似、身体・行動の具体的変化、最終場面、identityの喪失表現等を落とさない。
+- 具体的描写を保持する際もEvidenceを超えて強い存在論・因果へ変換しない。「怪異そのものへ変身した」と確定できない場合は、「怪異と同様の動きをする状態になり、元の人物ではなくなったかのように描かれる」のように、**具体的描写＋認識論的留保**を同時に保持する。
+- `summary.narrative` と `summary.structure` は相互補完してよいが、重要な終端・transformation・identity・motif echoをstructureだけへ追いやってnarrativeから消さない。
 - 物語型では主要な進行、転換、終端、未解決部分を再構成可能にする。
 - 命題型では対象、条件、中心命題、作用または予測、帰結、回避・制御・利用、Evidence境界を再構成可能にする。
 - 主要形と異伝・派生を区別する。ただしVersion Scopeはこの段階で確定しない。
