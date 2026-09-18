@@ -260,10 +260,7 @@ Permanent fixture coverage was added in `tests/test_summary_regression.py`.
 - those elements as 2003 accretions not retrojected into the 2001 form;
 - no reader-infection interpretation.
 
-Actual rendered-summary regression run `35292606367`:
-- 0178: 11 semantic anchors PASS
-- 0179: 13 semantic anchors PASS
-- source JSON hashes unchanged by rendering
+Historical rendered-summary regression run `35292606367` passed its 11/13 hand-picked semantic anchors, but this was later shown to be insufficient. In particular, the 0179 anchor set omitted the brother's motif-echo / identity terminal state and the narrator's final forbidden sighting, so the test produced a false positive. This anchor-list method is superseded by the `summary.coverage_refs` contract and Review 10 coverage audit described below.
 
 ## E2E defects found and corrected
 
@@ -285,31 +282,27 @@ Actual rendered-summary regression run `35292606367`:
 
 0178:
 - 00 commit: `ee47beb9d4997f84854ae38c9287539ea1a16e91`
-- 10 commit: `638b065710a3db1bb4e972c888362ca30b438a13`
+- 10 coverage-contract commit: `cb1c58518bcd2e194b6c7e5b7db6a3d3a4666efd`
 - 20 commit: `67d90fa3385e3dd291c5347fbe460a21485ee6cd`
-- Review Seq 1: 00/10/20 all Pass
+- latest Review Seq 2: 00/10/20 all Pass
 
 0179:
-- 00 commit: `1d5caa85548f388456fdd4a2c361f3f2ffd842c8`
-- 10 commit: `44ddfdf26595fd870dbb25199d61941434506236`
-- 20 commit: `37f326a4280e323e6a722d1409ada7c2697dd4af`
-- Review Seq 1: 00/10/20 all Pass
+- 00 terminal-evidence correction: `a6f0b5e194edf5020ed5a8a533e99a4a7425ab79`
+- 10 terminal-semantic + coverage-contract correction: `5eebbfc48e713739b55138bf52e1225ee8e32c5c`
+- 20 trace correction: `b9db7d690250d56b2696211a39dc144f5e51cfe2`
+- latest Review Seq 2: 00/10/20 all Pass
 
-Shared Review commit: `c45ce06057633925a6b66d065f69e66bc69a9e82`.
+Coverage-aware Review run: `35295654638`.
+Coverage-aware Review commit: `6cc29ba`.
 
-Final CI run `35292878763`:
-- 51 passed / 0 failed;
-- 0178 00/10/20 PASS;
-- 0179 00/10/20 PASS;
-- 0178 Review history `[1]`;
-- 0179 Review history `[1]`.
+Pre-coverage-contract CI run `35292878763` had 51 passed / 0 failed, but it predates the newly discovered 0179 summary omission and is retained only as historical evidence.
 
-Control plane:
-- all six 0178/0179 artifact rows are `完了`;
-- latest Review Seq is `1`;
-- Notion post-SHA, Review target commit/blob, and current canonical artifact all match.
-
-Rendered Markdown commit: `c914105`.
+After the coverage-contract redesign:
+- fixture suite increased to 57 tests before re-review;
+- 0178 / 0179 canonical 00/10/20 validation all PASS under the new schema;
+- Review history advanced to 0178 `[1, 2]` and 0179 `[1, 2]`;
+- all six 0178/0179 control-plane rows are again `完了`, latest Review Seq `2`;
+- rendered Markdown was refreshed in commit `f032a49`.
 
 
 ## Legacy difference classification
@@ -353,7 +346,79 @@ The 0178 E2E exposed a separate redesigned-system defect: the 20 Analysis schema
 That was **not a Legacy defect**. The redesigned schema and validator were corrected, fixtures were added, and final CI passed afterward.
 
 Therefore the comparison result is:
-- summary meaning: preserved for both 0178 and 0179;
-- 0178 differences: mainly representation / old Markdown-format differences;
-- 0179 code differences: largely attributable to identifiable Legacy taxonomy-ID defects;
-- one additional defect was found in the redesigned schema/validator itself and corrected separately.
+- 0178 summary meaning remained preserved; its main differences are representation / old Markdown-format differences.
+- 0179 taxonomy-code differences are largely attributable to identifiable Legacy taxonomy-ID defects.
+- **0179 also exposed a redesigned-system summary defect**: the first new `10_contents.summary` abstracted the brother's concrete motif-echo / identity terminal state into only a generic mental/behavioral change and omitted the narrator's final forbidden sighting. This was not caused by Legacy.
+- the original hand-picked 13-anchor regression failed to detect that omission and is itself classified as a redesigned-test defect.
+- the redesigned 20 schema/validator taxonomy-gap defect found via 0178 is a separate redesigned-system defect.
+
+
+## Summary meaning-preservation contract redesign
+
+The 0179 false positive led to a redesign of the summary contract.
+
+### Workflow 10
+
+`summary` is now explicitly defined as **meaning-preserving compression**, not an Analysis-oriented abstraction.
+
+Coder order is:
+1. reconstruct Evidence-faithful `content_units`;
+2. select salient Content units;
+3. record those IDs in `summary.coverage_refs`;
+4. write `summary.narrative + structure` so every selected unit can be semantically reconstructed.
+
+Salience explicitly includes:
+- major events / transitions / terminal outcomes;
+- transformation and identity change;
+- terminal scene and final warning;
+- motif echo where a victim/person comes to resemble or repeat the怪異;
+- rules / avoidance that alter the outcome;
+- variant-defining additions;
+- uncertainty needed to avoid overclaiming.
+
+Concrete terminal meaning must not be replaced by generic Analysis-friendly labels such as only "mental change" or "transformation".
+
+### 10 Contents Schema / validation
+
+`summary.coverage_refs` is now required, non-empty, unique, and restricted to `CNT-*` IDs.
+
+`reference_validator.py` deterministically rejects dangling coverage refs.
+
+Existing canonical entries 0001 / 0178 / 0179 / 0180 were migrated to this contract.
+
+### Review 10
+
+Review now separates:
+1. **Narrative Reconstruction** — can the concrete story be reconstructed from summary alone?
+2. **Analysis Reconstruction / Invariance** — can downstream analysis still be reconstructed?
+
+Blind Decode occurs before seeing `coverage_refs`. After Blind Decode, every coverage ref is audited with:
+- `content_ref`;
+- `salient_meaning`;
+- `blind_reconstruction`;
+- `difference = NONE / LOSS / CONFLICT`.
+
+A concrete story LOSS is a Review failure even when the same D01-D21 code could still be reconstructed.
+
+`review_writer.py` enforces that the coverage-audit ref set exactly equals `summary.coverage_refs`; LOSS/CONFLICT requires a Finding.
+
+### 0179 correction
+
+The 2003-form terminal semantics are now preserved as follows:
+- the brother comes to move in the same writhing manner as the distant white entity;
+- the narrator experiences him as no longer the former brother;
+- this is kept as motif echo / identity disruption, **not** asserted as literal physical transformation into the entity;
+- the family leaves the changed brother at the local household;
+- the actual final scene, where the narrator himself ends up seeing the forbidden white entity at close range, is retained;
+- the narrator's subsequent outcome remains unknown.
+
+These meanings are represented in Evidence, Content, Summary, Version Scope / Analysis trace, rendered Markdown, and Review coverage audit.
+
+Implementation commits:
+- Workflow 10: `aebd32089e0b48528b4b377d3d972886c3952bd7`
+- Workflow 20: `348836ba0ad1d70b261a49431c8af674bf9c72e3`
+- 10 schema: `9522730a887a5c492493a88b214d40fbc53ad044`
+- reference validation: `18653c7d1984276434cb407e15bca2c58f4b9937`
+- Review 10 schema: `da169baaed45a8af7926c4c3fb83239027cc8223`
+- Review writer enforcement: `3c58f1105c358209a89c860b4c642c37d825eb1d`
+- salient-unit regression tests: `d4a65aa6683bb8307c463942ceaba36b9f12e774`
