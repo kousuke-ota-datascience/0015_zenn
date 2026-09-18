@@ -12,7 +12,7 @@
 
 - Included variants: VAR-001, VAR-002
 - Excluded variants: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006, CNT-007, CNT-008, CNT-009, CNT-010
+- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006, CNT-007, CNT-008, CNT-009, CNT-010, CNT-011
 
 ## Dimensions
 
@@ -124,12 +124,12 @@ Taxonomy gap: False
 
 - Primary: D09.UNK.FORBIDDEN_INQUIRY (parent: D09.UNK)
 - Secondary: D09.UNK.DELIBERATE_NONRESOLUTION (parent: D09.UNK)
-- Content refs: CNT-002, CNT-003, CNT-007
-- Evidence refs: EVD-002, EVD-005
+- Content refs: CNT-002, CNT-003, CNT-007, CNT-011
+- Evidence refs: EVD-002, EVD-005, EVD-009
 
-**Rationale:** 正体を理解すること自体が危険として扱われ、読者へ正体は開示されない。
+**Rationale:** 正体を理解すること自体が危険として扱われ、祖父も『見てはならない』と警告する。終盤では語り手自身がその禁忌を破って対象を間近に見るが、その後の帰結は開示されないため、謎と危険は解消されない。
 
-**Manifestation:** 『知るべきではない』という構造が謎を解かずに保持する。
+**Manifestation:** 『知る／見るべきではない』という境界が、兄の変貌と語り手の終端視認の双方を通じて保持される。
 
 Taxonomy gap: False
 
@@ -150,12 +150,12 @@ Taxonomy gap: False
 
 - Primary: D11.INF.UNDERSTAND_RECOGNIZE (parent: D11.INF)
 - Secondary: D11.SEN.VISUAL_EXPOSURE (parent: D11.SEN)
-- Content refs: CNT-002, CNT-006
-- Evidence refs: EVD-002, EVD-004
+- Content refs: CNT-002, CNT-006, CNT-011
+- Evidence refs: EVD-002, EVD-004, EVD-009
 
-**Rationale:** 詳しく視認し『何であるか』を理解することが人物異変に先行する。原ログ未固定のためI。
+**Rationale:** 詳しく視認し『何であるか』を理解することが兄の異変に先行する。さらに終盤では語り手自身も禁じられた対象を間近に見る。原ログ未固定のためI。
 
-**Manifestation:** 単に遠くから見るより、詳しく見て理解した人物に危害が集中する。
+**Manifestation:** 詳細視認・理解が主要な発動条件で、最終場面ではその視認禁忌を語り手自身が踏む。
 
 Taxonomy gap: False
 
@@ -163,12 +163,12 @@ Taxonomy gap: False
 
 - Primary: D12.OTH.SPECIFIC_OTHER (parent: D12.OTH)
 - Secondary: D12.FOC.PROTAGONIST_EXPERIENCER (parent: D12.FOC)
-- Content refs: CNT-002, CNT-006, CNT-009
-- Evidence refs: EVD-002, EVD-004
+- Content refs: CNT-002, CNT-006, CNT-009, CNT-011
+- Evidence refs: EVD-002, EVD-004, EVD-008, EVD-009
 
-**Rationale:** 異変を受けるのは詳しく見て理解した兄であり、語り手はその変化を観察する。
+**Rationale:** 明示的な重大異変を受ける中心は、詳しく見て理解した兄である。語り手は兄の変化を観察するが、終盤では自らも対象を間近に見るためSecondaryの経験主体として残る。
 
-**Manifestation:** 焦点は対象を理解してしまった特定人物へ置かれる。
+**Manifestation:** 兄が実現被害の中心で、語り手は最後に危険な視認条件へ入るが、その後の被害成立までは描かれない。
 
 Taxonomy gap: False
 
@@ -177,11 +177,11 @@ Taxonomy gap: False
 - Primary: D13.COG.COGNITION_TRIGGERED_HARM (parent: D13.COG)
 - Secondary: D13.COG.MENTAL_INFLUENCE (parent: D13.COG)
 - Content refs: CNT-002, CNT-006, CNT-009
-- Evidence refs: EVD-002, EVD-004
+- Evidence refs: EVD-002, EVD-004, EVD-008
 
-**Rationale:** 対象を理解したことと精神・行動上の異変が物語内で結び付けられる。現実医学的因果は主張しない。
+**Rationale:** 対象を理解したことと精神・行動上の異変が物語内で結び付けられ、2003年型では兄が白い存在と同様にくねくね動く状態へ至る。現実医学的因果や怪異への物理変身は主張しない。
 
-**Manifestation:** 『知ること』が危害契機になる認知危害型として描かれる。
+**Manifestation:** 『知ること』が危害契機となり、兄の行動・人格状態が怪異の運動を反復するほど大きく変化する。
 
 Taxonomy gap: False
 
@@ -189,12 +189,12 @@ Taxonomy gap: False
 
 - Primary: D14.NEG
 - Secondary: -
-- Content refs: CNT-002, CNT-009
-- Evidence refs: EVD-002, EVD-004
+- Content refs: CNT-002, CNT-009, CNT-011
+- Evidence refs: EVD-002, EVD-004, EVD-008, EVD-009
 
-**Rationale:** 人物の重大な異変として語られるため負である。保存資料由来なのでI。
+**Rationale:** 兄の重大なidentity崩壊、家族との分離、さらに語り手自身が終盤に禁じられた対象を見てしまう展開として提示されるため負である。保存資料由来なのでI。
 
-**Manifestation:** 対象理解は利益ではなく明確な人物崩壊へ接続される。
+**Manifestation:** 兄の変貌と喪失に加え、語り手にも次の危険が開かれたまま終わる。
 
 Taxonomy gap: False
 
@@ -203,11 +203,11 @@ Taxonomy gap: False
 - Primary: D15.MND.SELF_IDENTITY_DISRUPTION (parent: D15.MND)
 - Secondary: -
 - Content refs: CNT-002, CNT-009
-- Evidence refs: EVD-002, EVD-004
+- Evidence refs: EVD-002, EVD-004, EVD-008
 
-**Rationale:** 兄が通常状態から大きく変化した人物として描かれるが、特定診断や強迫行動を生成しない。
+**Rationale:** 兄は白い存在と同様にくねくね動く状態となり、語り手には以前の兄ではなくなったかのように描かれる。特定の医学診断や怪異への物理変身は生成しない。
 
-**Manifestation:** 人物の人格・自己状態が不可逆的に崩れたように語られる。
+**Manifestation:** 兄の人格・自己同一性が大きく崩れ、怪異の動きを反復する『変わり果てた兄』として終端化される。
 
 Taxonomy gap: False
 
@@ -215,12 +215,12 @@ Taxonomy gap: False
 
 - Primary: D16.EVT.SEQUENTIAL_EPISODE (parent: D16.EVT)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-006, CNT-007
-- Evidence refs: EVD-001, EVD-002, EVD-004, EVD-005
+- Content refs: CNT-001, CNT-002, CNT-006, CNT-007, CNT-009, CNT-011
+- Evidence refs: EVD-001, EVD-002, EVD-004, EVD-005, EVD-008, EVD-009
 
-**Rationale:** 発見→詳細視認→理解→異変→警告という段階系列で進行する。保存資料由来なのでI。
+**Rationale:** 発見→詳細視認→理解→兄の異変→怪異と同様のくねくねした状態→祖父の警告→兄を当地に残す→語り手自身の終端視認、という段階系列で進行する。保存資料由来なのでI。
 
-**Manifestation:** 一回の遭遇内で因果段階が順に進む。
+**Manifestation:** 一回の遭遇が兄の変貌で終わらず、語り手自身が禁忌へ触れる終端まで段階的に進む。
 
 Taxonomy gap: False
 
@@ -228,12 +228,12 @@ Taxonomy gap: False
 
 - Primary: D17.AVO.DO_NOT_ENGAGE (parent: D17.AVO)
 - Secondary: -
-- Content refs: CNT-007
-- Evidence refs: EVD-005
+- Content refs: CNT-007, CNT-011
+- Evidence refs: EVD-005, EVD-009
 
-**Rationale:** 2003年型で祖父が『見てはならない』と独立に警告するため、D11の単純反転ではなく明示的回避情報として扱う。
+**Rationale:** 2003年型で祖父が『見てはならない』と独立に警告するため明示的接触回避として扱う。終盤で語り手がその禁忌を破って対象を間近に見ることも、この規則の物語上の重要性を補強する。
 
-**Manifestation:** 対象を詳しく見ず、理解へ進まないことが危害回避として示される。
+**Manifestation:** 対象を詳しく見ず理解へ進まないことが回避として示されるが、最終場面では語り手自身がそれを破る。
 
 Taxonomy gap: False
 
@@ -291,4 +291,4 @@ Taxonomy gap: False
 
 ## Analysis Notes
 
-summary情報欠落回帰対象。旧Review 004で指摘された無効code IDを現taxonomyへ正規化（D04.VAR.RETELLING、D11.INF/SEN、D12.OTH、D13.COG.MENTAL_INFLUENCE、D15.MND、D17.AVO.DO_NOT_ENGAGE）。意味裁定は維持する。
+summary情報欠落回帰対象。旧Review 004で指摘された無効code IDを現taxonomyへ正規化（D04.VAR.RETELLING、D11.INF/SEN、D12.OTH、D13.COG.MENTAL_INFLUENCE、D15.MND、D17.AVO.DO_NOT_ENGAGE）。意味裁定は維持する。 0179 summary-semantic correctionで、兄が怪異と同様にくねくね動くidentity終端と、語り手自身の終端視認を10へ復元した。D09/D11-D17の結論は維持しつつtraceを更新。
