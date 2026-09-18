@@ -38,6 +38,8 @@ def render(entry_id: str) -> Path:
         "",
         data["summary"]["narrative"],
         "",
+        "Coverage refs: " + ", ".join(data["summary"].get("coverage_refs", [])),
+        "",
         "### Structure",
         "",
     ]
