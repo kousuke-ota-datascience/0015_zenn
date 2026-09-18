@@ -1,0 +1,28 @@
+<!-- GENERATED VIEW. DO NOT EDIT AS CANONICAL DATA. -->
+<!-- Source JSON: docs/10_each_lore/0179_kunekune/0179_00_sources.json -->
+
+# 0179 Sources / Evidence
+
+## Sources
+
+| Source ID | Type | Title | Locator | Accessed | Relation to primary | Evidence role | URL | Bibliographic info | Archive info | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|
+| SRC-001 | mirror_reprint_or_restoration | 怪奇カタルシス「【徹底考察】『くねくね』とは？【2ch洒落怖名作】」内2001年レス再録 | 「分からないほうがいい」節。『死ぬ程洒落にならない怖い話を集めてみない？6』レス212（2001-07-07 01:28）および214の再録 | 2026-09-16 | indirect_derivative | C, H | https://kaiki-catharsis.com/kunekune/ | 後代Web記事による2001年原投稿文の再録 | 公開Web記事 | 原2ちゃんねるページ未固定。2001年定点は後代再録による間接確認として扱う。 |
+| SRC-002 | mirror_reprint_or_restoration | obake.cc「くねくね」 | 2003-03-29 レス756、759、761〜764 | 2026-09-16 | direct_derivative | C, H | https://obake.cc/entry/kunekune | 2003年3月29日の掲示板投稿を保存した記録 | obake.cc保存記録 | レス756で投稿者が先行する『分からないほうがいい』と自身の体験を混ぜて詳しく書いたと明示する。 |
+| SRC-003 | later_summary_or_commentary | 「くねくねはどこから現れたのか｜『分からないほうがいい』から怪異の成立を追う」 | 2001年原型と2003年型の差分を整理する節 | 2026-09-16 | indirect_derivative | H, A | https://peperoncino-y.com/kunekune-origin/ | 2001→2003の成立経路を整理する後代解説 | 公開Web記事 | 成立経路の補助照合に使用し、Contentは保存再録・保存記録を優先する。 |
+
+## Evidence
+
+| Evidence ID | Source ID | Locator | Representation | Content | Uncertainty | Notes |
+|---|---|---|---|---|---|---|
+| EVD-001 | SRC-001 | 2001年レス212再録 | paraphrase | 田舎の家から遠方に白い人影のようなものが見えるという原型が再録されている。 | 原2ちゃんねるページ未固定で、2001年は後代再録による間接確認。 |  |
+| EVD-002 | SRC-001 | 2001年レス212・214再録 | paraphrase | 兄が白い存在を詳しく見て正体を理解した後、『分かった。でも、分からないほうがいい』と語り、その後に重大な異変が起きたとされる。 | 白い存在の正体、異変の医学的説明、現実事実性は確定しない。 |  |
+| EVD-003 | SRC-002 | レス756 | paraphrase | 2003年投稿者は、先行する『分からないほうがいい』話と自身の子供時代の体験を混ぜて詳しく書いたと明示する。 | 2003年型を純粋な直接体験記として扱わず、意図的な再構成・混成を含む。 |  |
+| EVD-004 | SRC-002 | レス759、761〜764 | paraphrase | 2003年型では、秋田の祖母宅周辺の田園で白く細長いものが不自然にくねくね動き、兄が双眼鏡で詳しく見た後に精神・行動上の重大な異変を示す。 | 具体地点は比定不能。精神異変との現実医学的因果を示す外部Evidenceはない。 |  |
+| EVD-005 | SRC-002 | レス761〜764 | paraphrase | 祖父は対象を『見てはならない』と警告し、少なくとも危険な視認・理解を避ける追加情報を持つ人物として描かれる。 | 祖父が対象の完全な正体知識を持つとは断定しない。 |  |
+| EVD-006 | SRC-002 | 2003年保存記録 | paraphrase | 『くねくね』という名称、秋田、田園、双眼鏡、祖父といった要素は2003年型で確認される。 | これらを2001年原型へ遡及しない。 |  |
+| EVD-007 | SRC-003 | 2001→2003差分整理節 | paraphrase | 後代解説でも、2001年『分からないほうがいい』型から2003年『くねくね』型へ、秋田・双眼鏡・祖父・名称等が増補された成立経路が整理されている。 | 二次資料であり、Content裁定はSRC-001/SRC-002を優先する。 |  |
+
+## Notes
+
+旧0179 Legacyの典拠意味をcanonicalへ移管。2001年は後代再録、2003年は保存記録としてEvidence directnessを分離し、2003年型の意図的混成を保持する。
