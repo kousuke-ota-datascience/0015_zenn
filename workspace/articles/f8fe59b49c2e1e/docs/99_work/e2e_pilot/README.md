@@ -228,3 +228,85 @@ Rendered Markdown was generated from current canonical JSON and committed in `bc
 `docs/99_work/rendered_10_each_lore/0180/`
 
 0180 is now a permanent E2E regression entry alongside 0001.
+
+
+# 0178 / 0179 Summary semantic regression
+
+Entries:
+- `0178` 猿夢
+- `0179` くねくね
+
+Purpose: regression-test the known failure mode where Legacy research meaning was lost specifically from `10_contents.summary`.
+
+## Summary invariants
+
+Permanent fixture coverage was added in `tests/test_summary_regression.py`.
+
+0178 summary must retain:
+- unmanned station / `お猿さん電車`;
+- passengers processed in sequence;
+- the narrator's turn approaching;
+- awakening as escape;
+- the same dream resuming from the prior continuation four years later;
+- second awakening and the final "next time you will not escape" warning;
+- the 2003 `猿夢＋` reader-side derivative as later history, not part of the 2000 core.
+
+0179 summary must retain:
+- distant white humanoid/elongated entity;
+- detailed viewing / understanding preceding the brother's severe change;
+- `分かった。でも、分からないほうがいい`;
+- the 2003 author's explicit mixture of the prior story and his own childhood experience;
+- Akita / rural field / binoculars / grandfather / `見てはならない`;
+- those elements as 2003 accretions not retrojected into the 2001 form;
+- no reader-infection interpretation.
+
+Actual rendered-summary regression run `35292606367`:
+- 0178: 11 semantic anchors PASS
+- 0179: 13 semantic anchors PASS
+- source JSON hashes unchanged by rendering
+
+## E2E defects found and corrected
+
+1. The current 20 schema and taxonomy validator could not represent an inferred/direct dimension with a real taxonomy gap: `status=D/I`, `primary=null`, `taxonomy_gap.present=true`.
+   - Schema and validator were corrected so the primary code remains mandatory for D/I unless an explicit taxonomy gap is present.
+   - fixtures cover both allowed and rejected cases.
+   - This is required for 0178 D13 and D17.
+
+2. 0179 Legacy Review 004 had already identified several obsolete/invalid taxonomy IDs. Migration also found two additional current-catalog mismatches:
+   - `D04.REC.RETELLING` -> `D04.VAR.RETELLING`
+   - `D17.RUL.DO_NOT_ENGAGE` -> `D17.AVO.DO_NOT_ENGAGE`
+   Existing Review-004 corrections were also applied:
+   - D11 -> `D11.INF.UNDERSTAND_RECOGNIZE` + `D11.SEN.VISUAL_EXPOSURE`
+   - D12 -> `D12.OTH.SPECIFIC_OTHER`
+   - D13 secondary -> `D13.COG.MENTAL_INFLUENCE`
+   - D15 -> `D15.MND.SELF_IDENTITY_DISRUPTION`
+
+## Canonical and Review result
+
+0178:
+- 00 commit: `ee47beb9d4997f84854ae38c9287539ea1a16e91`
+- 10 commit: `638b065710a3db1bb4e972c888362ca30b438a13`
+- 20 commit: `67d90fa3385e3dd291c5347fbe460a21485ee6cd`
+- Review Seq 1: 00/10/20 all Pass
+
+0179:
+- 00 commit: `1d5caa85548f388456fdd4a2c361f3f2ffd842c8`
+- 10 commit: `44ddfdf26595fd870dbb25199d61941434506236`
+- 20 commit: `37f326a4280e323e6a722d1409ada7c2697dd4af`
+- Review Seq 1: 00/10/20 all Pass
+
+Shared Review commit: `c45ce06057633925a6b66d065f69e66bc69a9e82`.
+
+Final CI run `35292878763`:
+- 51 passed / 0 failed;
+- 0178 00/10/20 PASS;
+- 0179 00/10/20 PASS;
+- 0178 Review history `[1]`;
+- 0179 Review history `[1]`.
+
+Control plane:
+- all six 0178/0179 artifact rows are `完了`;
+- latest Review Seq is `1`;
+- Notion post-SHA, Review target commit/blob, and current canonical artifact all match.
+
+Rendered Markdown commit: `c914105`.
