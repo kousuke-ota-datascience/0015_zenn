@@ -125,6 +125,9 @@ def test_write_cycle_schema_validates_and_is_append_only(
     monkeypatch.setattr(review_writer, "ARTICLE_ROOT", root)
     monkeypatch.setattr(review_writer, "REVIEW_ROOT", review_root)
     monkeypatch.setattr(review_writer, "_validate_cycle_is_current", lambda cycle: None)
+    monkeypatch.setattr(
+        review_writer, "_validate_review10_coverage_contract", lambda entry_id, body: None
+    )
 
     targets = {
         artifact: review_writer.TargetSnapshot(
@@ -153,7 +156,10 @@ def test_write_cycle_schema_validates_and_is_append_only(
         )
 
 
-def test_writer_rejects_managed_fields(review_bodies):
+def test_writer_rejects_managed_fields(review_bodies, monkeypatch):
+    monkeypatch.setattr(
+        review_writer, "_validate_review10_coverage_contract", lambda entry_id, body: None
+    )
     bodies = copy.deepcopy(review_bodies)
     bodies["00"]["verdict"] = "Major"
     targets = {
@@ -169,3 +175,64 @@ def test_writer_rejects_managed_fields(review_bodies):
     )
     with pytest.raises(ValueError, match="writer-managed fields"):
         review_writer._build_payloads(cycle, bodies)
+
+
+def test_review10_coverage_contract_requires_exact_refs(
+    tmp_path, monkeypatch, review_bodies
+):
+    path = tmp_path / "0001_10_contents.json"
+    _write_json(
+        path,
+        {
+            "summary": {
+                "coverage_refs": ["CNT-001", "CNT-002"],
+            }
+        },
+    )
+    monkeypatch.setattr(
+        review_writer,
+        "load_entry_git_state",
+        lambda entry_id: SimpleNamespace(
+            artifacts={"10": SimpleNamespace(path=path)}
+        ),
+    )
+
+    body = copy.deepcopy(review_bodies["10"])
+    with pytest.raises(ValueError, match="exactly match summary.coverage_refs"):
+        review_writer._validate_review10_coverage_contract("0001", body)
+
+
+def test_review10_coverage_loss_requires_finding(
+    tmp_path, monkeypatch, review_bodies
+):
+    path = tmp_path / "0001_10_contents.json"
+    _write_json(path, {"summary": {"coverage_refs": ["CNT-001"]}})
+    monkeypatch.setattr(
+        review_writer,
+        "load_entry_git_state",
+        lambda entry_id: SimpleNamespace(
+            artifacts={"10": SimpleNamespace(path=path)}
+        ),
+    )
+
+    body = copy.deepcopy(review_bodies["10"])
+    body["reconstruction"]["coverage_audit"][0]["difference"] = "LOSS"
+    with pytest.raises(ValueError, match="requires reconstruction.verdict=FINDING"):
+        review_writer._validate_review10_coverage_contract("0001", body)
+
+
+def test_review10_coverage_contract_accepts_complete_pass(
+    tmp_path, monkeypatch, review_bodies
+):
+    path = tmp_path / "0001_10_contents.json"
+    _write_json(path, {"summary": {"coverage_refs": ["CNT-001"]}})
+    monkeypatch.setattr(
+        review_writer,
+        "load_entry_git_state",
+        lambda entry_id: SimpleNamespace(
+            artifacts={"10": SimpleNamespace(path=path)}
+        ),
+    )
+    review_writer._validate_review10_coverage_contract(
+        "0001", copy.deepcopy(review_bodies["10"])
+    )
