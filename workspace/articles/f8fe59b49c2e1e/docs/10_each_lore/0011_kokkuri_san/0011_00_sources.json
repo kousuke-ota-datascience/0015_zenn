@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0011",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "「こっくりさん」に関する社会心理学的調査 : 1930年代から1992年までの流行史",
+      "locator": "『宗教と社会』1巻、1995、pp.29-48",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://www.jstage.jst.go.jp/article/religionandsociety/1/0/1_KJ00006476846/_article/-char/ja/",
+      "bibliographic_info": "今泉寿明、1995年6月10日、DOI:10.20594/religionandsociety.1.0_29",
+      "notes": "歴史整理と1992年の広域質問紙調査を含む。1884年導入、1880年代後半の流行、三脚型と文字盤型の差を明示する。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "mirror_reprint_or_restoration",
+      "title": "妖怪玄談",
+      "locator": "国立国会図書館サーチ／青空文庫連携。親本『妖怪玄談』哲学書院、1887年5月2日初版",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "H",
+        "A"
+      ],
+      "url": "https://ndlsearch.ndl.go.jp/books/R000000014-I001021card49375001021",
+      "bibliographic_info": "井上円了著。底本親本初版発行年1887（明治20）年5月2日。",
+      "notes": "初期こっくりさんを論じた古典資料の書誌確認に使用。本文内容はSRC-001の学術的整理を介して利用する。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "reliable_secondary_or_research",
+      "title": "こっくりさんはなぜ当たるのか",
+      "locator": "国立国会図書館サーチ、水曜社、2004.7",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "H",
+        "A"
+      ],
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000007429704",
+      "bibliographic_info": "安斎育郎著、水曜社、2004年7月。",
+      "notes": "明治以降に日本各地へ伝わり、方法や名称を変えながら続くことを要約する科学解説書。"
+    },
+    {
+      "source_id": "SRC-004",
+      "source_type": "reliable_secondary_or_research",
+      "title": "複数人の発揮力と摩擦力が干渉して生じる意図せぬ運動",
+      "locator": "Dynamics & Design Conference 2025",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "not_applicable",
+      "evidence_role": [
+        "A"
+      ],
+      "url": "https://www.jstage.jst.go.jp/article/jsmedmc/2025/0/2025_28/_article/-char/ja",
+      "notes": "現代の文字盤型で複数人が硬貨に指を置くと意図せぬ運動が起こり得る点を力学的に検討する。伝承内容の正否判定には用いない。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "p.29-30 1.1 実施法と名称",
+      "representation": "paraphrase",
+      "content": "明治期に創始されたと伝えられる初期型は、細竹を紐で結び三脚状に組み、盆や風呂敷をかぶせ、参加者が手を置いて霊的存在を招き、質問に対する三脚の揺れ方をあらかじめ決めたYes/No等として読む方法だった。",
+      "uncertainty": "1884年当時の個別採録本文そのものではなく、井上円了の1887年著作等を踏まえた1995年研究の整理。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "p.30 1.1 実施法と名称",
+      "representation": "paraphrase",
+      "content": "後に広く行われる文字盤型では、五十音や数字を書いた紙に硬貨などを置き、参加者が指を添えて霊的存在を呼び質問すると、硬貨が動いて文字を順に示し、単語や文章として回答を得る。",
+      "uncertainty": "地域や時代で盤面・呼び出し句・終了法には差がある。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-001",
+      "locator": "p.30 1.2 研究史",
+      "representation": "paraphrase",
+      "content": "研究史上、こっくりさんの起源は1884年にアメリカから伝播したものと整理され、1880年代後半には初期の全国流行があったとされる。",
+      "uncertainty": "著者自身も『ある程度は推測可能』と述べており、1884年導入の具体的経路・単一起点を完全確定する資料ではない。"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-001",
+      "locator": "抄録・p.30以降",
+      "representation": "paraphrase",
+      "content": "1992年に静岡・愛知・徳島・沖縄の成人2,000人へ調査し1,636人を解析した結果、知識獲得と体験は概ね7〜18歳の学齢期に限られ、学校または家庭・地域社会での集団型が大部分だった。",
+      "uncertainty": "1992年時点の回顧調査であり、1880年代の初期流通形を直接示すものではない。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-001",
+      "locator": "抄録・p.30 1.2",
+      "representation": "paraphrase",
+      "content": "1930〜1945年は安定伝承期、1946〜1973年は低迷期、1974〜1992年は興隆期と整理され、1970年代中頃から青少年を中心に再流行した。",
+      "uncertainty": "時代区分は質問紙調査に基づく研究上のモデルであり、全国すべての地域に同じ強度で当てはまるとは限らない。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-002",
+      "locator": "NDL書誌",
+      "representation": "paraphrase",
+      "content": "井上円了『妖怪玄談』の親本初版は哲学書院から1887年5月2日に刊行された。",
+      "uncertainty": "NDL書誌は出版事実の確認であり、個別箇所の本文解釈は別資料に依拠する。"
+    },
+    {
+      "evidence_id": "EVD-007",
+      "source_id": "SRC-003",
+      "locator": "NDL要約",
+      "representation": "paraphrase",
+      "content": "2004年の科学解説書は、こっくりさん占いが明治以降日本各地へ伝わり、やり方や名称を変えながら現代まで続いていると説明する。",
+      "uncertainty": "後代の解説であり、個々の変化時期の一次資料ではない。"
+    },
+    {
+      "evidence_id": "EVD-008",
+      "source_id": "SRC-004",
+      "locator": "抄録",
+      "representation": "paraphrase",
+      "content": "現代的なこっくりさん型の実験では、紙上の硬貨に複数人が指を載せたとき参加者の意図によらない運動が起こることがあり、研究は発揮力と摩擦力の干渉として力学的に扱っている。",
+      "uncertainty": "これは現象の力学モデルであり、霊的存在の有無を直接検証するEvidenceではない。"
+    }
+  ],
+  "notes": "初期三脚型（1884年導入と整理される）と、後代の文字盤・硬貨型を混成しない。1992年調査は社会現実上の流通・実践Evidenceとして扱う。docs/legacyは参照していない。"
+}
