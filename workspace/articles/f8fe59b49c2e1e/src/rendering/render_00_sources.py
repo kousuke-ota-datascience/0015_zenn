@@ -34,14 +34,14 @@ def render(entry_id: str) -> Path:
         "",
         "## Sources",
         "",
-        "| Source ID | Type | Title | Locator | Relation to primary | Evidence role | URL |",
-        "|---|---|---|---|---|---|---|",
+        "| Source ID | Type | Title | Locator | Accessed | Relation to primary | Evidence role | URL | Bibliographic info | Archive info | Notes |",
+        "|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for item in data.get("sources", []):
-        lines.append("| " + " | ".join(_cell(item.get(k)) for k in ("source_id", "source_type", "title", "locator", "relation_to_primary", "evidence_role", "url")) + " |")
-    lines += ["", "## Evidence", "", "| Evidence ID | Source ID | Locator | Representation | Content | Uncertainty |", "|---|---|---|---|---|---|"]
+        lines.append("| " + " | ".join(_cell(item.get(k)) for k in ("source_id", "source_type", "title", "locator", "accessed_at", "relation_to_primary", "evidence_role", "url", "bibliographic_info", "archive_info", "notes")) + " |")
+    lines += ["", "## Evidence", "", "| Evidence ID | Source ID | Locator | Representation | Content | Uncertainty | Notes |", "|---|---|---|---|---|---|---|"]
     for item in data.get("evidence", []):
-        lines.append("| " + " | ".join(_cell(item.get(k)) for k in ("evidence_id", "source_id", "locator", "representation", "content", "uncertainty")) + " |")
+        lines.append("| " + " | ".join(_cell(item.get(k)) for k in ("evidence_id", "source_id", "locator", "representation", "content", "uncertainty", "notes")) + " |")
     if data.get("notes"):
         lines += ["", "## Notes", "", str(data["notes"])]
     output = ARTICLE_ROOT / f"docs/99_work/rendered_10_each_lore/{entry_id}/{entry_id}_00_sources.md"
