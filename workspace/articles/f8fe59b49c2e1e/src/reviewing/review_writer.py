@@ -242,6 +242,71 @@ def _validate_cycle_is_current(cycle: ReviewCycleSnapshot) -> None:
         )
 
 
+def _validate_review10_coverage_contract(entry_id: str, body: Mapping[str, Any]) -> None:
+    """Require complete salient-unit audit for the current 10 Contents contract."""
+    snapshot = load_entry_git_state(entry_id)
+    path = snapshot.artifacts["10"].path
+    data = json.loads(path.read_text(encoding="utf-8"))
+    summary = data.get("summary", {})
+    coverage_refs = summary.get("coverage_refs") if isinstance(summary, Mapping) else None
+    if not isinstance(coverage_refs, list) or not coverage_refs:
+        return
+
+    checks = body.get("checks")
+    if not isinstance(checks, Mapping) or "narrative_reconstruction" not in checks:
+        raise ValueError(
+            "Review 10 for summary.coverage_refs contract requires checks.narrative_reconstruction"
+        )
+
+    reconstruction = body.get("reconstruction")
+    if not isinstance(reconstruction, Mapping):
+        raise ValueError("Review 10 reconstruction must be an object")
+    audit = reconstruction.get("coverage_audit")
+    if not isinstance(audit, list) or not audit:
+        raise ValueError(
+            "Review 10 for summary.coverage_refs contract requires reconstruction.coverage_audit"
+        )
+
+    refs = []
+    differences = []
+    for index, item in enumerate(audit):
+        if not isinstance(item, Mapping):
+            raise ValueError(f"coverage_audit[{index}] must be an object")
+        ref = item.get("content_ref")
+        if not isinstance(ref, str):
+            raise ValueError(f"coverage_audit[{index}].content_ref must be a string")
+        refs.append(ref)
+        differences.append(item.get("difference"))
+
+    if len(refs) != len(set(refs)):
+        raise ValueError("coverage_audit contains duplicate content_ref")
+    if set(refs) != set(coverage_refs) or len(refs) != len(coverage_refs):
+        raise ValueError(
+            "coverage_audit content_ref set must exactly match summary.coverage_refs: "
+            + json.dumps(
+                {"expected": coverage_refs, "actual": refs},
+                ensure_ascii=False,
+                sort_keys=True,
+            )
+        )
+
+    has_loss = any(value in {"LOSS", "CONFLICT"} for value in differences)
+    if has_loss:
+        if reconstruction.get("verdict") != "FINDING":
+            raise ValueError(
+                "coverage_audit LOSS/CONFLICT requires reconstruction.verdict=FINDING"
+            )
+        findings = body.get("findings")
+        if not isinstance(findings, list) or not any(
+            isinstance(item, Mapping)
+            and item.get("category") in {"narrative_reconstruction", "summary_reconstruction"}
+            for item in findings
+        ):
+            raise ValueError(
+                "coverage_audit LOSS/CONFLICT requires a narrative/summary reconstruction Finding"
+            )
+
+
 def _build_payloads(
     cycle: ReviewCycleSnapshot,
     reviews: Mapping[str, Any],
@@ -256,6 +321,8 @@ def _build_payloads(
         body = reviews[artifact]
         if not isinstance(body, Mapping):
             raise ValueError(f"reviews.{artifact} must be an object")
+        if artifact == "10":
+            _validate_review10_coverage_contract(cycle.entry_id, body)
 
         conflicts = sorted(RESERVED_FIELDS.intersection(body))
         if conflicts:
