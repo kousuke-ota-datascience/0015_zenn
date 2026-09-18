@@ -1,0 +1,48 @@
+name: write 0001 Review cycle 3
+
+on:
+  push:
+    paths:
+      - "workspace/articles/f8fe59b49c2e1e/docs/99_work/e2e_pilot/review_cycle_003_bodies.tmp.json"
+
+permissions:
+  contents: write
+
+jobs:
+  write-review:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: workspace/articles/f8fe59b49c2e1e
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Install dependency
+        run: python -m pip install --disable-pip-version-check jsonschema==4.25.1
+      - name: Write Review cycle
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from src.reviewing.review_writer import prepare_review_cycle, write_review_cycle
+          reviews=json.loads(Path("docs/99_work/e2e_pilot/review_cycle_003_bodies.tmp.json").read_text(encoding="utf-8"))
+          cycle=prepare_review_cycle("0001")
+          result=write_review_cycle("0001", cycle=cycle, reviews=reviews)
+          print(json.dumps(result, ensure_ascii=False, indent=2))
+          assert result["review_seq"] == 3, result
+          assert result["verdicts"] == {"00":"Pass","10":"Pass","20":"Pass"}, result
+          PY
+      - name: Commit Review JSON
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reviews/10_each_lore/0001/Review_0001_00_003.json
+          git add reviews/10_each_lore/0001/Review_0001_10_003.json
+          git add reviews/10_each_lore/0001/Review_0001_20_003.json
+          git commit -m "Add canonical 0001 Review cycle 003"
+          git push
