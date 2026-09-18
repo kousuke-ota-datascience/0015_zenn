@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0179",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "mirror_reprint_or_restoration",
+      "title": "怪奇カタルシス「【徹底考察】『くねくね』とは？【2ch洒落怖名作】」内2001年レス再録",
+      "locator": "「分からないほうがいい」節。『死ぬ程洒落にならない怖い話を集めてみない？6』レス212（2001-07-07 01:28）および214の再録",
+      "accessed_at": "2026-09-16",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://kaiki-catharsis.com/kunekune/",
+      "bibliographic_info": "後代Web記事による2001年原投稿文の再録",
+      "archive_info": "公開Web記事",
+      "notes": "原2ちゃんねるページ未固定。2001年定点は後代再録による間接確認として扱う。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "mirror_reprint_or_restoration",
+      "title": "obake.cc「くねくね」",
+      "locator": "2003-03-29 レス756、759、761〜764",
+      "accessed_at": "2026-09-16",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://obake.cc/entry/kunekune",
+      "bibliographic_info": "2003年3月29日の掲示板投稿を保存した記録",
+      "archive_info": "obake.cc保存記録",
+      "notes": "レス756で投稿者が先行する『分からないほうがいい』と自身の体験を混ぜて詳しく書いたと明示する。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "later_summary_or_commentary",
+      "title": "「くねくねはどこから現れたのか｜『分からないほうがいい』から怪異の成立を追う」",
+      "locator": "2001年原型と2003年型の差分を整理する節",
+      "accessed_at": "2026-09-16",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "H",
+        "A"
+      ],
+      "url": "https://peperoncino-y.com/kunekune-origin/",
+      "bibliographic_info": "2001→2003の成立経路を整理する後代解説",
+      "archive_info": "公開Web記事",
+      "notes": "成立経路の補助照合に使用し、Contentは保存再録・保存記録を優先する。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "2001年レス212再録",
+      "content": "田舎の家から遠方に白い人影のようなものが見えるという原型が再録されている。",
+      "representation": "paraphrase",
+      "uncertainty": "原2ちゃんねるページ未固定で、2001年は後代再録による間接確認。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "2001年レス212・214再録",
+      "content": "兄が白い存在を詳しく見て正体を理解した後、『分かった。でも、分からないほうがいい』と語り、その後に重大な異変が起きたとされる。",
+      "representation": "paraphrase",
+      "uncertainty": "白い存在の正体、異変の医学的説明、現実事実性は確定しない。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-002",
+      "locator": "レス756",
+      "content": "2003年投稿者は、先行する『分からないほうがいい』話と自身の子供時代の体験を混ぜて詳しく書いたと明示する。",
+      "representation": "paraphrase",
+      "uncertainty": "2003年型を純粋な直接体験記として扱わず、意図的な再構成・混成を含む。"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-002",
+      "locator": "レス759、761〜764",
+      "content": "2003年型では、秋田の祖母宅周辺の田園で白く細長いものが不自然にくねくね動き、兄が双眼鏡で詳しく見た後に精神・行動上の重大な異変を示す。",
+      "representation": "paraphrase",
+      "uncertainty": "具体地点は比定不能。精神異変との現実医学的因果を示す外部Evidenceはない。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-002",
+      "locator": "レス761〜764",
+      "content": "祖父は対象を『見てはならない』と警告し、少なくとも危険な視認・理解を避ける追加情報を持つ人物として描かれる。",
+      "representation": "paraphrase",
+      "uncertainty": "祖父が対象の完全な正体知識を持つとは断定しない。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-002",
+      "locator": "2003年保存記録",
+      "content": "『くねくね』という名称、秋田、田園、双眼鏡、祖父といった要素は2003年型で確認される。",
+      "representation": "paraphrase",
+      "uncertainty": "これらを2001年原型へ遡及しない。"
+    },
+    {
+      "evidence_id": "EVD-007",
+      "source_id": "SRC-003",
+      "locator": "2001→2003差分整理節",
+      "content": "後代解説でも、2001年『分からないほうがいい』型から2003年『くねくね』型へ、秋田・双眼鏡・祖父・名称等が増補された成立経路が整理されている。",
+      "representation": "paraphrase",
+      "uncertainty": "二次資料であり、Content裁定はSRC-001/SRC-002を優先する。"
+    }
+  ],
+  "notes": "旧0179 Legacyの典拠意味をcanonicalへ移管。2001年は後代再録、2003年は保存記録としてEvidence directnessを分離し、2003年型の意図的混成を保持する。"
+}
