@@ -4,7 +4,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from src.status_management.reconcile import reconcile
+from src.status_management.reconcile import reconcile, reconcile_payload
 
 
 def _cp(status, *, latest=None, pre=None, post=None):
@@ -152,3 +152,112 @@ def test_diverged_controlplane_blocks_without_mutation():
     assert result.outcome == "BLOCKED"
     assert result.mutations == ()
     assert "unsafe_controlplane_sha_relation:00:diverged" in result.issues
+
+def test_explicit_correction_start_moves_needs_fix_to_active_rework():
+    cp, git, reviews = _snapshots(
+        _cp("要修正", latest=1, post="g" * 40),
+        review00=_review("Major", seq=1),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
+        correction_started={"00"},
+    )
+    assert result.outcome == "UPDATE"
+    assert _changes(result) == {"Status": "再作業中"}
+
+
+def test_repeated_correction_start_is_idempotent():
+    cp, git, reviews = _snapshots(
+        _cp("再作業中", latest=1, post="g" * 40),
+        review00=_review("Major", seq=1),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
+        correction_started={"00"},
+    )
+    assert result.outcome == "NOOP"
+
+
+def test_correction_start_on_passed_review_blocks():
+    cp, git, reviews = _snapshots(
+        _cp("要修正", latest=1, post="g" * 40),
+        review00=_review("Pass", seq=1),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
+        correction_started={"00"},
+    )
+    assert result.outcome == "BLOCKED"
+    assert result.mutations == ()
+    assert "correction_start_on_passed_review:00" in result.issues
+
+
+def test_reconcile_payload_is_json_friendly():
+    payload = {
+        "controlplane": {
+            "issues": [],
+            "artifacts": {
+                "00": {
+                    "status": "要修正",
+                    "latest_review_seq": 1,
+                    "pre_sha": None,
+                    "post_sha": "g" * 40,
+                    "remarks": None,
+                },
+                "10": {
+                    "status": "－（対象外）",
+                    "latest_review_seq": None,
+                    "pre_sha": None,
+                    "post_sha": None,
+                    "remarks": None,
+                },
+                "20": {
+                    "status": "－（対象外）",
+                    "latest_review_seq": None,
+                    "pre_sha": None,
+                    "post_sha": None,
+                    "remarks": None,
+                },
+            },
+        },
+        "git": {
+            "artifacts": {
+                "00": {"exists": True, "commit_sha": "g" * 40, "blob_sha": "b" * 40},
+                "10": {"exists": False, "commit_sha": None, "blob_sha": None},
+                "20": {"exists": False, "commit_sha": None, "blob_sha": None},
+            }
+        },
+        "review": {
+            "issues": [],
+            "latest": {
+                "00": {
+                    "verdict": "Major",
+                    "review_seq": 1,
+                    "target_commit_sha": "g" * 40,
+                    "target_blob_sha": "b" * 40,
+                }
+            },
+        },
+        "relations": {
+            "cp_post:00": "exact",
+            "review_target:00": "exact",
+        },
+        "events": {"correction_started": ["00"]},
+    }
+    result = reconcile_payload(payload)
+    assert result == {
+        "outcome": "UPDATE",
+        "summary": "1 artifact state(s) require synchronization",
+        "issues": [],
+        "mutations": [{"artifact": "00", "changes": {"Status": "再作業中"}}],
+    }
+
