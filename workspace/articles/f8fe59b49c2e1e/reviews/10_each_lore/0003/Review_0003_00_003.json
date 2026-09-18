@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0003",
+  "artifact": "00",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0003_akai_kami_aoi_kami/0003_00_sources.json",
+    "commit_sha": "0f604c5a8568814a9b85083aa0b09d4855ad583f",
+    "blob_sha": "c9b2a55e56000fe7f564c5cac34c663247375c2d",
+    "reviewed_at": "2026-09-18T15:05:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "日文研DB、CiNii、NDL、大宅壮一文庫等の資料種別は用途に応じて区別され、YOKAI.JPはlater_summary_or_commentaryとして限定使用されている。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-008は1990年藤沢型について、三度の問いと生徒の忌避に加え、拒否後に天井へ人影が現れ、背中の12本の剣と流れる赤い血がマント状に見える終端場面まで保持するよう修正され、Seq 2 Findingのsalient omissionは解消した。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "各Evidenceは参照Sourceの記載範囲内で構成され、確認した範囲でSourceに反する断定はない。EVD-008の問題は虚偽ではなく重要部分の省略である。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "日文研DB要約を原誌本文そのものとせずdirect_derivativeとして扱い、NDL/CiNiiの書誌確認とContent Evidenceを分離している。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1972年尼崎採録を現在確認できる早い公刊採録として扱い、1930年代回想や1939年街路流言を絶対的起源または直接系譜へ格上げしていない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "原誌本文未実見、1930年代回想の後代性、1939年街路流言との系譜未証明、書誌不一致除外など主要な不確実性は明示されている。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 003。Seq 2のF00-001を再監査し、SRC-007→EVD-008の終端場面欠落が解消されたことを確認。その他のSource/Evidence対応と不確実性管理も維持されている。"
+}

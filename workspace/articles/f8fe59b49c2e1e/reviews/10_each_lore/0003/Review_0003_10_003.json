@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0003",
+  "artifact": "10",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0003_akai_kami_aoi_kami/0003_10_contents.json",
+    "commit_sha": "2fb3b1dee3e60d5a8f5a8460d2047038f648f1d1",
+    "blob_sha": "cf3f92cf81c1b29aa63bd75860f321de57ed8328",
+    "reviewed_at": "2026-09-18T15:05:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜009は参照Evidenceで支持される。CNT-006は修正済みEVD-008の1990年型終端場面まで反映し、Evidence→Contentのsalient meaningが一致する。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summary.narrativeとsummary.structure.terminal_stateに1990年藤沢型の拒否後終端が反映され、1972年核・1986年以降の分岐・1990年衣服型・2001年多色型・起源留保を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12でactors/targets/trigger/agent/mechanism/state/temporal/rules/avoidance/terminal/uncertainty/variant boundaryにLOSSまたはCONFLICTはない。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001〜006は年代・機構・証拠directnessの違いを保ち、1939年街路流言と1930年代後代回想を学校便所型の直接祖型へ統合していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "1972年を絶対的起源とせず、原誌本文未実見、1939年との系譜未確認、異伝派生順序未確定、安全回答の非普遍性を保持する。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "summary.coverage_refsのCNT-001〜009をexact auditし、全unitをblind summaryから意味損失なく再構成できる。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "summaryだけから読むと、本Entryは学校便所で色や衣服に関する問いを受ける怪談群である。1972年尼崎型では赤／白の問いと児童の行動変化までが確認され、質問後の怪異的終端は不明。1986年以降は回答と危害／回避が規則化し、1990年藤沢型では赤いマントの問いを拒否すると天井へ人影が現れ、背中の12本の剣と流血が赤いマント状に見える終端まで語られる。2001年には多色型がある。1939年街路流言と1930年代回想は関連史料だが直接系譜を確定しない。",
+    "reference_story": "EvidenceとContent unitsを読むと、1972年尼崎の赤／白質問型、1986年東京の色分岐・赤いチャンチャンコ、1990年藤沢の赤いマント型（拒否後の人影・12本の剣・マント状の流血を含む）、2001年神戸の多色分岐が区別される。1939年街路流言と1930年代回想は系譜未証明の関連資料として分離され、blind decodeと一致する。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "学校便所に現れるお化け／正体不明の声・怪異と、便所を利用する児童・生徒。",
+        "reference": "同じ。1972年は「お化け」、後代は正体不明の声・怪異として整理される。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "主対象は学校の児童・生徒。後代の一部では成人も巻き込まれる。",
+        "reference": "CNT-001〜007と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "学校便所・特定個室へ入る／利用すること。後代は色・衣服への回答選択が追加条件。",
+        "reference": "CNT-001、CNT-003〜007と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "1972年はお化け、後代は正体不明の声・怪異。固定した正体は不明。",
+        "reference": "ContentとEvidenceは固定存在論を追加していない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "色または衣服に関する問いを提示し、後代では選択を危害・無事へ結びつける。",
+        "reference": "CNT-001、CNT-003〜007と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "便所へ入る→問いかけ。後代では問い→回答→危害または回避。",
+        "reference": "Content unitsから同じ状態遷移を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "一遭遇内で進む。採録史は1972→1986→1990→2001と変異・増補する。",
+        "reference": "Content/variantsと一致し、直線的派生順序は未確定としている。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "後代では色ごとに帰結規則があるが、安全色は白・紫・黄など一定しない。",
+        "reference": "CNT-003、004、007と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "1972年には連れ立って便所へ行く行動、後代には安全選択や該当個室の忌避がある。",
+        "reference": "CNT-002〜007と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "1972年の質問後の怪異帰結は不明。後代には出血、絞殺、引き込み、斬首・死亡・無事に加え、1990年型の拒否後の人影・12本の剣・マント状の流血がある。",
+        "reference": "修正済みCNT-006/EVD-008を含むContentと一致する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "起源、1939年流言との系譜、原誌本文未実見、異伝間の派生順序が未確定。",
+        "reference": "uncertaintiesと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "VAR-001 1972、VAR-002 1986色分岐、VAR-003衣服型、VAR-004 2001多色、VAR-005 1939街路、VAR-006 1930年代回想。",
+        "reference": "variant境界と一致し、関連史料を起源へ強制統合していない。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "blind decodeとreference storyの差は追加の証拠粒度に限られ、1972年核・後代分岐・不確実性・variant境界という分析に必要な構造は不変。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "1972年尼崎で学校便所のお化けが赤／白の紙を尋ね、低学年、とくに一年生に広がった。",
+        "blind_reconstruction": "要約から同義を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "噂のため児童が連なって便所へ行ったという現実行動。",
+        "blind_reconstruction": "要約から同義を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "1986年の赤・青・白型で、赤=血、青=絞殺・青ざめ、白=無事。",
+        "blind_reconstruction": "要約の1986年分岐とstructure.rules/terminalから再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "1986年の赤・紫型で、赤=便器へ引き込み、紫=怪異消失・無事。",
+        "blind_reconstruction": "要約の1986年分岐と安全回答の可変性から再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "1986年の赤いチャンチャンコ型で承諾した婦人警官が斬首される。",
+        "blind_reconstruction": "要約の衣服型と斬首の帰結から再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "1990年藤沢の特定個室で赤いマントを三度問う声があり、生徒が近づかず、拒否後には天井の人影・背中の12本の剣・マント状の流血が語られる。",
+        "blind_reconstruction": "summary.narrativeとterminal_stateから同義を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "2001年神戸の赤・青・黄・白の多色分岐。",
+        "blind_reconstruction": "要約の2001年多色分岐と安全回答の可変性から再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-008",
+        "salient_meaning": "1939年東京の街路「赤マントの男」流言は関連史料だが学校便所型との直接系譜未証明。",
+        "blind_reconstruction": "要約末尾から同義を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-009",
+        "salient_meaning": "1987年公刊資料を参照する1930年代豊科小学校の回想例は後代回想で起源確定に使わない。",
+        "blind_reconstruction": "要約末尾とuncertaintiesから同義を再構成できる。",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 003。00のF00-001修正を受けてCNT-006、VAR-003、summary narrative/terminal_stateを再監査。1990年型のsalient terminal sceneがEvidence→Content→Summaryで保持され、coverage lossなし。"
+}
