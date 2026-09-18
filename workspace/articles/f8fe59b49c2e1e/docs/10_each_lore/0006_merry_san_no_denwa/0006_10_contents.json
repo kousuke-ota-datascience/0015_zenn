@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0006",
+  "lore_name": "メリーさんの電話",
+  "summary": {
+    "narrative": "電話の向こうで『私、メリーさん』と名乗る存在が、自分の現在地を告げながら段階的に聞き手へ近づき、最後には『今、あなたの後ろにいるの』と告げる接近型の電話怪談。現在確認できる早い具体形の一つである1995年映画『学校の怪談』では、宿直者に対して校門、花壇、昇降口など学校内の地点を告げながら接近する形が描かれる。1999年には『メリーさんの電話』名義の児童書が刊行され、後代に広く知られる形では、捨てられた西洋人形メリーがゴミ捨て場や駅などから電話しながら元の持ち主へ近づく。伝承の絶対的な起源や、1995年映画以前の口承形の詳細は現在の資料だけでは確定できない。",
+    "structure": {
+      "primary_actors": {
+        "status": "known",
+        "value": [
+          "メリーさんを名乗る電話の主",
+          "電話を受ける人物"
+        ]
+      },
+      "affected_targets": {
+        "status": "known",
+        "value": [
+          "電話を受ける人物"
+        ]
+      },
+      "entry_trigger": {
+        "status": "known",
+        "value": [
+          "メリーさんを名乗る相手から電話がかかる"
+        ]
+      },
+      "causal_agent": {
+        "status": "known",
+        "value": [
+          "メリーさんを名乗る存在"
+        ]
+      },
+      "mechanism": {
+        "status": "known",
+        "value": [
+          "電話で現在地を繰り返し告げ、通話のたびに受け手へ近づく"
+        ]
+      },
+      "state_transition": {
+        "status": "known",
+        "value": [
+          "遠方の地点から段階的に接近し、最終的に受け手の背後へ到達する"
+        ]
+      },
+      "temporal_structure": {
+        "status": "known",
+        "value": [
+          "複数回の電話で接近段階が順次進む"
+        ]
+      },
+      "rules_and_taboos": {
+        "status": "unknown",
+        "value": null
+      },
+      "avoidance_control": {
+        "status": "unknown",
+        "value": null
+      },
+      "terminal_state": {
+        "status": "known",
+        "value": [
+          "最終電話で『今、あなたの後ろにいる』と告げられる"
+        ]
+      },
+      "uncertainties": {
+        "status": "known",
+        "value": [
+          "伝承の絶対的起源は未確定",
+          "1995年映画以前の口承形の詳細は未確認",
+          "捨てた人形という導入がいつ標準化したかは未確定"
+        ]
+      },
+      "variant_boundaries": {
+        "status": "known",
+        "value": [
+          "1995年映画の学校内接近型",
+          "捨てた人形が元の持ち主へ接近する後代標準型",
+          "メール等へ媒体転換した派生を区別する"
+        ]
+      }
+    },
+    "coverage_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ]
+  },
+  "content_units": [
+    {
+      "content_id": "CNT-001",
+      "type": "event",
+      "text": "メリーさんを名乗る相手から電話が繰り返しかかり、そのたびに現在地を告げる。",
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-005"
+      ]
+    },
+    {
+      "content_id": "CNT-002",
+      "type": "event",
+      "text": "告げられる現在地は通話のたびに受け手へ近づき、最終的に『今、あなたの後ろにいる』という位置へ到達する。",
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-005"
+      ]
+    },
+    {
+      "content_id": "CNT-003",
+      "type": "event",
+      "text": "1995年映画の学校内型では、校門、花壇、昇降口など学校内の地点を順に告げながら宿直者へ接近する。",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    },
+    {
+      "content_id": "CNT-004",
+      "type": "condition",
+      "text": "後代の標準的再話では、少女がメリーさんと呼んでいた西洋人形を捨てたことが発端となり、人形がゴミ捨て場や駅などから電話して元の持ち主へ近づく。",
+      "evidence_refs": [
+        "EVD-005"
+      ],
+      "notes": "1995年映画型にはこの導入が明示されないため、初期形へ遡及しない。"
+    },
+    {
+      "content_id": "CNT-005",
+      "type": "other",
+      "text": "2018年の現代怪異事典では『メリーさんの電話』のほか『メリーさんのメール』等の派生名義が別項目として整理されている。",
+      "evidence_refs": [
+        "EVD-004"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "VAR-001",
+      "kind": "initial",
+      "description": "現在確認できる早い具体形の一つである1995年映画の学校内接近型。宿直者へ電話し、校門・花壇・昇降口などを告げながら近づき、最後に背後へ到達する。",
+      "attestation": "1995年映画『学校の怪談』の作品情報と出演者本人の後年回想で確認。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ],
+      "notes": "絶対的起源や最初の口承形を意味しない。"
+    },
+    {
+      "variant_id": "VAR-002",
+      "kind": "major",
+      "description": "捨てられた西洋人形メリーが、ゴミ捨て場や駅などから電話しながら元の持ち主へ近づく後代標準型。",
+      "attestation": "2019年の『日本現代怪異事典 副読本』紹介で要約確認。1999年には『メリーさんの電話』名義の児童書も刊行。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-005"
+      ]
+    },
+    {
+      "variant_id": "VAR-003",
+      "kind": "later",
+      "description": "電話からメール等へ通信媒体を置換した派生。",
+      "content_refs": [
+        "CNT-005"
+      ],
+      "evidence_refs": [
+        "EVD-004"
+      ],
+      "notes": "本調査では具体的本文を再構成するだけのEvidenceを収集していない。"
+    }
+  ],
+  "uncertainties": [
+    {
+      "text": "現在確認できる早い具体形は1995年映画だが、これを伝承の絶対的起源とはみなさない。",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ],
+      "content_refs": [
+        "CNT-003"
+      ]
+    },
+    {
+      "text": "『捨てた人形』導入がいつ成立・標準化したかは現在のEvidenceから確定できない。",
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-005"
+      ],
+      "content_refs": [
+        "CNT-004"
+      ]
+    },
+    {
+      "text": "メール型などの派生は存在が確認できるが、本文差の詳細は今回のScope外。",
+      "evidence_refs": [
+        "EVD-004"
+      ],
+      "content_refs": [
+        "CNT-005"
+      ]
+    }
+  ]
+}
