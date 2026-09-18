@@ -422,3 +422,12 @@ Implementation commits:
 - Review 10 schema: `da169baaed45a8af7926c4c3fb83239027cc8223`
 - Review writer enforcement: `3c58f1105c358209a89c860b4c642c37d825eb1d`
 - salient-unit regression tests: `d4a65aa6683bb8307c463942ceaba36b9f12e774`
+
+Final verification after the redesign:
+- CI run `35295942670`: 57 passed / 0 failed;
+- 0001 / 0178 / 0179 / 0180 all pass staged 00 / 10 / 20 validation;
+- Review histories: 0001 `[1,2,3,4]`, 0178 `[1,2]`, 0179 `[1,2]`, 0180 `[1,2]`;
+- latest Review target blob equals current canonical blob for all 12 artifacts;
+- all 12 Notion control-plane rows are `完了`;
+- latest Review Seq: 0001=4, 0178=2, 0179=2, 0180=2;
+- rendered Markdown refreshed in commit `f032a49`.
