@@ -1,1 +1,0 @@
-verify 0178 and 0179 summary narrative semantics after rendering
