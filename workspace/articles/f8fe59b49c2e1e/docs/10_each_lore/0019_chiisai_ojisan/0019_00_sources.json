@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0019",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "primary_or_contemporary",
+      "title": "不気味な都市伝説「小さいおっさん」を追え",
+      "locator": "探偵ファイル～山口敏太郎の怪奇探偵～、2009年8月掲載",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "A"
+      ],
+      "url": "https://www.tanteifile.com/onryo/kaiki/2009/08/24_01/index.html",
+      "notes": "2009年時点で複数の芸能人・目撃者の報告を収集した同時代の都市伝説記事。学術調査ではなく、個々の目撃の事実性を独立検証するものではない。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "primary_or_contemporary",
+      "title": "釈由美子、最近見た“小さいおじさん”はルンバに追われていた",
+      "locator": "ORICON NEWS、2012-03-13",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "primary",
+      "evidence_role": [
+        "C",
+        "A"
+      ],
+      "url": "https://www.oricon.co.jp/news/2008374/full/",
+      "notes": "釈由美子本人のイベント発言を報じる同時代記事。本人が反復的に語る目撃談の一例。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "later_summary_or_commentary",
+      "title": "小さいおじさん",
+      "locator": "CiNii Books、東邦出版、2012.5",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "A"
+      ],
+      "url": "https://ci.nii.ac.jp/ncid/BB09473235",
+      "bibliographic_info": "山口敏太郎著、Sel編、東邦出版、2012年5月。",
+      "notes": "全国の目撃報告・芸能人証言等を一冊に集成した後代資料。個別目撃の真実性ではなく、伝承カテゴリーの定着・集成を示す。"
+    },
+    {
+      "source_id": "SRC-004",
+      "source_type": "primary_or_contemporary",
+      "title": "釈由美子、小さいおじさん目撃談を披露「3人でお酒を飲んでいた」",
+      "locator": "シネマトゥデイ、2014-03-30",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "primary",
+      "evidence_role": [
+        "C",
+        "A"
+      ],
+      "url": "https://www.cinematoday.jp/news/N0061803",
+      "notes": "本人の公開発言と、同題材を用いたフェイクドキュメンタリー作品の宣伝イベントを報じる。目撃伝承とメディア創作を分離するために使用。"
+    },
+    {
+      "source_id": "SRC-005",
+      "source_type": "later_summary_or_commentary",
+      "title": "都市伝説「小さいおじさん」について皆神先生に聞いた！",
+      "locator": "TOCANA、2019年掲載の皆神龍太郎インタビュー",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "H",
+        "A"
+      ],
+      "url": "https://tocana.jp/2019/08/post_109644_entry.html",
+      "notes": "後代の批判的・解説的インタビュー。2009年前後に話題が広がったとする時期整理の補助にのみ使用。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "記事冒頭",
+      "representation": "paraphrase",
+      "content": "2009年の記事は、近頃『小さいおっさん／小さいおじさん』の目撃報告が増えているとし、その正体について妖精、現代妖怪、UMAなど複数の解釈があるが確定していないと述べる。",
+      "uncertainty": "流行の開始年を一点確定する資料ではなく、記事時点の話題化を示す。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "釈由美子の目撃談部分",
+      "representation": "paraphrase",
+      "content": "釈由美子の目撃談として、風呂場で泣いている時に小さい男性から励まされた話や、別の場面で小さい人物が運動していたという話が紹介される。",
+      "uncertainty": "本人発言を記事が再紹介したものであり、目撃の客観的事実性を証明するものではない。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-001",
+      "locator": "複数目撃談の列挙部分",
+      "representation": "paraphrase",
+      "content": "2009年記事では、洗濯機周辺、ベッド周辺、車庫・車の下、鍋の紐を引く場面など、複数の人物による異なる『小さいおじさん』目撃談が列挙される。服装や行動は一定せず、視線に気づくと隠れる・逃げる型もある。",
+      "uncertainty": "複数のテレビ・芸能媒体由来の証言を集めた記事であり、単一の標準物語を意味しない。"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-002",
+      "locator": "本人発言",
+      "representation": "paraphrase",
+      "content": "2012年、釈由美子は最近見た小さいおじさんがロボット掃除機に追われていたと話し、過去には風呂場で『ドンマイ』と励まされたとも語った。",
+      "uncertainty": "反復的な本人語りの一例であり、伝承全体の必須設定ではない。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-003",
+      "locator": "書誌・内容紹介",
+      "representation": "paraphrase",
+      "content": "2012年刊『小さいおじさん』は、全国で続出する目撃報告や芸能人の証言を集め、『新種の妖怪か、妖精か』という未確定の存在として扱う。",
+      "uncertainty": "後代の集成本であり、個々の目撃報告の独立検証ではない。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-004",
+      "locator": "イベント発言部分",
+      "representation": "paraphrase",
+      "content": "2014年、釈由美子は『小さいおじさんをよく見る』として、3人の小さい男性が酒を飲んでいたという新たな目撃談を公開した。他の芸能人にも同種の目撃談があると記事は紹介する。",
+      "uncertainty": "本人・芸能人の体験談として報じられたもので、客観的存在証明ではない。"
+    },
+    {
+      "evidence_id": "EVD-007",
+      "source_id": "SRC-004",
+      "locator": "作品紹介部分",
+      "representation": "paraphrase",
+      "content": "2014年の記事が紹介する映像作品は、『小さいおじさん』を題材とするフェイクドキュメンタリーとして制作されたものであり、目撃談そのものとは異なる創作・メディア展開である。",
+      "uncertainty": "伝承内容の一次目撃Evidenceではなく、後代のメディア適応を示す。"
+    },
+    {
+      "evidence_id": "EVD-008",
+      "source_id": "SRC-005",
+      "locator": "流行時期に関する解説",
+      "representation": "paraphrase",
+      "content": "後代の解説では、『小さいおじさん』の都市伝説が2009年前後に広く話題化したと整理される。",
+      "uncertainty": "後代の回顧的整理であり、最初の目撃・最初の語りの年代を確定するものではない。"
+    }
+  ],
+  "notes": "『小さいおじさん』は単一の固定ストーリーより、日常空間で小型の成人男性様存在を一時的に目撃する複数の体験談群として扱う。正体・サイズ・服装・行動は一定せず、後代のフェイクドキュメンタリー等の創作展開は目撃伝承と分離する。docs/legacyは参照していない。"
+}
