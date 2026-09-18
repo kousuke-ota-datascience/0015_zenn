@@ -65,6 +65,7 @@ def valid_contents():
         "lore_name": "Fixture Lore",
         "summary": {
             "narrative": "A compact but sufficient fixture narrative.",
+            "coverage_refs": ["CNT-001"],
             "structure": {
                 key: {"status": "known", "value": f"{key} value"}
                 for key in STRUCTURE_KEYS
@@ -181,6 +182,7 @@ def review_bodies():
             key: _check()
             for key in (
                 "evidence_content_support",
+                "narrative_reconstruction",
                 "summary_reconstruction",
                 "structural_probe",
                 "variant_boundary",
@@ -190,6 +192,14 @@ def review_bodies():
         "reconstruction": {
             "blind_decode": "Fixture blind decode.",
             "reference_story": "Fixture reference story.",
+            "coverage_audit": [
+                {
+                    "content_ref": "CNT-001",
+                    "salient_meaning": "Fixture content claim.",
+                    "blind_reconstruction": "Fixture content claim.",
+                    "difference": "NONE",
+                }
+            ],
             "probes": probes,
             "analysis_invariance": {"status": "PASS", "notes": "stable"},
             "verdict": "PASS",
