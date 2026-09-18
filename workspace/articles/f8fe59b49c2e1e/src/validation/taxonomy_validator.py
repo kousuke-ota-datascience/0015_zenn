@@ -80,12 +80,18 @@ def validate_taxonomy(analysis: Mapping[str, Any], taxonomy_catalog: Mapping[str
         primary = dim.get("primary")
         secondary = dim.get("secondary", [])
 
-        if status in {"D", "I"} and not isinstance(primary, dict):
+        taxonomy_gap = dim.get("taxonomy_gap")
+        has_explicit_gap = (
+            isinstance(taxonomy_gap, dict)
+            and taxonomy_gap.get("present") is True
+        )
+
+        if status in {"D", "I"} and not isinstance(primary, dict) and not has_explicit_gap:
             errors.append(
                 _issue(
                     "V-STATUS-001",
                     f"$.dimensions[{idx}].primary",
-                    f"status {status} requires primary code",
+                    f"status {status} requires primary code unless taxonomy_gap.present=true",
                 )
             )
         if status in {"U", "NA", "C"} and (primary is not None or secondary):
