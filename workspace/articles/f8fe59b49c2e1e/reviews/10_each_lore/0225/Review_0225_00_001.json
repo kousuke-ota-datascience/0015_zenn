@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0225",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0225_jaguchi_kara_ponjuice/0225_00_sources.json",
+    "commit_sha": "debc738178c88e530fc24328d07208584ca36ad4",
+    "blob_sha": "6057748bcf28843921c57b7a27694dd1683f4e2e",
+    "reviewed_at": "2026-09-18T16:07:30Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "公式企業史、2009年同時代報道、企業取材を含む後代記事、JFCの時系列整理を役割別に使用し、成立史と2007年以降の実体化を区別している。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "中核命題、三蛇口型、問い合わせ、2007年実体化、昭和50年代頃の回想を別Evidenceとして保持している。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "各Evidenceは参照元の記載範囲内のparaphraseで、起源・初出・全国分布を過剰に断定していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "えひめ飲料公式は自社装置についてprimary、都市伝説起源については遡及説明として留保している。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1975年頃／昭和50年代頃は後代整理・回想として扱い、同時代一次資料による初出確定としていない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "最初の話者、厳密な起源年、果汁タンク映像の寄与、呼称差の成立史を未確定のまま保持する。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Source hierarchy、起源と最古確認、伝承と実体化の分離を独立監査しPass。"
+}

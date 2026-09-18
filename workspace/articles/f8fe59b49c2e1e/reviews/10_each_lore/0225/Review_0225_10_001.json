@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0225",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0225_jaguchi_kara_ponjuice/0225_10_contents.json",
+    "commit_sha": "d0d3d819b21be25378a1a9f71c98055b7b65b303",
+    "blob_sha": "eef142b743eacabb3bc4341be9f91dbf36cf2077",
+    "reviewed_at": "2026-09-18T16:07:30Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜005は各EVDに追跡可能で、後代実体化を初期伝承の事実へ遡及していない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryだけから中核命題、冗談起源の回想、三蛇口型、問い合わせ、2007年以降の実体化、主要不確実性を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。静的命題に不要な被害・発動・終端を追加していない。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001を初期共有核、VAR-002を具体化型、VAR-003を現実側の後代実体化として区別する。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立時期・最初の話者・因果的起源・呼称差を資料以上に閉じていない。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "愛媛の家庭では蛇口からポンジュース／みかんジュースが出るという地域ジョーク・都市伝説。後代回想では昭和50年代頃のお国自慢の冗談が広がりの一因とされるが起源は未確定。三蛇口型があり、噂への問い合わせを受けて2007年以降に企業が実物蛇口を再現した。",
+    "reference_story": "EvidenceとContentを参照すると、地域属性の静的命題が中核で、三蛇口型と現実側の実体化は派生として分離される。blind decodeと一致する。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "愛媛県の家庭・愛媛県人についての地域像。",
+        "reference": "summaryと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "直接の被害対象は設定されない。",
+        "reference": "affected_targets=not_applicableと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "発動儀式ではなく、愛媛の家庭の蛇口という静的条件。",
+        "reference": "entry_trigger非該当、mechanismと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "家庭の蛇口・水道設備。",
+        "reference": "causal_agentと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "蛇口からポン／みかんジュースが出る。",
+        "reference": "CNT-001と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "物語的状態遷移は必須でない。",
+        "reference": "state_transition=not_applicableと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "恒常的な地域属性命題。",
+        "reference": "temporal_structureと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "禁忌・規則なし。",
+        "reference": "rules_and_taboos=not_applicableと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "回避・制御なし。",
+        "reference": "avoidance_control=not_applicableと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "独立した終端場面なし。",
+        "reference": "terminal_state=not_applicableと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "起源・初出、映像寄与、呼称差が未確定。",
+        "reference": "uncertaintiesと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "中核家庭型、三蛇口型、2007年以降の実体化を分離。",
+        "reference": "variant_boundariesと一致。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryからの再構成と詳細Content参照後の理解に、Version Scopeまたは主要Dimension判定を変更する差はない。"
+    },
+    "verdict": "PASS"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。意味保存、静的命題構造、variant境界を独立監査しPass。"
+}

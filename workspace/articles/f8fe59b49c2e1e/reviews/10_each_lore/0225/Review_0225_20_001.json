@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0225",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0225_jaguchi_kara_ponjuice/0225_20_analysis.json",
+    "commit_sha": "a612b2ed34363d8ed92a7da1c920a7fe7c70db08",
+    "blob_sha": "2cb9bcf27408250daa4c965b2eee70e706616d81",
+    "reviewed_at": "2026-09-18T16:07:30Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001だけを中核Scopeとし、三蛇口型と2007年以降の実体化を除外。L3のみscope-independent X evidenceとして別扱い。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "静的な地域ステレオタイプに対してD07/D09/D16等を適用し、物語型の被害・終端を捏造していない。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "使用code_id/parent_idはcurrent taxonomyに存在し、新規gapは不要。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "蛇口設備が通常と異なる出力を持つという最小構造に限定し、超自然主体や隠れた機構を追加していない。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全DimensionはScope内CNT/EVDへ追跡可能。D18 Secondary L3のみX evidenceへ明示的に分離される。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "10 Contentsから独立再構成した静的地域命題と20の主要コードは整合する。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "成立年代・媒体・変容・分布・共有性は後代回想依存のためIに抑え、直接Content構造はDとしている。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=蛇口・インフラ、D13=設備出力の物理的異常、D15=独立した終端帰結なし(NA)で、静的命題として矛盾しない。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "2007年実物化はScope外だが、噂が企業行動を誘発したX evidenceとしてL3 Secondaryにのみ使用している。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "全国向け報道・公刊の存在を全国流通とみなさず、後代回想が示す友人・同輩的流通をIとした。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "情報不足をNO_ONE_KNOWSにせず、特定の秘密保持者を要しない共有ジョークとしてCOMMON_KNOWLEDGEをIとした。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "愛媛県とポンジュースという具体的実在対象が命題の識別性に必要なためA2。実在資料の存在だけを根拠にしていない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "1970年代成立をDirectにせず、後代資料の限界に応じてD01〜D04等をIに制限している。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "『地域ジョーク・ご当地都市伝説』『命題・地域ステレオタイプ』は静的地域属性の中核構造と整合する。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "愛媛県の家庭の蛇口がポンジュース／みかんジュースを出すという、実在地域・商品に結び付いた静的な地域ステレオタイプ。後代回想では学生間のお国自慢の冗談が伝説化したとされる。2007年以降の企業による実物化は伝承Scope外だが、噂が現実の企業行動を生んだL3効果として別に確認できる。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-003",
+      "EVD-005",
+      "EVD-006"
+    ],
+    "status": "PASS",
+    "notes": "後代実体化をD07〜D17へ逆流させず、Evidence confidence ceilingを維持している。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Version Scope、全21次元、L3外部効果分離、Evidence ceilingを独立監査しPass。"
+}
