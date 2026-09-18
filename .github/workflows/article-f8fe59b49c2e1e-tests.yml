@@ -58,7 +58,7 @@ jobs:
           from src.status_management.review_state import load_entry_review_state
 
           # 0001 = migration E2E; 0178/0179 = summary narrative semantic regressions; 0180 = former Golden Reference regression.
-          minimum_latest = {"0001": 3, "0178": 1, "0179": 1, "0180": 1}
+          minimum_latest = {"0001": 4, "0178": 2, "0179": 2, "0180": 2}
           for entry_id, minimum in minimum_latest.items():
               review_dir = Path("reviews/10_each_lore") / entry_id
               if not review_dir.is_dir() or not any(review_dir.glob("Review_*.json")):
