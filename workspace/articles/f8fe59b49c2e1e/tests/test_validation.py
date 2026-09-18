@@ -168,3 +168,29 @@ def test_inferred_dimension_without_primary_requires_taxonomy_gap(
 
     issues = validate_taxonomy(data, taxonomy_catalog)
     assert any(issue.rule_id == "V-STATUS-001" for issue in issues)
+
+
+def test_summary_coverage_refs_required(valid_contents):
+    root = Path(__file__).resolve().parents[1]
+    schema = root / "docs/10_each_lore/0000_tutorial/schemas/10_contents.schema.json"
+    data = copy.deepcopy(valid_contents)
+    data["summary"].pop("coverage_refs")
+    result = validate_data(data, schema, artifact="10")
+    assert not result.ok
+    assert any(issue.rule_id == "V-SCHEMA-001" for issue in result.errors)
+
+
+def test_summary_coverage_refs_must_resolve(valid_sources, valid_contents):
+    contents = copy.deepcopy(valid_contents)
+    contents["summary"]["coverage_refs"] = ["CNT-999"]
+
+    artifacts = {
+        "00": ParsedArtifact("00", Path("0001_00_sources.json"), valid_sources),
+        "10": ParsedArtifact("10", Path("0001_10_contents.json"), contents),
+    }
+    issues = validate_references("0001", artifacts)
+    assert any(
+        issue.json_path == "$.summary.coverage_refs"
+        and "dangling content reference: CNT-999" in issue.message
+        for issue in issues
+    )
