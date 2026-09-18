@@ -39,7 +39,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for entry in 0001 0180; do
+          for entry in 0001 0178 0179 0180; do
             if find docs/10_each_lore -mindepth 2 -maxdepth 2 -name "${entry}_00_sources.json" -print -quit | grep -q .; then
               python -m src.validation.validate_entry "$entry" --through 00
             fi
@@ -57,8 +57,8 @@ jobs:
           from pathlib import Path
           from src.status_management.review_state import load_entry_review_state
 
-          # 0001 = migration E2E; 0180 = former Golden Reference regression.
-          minimum_latest = {"0001": 3, "0180": 1}
+          # 0001 = migration E2E; 0178/0179 = summary semantic regressions; 0180 = former Golden Reference regression.
+          minimum_latest = {"0001": 3, "0178": 1, "0179": 1, "0180": 1}
           for entry_id, minimum in minimum_latest.items():
               review_dir = Path("reviews/10_each_lore") / entry_id
               if not review_dir.is_dir() or not any(review_dir.glob("Review_*.json")):
