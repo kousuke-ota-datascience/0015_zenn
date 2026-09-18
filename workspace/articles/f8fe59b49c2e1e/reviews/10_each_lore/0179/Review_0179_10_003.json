@@ -1,0 +1,186 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "全Content unitが00 Evidenceへ追跡でき、Evidenceを超える存在論・因果を生成していない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "summaryだけからcoverage対象の具体的伝承展開を再構成できる。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12でLOSS/CONFLICTなし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "原型と2003年型の具体的結末までsummaryから復元できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "因果非明示、物理変身非断定、語り手の後続帰結不明を保持。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "2003年投稿者自身の混成明示を境界根拠に、原型へ増補要素を逆輸入しない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryの具体的意味と後続Analysisに必要な構造が両方保持されている。",
+      "status": "PASS"
+    },
+    "blind_decode": "原型では田舎の家から白い人のような存在が不自然にくねくね動くのを兄弟が見て、兄だけが正体を理解したようになるが『分からないほうがいい』と説明を拒む。後に兄は重大な認知・コミュニケーション上の障害状態にあると伝聞されるが因果は明言されない。2003年型では秋田の田園、双眼鏡、祖父の視認禁忌が加わり、兄は白い存在と同じようにくねくね動いて元の兄ではなくなったかのように描かれる。最後は語り手自身が禁じられた対象を間近に見るが、その後は不明。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "白い人のようなものが人間には不可能な動きをする。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "原型で白い人物状存在が不自然にくねくね動く。"
+      },
+      {
+        "blind_reconstruction": "兄だけが『分かった』が『分からない方がいい』と隠す。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "兄が正体を理解したようになるが説明を拒む。"
+      },
+      {
+        "blind_reconstruction": "兄は後に重大な障害状態と伝えられるが原因は断定されない。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "後日、兄の重大な認知・コミュニケーション障害状態が伝聞されるが因果は非明示。"
+      },
+      {
+        "blind_reconstruction": "後代型では秋田の田園に白い物体が現れる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "2003年型は秋田の田園で白い物体が動く。"
+      },
+      {
+        "blind_reconstruction": "双眼鏡で見た兄が急変する。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "兄が双眼鏡で詳しく見て急変し歪んだ警句を発する。"
+      },
+      {
+        "blind_reconstruction": "祖父による視認禁忌がある。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "祖父が白い物体を詳しく見てはならないと警告。"
+      },
+      {
+        "blind_reconstruction": "兄自身が怪異の動きを反復する。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "兄が白い物体と同じようにくねくね動く。"
+      },
+      {
+        "blind_reconstruction": "identity喪失として終端化される。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "以前の兄ではなくなったかのように描かれ、当地に残される。"
+      },
+      {
+        "blind_reconstruction": "終端で語り手も視認禁忌を破る。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "最後に語り手自身が禁じられた白い物体を間近に見る。"
+      },
+      {
+        "blind_reconstruction": "現在有名な要素を原型へ遡及しない。",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "名称・双眼鏡・祖父・motif echo等は2003年型でまとまる。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "白い人／物体、A／語り手、兄。2003年型に祖父。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "白い人／物体、A／語り手、兄。2003年型に祖父。"
+      },
+      {
+        "blind": "主に詳しく見て理解した兄。2003年終盤では語り手も危険条件へ入る。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "主に詳しく見て理解した兄。2003年終盤では語り手も危険条件へ入る。"
+      },
+      {
+        "blind": "白い存在を視認し、正体を理解すること。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "白い存在を視認し、正体を理解すること。"
+      },
+      {
+        "blind": "白い存在の正体・存在論は不明。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "白い存在の正体・存在論は不明。"
+      },
+      {
+        "blind": "理解後に兄の重大異変。2003年型では怪異と同様にくねくね動く。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "理解後に兄の重大異変。2003年型では怪異と同様にくねくね動く。"
+      },
+      {
+        "blind": "発見→視認→理解→兄の異変。2003年型では警告・identity終端・語り手最終視認まで進む。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "発見→視認→理解→兄の異変。2003年型では警告・identity終端・語り手最終視認まで進む。"
+      },
+      {
+        "blind": "各variantは一回の遭遇内で段階進行。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "各variantは一回の遭遇内で段階進行。"
+      },
+      {
+        "blind": "正体は分からない方がよい。2003年型では見てはならない。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "正体は分からない方がよい。2003年型では見てはならない。"
+      },
+      {
+        "blind": "2003年型では詳しく見ないことが回避。原型に事前回避手順はない。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "2003年型では詳しく見ないことが回避。原型に事前回避手順はない。"
+      },
+      {
+        "blind": "原型では兄の重大状態。2003年型では兄のmotif echo／identity喪失と語り手の最終視認。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "原型では兄の重大状態。2003年型では兄のmotif echo／identity喪失と語り手の最終視認。"
+      },
+      {
+        "blind": "正体、原型の因果、物理変身、語り手のその後は不明。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "正体、原型の因果、物理変身、語り手のその後は不明。"
+      },
+      {
+        "blind": "2000/2001原型と2003年混成・増補型を分離。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "2000/2001原型と2003年混成・増補型を分離。"
+      }
+    ],
+    "reference_story": "2000/2001原型は正体理解と説明拒否・後の兄の状態を核とし、2003年型は投稿者が先行話との混成を明示して、秋田・双眼鏡・祖父・兄のmotif echo／identity喪失・語り手の最終視認・名称を追加する。",
+    "verdict": "PASS"
+  },
+  "review_notes": "0179 blind E2E Review 10。Blind Decode後にcoverage_refsを開示し全salient unitを監査。",
+  "review_seq": 3,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_10_contents.json",
+    "blob_sha": "81f1a5cb288d86831ba1dd7cdefb143e7293564a",
+    "commit_sha": "3686eb6f8ac2357781eccf565d548e1e1f54bcb0",
+    "reviewed_at": "2026-09-18T02:35:14Z"
+  },
+  "verdict": "Pass"
+}

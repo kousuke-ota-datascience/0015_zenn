@@ -1,0 +1,106 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Blind DecodeとScoped Analysisの意味構造に矛盾なし。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "睡眠夢→順次危害→自分の標的化→覚醒離脱→4年後再発の因果・時間構造が一貫。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "対象=投稿者、作用=夢内の物理危害／標的化、帰結=恐怖と将来脅威で整合。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "2000年Scopeは物語内部L1のみ。2003年読後派生をL2へ逆輸入しない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "公開掲示板という確認媒体に基づくOPEN_FORUM_WEB。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "体験の追加情報は投稿者自身が保持するというScope内事実に限定。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "特定実在地点ではなく一般的駅・列車・遊園地記憶なのでA1。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "夢現象・順次危害・反復・覚醒というScoped構造に対応したcodeで、後代ルールを用いていない。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "夢・睡眠怪談／一人称体験怪談はScope内容に整合。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "原スレ未取得の来歴はI、保存転載で直接読める内容次元はD/Iを使い分ける。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "Scoped Content/Evidenceから各Dimensionのrationale/manifestationへ追跡可能。来歴次元は必要に応じて00 Evidenceへ直接traceし、10 Contentへ流通史を混入させていない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D/I/UをEvidence強度に応じて使い分け、不明点を推測で埋めていない。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "現taxonomy catalogに対してcode ID / Parentを検証し、未表現の安定構造を無理に既存codeへ押し込んでいない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "2000年投稿VAR-001のみをScopeとし、2003年読後派生を除外。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0178",
+  "findings": [],
+  "review_notes": "0178 blind E2E Review 20。旧code/Legacy裁定を期待値として使用していない。",
+  "review_seq": 3,
+  "schema_version": "1.0",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-008"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D20"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-003",
+      "EVD-004",
+      "EVD-005",
+      "EVD-006"
+    ],
+    "model": "一人称で語られる反復悪夢の中で、投稿者が順次危害の対象となるが、自覚夢ゆえの覚醒で二度離脱する。ただし夢は4年後に続きから再開し、次回への警告が残る。",
+    "notes": "現行Workflow/coding rulesのみで再構成したblind sense-making model。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_20_analysis.json",
+    "blob_sha": "cb9c6b2809cb8bc61720afde8f40fe93d8b6482b",
+    "commit_sha": "82a5131b265a7442fba3ffddfc051773150c20cb",
+    "reviewed_at": "2026-09-18T02:35:14Z"
+  },
+  "verdict": "Pass"
+}

@@ -1,0 +1,107 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Blind DecodeとScoped Analysisの意味構造に矛盾なし。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "初期Scopeでは因果列の細部を固定できないこと自体をUとして保持。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12/D13/D15はいずれも初期Scopeで作用対象・作用・終端を確定できないためU。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "作用機構が初期Scopeで未確定のためL1/L2/L3を推測せずU。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "子ども・同世代間の流通というEvidenceに基づくIで、全国流行を初期Scopeへ混入しない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "特権情報保持者は確認できずU。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "一般的生活圏を背景とするA1で、特定発祥地を因果アンカーにしない。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D12/D14等は初期核から確定できないためUとし、後代代表形を遡及していない。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "怪人・怪異遭遇／口承都市伝説は現Scopeの性質と矛盾しない。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "1978年末層は後代整理なのでIを上限とし、1979年新聞所在と分離。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "Scoped Content/Evidenceから各Dimensionのrationale/manifestationへ追跡可能。来歴次元は必要に応じて00 Evidenceへ直接traceし、10 Contentへ流通史を混入させていない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D/I/UをEvidence強度に応じて使い分け、不明点を推測で埋めていない。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "現taxonomy catalogに対してcode ID / Parentを検証し、未表現の安定構造を無理に既存codeへ押し込んでいない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "最古のまとまった詳細形を過剰推定せず、1978年末〜1979年初めに安全に確認できる最小核VAR-001へ限定。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [],
+  "review_notes": "0001 blind E2E Review 20。旧code/Legacy裁定を期待値として使用していない。",
+  "review_seq": 5,
+  "schema_version": "1.0",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002"
+    ],
+    "model": "最古層では『口が耳まで裂けた女性』という未知存在をめぐる子ども・同世代の噂が確認できるが、遭遇条件・作用対象・攻撃・帰結・回避規則までは安全に固定できない。後代の有名な会話・追跡・回避設定はScope外へ分離する。",
+    "notes": "現行Workflow/coding rulesのみで再構成したblind sense-making model。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_20_analysis.json",
+    "blob_sha": "d296bb20f32bbc1576b61790456d86cee4cef4c6",
+    "commit_sha": "405828df355651ad1047072c6daa6cb2904e3b62",
+    "reviewed_at": "2026-09-18T02:35:13Z"
+  },
+  "verdict": "Pass"
+}

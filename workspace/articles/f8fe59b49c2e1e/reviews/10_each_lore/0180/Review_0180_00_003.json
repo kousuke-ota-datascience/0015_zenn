@@ -1,0 +1,41 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2004-01-08深夜のレス98以降を直接確認。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "レス98〜635の逐次報告・参加者応答を直接区別し、投稿停止後を補完していない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "初期Contentは公式過去ログへ直接依存し、後代続編を一次ログへ混ぜない。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "5ちゃんねる公式過去ログを一次Evidenceとし、後代調査は範囲確認だけに使用。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "列車異常、未知駅、位置特定失敗、110、老人、トンネル、車、最終投稿を過去ログへ追跡可能。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "駅の実在・異世界性、投稿の事実性、レス635後の帰結を未確定として保持。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0180",
+  "findings": [],
+  "review_notes": "0180 blind E2E。既存canonical/Legacy/過去Review本文を参照せず、新規調査Sources/Evidenceのみで監査。",
+  "review_seq": 3,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0180_kisaragi_station/0180_00_sources.json",
+    "blob_sha": "8b9318e4a628511a970b717e3ba0ebaa1c8b9d72",
+    "commit_sha": "232848d26369b05df1c8e6b590a4fed3bd0051ce",
+    "reviewed_at": "2026-09-18T02:35:14Z"
+  },
+  "verdict": "Pass"
+}

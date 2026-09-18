@@ -1,0 +1,117 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Blind DecodeとScoped Analysisの意味構造に矛盾なし。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "通常乗車→経路異常→未知駅→位置特定不能→異常遭遇→不審車→投稿停止で一貫。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "対象=投稿者、作用=空間歪み(I)、帰結=未解決性保持(D)で、失踪・死亡を生成しない。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "Scope内作用はL1のみ。読者受容自体への作用や後代社会作用をL2/L3へ入れない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "初期artifact自体が公開掲示板なのでOPEN_FORUM_WEB D。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "複数人物が部分情報を持つが真相の特権保持者は固定できずU。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "静岡私鉄・新浜松周辺・比奈等の具体地理に接続するためA2。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "実況形式・空間経路異常・未解決終端というScope内構造に対応し、参加者の異界推測を強いontologyへしない。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "異界・空間怪談／実況型ネット怪談はScope内容に整合。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "Contentは公式過去ログでD、空間ontologyや歪みはI、帰結不明はDとして区別。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "Scoped Content/Evidenceから各Dimensionのrationale/manifestationへ追跡可能。来歴次元は必要に応じて00 Evidenceへ直接traceし、10 Contentへ流通史を混入させていない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D/I/UをEvidence強度に応じて使い分け、不明点を推測で埋めていない。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "現taxonomy catalogに対してcode ID / Parentを検証し、未表現の安定構造を無理に既存codeへ押し込んでいない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "公式過去ログのレス98〜635だけをScopeとし、後年の続編・一般化・翻案を除外。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0180",
+  "findings": [],
+  "review_notes": "0180 blind E2E Review 20。旧code/Legacy裁定を期待値として使用していない。",
+  "review_seq": 3,
+  "schema_version": "1.0",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-009",
+      "CNT-010",
+      "CNT-011"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D05",
+      "D07",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-003",
+      "EVD-004",
+      "EVD-005",
+      "EVD-006",
+      "EVD-007",
+      "EVD-008",
+      "EVD-009"
+    ],
+    "model": "日常の鉄道移動が説明不能な経路・未知駅へ逸脱し、通常地理へ回収できないまま危険が段階進行する。投稿者と参加者は現実的対処と意味付けを共同で試みるが、原因・帰還法・最終帰結は確定しない。",
+    "notes": "現行Workflow/coding rulesのみで再構成したblind sense-making model。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0180_kisaragi_station/0180_20_analysis.json",
+    "blob_sha": "edfb598aa9c1656caf3a42169f9fa9da5d7468fc",
+    "commit_sha": "002616a8192449cd21bf85a4a337aa81e36267ac",
+    "reviewed_at": "2026-09-18T02:35:14Z"
+  },
+  "verdict": "Pass"
+}

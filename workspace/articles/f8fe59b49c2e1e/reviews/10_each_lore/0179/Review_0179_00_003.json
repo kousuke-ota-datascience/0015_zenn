@@ -1,0 +1,41 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2000年元サイト掲載は専門家整理、2001年2ch転載は保存文面として区別。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "2001原型と2003混成型を分離し、投稿者自身の『混ぜて書いた』前置きも保持。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "元スレ／2000元ページ未取得を明示し、後代転載を一次資料扱いしていない。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "専門家成立史、2001/2003投稿文の長文保存転載、クロスチェック資料を区別。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "白い存在、理解拒否、後の兄の状態、2003年の双眼鏡・祖父・motif echo・終端視認をSourceへ追跡可能。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "原型の因果非明示、2003年の物理変身非断定、語り手終端後の帰結不明を保持。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "0179 blind E2E。既存canonical/Legacy/過去Review本文を参照せず、新規調査Sources/Evidenceのみで監査。",
+  "review_seq": 3,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "0e05853f4d687b89e3ce96f0dfc947536208cfa9",
+    "commit_sha": "0e058105b9ac2f22e72dab1b54aded53d4758827",
+    "reviewed_at": "2026-09-18T02:35:14Z"
+  },
+  "verdict": "Pass"
+}

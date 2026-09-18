@@ -1,0 +1,41 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2000-08-02レス9/12/13の保存時刻を最古確認層として保持。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "2000年版と2003年『猿夢＋』を別artifactとして保持し、読者感染を初期版へ逆輸入していない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "原スレ未取得を明示し、mirror/reprintとして扱っている。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "2000年投稿の保存転載、再録付き後代記事、2003年派生保存転載を役割分離。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "無人駅、猿電車、順次危害、覚醒、4年後再開、終端警告は保存転載へ追跡できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "三回目死亡・読者感染を初期版の確定規則にしていない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0178",
+  "findings": [],
+  "review_notes": "0178 blind E2E。既存canonical/Legacy/過去Review本文を参照せず、新規調査Sources/Evidenceのみで監査。",
+  "review_seq": 3,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_00_sources.json",
+    "blob_sha": "eb67244b6ed57764a0d5508dcf60fddeedc5e226",
+    "commit_sha": "096425a322f5b6f75b4a809fc0871c04b3806ac0",
+    "reviewed_at": "2026-09-18T02:35:14Z"
+  },
+  "verdict": "Pass"
+}

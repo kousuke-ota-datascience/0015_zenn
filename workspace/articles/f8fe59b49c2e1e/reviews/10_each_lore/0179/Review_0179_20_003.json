@@ -1,0 +1,104 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Blind DecodeとScoped Analysisの意味構造に矛盾なし。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "視認→理解→後の兄の状態は物語上並置されるが明示因果ではないためIで保持。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "対象=兄(I)、作用=認知誘発危害(I)、帰結=認知・コミュニケーション障害(I)でEvidence ceilingを揃える。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "原型の物語内部L1のみをI。読者感染や2003年の追加作用を混入しない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "2001年公開掲示板転載が確認できるためOPEN_FORUM_WEB I。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "正体を理解したように見え説明を拒む兄をEXPERIENCER Iとし、『誰も知らない』へ落とさない。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "特定地点を示さない一般的田舎の家なのでA1。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "原型のEvidence強度に合わせ、認知危害・作用対象等はI、存在論はU、事前回避はUとしている。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "認知危害怪異／伝聞体験怪談は原型Scopeの構造と整合。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "2000元ページ未取得・2001文面は保存転載のため来歴と因果推論はI上限。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "Scoped Content/Evidenceから各Dimensionのrationale/manifestationへ追跡可能。来歴次元は必要に応じて00 Evidenceへ直接traceし、10 Contentへ流通史を混入させていない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D/I/UをEvidence強度に応じて使い分け、不明点を推測で埋めていない。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "現taxonomy catalogに対してcode ID / Parentを検証し、未表現の安定構造を無理に既存codeへ押し込んでいない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "既定規則に従い2000/2001原型VAR-001をScopeとし、2003年で追加された祖父・双眼鏡・motif echo・名称を除外。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "0179 blind E2E Review 20。旧code/Legacy裁定を期待値として使用していない。",
+  "review_seq": 3,
+  "schema_version": "1.0",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D17",
+      "D18",
+      "D20"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-004"
+    ],
+    "model": "原型では正体不明の白い存在を視認し、その正体を理解したように見える兄が説明を拒み、後に重大な認知・コミュニケーション障害状態にあると伝聞される。物語は理解と後の状態を並置するが因果を明言しないため、認知危害はIとして扱う。",
+    "notes": "現行Workflow/coding rulesのみで再構成したblind sense-making model。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "1e9d6af0c18d736860b1f1da1bc1c416a09b23c2",
+    "commit_sha": "d8c6a4428822d2d8ece17cad605471f0ff5cf4da",
+    "reviewed_at": "2026-09-18T02:35:14Z"
+  },
+  "verdict": "Pass"
+}

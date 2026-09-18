@@ -1,0 +1,192 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "全Content unitが00 Evidenceへ追跡でき、Evidenceを超える存在論・因果を生成していない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "summaryだけからcoverage対象の具体的伝承展開を再構成できる。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12でLOSS/CONFLICTなし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "主要時系列と未解決終端、共同実況の性格をsummaryから再構成可能。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "異界説、事実性、投稿停止後を断定しない。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "初期ログと後年の続編・帰還ルールを分離。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0180",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryの具体的意味と後続Analysisに必要な構造が両方保持されている。",
+      "status": "PASS"
+    },
+    "blind_decode": "普段の帰宅列車が長時間停車せず、投稿者は未知の無人駅『きさらぎ駅』で下車する。検索・家族・警察でも位置を通常地理へ回収できず、線路沿いを進んで異常音、片足の老人、伊佐貫トンネルを経験する。トンネル後に乗った車は山側へ進み、運転者が異常な独り言を始める。投稿者は逃走機会をうかがい、電池不足を理由にレス635で実況を終える。その後は不明。参加者はリアルタイムで助言・検索・解釈するが確定規則にはならない。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "日常の帰宅列車が通常運行から外れる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "普段の列車が長時間停車しない異常から実況開始。"
+      },
+      {
+        "blind_reconstruction": "通常経路ではない走行異常が深まる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "乗務員応答なし、普段通らないトンネル。"
+      },
+      {
+        "blind_reconstruction": "存在を知らない駅に降りる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "未知の無人駅きさらぎ駅へ下車。"
+      },
+      {
+        "blind_reconstruction": "現在地が通常の地図へ回収できない。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "検索・家族でも位置を通常地理へ置けない。"
+      },
+      {
+        "blind_reconstruction": "現実的な救助策を試すが位置を伝えられない。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "家族・タクシー・位置確認・警察・110を試す。"
+      },
+      {
+        "blind_reconstruction": "移動中に異常人物・現象が現れる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "線路上で異常音と片足の老人の警告・消失。"
+      },
+      {
+        "blind_reconstruction": "未知のトンネルを越える。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "伊佐貫と読めるトンネルへ到達し通過。"
+      },
+      {
+        "blind_reconstruction": "見知らぬ運転者の車へ移る。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "トンネル後に車へ乗り比奈と説明される。"
+      },
+      {
+        "blind_reconstruction": "救助に見えた車も危険化する。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "車が山側へ進み運転者が異常化、逃走を考える。"
+      },
+      {
+        "blind_reconstruction": "投稿停止を失踪・死亡へ補完しない。",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "レス635を最後に実況停止し帰結不明。"
+      },
+      {
+        "blind_reconstruction": "共同実況だが異界説等は推測のまま。",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "参加者が検索・助言・解釈するが確定規則にはならない。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "投稿者、参加者、片足の老人らしき人物、車の運転者。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "投稿者、参加者、片足の老人らしき人物、車の運転者。"
+      },
+      {
+        "blind": "投稿者。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "投稿者。"
+      },
+      {
+        "blind": "通常の帰宅乗車が長時間無停車へ逸脱する。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "通常の帰宅乗車が長時間無停車へ逸脱する。"
+      },
+      {
+        "blind": "原因主体は不明。場所・経路接続の異常が一貫する。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "原因主体は不明。場所・経路接続の異常が一貫する。"
+      },
+      {
+        "blind": "通常地理へ回収できない空間・経路異常が段階進行。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "通常地理へ回収できない空間・経路異常が段階進行。"
+      },
+      {
+        "blind": "長時間無停車→未知駅→位置不明→線路→老人→トンネル→車→投稿停止。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "長時間無停車→未知駅→位置不明→線路→老人→トンネル→車→投稿停止。"
+      },
+      {
+        "blind": "一晩の実況として順次進行。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "一晩の実況として順次進行。"
+      },
+      {
+        "blind": "参加者助言は複数あるが安定規則に収束しない。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "参加者助言は複数あるが安定規則に収束しない。"
+      },
+      {
+        "blind": "家族・警察・参加者助言を試すが確実な帰還法はない。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "家族・警察・参加者助言を試すが確実な帰還法はない。"
+      },
+      {
+        "blind": "不審な車内で逃走を考えた後、レス635で投稿が途絶える。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "不審な車内で逃走を考えた後、レス635で投稿が途絶える。"
+      },
+      {
+        "blind": "駅の存在論、投稿の事実性、投稿停止後の帰結が未確定。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "駅の存在論、投稿の事実性、投稿停止後の帰結が未確定。"
+      },
+      {
+        "blind": "2004年初期実況と後年の続編・異界駅一般化を分離。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "2004年初期実況と後年の続編・異界駅一般化を分離。"
+      }
+    ],
+    "reference_story": "2004年レス98〜635は、通常の乗車から空間・経路異常へ逸脱し、位置特定不能、線路移動、老人、トンネル、不審な車、未解決の投稿停止へ至る共同実況である。",
+    "verdict": "PASS"
+  },
+  "review_notes": "0180 blind E2E Review 10。Blind Decode後にcoverage_refsを開示し全salient unitを監査。",
+  "review_seq": 3,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0180_kisaragi_station/0180_10_contents.json",
+    "blob_sha": "93dbe20a094340cd89ce198e77a23cb569b62423",
+    "commit_sha": "dfb69bb5d83326f4b5afb68e7fc5e857c28c588e",
+    "reviewed_at": "2026-09-18T02:35:14Z"
+  },
+  "verdict": "Pass"
+}

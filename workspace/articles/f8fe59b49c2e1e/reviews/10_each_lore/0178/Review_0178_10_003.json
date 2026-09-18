@@ -1,0 +1,180 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "全Content unitが00 Evidenceへ追跡でき、Evidenceを超える存在論・因果を生成していない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "summaryだけからcoverage対象の具体的伝承展開を再構成できる。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12でLOSS/CONFLICTなし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "2000年版の具体的進行・4年後の継続・終端警告まで再構成可能。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "三回目死亡、読者感染、夢の原因を断定しない。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "2003年『猿夢＋』を初期版の規則へ混入していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0178",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryの具体的意味と後続Analysisに必要な構造が両方保持されている。",
+      "status": "PASS"
+    },
+    "blind_decode": "夢だと自覚した投稿者が薄暗い無人駅でお猿さん電車に乗り、放送に従って乗客が順番に残酷な被害を受ける。自分の順番直前に覚醒し、4年後に前回の続きから夢が再開する。再び覚醒するが、次回は逃がさない旨の警告が残る。2003年の読後派生は別variant。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "夢だと分かった状態で無人駅にいる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "自覚夢の薄暗い無人駅。"
+      },
+      {
+        "blind_reconstruction": "遊園地風の猿電車に乗る。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "お猿さん電車へ乗車。"
+      },
+      {
+        "blind_reconstruction": "車内放送どおり順次危害が起こる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "放送に従い乗客が順番に被害。"
+      },
+      {
+        "blind_reconstruction": "自分の危害直前まで順番が来る。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "投稿者自身の処理順が迫る。"
+      },
+      {
+        "blind_reconstruction": "夢だと認識して目覚める。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "覚醒を念じて離脱。"
+      },
+      {
+        "blind_reconstruction": "長い間隔後に夢が続きから再開。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "4年後に同じ場面の続きから再開。"
+      },
+      {
+        "blind_reconstruction": "二度目も目覚めて逃げる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "再び覚醒して離脱。"
+      },
+      {
+        "blind_reconstruction": "終端警告はあるが確定死亡ルールではない。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "次回は逃がさない警告、第三回の結果は未描写。"
+      },
+      {
+        "blind_reconstruction": "読者感染的派生は2000年初期版と別。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "2003年に別投稿者の読後派生。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "夢を見ている投稿者、車内の乗客、主体不明の放送／処理側。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "夢を見ている投稿者、車内の乗客、主体不明の放送／処理側。"
+      },
+      {
+        "blind": "乗客と投稿者自身。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "乗客と投稿者自身。"
+      },
+      {
+        "blind": "夢内で無人駅から猿電車へ乗る。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "夢内で無人駅から猿電車へ乗る。"
+      },
+      {
+        "blind": "危害を進める主体や夢の原因は不明。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "危害を進める主体や夢の原因は不明。"
+      },
+      {
+        "blind": "放送された順番で乗客へ危害が進む。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "放送された順番で乗客へ危害が進む。"
+      },
+      {
+        "blind": "無人駅→乗車→順次危害→自分の順番→覚醒→4年後再開→再覚醒。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "無人駅→乗車→順次危害→自分の順番→覚醒→4年後再開→再覚醒。"
+      },
+      {
+        "blind": "4年の間隔を置いて前回の続きから反復する。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "4年の間隔を置いて前回の続きから反復する。"
+      },
+      {
+        "blind": "危害は順番に進むが三回目死亡は確定規則ではない。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "危害は順番に進むが三回目死亡は確定規則ではない。"
+      },
+      {
+        "blind": "夢だと自覚して強く覚醒を念じる。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "夢だと自覚して強く覚醒を念じる。"
+      },
+      {
+        "blind": "二度目も離脱するが次回は逃がさない警告が残る。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "二度目も離脱するが次回は逃がさない警告が残る。"
+      },
+      {
+        "blind": "原因主体、再開理由、三回目の帰結は不明。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "原因主体、再開理由、三回目の帰結は不明。"
+      },
+      {
+        "blind": "2000年初期版と2003年読後派生を分離。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "2000年初期版と2003年読後派生を分離。"
+      }
+    ],
+    "reference_story": "2000年版は自覚夢・無人駅・猿電車・順次危害・覚醒・4年後の継続夢・再覚醒・終端警告から成る。読者感染と三回目死亡は確定しない。",
+    "verdict": "PASS"
+  },
+  "review_notes": "0178 blind E2E Review 10。Blind Decode後にcoverage_refsを開示し全salient unitを監査。",
+  "review_seq": 3,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_10_contents.json",
+    "blob_sha": "c25f7feec5ec9fd7211aaf8537d5a86edc0d5266",
+    "commit_sha": "d50fce607630a1d999ab2f35eac31989bf4a5966",
+    "reviewed_at": "2026-09-18T02:35:14Z"
+  },
+  "verdict": "Pass"
+}

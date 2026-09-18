@@ -1,0 +1,41 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1978年末頃は後代整理、1979-01-26は新聞掲載所在として別に保持している。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "新聞所在、初期噂、代表形、地域異伝を同一強度に扱わず、初出・共存不明を保持している。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "同時代新聞そのものの本文未実見箇所と、後代研究・採録を区別している。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "NDLレファレンス、現代民俗研究者解説、日文研採録DBを役割分離して使用している。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-001〜008は各Sourceの確認範囲を超えない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "代表会話型・武器・回避法・由来説明を最初期核へ遡及していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [],
+  "review_notes": "0001 blind E2E。既存canonical/Legacy/過去Review本文を参照せず、新規調査Sources/Evidenceのみで監査。",
+  "review_seq": 5,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_00_sources.json",
+    "blob_sha": "4c508e08c98d163d63f7def461cfc93387b10a03",
+    "commit_sha": "96528592b91d5eb7263c6152f40f51c2974110eb",
+    "reviewed_at": "2026-09-18T02:35:13Z"
+  },
+  "verdict": "Pass"
+}

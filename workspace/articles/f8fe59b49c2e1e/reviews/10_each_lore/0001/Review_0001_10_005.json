@@ -1,0 +1,186 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "全Content unitが00 Evidenceへ追跡でき、Evidenceを超える存在論・因果を生成していない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "summaryだけからcoverage対象の具体的伝承展開を再構成できる。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12でLOSS/CONFLICTなし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "伝承内容が中心で、流通史・社会反応をsummaryの主内容へ混入していない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "後代の有名設定を最初期核へ遡及せず、最終帰結も固定していない。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "最初期最小核と後代代表形・増補群を明示的に分離。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryの具体的意味と後続Analysisに必要な構造が両方保持されている。",
+      "status": "PASS"
+    },
+    "blind_decode": "口が耳まで裂けた女性をめぐる噂が核にあり、後代代表形ではマスクの女性が容姿を問い、裂けた口を見せた後に追跡・危害へ進む。回答分岐、俊足・武器・服装、ポマードやべっこう飴、整形由来等は地域・後代異伝で、最初期核へ一括遡及しない。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "裂けた口を持つ女性状存在が核。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "口裂け女は口が耳まで裂けた女性として語られる。"
+      },
+      {
+        "blind_reconstruction": "後代代表形にはマスク越しの質問がある。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "代表的後代型でマスクの女性が容姿を尋ねる。"
+      },
+      {
+        "blind_reconstruction": "回答後に裂けた口を見せる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "肯定回答後にマスクを外し裂けた口を示す型。"
+      },
+      {
+        "blind_reconstruction": "提示後に追跡・危害へ進む。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "口を示した後に追跡・危害へ進む型。"
+      },
+      {
+        "blind_reconstruction": "回答分岐は一様でない。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "回答内容で帰結が変わる異伝。"
+      },
+      {
+        "blind_reconstruction": "能力・武器・服装の地域差がある。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "俊足・鎌・赤い服等の属性異伝。"
+      },
+      {
+        "blind_reconstruction": "ポマード回避が後代異伝にある。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "ポマードによる回避異伝。"
+      },
+      {
+        "blind_reconstruction": "べっこう飴回避が後代異伝にある。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "べっこう飴による回避異伝。"
+      },
+      {
+        "blind_reconstruction": "裂けた口の由来説明も後から付く。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "整形失敗等の由来異伝。"
+      },
+      {
+        "blind_reconstruction": "一つの完全版でなく増補・地域差として理解する。",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "反復で細部が増補され地域差を形成。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "口が耳まで裂けた女性状存在と遭遇者。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "口が耳まで裂けた女性状存在と遭遇者。"
+      },
+      {
+        "blind": "後代代表形では通行者・子どもだが、最初期核の作用対象は固定しない。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "後代代表形では通行者・子どもだが、最初期核の作用対象は固定しない。"
+      },
+      {
+        "blind": "後代代表形では道等で遭遇して容姿を問われる。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "後代代表形では道等で遭遇して容姿を問われる。"
+      },
+      {
+        "blind": "口裂け女と呼ばれる女性状存在。存在論は完全固定しない。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "口裂け女と呼ばれる女性状存在。存在論は完全固定しない。"
+      },
+      {
+        "blind": "質問、口の提示、追跡・危害。異伝で武器・俊足等が付く。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "質問、口の提示、追跡・危害。異伝で武器・俊足等が付く。"
+      },
+      {
+        "blind": "遭遇→質問→口の提示→追跡・危害／回避。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "遭遇→質問→口の提示→追跡・危害／回避。"
+      },
+      {
+        "blind": "最初期核から後代に設定が増補される。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "最初期核から後代に設定が増補される。"
+      },
+      {
+        "blind": "回答分岐や回避規則は異伝として存在する。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "回答分岐や回避規則は異伝として存在する。"
+      },
+      {
+        "blind": "ポマード・べっこう飴等の回避異伝。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "ポマード・べっこう飴等の回避異伝。"
+      },
+      {
+        "blind": "危害の最終帰結は異伝間で一定しない。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "危害の最終帰結は異伝間で一定しない。"
+      },
+      {
+        "blind": "代表形・異伝の初出、共存、最初期核への遡及可否が未確定。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "代表形・異伝の初出、共存、最初期核への遡及可否が未確定。"
+      },
+      {
+        "blind": "初期最小核、後代代表会話型、地域／後代増補群を分離。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "初期最小核、後代代表会話型、地域／後代増補群を分離。"
+      }
+    ],
+    "reference_story": "初期核は裂けた口の女性まで。後代に質問→口の提示→追跡という代表形と、回答・属性・回避・由来の異伝が増補される。危害の最終帰結は一つに固定しない。",
+    "verdict": "PASS"
+  },
+  "review_notes": "0001 blind E2E Review 10。Blind Decode後にcoverage_refsを開示し全salient unitを監査。",
+  "review_seq": 5,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_10_contents.json",
+    "blob_sha": "30fa4c4b12ddd887d8ce1f26b76d2f0eddadcb48",
+    "commit_sha": "53954fe3a724389e62cc1e4105457e20eb3e25e4",
+    "reviewed_at": "2026-09-18T02:35:13Z"
+  },
+  "verdict": "Pass"
+}
