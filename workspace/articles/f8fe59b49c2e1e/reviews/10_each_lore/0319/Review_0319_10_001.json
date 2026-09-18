@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0319",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0319_senjogahara_daija_oomukade/0319_10_contents.json",
+    "commit_sha": "953a06e9b285f7613de8435cd1060840e8d13f72",
+    "blob_sha": "39e2cf555045e3198d0b43e85f1ca32a6c9aaf95",
+    "reviewed_at": "2026-09-18T16:34:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜007は各EVDへ追跡でき、栃木側と群馬側を一つの整合的事件へ統合せず、祭礼も伝承本文へ遡及していない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryだけから日光側主要神戦、猿麻呂の射撃、戦場ヶ原の地名由来、地名連鎖増補、群馬側逆転型、現行祭礼への接続を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。主要な戦闘展開・勝敗・地名由来・地域異伝の逆転を保持している。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001を日光主要形、VAR-002を地名連鎖増補、VAR-003を群馬・老神温泉の役割逆転型として明確に分離する。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "伝承初出、縁起諸本差、地名増補時期、地域異伝の関係を資料以上に閉じていない。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "男体山／日光二荒山神と赤城山神が中禅寺湖などを争い、日光側主要形では前者が大蛇、後者が大百足へ化身する。苦戦する日光側へ弓の名人・猿麻呂が加勢し、大百足の目を射て退ける。戦地が戦場ヶ原の由来とされる。周辺地名を連鎖的に説明する増補と、蛇・百足の担当が逆転する群馬・老神温泉型が別にあり、現在の祭礼にも接続する。",
+    "reference_story": "EvidenceとContentを参照すると、blind reconstructionは主要形・増補・地域異伝・祭礼の境界を正しく保持しており、追加の因果断定を必要としない。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "P01",
+        "reference": "男体山／日光二荒山神、赤城山神、猿麻呂。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "P02",
+        "reference": "領域を争う両神と、射撃対象となる赤城側大百足。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "P03",
+        "reference": "中禅寺湖などの領有争い。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "P04",
+        "reference": "二柱の神格と加勢する猿麻呂。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "P05",
+        "reference": "神が大蛇・大百足へ化身し戦い、猿麻呂が大百足の目を射る。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "P06",
+        "reference": "領有争い→異形戦闘→猿麻呂加勢→日光側勝利。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "P07",
+        "reference": "一連の神戦エピソードとして段階進行する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "P08",
+        "reference": "受容者向け禁忌・手順規則はない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "P09",
+        "reference": "受容者向け回避法はないが、物語内には猿麻呂の戦闘介入がある。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "P10",
+        "reference": "赤城側が退き、戦いの場所が戦場ヶ原の由来になる。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "P11",
+        "reference": "初出、縁起諸本差、増補時期、地域逆転が未確定。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "P12",
+        "reference": "日光主要形／地名連鎖増補／群馬逆転型を分離。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summary再構成と詳細Content参照後で、VAR-001をScopeとすること、および地名由来を中心に分析する判断は不変。"
+    },
+    "verdict": "PASS"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Evidence→Contentの意味保存、神戦の終端、地名由来、地域異伝の境界を独立監査しPass。"
+}

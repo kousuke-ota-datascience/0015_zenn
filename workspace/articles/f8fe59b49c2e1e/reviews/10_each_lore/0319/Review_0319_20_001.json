@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0319",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0319_senjogahara_daija_oomukade/0319_20_analysis.json",
+    "commit_sha": "b34d18ef0860df7bffbe7579bf619af39615a3c8",
+    "blob_sha": "e126df03d0603f76901461c76ea6e9d0afb61feb",
+    "reviewed_at": "2026-09-18T16:34:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001の日光主要形のみをScopeとし、地名連鎖増補と群馬側逆転型を除外。武射祭はL3用X evidenceとしてのみ独立参照する。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "地名由来型の物語構造に対し、神格・物理戦闘・順次エピソード・実在地理を根拠に判定しており、Scope外設定を混入していない。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "D07は地名由来を意味形成対象とするChild不足、D17は武力・技能による戦闘介入Child不足としてgapを明示。近似コードによる意味改変を避けている。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "領有争い→神の化身・戦闘→猿麻呂の射撃→赤城側敗退→戦場ヶ原由来という因果列がContentと整合する。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全DimensionはScope内CNT/EVDへ追跡可能で、L3のみCNT-006/EVD-004のscope-independent X evidenceを使用する。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "10 Contentsから独立再構成した主要形と20 AnalysisのD09/D10/D13/D16/D21等の中心判断が一致する。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "古い形の存在・現行主要内容はD、最古媒体・媒体変換・地域範囲等の弱い推論はU/Iへ抑制している。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=赤城側という特定相手、D13=身体変化と物理攻撃、D15=目を射られる重傷で、直接戦闘の因果列が整合する。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "武射祭は主要神戦に基づき赤城山方向へ矢を放つ現実実践としてL3を支えるが、他Dimensionの主要形へ逆流させていない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "県公式Webや観光公開を全国流通の証拠へ読み替えず、日光の地域伝承をIとしている。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "情報不足からNO_ONE_KNOWSを付与せず、物語が地名由来を完結的に提示する構造からNO_HIDDEN_TRUTHをIとしている。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "実在する戦場ヶ原・中禅寺湖・男体山・赤城山が物語の識別性に必須なためA2。史実戦争を組み込むわけではないためA4へ過大評価していない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "近世以前の識別可能形は記録するが、絶対起源・最古媒体・縁起諸本の系譜を断定していない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "『神格戦争・地名由来伝説』『物語・由来伝説』は、神戦によって戦場ヶ原の名称を説明するScopeに整合する。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "日光・栃木側主要形では、男体山／二荒山神と赤城山神の領有争いが大蛇・大百足の戦闘へ展開し、猿麻呂の射撃で日光側が勝つ。その戦場を戦場ヶ原の地名由来として説明する神戦型の由来伝説。具体的実在地理が不可欠で、現在の武射祭に社会現実上の継承が見られる。群馬側逆転型と地名連鎖増補はScope外。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-004"
+    ],
+    "status": "PASS",
+    "notes": "D07/D17はcurrent taxonomyの表現不足を明示し、近似コードによる誤分類を避けた。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Version Scope、全21次元、taxonomy gap、L3外部効果、Evidence ceilingを独立監査しPass。"
+}

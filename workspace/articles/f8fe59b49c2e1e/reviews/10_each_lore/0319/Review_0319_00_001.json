@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0319",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0319_senjogahara_daija_oomukade/0319_00_sources.json",
+    "commit_sha": "7112f823ee54109fd46c8e9017533ee0777ec5be",
+    "blob_sha": "a9654c431df1771fc0585353429d763ebf395f66",
+    "reviewed_at": "2026-09-18T16:34:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "栃木県公式、県文化財DB、栃木県立図書館レファレンス、日光市観光協会、沼田市公式を役割別に用い、後代要約SRC-006を補助資料として明示した。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "日光側主要形、地名連鎖増補、群馬・老神温泉側の役割逆転型、現行祭礼を別Evidenceとして保持し、相互に混成していない。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜007はいずれも参照元の記載範囲内のparaphraseで、伝承の初出・系統差・増補時期を資料以上に断定していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "現代の県市・観光公式は現行再話・祭礼について直接資料として扱う一方、古伝承の成立時期そのものの一次資料とはしていない。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "江戸時代以前に分類される男体山伝説図と日光山縁起絵巻系統を古い確認点として保持し、伝承の絶対的起源年へ格上げしていない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "初出・日光山縁起諸本差・地名増補の結合時期・群馬側逆転型の関係を未確定のまま保持する。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。典拠階層、主要形と地域異伝、現行祭礼のX evidence分離を独立監査しPass。"
+}
