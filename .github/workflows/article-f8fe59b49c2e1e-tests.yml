@@ -57,7 +57,7 @@ jobs:
           from pathlib import Path
           from src.status_management.review_state import load_entry_review_state
 
-          # 0001 = migration E2E; 0178/0179 = summary semantic regressions; 0180 = former Golden Reference regression.
+          # 0001 = migration E2E; 0178/0179 = summary narrative semantic regressions; 0180 = former Golden Reference regression.
           minimum_latest = {"0001": 3, "0178": 1, "0179": 1, "0180": 1}
           for entry_id, minimum in minimum_latest.items():
               review_dir = Path("reviews/10_each_lore") / entry_id
