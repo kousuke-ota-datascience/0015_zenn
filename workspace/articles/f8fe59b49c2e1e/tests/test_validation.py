@@ -167,4 +167,4 @@ def test_inferred_dimension_without_primary_requires_taxonomy_gap(
     target["taxonomy_gap"] = {"present": False}
 
     issues = validate_taxonomy(data, taxonomy_catalog)
-    assert any(issue.rule == "V-STATUS-001" for issue in issues)
+    assert any(issue.rule_id == "V-STATUS-001" for issue in issues)
