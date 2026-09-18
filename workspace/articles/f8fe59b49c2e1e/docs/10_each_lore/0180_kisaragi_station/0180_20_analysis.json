@@ -1,16 +1,15 @@
 {
   "schema_version": "1.0",
   "entry_id": "0180",
-  "macro_category": "ネット怪談",
-  "entry_type": "物語・伝説",
+  "macro_category": "異界・空間怪談",
+  "entry_type": "実況型ネット怪談",
   "version_scope": {
-    "description": "2004年1月8日深夜から9日未明にかけて匿名掲示板2ちゃんねる「身のまわりで変なことが起こったら実況するスレ26」で進行した初期実況。レス98から投稿者「はすみ」の最終投稿レス635までを中心とする。後年の類似体験談、異界駅一般化、確立した帰還法・駅共通ルール、翻案作品、遠州鉄道等による後代コンテンツ展開はScope外。",
+    "description": "2004年1月8日深夜〜9日未明、2ちゃんねる『身のまわりで変なことが起こったら実況するスレ26』レス98〜635の初期実況をScopeとする。長時間無停車、きさらぎ駅、位置特定不能、線路移動、片足の老人、伊佐貫トンネル、不審な車、投稿停止、参加者との共同実況を含む。後年の続編・類似異界駅・確立した帰還ルール・翻案は除外する。",
     "included_variants": [
       "VAR-001"
     ],
     "excluded_variants": [
-      "VAR-002",
-      "VAR-003"
+      "VAR-002"
     ],
     "content_refs": [
       "CNT-001",
@@ -23,12 +22,9 @@
       "CNT-008",
       "CNT-009",
       "CNT-010",
-      "CNT-011",
-      "CNT-012",
-      "CNT-013",
-      "CNT-014"
+      "CNT-011"
     ],
-    "notes": "「異界」は参加者解釈候補であり因果源として断定しない。投稿途絶は確認できるが失踪・死亡へ変換しない。後代異界駅一般化・追体験・翻案・事業者展開をD11/D13/D17/D18等へ逆輸入しない。"
+    "notes": "参加者の異界・霊界等の推測を因果源へ昇格せず、投稿停止を失踪・死亡へ変換しない。"
   },
   "dimensions": [
     {
@@ -38,11 +34,9 @@
         "code_id": "D01.G6"
       },
       "secondary": [],
-      "rationale": "Version Scope自体が2004年1月のリアルタイム実況artifactとして公式過去ログで直接確認できるため、生成年代を直接固定できる。",
-      "manifestation": "初期形は2004年の公開掲示板実況として成立する。",
-      "content_refs": [
-        "CNT-001"
-      ],
+      "rationale": "公式過去ログに2004年1月8〜9日の投稿時刻が直接残るため、成立artifactを2000年代へ直接置ける。",
+      "manifestation": "初期実況は2004年1月の公開掲示板上に直接確認できる。",
+      "content_refs": [],
       "evidence_refs": [
         "EVD-001"
       ],
@@ -58,15 +52,11 @@
         "parent_id": "D02.WEB"
       },
       "secondary": [],
-      "rationale": "2ちゃんねる公式過去ログを直接確認でき、最古流通媒体が公開Web掲示板である。",
-      "manifestation": "公開Web掲示板で初期実況が進行する。",
-      "content_refs": [
-        "CNT-001",
-        "CNT-014"
-      ],
+      "rationale": "初期artifactそのものが2ちゃんねるの公開Web掲示板ログとして残る。",
+      "manifestation": "最古確認流通媒体はWeb掲示板。",
+      "content_refs": [],
       "evidence_refs": [
-        "EVD-001",
-        "EVD-010"
+        "EVD-001"
       ],
       "taxonomy_gap": {
         "present": false
@@ -80,17 +70,13 @@
         "parent_id": "D03.WEB"
       },
       "secondary": [],
-      "rationale": "今回のVersion Scopeは初期掲示板実況そのものに限定され、その流通媒体を公式過去ログで直接確認できる。",
-      "manifestation": "参加者が同一スレッドで閲覧・応答する。",
+      "rationale": "Version Scopeが初期実況スレッドそのものであり、掲示板以外の後代媒体をScopeへ含めない。",
+      "manifestation": "公開Web掲示板で実況と受容が同時進行する。",
       "content_refs": [
-        "CNT-001",
-        "CNT-010",
-        "CNT-014"
+        "CNT-011"
       ],
       "evidence_refs": [
-        "EVD-001",
-        "EVD-007",
-        "EVD-010"
+        "EVD-009"
       ],
       "taxonomy_gap": {
         "present": false
@@ -104,15 +90,15 @@
         "parent_id": "D04.COL"
       },
       "secondary": [],
-      "rationale": "投稿者の逐次報告へ参加者が質問・検索・助言・解釈を返し、その往復の中で実況が進行する。",
-      "manifestation": "一方向の完成済み怪談ではなく、リアルタイム共同生成型として展開する。",
+      "rationale": "投稿者の逐次報告に参加者が質問・検索・助言・解釈を返し、その応答が次の行動へ関与する。",
+      "manifestation": "リアルタイムの実況と参加者応答で物語が共同進行する。",
       "content_refs": [
-        "CNT-010",
-        "CNT-014"
+        "CNT-005",
+        "CNT-011"
       ],
       "evidence_refs": [
-        "EVD-007",
-        "EVD-010"
+        "EVD-004",
+        "EVD-009"
       ],
       "taxonomy_gap": {
         "present": false
@@ -131,15 +117,15 @@
           "parent_id": "D05.EXP"
         }
       ],
-      "rationale": "投稿者の一人称実況と複数参加者の応答が一体化している。",
-      "manifestation": "はすみの現在進行形報告へスレッド参加者が介入する。",
+      "rationale": "一人称現在進行形の体験報告と、不特定参加者による共同スレッド応答が不可分に組み合わされる。",
+      "manifestation": "はすみの実況を参加者が同時に支援・解釈する。",
       "content_refs": [
         "CNT-001",
-        "CNT-010",
-        "CNT-014"
+        "CNT-011"
       ],
       "evidence_refs": [
-        "EVD-010"
+        "EVD-001",
+        "EVD-009"
       ],
       "taxonomy_gap": {
         "present": false
@@ -152,15 +138,17 @@
         "code_id": "D06.T1"
       },
       "secondary": [],
-      "rationale": "投稿者は自身が現在経験している事態として逐次報告する。これは投稿内容の客観的真実性認定とは別である。",
-      "manifestation": "提示形式上は直接体験事実として語られる。",
+      "rationale": "投稿者は今まさに自分に起きている事態として逐次報告する。客観的実在性の判定とは別に、提示形式は直接体験事実である。",
+      "manifestation": "リアルタイムの直接体験として提示される。",
       "content_refs": [
         "CNT-001",
-        "CNT-002",
-        "CNT-003"
+        "CNT-003",
+        "CNT-010"
       ],
       "evidence_refs": [
-        "EVD-010"
+        "EVD-001",
+        "EVD-003",
+        "EVD-008"
       ],
       "taxonomy_gap": {
         "present": false
@@ -179,18 +167,18 @@
           "parent_id": "D07.PSE"
         }
       ],
-      "rationale": "通常路線から説明できない駅・経路へ接続し、通常地理へ位置づけられないことが初期ログに直接現れる。",
-      "manifestation": "日常の鉄道移動から位置不明の駅・経路へ逸脱する。",
+      "rationale": "通常なら説明できる鉄道路線が長時間無停車・未知駅・位置特定不能へ逸脱し、経路と場所の異常が中心になる。",
+      "manifestation": "日常の鉄道移動が通常地理へ回収できない経路・駅へ接続する。",
       "content_refs": [
+        "CNT-001",
         "CNT-002",
         "CNT-003",
-        "CNT-004",
-        "CNT-013"
+        "CNT-004"
       ],
       "evidence_refs": [
+        "EVD-001",
         "EVD-002",
-        "EVD-003",
-        "EVD-009"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -204,13 +192,13 @@
         "parent_id": "D08.DEX"
       },
       "secondary": [],
-      "rationale": "普段なら数分ごとに停まる列車が20分以上停まらないという投稿者の直接経験から異常認識が始まる。",
-      "manifestation": "通常運行との差が最初の異常cueになる。",
+      "rationale": "普段の乗車との差として長時間無停車を投稿者が直接経験し、そこから異常認識が始まる。",
+      "manifestation": "通常なら数分で停まる列車が停まらないことが最初のcue。",
       "content_refs": [
-        "CNT-002"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-002"
+        "EVD-001"
       ],
       "taxonomy_gap": {
         "present": false
@@ -220,24 +208,25 @@
       "dimension_id": "D09",
       "status": "I",
       "primary": {
-        "code_id": "D09.UNK.DELIBERATE_NONRESOLUTION",
+        "code_id": "D09.UNK.MYSTERY_LABEL",
         "parent_id": "D09.UNK"
       },
       "secondary": [
         {
-          "code_id": "D09.CAT.TYPE_ASSIGNMENT",
+          "code_id": "D09.CAT.NAMING",
           "parent_id": "D09.CAT"
         }
       ],
-      "rationale": "参加者は通常運行異常、異界、あの世等へ仮分類するが、いずれも確定せず、真相を閉じない。",
-      "manifestation": "複数説明を提示しつつ、非解決状態を維持する。",
+      "rationale": "通常地理へ位置づけられない事態を『きさらぎ駅』という駅名・謎として把握する一方、参加者の異界等の解釈は確定しない。",
+      "manifestation": "未知の駅名で不可解な空間事象を一まとまりの謎として保持する。",
       "content_refs": [
-        "CNT-011",
-        "CNT-009"
+        "CNT-003",
+        "CNT-004",
+        "CNT-011"
       ],
       "evidence_refs": [
-        "EVD-007",
-        "EVD-006"
+        "EVD-003",
+        "EVD-009"
       ],
       "taxonomy_gap": {
         "present": false
@@ -245,17 +234,30 @@
     },
     {
       "dimension_id": "D10",
-      "status": "U",
-      "primary": null,
-      "secondary": [],
-      "rationale": "空間異常は現象として確認できるが、経路・場所・霊・異界等のどれが原因源かは初期ログから固定できない。",
-      "manifestation": "何が異常を起こしているかは未確定のまま残る。",
+      "status": "I",
+      "primary": {
+        "code_id": "D10.SPC.ROUTE_CONNECTION",
+        "parent_id": "D10.SPC"
+      },
+      "secondary": [
+        {
+          "code_id": "D10.SPC.SPECIFIC_PLACE",
+          "parent_id": "D10.SPC"
+        }
+      ],
+      "rationale": "異常は列車の経路逸脱と、通常地理へ位置づけられない駅・トンネル・移動先に一貫して依存する。別世界という強い存在論は参加者推測に留まる。",
+      "manifestation": "通常鉄道路線と未知の場所の接続関係そのものが因果層として示唆される。",
       "content_refs": [
+        "CNT-002",
+        "CNT-003",
         "CNT-004",
-        "CNT-011"
+        "CNT-007",
+        "CNT-008"
       ],
       "evidence_refs": [
+        "EVD-002",
         "EVD-003",
+        "EVD-006",
         "EVD-007"
       ],
       "taxonomy_gap": {
@@ -275,14 +277,13 @@
           "parent_id": "D11.MOV"
         }
       ],
-      "rationale": "特別な儀式や探索ではなく、通常の帰宅乗車中に非意図的に異常へ巻き込まれる。ACCIDENT_INVOLVEMENTへの写像は分析判断を含む。",
-      "manifestation": "日常的な乗車が異常エピソードへの入口になる。",
+      "rationale": "投稿者は特別な儀式を行わず、普段の帰宅乗車中に非意図的に異常へ巻き込まれる。",
+      "manifestation": "日常の乗車が偶発的に異常経路へ移る入口となる。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-002"
+        "EVD-001"
       ],
       "taxonomy_gap": {
         "present": false
@@ -296,23 +297,18 @@
         "parent_id": "D12.FOC"
       },
       "secondary": [],
-      "rationale": "異常経路・未知駅・位置特定不能等の影響を直接受ける中心は、投稿者はすみである。",
-      "manifestation": "投稿者が一貫して経験主体となる。",
+      "rationale": "位置特定不能・異常人物・不審な車等の影響を一貫して直接受けるのは実況者本人である。",
+      "manifestation": "投稿者が体験・判断・移動の中心対象となる。",
       "content_refs": [
-        "CNT-001",
         "CNT-003",
         "CNT-004",
-        "CNT-005",
         "CNT-006",
-        "CNT-007",
-        "CNT-008"
+        "CNT-009"
       ],
       "evidence_refs": [
-        "EVD-001",
         "EVD-003",
-        "EVD-004",
         "EVD-005",
-        "EVD-006"
+        "EVD-008"
       ],
       "taxonomy_gap": {
         "present": false
@@ -326,18 +322,16 @@
         "parent_id": "D13.RST"
       },
       "secondary": [],
-      "rationale": "通常路線では説明できない接続、未知駅への到達、位置特定不成立が続く。原因主体はUでも、作用としての空間異常は初期ログから推定できる。",
-      "manifestation": "通常地理との対応が崩れる。",
+      "rationale": "通常路線で説明できない走行・未知駅・位置特定不能が連続するため、場所・経路の歪みとして保守的に推論できる。",
+      "manifestation": "通常地理の接続関係が成立しなくなる。",
       "content_refs": [
         "CNT-002",
         "CNT-003",
-        "CNT-004",
-        "CNT-013"
+        "CNT-004"
       ],
       "evidence_refs": [
         "EVD-002",
-        "EVD-003",
-        "EVD-009"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -345,23 +339,23 @@
     },
     {
       "dimension_id": "D14",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D14.NEG"
       },
       "secondary": [],
-      "rationale": "安全な帰宅が破綻し、未知の場所・異常人物・不審な運転者にさらされるため、帰結の方向は負と読む。",
-      "manifestation": "帰宅不能と危険が主な方向性になる。",
+      "rationale": "帰宅不能・孤立・異常人物・不審な運転者へ危険が段階的に増すため負の極性は直接明らかである。",
+      "manifestation": "安全な帰宅から遠ざかり危険が増幅する。",
       "content_refs": [
         "CNT-004",
         "CNT-006",
-        "CNT-008",
-        "CNT-009"
+        "CNT-009",
+        "CNT-010"
       ],
       "evidence_refs": [
         "EVD-003",
         "EVD-005",
-        "EVD-006"
+        "EVD-008"
       ],
       "taxonomy_gap": {
         "present": false
@@ -375,13 +369,13 @@
         "parent_id": "D15.KNW"
       },
       "secondary": [],
-      "rationale": "初期ログでは帰還・所在・身体被害・真相のいずれも確定しない。投稿停止を失踪・死亡へ変換しない。",
-      "manifestation": "未解決状態が終端として残る。",
+      "rationale": "初期実況は投稿者の最後の書き込みで途切れ、帰還・所在・身体状態・真相を確定しない。",
+      "manifestation": "未解決・未確定そのものが終端として残る。",
       "content_refs": [
-        "CNT-009"
+        "CNT-010"
       ],
       "evidence_refs": [
-        "EVD-006"
+        "EVD-008"
       ],
       "taxonomy_gap": {
         "present": false
@@ -395,23 +389,26 @@
         "parent_id": "D16.EVT"
       },
       "secondary": [],
-      "rationale": "長時間無停車→未知駅→探索→線路移動→老人→トンネル→車→投稿終了と、一晩で段階進行する。",
-      "manifestation": "実況時系列そのものが因果列を形成する。",
+      "rationale": "長時間無停車→未知駅→位置確認失敗→線路移動→老人→トンネル→車→投稿停止と、一晩の中で段階的に進行する。",
+      "manifestation": "実況時系列が連続する一つのエピソードを構成する。",
       "content_refs": [
-        "CNT-002",
+        "CNT-001",
         "CNT-003",
         "CNT-005",
         "CNT-006",
         "CNT-007",
         "CNT-008",
-        "CNT-009"
+        "CNT-009",
+        "CNT-010"
       ],
       "evidence_refs": [
-        "EVD-002",
+        "EVD-001",
         "EVD-003",
         "EVD-004",
         "EVD-005",
-        "EVD-006"
+        "EVD-006",
+        "EVD-007",
+        "EVD-008"
       ],
       "taxonomy_gap": {
         "present": false
@@ -425,15 +422,15 @@
         "parent_id": "D17.UNA"
       },
       "secondary": [],
-      "rationale": "家族・警察への連絡や参加者の複数助言を試すが、有効性が確認された帰還法へ収束しない。単なる情報欠如ではなく、複数対処が未成功・未確立のまま終わる。",
-      "manifestation": "対応行動は多数あるが、確実な脱出規則は得られない。",
+      "rationale": "家族・警察への連絡や参加者の複数助言を試すが、初期実況内で成功が確認された帰還法・脱出法へ収束しない。",
+      "manifestation": "対処は多数試されるが確実な帰還手段は成立しない。",
       "content_refs": [
         "CNT-005",
-        "CNT-012"
+        "CNT-011"
       ],
       "evidence_refs": [
         "EVD-004",
-        "EVD-008"
+        "EVD-009"
       ],
       "taxonomy_gap": {
         "present": false
@@ -441,26 +438,28 @@
     },
     {
       "dimension_id": "D18",
-      "status": "I",
+      "status": "D",
       "primary": {
         "code_id": "D18.L1"
       },
       "secondary": [],
-      "rationale": "L1は初期実況内部で空間異常・危険状態が人物へ作用するため1。L2は読者・参加者が受容だけで怪異の因果対象になる構造がないため0。L3は後代事業者展開等をVersion Scope外とし、初期Scope内の独立した社会現実作用を確認しないため0。",
-      "manifestation": "初期実況内部の作用に限定してコードし、後代受容をL3へ混入しない。",
+      "rationale": "作用は初期実況内で投稿者へ及ぶ。参加者は読者であるが、読むだけで同じ怪異を受けるL2構造はなく、Scope内独立社会作用L3も確認しない。",
+      "manifestation": "物語内部の体験者への作用に限定される。",
       "content_refs": [
         "CNT-003",
         "CNT-004",
+        "CNT-006",
         "CNT-009"
       ],
       "evidence_refs": [
         "EVD-003",
-        "EVD-006"
+        "EVD-005",
+        "EVD-008"
       ],
       "taxonomy_gap": {
         "present": false
       },
-      "notes": "bit型はD18.L1のみ選択し、L2/L3は0として表現する。"
+      "notes": "D18 vectorはL1=1, L2=0, L3=0としてPrimary D18.L1で表現。"
     },
     {
       "dimension_id": "D19",
@@ -470,15 +469,13 @@
         "parent_id": "D19.NET"
       },
       "secondary": [],
-      "rationale": "初期版は公開掲示板上で不特定多数が閲覧・参加可能であり、実際の参加者応答もログで確認できる。",
-      "manifestation": "スレッド参加者が同時に受容・応答する公開Web流通である。",
+      "rationale": "初期版が公開Web掲示板でリアルタイムに閲覧・応答されている。",
+      "manifestation": "オープンなオンライン共同体で受容される。",
       "content_refs": [
-        "CNT-010",
-        "CNT-014"
+        "CNT-011"
       ],
       "evidence_refs": [
-        "EVD-007",
-        "EVD-010"
+        "EVD-009"
       ],
       "taxonomy_gap": {
         "present": false
@@ -489,18 +486,21 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "投稿者・参加者・家族・警察等の誰も真相や確実な追加情報を特権的に保持する主体として固定できない。ただし『誰も知らない』と積極的に構造化されているわけでもない。",
-      "manifestation": "複数人物が探索・助言するが、真相保持者は確定しない。",
+      "rationale": "投稿者・参加者・家族・警察・老人・運転者のいずれも真相を確実に知る主体として固定できない。",
+      "manifestation": "複数人物が情報を持つが特権的真相保持者は確定しない。",
       "content_refs": [
         "CNT-004",
         "CNT-005",
-        "CNT-010",
+        "CNT-006",
+        "CNT-008",
         "CNT-011"
       ],
       "evidence_refs": [
         "EVD-003",
         "EVD-004",
-        "EVD-007"
+        "EVD-005",
+        "EVD-007",
+        "EVD-009"
       ],
       "taxonomy_gap": {
         "present": false
@@ -513,18 +513,20 @@
         "code_id": "D21.A2"
       },
       "secondary": [],
-      "rationale": "新浜松、静岡県内の私鉄、比奈等の実在地名・交通背景へ具体的に接続する。ただし『きさらぎ駅』自体の実在を意味しない。",
-      "manifestation": "現実の鉄道・地域名へ接続しつつ、その中に確認不能な駅・経路が挿入される。",
+      "rationale": "静岡県内の私鉄、新浜松周辺、比奈など具体的実在地理へ接続しながら、確認不能な駅・経路が挿入される。",
+      "manifestation": "具体的な現実の鉄道・地名を足場に異常空間が形成される。",
       "content_refs": [
-        "CNT-013"
+        "CNT-001",
+        "CNT-008"
       ],
       "evidence_refs": [
-        "EVD-009"
+        "EVD-001",
+        "EVD-007"
       ],
       "taxonomy_gap": {
         "present": false
       }
     }
   ],
-  "analysis_notes": "旧0180 Golden Referenceの最終Legacy裁定を新canonical Schemaへ移管。旧Review 004のModerateはMarkdown tutorial説明ブロック不足という書式問題であり、D01〜D21の意味裁定は維持する。"
+  "analysis_notes": "Blind E2E再生成。公式5ch過去ログのみで初期ScopeのContentを構成し、後代の世界規則・続編を除外した。"
 }
