@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0005",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0005_murasaki_no_kagami/0005_20_analysis.json",
+    "commit_sha": "a721635a9cb58d525a64a63c5243bdb6736f1675",
+    "blob_sha": "f2482457418f4390a6962521cccdf5f49d05a2d5",
+    "reviewed_at": "2026-09-18T15:52:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001の共通規則群のみをScopeとし、紫地蔵・ピンク鏡・具体的襲撃型を共通核へ遡及しない。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D01〜D21はScope内Contentへ適用され、起源年を1998と断定せず流通関連はIへ保守化する。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "使用code_id/parent_idはcurrent taxonomyで定義され、Scope表現に新規gapは不要。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "知る・記憶する→期限到達→死／不幸を中核とし、Scope外の襲撃型を混入しない。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全DimensionはContent/Evidence refsへ追跡できる。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "10 Contentsから独立再構成した因果核と20の主要コードは整合する。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D01=U、D02/D03/D04/D19=Iとし、Evidence directnessを越えない。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=受容者、D13=認知条件による危害・不運、D15=死亡／不幸で因果列が整合する。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "情報受容者自身が伝承内因果対象になるためL2。L3へ誤分類しない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公刊採録を全国流通Evidenceへ読み替えず、学校・若者集団をInferenceに留める。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "情報不足を『誰も知らない』へ変えず、知ること自体の危険性をコードする。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "採録地の実在を成立条件へ誤用せず、特定現実対象に依存しないA0とする。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "DB要約を原誌本文とせず、起源・最古媒体・流通範囲をU/Iへ制限する。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "『若者の俗信・呪いの言葉』『命題・規則』は条件命題を共通核とするScopeに整合する。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "紫の鏡／紫鏡という語句を知った受容者が、その記憶を所定期限まで保持すると死または不幸になる規則型。名称記憶と将来災厄の相関・禁忌化によって成立し、20歳前に忘れる回避型がある。起源年は不明で派生語・具体的襲撃場面はScope外。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-008"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-004",
+      "EVD-005",
+      "EVD-006",
+      "EVD-008"
+    ],
+    "status": "PASS",
+    "notes": "10 Contentsとcurrent coding rules/taxonomyから独立再構成した。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Version Scope、全21次元、Evidence ceiling、cross-dimension auditを独立再評価しPass。"
+}

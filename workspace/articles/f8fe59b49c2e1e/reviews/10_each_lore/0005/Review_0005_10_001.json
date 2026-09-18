@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0005",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0005_murasaki_no_kagami/0005_10_contents.json",
+    "commit_sha": "c66a57ffeb10f7648f1d8fa075b5edeca95f1e60",
+    "blob_sha": "c72a582bf608615bcc463ce3f5ef901dc7006542",
+    "reviewed_at": "2026-09-18T15:52:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜008は参照EVD内で再構成され、Evidenceにない起源説や固定人格怪異を中核へ追加しない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryだけで中核規則、期限差、帰結、回避、派生型、不確実性を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001を共通規則群、VAR-002/003を併記・対抗型、VAR-004を物語化増補として分離する。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "起源・期限差の派生順序・派生型の広がりを未確定として保持する。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs CNT-001〜008のsalient meaningをsummaryから復元可能。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "紫の鏡／紫鏡という語句を一定期限まで記憶していると死または不幸になる若者の俗信。期限は16・18・20歳や高校入学前へ揺れ、20歳前に忘れる回避型がある。紫地蔵併記・ピンク鏡対抗・血だらけ女性の襲撃は派生として分離され、起源は未確定。",
+    "reference_story": "EvidenceとContentを読むと、複数採録で記憶期限と死／不幸を結ぶ共通核が確認され、期限・帰結の異同と派生型が区別される。blind decodeと一致する。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "若者・受容者。",
+        "reference": "Contentも若者・学生の受容者を中心とする。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "語句を期限まで記憶する本人。",
+        "reference": "CNT-001/004/008と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "語句を知り、期限まで記憶すること。",
+        "reference": "CNT-001/002と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "語句と記憶条件。人格主体は共通核に必須でない。",
+        "reference": "Contentは固定した人格怪異を共通核へ追加しない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "記憶の持続と死／不幸を条件規則で結ぶ。",
+        "reference": "CNT-001/004と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "知る→期限まで記憶→死／不幸。",
+        "reference": "Content unitsと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "16・18・20歳、高校入学前の期限型。",
+        "reference": "CNT-002と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "期限まで覚えていてはいけない。",
+        "reference": "CNT-003と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "20歳前に忘れる回避型。ピンク鏡は別variant。",
+        "reference": "CNT-003/006と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "主要帰結は死、一部は不幸。襲撃場面は一variant。",
+        "reference": "CNT-004/007と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "起源・派生順序・各派生型の広がりは未確定。",
+        "reference": "uncertaintiesと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "中核規則／紫地蔵／ピンク鏡／具体的襲撃を分離。",
+        "reference": "VAR-001〜004と一致。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "blind decodeとEvidence参照後のモデルにVersion Scopeや主要D01〜D21判断を変える意味差はない。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "期限まで記憶すると死／不幸になる中核規則。",
+        "blind_reconstruction": "summaryから同義を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "期限の16/18/20歳・高校入学前への変異。",
+        "blind_reconstruction": "summaryから同義を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "20歳前に忘れる回避型。",
+        "blind_reconstruction": "summaryから同義を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "死亡が主要で不幸型もある。",
+        "blind_reconstruction": "summaryから同義を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "紫地蔵併記型。",
+        "blind_reconstruction": "summaryから同義を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "ピンク鏡対抗語型。",
+        "blind_reconstruction": "summaryから同義を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "血だらけの女性による具体的襲撃型。",
+        "blind_reconstruction": "summaryから同義を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-008",
+        "salient_meaning": "若者・学校年齢の採録背景。",
+        "blind_reconstruction": "summaryから同義を再構成できる。",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Evidence→Content、summary、variant境界、Analysis層語彙混入を独立監査しPass。"
+}
