@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0198",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_00_sources.json",
+    "commit_sha": "03db34662f15a6d98757e454e3246e70e628e28c",
+    "blob_sha": "e78f624dbfc385e52b6e92f0ff489967915d66f3",
+    "reviewed_at": "2026-09-19T01:55:19.732Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "初期実況保存ログと初期まとめをdirect derivativeとして区別し、原ログそのものへ格上げしていない。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "準備、開始・終了、実況異変、成立時期を別Evidenceとして保持。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "Evidenceは保存ログ・まとめの記載範囲に留まり、超常原因を独立事実化していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "両資料ともmirror/reprintとして一次資料との距離を明示。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2007年4月21日を確認点として扱い、それ以前の独立流通を断定しない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "異変の超常原因と2007年以前の流通を未確定として保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。資料階層とEvidence ceilingを独立監査しPass。"
+}
