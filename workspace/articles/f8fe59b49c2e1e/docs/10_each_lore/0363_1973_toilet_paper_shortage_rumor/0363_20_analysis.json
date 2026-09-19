@@ -79,20 +79,19 @@
       "dimension_id": "D04",
       "status": "D",
       "primary": {
-        "code_id": "D04.COL.DERIVATIVE_PROLIFERATION",
-        "parent_id": "D04.COL"
+        "code_id": "D04.VAR.RETELLING",
+        "parent_id": "D04.VAR"
       },
       "secondary": [],
-      "rationale": "不足予測が口コミで広がり、購買行動を伴って増幅した。",
-      "manifestation": "流言の増殖・派生。",
+      "rationale": "不足予測の噂が口コミで広がったことが直接記録されており、別の語り手による再話・再叙述として流通した。派生亜種の生成までは示さない。",
+      "manifestation": "口コミによる再話・再叙述。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003"
       ],
       "evidence_refs": [
-        "EVD-002",
-        "EVD-003"
+        "EVD-002"
       ]
     },
     {
@@ -272,9 +271,14 @@
         "code_id": "D15.BEH.PURCHASE_HOARDING",
         "parent_id": "D15.BEH"
       },
-      "secondary": [],
-      "rationale": "主要な帰結行動は買いだめ。",
-      "manifestation": "購買・備蓄行動。",
+      "secondary": [
+        {
+          "code_id": "D15.MAT.RESOURCE_SCARCITY",
+          "parent_id": "D15.MAT"
+        }
+      ],
+      "rationale": "主要な行動帰結は買いだめであり、その結果として実際の品薄・物資不足も生じたことがcurrent Evidenceで直接示される。",
+      "manifestation": "買いだめと物資不足。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
@@ -335,21 +339,15 @@
     },
     {
       "dimension_id": "D19",
-      "status": "I",
-      "primary": {
-        "code_id": "D19.MAS.NATIONAL_PUBLIC",
-        "parent_id": "D19.MAS"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "オイルショック期の全国的な物資不安と結び付く著名な社会騒動として記録される。",
-      "manifestation": "広域公衆圏。",
+      "rationale": "current Evidenceは口コミによる流通と1973年の社会騒動を示すが、どの社会範囲まで実際に共有されたかを全国規模まで固定できない。",
+      "manifestation": "流通範囲はcurrent Evidenceから未確定。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003"
-      ],
-      "evidence_refs": [
-        "EVD-003"
       ]
     },
     {
