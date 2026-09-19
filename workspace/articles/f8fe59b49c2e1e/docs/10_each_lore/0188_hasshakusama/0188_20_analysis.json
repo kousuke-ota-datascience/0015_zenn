@@ -1,0 +1,421 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0188",
+  "macro_category": "ネット怪談",
+  "entry_type": "怪異遭遇譚",
+  "version_scope": {
+    "description": "2008年8月26日の初出連投に確認できる主要形。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "notes": "後代の映像・ゲーム・追加設定は除外。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "D",
+      "primary": {
+        "code_id": "D01.G6"
+      },
+      "secondary": [],
+      "rationale": "初出が2008年と日付まで確認できる。",
+      "manifestation": "2000年代成立。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D02",
+      "status": "D",
+      "primary": {
+        "code_id": "D02.WEB.FORUM",
+        "parent_id": "D02.WEB"
+      },
+      "secondary": [],
+      "rationale": "初出は2ちゃんねるの公開掲示板。",
+      "manifestation": "オープンWeb掲示板が最古確認媒体。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D03",
+      "status": "D",
+      "primary": {
+        "code_id": "D03.WEB.FORUM",
+        "parent_id": "D03.WEB"
+      },
+      "secondary": [],
+      "rationale": "既定Scopeはその掲示板連投そのもの。",
+      "manifestation": "公開掲示板上で流通。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D04",
+      "status": "I",
+      "primary": {
+        "code_id": "D04.STB.SINGLE_FIXED",
+        "parent_id": "D04.STB"
+      },
+      "secondary": [],
+      "rationale": "初出は短時間の連続投稿として一まとまりの物語を構成する。",
+      "manifestation": "単一の固定的初出形。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D05",
+      "status": "D",
+      "primary": {
+        "code_id": "D05.EXP.RETROSPECTIVE_1P",
+        "parent_id": "D05.EXP"
+      },
+      "secondary": [],
+      "rationale": "語り手自身の過去の遭遇として叙述される。",
+      "manifestation": "回顧的一人称体験談。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D06",
+      "status": "D",
+      "primary": {
+        "code_id": "D06.T6"
+      },
+      "secondary": [],
+      "rationale": "掲載環境は体験談と創作の双方を許容し、独立裏付けもない。",
+      "manifestation": "真偽未確定。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-004"
+      ]
+    },
+    {
+      "dimension_id": "D07",
+      "status": "D",
+      "primary": {
+        "code_id": "D07.ANO.UNKNOWN_EXISTENCE",
+        "parent_id": "D07.ANO"
+      },
+      "secondary": [],
+      "rationale": "中心は八尺様という未知の怪異存在の説明。",
+      "manifestation": "異常な存在との遭遇を意味付ける。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D08",
+      "status": "D",
+      "primary": {
+        "code_id": "D08.DEX.PERCEPTUAL_ANOMALY",
+        "parent_id": "D08.DEX"
+      },
+      "secondary": [],
+      "rationale": "異常な身長・外見・声の直接知覚が発端。",
+      "manifestation": "視覚・聴覚の異常知覚。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D09",
+      "status": "D",
+      "primary": {
+        "code_id": "D09.CAU.HIDDEN_CAUSE",
+        "parent_id": "D09.CAU"
+      },
+      "secondary": [],
+      "rationale": "知覚した異常とその後の脅威を八尺様の作用として説明する。",
+      "manifestation": "怪異を隠れた原因へ帰属。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D10",
+      "status": "D",
+      "primary": {
+        "code_id": "D10.SUP.YOKAI_ENTITY",
+        "parent_id": "D10.SUP"
+      },
+      "secondary": [],
+      "rationale": "因果源は地域怪異として人格化された八尺様。",
+      "manifestation": "妖怪的主体。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D11",
+      "status": "D",
+      "primary": {
+        "code_id": "D11.SEN.VISUAL_EXPOSURE",
+        "parent_id": "D11.SEN"
+      },
+      "secondary": [],
+      "rationale": "語り手は目撃後に標的になったと説明される。",
+      "manifestation": "視覚曝露が接触条件。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D12",
+      "status": "D",
+      "primary": {
+        "code_id": "D12.FOC.PROTAGONIST_EXPERIENCER",
+        "parent_id": "D12.FOC"
+      },
+      "secondary": [],
+      "rationale": "作用対象は遭遇した語り手本人。",
+      "manifestation": "焦点人物が標的。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D13",
+      "status": "D",
+      "primary": {
+        "code_id": "D13.REL.PURSUIT",
+        "parent_id": "D13.REL"
+      },
+      "secondary": [],
+      "rationale": "八尺様は標的を追跡・接近する脅威として構成される。",
+      "manifestation": "追跡関係。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D14",
+      "status": "D",
+      "primary": {
+        "code_id": "D14.NEG"
+      },
+      "secondary": [],
+      "rationale": "怪異に捕らえられる危険を中心とする。",
+      "manifestation": "負の帰結。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D15",
+      "status": "I",
+      "primary": {
+        "code_id": "D15.LIF.DISAPPEARANCE",
+        "parent_id": "D15.LIF"
+      },
+      "secondary": [],
+      "rationale": "親族の対処は捕捉・連れ去りを避けるためと解釈できる。",
+      "manifestation": "標的の喪失・消失が想定される。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D16",
+      "status": "D",
+      "primary": {
+        "code_id": "D16.CON.PURSUIT_DURATION",
+        "parent_id": "D16.CON"
+      },
+      "secondary": [],
+      "rationale": "一度標的になると一夜を越えて追跡が継続し、後日も再来可能性が示される。",
+      "manifestation": "持続する追跡。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-004"
+      ]
+    },
+    {
+      "dimension_id": "D17",
+      "status": "D",
+      "primary": {
+        "code_id": "D17.RUL.PROCEDURAL_RULE",
+        "parent_id": "D17.RUL"
+      },
+      "secondary": [],
+      "rationale": "封鎖、塩、待機、護送という具体的手順に従って回避する。",
+      "manifestation": "規則遵守型の回避。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D18",
+      "status": "D",
+      "primary": {
+        "code_id": "D18.L1"
+      },
+      "secondary": [],
+      "rationale": "怪異の因果は物語内部の人物に作用する。",
+      "manifestation": "伝承内因果層。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D19",
+      "status": "D",
+      "primary": {
+        "code_id": "D19.NET.OPEN_FORUM_WEB",
+        "parent_id": "D19.NET"
+      },
+      "secondary": [],
+      "rationale": "公開掲示板への投稿として成立。",
+      "manifestation": "オープンフォーラム圏。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D20",
+      "status": "D",
+      "primary": {
+        "code_id": "D20.INS.LOCAL_RESIDENT",
+        "parent_id": "D20.INS"
+      },
+      "secondary": [],
+      "rationale": "物語内部で地元の祖父母・親族が怪異名と対処法を知る。",
+      "manifestation": "地域内部者が特権情報を保持。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D21",
+      "status": "D",
+      "primary": {
+        "code_id": "D21.A1"
+      },
+      "secondary": [],
+      "rationale": "田舎の親類宅・地域境界という現実的背景はあるが、特定地点は固定されない。",
+      "manifestation": "一般的現実背景。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    }
+  ],
+  "analysis_notes": "具体的な実在地を推測で補わない。"
+}
