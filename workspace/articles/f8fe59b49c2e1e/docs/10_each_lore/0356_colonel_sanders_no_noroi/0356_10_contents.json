@@ -79,7 +79,7 @@
     },
     {
       "content_id": "CNT-002",
-      "type": "causal_claim",
+      "type": "claim",
       "text": "像を川へ投げ込み長く失われたことが原因で、阪神タイガースは優勝・日本一から遠ざかったという『呪い』が語られた。",
       "evidence_refs": [
         "EVD-002"
