@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0275",
+  "lore_name": "磐梯山の手長足長",
+  "summary": {
+    "narrative": "磐梯山の手長・足長が雲を集めて会津に洪水・嵐を起こし作物を荒らしていたが、弘法大師が小箱へ誘い込んで封じ、のちに磐梯明神として祀ったとする地域伝承。",
+    "structure": {
+      "primary_actors": {
+        "status": "known",
+        "value": [
+          "手長・足長",
+          "弘法大師"
+        ]
+      },
+      "affected_targets": {
+        "status": "known",
+        "value": [
+          "会津の住民",
+          "農作物・地域環境"
+        ]
+      },
+      "entry_trigger": {
+        "status": "not_applicable",
+        "value": null
+      },
+      "causal_agent": {
+        "status": "known",
+        "value": "手長・足長"
+      },
+      "mechanism": {
+        "status": "known",
+        "value": "怪物が雲を集めて悪天候・洪水を起こす"
+      },
+      "state_transition": {
+        "status": "known",
+        "value": "地域を荒らす怪物から、箱に封じられ祭神として祀られる存在へ変化する"
+      },
+      "temporal_structure": {
+        "status": "known",
+        "value": "被害の反復→弘法大師の介入→封印・祭祀"
+      },
+      "rules_and_taboos": {
+        "status": "unknown",
+        "value": null
+      },
+      "avoidance_control": {
+        "status": "known",
+        "value": "弘法大師による箱への封印"
+      },
+      "terminal_state": {
+        "status": "known",
+        "value": "怪物は封じられ磐梯明神として祀られる"
+      },
+      "uncertainties": {
+        "status": "known",
+        "value": [
+          "成立年代",
+          "収録以前の異伝",
+          "史実性"
+        ]
+      },
+      "variant_boundaries": {
+        "status": "known",
+        "value": "日文研収録資料の『悪天候を起こす怪物→弘法大師が箱に封じる』形を対象"
+      }
+    },
+    "coverage_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ]
+  },
+  "content_units": [
+    {
+      "content_id": "CNT-001",
+      "type": "setting",
+      "text": "磐梯山に手長・足長という巨大な怪物がいるとされる。",
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "content_id": "CNT-002",
+      "type": "event",
+      "text": "手長・足長が雲を集め、会津を暗くして洪水や嵐を起こし、農作物へ被害を与える。",
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "content_id": "CNT-003",
+      "type": "action",
+      "text": "弘法大師が怪物を小さな箱へ誘い込み、封じて被害を止める。",
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "content_id": "CNT-004",
+      "type": "outcome",
+      "text": "封じた存在は磐梯明神として祀られたと伝えられる。",
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "VAR-001",
+      "kind": "initial",
+      "description": "磐梯山で手長足長が荒天を起こし、弘法大師が箱に封じる主要形。",
+      "attestation": "日文研怪異DB収録資料で確認。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003"
+      ]
+    }
+  ],
+  "uncertainties": [
+    {
+      "text": "資料の収録年から伝承の成立年代は確定できない。",
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    }
+  ]
+}
