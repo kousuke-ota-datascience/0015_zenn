@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0198",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_20_analysis.json",
+    "commit_sha": "05cfc6abbf1f4ec5be94fbf7823e03c043adaee9",
+    "blob_sha": "19c91baee3747af9f5368f07ff6fd4cd6fad7eef",
+    "reviewed_at": "2026-09-19T01:55:19.732Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "2007年4月21日の初期実況・手順VAR-001に限定。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D15の恐怖・トラウマはcanonical Evidenceに明示されず、D18は実行・実況という現実行動をL3へ反映していない。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "問題はtaxonomy不足ではなくEvidence適合と作用レイヤーの欠落。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "儀式実行→異変主張→終了手順という因果構造はContentと整合。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D15だけ直接Evidenceへ追跡できず、D18はEVD-003の現実行動を取りこぼす。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "独立再構成では恐怖・トラウマという帰結は必須でなく、参加者の実行・実況は現実行動として残る。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D15をDとする根拠が不足。D18のL3はcurrent Evidenceから直接支持される。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "FINDING",
+      "notes": "D12実行者、D13異常干渉は支持されるがD15恐怖・トラウマへの帰結固定はEvidenceにない。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "FINDING",
+      "notes": "EVD-003とSummaryが複数参加者の実行・実況を同一Scope内で記録しており、社会現実層L3が支持される。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公開掲示板流通を全国普及率へ読み替えていない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "手順が公開されていることを特権保持者なしとして扱う。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "一般家庭の室内というA1に限定。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "EVD-003は異変報告までで、恐怖・不安・トラウマを明示しない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "実行儀式型ネットロアとしてScopeと整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "2007年の公開掲示板で儀式手順が提示され、複数参加者が実際に実行・実況し、異変を報告する。手順内因果はL1、流通が現実の実行行動を生んだ点はL3。canonical Evidenceだけからは恐怖・トラウマという帰結を固定できない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D05",
+      "D09",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D18",
+      "D19"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "FINDING",
+    "notes": "D15とD18の2点を修正すれば中心モデルは保存される。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D15の恐怖・トラウマはcanonical Evidenceを越える。",
+      "rationale": "EVD-003は物音・テレビ異変・人影などの実況を記録するが、強い恐怖・不安・トラウマを明示しない。",
+      "impact": "帰結領域に資料にない心理状態を固定する。",
+      "fix_direction": "D15をUとしてprimary/secondaryを外し、異変自体はD13で保持する。",
+      "content_refs": [
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "dimension_refs": [
+        "D15"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D18の社会現実層L3が欠落している。",
+      "rationale": "current EvidenceとSummaryは、掲示板上の手順提示と同時に複数参加者が実際に儀式を実行・実況したことを記録する。これは流通により確認可能な現実行動が生じた事例である。",
+      "impact": "伝承流通の現実側作用をD18で過小表現する。",
+      "fix_direction": "D18はL1を保持しつつL3を追加する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ],
+      "dimension_refs": [
+        "D18"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review cycle 001。D15 Evidence ceilingとD18 L3欠落の2点をModerate Finding。00/10はPass。"
+}
