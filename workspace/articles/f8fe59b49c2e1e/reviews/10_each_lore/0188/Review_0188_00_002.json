@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0188",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_00_sources.json",
+    "commit_sha": "722671db609af1a8e898eb20f38aa5bd97a072de",
+    "blob_sha": "1457762d662033af64be6b24077cb27dae48d9e7",
+    "reviewed_at": "2026-09-19T01:52:19.351Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "Seq001からcanonical 00は不変。保存再掲と後代整理の資料階層は適切。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "初出確認点、遭遇、防護・脱出、終盤留保のEvidence境界を維持。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "Evidenceは各locatorの範囲内で、実話性・実在地を補完していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "一次資料との距離をdirect/indirect derivativeとして保持。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2008年8月26日を現在確認できる起点として扱い、絶対起源化していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "元ページ未固定と実話性・舞台・由来の不確実性を保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。20修正後の完全cycle再Review。00はcurrent target不変でPass。"
+}
