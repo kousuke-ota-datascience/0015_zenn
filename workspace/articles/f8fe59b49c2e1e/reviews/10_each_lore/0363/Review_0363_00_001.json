@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0363",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0363_1973_toilet_paper_shortage_rumor/0363_00_sources.json",
+    "commit_sha": "658098632ea5a3f733b8af08523f74b9fe4c2f83",
+    "blob_sha": "e484c184cdfc2754715c4d97ba5d4925b9bbbcdb",
+    "reviewed_at": "2026-09-19T04:54:34.790Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "昭和館の年表を1973年流言・買いだめ事件の確認資料として使用。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "売り切れ表示、口コミ噂、社会経済背景、2020年比較を分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "1973年Scopeと2020年比較を混同していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "昭和館をdirect derivativeの歴史整理として位置付ける。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1973年事件を直接確認し、最初の発話者・経路は未確定。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "初発話者・初伝播経路を未確定として保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。1973年Scopeと2020年比較を分離しPass。"
+}
