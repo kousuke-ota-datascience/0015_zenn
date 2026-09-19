@@ -74,7 +74,7 @@
   "content_units": [
     {
       "content_id": "CNT-001",
-      "type": "setting",
+      "type": "other",
       "text": "磐梯山に手長・足長という巨大な怪物がいるとされる。",
       "evidence_refs": [
         "EVD-001"
