@@ -20,22 +20,16 @@
   "dimensions": [
     {
       "dimension_id": "D01",
-      "status": "D",
-      "primary": {
-        "code_id": "D01.G4"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "俗説の起点となる出来事は1985年で、同事件から呪いが語られる。",
-      "manifestation": "1980年代起点。",
+      "rationale": "1985年の像投げ込みは俗説の原因事件として直接確認できるが、『呪い』言説そのものの成立年代・初出時点はcurrent Evidenceから固定できない。",
+      "manifestation": "生成年代は未確定。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003",
         "CNT-004"
-      ],
-      "evidence_refs": [
-        "EVD-001",
-        "EVD-002"
       ]
     },
     {
@@ -345,14 +339,14 @@
     },
     {
       "dimension_id": "D19",
-      "status": "I",
+      "status": "D",
       "primary": {
-        "code_id": "D19.MAS.NATIONAL_PUBLIC",
-        "parent_id": "D19.MAS"
+        "code_id": "D19.NET.OPEN_FORUM_WEB",
+        "parent_id": "D19.NET"
       },
       "secondary": [],
-      "rationale": "球団・企業公式が扱う全国的に知られたスポーツ俗説。",
-      "manifestation": "全国公衆圏。",
+      "rationale": "球団・日本KFCの公式Webで呪い言説と像の履歴が公開されていることは直接確認できる。全国的大衆への実流通はcurrent Evidenceからは固定しない。",
+      "manifestation": "公開Web圏。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
