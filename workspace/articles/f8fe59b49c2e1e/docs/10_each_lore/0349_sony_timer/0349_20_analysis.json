@@ -243,8 +243,7 @@
       ],
       "taxonomy_gap": {
         "present": true,
-        "description": "意図的な製品寿命設計・計画的故障を直接表す作用機序ChildがD13にない。",
-        "candidate_code": "D13.TECH.PLANNED_FAILURE"
+        "description": "意図的な製品寿命設計・計画的故障を直接表す作用機序ChildがD13にない。"
       }
     },
     {
