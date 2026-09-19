@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0198",
+  "lore_name": "一人かくれんぼ",
+  "summary": {
+    "narrative": "ぬいぐるみに米と自分の爪を詰め、深夜の自宅で鬼役を交代するかくれんぼ形式の手順を行うと、霊的な存在や怪異が現れるとされる実行型ネットロア。2007年4月の掲示板実況では、手順の提示と参加者の実況が同じ場で進行した。",
+    "structure": {
+      "primary_actors": {
+        "status": "known",
+        "value": [
+          "儀式の実行者",
+          "名前を付けたぬいぐるみ"
+        ]
+      },
+      "affected_targets": {
+        "status": "known",
+        "value": "儀式の実行者"
+      },
+      "entry_trigger": {
+        "status": "known",
+        "value": "指定された準備をして深夜に儀式を開始すること"
+      },
+      "causal_agent": {
+        "status": "known",
+        "value": "儀式によって招かれるとされる霊的存在"
+      },
+      "mechanism": {
+        "status": "known",
+        "value": "ぬいぐるみを媒介に鬼役を交代し、隠れている間に異変が生じる"
+      },
+      "state_transition": {
+        "status": "known",
+        "value": "遊びの準備から交霊的な危険状態へ入り、終了手順で閉じる"
+      },
+      "temporal_structure": {
+        "status": "known",
+        "value": "準備→開始→潜伏・実況→終了の段階的エピソード"
+      },
+      "rules_and_taboos": {
+        "status": "known",
+        "value": [
+          "家の外へ出ない",
+          "照明を消す",
+          "終了法を守る",
+          "塩水を準備する"
+        ]
+      },
+      "avoidance_control": {
+        "status": "known",
+        "value": "塩水と終了宣言を用いる所定の終了手順"
+      },
+      "terminal_state": {
+        "status": "known",
+        "value": "儀式を終了し通常状態へ戻るとされる"
+      },
+      "uncertainties": {
+        "status": "known",
+        "value": [
+          "超常現象の実在",
+          "2007年4月以前の同名・同構造の独立伝承"
+        ]
+      },
+      "variant_boundaries": {
+        "status": "known",
+        "value": "2007年4月の初期実況手順を対象とし、後年の改訂版・動画派生を除外"
+      }
+    },
+    "coverage_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ]
+  },
+  "content_units": [
+    {
+      "content_id": "CNT-001",
+      "type": "rule",
+      "text": "手足のあるぬいぐるみの綿を抜き、米と自分の爪を入れ、赤い糸で縫って準備する。",
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "content_id": "CNT-002",
+      "type": "action",
+      "text": "深夜にぬいぐるみに名前を付け、浴槽へ置き、鬼役を宣言して刃物を刺した後、暗い家の中へ隠れる。",
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "content_id": "CNT-003",
+      "type": "claim",
+      "text": "手順を実行すると、家の中に別の存在の気配や物音、映像・音声の異変などが生じうると参加者が語る。",
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "content_id": "CNT-004",
+      "type": "rule",
+      "text": "終了時は塩水を携えて隠れ場所から出て、ぬいぐるみに塩水を用い、終了宣言をして儀式を閉じる。",
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "VAR-001",
+      "kind": "initial",
+      "description": "2007年4月21日の初期実況で提示された一人隠れんぼの手順と怪異主張。",
+      "attestation": "2ちゃんねる実況の保存再掲で確認。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003",
+        "EVD-004"
+      ]
+    }
+  ],
+  "uncertainties": [
+    {
+      "text": "初期ログに報告された異変は実況者の自己報告であり、超常原因は検証されていない。",
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "content_refs": [
+        "CNT-003"
+      ]
+    },
+    {
+      "text": "2007年4月以前に同名・同構造の手順が独立して流通していたかは、このScopeでは確定しない。",
+      "evidence_refs": [
+        "EVD-004"
+      ],
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ]
+    }
+  ]
+}
