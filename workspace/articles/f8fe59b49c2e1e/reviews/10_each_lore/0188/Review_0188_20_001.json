@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0188",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_20_analysis.json",
+    "commit_sha": "ce6dc4f313bc0748bc524c598f6b5a5af03abe30",
+    "blob_sha": "0468a1e7ff80f41c965a3c839e8cd7f08f390437",
+    "reviewed_at": "2026-09-19T01:50:06.354Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "2008年初出連投のVAR-001に限定し、後代派生をScopeへ混入していない。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D15を失踪・消失とする判定だけが、current Content/Evidenceで示された帰結を越えている。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "使用コードはcurrent taxonomyに存在し、D15問題はtaxonomy不足ではなくEvidence ceilingの問題。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "遭遇→標的化→追跡→防護・脱出という因果列自体はContentと整合する。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "各Dimensionはcurrent Content/Evidenceへ概ね追跡可能。D15のみ帰結意味が参照元を越える。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "独立再構成では終端は『当面逃れるが脅威継続可能性あり』であり、失踪帰結は再構成されない。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D15をIにしても、失踪という具体的帰結を支持する根拠がないため推論として許容できない。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "FINDING",
+      "notes": "D12=語り手、D13=追跡は支持されるが、D15=失踪・消失への接続はEvidenceにない。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18はL1のみで、受容者・社会現実への作用を追加推定していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公開掲示板であることを根拠に全国的普及度を別途推定していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "地域内部の親族が怪異名・対処法を知るという物語内部情報をコードしている。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "特定実在地点を推測せず、一般的現実背景A1に抑制している。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "『捕捉・連れ去りを避けるため』から失踪・消失という具体的帰結を導くのはEvidence ceilingを越える。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "ネット怪談／怪異遭遇譚はcurrent Scopeと整合する。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "異常に背の高い怪異との遭遇後、語り手が標的となり、親族の防護手順を経て地域外へ脱出する。後日の境界地蔵破損で追跡・再接近の可能性は残るが、失踪・消失という帰結はcurrent Evidenceからは確定も推論もできない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D17",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-002",
+      "EVD-003",
+      "EVD-004"
+    ],
+    "status": "FINDING",
+    "notes": "D15以外の中心モデルは保持される。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D15の失踪・消失はcurrent Evidenceを越える。",
+      "rationale": "00/10が示すのは、語り手が狙われ、防護と護送によって地域外へ逃れ、再接近可能性が残ることまでである。標的が捕捉された場合に失踪・消失するという事実や明示的設定は示されていない。",
+      "impact": "D12→D13→D15の終端に、資料にない具体的帰結を追加し、Evidence confidence ceilingを超過する。",
+      "fix_direction": "D15をUとしてprimary/secondaryを外し、追跡・脱出・残余脅威はD13/D16/D17で保持する。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-004"
+      ],
+      "dimension_refs": [
+        "D12",
+        "D13",
+        "D15"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review cycle 001。D15の失踪・消失のみModerate Finding。00/10はPass。"
+}
