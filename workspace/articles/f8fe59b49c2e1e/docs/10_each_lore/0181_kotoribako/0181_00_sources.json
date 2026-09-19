@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0181",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "mirror_reprint_or_restoration",
+      "title": "「ことりばこ」子取り箱「コトリバコ」保存過去ログ",
+      "locator": "2005-06-11開始の専用スレッドおよび冒頭テンプレート",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "A"
+      ],
+      "url": "https://kako.5ch.io/test/read.cgi/min/1118432098/",
+      "archive_info": "5ch過去ログ保存ページ",
+      "notes": "専用スレッドは先行するオカルト板投稿を受けて立てられ、成立直後の受容・検証議論を保存する。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "冒頭・2005年6月11日",
+      "content": "2005年6月11日に「ことりばこ／子取り箱／コトリバコ」を題する専用スレッドが立ち、先行スレッドで提示された箱の怪談を引き継いで議論している。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "スレッド内の原話参照・設定検討",
+      "content": "議論では、組木状の箱が呪物として扱われ、物語上は女性や子どもへの重い害が中心的な規則として理解されている。箱を単に開けることより、所持・接近そのものが危険だという読みが共有される。",
+      "representation": "paraphrase",
+      "uncertainty": "専用スレッドは原投稿そのものではなく、原話の再掲・参照と受容議論を含む保存ログである。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-001",
+      "locator": "2007-2008年の検証・批判レス",
+      "content": "スレッドには創作説、民俗起源説、自然原因説など相互に競合する検討があり、物語の歴史的事実性や呪物の実在は確定していない。",
+      "representation": "paraphrase"
+    }
+  ],
+  "notes": "成立時の意味構造は2005年の掲示板伝承として扱い、後年の派生創作や地域起源説は既定Version Scopeへ混入させない。"
+}
