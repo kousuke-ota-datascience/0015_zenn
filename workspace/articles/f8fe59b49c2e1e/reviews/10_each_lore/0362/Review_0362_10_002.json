@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0362",
+  "artifact": "10",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_10_contents.json",
+    "commit_sha": "ad3b972205e70d66d434dc8e8eca4fa5f4be669a",
+    "blob_sha": "792875e519e8ad334e076fac696ce7425e780be3",
+    "reviewed_at": "2026-09-19T04:52:10.470Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "canonical 10不変。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "流言→取付け→検証・沈静化を再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "公的事件核に限定。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "伝播細部をScope外に保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全4 unitを保持。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1973年の豊川信用金庫への金融不安流言が預金引き出しを誘発し取付け騒ぎとなり、警察が発端を解明・周知して沈静化した。",
+    "reference_story": "current Contentと一致。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "金融不安流言→預金引き出し→取付け→真相解明・沈静化の事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "D04/D08/D09修正はContentを変更しない。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "流言と取付け",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "金融不安の解釈と行動",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "現実の取付け影響",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "真相解明・沈静化",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。10不変でPass。"
+}
