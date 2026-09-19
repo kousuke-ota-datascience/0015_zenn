@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0309",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0309_uryujima/0309_00_sources.json",
+    "commit_sha": "ea31c74a520712064f8379d6d756e6349b88c1aa",
+    "blob_sha": "7fd3ef45d776d07339c21677970154c8aee00459",
+    "reviewed_at": "2026-09-19T04:37:40.823Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "canonical 00はSeq001から不変。伝説資料と現実災害アンカーを分離。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "現代文化表象、瓜生島研究、1596年実在災害のEvidence境界を維持。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "全面沈没を確定史実化していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "一次資料との距離を適切に保持。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1596年を伝承成立年へ短絡していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "島の実在形態・全面沈没・史料形成過程の不確実性を保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。20修正後の完全cycle再Review。00はcurrent target不変でPass。"
+}
