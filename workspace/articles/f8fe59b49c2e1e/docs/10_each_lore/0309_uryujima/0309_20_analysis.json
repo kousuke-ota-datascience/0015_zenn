@@ -68,23 +68,19 @@
     },
     {
       "dimension_id": "D04",
-      "status": "I",
+      "status": "D",
       "primary": {
-        "code_id": "D04.CON.CONTESTED_VERSION",
-        "parent_id": "D04.CON"
+        "code_id": "D04.MED.COMMERCIALIZATION",
+        "parent_id": "D04.MED"
       },
       "secondary": [],
-      "rationale": "島の実在形態・沈没像には史料解釈上の不確実性があり、伝説と史実の境界が論争的。",
-      "manifestation": "起源・史実性をめぐる競合。",
+      "rationale": "大分市が瓜生島伝説をモチーフとしてスタンプラリー等の現代イベントへ転用しており、商品・観光化系の再利用が直接確認できる。",
+      "manifestation": "地域文化イベント・観光資源としての再利用。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
         "CNT-004"
       ],
       "evidence_refs": [
-        "EVD-002",
-        "EVD-003"
+        "EVD-001"
       ]
     },
     {
@@ -307,14 +303,11 @@
     },
     {
       "dimension_id": "D17",
-      "status": "D",
-      "primary": {
-        "code_id": "D17.NON.OBSERVATIONAL_ONLY",
-        "parent_id": "D17.NON"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "伝説核は過去の災害説明であり、回避手順を要求しない。",
-      "manifestation": "制御不要の観察・説明。",
+      "rationale": "current Version Scopeは過去災害と島消失を説明するが、回避・解除・制御法の有無を判定できるEvidenceを含まない。",
+      "manifestation": "回避・制御方式は未確定。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
