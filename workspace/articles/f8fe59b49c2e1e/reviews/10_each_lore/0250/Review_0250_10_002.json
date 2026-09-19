@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0250",
+  "artifact": "10",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0250_shichinin_misaki/0250_10_contents.json",
+    "commit_sha": "2aedca1c59847ae11e29e0d4e3c716007a5d5008",
+    "blob_sha": "3675202cac43d55c552158a48d08bffd101df0cd",
+    "reviewed_at": "2026-09-19T02:01:11.589Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "canonical 10不変。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "七人循環核を再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "早期共有核に限定。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立年代等を保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全3 unitを保持。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "七人の死霊的集団が新規犠牲者を組み込み、最古参が成仏して七人を維持する。",
+    "reference_story": "current Contentと一致。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "Seq001で確認した共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "D15 confidence修正はContentを変えない。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "七人集団",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "犠牲者加入と最古参成仏",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "高知の地域伝承",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。10不変でPass。"
+}
