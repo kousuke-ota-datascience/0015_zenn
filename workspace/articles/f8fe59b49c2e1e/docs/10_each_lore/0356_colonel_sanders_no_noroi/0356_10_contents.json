@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0356",
+  "lore_name": "カーネル・サンダースの呪い",
+  "summary": {
+    "narrative": "1985年の阪神優勝時に道頓堀川へ投げ込まれたカーネル・サンダース像が長く見つからなかったことと、その後の阪神の成績を結び付け、『像への仕打ちの呪いで勝てない』と説明するスポーツ俗説。像は2009年に発見され、修復後は幸運の象徴として再解釈された。",
+    "structure": {
+      "primary_actors": {
+        "status": "known",
+        "value": [
+          "阪神タイガースのファン",
+          "カーネル・サンダース像",
+          "阪神タイガース"
+        ]
+      },
+      "affected_targets": {
+        "status": "known",
+        "value": "阪神タイガースの競技成績"
+      },
+      "entry_trigger": {
+        "status": "known",
+        "value": "1985年に像を道頓堀川へ投げ込み失ったこと"
+      },
+      "causal_agent": {
+        "status": "known",
+        "value": "俗説上は冒涜されたカーネル像に伴う呪い"
+      },
+      "mechanism": {
+        "status": "known",
+        "value": "像への仕打ちがチームの優勝・日本一を妨げる不運として作用する"
+      },
+      "state_transition": {
+        "status": "known",
+        "value": "祝勝の象徴→失われた像・呪いの象徴→回収後の幸運の象徴"
+      },
+      "temporal_structure": {
+        "status": "known",
+        "value": "1985年の事件を起点に長期間持続し、2009年の発見が節目となる"
+      },
+      "rules_and_taboos": {
+        "status": "unknown",
+        "value": null
+      },
+      "avoidance_control": {
+        "status": "unknown",
+        "value": null
+      },
+      "terminal_state": {
+        "status": "known",
+        "value": "像は回収・修復され、後に人形納めされる一方、俗説は文化記憶として残る"
+      },
+      "uncertainties": {
+        "status": "known",
+        "value": [
+          "『呪い』という呼称の最初の成立時期",
+          "成績との因果関係"
+        ]
+      },
+      "variant_boundaries": {
+        "status": "known",
+        "value": "1985年投げ込みと阪神の不振を呪いで結ぶ共有核を対象"
+      }
+    },
+    "coverage_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ]
+  },
+  "content_units": [
+    {
+      "content_id": "CNT-001",
+      "type": "event",
+      "text": "1985年の阪神優勝時、ファンが道頓堀店のカーネル・サンダース像を選手に見立てて胴上げし、道頓堀川へ投げ込んだ。",
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "content_id": "CNT-002",
+      "type": "causal_claim",
+      "text": "像を川へ投げ込み長く失われたことが原因で、阪神タイガースは優勝・日本一から遠ざかったという『呪い』が語られた。",
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "notes": "スポーツ俗説上の因果であり、成績の実証的原因ではない。"
+    },
+    {
+      "content_id": "CNT-003",
+      "type": "event",
+      "text": "像は2009年に道頓堀川から発見・修復され、その後は『おかえり！カーネル』『幸運の象徴』として展示された。",
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-004"
+      ]
+    },
+    {
+      "content_id": "CNT-004",
+      "type": "outcome",
+      "text": "俗説は像の回収後もスポーツ史・大阪の地域文化の一部として語られ、像の扱いにも現実の文化的意味を与えた。",
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003",
+        "EVD-004"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "VAR-001",
+      "kind": "initial",
+      "description": "1985年の像投げ込みと阪神の長期的な不振を『呪い』として結び付ける主要形。",
+      "attestation": "球団公式史とKFC公式の像履歴で核となる現実イベントと後続言説を確認。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003",
+        "EVD-004"
+      ]
+    }
+  ],
+  "uncertainties": [
+    {
+      "text": "呪いと競技成績の因果関係は実証されたものではない。",
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "content_refs": [
+        "CNT-002"
+      ]
+    },
+    {
+      "text": "『呪い』という語が最初に成立した媒体・日時は今回の範囲では固定していない。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    }
+  ]
+}
