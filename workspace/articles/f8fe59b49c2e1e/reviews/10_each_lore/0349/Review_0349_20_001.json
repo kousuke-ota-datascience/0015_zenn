@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0349",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0349_sony_timer/0349_20_analysis.json",
+    "commit_sha": "891f8b136db1b263d5211f588bee76290c823020",
+    "blob_sha": "f1bef778f76cc050d0ccbc10ce81582971e754c4",
+    "reviewed_at": "2026-09-19T04:43:36.729Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "一定期間後の製品故障を意図的寿命設計へ帰属する共有核に限定。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D04、D15、D19の3点がcurrent Evidenceまたはtaxonomy定義とずれる。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "D13の意図的寿命設計については直接対応Childがなくtaxonomy_gapの明示が妥当。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "時間経過→意図的設計による故障という俗説内因果は保持。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D04定型化とD19全国大衆はcurrent Evidenceへ十分追跡できず、D15はより具体的なtaxonomy codeが存在する。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "独立再構成では定型化過程や全国規模流通は復元できない一方、機器故障と公開Web流通は復元できる。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D04はU、D15はDEVICE_DATA_LOSS/D、D19はOPEN_FORUM_WEB/DがEvidence confidenceに適合。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "FINDING",
+      "notes": "D12製品→D13計画的故障gap→D15機器故障という帰結にはDEVICE_DATA_LOSSが最も具体的。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "L1のみで社会現実効果を追加していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "FINDING",
+      "notes": "公開Webでの記事流通は確認できるが、全国的大衆への実到達はEvidenceから確定できない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "俗説上の企業内部を特権情報保持者とするIは因果命題から合理的。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "実在企業ソニーと製品を直接アンカーにするA2は適合。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "単一確認点から定型化・全国公衆圏を推論する2点がEvidence ceilingを越える。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "企業・製品故障俗説としてScopeと整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "一定期間後の機器故障をソニーの意図的寿命設計へ帰属する俗説。2007年には公開Web報道を通じ公的に確認できるが、定型化過程や全国的大衆への実到達はcurrent Evidenceから確定しない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D07",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "FINDING",
+    "notes": "D04、D15、D19の最小修正で主要モデルは保存される。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "status_reasoning",
+      "summary": "D04のSTABILIZED_CANONは定型化過程のEvidenceを欠く。",
+      "rationale": "定義は『多様な形から代表形が固定された』だが、current Evidenceは2007年の一確認点のみで、複数形からの固定過程を示さない。",
+      "impact": "生成・変容史に未確認のカノン化過程を追加する。",
+      "fix_direction": "D04をUとしprimary/secondaryを外す。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ],
+      "dimension_refs": [
+        "D04"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D15はPROPERTY_DAMAGEよりDEVICE_DATA_LOSSがtaxonomy上の直接対応。",
+      "rationale": "current taxonomyはDEVICE_DATA_LOSSを『機器故障、データ削除』と定義し、俗説の終端は製品故障である。",
+      "impact": "より具体的な帰結Childがあるのに上位的な物損へ丸めている。",
+      "fix_direction": "D15 primaryをD15.MAT.DEVICE_DATA_LOSSへ変更する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "dimension_refs": [
+        "D15"
+      ]
+    },
+    {
+      "finding_id": "F003",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D19のNATIONAL_PUBLICはEvidenceより広い。",
+      "rationale": "2007年株主総会での質問と公開Web報道は確認できるが、全国規模の一般社会への実到達を示す独立Evidenceはない。",
+      "impact": "流通範囲を公開Webから全国的大衆へ過大推定する。",
+      "fix_direction": "D19 primaryをD19.NET.OPEN_FORUM_WEBへ変更しstatus Dとする。",
+      "content_refs": [
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "dimension_refs": [
+        "D19"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review cycle 001。D04/D15/D19の3点をModerate Finding。00/10はPass。"
+}
