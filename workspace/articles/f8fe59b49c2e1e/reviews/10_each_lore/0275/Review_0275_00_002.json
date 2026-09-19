@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0275",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0275_bandaisan_tenaga_ashinaga/0275_00_sources.json",
+    "commit_sha": "8a61b60aff70bf6e633d91e2610b8f3283690248",
+    "blob_sha": "3dc869f6d627b673f495595755c1adaec1bc60fe",
+    "reviewed_at": "2026-09-19T02:04:41.184Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "canonical 00不変。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "Evidence境界不変。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "資料範囲内。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "二次資料として距離保持。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "収録年を起源化しない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立年代等を保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。00不変でPass。"
+}
