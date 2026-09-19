@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0362",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_20_analysis.json",
+    "commit_sha": "4a336b14477aa441f07d257e4f70caff73cdbc88",
+    "blob_sha": "8e3f09b0cd99f9e58985b037a80859c2ee1eaae6",
+    "reviewed_at": "2026-09-19T04:50:45.237Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "公的資料で直接確認できる流言・取付け・沈静化の事件核に限定。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D04は伝播拡大を派生増殖と混同し、D08/D09はcurrent Evidenceより具体的な反復構造を追加している。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "UNSUPPORTED_ASSERTIONとBOUNDARY_CLASSIFICATIONがcurrent taxonomyに存在。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "流言情報→危険認知→預金引き出し→取付けという因果はContentと整合。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D04派生生成、D08共同体反復、D09反復規則は直接Evidenceへ十分追跡できない。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "独立再構成では根拠未提示の金融不安主張と危険分類は復元できるが、亜種生成や反復規則までは復元できない。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D04=U、D08=UNSUPPORTED_ASSERTION/D、D09=BOUNDARY_CLASSIFICATION/IがEvidence confidenceに適合。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "金融機関→情報誘発行動→金融判断変更が整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "流言が実際の引き出し・取付けを生じたL3が公的記録で直接支持。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "愛知県豊川地域の事件としてREGIONALに限定。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "銀行・警察等の制度情報優位をIとして扱う。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "実在金融機関と1973年事件を因果統合するA4。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "伝播拡大から派生生成・共同体反復・反復規則を補う点がceiling超過。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "金融流言事件として整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "根拠未提示の金融不安主張が豊川信用金庫を危険な状態と受け取らせ、預金引き出しを誘発して取付けへ発展する。公的資料は伝播拡大を示すが、派生版生成や詳細な反復伝播規則は固定しない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D17",
+      "D18",
+      "D19",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002"
+    ],
+    "status": "FINDING",
+    "notes": "D04/D08/D09の修正で主要モデルは保持。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D04 DERIVATIVE_PROLIFERATIONは単なる流言拡大を派生・亜種生成と誤認している。",
+      "rationale": "同コードはパロディ・亜種・派生ルールの生成を指す。EVD-002は流言の伝播拡大とパニック化を記録するだけで、派生版の生成を示さない。",
+      "impact": "生成・変容パターンに未確認の派生生成を追加する。",
+      "fix_direction": "D04をUとしてprimary/secondaryを外す。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "dimension_refs": [
+        "D04"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D08 COMMUNITY_REPETITIONよりUNSUPPORTED_ASSERTIONがEvidenceに適合する。",
+      "rationale": "current Evidenceが直接示すのは金融不安を生む『流言飛語』であり、地域・学校等で繰り返し聞く証言構造の詳細はScope外である。",
+      "impact": "信念形成契機へ未確認の社会的反復構造を追加する。",
+      "fix_direction": "D08をD08.CLM.UNSUPPORTED_ASSERTION / Dへ変更する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "dimension_refs": [
+        "D08"
+      ]
+    },
+    {
+      "finding_id": "F003",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D09 RECURRENCE_RULEはcurrent Evidenceに反復規則の形成を確認できない。",
+      "rationale": "Scopeでは金融機関を危険側へ解釈し引き出し行動へ移ることは再構成できるが、他者の不安・行動を反復規則として意味付けする証拠は固定していない。",
+      "impact": "意味付与操作を未確認の連鎖規則へ具体化する。",
+      "fix_direction": "D09をD09.CAT.BOUNDARY_CLASSIFICATION / Iへ変更する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "dimension_refs": [
+        "D09"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review cycle 001。D04/D08/D09の3点をModerate Finding。00/10はPass。"
+}
