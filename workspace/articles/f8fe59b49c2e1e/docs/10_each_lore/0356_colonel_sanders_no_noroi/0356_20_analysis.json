@@ -1,0 +1,402 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0356",
+  "macro_category": "スポーツ",
+  "entry_type": "スポーツ・ジンクス／呪い",
+  "version_scope": {
+    "description": "1985年の像投げ込みを起点に、阪神の不振をカーネル像の呪いで説明する共有核。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "notes": "2009年以後の『幸運の象徴』再解釈は後続変容として参照するが、Scopeの因果核は呪い説。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "D",
+      "primary": {
+        "code_id": "D01.G4"
+      },
+      "secondary": [],
+      "rationale": "俗説の起点となる出来事は1985年で、同事件から呪いが語られる。",
+      "manifestation": "1980年代起点。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D02",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "呪い言説が最初に流通した媒体は今回の範囲で固定できない。",
+      "manifestation": "最古媒体不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D03",
+      "status": "D",
+      "primary": {
+        "code_id": "D03.WEB.WEBSITE",
+        "parent_id": "D03.WEB"
+      },
+      "secondary": [],
+      "rationale": "現代では球団・企業公式Webで言説と像履歴が流通する。",
+      "manifestation": "公式Web。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D04",
+      "status": "D",
+      "primary": {
+        "code_id": "D04.REC.EVENT_ATTACHMENT",
+        "parent_id": "D04.REC"
+      },
+      "secondary": [],
+      "rationale": "1985年の具体的事件へ、その後の成績不振が結び付けられる。",
+      "manifestation": "事件への後付け・結び付け。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D05",
+      "status": "D",
+      "primary": {
+        "code_id": "D05.PRP.EXPLANATORY_CLAIM",
+        "parent_id": "D05.PRP"
+      },
+      "secondary": [],
+      "rationale": "勝てない理由を呪いで説明する命題が中心。",
+      "manifestation": "説明命題。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D06",
+      "status": "I",
+      "primary": {
+        "code_id": "D06.T5"
+      },
+      "secondary": [],
+      "rationale": "スポーツ・ジンクスとして条件付きに信じられる形で流通する。",
+      "manifestation": "条件付き信念。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D07",
+      "status": "D",
+      "primary": {
+        "code_id": "D07.DCF.MISFORTUNE_STREAK",
+        "parent_id": "D07.DCF"
+      },
+      "secondary": [],
+      "rationale": "長期間日本一になれない等の不運の連続が意味形成対象。",
+      "manifestation": "不運の連続。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D08",
+      "status": "D",
+      "primary": {
+        "code_id": "D08.HIS.HISTORICAL_EVENT",
+        "parent_id": "D08.HIS"
+      },
+      "secondary": [],
+      "rationale": "1985年の実在する像投げ込み事件が信念形成の核。",
+      "manifestation": "歴史的事件。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D09",
+      "status": "D",
+      "primary": {
+        "code_id": "D09.CAU.HIDDEN_CAUSE",
+        "parent_id": "D09.CAU"
+      },
+      "secondary": [],
+      "rationale": "競技成績の不振を像に伴う呪いへ帰属する。",
+      "manifestation": "隠れた原因。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D10",
+      "status": "I",
+      "primary": {
+        "code_id": "D10.OBJ.CURSED_OBJECT",
+        "parent_id": "D10.OBJ"
+      },
+      "secondary": [],
+      "rationale": "呪いの象徴・媒介は失われたカーネル像。",
+      "manifestation": "呪物的対象。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D11",
+      "status": "D",
+      "primary": {
+        "code_id": "D11.MAN.CREATE_ALTER_MANIPULATE",
+        "parent_id": "D11.MAN"
+      },
+      "secondary": [],
+      "rationale": "像を川へ投げ込む行為が呪いの起点とされる。",
+      "manifestation": "物体への操作・破壊的扱い。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D12",
+      "status": "D",
+      "primary": {
+        "code_id": "D12.ORG.ORGANIZATION",
+        "parent_id": "D12.ORG"
+      },
+      "secondary": [],
+      "rationale": "主要帰結の対象は阪神タイガースという組織。",
+      "manifestation": "組織対象。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D13",
+      "status": "D",
+      "primary": {
+        "code_id": "D13.FAT.CURSE_MISFORTUNE",
+        "parent_id": "D13.FAT"
+      },
+      "secondary": [],
+      "rationale": "作用はチームへ不運をもたらす呪いとして説明される。",
+      "manifestation": "呪い・不運。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D14",
+      "status": "D",
+      "primary": {
+        "code_id": "D14.NEG"
+      },
+      "secondary": [],
+      "rationale": "Scope内の呪い説では競技上の失敗が帰結。",
+      "manifestation": "負。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D15",
+      "status": "D",
+      "primary": {
+        "code_id": "D15.LIF.LIFE_SUCCESS_FAILURE",
+        "parent_id": "D15.LIF"
+      },
+      "secondary": [],
+      "rationale": "優勝・日本一という成功／失敗が帰結軸。",
+      "manifestation": "成功失敗。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D16",
+      "status": "D",
+      "primary": {
+        "code_id": "D16.CON.CONTINUOUS",
+        "parent_id": "D16.CON"
+      },
+      "secondary": [],
+      "rationale": "1985年以後、像が見つからない期間に持続する呪いとして語られる。",
+      "manifestation": "長期持続。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D17",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "像の発見を『解除』とみなす語りはあるが、初期共有核の確立した制御法としては固定しない。",
+      "manifestation": "制御法未確定。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D18",
+      "status": "D",
+      "primary": {
+        "code_id": "D18.L1"
+      },
+      "secondary": [
+        {
+          "code_id": "D18.L3"
+        }
+      ],
+      "rationale": "呪いがチーム成績へ作用する因果は伝承内部の核。",
+      "manifestation": "伝承内因果層。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D19",
+      "status": "I",
+      "primary": {
+        "code_id": "D19.MAS.NATIONAL_PUBLIC",
+        "parent_id": "D19.MAS"
+      },
+      "secondary": [],
+      "rationale": "球団・企業公式が扱う全国的に知られたスポーツ俗説。",
+      "manifestation": "全国公衆圏。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D20",
+      "status": "D",
+      "primary": {
+        "code_id": "D20.NON.COMMON_KNOWLEDGE",
+        "parent_id": "D20.NON"
+      },
+      "secondary": [],
+      "rationale": "呪いの内容は公開俗説で、秘密保持者を必要としない。",
+      "manifestation": "特権なし。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D21",
+      "status": "D",
+      "primary": {
+        "code_id": "D21.A4"
+      },
+      "secondary": [],
+      "rationale": "1985年の像投げ込み、2009年の発見という具体的史実が俗説の因果・変容に組み込まれる。",
+      "manifestation": "具体的歴史事実を因果統合。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    }
+  ],
+  "analysis_notes": "D18.L3は、俗説が像の展示・『幸運の象徴』化・人形納め等の現実の文化的扱いに接続したことを示す。ただしスポーツ成績への超自然的因果を事実認定しない。"
+}
