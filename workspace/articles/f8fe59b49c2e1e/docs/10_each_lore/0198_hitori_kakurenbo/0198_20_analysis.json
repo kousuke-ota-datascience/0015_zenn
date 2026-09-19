@@ -299,22 +299,16 @@
     },
     {
       "dimension_id": "D15",
-      "status": "D",
-      "primary": {
-        "code_id": "D15.MND.FEAR_TRAUMA",
-        "parent_id": "D15.MND"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "実況で強い恐怖・不安が主要な帰結として示される。",
-      "manifestation": "精神的恐怖。",
+      "rationale": "current Evidenceは儀式中の物音・テレビ異変・人影などの報告を示すが、実行者の恐怖・不安・トラウマを帰結として直接固定しない。",
+      "manifestation": "実行者の最終的な帰結領域はcurrent Evidenceから未確定。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003",
         "CNT-004"
-      ],
-      "evidence_refs": [
-        "EVD-003"
       ]
     },
     {
@@ -365,14 +359,22 @@
       "primary": {
         "code_id": "D18.L1"
       },
-      "secondary": [],
-      "rationale": "因果作用は儀式を行った物語内部の実行者に向かう。",
-      "manifestation": "伝承内因果層。",
+      "secondary": [
+        {
+          "code_id": "D18.L3"
+        }
+      ],
+      "rationale": "儀式内部では実行者に怪異作用が主張される（L1）。同じ公開掲示板上で複数参加者が実際に手順を実行・実況しており、流通に伴う確認可能な現実行動も生じている（L3）。",
+      "manifestation": "伝承内因果層と、流通により実行行動が生じる社会現実層。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003",
         "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
       ]
     },
     {
