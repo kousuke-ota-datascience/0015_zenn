@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0349",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0349_sony_timer/0349_00_sources.json",
+    "commit_sha": "678ff2357e679016029026e47a811ce23f7f71ff",
+    "blob_sha": "d842ddb1437d61e755f59aa284a622b10fc84756",
+    "reviewed_at": "2026-09-19T04:44:50.486Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "canonical 00不変。2007年株主総会報道を公的認知の確認点として使用。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "俗称、公的回答、認知時点を分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "意図的寿命設計の実在を事実化していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "報道資料の位置付けを維持。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2007年を成立年へ短絡しない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立時期、故障統計、意図的設計の根拠を未確定として保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。00は不変でPass。"
+}
