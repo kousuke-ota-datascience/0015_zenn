@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0356",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0356_colonel_sanders_no_noroi/0356_00_sources.json",
+    "commit_sha": "2138336c0b7fd0a00171dfb86f7fdc3a992f160d",
+    "blob_sha": "ac5f19398f792df6f1f2f3c034cfb92d2af9e321",
+    "reviewed_at": "2026-09-19T04:48:11.225Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "canonical 00不変。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "事件・呪い言説・回収後の扱いを分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "超自然因果を事実化しない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "公式資料の役割を維持。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1985年を呪い語の初出へ短絡しない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立時期・因果関係を未確定で保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。00不変でPass。"
+}
