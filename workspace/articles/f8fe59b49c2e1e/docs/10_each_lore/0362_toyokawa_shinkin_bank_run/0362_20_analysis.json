@@ -1,0 +1,395 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0362",
+  "macro_category": "社会流言・パニック",
+  "entry_type": "金融流言事件",
+  "version_scope": {
+    "description": "1973年の豊川信用金庫についての金融不安流言が取付け騒ぎを生じ、警察の発端解明・真相周知で沈静化した事件核。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "notes": "伝播経路の細部は本文未確認のためScope外。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "D",
+      "primary": {
+        "code_id": "D01.G3"
+      },
+      "secondary": [],
+      "rationale": "事件は1973年に発生した。",
+      "manifestation": "1970年代。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D02",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "最初の流言がどの媒体で人から人へ伝わったかを、今回の直接確認資料だけでは安全に固定できない。",
+      "manifestation": "最古流通媒体不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D03",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "個々の流通媒体ポートフォリオを直接確認する資料が不足する。",
+      "manifestation": "流通媒体ポートフォリオ不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D04",
+      "status": "I",
+      "primary": {
+        "code_id": "D04.COL.DERIVATIVE_PROLIFERATION",
+        "parent_id": "D04.COL"
+      },
+      "secondary": [],
+      "rationale": "流言が伝播拡大して取付けへ発展したと公的記録が示す。",
+      "manifestation": "流言の増殖・派生。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D05",
+      "status": "D",
+      "primary": {
+        "code_id": "D05.PRP.FACT_CLAIM",
+        "parent_id": "D05.PRP"
+      },
+      "secondary": [],
+      "rationale": "『信用金庫が危ない』という事実主張として機能する流言。",
+      "manifestation": "金融危機を告げる命題。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D06",
+      "status": "I",
+      "primary": {
+        "code_id": "D06.T4"
+      },
+      "secondary": [],
+      "rationale": "受け手の行動を変えるほど現実の金融事実として受容された。",
+      "manifestation": "一般・制度事実らしく提示された。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D07",
+      "status": "D",
+      "primary": {
+        "code_id": "D07.INO.SYSTEM_CAPACITY_FAILURE",
+        "parent_id": "D07.INO"
+      },
+      "secondary": [],
+      "rationale": "意味形成対象は金融機関の安全性・経営継続への不安。",
+      "manifestation": "制度・金融システムの破綻懸念。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D08",
+      "status": "D",
+      "primary": {
+        "code_id": "D08.STY.COMMUNITY_REPETITION",
+        "parent_id": "D08.STY"
+      },
+      "secondary": [],
+      "rationale": "流言の反復伝達そのものが信念形成の契機となった。",
+      "manifestation": "共同体内の反復伝聞。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D09",
+      "status": "D",
+      "primary": {
+        "code_id": "D09.PPR.RECURRENCE_RULE",
+        "parent_id": "D09.PPR"
+      },
+      "secondary": [],
+      "rationale": "他者の不安・引き出しが次の受け手の危険判断を補強し、連鎖を形成する。",
+      "manifestation": "反復・連鎖の規則化。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D10",
+      "status": "D",
+      "primary": {
+        "code_id": "D10.OBJ.INFORMATION_CONTENT",
+        "parent_id": "D10.OBJ"
+      },
+      "secondary": [],
+      "rationale": "直接の因果源は金融不安を含む情報内容としての流言。",
+      "manifestation": "情報内容が行動を駆動する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D11",
+      "status": "D",
+      "primary": {
+        "code_id": "D11.INF.RECEIVE_MESSAGE",
+        "parent_id": "D11.INF"
+      },
+      "secondary": [],
+      "rationale": "流言を受け取ることが行動変化の入口。",
+      "manifestation": "メッセージ受信。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D12",
+      "status": "D",
+      "primary": {
+        "code_id": "D12.ORG.ORGANIZATION",
+        "parent_id": "D12.ORG"
+      },
+      "secondary": [],
+      "rationale": "流言の主な対象は豊川信用金庫という実在組織。",
+      "manifestation": "金融機関。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D13",
+      "status": "D",
+      "primary": {
+        "code_id": "D13.COG.INFORMATION_INDUCED_ACTION",
+        "parent_id": "D13.COG"
+      },
+      "secondary": [],
+      "rationale": "流言情報が預金引き出しという行動を誘発する。",
+      "manifestation": "情報誘発行動。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D14",
+      "status": "D",
+      "primary": {
+        "code_id": "D14.NEG"
+      },
+      "secondary": [],
+      "rationale": "金融機関と預金者双方に混乱を生じさせる。",
+      "manifestation": "負。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D15",
+      "status": "D",
+      "primary": {
+        "code_id": "D15.BEH.COMPLIANCE_DECISION",
+        "parent_id": "D15.BEH"
+      },
+      "secondary": [],
+      "rationale": "受け手が流言に従って預金を引き出す意思決定が中心。",
+      "manifestation": "金融行動の選択。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D16",
+      "status": "D",
+      "primary": {
+        "code_id": "D16.TRN.CHAIN_SPREAD",
+        "parent_id": "D16.TRN"
+      },
+      "secondary": [],
+      "rationale": "流言が人から人へ拡大し、行動が連鎖する。",
+      "manifestation": "連鎖拡散。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D17",
+      "status": "D",
+      "primary": {
+        "code_id": "D17.INF.VERIFY_DEBUNK",
+        "parent_id": "D17.INF"
+      },
+      "secondary": [],
+      "rationale": "警察が発端を確認し真相を明示することが沈静化手段となった。",
+      "manifestation": "検証・訂正。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D18",
+      "status": "D",
+      "primary": {
+        "code_id": "D18.L3"
+      },
+      "secondary": [],
+      "rationale": "流言が現実の預金引き出し・取付け騒ぎを生じさせたことが公的記録で確認される。",
+      "manifestation": "社会現実層の実行動。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D19",
+      "status": "D",
+      "primary": {
+        "code_id": "D19.LOC.REGIONAL",
+        "parent_id": "D19.LOC"
+      },
+      "secondary": [],
+      "rationale": "事件は愛知県豊川地域の具体的金融機関を中心に発生した。",
+      "manifestation": "地域社会での流通。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D20",
+      "status": "I",
+      "primary": {
+        "code_id": "D20.ORG.INSTITUTION_AUTHORITY",
+        "parent_id": "D20.ORG"
+      },
+      "secondary": [],
+      "rationale": "金融機関の実際の経営状態や事件原因の確認には銀行・警察等の制度的情報が優位に位置する。",
+      "manifestation": "制度機関が検証情報を保持。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D21",
+      "status": "D",
+      "primary": {
+        "code_id": "D21.A4"
+      },
+      "secondary": [],
+      "rationale": "実在する豊川信用金庫と1973年の取付け事件が伝承モデルそのものを構成する。",
+      "manifestation": "史実・記録を因果統合。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    }
+  ],
+  "analysis_notes": "L3は警察白書の現実行動記録に限定し、後年の伝播逸話を追加根拠として逆流させない。"
+}
