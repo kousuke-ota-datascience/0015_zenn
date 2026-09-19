@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0309",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0309_uryujima/0309_10_contents.json",
+    "commit_sha": "efaee71c6fb8e495c2de83d166884f7e3ed758d7",
+    "blob_sha": "96705985af4191a8442a8cbf46afb55f12072be6",
+    "reviewed_at": "2026-09-19T04:36:23.932Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜004はEVD-001〜003へ追跡でき、現実災害と伝説的沈没像の確度差を保持。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "繁栄したとされる島→1596年災害による海没伝説→史実性留保→現代文化表象という構造を再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12で主要構造のLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "1596年災害と島消失を結ぶ共有核をScopeとし、全面沈没を史実認定していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "実在形態、全面沈没、後世史料形成を未確定のまま保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全4 Content Unitがblind reconstructionで保持される。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "別府湾に栄えたとされる瓜生島が1596年の地震・津波で失われたとする地域伝説で、実在災害は確認されるが島の実在形態や全面沈没は同じ確度では確定せず、現在は『幻の島』として地域文化に再利用される。",
+    "reference_story": "current Content Unitsと一致し、災害史実と伝説的沈没像の確度差も保持される。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "瓜生島、住民・港町",
+        "reference": "主体一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "島・港町・住民",
+        "reference": "作用対象一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "1596年豊後地震・津波",
+        "reference": "転換契機一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "大地震・津波",
+        "reference": "因果主体一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "地震・津波による水没・消失という伝説的説明",
+        "reference": "機構一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "繁栄した島から幻の島へ",
+        "reference": "状態遷移一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "1596年の単一災害を転換点とする",
+        "reference": "時間構造一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "規則・禁忌は非該当",
+        "reference": "構造一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "回避・制御法は非該当ではなくScope上未提示",
+        "reference": "20側で要是正",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "島は失われ伝説・文化表象として残る",
+        "reference": "終端一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "島の実在形態・全面沈没・史料形成過程は不確実",
+        "reference": "不確実性一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "1596年災害と島消失を結ぶ共有核",
+        "reference": "variant境界一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "詳細照合後も伝説核と不確実性の主要構造は不変。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "別府湾大分沖に栄えたとされる瓜生島",
+        "blind_reconstruction": "島の存在伝承として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "1596年地震・津波と海没を結ぶ伝説",
+        "blind_reconstruction": "災害による消失伝説として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "災害は確認されるが島の具体像は不確実",
+        "blind_reconstruction": "史実性留保として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "幻の島として地域文化に再利用",
+        "blind_reconstruction": "現代文化表象として保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Summary reconstructionとcoverage auditを確認しPass。"
+}
