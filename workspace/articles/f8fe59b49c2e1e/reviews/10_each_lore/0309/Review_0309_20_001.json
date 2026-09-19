@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0309",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0309_uryujima/0309_20_analysis.json",
+    "commit_sha": "2a18253a85ea57c18d7b0d4ddebc7ebee062fd24",
+    "blob_sha": "b76c9ec02204053bde7df56a1120bb3231c4f42f",
+    "reviewed_at": "2026-09-19T04:36:23.932Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "1596年災害を現実アンカーとする瓜生島海没伝説の共有核に限定。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D04のCONTESTED_VERSIONとD17のOBSERVATIONAL_ONLYがcurrent Evidence・taxonomy定義に不適合。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "D04にはMED.COMMERCIALIZATIONが存在し、D17はUで表現可能。taxonomy gapではない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "地震・津波→島・港町消失という伝説内因果は、史実アンカーとの確度差を保っている。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D04は競合版のEvidenceがなく、D17は『危害・不利益なし』を支持するEvidenceがない。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "独立再構成では現代のイベント・文化利用が明示される一方、競合主要版と介入不要性は再構成されない。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D04はイベント転用を直接示すEvidenceがあるためCOMMERCIALIZATION/Dが適切。D17は回避・制御情報不足なのでUが適切。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "自然環境→地形への物理作用→物的損失という伝説内連鎖は整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "L1のみで、伝説流通による独立した社会現実効果を過剰に追加していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "地域文化としての継承を全国普及へ拡張していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "現代の公開情報であることをCOMMON_KNOWLEDGEとして扱い、情報不足を秘密化していない。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "1596年の実在災害を伝説因果へ組み込むためA4は定義に一致。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "史実性の不確実性から『競合版併存』を推定し、制御情報不在から『介入不要』を推定している2点がEvidence ceilingを越える。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "海没島伝説としてScopeと整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "1596年の実在地震・津波を因果アンカーに、瓜生島が失われたとする地域伝説。全面沈没の史実性は留保され、現代には大分市のイベント等で『幻の島』として再利用される。回避・制御法についてScopeから積極的な『不要』判定はできない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D13",
+      "D15",
+      "D17",
+      "D19",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "FINDING",
+    "notes": "D04とD17の2点を修正すれば主要モデルは保存される。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D04のCONTESTED_VERSIONはcurrent Evidenceに競合主要版がなく不適合。",
+      "rationale": "CONTESTED_VERSIONは互いに異なる主要版が並行維持される場合のコードだが、current Evidenceが示すのは島の史実性・沈没像の不確実性である。一方EVD-001/CNT-004は、大分市のスタンプラリー等で瓜生島伝説が現代イベントへ転用されることを直接示す。",
+      "impact": "生成・変容パターンを『版の競合』として誤表現し、直接確認できるイベント・地域文化利用を取りこぼす。",
+      "fix_direction": "D04をD04.MED.COMMERCIALIZATION / Dへ変更し、現代イベント・地域文化資源への転用として記述する。",
+      "content_refs": [
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "dimension_refs": [
+        "D04"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D17のOBSERVATIONAL_ONLYは負の災害帰結と矛盾する。",
+      "rationale": "OBSERVATIONAL_ONLYは『危害・不利益がなく介入不要』のコード。瓜生島伝説は島・港町の消失という負の帰結を含む。Scopeに回避・制御法がないことは、介入不要を意味しない。",
+      "impact": "制御情報の欠落を、無害・介入不要という積極的意味へ誤変換する。",
+      "fix_direction": "D17をUとし、primary/secondaryを外す。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "dimension_refs": [
+        "D17"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review cycle 001。D04とD17の2点をModerate Finding。00/10はPass。"
+}
