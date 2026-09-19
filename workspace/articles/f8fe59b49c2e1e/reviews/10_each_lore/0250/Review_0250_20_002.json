@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0250",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0250_shichinin_misaki/0250_20_analysis.json",
+    "commit_sha": "9cc42e7961064888320badf4f81bf8924e4c99d3",
+    "blob_sha": "ae5ba21dafa32b7bc2a9989832a66758b6b9aa8a",
+    "reviewed_at": "2026-09-19T02:01:11.589Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "早期共有核。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D15 death codeは維持。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "gapなし。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "循環因果が整合。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全Dimension追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "中心モデル不変。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D15をIに修正しDirect/InferredをEvidenceに整合。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "犠牲者→交代→死亡推論がconfidence込みで整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "L1のみ。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "地域範囲を保持。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "地元内部者I。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "具体地域A2。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "死亡を推論として扱う。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "循環型死霊伝承。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "七人を維持する循環伝承。新規犠牲者の死亡は構造から推論されるためD15=I。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D09",
+      "D10",
+      "D12",
+      "D13",
+      "D15",
+      "D16"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "PASS",
+    "notes": "Seq001 F001解消。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。全てPass。"
+}
