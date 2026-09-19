@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0309",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "大分市「キリシタン南蛮文化・重ねおしスタンプラリー」",
+      "locator": "瓜生島伝説をモチーフにした『南蛮渡来物語』説明",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "A"
+      ],
+      "url": "https://www.city.oita.oita.jp/o204/kirinanstamp.html",
+      "notes": "大分市教育委員会文化財課による公式ページ。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "reliable_secondary_or_research",
+      "title": "地震史料集テキストデータベース「瓜生島研究」",
+      "locator": "記事ID J0600021／1596年豊後地震",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://materials.utkozisin.org/articles/detail?id=J0600021",
+      "notes": "歴史地震史料のテキストデータベース。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "reliable_secondary_or_research",
+      "title": "大分県の地震活動の特徴 | 地震本部",
+      "locator": "1596年慶長豊後地震",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "not_applicable",
+      "evidence_role": [
+        "X",
+        "A"
+      ],
+      "url": "https://www.jishin.go.jp/regional_seismicity/rs_kyushu-okinawa/p44_oita/",
+      "notes": "1596年別府湾地震・津波という現実の災害アンカー確認用。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "『南蛮渡来物語』説明",
+      "content": "大分市は、瓜生島伝説をモチーフにした意匠を紹介し、瓜生島を大友宗麟の時代に南蛮貿易の窓口として栄えたとされる幻の島として説明している。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-002",
+      "locator": "綱文・本文",
+      "content": "歴史地震史料データベースには、1596年の豊後の地震・津波と瓜生島の沈没を結び付ける後世の『瓜生島研究』資料が収録されている。",
+      "representation": "paraphrase",
+      "uncertainty": "史料集には後世の研究・伝承資料も含まれ、島の実在・沈没を単純な確定史実として扱わない。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-003",
+      "locator": "大分県に被害を及ぼした主な地震",
+      "content": "地震本部は1596年9月1日の別府湾の地震をM7.0±1/4とし、別府湾沿岸で強い揺れと津波による大きな被害があったと整理している。",
+      "representation": "paraphrase"
+    }
+  ],
+  "notes": "『1596年の実在災害』と『島が丸ごと沈んだという伝承』を分離し、後者を確定史実にしない。"
+}
