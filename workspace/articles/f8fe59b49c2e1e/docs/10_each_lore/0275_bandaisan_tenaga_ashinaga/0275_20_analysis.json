@@ -275,12 +275,12 @@
       "dimension_id": "D15",
       "status": "D",
       "primary": {
-        "code_id": "D15.MAT.RESOURCE_SCARCITY",
+        "code_id": "D15.MAT.PROPERTY_DAMAGE",
         "parent_id": "D15.MAT"
       },
       "secondary": [],
-      "rationale": "農作物への被害が共同体の物的資源を損なう。",
-      "manifestation": "資源被害。",
+      "rationale": "荒天・洪水によって農作物が荒らされるという、物品・財産の損壊がcurrent Evidenceで直接示される。",
+      "manifestation": "農作物・物的財産への損壊。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
