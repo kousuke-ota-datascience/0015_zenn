@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0362",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "primary_or_contemporary",
+      "title": "昭和49年 警察白書",
+      "locator": "第2章「流言飛語」・豊川信用金庫の取付け騒ぎ",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://www.npa.go.jp/hakusyo/s49/s490200.html",
+      "notes": "事件翌年の警察庁公的記録。流言と取付け騒ぎ、警察による発端解明・沈静化を記録する。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "reliable_secondary_or_research",
+      "title": "デマの研究--愛知県豊川信用金庫「取り付け」騒ぎの現地調査（概論・諸事実稿）",
+      "locator": "『総合ジャーナリズム研究』11(3), 1974年7月, pp.70-80／NDL書誌ID 432861",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "H",
+        "A"
+      ],
+      "url": "https://ndlsearch.ndl.go.jp/books/R000000004-I432861",
+      "bibliographic_info": "伊藤陽一・小川浩一・榊博文、1974年。",
+      "notes": "事件直後の現地調査研究。NDLサーチでは書誌事項を確認。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "reliable_secondary_or_research",
+      "title": "デマの研究--愛知県豊川信用金庫「取り付け」騒ぎの現地調査（考察・分析編）",
+      "locator": "『総合ジャーナリズム研究』11(4), 1974年10月, pp.100-111／NDL書誌ID 447525",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "H",
+        "A"
+      ],
+      "url": "https://ndlsearch.ndl.go.jp/books/R000000004-I447525",
+      "bibliographic_info": "伊藤陽一・小川浩一・榊博文、1974年。",
+      "notes": "同事件の考察・分析編。NDLサーチでは書誌事項を確認。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "「流言飛語」",
+      "content": "警察白書は1973年の豊川信用金庫の取付け騒ぎを、流言飛語の恐ろしさを示す事件として扱っている。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "同段落",
+      "content": "警察は騒ぎ発生後、関係機関と連携して捜査し、発端となった原因を突き止めて真相を明らかにすることで、流言の伝播拡大とパニック化の抑制に努めたと記録している。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-002",
+      "locator": "書誌情報・記事タイトル",
+      "content": "事件翌年の1974年7月には、豊川信用金庫の「取り付け」騒ぎを対象にした現地調査研究の概論・諸事実稿が公刊されている。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-003",
+      "locator": "書誌情報・記事タイトル",
+      "content": "1974年10月には同じ調査の考察・分析編が公刊され、事件が同時代からデマ研究の対象として継続的に分析されたことを確認できる。",
+      "representation": "paraphrase"
+    }
+  ],
+  "notes": "事件の細部で本文未確認の二次的逸話を増補せず、警察白書が直接確認する『流言→取付け騒ぎ→発端解明と沈静化』を中心Scopeとする。"
+}
