@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0309",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0309_uryujima/0309_20_analysis.json",
+    "commit_sha": "2fc93335ea0a64b79134178760a6e699ec8e5e2c",
+    "blob_sha": "bb073c8c43507b4d51aaa8ec184677489b702f34",
+    "reviewed_at": "2026-09-19T04:37:40.823Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "1596年災害を現実アンカーとする瓜生島海没伝説の共有核に限定。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D04をイベント・観光資源への転用に修正し、D17は制御情報不足としてUへ修正。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "current taxonomyで必要な意味を表現できる。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "地震・津波→島・港町消失という伝説内因果と史実アンカーの確度差を保持。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全Dimensionがcurrent Content/Evidenceへ追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "独立再構成と20 Analysisの中心判断が一致。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D04はEVD-001からDirect、D17はEvidence不足でUとしconfidenceが整合。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "自然環境→地形への物理作用→物的損失の連鎖が整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "L1のみで過剰な社会現実効果を追加していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "地域文化としての継承を全国普及へ拡張していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "公開情報としてCOMMON_KNOWLEDGEを維持。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "1596年実在災害を伝説因果へ組み込むA4が定義に一致。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "競合版・介入不要という未支持推論を除去した。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "海没島伝説としてScopeと整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "1596年の実在地震・津波を因果アンカーに瓜生島が失われたとする地域伝説で、全面沈没の史実性は留保される。現代にはイベント・地域文化資源として再利用され、回避・制御方式はcurrent Evidenceから未確定。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D13",
+      "D15",
+      "D17",
+      "D19",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "PASS",
+    "notes": "Seq001 F001/F002を解消。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。D04/D17のFindingが解消され、00/10/20全てPass。"
+}
