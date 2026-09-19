@@ -83,7 +83,7 @@
     },
     {
       "content_id": "CNT-003",
-      "type": "setting",
+      "type": "location",
       "text": "高知県を中心とする地域伝承として民俗資料に記録されている。",
       "evidence_refs": [
         "EVD-002",
