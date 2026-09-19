@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0363",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0363_1973_toilet_paper_shortage_rumor/0363_20_analysis.json",
+    "commit_sha": "359b066aadcc6798890f55b9780933e8e167adff",
+    "blob_sha": "1f8745cf4d82591a06c3868a2ea264f4ff9b359a",
+    "reviewed_at": "2026-09-19T04:56:03.396Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "1973年VAR-001に限定。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D04=RETELLING、D15にRESOURCE_SCARCITY追加、D19=Uへ修正。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "gapなし。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "不足予測→買いだめ→品薄・パニックが整合。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全Dimensionがcurrent Content/Evidenceへ追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "独立再構成と中心判断が一致。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "口コミ再話と直接の品薄を保持し、社会流通範囲は未確定へ抑制。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "商品→情報誘発行動→買いだめ＋物資不足が整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "現実の買いだめ・経済パニックL3を維持。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "全国大衆を外しUへ抑制。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "NO_HIDDEN_TRUTHを維持。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "1973年史実・社会記録A4。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "派生亜種・全国流通の過剰推論を除去。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "物資不足流言事件として整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "不足予測が口コミで再話され、買いだめと実際の品薄を生む1973年流言事件。具体的社会流通範囲は未確定。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D05",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D18",
+      "D19",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "PASS",
+    "notes": "Seq001 F001-F003解消。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。全てPass。"
+}
