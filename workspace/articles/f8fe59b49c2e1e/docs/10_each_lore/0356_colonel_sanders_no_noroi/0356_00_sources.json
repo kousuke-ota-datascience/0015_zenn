@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0356",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "阪神タイガース公式「2009年ユニフォーム」関連史",
+      "locator": "2009年のカーネル像発見・呪い言説",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "not_applicable",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://m.hanshintigers.jp/data/uniform/uniform2009.html",
+      "notes": "阪神球団公式サイトの歴史コンテンツ。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "primary_or_contemporary",
+      "title": "日本KFC「『おかえり！ カーネル』人形納め」",
+      "locator": "1985年投げ込みから2009年発見・2024年人形納めまでの公式年表",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "not_applicable",
+      "evidence_role": [
+        "X",
+        "A",
+        "H"
+      ],
+      "url": "https://japan.kfc.co.jp/news_release/7751",
+      "notes": "像の現実の履歴を確認する一次企業資料。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-002",
+      "locator": "1985年年表",
+      "content": "1985年10月16日、阪神優勝に熱狂したファンが道頓堀店のカーネル立像を選手に見立てて胴上げし、道頓堀川へ投げ込んだ。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "2009年の球団史説明",
+      "content": "道頓堀に投げ込まれて長く見つからなかったカーネル像と、阪神がその後日本一になれないことを結び付ける『呪い』が長年語られ、2009年の像発見時にもその言説が参照された。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-002",
+      "locator": "2009年・2024年年表",
+      "content": "立像は2009年3月に24年ぶりに発見され、修復後『おかえり！カーネル』と命名・展示され、2024年には老朽化により住吉大社で人形納めが行われた。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-002",
+      "locator": "本文・年表",
+      "content": "日本KFCは回収後の像を『幸運の象徴』として扱い、イベントや阪神甲子園店等で展示した。",
+      "representation": "paraphrase"
+    }
+  ],
+  "notes": "1985年の投げ込みという実在事件と、以後の成績不振を像への冒涜の『呪い』で説明する俗説を区別する。"
+}
