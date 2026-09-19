@@ -80,7 +80,7 @@
     },
     {
       "content_id": "CNT-002",
-      "type": "causal_claim",
+      "type": "claim",
       "text": "俗説は、製品故障の時期をメーカー側の意図的な設計・寿命設定へ帰属する。",
       "evidence_refs": [
         "EVD-001"
@@ -88,7 +88,7 @@
     },
     {
       "content_id": "CNT-003",
-      "type": "counterclaim",
+      "type": "claim",
       "text": "2007年の株主総会でソニー側は語の存在を認識しつつ、品質向上策を説明しており、意図的な故障設計を認めてはいない。",
       "evidence_refs": [
         "EVD-002"
@@ -96,7 +96,7 @@
     },
     {
       "content_id": "CNT-004",
-      "type": "setting",
+      "type": "other",
       "text": "『ソニータイマー』という語は遅くとも2007年には株主総会で質問されるほど公に流通していた。",
       "evidence_refs": [
         "EVD-003"
