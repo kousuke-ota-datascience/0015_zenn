@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0275",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0275_bandaisan_tenaga_ashinaga/0275_20_analysis.json",
+    "commit_sha": "e9382aa89a833397a43b0770dda9c62bbcd701be",
+    "blob_sha": "ef84397fba552236c817c1beffd2a18c5383eff8",
+    "reviewed_at": "2026-09-19T02:04:41.184Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "主要形に限定。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D15をPROPERTY_DAMAGEへ修正しEvidenceと一致。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "gapなし。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "荒天→物損→封印が整合。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全Dimension追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "独立再構成と一致。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "作物損壊はEVD-001で直接支持。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "地域環境→環境操作→物損で整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "L1のみ。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "地域範囲保持。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "地元内部者I。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "磐梯山・会津A2。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "不足を追加推定しない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "退治・封印型地域伝承。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "手長足長が荒天で農作物を損壊し、弘法大師が箱に封じ祭祀する。D15はPROPERTY_DAMAGE。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D09",
+      "D10",
+      "D12",
+      "D13",
+      "D15",
+      "D17",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "PASS",
+    "notes": "Seq001 F001解消。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。全てPass。"
+}
