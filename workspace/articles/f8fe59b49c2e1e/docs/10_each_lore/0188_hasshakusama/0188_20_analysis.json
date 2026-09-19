@@ -288,14 +288,11 @@
     },
     {
       "dimension_id": "D15",
-      "status": "I",
-      "primary": {
-        "code_id": "D15.LIF.DISAPPEARANCE",
-        "parent_id": "D15.LIF"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "親族の対処は捕捉・連れ去りを避けるためと解釈できる。",
-      "manifestation": "標的の喪失・消失が想定される。",
+      "rationale": "current Evidenceは、語り手が八尺様に狙われ、防護・護送によって地域外へ逃れることまでを示すが、捕捉時の最終帰結を失踪・消失として特定しない。",
+      "manifestation": "標的となった場合の最終的な帰結領域は未確定。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
