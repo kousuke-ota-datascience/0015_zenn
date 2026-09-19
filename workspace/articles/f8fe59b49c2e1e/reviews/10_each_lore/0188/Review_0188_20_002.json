@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0188",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_20_analysis.json",
+    "commit_sha": "bdf28ff8f69d621d86c69b24203a6d566611a22f",
+    "blob_sha": "ab69aec5b59623baec07bba234fb99baef90ac77",
+    "reviewed_at": "2026-09-19T01:52:19.351Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001の2008年初出連投に限定し、後代派生を除外。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D15をUへ修正し、追跡・防護・脱出と未確定終端を各Dimensionへ過不足なく分離した。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "current taxonomyで必要な意味を表現でき、D15はEvidence不足としてUを使用。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "遭遇→標的化→追跡→防護・脱出→残余脅威という因果列がContentと整合。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全Dimensionがcurrent Content/Evidenceへ追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "独立再構成と20 Analysisの中心判断が一致。失踪という過剰帰結は除去済み。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "Evidence不足のD15をUとし、直接・推論可能なDimensionのみD/Iに限定。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=語り手、D13=追跡、D15=Uとして、対象・作用・未確定帰結を分離。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18=L1のみでscope外社会効果を追加していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公開掲示板流通を全国人口普及と同一視していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "物語内部の地域知識保持者をコードし、情報不足をNO_ONE_KNOWSへ短絡していない。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "特定地点を推測せず一般的現実背景A1に限定。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "D15をUへ抑制し、Evidenceにない捕捉後の帰結を付加していない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "ネット怪談／怪異遭遇譚はScopeと整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "異常に背の高い怪異との遭遇後、語り手が標的となり、親族の防護手順を経て地域外へ脱出する。後日の境界地蔵破損により追跡・再接近の可能性は残るが、捕捉後の最終帰結は未確定である。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D17",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-002",
+      "EVD-003",
+      "EVD-004"
+    ],
+    "status": "PASS",
+    "notes": "Seq001 F001はD15=Uへの修正で解消。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。Seq001 F001のD15 Evidence ceiling超過が解消され、00/10/20全てPass。"
+}
