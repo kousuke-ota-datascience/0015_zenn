@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0275",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0275_bandaisan_tenaga_ashinaga/0275_00_sources.json",
+    "commit_sha": "8a61b60aff70bf6e633d91e2610b8f3283690248",
+    "blob_sha": "3dc869f6d627b673f495595755c1adaec1bc60fe",
+    "reviewed_at": "2026-09-19T02:03:03.727Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "日文研DBを研究二次資料として扱い、1992年を成立年へ格上げしていない。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "荒天被害・封印・書誌を分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EvidenceはDB要約範囲内。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "indirect derivativeとして一次関係を保持。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1992年は確認資料年としてのみ使用。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立年代・史実性を未確定として保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。資料階層と成立年代留保を確認しPass。"
+}
