@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0365",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0365_kanto_earthquake_poison_well_rumor/0365_10_contents.json",
+    "commit_sha": "85626867c4eed46c175099b27bb13cfd773fff0f",
+    "blob_sha": "2e3e19d1201d2e9bbee4316d9e3c923890ee88d0",
+    "reviewed_at": "2026-09-19T04:59:42.861Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜004はEVD-001〜004へ追跡でき、虚偽主張と現実被害を区別。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "震災混乱→差別的流言→敵視→現実の殺傷・抑圧という因果を再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "放火・暴動・投毒等を朝鮮人へ虚偽に帰属した流言群を一クラスとしてScope化。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "初発話者・伝播経路を未確定で保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全4 unitを保持。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1923年関東大震災直後の情報途絶・混乱下で、朝鮮人に放火・暴動・投毒等を虚偽に帰属する流言が拡散し、現実の警戒・排斥・殺傷へ波及した。",
+    "reference_story": "current Contentと一致し、虚偽主張を事実化しない。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "震災混乱→根拠のない差別的流言→敵視・現実の殺傷という事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "詳細照合後も流言情報から現実暴力への因果が中心。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "根拠のない差別的流言",
+        "blind_reconstruction": "虚偽として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "情報途絶・断片情報等の形成条件",
+        "blind_reconstruction": "背景条件として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "現実の警戒・排斥・殺傷",
+        "blind_reconstruction": "現実被害として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "公的資料による流言検証",
+        "blind_reconstruction": "検証位置付けとして保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。意味保存と安全な虚偽表現を確認しPass。"
+}
