@@ -266,14 +266,14 @@
     },
     {
       "dimension_id": "D15",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D15.BOD.DEATH",
         "parent_id": "D15.BOD"
       },
       "secondary": [],
-      "rationale": "新規犠牲者の死が循環を維持する。",
-      "manifestation": "死亡。",
+      "rationale": "七人の死霊的集団へ新たな犠牲者が組み込まれ、最古参が成仏する循環から、新規犠牲者の死亡を合理的に推定できる。ただしcanonical Evidenceの文言として死亡は直接明示されない。",
+      "manifestation": "新規犠牲者の死亡が循環構造から推定される。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
