@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0250",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "怪異・妖怪伝承データベース「七人ミサキ」",
+      "locator": "番号2180728／民間伝承 3巻11号（1938）",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://www.nichibun.ac.jp/YoukaiCard/2180728.html",
+      "notes": "国際日本文化研究センターによる伝承資料メタデータ・要約。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "reliable_secondary_or_research",
+      "title": "怪異・妖怪伝承データベース 呼称検索（四国：ミサキ）",
+      "locator": "七人ミサキ／七人塚の1935年・1938年等の収録一覧",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "A"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/ksearch.cgi?Area=%E5%9B%9B%E5%9B%BD&Name=%E3%83%9F%E3%82%B5%E3%82%AD&Pref=",
+      "notes": "収録資料の年代分布確認に使用。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "要約・高知県宿毛市・1938年",
+      "content": "七人ミサキは常に七人で組み、人を一人引くたびに最も古い一人が成仏すると伝えられている。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-002",
+      "locator": "呼称検索結果",
+      "content": "日文研データベースには「七人ミサキ／七人塚」を含む資料が1920年代後半から複数収録され、1935年の高知県資料なども確認できる。",
+      "representation": "paraphrase",
+      "uncertainty": "データベース収録年は伝承の成立年そのものを意味しない。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-001",
+      "locator": "書誌情報",
+      "content": "1938年資料は『民間伝承』3巻11号掲載で、地域は高知県宿毛市として整理されている。",
+      "representation": "paraphrase"
+    }
+  ],
+  "notes": "成立時期そのものを資料刊行年から推測せず、確認できる早期民俗資料の共有核のみをScopeにする。"
+}
