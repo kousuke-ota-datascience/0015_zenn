@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0250",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0250_shichinin_misaki/0250_00_sources.json",
+    "commit_sha": "5472298354d26b96734b6abeb2b3fe0010dd51b6",
+    "blob_sha": "1e562b0731615cc84c19e250305b8d12a91d2102",
+    "reviewed_at": "2026-09-19T01:59:38.775Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "日文研DBを研究二次資料として扱い、収録年を成立年へ格上げしていない。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "七人循環核、早期収録、地域書誌を分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EvidenceはDB要約・書誌範囲内。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "民俗資料への間接derivativeとして一次関係を保持。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1920-30年代収録を確認点として扱い絶対起源化しない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立年代・異伝差を未確定として保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。資料階層と成立年代留保を確認しPass。"
+}
