@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0349",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0349_sony_timer/0349_20_analysis.json",
+    "commit_sha": "e67dd5e64780f8b5b927833359b0059861c8eb93",
+    "blob_sha": "d3b76c61014a5757644ef837c457e10960f542ac",
+    "reviewed_at": "2026-09-19T04:44:50.486Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "一定期間後の故障を意図的設計へ帰属する共有核に限定。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D04=U、D15=DEVICE_DATA_LOSS、D19=OPEN_FORUM_WEBへ修正し定義と一致。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "D13の計画的製品寿命設計は直接対応Childがなくgap明示を維持。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "時間経過→意図的設計→機器故障という俗説内因果を保持。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全Dimensionがcurrent Content/Evidenceへ追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "独立再構成と中心判断が一致。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "未確認の生成変容はU、公開Web流通と機器故障はDとしてEvidence confidenceに整合。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "製品→計画的寿命設計gap→機器故障で整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "L1のみ。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公開Webを全国的大衆へ拡張しない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "企業内部を特権情報保持者とするIを維持。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "実在企業・商品A2。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "定型化と全国公衆圏の過剰推論を除去。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "企業・製品故障俗説として整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "一定期間後の機器故障をソニーの意図的寿命設計へ帰属する俗説。公開Webでの流通は確認できるが、生成・変容過程は未確定。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D07",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "PASS",
+    "notes": "Seq001 F001-F003を解消。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。全てPass。"
+}
