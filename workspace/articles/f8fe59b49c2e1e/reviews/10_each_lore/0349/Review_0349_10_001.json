@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0349",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0349_sony_timer/0349_10_contents.json",
+    "commit_sha": "4394eff73134529cf40ecaeebad75c63d28f8c61",
+    "blob_sha": "dcb078c5dd19b62e375e42b187d8caf5352c22a4",
+    "reviewed_at": "2026-09-19T04:43:36.729Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜004はEVD-001〜003へ追跡可能で、意図的設計を事実認定していない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "一定期間後の故障→メーカー意図への帰属→企業側は認めず品質策を説明、という核を再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "一定期間後の故障を意図的寿命設計へ帰属する共有核に限定。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立年代・最古媒体・実際の故障統計・意図的設計の根拠を未確定のまま保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全4 unitを保持。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "ソニー製品が保証期間など一定期間後に故障するよう意図的に設計されているという俗説。2007年には株主総会で公に言及されたが、企業側は意図的故障を認めず品質向上策を説明した。",
+    "reference_story": "current Content Unitsと一致。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "一定期間後の製品故障をメーカーの意図的寿命設計へ帰属する俗説核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "詳細照合後も俗説核と事実性留保は不変。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "一定期間後に故障するタイマー俗説",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "故障をメーカー意図へ帰属",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "企業側は意図的設計を認めない",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "2007年には公的に流通",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。意味保存と不確実性保持を確認しPass。"
+}
