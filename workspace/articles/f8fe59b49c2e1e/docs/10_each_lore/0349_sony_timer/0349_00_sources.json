@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0349",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "AV Watch「ソニー、定時株主総会を開催。『利益を伴う成長へ』」",
+      "locator": "2007年6月21日株主総会・品質に関する質疑",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "not_applicable",
+      "evidence_role": [
+        "C",
+        "X",
+        "A"
+      ],
+      "url": "https://av.watch.impress.co.jp/docs/20070621/sony1.htm",
+      "notes": "当時の株主総会で『ソニータイマー』という語が質問に現れ、社長が語の存在を認識していると回答した報道。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "品質に関する質疑",
+      "content": "2007年のソニー株主総会で、一定期間が過ぎると製品が壊れるという意味の『ソニータイマー』が製品信頼性への質問として取り上げられ、中鉢社長はその言葉の存在を認識していると答えた。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "同質疑への回答",
+      "content": "ソニー側は意図的な寿命設計を認めるのではなく、品質を最優先して不良防止と顧客の声の設計への反映を強化していると説明した。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-001",
+      "locator": "記事日付・会場",
+      "content": "2007年6月21日の第90回定時株主総会で同語が公に議論されており、少なくともこの時点で十分に認知された俗称だったことが確認できる。",
+      "representation": "paraphrase"
+    }
+  ],
+  "notes": "『一定期間後に故障するよう意図的に設計されている』という俗説と、実際にその設計が存在するという事実認定を分離する。"
+}
