@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0198",
+  "macro_category": "全国型怪異・儀式",
+  "entry_type": "実行儀式型ネットロア",
+  "version_scope": {
+    "description": "2007年4月21日の初期実況で確認できる手順・怪異主張。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "notes": "後代の改訂版・派生実験は除外。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "D",
+      "primary": {
+        "code_id": "D01.G6"
+      },
+      "secondary": [],
+      "rationale": "初期実況ログが2007年4月21日の日付を保持する。",
+      "manifestation": "2000年代成立。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-004"
+      ]
+    },
+    {
+      "dimension_id": "D02",
+      "status": "D",
+      "primary": {
+        "code_id": "D02.WEB.FORUM",
+        "parent_id": "D02.WEB"
+      },
+      "secondary": [],
+      "rationale": "成立時の実行手順と実況が2ちゃんねる掲示板で確認できる。",
+      "manifestation": "オープンWeb掲示板。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D03",
+      "status": "D",
+      "primary": {
+        "code_id": "D03.WEB.FORUM",
+        "parent_id": "D03.WEB"
+      },
+      "secondary": [],
+      "rationale": "Scope内の流通は初期掲示板実況で直接確認できる。",
+      "manifestation": "公開フォーラムで手順が共有された。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D04",
+      "status": "D",
+      "primary": {
+        "code_id": "D04.COL.LIVE_COCREATION",
+        "parent_id": "D04.COL"
+      },
+      "secondary": [],
+      "rationale": "投稿者が手順を提示し、他の参加者が同時進行で実行・実況する。",
+      "manifestation": "ライブ型の共同生成。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D05",
+      "status": "D",
+      "primary": {
+        "code_id": "D05.RUL.RITUAL_PROCEDURE",
+        "parent_id": "D05.RUL"
+      },
+      "secondary": [
+        {
+          "code_id": "D05.HYB.COLLAB_THREAD",
+          "parent_id": "D05.HYB"
+        }
+      ],
+      "rationale": "内容の骨格は開始から終了までの具体的な実行規則。",
+      "manifestation": "儀式手順形式。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D06",
+      "status": "D",
+      "primary": {
+        "code_id": "D06.T5"
+      },
+      "secondary": [],
+      "rationale": "『手順を行えば異変が起きる』という条件付きの信念・実験として提示される。",
+      "manifestation": "条件付き信念。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D07",
+      "status": "D",
+      "primary": {
+        "code_id": "D07.ANO.UNEXPLAINED_EVENT",
+        "parent_id": "D07.ANO"
+      },
+      "secondary": [],
+      "rationale": "意味形成対象は儀式中の物音・気配・映像異常等。",
+      "manifestation": "説明困難な出来事。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D08",
+      "status": "D",
+      "primary": {
+        "code_id": "D08.DEX.DIRECT_EVENT",
+        "parent_id": "D08.DEX"
+      },
+      "secondary": [],
+      "rationale": "実況者自身の同時進行の経験報告が意味形成契機。",
+      "manifestation": "直接イベントの実況。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D09",
+      "status": "D",
+      "primary": {
+        "code_id": "D09.CTL.RITUAL_RULE",
+        "parent_id": "D09.CTL"
+      },
+      "secondary": [],
+      "rationale": "異変を起こし、また終えるための手順が規則化される。",
+      "manifestation": "儀式規則の形成。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D10",
+      "status": "I",
+      "primary": {
+        "code_id": "D10.SUP.GHOST_SPIRIT",
+        "parent_id": "D10.SUP"
+      },
+      "secondary": [],
+      "rationale": "俗説では儀式が霊的存在を招くものと理解される。",
+      "manifestation": "霊的主体が因果源と推定される。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-004"
+      ]
+    },
+    {
+      "dimension_id": "D11",
+      "status": "D",
+      "primary": {
+        "code_id": "D11.MAN.PERFORM_RITUAL",
+        "parent_id": "D11.MAN"
+      },
+      "secondary": [],
+      "rationale": "所定の儀式を実行すること自体が発動条件。",
+      "manifestation": "儀式実行。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D12",
+      "status": "D",
+      "primary": {
+        "code_id": "D12.FOC.PRACTITIONER",
+        "parent_id": "D12.FOC"
+      },
+      "secondary": [],
+      "rationale": "異変の主な対象は実行者本人。",
+      "manifestation": "実践者が焦点対象。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D13",
+      "status": "I",
+      "primary": {
+        "code_id": "D13.REL.OTHER_ANOMALY_INTERFERENCE",
+        "parent_id": "D13.REL"
+      },
+      "secondary": [],
+      "rationale": "報告される物音・映像異常など、実行者周囲への異常干渉として現れる。",
+      "manifestation": "怪異干渉。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D14",
+      "status": "D",
+      "primary": {
+        "code_id": "D14.NEG"
+      },
+      "secondary": [],
+      "rationale": "危険や恐怖を伴う実行として語られる。",
+      "manifestation": "負の帰結が中心。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D15",
+      "status": "D",
+      "primary": {
+        "code_id": "D15.MND.FEAR_TRAUMA",
+        "parent_id": "D15.MND"
+      },
+      "secondary": [],
+      "rationale": "実況で強い恐怖・不安が主要な帰結として示される。",
+      "manifestation": "精神的恐怖。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D16",
+      "status": "D",
+      "primary": {
+        "code_id": "D16.EVT.SEQUENTIAL_EPISODE",
+        "parent_id": "D16.EVT"
+      },
+      "secondary": [],
+      "rationale": "準備、開始、潜伏、終了の順序を持つ。",
+      "manifestation": "段階的な単一エピソード。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D17",
+      "status": "D",
+      "primary": {
+        "code_id": "D17.RUL.PROCEDURAL_RULE",
+        "parent_id": "D17.RUL"
+      },
+      "secondary": [
+        {
+          "code_id": "D17.RIT.RITUAL_CLOSURE",
+          "parent_id": "D17.RIT"
+        }
+      ],
+      "rationale": "塩水と終了宣言を含む所定手順が制御法。",
+      "manifestation": "手順遵守で閉じる。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D18",
+      "status": "D",
+      "primary": {
+        "code_id": "D18.L1"
+      },
+      "secondary": [],
+      "rationale": "因果作用は儀式を行った物語内部の実行者に向かう。",
+      "manifestation": "伝承内因果層。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D19",
+      "status": "D",
+      "primary": {
+        "code_id": "D19.NET.OPEN_FORUM_WEB",
+        "parent_id": "D19.NET"
+      },
+      "secondary": [],
+      "rationale": "公開掲示板で参加者を募りながら拡散した。",
+      "manifestation": "オープンフォーラム圏。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D20",
+      "status": "D",
+      "primary": {
+        "code_id": "D20.NON.NO_HIDDEN_TRUTH",
+        "parent_id": "D20.NON"
+      },
+      "secondary": [],
+      "rationale": "手順と終了法はスレッド上で公開され、特定の秘密保持者に限定されない。",
+      "manifestation": "特権情報保持者なし。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D21",
+      "status": "D",
+      "primary": {
+        "code_id": "D21.A1"
+      },
+      "secondary": [],
+      "rationale": "一般家庭の浴室・室内という現実背景を使うが、特定施設には依存しない。",
+      "manifestation": "一般的現実背景。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    }
+  ],
+  "analysis_notes": "実行手順を記述するが、危険な行為を推奨する目的ではなく伝承構造の分析対象として記録する。"
+}
