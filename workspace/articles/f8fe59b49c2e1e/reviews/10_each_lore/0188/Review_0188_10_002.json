@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0188",
+  "artifact": "10",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_10_contents.json",
+    "commit_sha": "d32a9447e63e930a2dc9b32051b380c284ac244d",
+    "blob_sha": "e806b666d0eaa2170be8693c75ac78084ff0e576",
+    "reviewed_at": "2026-09-19T01:52:19.351Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "Seq001からcanonical 10は不変。CNT-001〜004は00 Evidenceへ追跡可能。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "遭遇→標的化→防護→地域外脱出→残余脅威をSummaryから再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "2008年初出連投VAR-001と後代派生の境界を維持。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "実話性・舞台・由来を未確定のまま保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全4 unitをblind reconstructionに保持。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "田舎の親類宅で異常に背の高い女性様の怪異を目撃した語り手が狙われたと告げられ、封じた部屋で夜を越した後、親族らに守られて地域外へ逃れる。後日の地蔵破損により脅威の継続可能性が残る。",
+    "reference_story": "Content照合で遭遇、標的化、防護手順、脱出、未解決の終端を保持。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "語り手、八尺様、祖父母・親族",
+        "reference": "主要主体と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "狙われた語り手",
+        "reference": "作用対象と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "怪異の目撃と声",
+        "reference": "発端と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "八尺様",
+        "reference": "因果主体と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "標的への接近・追跡",
+        "reference": "脅威機構と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "目撃者から標的となり、防護下で避難",
+        "reference": "状態遷移と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "目撃→一夜の籠城→翌朝脱出→後日の残余脅威",
+        "reference": "時間構造と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "夜明けまで出ない、防護を崩さない、単独移動しない",
+        "reference": "規則と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "封鎖室待機と複数人護送",
+        "reference": "回避・制御と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "当面逃れるが再来可能性が残る",
+        "reference": "終端と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "実話性、実在地域、由来は未確定",
+        "reference": "不確実性と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "2008年初出連投のみを主要形とする",
+        "reference": "variant boundaryと一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "20のD15修正はContent再構成を変更せず、主要物語構造は不変。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "怪異の目撃と声",
+        "blind_reconstruction": "遭遇として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "八尺様による標的化",
+        "blind_reconstruction": "標的化として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "防護と護送による退避",
+        "blind_reconstruction": "回避手順として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "脱出後も残る脅威可能性",
+        "blind_reconstruction": "未解決終端として保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。20修正後の完全cycle再Review。10はcurrent target不変でPass。"
+}
