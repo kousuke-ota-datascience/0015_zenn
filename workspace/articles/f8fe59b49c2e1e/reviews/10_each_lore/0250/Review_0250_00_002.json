@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0250",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0250_shichinin_misaki/0250_00_sources.json",
+    "commit_sha": "5472298354d26b96734b6abeb2b3fe0010dd51b6",
+    "blob_sha": "1e562b0731615cc84c19e250305b8d12a91d2102",
+    "reviewed_at": "2026-09-19T02:01:11.589Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "canonical 00不変。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "Evidence境界不変。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "資料範囲内。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "二次資料として距離を保持。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "収録年を起源化しない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立年代等を未確定のまま保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。00不変でPass。"
+}
