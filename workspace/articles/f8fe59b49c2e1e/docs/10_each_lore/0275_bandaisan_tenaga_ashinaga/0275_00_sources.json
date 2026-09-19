@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0275",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "怪異・妖怪伝承データベース「手長足長」",
+      "locator": "ID 0030434／『あしなか』1992年収録",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0030434",
+      "notes": "国際日本文化研究センターの伝承資料データベース。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "要約",
+      "content": "磐梯山の手長・足長は雲を集めて会津一帯を暗くし、洪水や嵐を起こして農作物を荒らす怪物として語られる。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "要約後半",
+      "content": "弘法大師が手長・足長を欺いて小さな箱に入れ、封じた後に磐梯明神として祀ったとされる。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-001",
+      "locator": "書誌情報",
+      "content": "日文研データベースでは福島県会津・磐梯山に関わる伝承として、1992年の資料に収録されている。",
+      "representation": "paraphrase",
+      "uncertainty": "1992年は収録資料の年で、伝承の成立年を示さない。"
+    }
+  ],
+  "notes": "収録資料が示す主要形のみを扱い、成立年代を推定で遡らせない。"
+}
