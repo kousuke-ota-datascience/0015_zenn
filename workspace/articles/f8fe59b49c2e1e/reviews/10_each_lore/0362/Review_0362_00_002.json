@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0362",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_00_sources.json",
+    "commit_sha": "890112f010f345acae88dd9dfb2891c0d3d0ccf4",
+    "blob_sha": "f484b69c726b6544914b21fe6308a47efd68b605",
+    "reviewed_at": "2026-09-19T04:52:10.470Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "canonical 00不変。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "事件核と研究書誌を分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "本文未確認の伝播逸話を追加していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "警察白書と同時代研究の距離を保持。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1973年事件を直接扱う。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "文言・伝播経路の細部を未確定で保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。00不変でPass。"
+}
