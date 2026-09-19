@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0349",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0349_sony_timer/0349_00_sources.json",
+    "commit_sha": "678ff2357e679016029026e47a811ce23f7f71ff",
+    "blob_sha": "d842ddb1437d61e755f59aa284a622b10fc84756",
+    "reviewed_at": "2026-09-19T04:43:36.729Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "2007年株主総会報道を、公的認知と企業側否認の確認点として使用し、意図的寿命設計の実在証拠へ格上げしていない。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "俗称の公的言及、企業側回答、2007年時点の認知を分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "各Evidenceは記事記載範囲内で、計画的故障の事実を追加認定していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "報道記事を一次資料そのものではなくnot_applicableの確認資料として扱う。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2007年を確認点としてのみ使用し、語の成立年代・最古媒体を断定しない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "実際の故障統計、語の成立、意図的設計の根拠を未確定として保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。俗説の存在と俗説内容の事実性の分離を確認しPass。"
+}
