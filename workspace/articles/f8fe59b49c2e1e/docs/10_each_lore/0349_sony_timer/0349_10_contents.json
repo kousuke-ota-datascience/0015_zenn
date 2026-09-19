@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0349",
+  "lore_name": "ソニータイマー",
+  "summary": {
+    "narrative": "ソニー製品が保証期間など一定の時期を過ぎた頃に故障するよう意図的に設計されている、という俗説。2007年の株主総会ではこの語自体の存在が公に認識されていたが、ソニー側が意図的な寿命設計を認めたわけではなく、品質向上策を説明している。",
+    "structure": {
+      "primary_actors": {
+        "status": "known",
+        "value": [
+          "ソニー",
+          "ソニー製品の利用者"
+        ]
+      },
+      "affected_targets": {
+        "status": "known",
+        "value": "ソニー製品と利用者"
+      },
+      "entry_trigger": {
+        "status": "known",
+        "value": "購入後一定期間・保証期間の経過と故障の発生"
+      },
+      "causal_agent": {
+        "status": "known",
+        "value": "俗説上はメーカーの意図的設計"
+      },
+      "mechanism": {
+        "status": "known",
+        "value": "一定期間後に故障するよう製品寿命を設計していると解釈する"
+      },
+      "state_transition": {
+        "status": "known",
+        "value": "正常稼働から、特定期間経過後の故障へ"
+      },
+      "temporal_structure": {
+        "status": "known",
+        "value": "一定期間の経過後に故障するという遅延構造"
+      },
+      "rules_and_taboos": {
+        "status": "not_applicable",
+        "value": null
+      },
+      "avoidance_control": {
+        "status": "unknown",
+        "value": null
+      },
+      "terminal_state": {
+        "status": "known",
+        "value": "製品故障・買い替え等を迫られると語られる"
+      },
+      "uncertainties": {
+        "status": "known",
+        "value": [
+          "語の最初の発生時期",
+          "実際の故障統計と俗説の関係",
+          "意図的寿命設計の根拠"
+        ]
+      },
+      "variant_boundaries": {
+        "status": "known",
+        "value": "『一定期間後の故障をメーカーの意図へ帰属する』共有核を対象"
+      }
+    },
+    "coverage_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ]
+  },
+  "content_units": [
+    {
+      "content_id": "CNT-001",
+      "type": "claim",
+      "text": "ソニー製品には、保証期間など一定の時期を過ぎた頃に故障するよう仕込まれた『タイマー』がある、という俗説が『ソニータイマー』と呼ばれる。",
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "notes": "俗説の内容であり、意図的設計の事実を示さない。"
+    },
+    {
+      "content_id": "CNT-002",
+      "type": "causal_claim",
+      "text": "俗説は、製品故障の時期をメーカー側の意図的な設計・寿命設定へ帰属する。",
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "content_id": "CNT-003",
+      "type": "counterclaim",
+      "text": "2007年の株主総会でソニー側は語の存在を認識しつつ、品質向上策を説明しており、意図的な故障設計を認めてはいない。",
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "content_id": "CNT-004",
+      "type": "setting",
+      "text": "『ソニータイマー』という語は遅くとも2007年には株主総会で質問されるほど公に流通していた。",
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "VAR-001",
+      "kind": "initial",
+      "description": "一定期間後の故障を意図的寿命設計へ帰属する『ソニータイマー』の共有核。",
+      "attestation": "2007年株主総会報道で語の公的認知を確認。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003"
+      ]
+    }
+  ],
+  "uncertainties": [
+    {
+      "text": "この調査範囲では語の成立年代・最古媒体を確定していない。",
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "text": "意図的な故障設計が実在するという一次証拠は確認しておらず、俗説内容として記述する。",
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    }
+  ]
+}
