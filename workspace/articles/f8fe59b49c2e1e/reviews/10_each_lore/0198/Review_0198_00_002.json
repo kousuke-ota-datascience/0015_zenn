@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0198",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_00_sources.json",
+    "commit_sha": "03db34662f15a6d98757e454e3246e70e628e28c",
+    "blob_sha": "e78f624dbfc385e52b6e92f0ff489967915d66f3",
+    "reviewed_at": "2026-09-19T01:56:59.794Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "canonical 00不変。初期実況保存ログと初期まとめの資料階層を保持。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "準備・手順・実況・成立時期のEvidence境界を維持。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "超常原因を独立事実化していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "mirror/reprintとして一次資料との距離を明示。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2007年4月21日を確認点として扱う。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "超常原因と以前の流通を未確定のまま保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。20修正後の完全cycle再Review。00は不変でPass。"
+}
