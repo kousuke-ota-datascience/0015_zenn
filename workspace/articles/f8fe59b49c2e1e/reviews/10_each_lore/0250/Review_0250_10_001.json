@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0250",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0250_shichinin_misaki/0250_10_contents.json",
+    "commit_sha": "2aedca1c59847ae11e29e0d4e3c716007a5d5008",
+    "blob_sha": "3675202cac43d55c552158a48d08bffd101df0cd",
+    "reviewed_at": "2026-09-19T01:59:38.775Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "3 Content UnitはいずれもEVD-001〜003へ追跡可能。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "七人維持の循環、犠牲者加入、最古参成仏を再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "早期高知資料の共有核に限定。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立年代・発動条件・地域差を保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全3 unitを保持。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "七人の死霊的集団が新たな人を引き込み、そのたび最古参が成仏して七人を維持する地域伝承。",
+    "reference_story": "Content照合で七人循環核と地域性を保持。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "七人ミサキ",
+        "reference": "主体一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "新たに引かれる人",
+        "reference": "対象一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "共有核では発動条件不明",
+        "reference": "不明を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "七人ミサキ",
+        "reference": "因果主体一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "新規犠牲者加入と最古参の成仏",
+        "reference": "機構一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "被害者が構成員となり最古参が離脱",
+        "reference": "状態遷移一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "犠牲者ごとに更新される連鎖",
+        "reference": "時間一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "共有核に規則・禁忌なし",
+        "reference": "不明を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "共有核に回避法なし",
+        "reference": "不明を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "個人は成仏し得るが集団は七人で継続",
+        "reference": "終端一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "成立年代・発動条件・地域差は不明",
+        "reference": "不確実性一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "高知の早期資料の七人循環核",
+        "reference": "境界一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "詳細照合後も循環構造は不変。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "七人の死者・霊的存在の集団",
+        "blind_reconstruction": "七人集団として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "新規犠牲者加入と最古参成仏",
+        "blind_reconstruction": "循環機構として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "高知中心の地域伝承",
+        "blind_reconstruction": "地域性として保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。意味保存を確認しPass。"
+}
