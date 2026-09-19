@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0363",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0363_1973_toilet_paper_shortage_rumor/0363_20_analysis.json",
+    "commit_sha": "8c81189ec1edfba808eca8192de3e10cd0a2ca92",
+    "blob_sha": "8f8a064aa4b7c9b4fb25e3ae02ce2d4bacf1ca68",
+    "reviewed_at": "2026-09-19T04:54:34.790Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "1973年口コミ型VAR-001に限定し2020年SNS型を除外。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D04が口コミ再話を派生増殖と誤分類し、D15は品薄帰結を欠落、D19は全国大衆までEvidenceを越える。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "RETELLING、RESOURCE_SCARCITY、Uで表現可能。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "不足予測→買いだめ→品薄・パニックの因果はcurrent Contentと整合。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D04派生亜種とD19全国大衆は直接Evidenceへ追跡できず、D15はEVD-002/003の資源不足帰結を取りこぼす。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "独立再構成では口コミによる再話、買いだめと品薄は復元できるが、派生版生成・全国大衆共有は復元できない。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D04=RETELLING/D、D15 secondary=RESOURCE_SCARCITY、D19=UがEvidence confidenceに適合。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "FINDING",
+      "notes": "商品→情報誘発行動→買いだめに加え、実際の品薄という物資不足帰結もD15へ保持すべき。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "噂が現実の買いだめ・経済パニックを生じたL3が直接支持。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "FINDING",
+      "notes": "著名な全国史上の事件であることと、当時全国大衆に実流通したEvidenceは別。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "不足予測自体は公開噂で秘密保持者を必要としない。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "1973年オイルショックと買いだめ・品薄を因果統合するA4。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "口コミ拡大から派生亜種、社会経済背景から全国大衆共有を推論する点がceiling超過。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "物資不足流言事件として整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "1973年の危機状況下で不足予測が口コミによって再話され、買いだめと実際の品薄・パニックを生む。流通の具体的社会範囲はcurrent Evidenceから全国規模まで固定しない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D05",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D18",
+      "D19",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "FINDING",
+    "notes": "D04/D15/D19を修正すれば中心モデルは保持。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D04 DERIVATIVE_PROLIFERATIONは口コミ再話を派生亜種生成と誤分類している。",
+      "rationale": "EVD-002は噂が口コミで広がったことを直接示す。これは別の語り手による再叙述RETELLINGに適合し、パロディ・亜種・派生ルール生成は示さない。",
+      "impact": "生成・変容パターンを過剰に派生化する。",
+      "fix_direction": "D04をD04.VAR.RETELLING / Dへ変更する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "dimension_refs": [
+        "D04"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D15が買いだめ行動のみで、直接記録された実際の品薄を取りこぼす。",
+      "rationale": "EVD-002/003とCNT-003は買いだめと実際の物不足・品薄の双方を主要帰結として示す。",
+      "impact": "帰結領域の物的側面を欠落させる。",
+      "fix_direction": "D15 primary PURCHASE_HOARDINGを維持し、secondaryにD15.MAT.RESOURCE_SCARCITYを追加する。",
+      "content_refs": [
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "dimension_refs": [
+        "D15"
+      ]
+    },
+    {
+      "finding_id": "F003",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D19 NATIONAL_PUBLICはcurrent Evidenceより広い。",
+      "rationale": "昭和館資料は1973年の噂・買いだめ・経済パニックを記録するが、全国規模の一般社会へ実際に流通したことを直接固定しない。",
+      "impact": "歴史的著名性や危機背景を当時の全国社会流通へ読み替える。",
+      "fix_direction": "D19をUとしてprimary/secondaryを外す。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003"
+      ],
+      "dimension_refs": [
+        "D19"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review cycle 001。D04/D15/D19の3点をModerate Finding。00/10はPass。"
+}
