@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0356",
+  "artifact": "10",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0356_colonel_sanders_no_noroi/0356_10_contents.json",
+    "commit_sha": "ccce01a77e776049a15f50e8dce78a9bde170bb4",
+    "blob_sha": "2e16fa1b68216fc7fa14a55dbf7f9c22287ea5de",
+    "reviewed_at": "2026-09-19T04:48:11.225Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "canonical 10不変。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "投げ込み→呪い説→回収・幸運象徴化を再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "共有核に限定。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立時期・超自然因果を未確定で保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全4 unitを保持。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1985年のカーネル像投げ込みと阪神の長期不振を呪いで結ぶスポーツ俗説。像は2009年に回収され、その後は幸運の象徴として扱われた。",
+    "reference_story": "current Contentと一致。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "カーネル像投げ込みと阪神不振を結ぶ呪い俗説の共有核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "D01/D19修正はContentを変更しない。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "1985年像投げ込み",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "成績不振を呪いで説明",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "2009年回収と幸運象徴化",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "文化的意味と現実の扱い",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。10不変でPass。"
+}
