@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0198",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_20_analysis.json",
+    "commit_sha": "146b16ddb36d33b4ec76e6a685086d373f22c1ed",
+    "blob_sha": "d1551229a00d47bc2d14f79c3abc91dbdb366714",
+    "reviewed_at": "2026-09-19T01:56:59.794Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "2007年4月初期実況VAR-001に限定。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D15をUへ抑制し、D18にL3を追加。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "current taxonomyで表現可能。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "儀式→異変→終了の構造を保持。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全Dimensionがcurrent Content/Evidenceへ追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "独立再構成と中心判断が一致。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "心理帰結不明をUとし、直接確認できる現実行動をD18 L3へ反映。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12実行者→D13異常干渉→D15未確定を分離。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "同一Scope内の複数参加者の実行・実況をL3として反映。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公開掲示板と全国普及を混同しない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "公開手順を特権保持なしとして扱う。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "一般家庭A1に限定。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "恐怖・トラウマを追加推定しない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "実行儀式型ネットロアと整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "公開掲示板で儀式手順が提示され、複数参加者が実際に実行・実況する。伝承内因果L1と、流通が現実の実行行動を生んだL3を保持し、実行者の心理的最終帰結は未確定とする。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D05",
+      "D09",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D18",
+      "D19"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "PASS",
+    "notes": "Seq001 F001/F002を解消。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。D15とD18のFindingが解消され全てPass。"
+}
