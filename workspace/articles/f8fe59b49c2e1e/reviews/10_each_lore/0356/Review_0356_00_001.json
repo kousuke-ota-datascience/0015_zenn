@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0356",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0356_colonel_sanders_no_noroi/0356_00_sources.json",
+    "commit_sha": "2138336c0b7fd0a00171dfb86f7fdc3a992f160d",
+    "blob_sha": "ac5f19398f792df6f1f2f3c034cfb92d2af9e321",
+    "reviewed_at": "2026-09-19T04:47:03.369Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "球団公式と日本KFC公式を、呪い言説と像の実在履歴の役割別Evidenceとして使用。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "1985年投げ込み、呪い言説、2009年回収、幸運象徴化を分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "成績不振への超自然因果を事実認定していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "日本KFC資料は像履歴、球団公式は呪い言説の確認に限定。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1985年は原因事件であり、呪い語の初出日時とはしていない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "呪い呼称の成立時期と成績との因果関係を未確定として保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。事件史と呪い俗説を分離しPass。"
+}
