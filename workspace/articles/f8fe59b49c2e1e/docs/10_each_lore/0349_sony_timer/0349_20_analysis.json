@@ -1,0 +1,388 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0349",
+  "macro_category": "企業・商品",
+  "entry_type": "企業・製品故障俗説",
+  "version_scope": {
+    "description": "一定期間後の製品故障をソニーの意図的な寿命設計へ帰属する共有核。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "notes": "意図的設計の事実認定は含めない。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "2007年以前からの流通は示唆されるが、成立年代を直接固定する資料を今回の範囲では確定していない。",
+      "manifestation": "生成年代不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D02",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "最初に流通した媒体は確定していない。",
+      "manifestation": "最古確認流通媒体不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D03",
+      "status": "D",
+      "primary": {
+        "code_id": "D03.WEB.WEBSITE",
+        "parent_id": "D03.WEB"
+      },
+      "secondary": [],
+      "rationale": "2007年の報道記事で語と内容が公開流通している。",
+      "manifestation": "ニュースWebで公的言及。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D04",
+      "status": "I",
+      "primary": {
+        "code_id": "D04.STB.STABILIZED_CANON",
+        "parent_id": "D04.STB"
+      },
+      "secondary": [],
+      "rationale": "『一定期間後の故障＝意図的設計』という短い因果命題が安定した俗説核となる。",
+      "manifestation": "安定した定型命題。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D05",
+      "status": "D",
+      "primary": {
+        "code_id": "D05.PRP.EXPLANATORY_CLAIM",
+        "parent_id": "D05.PRP"
+      },
+      "secondary": [],
+      "rationale": "製品故障の理由を隠れた設計意図で説明する命題。",
+      "manifestation": "説明命題。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D06",
+      "status": "D",
+      "primary": {
+        "code_id": "D06.T6"
+      },
+      "secondary": [],
+      "rationale": "公的質疑では語の存在は認められる一方、意図的設計の事実は確認されない。",
+      "manifestation": "真偽未確定の俗説。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D07",
+      "status": "D",
+      "primary": {
+        "code_id": "D07.TPS.DEVICE_PRODUCT_FAILURE",
+        "parent_id": "D07.TPS"
+      },
+      "secondary": [],
+      "rationale": "意味形成対象は製品故障とそのタイミング。",
+      "manifestation": "機器・製品故障。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D08",
+      "status": "D",
+      "primary": {
+        "code_id": "D08.PAT.TEMPORAL_ASSOCIATION",
+        "parent_id": "D08.PAT"
+      },
+      "secondary": [],
+      "rationale": "一定期間経過と故障の時間的近接が根拠として扱われる。",
+      "manifestation": "時間相関パターン。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D09",
+      "status": "D",
+      "primary": {
+        "code_id": "D09.AGN.MOTIVE_ATTRIBUTION",
+        "parent_id": "D09.AGN"
+      },
+      "secondary": [],
+      "rationale": "故障時期をメーカーの意図・利益動機へ帰属する。",
+      "manifestation": "企業への動機帰属。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D10",
+      "status": "D",
+      "primary": {
+        "code_id": "D10.HUM.ORGANIZATION",
+        "parent_id": "D10.HUM"
+      },
+      "secondary": [],
+      "rationale": "俗説上の因果主体は企業組織としてのソニー。",
+      "manifestation": "組織主体。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D11",
+      "status": "D",
+      "primary": {
+        "code_id": "D11.CON.TIME_DATE",
+        "parent_id": "D11.CON"
+      },
+      "secondary": [],
+      "rationale": "一定期間・保証期間経過が故障との結び付きの条件。",
+      "manifestation": "時間条件。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D12",
+      "status": "D",
+      "primary": {
+        "code_id": "D12.OTD.OBJECT_PRODUCT",
+        "parent_id": "D12.OTD"
+      },
+      "secondary": [],
+      "rationale": "直接の作用対象はソニー製品。",
+      "manifestation": "製品対象。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D13",
+      "status": "D",
+      "primary": null,
+      "secondary": [],
+      "rationale": "俗説は意図的寿命設計による製品故障を想定するが、現行D13の作用機序Childに直接対応するものがない。",
+      "manifestation": "設計された寿命による故障。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "taxonomy_gap": {
+        "present": true,
+        "description": "意図的な製品寿命設計・計画的故障を直接表す作用機序ChildがD13にない。",
+        "candidate_code": "D13.TECH.PLANNED_FAILURE"
+      }
+    },
+    {
+      "dimension_id": "D14",
+      "status": "D",
+      "primary": {
+        "code_id": "D14.NEG"
+      },
+      "secondary": [],
+      "rationale": "製品故障は利用者に不利益を与える。",
+      "manifestation": "負。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D15",
+      "status": "D",
+      "primary": {
+        "code_id": "D15.MAT.PROPERTY_DAMAGE",
+        "parent_id": "D15.MAT"
+      },
+      "secondary": [],
+      "rationale": "製品が故障・使用不能になる物的損失。",
+      "manifestation": "物的損害。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D16",
+      "status": "D",
+      "primary": {
+        "code_id": "D16.DLY.DELAYED",
+        "parent_id": "D16.DLY"
+      },
+      "secondary": [],
+      "rationale": "購入直後ではなく一定期間後に生じるとされる。",
+      "manifestation": "遅延発現。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D17",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "俗説核に確立した回避・解除策はない。",
+      "manifestation": "制御法不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D18",
+      "status": "D",
+      "primary": {
+        "code_id": "D18.L1"
+      },
+      "secondary": [],
+      "rationale": "俗説内部で企業の設計が製品故障へつながる因果として構成される。",
+      "manifestation": "伝承内因果層。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D19",
+      "status": "I",
+      "primary": {
+        "code_id": "D19.MAS.NATIONAL_PUBLIC",
+        "parent_id": "D19.MAS"
+      },
+      "secondary": [],
+      "rationale": "株主総会で公に質問され報道される程度の一般認知が示される。",
+      "manifestation": "全国的な公衆圏。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D20",
+      "status": "I",
+      "primary": {
+        "code_id": "D20.ORG.INSTITUTION_AUTHORITY",
+        "parent_id": "D20.ORG"
+      },
+      "secondary": [],
+      "rationale": "俗説上、意図的設計の真相は企業内部が知る秘密として想定される。",
+      "manifestation": "企業内部が特権情報保持者とされる。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D21",
+      "status": "D",
+      "primary": {
+        "code_id": "D21.A2"
+      },
+      "secondary": [],
+      "rationale": "実在企業ソニーとその製品ブランドを直接アンカーにする。",
+      "manifestation": "具体的実在企業・商品。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    }
+  ],
+  "analysis_notes": "俗説の存在と俗説内容の事実性を分離する。"
+}
