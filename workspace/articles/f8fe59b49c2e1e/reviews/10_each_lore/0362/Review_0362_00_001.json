@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0362",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_00_sources.json",
+    "commit_sha": "890112f010f345acae88dd9dfb2891c0d3d0ccf4",
+    "blob_sha": "f484b69c726b6544914b21fe6308a47efd68b605",
+    "reviewed_at": "2026-09-19T04:50:45.237Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "警察白書を事件核の主資料、1974年研究を同時代研究の補助資料として使用。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "流言・取付け・発端解明と研究書誌を分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "本文未確認の詳細な伝播逸話を増補していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "事件翌年の警察白書と同時代研究の距離を明示。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1973年事件を直接扱い、後年の逸話を初出へ逆流させない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "個々の伝言文言・伝播経路を未確定で保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。公的事件核とEvidence ceilingを確認しPass。"
+}
