@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0250",
+  "macro_category": "古伝承・民俗",
+  "entry_type": "循環型死霊伝承",
+  "version_scope": {
+    "description": "高知県の早期民俗資料で確認できる『七人を維持し、新たな犠牲者と最古参が交代する』共有核。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "notes": "後代の場所別・水難別の細部異伝は統合しない。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "早期収録年は分かるが、伝承成立年代を示す直接証拠ではない。",
+      "manifestation": "生成年代は未確定。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D02",
+      "status": "D",
+      "primary": {
+        "code_id": "D02.PRT.MAGAZINE",
+        "parent_id": "D02.PRT"
+      },
+      "secondary": [],
+      "rationale": "1920年代から雑誌・民俗資料への収録が確認できる。",
+      "manifestation": "最古確認流通媒体は印刷雑誌。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D03",
+      "status": "D",
+      "primary": {
+        "code_id": "D03.PRT.MAGAZINE",
+        "parent_id": "D03.PRT"
+      },
+      "secondary": [],
+      "rationale": "既定Scopeを支える資料は民俗雑誌への記録。",
+      "manifestation": "印刷雑誌で確認される。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D04",
+      "status": "I",
+      "primary": {
+        "code_id": "D04.VAR.LOCALIZATION",
+        "parent_id": "D04.VAR"
+      },
+      "secondary": [],
+      "rationale": "複数地域・複数年の資料があり、同一核を保つ地域異伝が存在する。",
+      "manifestation": "地域化を伴う変異。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D05",
+      "status": "I",
+      "primary": {
+        "code_id": "D05.HRS.LOCAL_HEARSAY",
+        "parent_id": "D05.HRS"
+      },
+      "secondary": [],
+      "rationale": "民俗資料は地域で伝えられる言い伝えとして要約する。",
+      "manifestation": "地域伝聞叙述。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D06",
+      "status": "I",
+      "primary": {
+        "code_id": "D06.T3"
+      },
+      "secondary": [],
+      "rationale": "地域で『そう言われている』伝承知識として記録される。",
+      "manifestation": "共同体既知事実としての提示。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D07",
+      "status": "D",
+      "primary": {
+        "code_id": "D07.DCF.UNEXPLAINED_DEATH_LOSS",
+        "parent_id": "D07.DCF"
+      },
+      "secondary": [],
+      "rationale": "中心は人が『引かれる』死・喪失とその循環の意味付け。",
+      "manifestation": "死と不運を説明する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D08",
+      "status": "D",
+      "primary": {
+        "code_id": "D08.CLM.INHERITED_SAYING",
+        "parent_id": "D08.CLM"
+      },
+      "secondary": [],
+      "rationale": "個別の観測記録より、継承された言い伝え自体が契機。",
+      "manifestation": "伝承された言明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D09",
+      "status": "D",
+      "primary": {
+        "code_id": "D09.PPR.RECURRENCE_RULE",
+        "parent_id": "D09.PPR"
+      },
+      "secondary": [],
+      "rationale": "七人を維持しながら犠牲者が交代する反復規則が明示される。",
+      "manifestation": "再発・循環の規則化。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D10",
+      "status": "I",
+      "primary": {
+        "code_id": "D10.SUP.GHOST_SPIRIT",
+        "parent_id": "D10.SUP"
+      },
+      "secondary": [],
+      "rationale": "成仏する死者として扱われ、死霊的存在と解釈できる。",
+      "manifestation": "死者霊の集団。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D11",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "共有核では何をすると標的になるかが明示されない。",
+      "manifestation": "発動条件不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D12",
+      "status": "D",
+      "primary": {
+        "code_id": "D12.OTH.VICTIM_TARGET",
+        "parent_id": "D12.OTH"
+      },
+      "secondary": [],
+      "rationale": "作用対象は次に引かれる人。",
+      "manifestation": "犠牲者個人が標的。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D13",
+      "status": "I",
+      "primary": {
+        "code_id": "D13.TRN.PERSON_TRANSFER",
+        "parent_id": "D13.TRN"
+      },
+      "secondary": [],
+      "rationale": "新たな人を取り込む一方で最古参が離脱するため、構成員の移送・交代として表現できる。",
+      "manifestation": "人から人への構成員交代。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D14",
+      "status": "D",
+      "primary": {
+        "code_id": "D14.NEG"
+      },
+      "secondary": [],
+      "rationale": "新たな犠牲者にとって帰結は死・加入。",
+      "manifestation": "負の帰結。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D15",
+      "status": "D",
+      "primary": {
+        "code_id": "D15.BOD.DEATH",
+        "parent_id": "D15.BOD"
+      },
+      "secondary": [],
+      "rationale": "新規犠牲者の死が循環を維持する。",
+      "manifestation": "死亡。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D16",
+      "status": "D",
+      "primary": {
+        "code_id": "D16.TRN.SUCCESSIVE_VICTIMS",
+        "parent_id": "D16.TRN"
+      },
+      "secondary": [],
+      "rationale": "犠牲者が連続的に交代し続ける。",
+      "manifestation": "連続する被害者系列。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D17",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "共有核に回避・解除法は明示されない。",
+      "manifestation": "制御法不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D18",
+      "status": "D",
+      "primary": {
+        "code_id": "D18.L1"
+      },
+      "secondary": [],
+      "rationale": "因果作用は伝承内部の死者集団と犠牲者に生じる。",
+      "manifestation": "伝承内因果層。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D19",
+      "status": "D",
+      "primary": {
+        "code_id": "D19.LOC.REGIONAL",
+        "parent_id": "D19.LOC"
+      },
+      "secondary": [],
+      "rationale": "高知県を中心とする地域資料に継続して記録される。",
+      "manifestation": "地域共同体圏。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D20",
+      "status": "I",
+      "primary": {
+        "code_id": "D20.INS.LOCAL_RESIDENT",
+        "parent_id": "D20.INS"
+      },
+      "secondary": [],
+      "rationale": "地域伝承として地元の語り手・住民が知識保持者となる。",
+      "manifestation": "地元内部者。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D21",
+      "status": "D",
+      "primary": {
+        "code_id": "D21.A2"
+      },
+      "secondary": [],
+      "rationale": "高知県宿毛市など具体的な実在地域と結び付く。",
+      "manifestation": "具体的地域アンカー。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    }
+  ],
+  "analysis_notes": "成立年代を収録年代へ短絡しない。"
+}
