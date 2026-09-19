@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0250",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0250_shichinin_misaki/0250_20_analysis.json",
+    "commit_sha": "eda07a34f5bbea06b3e4adc61de0d47ba0819f27",
+    "blob_sha": "10fa44149971a0b52e18022b3aeacb06583d28b0",
+    "reviewed_at": "2026-09-19T01:59:38.775Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "早期高知資料の七人循環核に限定。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "各codeの意味はContentと整合。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "必要意味はcurrent taxonomyで表現可能。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "新規犠牲者加入→最古参成仏→七人維持の循環が整合。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "DimensionはContent/Evidenceへ追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "独立再構成と中心判断は一致。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D15の死亡は循環構造から合理的に推論できるが、EVD-001に『死亡』が直接明示されていないためDではなくIが適切。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "FINDING",
+      "notes": "D12犠牲者→D13構成員交代→D15死亡の意味は整合するが、D15のconfidenceだけ過大。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "L1のみで社会現実効果を追加推定しない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "地域資料を全国普及へ拡張しない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "地元内部者というIに抑制。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "高知県宿毛市という具体地域A2は書誌EVD-003で支持。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "死亡codeは妥当だがDirect扱いはEvidence ceilingを越える。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "循環型死霊伝承と整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "七人の死霊的集団が新規犠牲者を循環へ組み込み最古参が成仏して七人を維持する。新規犠牲者の死亡は構造上推論できるが、canonical Evidenceの文言として直接明示ではない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D09",
+      "D10",
+      "D12",
+      "D13",
+      "D15",
+      "D16"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "status": "FINDING",
+    "notes": "D15 statusのみ修正対象。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Minor",
+      "category": "status_reasoning",
+      "summary": "D15のDirect判定が過強。",
+      "rationale": "EVD-001は『人を引く』『最古参が成仏』を明示するが、新規犠牲者の死亡を文言として直接明示しない。死亡は七人の死霊集団への加入構造から合理的に推論される。",
+      "impact": "code自体は妥当だがDirect/InferredのEvidence confidenceが一段過大。",
+      "fix_direction": "D15.BOD.DEATHを維持し、statusをDからIへ変更する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "dimension_refs": [
+        "D15"
+      ]
+    }
+  ],
+  "verdict": "Minor",
+  "review_notes": "Review cycle 001。D15 statusのみMinor Finding。00/10はPass。"
+}
