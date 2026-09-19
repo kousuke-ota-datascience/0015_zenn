@@ -68,7 +68,7 @@
   "content_units": [
     {
       "content_id": "CNT-001",
-      "type": "setting",
+      "type": "location",
       "text": "別府湾の大分沖に、南蛮貿易で栄えたとされる瓜生島という島があったと伝えられる。",
       "evidence_refs": [
         "EVD-001",
