@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0365",
+  "macro_category": "災害・流言",
+  "entry_type": "差別的災害流言",
+  "version_scope": {
+    "description": "1923年関東大震災直後、放火・暴動・投毒等を朝鮮人へ虚偽に帰属した流言群と、その現実の被害拡大。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "notes": "噂の内容は虚偽・根拠なしとしてのみ記述する。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "D",
+      "primary": {
+        "code_id": "D01.G1"
+      },
+      "secondary": [],
+      "rationale": "流言事件は1923年。",
+      "manifestation": "1868-1944。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D02",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "震災直後の最初の人から人への流通媒体を一つに固定できない。",
+      "manifestation": "最古流通媒体不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D03",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "口頭、伝達、制度経路等が混在した可能性があるが、Scope内資料だけで媒体ポートフォリオを安全に確定しない。",
+      "manifestation": "流通媒体ポートフォリオ不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D04",
+      "status": "D",
+      "primary": {
+        "code_id": "D04.COL.DERIVATIVE_PROLIFERATION",
+        "parent_id": "D04.COL"
+      },
+      "secondary": [],
+      "rationale": "放火・暴動・投毒など複数の虚偽主張が混乱下で派生・増幅した。",
+      "manifestation": "派生流言の増殖。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-004"
+      ]
+    },
+    {
+      "dimension_id": "D05",
+      "status": "D",
+      "primary": {
+        "code_id": "D05.PRP.FACT_CLAIM",
+        "parent_id": "D05.PRP"
+      },
+      "secondary": [],
+      "rationale": "特定集団が放火・投毒等を行っているという事実主張として流通した。",
+      "manifestation": "虚偽の事実主張。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D06",
+      "status": "D",
+      "primary": {
+        "code_id": "D06.T4"
+      },
+      "secondary": [],
+      "rationale": "当時、一部の受容者・公的主体まで現実の治安情報として受け取った。",
+      "manifestation": "制度・一般事実らしく提示。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-004"
+      ]
+    },
+    {
+      "dimension_id": "D07",
+      "status": "D",
+      "primary": {
+        "code_id": "D07.ICT.OUTGROUP_THREAT",
+        "parent_id": "D07.ICT"
+      },
+      "secondary": [],
+      "rationale": "意味形成対象は特定の民族集団を外集団脅威とみなす解釈。",
+      "manifestation": "外集団脅威。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D08",
+      "status": "D",
+      "primary": {
+        "code_id": "D08.HIS.RECENT_INCIDENT",
+        "parent_id": "D08.HIS"
+      },
+      "secondary": [],
+      "rationale": "大地震・大火災・通信途絶という直近の災害事象が流言形成の契機。",
+      "manifestation": "直近の災害事件。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D09",
+      "status": "D",
+      "primary": {
+        "code_id": "D09.AGN.COORDINATED_INTENT",
+        "parent_id": "D09.AGN"
+      },
+      "secondary": [],
+      "rationale": "爆発・火災・水の濁り等を、特定集団の組織的悪意・加害意図へ帰属する。",
+      "manifestation": "協調的悪意の帰属。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D10",
+      "status": "D",
+      "primary": {
+        "code_id": "D10.HUM.INFORMAL_GROUP",
+        "parent_id": "D10.HUM"
+      },
+      "secondary": [],
+      "rationale": "流言内部では、朝鮮人という人間集団が加害主体として虚偽に設定される。",
+      "manifestation": "人間集団への虚偽の主体帰属。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D11",
+      "status": "D",
+      "primary": {
+        "code_id": "D11.NCR.AMBIENT_EFFECT",
+        "parent_id": "D11.NCR"
+      },
+      "secondary": [],
+      "rationale": "流言内の主張では被災地域全体で放火・投毒等が生じるとされ、個々の受け手の特定接触を前提としない。",
+      "manifestation": "周辺環境への脅威として提示。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D12",
+      "status": "D",
+      "primary": {
+        "code_id": "D12.ENV.PLACE_BUILDING",
+        "parent_id": "D12.ENV"
+      },
+      "secondary": [],
+      "rationale": "虚偽主張の直接対象には井戸・市街地等の生活環境が含まれる。",
+      "manifestation": "井戸・市街地。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D13",
+      "status": "D",
+      "primary": {
+        "code_id": "D13.PHY.ENV_OBJECT_MANIPULATION",
+        "parent_id": "D13.PHY"
+      },
+      "secondary": [],
+      "rationale": "流言内容は井戸への投毒や放火など環境・物体への物理的加害を主張する。",
+      "manifestation": "投毒・放火という物理作用。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D14",
+      "status": "D",
+      "primary": {
+        "code_id": "D14.NEG"
+      },
+      "secondary": [],
+      "rationale": "主張される内容も、現実の社会効果も重大な危害を伴う。",
+      "manifestation": "負。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D15",
+      "status": "D",
+      "primary": {
+        "code_id": "D15.BOD.DEATH",
+        "parent_id": "D15.BOD"
+      },
+      "secondary": [],
+      "rationale": "流言内容上、投毒・暴力は生命への重大危害を意味する。",
+      "manifestation": "死亡・重篤危害。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D16",
+      "status": "D",
+      "primary": {
+        "code_id": "D16.TRN.CHAIN_SPREAD",
+        "parent_id": "D16.TRN"
+      },
+      "secondary": [],
+      "rationale": "災害直後の短期間に流言が反復・増幅して拡散した。",
+      "manifestation": "連鎖拡散。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-004"
+      ]
+    },
+    {
+      "dimension_id": "D17",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "Scope内の流言そのものに受容者向けの確立した回避・解除法はない。",
+      "manifestation": "制御法不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D18",
+      "status": "D",
+      "primary": {
+        "code_id": "D18.L3"
+      },
+      "secondary": [],
+      "rationale": "公的資料は流言拡大が現実の朝鮮人殺傷事件等へつながったと記録する。",
+      "manifestation": "社会現実層の重大な被害。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003",
+        "EVD-004"
+      ]
+    },
+    {
+      "dimension_id": "D19",
+      "status": "D",
+      "primary": {
+        "code_id": "D19.MAS.NATIONAL_PUBLIC",
+        "parent_id": "D19.MAS"
+      },
+      "secondary": [],
+      "rationale": "首都圏の大規模災害下で広域に拡大し、公的機関も巻き込まれた。",
+      "manifestation": "広域公衆圏。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-004"
+      ]
+    },
+    {
+      "dimension_id": "D20",
+      "status": "D",
+      "primary": {
+        "code_id": "D20.NON.NO_HIDDEN_TRUTH",
+        "parent_id": "D20.NON"
+      },
+      "secondary": [],
+      "rationale": "流言は公開的に流通した虚偽主張であり、真相を独占する秘密保持者を物語上必要としない。",
+      "manifestation": "特権情報保持者なし。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D21",
+      "status": "D",
+      "primary": {
+        "code_id": "D21.A4"
+      },
+      "secondary": [],
+      "rationale": "1923年関東大震災、通信途絶、流言、殺傷事件という具体的史実・公的記録がモデル成立に不可欠。",
+      "manifestation": "史実・記録の因果統合。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003",
+        "EVD-004"
+      ]
+    }
+  ],
+  "analysis_notes": "D18 L3のみ、流言が現実の殺傷へ波及したX evidenceを用いる。D12-D15は流言の虚偽主張内容を記述し、現実被害をそのまま逆流させない。"
+}
