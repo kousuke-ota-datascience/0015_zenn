@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0365",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "令和5年版 防災白書 特集1 第1章 第2節 関東大震災の応急対策",
+      "locator": "「情報の途絶及び流言飛語の発生」",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://www.bousai.go.jp/kaigirep/hakusho/r05/honbun/t1_1s_02_00.html",
+      "notes": "内閣府の防災白書。通信途絶、根拠のない放火・投毒等の噂、朝鮮人殺傷事件への波及を整理する。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "reliable_secondary_or_research",
+      "title": "1923 関東大震災 第2編 報告書",
+      "locator": "第4章「混乱による被害の拡大」概要",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://www.bousai.go.jp/kyoiku/kyokun/kyoukunnokeishou/rep/1923_kanto_daishinsai_2/",
+      "notes": "内閣府の災害教訓報告書ページ。朝鮮人の武装蜂起・放火等の流言と、自警団・軍隊・警察の一部による殺傷、初期の警察・軍による流言増幅を概要で示す。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "「情報の途絶及び流言飛語の発生」",
+      "content": "関東大震災直後は電信・電話・新聞等の報道通信機能が停止し、大火災の爆発や飛び火、井戸水・池水の濁り等が爆弾投擲、放火、投毒によるものだという根拠のない噂が広まった。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "同節",
+      "content": "内閣府防災白書は、こうした流言飛語の拡大によって朝鮮人の殺傷事件などが発生したとする調査報告があることを明記している。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-002",
+      "locator": "第4章概要",
+      "content": "内閣府報告書は、朝鮮人が武装蜂起・放火するという流言を背景に、住民自警団、軍隊、警察の一部による殺傷事件が生じたと整理している。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-002",
+      "locator": "第4章概要",
+      "content": "報告書は流言を、震災前の予備知識や断片的情報を背景とした「意味づけの暴走」と説明し、震災後3日頃までは軍隊や警察も流言に巻き込まれ、増幅したとする。",
+      "representation": "paraphrase"
+    }
+  ],
+  "notes": "差別的流言を再提示する際は虚偽・根拠なしであることを明確化し、被害事実と噂の主張内容を分離する。"
+}
