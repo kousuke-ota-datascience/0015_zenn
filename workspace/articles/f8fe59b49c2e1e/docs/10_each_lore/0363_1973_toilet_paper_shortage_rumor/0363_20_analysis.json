@@ -1,0 +1,393 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0363",
+  "macro_category": "社会流言・パニック",
+  "entry_type": "物資不足流言事件",
+  "version_scope": {
+    "description": "1973年オイルショック下で、生活必需品不足の噂が口コミで広がり買いだめ・品薄を増幅した主要形。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [
+      "VAR-002"
+    ],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "notes": "2020年SNS型はScope外。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "D",
+      "primary": {
+        "code_id": "D01.G3"
+      },
+      "secondary": [],
+      "rationale": "事件は1973年。",
+      "manifestation": "1970年代。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D02",
+      "status": "I",
+      "primary": {
+        "code_id": "D02.ORL.PEER_ORAL",
+        "parent_id": "D02.ORL"
+      },
+      "secondary": [],
+      "rationale": "昭和館は噂が口コミで広がったと記録する。厳密な最初の発話環境は不明だが、対人的口頭伝播として扱う。",
+      "manifestation": "口コミによる口頭伝播。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D03",
+      "status": "I",
+      "primary": {
+        "code_id": "D03.ORL.PEER_ORAL",
+        "parent_id": "D03.ORL"
+      },
+      "secondary": [],
+      "rationale": "Scope内で確認される主要な流通形は口コミ。",
+      "manifestation": "対人的口頭流通。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D04",
+      "status": "D",
+      "primary": {
+        "code_id": "D04.COL.DERIVATIVE_PROLIFERATION",
+        "parent_id": "D04.COL"
+      },
+      "secondary": [],
+      "rationale": "不足予測が口コミで広がり、購買行動を伴って増幅した。",
+      "manifestation": "流言の増殖・派生。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D05",
+      "status": "D",
+      "primary": {
+        "code_id": "D05.PRP.PREDICTIVE_CLAIM",
+        "parent_id": "D05.PRP"
+      },
+      "secondary": [],
+      "rationale": "『これからトイレットペーパー等がなくなる』という未来予測命題。",
+      "manifestation": "不足の予測主張。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D06",
+      "status": "D",
+      "primary": {
+        "code_id": "D06.T5"
+      },
+      "secondary": [],
+      "rationale": "不安定な状況下で『なくなるらしい』という条件付き信念として流通した。",
+      "manifestation": "条件付き信念。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D07",
+      "status": "D",
+      "primary": {
+        "code_id": "D07.ISU.CRISIS_SCARCITY",
+        "parent_id": "D07.ISU"
+      },
+      "secondary": [],
+      "rationale": "意味形成対象は危機時の生活必需品不足。",
+      "manifestation": "危機・物資不足。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D08",
+      "status": "D",
+      "primary": {
+        "code_id": "D08.HIS.RECENT_INCIDENT",
+        "parent_id": "D08.HIS"
+      },
+      "secondary": [],
+      "rationale": "オイルショック・原油高・物価高という直近の社会経済事象が噂の背景。",
+      "manifestation": "直近危機事象。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D09",
+      "status": "D",
+      "primary": {
+        "code_id": "D09.PPR.OMEN_FORECAST",
+        "parent_id": "D09.PPR"
+      },
+      "secondary": [],
+      "rationale": "現在の危機状況から将来の品切れを予測する。",
+      "manifestation": "不足予測。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D10",
+      "status": "D",
+      "primary": {
+        "code_id": "D10.OBJ.INFORMATION_CONTENT",
+        "parent_id": "D10.OBJ"
+      },
+      "secondary": [],
+      "rationale": "直接の行動因果源は不足予測を含む情報内容。",
+      "manifestation": "噂情報が購買を駆動。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D11",
+      "status": "D",
+      "primary": {
+        "code_id": "D11.INF.RECEIVE_MESSAGE",
+        "parent_id": "D11.INF"
+      },
+      "secondary": [],
+      "rationale": "不足の噂を受け取ることが購買行動の入口。",
+      "manifestation": "噂受信。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D12",
+      "status": "D",
+      "primary": {
+        "code_id": "D12.OTD.OBJECT_PRODUCT",
+        "parent_id": "D12.OTD"
+      },
+      "secondary": [],
+      "rationale": "主張が直接対象とするのはトイレットペーパー等の生活必需品。",
+      "manifestation": "商品対象。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D13",
+      "status": "D",
+      "primary": {
+        "code_id": "D13.COG.INFORMATION_INDUCED_ACTION",
+        "parent_id": "D13.COG"
+      },
+      "secondary": [],
+      "rationale": "噂情報が買いだめという行動を誘発する。",
+      "manifestation": "情報誘発行動。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D14",
+      "status": "D",
+      "primary": {
+        "code_id": "D14.NEG"
+      },
+      "secondary": [],
+      "rationale": "買いだめ・品薄・パニックを生む。",
+      "manifestation": "負。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D15",
+      "status": "D",
+      "primary": {
+        "code_id": "D15.BEH.PURCHASE_HOARDING",
+        "parent_id": "D15.BEH"
+      },
+      "secondary": [],
+      "rationale": "主要な帰結行動は買いだめ。",
+      "manifestation": "購買・備蓄行動。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D16",
+      "status": "D",
+      "primary": {
+        "code_id": "D16.TRN.CHAIN_SPREAD",
+        "parent_id": "D16.TRN"
+      },
+      "secondary": [],
+      "rationale": "口コミの連鎖と購買行動のフィードバックで拡散する。",
+      "manifestation": "連鎖拡散。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D17",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "1973年Scope内で確立した解除・制御手順を直接示す資料を採用していない。",
+      "manifestation": "制御法不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D18",
+      "status": "D",
+      "primary": {
+        "code_id": "D18.L3"
+      },
+      "secondary": [],
+      "rationale": "昭和館は噂が実際の買いだめ・経済パニックへつながったと記録する。",
+      "manifestation": "社会現実層。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D19",
+      "status": "I",
+      "primary": {
+        "code_id": "D19.MAS.NATIONAL_PUBLIC",
+        "parent_id": "D19.MAS"
+      },
+      "secondary": [],
+      "rationale": "オイルショック期の全国的な物資不安と結び付く著名な社会騒動として記録される。",
+      "manifestation": "広域公衆圏。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D20",
+      "status": "D",
+      "primary": {
+        "code_id": "D20.NON.NO_HIDDEN_TRUTH",
+        "parent_id": "D20.NON"
+      },
+      "secondary": [],
+      "rationale": "噂の主張自体は公開された不足予測であり、秘密保持者を必要としない。",
+      "manifestation": "特権情報保持者なし。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ]
+    },
+    {
+      "dimension_id": "D21",
+      "status": "D",
+      "primary": {
+        "code_id": "D21.A4"
+      },
+      "secondary": [],
+      "rationale": "1973年オイルショック、物価高、実際の買いだめ・品薄という歴史事実を因果構造に組み込む。",
+      "manifestation": "史実・社会記録を因果統合。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003"
+      ]
+    }
+  ],
+  "analysis_notes": "L3は昭和館が記録する実際の買いだめ・経済パニックに限定。2020年類似例はScope外。"
+}
