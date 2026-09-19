@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0198",
+  "artifact": "10",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_10_contents.json",
+    "commit_sha": "fce6ff8c4f4465bcfe552c99029e473a49cf22b4",
+    "blob_sha": "0083ce162a56d77ab21aed7f4fd66fc868e7a18d",
+    "reviewed_at": "2026-09-19T01:56:59.794Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "canonical 10不変でEvidenceへ追跡可能。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "儀式の準備から終了まで再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001に限定。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "不確実性保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全4 unitを保持。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "ぬいぐるみを用いた深夜の儀式を実行し、異変を実況し、塩水と終了宣言で閉じる実行型ネットロア。",
+    "reference_story": "Content照合で準備、開始、異変、終了を保持。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "実行者とぬいぐるみ",
+        "reference": "主体一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "実行者",
+        "reference": "対象一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "深夜の儀式開始",
+        "reference": "発動一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "招来されるとされる霊的存在",
+        "reference": "因果主体一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "ぬいぐるみ媒介の儀式と異変",
+        "reference": "機構一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "準備から危険状態、終了で閉じる",
+        "reference": "状態遷移一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "準備→開始→潜伏・実況→終了",
+        "reference": "時間一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "外へ出ない・消灯・終了法・塩水",
+        "reference": "規則一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "塩水と終了宣言",
+        "reference": "制御一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "終了し通常状態へ戻るとされる",
+        "reference": "終端一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "超常実在・2007年以前流通は不明",
+        "reference": "不確実性一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "2007年4月初期実況のみ",
+        "reference": "境界一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "20修正はContentを変更しない。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "米・爪・赤糸の準備",
+        "blind_reconstruction": "準備として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "深夜開始・刃物・潜伏",
+        "blind_reconstruction": "開始として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "異変実況",
+        "blind_reconstruction": "異変として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "塩水・終了宣言",
+        "blind_reconstruction": "終了として保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。10は不変でPass。"
+}
