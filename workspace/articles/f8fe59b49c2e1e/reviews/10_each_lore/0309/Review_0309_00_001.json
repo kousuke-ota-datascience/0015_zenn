@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0309",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0309_uryujima/0309_00_sources.json",
+    "commit_sha": "ea31c74a520712064f8379d6d756e6349b88c1aa",
+    "blob_sha": "7fd3ef45d776d07339c21677970154c8aee00459",
+    "reviewed_at": "2026-09-19T04:36:23.932Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "大分市公式、歴史地震史料DB、地震本部を役割別に使用し、伝説資料と現実災害アンカーを分離している。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "現代文化表象、後世の瓜生島研究、1596年実在災害を別Evidenceとして保持している。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜003はいずれも各資料の記載範囲に留まり、瓜生島の全面沈没を確定史実化していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "伝説資料はindirect derivative、地震本部は現実災害アンカーとしてnot_applicableに分離。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "伝承成立年・最古流通媒体を資料不足として固定せず、1596年を伝承成立年へ短絡していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "島の実在形態・全面沈没・史料形成過程の不確実性を明示している。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。実在災害と伝説的沈没像の分離、資料階層、不確実性保存を確認しPass。"
+}
