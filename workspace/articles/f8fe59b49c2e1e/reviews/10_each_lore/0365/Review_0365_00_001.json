@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0365",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0365_kanto_earthquake_poison_well_rumor/0365_00_sources.json",
+    "commit_sha": "e28a5c73514ccf62fcf333f5419fa3f6c6fd0561",
+    "blob_sha": "40381cfbf13bea9e2fefd0a4a9ebdcab6259273c",
+    "reviewed_at": "2026-09-19T04:59:42.861Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "内閣府防災白書・災害教訓報告書を公的な検証資料として使用。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "根拠のない流言内容、現実の殺傷被害、軍警察の一部による増幅を分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "差別的主張を虚偽・根拠なしと明示し、事実として肯定していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "両資料を歴史的事件へのdirect derivativeとして位置付ける。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1923年震災直後の流言事件として確認し、個々の初発話者は固定しない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "最初の発話者・地域別伝播経路を一点起源へ還元しない。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。虚偽流言と現実被害の分離を確認しPass。"
+}
