@@ -68,14 +68,11 @@
     },
     {
       "dimension_id": "D04",
-      "status": "I",
-      "primary": {
-        "code_id": "D04.STB.STABILIZED_CANON",
-        "parent_id": "D04.STB"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "『一定期間後の故障＝意図的設計』という短い因果命題が安定した俗説核となる。",
-      "manifestation": "安定した定型命題。",
+      "rationale": "current Evidenceは2007年時点で俗称が公的に認知されていたことを示すが、多様な形から代表形が固定された生成・変容過程までは示さない。",
+      "manifestation": "生成・変容パターンはcurrent Evidenceから未確定。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
@@ -266,12 +263,12 @@
       "dimension_id": "D15",
       "status": "D",
       "primary": {
-        "code_id": "D15.MAT.PROPERTY_DAMAGE",
+        "code_id": "D15.MAT.DEVICE_DATA_LOSS",
         "parent_id": "D15.MAT"
       },
       "secondary": [],
-      "rationale": "製品が故障・使用不能になる物的損失。",
-      "manifestation": "物的損害。",
+      "rationale": "俗説の主要帰結はソニー製品という機器の故障であり、current taxonomyの『機器故障、データ削除』に直接対応する。",
+      "manifestation": "機器故障。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
@@ -328,14 +325,14 @@
     },
     {
       "dimension_id": "D19",
-      "status": "I",
+      "status": "D",
       "primary": {
-        "code_id": "D19.MAS.NATIONAL_PUBLIC",
-        "parent_id": "D19.MAS"
+        "code_id": "D19.NET.OPEN_FORUM_WEB",
+        "parent_id": "D19.NET"
       },
       "secondary": [],
-      "rationale": "株主総会で公に質問され報道される程度の一般認知が示される。",
-      "manifestation": "全国的な公衆圏。",
+      "rationale": "2007年の株主総会での言及が公開ニュースWebで報道され、俗称が公開Web上で流通していることは直接確認できる。全国的大衆への実到達はcurrent Evidenceからは確定しない。",
+      "manifestation": "公開Web・ニュースサイト圏。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
