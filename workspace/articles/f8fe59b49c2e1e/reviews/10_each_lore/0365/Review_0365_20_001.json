@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0365",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0365_kanto_earthquake_poison_well_rumor/0365_20_analysis.json",
+    "commit_sha": "59659a5347a2e44f85bab3bc9bc01e11c571f3b0",
+    "blob_sha": "cf4a84185ac9a896baa522d7cde4418daab36695",
+    "reviewed_at": "2026-09-19T04:59:42.861Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "震災直後の差別的虚偽流言群と現実被害に限定。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D10-D15の中心因果鎖が、流言が虚偽に主張した加害主体・物理作用を主軸にし、10側の実際の流言因果モデルと不整合。D19も全国大衆へ過大化。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "INFORMATION_CONTENT、RECEIVE_MESSAGE、DEMOGRAPHIC_GROUP、INFORMATION_INDUCED_ACTION、COLLECTIVE_VIOLENCE、REGIONALがcurrent taxonomyに存在。"
+    },
+    "causality": {
+      "status": "FINDING",
+      "notes": "Entryの実際の因果は流言情報→受容者行動→属性集団への現実暴力であり、虚偽主張内の『集団→投毒・放火』を主因果鎖に置くべきではない。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D10-D13はCNT summaryのcausal_agent/mechanism/affected_targetsとずれ、D15は現実の集団暴力を取りこぼす。D19全国規模も直接Evidence不足。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "blind reconstructionでは流言情報が現実の暴力を誘発するモデルが中心で、虚偽に加害主体とされた集団を実因果源には置かない。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D10情報内容、D11受信、D12属性集団、D13情報誘発行動、D15集団暴力＋死亡、D19地域流通がEvidenceに適合。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "FINDING",
+      "notes": "current D12=井戸・市街地、D13=投毒・放火、D15=死亡は虚偽主張内部を混在させる。実事件モデルでは朝鮮人集団→流言誘発行動→集団暴力・死亡で統一すべき。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "流言拡大が現実の殺傷へつながったL3はEVD-002〜004で直接支持。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "FINDING",
+      "notes": "首都圏・被災地域で広域化し公的主体を巻き込んだことは支持されるが、全国規模一般社会への実流通は固定できない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "公開的な虚偽流言でありNO_HIDDEN_TRUTHの使用は妥当。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "1923年震災・通信途絶・流言・殺傷の史実を因果統合するA4。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "虚偽主張内の架空加害を実因果鎖へ置くこと、および全国大衆流通がEvidence ceilingを越える。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "差別的災害流言として整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "震災直後の情報途絶・混乱を背景に差別的虚偽流言が情報内容として拡散し、受容者の警戒・排斥・暴力行動を誘発して、朝鮮人への集団暴力・死亡を現実に生じさせた。流通範囲は被災地域・地方圏として確認する。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D18",
+      "D19",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-004"
+    ],
+    "status": "FINDING",
+    "notes": "中心因果鎖D10-D15とD19の再裁定が必要。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Major",
+      "category": "causality",
+      "summary": "D10-D15が虚偽流言の内部主張を主因果鎖に置き、実際の流言→暴力モデルとずれている。",
+      "rationale": "10 Summaryではcausal_agentは根拠のない流言、mechanismは断片情報を集団の悪意へ結び流言反復が排斥・暴力を正当化すること、affected_targetsは朝鮮人と社会秩序である。公的Evidenceも流言拡大が現実の殺傷へ波及したことを示す。",
+      "impact": "虚偽に加害主体とされた朝鮮人をD10因果源として置くことで、Entryの分析上の実因果と虚偽主張内容を混同する。",
+      "fix_direction": "D10=D10.OBJ.INFORMATION_CONTENT、D11=D11.INF.RECEIVE_MESSAGE、D12=D12.GRP.DEMOGRAPHIC_GROUP、D13=D13.COG.INFORMATION_INDUCED_ACTION、D15 primary=D15.COL.COLLECTIVE_VIOLENCE + secondary=D15.BOD.DEATHへ再裁定する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003",
+        "EVD-004"
+      ],
+      "dimension_refs": [
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D15"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D19 NATIONAL_PUBLICはcurrent Evidenceより広い。",
+      "rationale": "資料は関東大震災の被災地域で流言が広がり、自警団・軍隊・警察の一部まで巻き込まれたことを示すが、全国規模一般社会への実流通を直接示さない。",
+      "impact": "被災地域の広域流通を全国的大衆へ過大化する。",
+      "fix_direction": "D19をD19.LOC.REGIONAL / Dへ変更する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003",
+        "EVD-004"
+      ],
+      "dimension_refs": [
+        "D19"
+      ]
+    }
+  ],
+  "verdict": "Major",
+  "review_notes": "Review cycle 001。中心因果鎖の混同をMajor、D19をModerate Finding。00/10はPass。"
+}
