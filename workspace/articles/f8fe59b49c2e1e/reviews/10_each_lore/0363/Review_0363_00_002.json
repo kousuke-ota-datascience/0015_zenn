@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0363",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0363_1973_toilet_paper_shortage_rumor/0363_00_sources.json",
+    "commit_sha": "658098632ea5a3f733b8af08523f74b9fe4c2f83",
+    "blob_sha": "e484c184cdfc2754715c4d97ba5d4925b9bbbcdb",
+    "reviewed_at": "2026-09-19T04:56:03.396Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "canonical 00不変。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "1973年と2020年比較を分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "昭和館記録範囲内。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "歴史整理資料として位置付け維持。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "初発話者・経路を断定しない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "初期伝播詳細を未確定で保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。00不変でPass。"
+}
