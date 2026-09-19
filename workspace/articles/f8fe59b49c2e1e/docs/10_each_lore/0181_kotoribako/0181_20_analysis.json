@@ -1,0 +1,413 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0181",
+  "macro_category": "ネット怪談",
+  "entry_type": "呪物怪談",
+  "version_scope": {
+    "description": "2005年の掲示板で共有された主要形。後年の派生設定や民俗起源仮説は除外。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "notes": "成立時の意味形成核を優先。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "D",
+      "primary": {
+        "code_id": "D01.G6"
+      },
+      "secondary": [],
+      "rationale": "保存ログが2005年の成立・流通を直接示す。",
+      "manifestation": "2000年代のネット怪談として確認できる。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D02",
+      "status": "D",
+      "primary": {
+        "code_id": "D02.WEB.FORUM",
+        "parent_id": "D02.WEB"
+      },
+      "secondary": [],
+      "rationale": "成立直後の流通が掲示板ログで確認できる。",
+      "manifestation": "匿名掲示板のスレッドが最古確認流通媒体。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D03",
+      "status": "D",
+      "primary": {
+        "code_id": "D03.WEB.FORUM",
+        "parent_id": "D03.WEB"
+      },
+      "secondary": [],
+      "rationale": "Version Scope自体が掲示板上で流通している。",
+      "manifestation": "オープンWeb掲示板で共有・検討された。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D04",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "成立直後から再話・考察はあるが、主要形の生成変容を一つの型に固定する十分な証拠がない。",
+      "manifestation": "生成・変容パターンは未確定。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D05",
+      "status": "I",
+      "primary": {
+        "code_id": "D05.EXP.RETROSPECTIVE_1P",
+        "parent_id": "D05.EXP"
+      },
+      "secondary": [],
+      "rationale": "語り手周辺で起きた出来事を回顧的な経験談として構成する。",
+      "manifestation": "知人の持ち込みと対処を語る経験叙述。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D06",
+      "status": "D",
+      "primary": {
+        "code_id": "D06.T6"
+      },
+      "secondary": [],
+      "rationale": "保存ログ自体に創作・実在をめぐる異論が併存する。",
+      "manifestation": "真偽未確定の怪談として流通。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D07",
+      "status": "D",
+      "primary": {
+        "code_id": "D07.ANO.UNKNOWN_EXISTENCE",
+        "parent_id": "D07.ANO"
+      },
+      "secondary": [
+        {
+          "code_id": "D07.DCF.UNEXPLAINED_DEATH_LOSS",
+          "parent_id": "D07.DCF"
+        }
+      ],
+      "rationale": "意味形成の中心は正体不明の呪物の存在と作用。",
+      "manifestation": "未知の箱を危険な呪物として理解する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D08",
+      "status": "I",
+      "primary": {
+        "code_id": "D08.STY.WITNESS_REPORT",
+        "parent_id": "D08.STY"
+      },
+      "secondary": [],
+      "rationale": "語り手側の体験・知人の反応が存在信念の入口になる。",
+      "manifestation": "当事者周辺の証言形式が契機。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D09",
+      "status": "D",
+      "primary": {
+        "code_id": "D09.CAU.HIDDEN_CAUSE",
+        "parent_id": "D09.CAU"
+      },
+      "secondary": [],
+      "rationale": "不調や死亡を箱の呪いという隠れた原因に帰属する。",
+      "manifestation": "箱が不幸の因果源と説明される。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D10",
+      "status": "D",
+      "primary": {
+        "code_id": "D10.OBJ.CURSED_OBJECT",
+        "parent_id": "D10.OBJ"
+      },
+      "secondary": [],
+      "rationale": "因果源は呪われた物体としての箱。",
+      "manifestation": "木箱自体が呪力を保持する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D11",
+      "status": "I",
+      "primary": {
+        "code_id": "D11.MAN.TAKE_OWN_CARRY",
+        "parent_id": "D11.MAN"
+      },
+      "secondary": [],
+      "rationale": "物語は箱を持ち出し、家へ持ち込むことから危険が顕在化する。",
+      "manifestation": "所持・運搬が接触条件になる。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D12",
+      "status": "D",
+      "primary": {
+        "code_id": "D12.GRP.DEMOGRAPHIC_GROUP",
+        "parent_id": "D12.GRP"
+      },
+      "secondary": [],
+      "rationale": "物語上、女性と子どもが特に作用対象とされる。",
+      "manifestation": "特定の人口集団へ偏った害。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D13",
+      "status": "D",
+      "primary": {
+        "code_id": "D13.FAT.CURSE_MISFORTUNE",
+        "parent_id": "D13.FAT"
+      },
+      "secondary": [],
+      "rationale": "箱の作用は呪いによる災厄として説明される。",
+      "manifestation": "呪物が病・死などの不幸をもたらす。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D14",
+      "status": "D",
+      "primary": {
+        "code_id": "D14.NEG"
+      },
+      "secondary": [],
+      "rationale": "主要帰結は重篤な害・死。",
+      "manifestation": "帰結は負。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D15",
+      "status": "D",
+      "primary": {
+        "code_id": "D15.BOD.DEATH",
+        "parent_id": "D15.BOD"
+      },
+      "secondary": [],
+      "rationale": "中心的帰結として死亡が語られる。",
+      "manifestation": "身体・生命への致命的帰結。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D16",
+      "status": "I",
+      "primary": {
+        "code_id": "D16.EVT.SEQUENTIAL_EPISODE",
+        "parent_id": "D16.EVT"
+      },
+      "secondary": [],
+      "rationale": "持ち込み、危険認識、隔離という順序で進行する。",
+      "manifestation": "単一エピソード内の連続過程。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D17",
+      "status": "I",
+      "primary": {
+        "code_id": "D17.CST.CONTAINMENT",
+        "parent_id": "D17.CST"
+      },
+      "secondary": [],
+      "rationale": "危険物として隔離・回収することが制御となる。",
+      "manifestation": "箱を管理下へ置き接触を断つ。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D18",
+      "status": "D",
+      "primary": {
+        "code_id": "D18.L1"
+      },
+      "secondary": [],
+      "rationale": "因果作用は物語内部の人物に向かう。",
+      "manifestation": "伝承内因果層。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D19",
+      "status": "D",
+      "primary": {
+        "code_id": "D19.NET.OPEN_FORUM_WEB",
+        "parent_id": "D19.NET"
+      },
+      "secondary": [],
+      "rationale": "公開掲示板で全国から閲覧可能な形で流通する。",
+      "manifestation": "オープンなネットワーク公開圏。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ]
+    },
+    {
+      "dimension_id": "D20",
+      "status": "I",
+      "primary": {
+        "code_id": "D20.INS.LOCAL_RESIDENT",
+        "parent_id": "D20.INS"
+      },
+      "secondary": [],
+      "rationale": "物語内部では由来と扱い方を知る地元・家系の人物が特権情報を持つ。",
+      "manifestation": "地域内部者が危険と対処法を知る。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    },
+    {
+      "dimension_id": "D21",
+      "status": "I",
+      "primary": {
+        "code_id": "D21.A2"
+      },
+      "secondary": [],
+      "rationale": "島根県方面という具体的地域設定が物語の由来説明に使われるが、史実性は未確認。",
+      "manifestation": "具体的実在地域をアンカーにする。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ]
+    }
+  ],
+  "analysis_notes": "現実の被差別共同体に関する記述は物語内設定としてのみ扱い、歴史的事実として一般化しない。"
+}
