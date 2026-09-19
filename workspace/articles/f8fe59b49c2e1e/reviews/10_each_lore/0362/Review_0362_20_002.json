@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0362",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_20_analysis.json",
+    "commit_sha": "e6a660c39f2ac8cd1236c26485b4a7f1e62e0aba",
+    "blob_sha": "d107ebe322676715e5ff1dae1c13c16f5ea79af8",
+    "reviewed_at": "2026-09-19T04:52:10.470Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "公的資料で確認できる事件核に限定。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D04=U、D08=UNSUPPORTED_ASSERTION、D09=BOUNDARY_CLASSIFICATIONへ修正。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "gapなし。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "流言→危険認知→引き出し→取付けが整合。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全Dimensionがcurrent Content/Evidenceへ追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "独立再構成と中心判断が一致。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "派生生成を除去し、直接確認できる流言主張と合理的な危険分類へ抑制。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "金融機関→情報誘発行動→意思決定変化が整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "現実の引き出し・取付けL3が公的記録で支持。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "地域流通REGIONALを維持。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "制度情報優位をIとして維持。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "実在金融機関と1973年事件A4。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "派生・反復構造の過剰推論を除去。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "金融流言事件として整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "根拠未提示の金融不安主張が金融機関を危険側へ解釈させ、預金引き出しを誘発して取付けへ発展する。派生版生成や詳細な伝播規則は固定しない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D17",
+      "D18",
+      "D19",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002"
+    ],
+    "status": "PASS",
+    "notes": "Seq001 F001-F003解消。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。全てPass。"
+}
