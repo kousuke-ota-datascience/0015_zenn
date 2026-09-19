@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0198",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "mirror_reprint_or_restoration",
+      "title": "一人隠れんぼ - 検証実況スレ過去ログ",
+      "locator": "2007年4月21日 2ちゃんねるオカルト板実況保存ログ",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "A"
+      ],
+      "url": "https://w.atwiki.jp/kakurenbo/pages/12.html",
+      "notes": "初期実況スレを保存した再掲。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "mirror_reprint_or_restoration",
+      "title": "呪術一覧 - ひとりかくれんぼ実況まとめサイト",
+      "locator": "ひとりかくれんぼ項目",
+      "accessed_at": "2026-09-19",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://w.atwiki.jp/hitorikakurenbo/pages/192.html",
+      "notes": "成立時期・媒体と主要な俗説を整理した初期まとめ。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "2007-04-21 02:04-02:34頃",
+      "content": "初期実況ログでは、手足のあるぬいぐるみから綿を抜き、米・自分の爪を入れて赤い糸で縫い、塩水と刃物を準備する手順が提示される。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "同ログ 手順と終了法",
+      "content": "深夜にぬいぐるみに名前を付け、浴槽へ入れ、鬼役を交代する宣言をして隠れる。終了時には塩水を用いて終了宣言を行うなど、開始から終了までの具体的な手順が示される。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-001",
+      "locator": "同ログ 実況部",
+      "content": "複数の参加者が物音、テレビの異変、人影などを実況するが、これらが超常現象であることを独立に検証する資料は示されない。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-002",
+      "locator": "呪術一覧 ひとりかくれんぼ",
+      "content": "初期まとめは、ひとりかくれんぼを2007年4月21日に2ちゃんねる・オカルト板で成立した交霊形式として整理し、ぬいぐるみを使って霊とかくれんぼするという俗説を記録する。",
+      "representation": "paraphrase"
+    }
+  ],
+  "notes": "2007年4月の初期実況・手順をScopeとし、後年の改変手順や動画派生は含めない。"
+}
