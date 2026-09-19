@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0309",
+  "artifact": "10",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0309_uryujima/0309_10_contents.json",
+    "commit_sha": "efaee71c6fb8e495c2de83d166884f7e3ed758d7",
+    "blob_sha": "96705985af4191a8442a8cbf46afb55f12072be6",
+    "reviewed_at": "2026-09-19T04:37:40.823Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "canonical 10はSeq001から不変で、全Content Unitが00 Evidenceへ追跡可能。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "島の存在伝承、1596年災害、史実性留保、現代文化表象を再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "1596年災害と島消失を結ぶ共有核に限定。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "実在形態・全面沈没・史料形成過程を未確定のまま保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全4 unitを保持。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "別府湾に栄えたとされる瓜生島が1596年の地震・津波で失われたとする地域伝説。実在災害は確認されるが島の全面沈没は同確度の史実ではなく、現在は『幻の島』として地域文化イベント等に再利用される。",
+    "reference_story": "current Content Unitsと一致。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "Seq001で確認した瓜生島伝説の共有核と不確実性を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "D04/D17修正はContent再構成を変更しない。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "瓜生島の存在伝承",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "1596年災害による海没伝説",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "災害史実と沈没伝説の確度差",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "幻の島としての現代文化利用",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。10はcurrent target不変でPass。"
+}
