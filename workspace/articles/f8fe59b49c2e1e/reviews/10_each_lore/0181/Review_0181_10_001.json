@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0181",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0181_kotoribako/0181_10_contents.json",
+    "commit_sha": "50b09e1c46b547b84fc64804e667420db625b47f",
+    "blob_sha": "a3792622a9c59a1c82b721395cd74cf4ef06043d",
+    "reviewed_at": "2026-09-19T01:20:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "全Content Unitが00 Evidenceへ追跡でき、呪物設定を歴史的事実へ格上げしていない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "Summaryのみから、箱の持ち込み→危険認識→女性・子どもへの害→隔離・回収という主要形を再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "2005年成立直後の掲示板形を主要形とし、後代派生・地域起源説を除外している。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "原投稿の細部、箱・由来伝承の実在を未確定のまま保持。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "精巧な木箱を偶然持ち込んだことから、箱が女性や子どもに致命的な害を及ぼす呪物だと判明し、事情を知る人物が隔離・回収に動く掲示板怪談。由来は被差別共同体の怨恨と結び付けて語られるが、その歴史的実在は裏付けられていない。",
+    "reference_story": "知人が祖父母宅で見つけた精巧な木箱を持ち込み、箱を知る人物が強い危険を認識する。 / 箱は過去の共同体で作られた呪物であり、怨恨を他者へ向けるための器だったと説明される。 / 箱の影響はとりわけ女性と子どもに重く作用し、病や死に至らせうるとされる。 / 危険を知る人物が箱を隔離・回収し、以後の接触を避けることで被害拡大を防ごうとする。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "箱を持ち込む知人 / 危険を知る人物 / 語り手",
+        "reference": "Content Unitsとの照合でprimary_actorsの意味を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "女性 / 子ども",
+        "reference": "Content Unitsとの照合でaffected_targetsの意味を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "正体を知らずに箱を所持・持ち込むこと",
+        "reference": "Content Unitsとの照合でentry_triggerの意味を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "呪物とされる木箱",
+        "reference": "Content Unitsとの照合でcausal_agentの意味を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "箱に込められた呪いが近接者、とくに女性・子どもへ害を及ぼす",
+        "reference": "Content Unitsとの照合でmechanismの意味を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "未知の工芸品としての箱から、危険な呪物として認識・隔離される",
+        "reference": "Content Unitsとの照合でstate_transitionの意味を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "持ち込み後に危険が顕在化し、回収・隔離へ進む単一エピソード",
+        "reference": "Content Unitsとの照合でtemporal_structureの意味を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "箱へ不用意に近づかない / 女性・子どもを近づけない",
+        "reference": "Content Unitsとの照合でrules_and_taboosの意味を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "事情を知る者による隔離・回収",
+        "reference": "Content Unitsとの照合でavoidance_controlの意味を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "箱は危険物として管理され、当事者は接触を断つ",
+        "reference": "Content Unitsとの照合でterminal_stateの意味を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "原話の史実性 / 箱や由来伝承の実在 / 原投稿と後続再話の細部差",
+        "reference": "Content Unitsとの照合でuncertaintiesの意味を保持",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "2005年成立直後の掲示板形を対象とし、後年の派生設定・地域起源説は除外",
+        "reference": "Content Unitsとの照合でvariant_boundariesの意味を保持",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "詳細Content照合後も、呪物への接触・被害・隔離を核とする判断は不変。"
+    },
+    "verdict": "PASS"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Summary blind decodeとContent照合で意味保存を確認しPass。"
+}

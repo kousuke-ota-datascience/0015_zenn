@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0181",
+  "artifact": "20",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0181_kotoribako/0181_20_analysis.json",
+    "commit_sha": "1e68fcca6ee83bd6016cf7f1ed0c2bfb88fc9674",
+    "blob_sha": "e0956c5e97ea86ad349a2a1934eef176bd25c76f",
+    "reviewed_at": "2026-09-19T01:20:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "2005年成立直後の掲示板主要形に限定し、後代派生を混入していない。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "21次元をContentから再構成し、呪物・対象集団・死亡・隔離という因果核と整合。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "不必要なtaxonomy gapはなく、採用codeで意味を保持。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "D09=D09.CAU.HIDDEN_CAUSE, D10=D10.OBJ.CURSED_OBJECT, D11=D11.MAN.TAKE_OWN_CARRY, D13=D13.FAT.CURSE_MISFORTUNE, D17=D17.CST.CONTAINMENTの因果列がContentと整合。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全Dimensionのcontent_refs/evidence_refsはcanonical 10/00へ追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Contentから独立再構成したモデルと20 Analysisの中心判断が一致。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "未確定の生成変容・地理史実性はU/Iへ抑制し、直接確認事項のみD。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=D12.GRP.DEMOGRAPHIC_GROUP → D13=D13.FAT.CURSE_MISFORTUNE → D15=D15.BOD.DEATH が女性・子どもへの呪物被害として整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18はL1のみ。社会現実効果を追加推定していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公開掲示板であることを根拠にオープンWeb流通を採用し、別の人口普及率を推定していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "情報不足をNO_ONE_KNOWSへ短絡せず、物語内部の地域内部者知識として限定。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "D21=D21.A2。具体地域設定は認めるが、史実性は断定しない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "保存ログで直接確認できる範囲を超えて歴史的実在・民俗起源を断定していない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "ネット怪談 / 呪物怪談 は主要形と整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "精巧な木箱を偶然持ち込んだことから、箱が女性や子どもに致命的な害を及ぼす呪物だと判明し、事情を知る人物が隔離・回収に動く掲示板怪談。由来は被差別共同体の怨恨と結び付けて語られるが、その歴史的実在は裏付けられていない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-003",
+      "EVD-002"
+    ],
+    "status": "PASS",
+    "notes": "呪物としての箱→特定対象への害→隔離という因果モデルをContentから再構成。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。Version Scope、21次元、Evidence ceilingを独立監査しPass。"
+}

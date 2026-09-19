@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0181",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0181_kotoribako/0181_00_sources.json",
+    "commit_sha": "a690081b7d266b2659be79e3049e7a5cdea10718",
+    "blob_sha": "12ae64e7fb24f92b28b7db181a8ef8abf9b97d03",
+    "reviewed_at": "2026-09-19T01:20:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "1 sourcesをsource_type/relation/evidence_role別に評価し、資料階層を保持。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "3 evidenceはsource_idへ追跡可能で、相互矛盾・留保はuncertainty/notesに分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "Evidenceは各locatorのparaphrase範囲に留まり、資料以上の史実化をしていない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "保存ログ・再掲・後代整理を一次資料相当に格上げせず、relation_to_primaryを明示している。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2005年の保存ログを確認点として扱い、絶対起源と同一視していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "原投稿との距離、史実性、由来の不確実性を明示的に保持している。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。典拠階層・成立時点の掲示板形・史実性の留保を独立監査しPass。"
+}
