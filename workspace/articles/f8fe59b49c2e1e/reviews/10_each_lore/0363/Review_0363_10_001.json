@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0363",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0363_1973_toilet_paper_shortage_rumor/0363_10_contents.json",
+    "commit_sha": "a5943675d5c806ae65a450d267b56a77dd3251c6",
+    "blob_sha": "d33de9668b20107cd5aaf1646415e46faa2488c7",
+    "reviewed_at": "2026-09-19T04:54:34.790Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜004はEVD-001〜004へ追跡可能。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "不足予測→口コミ→買いだめ→品薄・パニックを再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "1973年VAR-001をScopeとし2020年VAR-002を除外。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "初発話者・伝播経路を未確定で保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全4 unitを保持し、ScopeはCNT-001〜003。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1973年のオイルショック下で生活必需品がなくなるという噂が口コミで広がり、消費者の買いだめが実際の品薄と経済パニックへ発展した流言事件。",
+    "reference_story": "current Contentと一致。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "不足予測の口コミ→買いだめ→品薄・パニックという1973年事件核を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "詳細照合後も事件核は不変。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "不足予測の噂",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "口コミ拡散と危機背景",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "買いだめ・品薄・パニック",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "2020年比較はScope外",
+        "blind_reconstruction": "境界として保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 001。意味保存とVariant境界を確認しPass。"
+}
