@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0349",
+  "artifact": "10",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0349_sony_timer/0349_10_contents.json",
+    "commit_sha": "4394eff73134529cf40ecaeebad75c63d28f8c61",
+    "blob_sha": "dcb078c5dd19b62e375e42b187d8caf5352c22a4",
+    "reviewed_at": "2026-09-19T04:44:50.486Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "canonical 10不変で00 Evidenceへ追跡可能。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "一定期間後の故障とメーカー意図への帰属、企業側否認を再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "共有核に限定。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "実在性・成立時期の不確実性を保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全4 unitを保持。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "一定期間後のソニー製品故障をメーカーの意図的寿命設計へ帰属する俗説。2007年には公に言及されたが企業側は意図的故障を認めていない。",
+    "reference_story": "current Contentと一致。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "ソニータイマーの共有核と事実性留保を保持",
+        "reference": "current 10と一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "D04/D15/D19修正はContentを変更しない。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "タイマー俗説",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "故障をメーカー意図へ帰属",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "企業側は意図的設計を認めない",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "2007年には公的流通",
+        "blind_reconstruction": "保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。10は不変でPass。"
+}
