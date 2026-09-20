@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0188",
+  "artifact": "00",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_00_sources.json",
+    "blob_sha": "795e97a18d3b8382a85501fea0b6149d041f98d3",
+    "commit_sha": "f76b2d487a4a46d75f9c750824b41b3f9e257802",
+    "reviewed_at": "2026-09-20T07:07:12Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001を原投稿本文の保存再掲、SRC-002を後代の出典整理として区別し、一次資料との距離を過大評価していない。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001〜010はlocatorごとの意味範囲を保ち、物語内主張と外部事実性を分離している。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "地区境界の封印、捕捉時の死亡伝承、Kの防護、血縁者配置、護送時追跡、帰還禁止はいずれもSRC-001の対応箇所へ追跡可能。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "SRC-001=direct_derivative、SRC-002=indirect_derivativeを維持し、保存再掲を一次ページそのものとは扱っていない。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2008-08-26のレス908-916を現在確認できる起点として扱い、絶対的起源とは断定していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "一次ページ未固定、実話性、具体的舞台、由来・周辺集落との取り決めの不確実性を保持している。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "Review 003 F001で欠落していた領域封印、死亡帰結、防護手順、血縁護送、脱出時追跡、長期帰還禁止をEVD-003〜009として独立に意味保存した。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 004。current Source→Evidenceを再監査し、Review 003 F001のsalient evidence completeness欠落が解消したことを確認。"
+}
