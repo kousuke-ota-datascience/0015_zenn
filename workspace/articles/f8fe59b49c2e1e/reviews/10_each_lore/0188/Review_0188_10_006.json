@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0188",
+  "artifact": "10",
+  "review_seq": 6,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_10_contents.json",
+    "commit_sha": "0d7271c8c93f7bb5784c60d273f5044496607ef4",
+    "blob_sha": "76a5101aa939a7332a3f1478f5dff9417318cc0e",
+    "reviewed_at": "2026-09-20T08:25:47Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜009、VAR-001、uncertaintiesの各主要主張はcurrent EVDへ追跡でき、外部事実性を越えた断定はない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "主要因果列に加え、四方向4体の境界地蔵、擬態誘引、若年標的、Kの念仏、身代わり準備までsummaryから再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12の全probeでBlind Decodeとreference storyの意味差はNONE。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001を2008年8月26日の初出連投へ限定し、後代の映像・ゲーム・追加設定を混入していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "外部事実性、由来詳細、若年被害傾向の外部統計性を未確定として保持している。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "遭遇、標的化、防護、擬態誘引、護送・身代わり、追跡、脱出、帰還禁止、後日談までsummary単独で主要展開を再構成できる。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "Review 005で欠落した身代わり制御とKの念仏をContentへ昇格し、00で追加された擬態誘引・若年標的もCNT-007/008として保持した。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "十年以上前の高校時代体験を一人称で回顧する投稿として、語り手は親類宅で白い服と帽子の異常な高身長存在と『ぽぽぽ』の声に偶然遭遇し、八尺様に標的化されたと説明される。八尺様は東西南北4体の境界地蔵で地区内に封じられ、魅入られた者は数日内に死亡するとされる。語り手は札・盛り塩・仏像等で防護された部屋に籠るが、祖父に酷似した声で外へ誘われ、盛り塩の黒変や窓叩きを経験する。翌朝は血縁者に囲まれ、Kの念仏を受けながら車で退避し、祖父または父が身代わりとなる準備もされる。八尺様は車に並走して窓を叩くが、地区境界外へ逃れる。成人前の若者、とくに子どもが被害に遭いやすいとも説明される。以後は帰還を禁じられ、後年の地蔵破損で脅威継続可能性が残る。",
+    "reference_story": "語り手は高校時代の体験を十年以上後に一人称で回顧する。親類宅で白い服と帽子の異常な高身長存在と『ぽぽぽ』の声に偶然遭遇し、親族から八尺様に魅入られたと説明される。八尺様は東西南北4体の地蔵で地区内に封じられ、標的は数日内に死亡するとされる。Kの札・窓の目張り・盛り塩・仏像で一夜を防護する間、祖父声への擬態誘引、盛り塩黒変、窓叩きが起こる。翌朝、血縁者とKの念仏による車両護送で脱出し、最悪時には祖父・父が身代わりとなる準備もある。八尺様は車を追跡するが境界外へ逃れる。若年者、とくに子どもが狙われやすいとの物語内説明があり、以後の帰還禁止と後年の地蔵破損で脅威継続可能性が残る。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "語り手、八尺様、祖父母・親族、K",
+        "reference": "語り手、八尺様、祖父母・親族、K",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "八尺様に目を付けられた語り手。成人前の若者、とくに子どもが被害に遭いやすいとされる",
+        "reference": "八尺様に目を付けられた語り手。成人前の若者、とくに子どもが被害に遭いやすいとされる",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "本人の選択なく八尺様と偶然遭遇し、目撃・声の知覚後に標的化される",
+        "reference": "本人の選択なく八尺様と偶然遭遇し、目撃・声の知覚後に標的化される",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "八尺様",
+        "reference": "八尺様",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "標的への接近・追跡、身内の声への擬態・誘引、脱出車への並走",
+        "reference": "標的への接近・追跡、身内の声への擬態・誘引、脱出車への並走",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "偶然の遭遇者から標的となり、防護・護送後に地区外へ退避し、以後帰還禁止となる",
+        "reference": "偶然の遭遇者から標的となり、防護・護送後に地区外へ退避し、以後帰還禁止となる",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "十年以上後の回顧で、遭遇当日→一夜の防護と誘引→翌朝の脱出→後年の地蔵破損",
+        "reference": "十年以上後の回顧で、遭遇当日→一夜の防護と誘引→翌朝の脱出→後年の地蔵破損",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "東西南北4体の境界地蔵による封印、朝7時までの防護室待機、札・盛り塩・祈り、血縁者に囲まれた退避、帰還禁止",
+        "reference": "東西南北4体の境界地蔵による封印、朝7時までの防護室待機、札・盛り塩・祈り、血縁者に囲まれた退避、帰還禁止",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "Kによる夜間防護、Kの念仏と血縁者車列による退避、最悪時の祖父・父の身代わり準備",
+        "reference": "Kによる夜間防護、Kの念仏と血縁者車列による退避、最悪時の祖父・父の身代わり準備",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "地区外へ当面逃れるが、長期帰還禁止と後年の地蔵破損による再接近可能性が残る",
+        "reference": "地区外へ当面逃れるが、長期帰還禁止と後年の地蔵破損による再接近可能性が残る",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "外部事実性、実在地域、由来・周辺集落との取り決め詳細、若年被害傾向の外部統計性は未確定",
+        "reference": "外部事実性、実在地域、由来・周辺集落との取り決め詳細、若年被害傾向の外部統計性は未確定",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "2008年8月26日の初出連投を主要形とし、後代派生を除外",
+        "reference": "VAR-001=2008年8月26日の初出連投。後代派生を除外",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "current ContentはReview 005で欠落していたsalient control/detailを含めて完成しており、これを前提にD11/D13/D16/D17を再評価できる。summaryとContentの差から追加の主要分析変更は要求されない。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "白い服と帽子、異常な高身長、『ぽぽぽ』という声の直接遭遇。",
+        "blind_reconstruction": "白い服と帽子の高身長存在と『ぽぽぽ』の声として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "八尺様の名称、東西南北4体の境界地蔵による封印、魅入られた者が数日内に死亡するという伝承内帰結。",
+        "blind_reconstruction": "名称、四方向4体の地蔵による封印、数日内の死亡として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "札、窓の目張り、四隅の盛り塩、仏像、朝7時までの待機と祈り。",
+        "blind_reconstruction": "夜間防護の具体的手順として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "血縁者による車両護送、Kの念仏、八尺様の並走・窓叩き、地区境界越え。",
+        "blind_reconstruction": "護送、念仏、追跡、窓叩き、地区外脱出として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "長期帰還禁止、祖父葬儀にも戻らない実践、後年の地蔵破損による再接近可能性。",
+        "blind_reconstruction": "長期帰還禁止と地蔵破損による脅威継続可能性として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "高校時代の体験を十年以上後に一人称で回顧する提示形式。",
+        "blind_reconstruction": "十年以上後の一人称回顧として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "祖父声への擬態・防護室外への誘引、盛り塩黒変、窓叩き、祈りによる室内待機。",
+        "blind_reconstruction": "擬態誘引と防護反応の夜間場面として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-008",
+        "salient_meaning": "成人前の若者、とくに子どもが被害に遭いやすいという物語内説明。",
+        "blind_reconstruction": "若年者・子どもの標的傾向として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-009",
+        "salient_meaning": "血縁者で標的を混乱させ、最悪時に祖父または父を身代わりとする準備。",
+        "blind_reconstruction": "血縁配置と祖父・父の身代わり準備として復元できる。",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 006。Blind Decodeはcurrent summary.narrative + summary.structureのみから先に固定し、その後Evidence→Content population、coverage_refs全9件、P01〜P12を監査。"
+}
