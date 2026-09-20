@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0365",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0365_kanto_earthquake_poison_well_rumor/0365_00_sources.json",
+    "commit_sha": "e28a5c73514ccf62fcf333f5419fa3f6c6fd0561",
+    "blob_sha": "40381cfbf13bea9e2fefd0a4a9ebdcab6259273c",
+    "reviewed_at": "2026-09-20T03:06:35.691Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "canonical 00はSeq001から不変。内閣府の防災白書・災害教訓報告書を公的検証資料として使用。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "虚偽流言の内容、現実の殺傷被害、軍警察の一部による流言増幅を分離。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "差別的主張を一貫して根拠のない流言として記述し、事実として肯定していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "両資料を歴史的事件へのdirect derivativeとして扱い、原史料そのものへ格上げしていない。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1923年震災直後の事件として確認しつつ、個々の初発話者・最初の伝播経路を固定していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "初発話者・地域別伝播経路の不確実性を保持。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。20修正後の完全cycle再Review。00はcurrent target不変でPass。"
+}
