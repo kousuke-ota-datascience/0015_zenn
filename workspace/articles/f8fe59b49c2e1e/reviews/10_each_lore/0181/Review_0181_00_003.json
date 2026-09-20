@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0181",
+  "artifact": "00",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "docs/10_each_lore/0181_kotoribako/0181_00_sources.json",
+    "commit_sha": "c7a78c72aa5c86726a84fe709f410f194f3dc2d0",
+    "blob_sha": "44724b5a928c99bd983c65b196e281b3db036226",
+    "reviewed_at": "2026-09-20T04:46:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001 is explicitly classified as a mirror/reprint/restoration and not promoted to primary evidence."
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "Evidence units separate the founding summary, near-contemporary restatements, participant inference, and later 2008 discussion without collapsing their epistemic status."
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "Each EVD unit is tied to a concrete locator in SRC-001 and its representation/uncertainty matches the source layer."
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "The unavailable prior occult-board posts are identified as upstream primary material; the current source is correctly retained as a direct derivative."
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "The current earliest directly checked artifact is the 2005-06-11 saved thread; origin claims are not substituted for earliest attestation."
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "Historicity, curse efficacy, original-post attribution, Oki linkage, and later material/method claims retain explicit uncertainty."
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "Audited salient source population: formation sequence, box identity/form, M/M-father roles, women/children targeting and severe outcome, village weapon/management/missing-box claim, Oki origin, type names, contemporaneous truth-status discussion, and later material/method discussion. Each is represented by EVD-001–EVD-010 or explicitly bounded as later."
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review Seq 3: previous semantic-completeness findings are resolved. No Source→Evidence salient omission was found within the constrained source scope."
+}

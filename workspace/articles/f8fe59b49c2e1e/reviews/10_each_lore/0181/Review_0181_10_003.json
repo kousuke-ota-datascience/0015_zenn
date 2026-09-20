@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0181",
+  "artifact": "10",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "docs/10_each_lore/0181_kotoribako/0181_10_contents.json",
+    "commit_sha": "52bd2a824b61ff235031405190c4bd85b6c1c6b2",
+    "blob_sha": "6312f5fb87f463e6153a783be836f0e5151e4a0f",
+    "reviewed_at": "2026-09-20T04:46:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001–CNT-009 are each supported by their cited EVD units, with restatement/inference layers explicitly labeled rather than promoted to primary fact."
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "Summary narrative plus structure preserves all nine coverage units, the unresolved missing box, the information-holder structure, and epistemic limits."
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01–P12 are all reconstructable with no LOSS or CONFLICT."
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001 limits the initial scope to the 2005 founding period while VAR-002 isolates later 2007–2008 verification/speculation."
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "Historicity, source-layer attribution, Oki linkage, and later material/method details remain explicitly uncertain."
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "Blind Decode from summary alone reconstructs who brought the box, who recognized it, the follow-up sequence, targets/effects, village management, and unresolved terminal state."
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "Audited EVD-001–EVD-010 against Content population. All salient initial-scope meanings are represented by CNT-001–CNT-009; EVD-010 is explicitly represented as a later excluded variant/uncertainty rather than silently omitted."
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "2005年の掲示板上で、小箱氏の体験談を発端に、友人Sが正体を知らない組木の小箱「ことりばこ」を持ち込み、神社の跡取り息子Mが危険を察して対処する。体験談後に専用スレが立ち、小箱氏とMがS家で追加情報を聞き出す。箱は「子取り箱」とされ、百数十年前に抑圧された村人が外部への武器として作り、村が世代管理したという由来が語られる。成立直後の再述では女性・子どもへの重篤・死亡級作用、M父への相談、箱種、隠岐由来も語られるが、史実性や呪術効果は未確認で創作可能性も明示される。物語上は最も強いとされる1箱が行方不明のまま残る。",
+    "reference_story": "Content層では、原体験談の要約→専用スレ→S家追加聴取という成立順序、Sの箱持ち込みとMの対処、村による武器起源・世代管理・行方不明箱、女性・子どもへの重篤作用、M/M父の情報優位、隠岐由来・箱種、成立直後の真偽留保が表現される。2007–2008年以後の材料・呪法推測はVAR-002としてScope外に分離される。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "小箱氏、S、M、M父、村側が主要な役割主体。",
+        "reference": "小箱氏、S、M、M父、村側が主要な役割主体。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "女性・子どもが主要な被作用対象。",
+        "reference": "女性・子どもが主要な被作用対象。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "Sが正体を知らず箱を持ち込むことが発端。",
+        "reference": "Sが箱を持ち出し小箱氏宅へ持ち込む。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "因果源は呪いを封入したとされる子取り箱。",
+        "reference": "因果源は呪物とされることりばこ／子取り箱。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "近接・所持に伴う重篤ないし致命的害として語られる。",
+        "reference": "成立直後再述では女性・子どもへの重篤・死亡級作用。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "持ち込み→Mの危険認識・対処→専用スレ→S家追加聴取→由来開示。",
+        "reference": "同じ段階遷移がContent Unit群で保持される。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "初回体験の後に追跡と追加聴取で情報が増補される。",
+        "reference": "CNT-001が多段階の成立順序を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "女性・子どもへの作用、不要な所持・近接回避、複数箱種が規則候補。",
+        "reference": "CNT-006/CNT-008が対象規則・箱種を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "Mの対処、M父への相談、村による世代管理。",
+        "reference": "CNT-003/CNT-005が制御・管理を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "個別事件は対処へ進むが、最強級の1箱は行方不明で残る。",
+        "reference": "CNT-005が未解決の行方不明箱を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "史実性・呪術効果・原投稿帰属・後続材料詳細は未確定。",
+        "reference": "uncertaintiesが同じ境界を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "2005成立直後層と2007–2008年以後の検討層を分離。",
+        "reference": "VAR-001/VAR-002が初期／後続境界を保持する。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Summary retains the scoped structures needed for D04, D06–D21, including target→curse mechanism→death-tier outcome, control/management, information holder, and Oki historical anchor; reading full Content does not materially change the available analysis."
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "原投稿→専用スレ→S家追加聴取という成立順序",
+        "blind_reconstruction": "成立順序と増補過程まで復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "Sの箱持ち込みとMの危険認識・対処",
+        "blind_reconstruction": "Sの持ち込み、Mの識別・対処を復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "MおよびM父の対処・情報優位",
+        "blind_reconstruction": "MとM父への相談まで復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "百数十年前の村が武器として作ったという物語内由来",
+        "blind_reconstruction": "武器・村・歴史的距離を物語内設定として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "複数箱の世代管理と最強級1箱の行方不明",
+        "blind_reconstruction": "継続管理と未解決終端を復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "女性・子どもへの重篤／死亡級作用",
+        "blind_reconstruction": "対象集団と作用強度を留保付きで復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "隠岐騒動時の人物による製法伝来という由来",
+        "blind_reconstruction": "隠岐由来を史実性未確認の設定として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-008",
+        "salient_meaning": "組木箱・複数箱種・補助的サイズ情報",
+        "blind_reconstruction": "箱形態と箱種を復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-009",
+        "salient_meaning": "成立直後から創作可能性・推論留保が併存",
+        "blind_reconstruction": "真偽が開かれた受容状態を復元できる。",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review Seq 3 Blind Decode was fixed from summary before the Evidence→Content population and coverage audits. No population omission or summary loss was found."
+}

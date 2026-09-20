@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0181",
+  "artifact": "20",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "docs/10_each_lore/0181_kotoribako/0181_20_analysis.json",
+    "commit_sha": "b3c545b81550ef4e8719870c82b254a0f8b35db6",
+    "blob_sha": "9df5eff72a58c799b66675cad56bcba394de33aa",
+    "reviewed_at": "2026-09-20T04:46:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001 is included and VAR-002 excluded consistently; the 2005 founding form and near-contemporary restatement layers are explicitly bounded."
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D01–D21 codes match the scoped Content semantics; previously weak D06/D15/D20/D21 judgments were re-grounded or confidence-lowered."
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "No scoped meaning requires an unrepresented taxonomy category."
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "The box is the claimed causal source, women/children the target group, curse/misfortune the mechanism, and severe/death-tier bodily outcome the consequence."
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "Dimension rationales are traceable to scoped CNT units; Evidence refs are supplementary and do not introduce new meaning absent from Content."
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "The corrected summary and full scoped Content support the same principal analysis structure."
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "Direct/Inferred statuses reflect the strength of scoped representation and derivative-source limits; D04, D06, D15, D17, D20 and D21 are conservatively I where appropriate."
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "CNT-006 supports women/children as affected group, curse/misfortune as the stated mechanism, and death-tier bodily outcome; D15 is I because the fatal detail is an early restatement rather than a direct original-post quote."
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18 selects L1 only. No L3 claim is made, so independent X Evidence is not required."
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "D19 is limited to OPEN_FORUM_WEB; the analysis explicitly avoids inferring nationwide distribution from public accessibility."
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "D20 does not use NO_ONE_KNOWS. CNT-003/CNT-005 positively support information advantage on the local/family-management side."
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "D21.A4/I is grounded in CNT-007, which causally integrates the Oki uprising/person into the transmission-origin claim while preserving that the historical linkage is unverified."
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "No dimension requires stronger epistemic confidence than its Content/Evidence support; derivative or participant-restated claims are marked I where consequential."
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "The scoped Content is a network-born supernatural cursed-object narrative, consistent with macro_category=ネット怪談 and entry_type=呪物怪談."
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "All semantic facts used for Version Scope and D01–D21 are represented in the 10 Contents layer (summary, CNT units, variants, uncertainties); Evidence-only detail is not used to justify analysis."
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Sが未知の組木箱を持ち込む→Mが危険な呪物と認識し対処する→追加聴取で子取り箱の武器起源・世代管理・行方不明箱が開示される。成立直後の再述では女性・子どもへの呪詛的な重篤／死亡級作用、M/M父による情報・対処優位、隠岐騒動を介した製法伝来が加わる。分析はこれを物語内因果として扱い、史実性・呪術効果・後年の材料詳細を確定事実へ昇格させない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-009"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "status": "PASS",
+    "notes": "Reconstruction uses scoped Content only; Evidence is not needed to add any new semantic premise."
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review Seq 3 resolves the prior Review 20 traceability/confidence findings. No Content-layer bypass or remaining semantic finding was detected."
+}
