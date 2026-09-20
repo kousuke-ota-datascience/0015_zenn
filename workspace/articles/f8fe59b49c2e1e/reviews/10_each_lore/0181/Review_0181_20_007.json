@@ -1,0 +1,101 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "発見→持ち出し、2005年参加者推測層、D20の複数holder情報がScoped Contentへ固定され、D05/D11/D20とVersion ScopeをContentから再現できる。"
+    },
+    "causality": {
+      "notes": "箱の持ち込み→危険認識／祓い→女性・子どもへの害→世代管理・行方不明という中心因果はScoped Contentから再構成できる。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "D11の発見→持ち出しはCNT-002へ固定され、Evidence-only detailの直接利用を解消。D05も原投稿の一人称性を仮定していない。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "女性・子ども→呪いによる災厄→死亡級帰結というD12→D13→D15列はCNT-002/CNT-006から再構成でき、D15は再述依存のためIとしている。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみで、独立X EvidenceのないL3を付与していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "OPEN_FORUM_WEBに留まり、公開性から全国的大衆流通を推定していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "NO_ONE_KNOWSへの短絡はない。むしろ村側・M/M父という情報保持主体が存在する。問題はその複数holderを現codeが十分表現していない点である。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "隠岐騒動を製法伝来の因果契機としてContentが物語内に組み込み、史実関係未確認も保持しているためA4/Iは妥当。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D05はEXPERIENCE_SUMMARYをprimary、COLLAB_THREADをsecondary。D20はLOCAL_RESIDENT + RELIGIOUS_FOLKLORE。FAMILY_BLOODLINEは『家族だけが知る』要件を満たさないため不採用。D11はCNT-002の発見・運搬経路に対応する。"
+    },
+    "entry_classification": {
+      "notes": "ネット怪談／呪物怪談はScoped Contentの媒体と因果源に整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "再述・検討依存が強いD04/D05/D06/D11/D15/D16/D17/D20/D21等は概ねIへ保守化されている。今回のFindingは主にcode/content traceabilityである。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "D05はCNT-001/CNT-002、D11はCNT-002、D20はCNT-003/CNT-005からコード選択とrationaleを独立再現できる。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D05/D11/D20はいずれも資料層の確度を考慮してIを維持し、Directnessとcode semanticsを混同していない。"
+    },
+    "taxonomy_gap": {
+      "notes": "D05/D20の問題はtaxonomy不足ではなく既存code selectionとContent支持の問題である。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "status": "PASS",
+      "notes": "2005-06-13の具体材料・作成法を成立直後参加者推測としてScope内に含めるが原話の確定設定へ昇格させず、2007–2008年の再提示・追加考察はVAR-002として除外する。"
+    }
+  },
+  "entry_id": "0181",
+  "findings": [],
+  "review_notes": "独立再Review cycle 007。Review 006のD05/D11/D20/Version Scope Findingを上流修正後のScoped Contentから再判定し、content layer bypass・dimension semantics・traceabilityの解消を確認。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-009",
+      "CNT-010",
+      "CNT-011",
+      "CNT-012"
+    ],
+    "dimension_refs": [
+      "D05",
+      "D11",
+      "D20"
+    ],
+    "model": "Scoped Contentから、小箱氏の個人経験の要約を入口に公開スレッドで共同検討が続く提示形式、Sが箱を発見・持ち出し・運搬する発端、村側の地域内部情報と神社跡取りMの宗教的専門知識という複数holder構造を再構成できる。2005年の作用理由・材料／作成法は参加者推測として含まれ、後年検討と区別される。",
+    "notes": "D05=EXPERIENCE_SUMMARY + COLLAB_THREAD、D11=TAKE_OWN_CARRY、D20=LOCAL_RESIDENT + RELIGIOUS_FOLKLORE。FAMILY_BLOODLINEは不採用。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "docs/10_each_lore/0181_kotoribako/0181_20_analysis.json",
+    "blob_sha": "62deb6d6c5929172034355dffbe4e85194494c8a",
+    "commit_sha": "18b826589674d257ba258cf493ba7836285ab98c",
+    "reviewed_at": "2026-09-20T08:53:47Z"
+  },
+  "verdict": "Pass"
+}

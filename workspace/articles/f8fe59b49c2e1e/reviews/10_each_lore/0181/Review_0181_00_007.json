@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "現canonicalで直接確認できる最古資料を2005-06-11開始の保存ログとしており、絶対的起源とは同一視していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-011で2005-06-13の競合作用理由、EVD-012で同日の材料・作成法推測を独立固定。EVD-007の血統断絶説は単一説明ではなく一仮説として位置付け、EVD-010は2008年の再提示・追加考察として区別した。"
+    },
+    "primary_source_relation": {
+      "notes": "先行オカルト板原投稿と現保存ログの距離を保持し、原投稿本文未確認を明示している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "Review 006で欠落していたレス38〜48の競合仮説と具体材料・作成法推測をEvidence化し、2005年成立直後推測と2008年後続検討の境界を再構成できる。"
+    },
+    "source_assessment": {
+      "notes": "SRC-001を保存過去ログ／direct derivativeとして扱い、先行原投稿そのものへ格上げしていない。成立直後の投稿と後年検討が同一ページに混在することも明示している。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-001〜010に書かれた肯定的主張自体は指定locatorで支持される。問題は既存EVDの虚偽というより、同一Version Scope内の競合・補足情報の未抽出である。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "作用理由は血統断絶・呪法コスト・男性苦痛という競合推測として保持し、材料・作成法も原話の確定設定へ昇格させていない。"
+    }
+  },
+  "entry_id": "0181",
+  "findings": [],
+  "review_notes": "独立再Review cycle 007。Review 006 F001修正後、2005-06-13レス38〜48を中心にSource→Evidence completenessを再監査。競合作用理由、成立直後の材料／作成法推測、2008年後続検討との差を保持している。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "docs/10_each_lore/0181_kotoribako/0181_00_sources.json",
+    "blob_sha": "601fc129611a0940098c400cf208a3914f1654a1",
+    "commit_sha": "d0e252cd18bf4f5180ad42770bda3ddda9a5cd2d",
+    "reviewed_at": "2026-09-20T08:53:47Z"
+  },
+  "verdict": "Pass"
+}
