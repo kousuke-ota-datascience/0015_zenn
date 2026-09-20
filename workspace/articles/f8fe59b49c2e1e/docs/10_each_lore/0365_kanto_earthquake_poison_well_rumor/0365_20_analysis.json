@@ -186,46 +186,56 @@
       "dimension_id": "D10",
       "status": "D",
       "primary": {
-        "code_id": "D10.HUM.INFORMAL_GROUP",
-        "parent_id": "D10.HUM"
+        "code_id": "D10.OBJ.INFORMATION_CONTENT",
+        "parent_id": "D10.OBJ"
       },
       "secondary": [],
-      "rationale": "流言内部では、朝鮮人という人間集団が加害主体として虚偽に設定される。",
-      "manifestation": "人間集団への虚偽の主体帰属。",
+      "rationale": "実際の因果モデルでは、加害主体とされた集団そのものではなく、放火・暴動・投毒等を虚偽に帰属する流言情報が行動を誘発する因果源となる。",
+      "manifestation": "差別的虚偽流言という情報内容。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003",
         "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003",
+        "EVD-004"
       ]
     },
     {
       "dimension_id": "D11",
       "status": "D",
       "primary": {
-        "code_id": "D11.NCR.AMBIENT_EFFECT",
-        "parent_id": "D11.NCR"
+        "code_id": "D11.INF.RECEIVE_MESSAGE",
+        "parent_id": "D11.INF"
       },
       "secondary": [],
-      "rationale": "流言内の主張では被災地域全体で放火・投毒等が生じるとされ、個々の受け手の特定接触を前提としない。",
-      "manifestation": "周辺環境への脅威として提示。",
+      "rationale": "流言情報を受け取り受容することが、警戒・排斥・暴力行動へつながる前段条件として機能する。",
+      "manifestation": "流言情報の受信・受容。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003",
         "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-004"
       ]
     },
     {
       "dimension_id": "D12",
       "status": "D",
       "primary": {
-        "code_id": "D12.ENV.PLACE_BUILDING",
-        "parent_id": "D12.ENV"
+        "code_id": "D12.GRP.DEMOGRAPHIC_GROUP",
+        "parent_id": "D12.GRP"
       },
       "secondary": [],
-      "rationale": "虚偽主張の直接対象には井戸・市街地等の生活環境が含まれる。",
-      "manifestation": "井戸・市街地。",
+      "rationale": "現実の被害対象は、流言によって虚偽に加害者とされた朝鮮人という民族的属性集団である。",
+      "manifestation": "民族的属性集団。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
@@ -233,19 +243,20 @@
         "CNT-004"
       ],
       "evidence_refs": [
-        "EVD-001"
+        "EVD-002",
+        "EVD-003"
       ]
     },
     {
       "dimension_id": "D13",
       "status": "D",
       "primary": {
-        "code_id": "D13.PHY.ENV_OBJECT_MANIPULATION",
-        "parent_id": "D13.PHY"
+        "code_id": "D13.COG.INFORMATION_INDUCED_ACTION",
+        "parent_id": "D13.COG"
       },
       "secondary": [],
-      "rationale": "流言内容は井戸への投毒や放火など環境・物体への物理的加害を主張する。",
-      "manifestation": "投毒・放火という物理作用。",
+      "rationale": "虚偽流言が受容者の判断・信念を変え、警戒・排斥・殺傷などの通常行動を誘発したことが公的資料で確認される。",
+      "manifestation": "流言による行動誘発。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
@@ -253,7 +264,9 @@
         "CNT-004"
       ],
       "evidence_refs": [
-        "EVD-001"
+        "EVD-002",
+        "EVD-003",
+        "EVD-004"
       ]
     },
     {
@@ -276,17 +289,26 @@
       "dimension_id": "D15",
       "status": "D",
       "primary": {
-        "code_id": "D15.BOD.DEATH",
-        "parent_id": "D15.BOD"
+        "code_id": "D15.COL.COLLECTIVE_VIOLENCE",
+        "parent_id": "D15.COL"
       },
-      "secondary": [],
-      "rationale": "流言内容上、投毒・暴力は生命への重大危害を意味する。",
-      "manifestation": "死亡・重篤危害。",
+      "secondary": [
+        {
+          "code_id": "D15.BOD.DEATH",
+          "parent_id": "D15.BOD"
+        }
+      ],
+      "rationale": "流言の現実の主要帰結は朝鮮人への集団的な排斥・暴力であり、殺傷事件による死亡も直接確認される。",
+      "manifestation": "集団暴力・差別、および死亡。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003",
         "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
       ]
     },
     {
@@ -348,12 +370,12 @@
       "dimension_id": "D19",
       "status": "D",
       "primary": {
-        "code_id": "D19.MAS.NATIONAL_PUBLIC",
-        "parent_id": "D19.MAS"
+        "code_id": "D19.LOC.REGIONAL",
+        "parent_id": "D19.LOC"
       },
       "secondary": [],
-      "rationale": "首都圏の大規模災害下で広域に拡大し、公的機関も巻き込まれた。",
-      "manifestation": "広域公衆圏。",
+      "rationale": "current Evidenceは関東大震災の被災地域で流言が広がり、自警団・軍隊・警察の一部まで巻き込まれたことを示す。全国規模一般社会への実流通は固定しない。",
+      "manifestation": "被災地域・地方圏での広域流通。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
@@ -361,6 +383,7 @@
         "CNT-004"
       ],
       "evidence_refs": [
+        "EVD-002",
         "EVD-003",
         "EVD-004"
       ]
@@ -405,5 +428,5 @@
       ]
     }
   ],
-  "analysis_notes": "D18 L3のみ、流言が現実の殺傷へ波及したX evidenceを用いる。D12-D15は流言の虚偽主張内容を記述し、現実被害をそのまま逆流させない。"
+  "analysis_notes": "中心因果鎖は、虚偽流言という情報内容→受容→情報誘導による行動→朝鮮人という属性集団への集団暴力・死亡として記述する。虚偽主張内部の『朝鮮人が投毒・放火した』という架空因果を実因果源へ置かない。D18 L3のみ、流言が現実の殺傷へ波及したX evidenceを用いる。"
 }
