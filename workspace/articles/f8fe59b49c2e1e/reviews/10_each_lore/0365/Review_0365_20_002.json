@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0365",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0365_kanto_earthquake_poison_well_rumor/0365_20_analysis.json",
+    "commit_sha": "7e2d76ff9227bda17b6ee2a068d1738c020fc612",
+    "blob_sha": "33ddee69dc79e1e9e5eac8ccc037dc7dc5cb29b8",
+    "reviewed_at": "2026-09-20T03:06:35.691Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "震災直後の差別的虚偽流言群と、その現実の被害拡大に限定。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D10〜D15を流言情報→受容→行動誘発→属性集団への集団暴力・死亡へ再裁定し、D19をREGIONALへ修正。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "INFORMATION_CONTENT、RECEIVE_MESSAGE、DEMOGRAPHIC_GROUP、INFORMATION_INDUCED_ACTION、COLLECTIVE_VIOLENCE、DEATH、REGIONALはいずれもcurrent taxonomyに存在。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "虚偽に加害主体とされた集団を実因果源へ置かず、流言情報が受容者行動を誘発して現実暴力へ至る因果鎖へ統一。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "D10〜D15およびD19はCNT-001〜003とEVD-001〜004へ直接追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "独立再構成の中心モデルとcurrent 20 Analysisが一致。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "各修正Dimensionを公的Evidenceに基づくDとして扱い、全国流通など未確認範囲を追加していない。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=民族的属性集団→D13=情報誘導・行動誘発→D15=集団暴力・差別＋死亡として現実の被害因果に整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "流言拡大が現実の殺傷事件へつながったL3はEVD-002〜004で直接支持。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "被災地域・地方圏での実流通に限定し、全国規模一般社会へ過大化していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "公開的な虚偽流言でありNO_HIDDEN_TRUTHの使用を維持。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "1923年震災・通信途絶・流言・殺傷事件という史実・記録を因果統合するA4が適合。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "虚偽主張内部の架空加害を実因果鎖へ置く混同と全国流通の過大推論を除去。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "差別的災害流言としてScopeと整合。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "震災直後の情報途絶・混乱を背景に差別的虚偽流言が情報内容として拡散し、その受容が警戒・排斥・暴力行動を誘発して、朝鮮人という属性集団への集団暴力・死亡を現実に生じさせた。確認できる流通範囲は被災地域・地方圏である。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D18",
+      "D19",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-004"
+    ],
+    "status": "PASS",
+    "notes": "Seq001 F001/F002を解消。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。中心因果鎖とD19を再裁定し、00/10/20全てPass。"
+}
