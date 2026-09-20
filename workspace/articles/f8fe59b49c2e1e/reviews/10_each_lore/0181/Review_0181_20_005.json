@@ -1,0 +1,98 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "呪物性と祓いがScoped Contentへ固定され、D10/D17はsummaryを介さずContent Unitから再現できる。"
+    },
+    "causality": {
+      "notes": "Sの持ち込み→危険認識→女性・子どもへの害→対処・管理という中心因果、および成立直後の増補構造はScoped Contentと概ね整合する。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Source / Evidenceにしか存在しない具体detailを直接Analysisへ導入した箇所は今回の現行20では検出しない。D10/D17の問題はScoped Content内のsemantic traceability / code selectionとして扱う。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12=女性・子ども、D13=呪いによる災厄、D15=死亡級帰結という列はCNT-006を中心に再構成できる。D15をIへ保守化している点もEVD-004の再述確度と整合する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみで、独立X EvidenceのないL3を追加していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19はOPEN_FORUM_WEBに留まり、掲示板公開性から全国的普及を推定していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "NO_ONE_KNOWSへの短絡はなく、村側・M/M父という情報保持主体をContent上の材料から評価している。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "D21=A4はCNT-007が隠岐騒動を製法伝来の因果契機として物語へ組み込むことに対応し、史実関係未確認も保持している。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D17は根拠のないCONTAINMENTを外し、CNT-002の祓いに対応するRITUAL_CLOSUREをprimary、RELIGIOUS_SPECIALISTとCNT-005のONGOING_MANAGEMENTをsecondaryとしている。"
+    },
+    "entry_classification": {
+      "notes": "macro_category=ネット怪談、entry_type=呪物怪談はScoped Contentの媒体・因果源と整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "D15/D21等の再述依存次元はIへ保守化されている。今回のD10/D17問題は主にContent traceability / code semanticsであり、Source確度を越えた独立Evidence断定とは分けて扱う。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "D10のCURSED_OBJECTはCNT-002の『強い呪いを封入』、D17の祓い系コードはCNT-002、継続管理はCNT-005から独立再現できる。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D10はContentで呪物性が明示されDを維持。D17は祓いが直後要約を介する資料層であることを理由にIへ保守化し、コードと確度を分離している。"
+    },
+    "taxonomy_gap": {
+      "notes": "問題は既存taxonomy不足ではなく、既存D10/D17 codeへ到達する上流Contentとsemantic traceabilityにある。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "2005年成立直後の原体験談要約・専用スレ・追加聴取・近接再述を認識論的地位を区別して含め、2007–2008年以後を除外するScopeは10と整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0181",
+  "findings": [],
+  "review_notes": "独立再Review cycle 005。Review 004のD10/D17 Findingを修正後Scoped Contentだけから再判定し、semantic traceabilityとdimension semanticsの解消を確認した。",
+  "review_seq": 5,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-009",
+      "CNT-010"
+    ],
+    "dimension_refs": [
+      "D10",
+      "D17"
+    ],
+    "model": "Scoped Contentからは、Sが強い呪いを封入したとされる組木箱を持ち込み、神社の跡取り息子Mが危険を察して祓いを行う個別事件と、村が複数箱を世代管理する背景を再構成できる。成立直後の参加者再述では村内の間引き児を材料とし、村外の女性・子どもを害する関係と血統断絶目的が語られる。D10はこの呪物性、D17は祓いによる収束・宗教専門家介入・継続管理に対応する。",
+    "notes": "Review 004で指摘されたContent layer bypass/semantic traceabilityの問題は上流修正後に解消。後続2008年の詳細作成法は初期Scopeへ遡及していない。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "docs/10_each_lore/0181_kotoribako/0181_20_analysis.json",
+    "blob_sha": "e9c1f91837637474eb3b94bfbd62c1f3ceeb7333",
+    "commit_sha": "ee2dd2ef68387c749af593f0d733c7cb61379d2e",
+    "reviewed_at": "2026-09-20T05:14:19.778Z"
+  },
+  "verdict": "Pass"
+}

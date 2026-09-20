@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "現canonicalで直接固定できる最古資料を2005-06-11開始の保存ログとし、先行原投稿そのものと実際の起源を同一視していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-002でMの具体的な祓い介入を、EVD-004で2005年成立直後の材料／作用対象関係をuncertainty付きで固定し、後続2008年の詳細作成法とは分離した。"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-001を先行原投稿そのものへ格上げせず、保存ログ内の冒頭要約・再述・検討という資料層を明示している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "Review 004で脱落していた祓い介入と、村内の間引き児を材料として村外の女性・子どもを害するという関係がEvidence層から再構成できる。"
+    },
+    "source_assessment": {
+      "notes": "SRC-001をmirror_reprint_or_restoration / direct_derivativeとして扱い、同時期保存ログ内でも原投稿要約・参加者再述・推論・後続検討を区別している。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "記録済みEVD-001〜010の主張自体は指定locatorのSource記述により概ね支持され、後続2008年推測を初期形へ遡及していない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "原投稿本文未固定、歴史的由来・呪術効果未確認、参加者再述と推論の確度差を明示している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0181",
+  "findings": [],
+  "review_notes": "独立再Review cycle 005。Review 004 F001の修正後、Source→Evidence semantic completenessを対象箇所へ限定して再監査。Mの祓い、2005年レス16–18の材料／対象関係、後続2008年詳細作成法との境界が保持されている。",
+  "review_seq": 5,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "docs/10_each_lore/0181_kotoribako/0181_00_sources.json",
+    "blob_sha": "60fe913358e2dce733305ee13b27382c8db4ff46",
+    "commit_sha": "c2c1d78bc79e553cc28e51b827fe2ea5feace038",
+    "reviewed_at": "2026-09-20T05:14:19.778Z"
+  },
+  "verdict": "Pass"
+}
