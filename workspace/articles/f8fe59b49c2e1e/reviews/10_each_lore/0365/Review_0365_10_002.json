@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0365",
+  "artifact": "10",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0365_kanto_earthquake_poison_well_rumor/0365_10_contents.json",
+    "commit_sha": "85626867c4eed46c175099b27bb13cfd773fff0f",
+    "blob_sha": "2e3e19d1201d2e9bbee4316d9e3c923890ee88d0",
+    "reviewed_at": "2026-09-20T03:06:35.691Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "canonical 10はSeq001から不変。CNT-001〜004はEVD-001〜004へ追跡可能で、虚偽主張と現実被害を分離。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "震災混乱→根拠のない差別的流言→敵視・排斥→現実の殺傷という中心因果を再構成可能。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "放火・暴動・投毒等を朝鮮人へ虚偽に帰属した震災直後の流言群を一クラスとしてScope化。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "初発話者・地域別伝播経路を一点起源へ還元しない。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs全4 Content Unitがblind reconstructionに保持される。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1923年関東大震災直後の情報途絶と混乱を背景に、朝鮮人へ放火・暴動・投毒等を虚偽に帰属する流言が拡散し、受容者の警戒・排斥・暴力行動を誘発して現実の殺傷へ波及した。公的資料はこれを根拠のない流言として検証している。",
+    "reference_story": "current Content Unitsと一致し、虚偽主張を事実化せず、現実の流言効果を保持する。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "流言の伝達者・受容者、虚偽に標的化された朝鮮人、自警団、軍警察の一部",
+        "reference": "主体構成一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "朝鮮人の人々と被災地域の社会秩序",
+        "reference": "作用対象一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "震災直後の情報途絶・混乱と断片情報",
+        "reference": "発端条件一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "根拠のない差別的流言という情報内容",
+        "reference": "因果源一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "流言受容が警戒・排斥・暴力行動を誘発する",
+        "reference": "機構一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "災害混乱→流言→敵視→現実暴力",
+        "reference": "状態遷移一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "震災直後の数日間に急速拡散・増幅",
+        "reference": "時間構造一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "規則・禁忌は非該当",
+        "reference": "構造一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "確立した回避・解除法はScope上不明",
+        "reference": "制御情報一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "現実の差別・殺傷被害と後世の検証",
+        "reference": "終端一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "個々の初発話者・地域別伝播経路は未確定",
+        "reference": "不確実性一致",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "放火・暴動・投毒等を虚偽に帰属した流言群を一クラス化",
+        "reference": "variant境界一致",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "20の中心因果鎖修正後も10の物語・事件構造は不変で、むしろ分析との対応が改善。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "震災直後に広まった根拠のない差別的流言",
+        "blind_reconstruction": "虚偽流言として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "情報途絶・断片情報・既存知識が形成条件",
+        "blind_reconstruction": "背景条件として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "流言が警戒・排斥・殺傷へ波及",
+        "blind_reconstruction": "現実被害として保持",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "公的資料による流言飛語としての検証",
+        "blind_reconstruction": "検証上の位置付けとして保持",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 002。10はcurrent target不変でPass。"
+}
