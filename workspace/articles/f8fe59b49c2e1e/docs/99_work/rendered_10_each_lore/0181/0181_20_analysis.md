@@ -12,7 +12,7 @@
 
 - Included variants: VAR-001
 - Excluded variants: VAR-002
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006, CNT-007, CNT-008, CNT-009
+- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006, CNT-007, CNT-008, CNT-009, CNT-010
 
 ## Dimensions
 
@@ -119,10 +119,10 @@
 
 - Primary: D10.OBJ.CURSED_OBJECT (parent: D10.OBJ)
 - Secondary: -
-- Content refs: CNT-002, CNT-008
+- Content refs: CNT-002
 - Evidence refs: -
 
-**Rationale:** 因果源は呪いを封入したとされる物体としての「ことりばこ」である。
+**Rationale:** 因果源は、強い呪いを封入したとされる物体としての「ことりばこ」である。
 
 **Manifestation:** 組木の小箱自体が危険な呪物として扱われる。
 
@@ -194,14 +194,14 @@
 
 ### D17 — I
 
-- Primary: D17.CST.CONTAINMENT (parent: D17.CST)
-- Secondary: D17.CST.ONGOING_MANAGEMENT (parent: D17.CST)
-- Content refs: CNT-003, CNT-005
+- Primary: D17.RIT.RITUAL_CLOSURE (parent: D17.RIT)
+- Secondary: D17.RIT.RELIGIOUS_SPECIALIST (parent: D17.RIT), D17.CST.ONGOING_MANAGEMENT (parent: D17.CST)
+- Content refs: CNT-002, CNT-005
 - Evidence refs: -
 
-**Rationale:** 個別事件ではMが危険物として対処し、背景設定では村が箱を完全除去せず世代管理してきたとされる。
+**Rationale:** 成立直後の冒頭要約では、神社の跡取り息子Mが箱の危険を察して祓いを行い、その場を収める。背景設定では、村が複数の箱を完全除去せず世代管理してきたとされる。祓いの記述は原投稿本文ではなく直後の要約を介するため、statusは保守的にIとする。
 
-**Manifestation:** 危険な箱の隔離・対処と、複数箱の継続管理が制御方式として描かれる。
+**Manifestation:** 宗教的な祓いによる個別事件の収束と、複数箱の継続管理が併存する。
 
 ### D18 — D
 
