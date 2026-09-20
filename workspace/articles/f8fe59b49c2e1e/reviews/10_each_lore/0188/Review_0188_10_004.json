@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0188",
+  "artifact": "10",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_10_contents.json",
+    "blob_sha": "30ea3bb1af660777e23d663114205075c75e5229",
+    "commit_sha": "e9c4f07cf60c86c34b735ee18db64b79643ab617",
+    "reviewed_at": "2026-09-20T07:07:12Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜006、VAR-001、uncertaintiesはcurrent EVD-001〜010へ追跡でき、Evidenceを超える実在地・実話性の断定はない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryは識別的外見・声、封印、死亡伝承、防護、護送中追跡、帰還禁止、一人称回顧まで主要意味を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12の全構造プローブでLOSS/CONFLICTを認めない。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001を2008-08-26の初出連投に限定し、後代派生をScopeへ混入していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "一次ページ未固定、外部事実性、具体的地域、由来・取り決めの不確実性を保持する。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refsのCNT-001〜006をsummaryのみから意味保存粒度で復元できる。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "current Evidence populationの主要な因果・領域・防護・帰結・提示形式がCNT-001〜006へ配置されている。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "十年以上前の高校時代の自身の体験を一人称で回顧する語り手が、田舎の親類宅で白い服と帽子の非常に背の高い存在と「ぽぽぽ」という声に遭遇する。親族はそれを八尺様と呼び、四体の境界地蔵で封じられ、標的は数日内に死亡すると説明する。Kの札・盛り塩等で一夜を防護し、翌朝は血縁者に囲まれて車で地区外へ避難するが、八尺様は車に並走して窓を叩く。脱出後も帰還禁止が続き、後年の地蔵破損で再接近可能性が残る。",
+    "reference_story": "2008年8月26日の初出連投では、高校時代の体験を十年以上後に回顧する語り手が、白い服・帽子・異常な高身長・特徴的な声を伴う八尺様と遭遇する。親族は境界地蔵による封印と致死的な標的化を説明し、Kの防護手順と血縁者による護送で語り手を地区外へ逃がす。護送中も追跡は続き、脱出後は帰還禁止と地蔵破損による残余脅威が残る。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "語り手、八尺様、祖父母・親族、K",
+        "reference": "語り手、八尺様、祖父母・親族、K",
+        "difference": "NONE",
+        "notes": "主要主体を再構成できる。"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "八尺様に目を付けられた語り手",
+        "reference": "八尺様に目を付けられた語り手",
+        "difference": "NONE",
+        "notes": "作用対象を再構成できる。"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "白い服と帽子の異常に背の高い存在を目撃し、特徴的な「ぽぽぽ」を聞く",
+        "reference": "白い服・帽子・高身長・特徴的な声の直接知覚",
+        "difference": "NONE",
+        "notes": "識別的ディテールまで保持される。"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "八尺様",
+        "reference": "八尺様",
+        "difference": "NONE",
+        "notes": "因果主体を再構成できる。"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "標的化した人物へ接近・追跡し、脱出車にも並走して接触を試みる",
+        "reference": "八尺様による標的への接近・追跡",
+        "difference": "NONE",
+        "notes": "作用機構を再構成できる。"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "目撃者から標的となり、防護と血縁護送を経て地区外へ避難し、帰還禁止となる",
+        "reference": "遭遇→標的化→防護→護送脱出→帰還禁止",
+        "difference": "NONE",
+        "notes": "状態遷移を再構成できる。"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "十年以上後の回顧として、目撃当日、一夜の籠城、翌朝脱出、後年の地蔵破損へ進む",
+        "reference": "回顧・一夜の防護・翌朝脱出・後年の地蔵破損",
+        "difference": "NONE",
+        "notes": "時間構造を再構成できる。"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "朝7時まで出ない、防護を維持する、血縁者に囲まれて移動する、脱出後は戻らない",
+        "reference": "夜間防護、護送、帰還禁止の規則",
+        "difference": "NONE",
+        "notes": "主要規則・禁忌を再構成できる。"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "札・目張り・盛り塩・仏像による防護と血縁者車列による地区外退避",
+        "reference": "Kの防護手順と血縁者による護送",
+        "difference": "NONE",
+        "notes": "回避・制御を再構成できる。"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "当面は地区外へ逃れるが、帰還禁止が続き、地蔵破損で再接近可能性が残る",
+        "reference": "脱出後も長期制約と残余脅威が残る",
+        "difference": "NONE",
+        "notes": "終端状態を再構成できる。"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "実話性、具体的地域、由来・取り決めの詳細は未確定",
+        "reference": "外部事実性・舞台・由来の不確実性",
+        "difference": "NONE",
+        "notes": "不確実性を保持する。"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "2008-08-26の初出連投を主要形とし後代派生を除外",
+        "reference": "VAR-001のみをScopeとし後代派生を除外",
+        "difference": "NONE",
+        "notes": "variant boundaryを再構成できる。"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "current Contentだけから、D04=U、D05=RETROSPECTIVE_1P、D06=T1を含む主要なAnalysis判断へ到達できる。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "白い服・帽子・異常な高身長・「ぽぽぽ」という声を伴う遭遇",
+        "blind_reconstruction": "識別的な外見と声を含む遭遇としてsummaryから復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "八尺様の名称、4体の境界地蔵による封印、目を付けられた者の死亡伝承",
+        "blind_reconstruction": "封印領域と致死的伝承ルールをsummaryから復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "Kによる札・目張り・盛り塩・仏像・朝7時までの待機という防護",
+        "blind_reconstruction": "具体的な夜間防護手順をsummary/structureから復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "血縁者に囲まれた護送、車に並走して窓を叩く追跡、境界脱出",
+        "blind_reconstruction": "護送中の追跡と地区外脱出をsummaryから復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "帰還禁止、祖父葬儀にも戻らないこと、後年の地蔵破損",
+        "blind_reconstruction": "長期帰還禁止と残余脅威をsummaryから復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "高校時代の自身の体験を十年以上後に一人称回顧する提示形式",
+        "blind_reconstruction": "回顧的一人称の自己体験提示をsummary/temporal structureから復元できる。",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 004。Blind Decodeとcoverage auditをcurrent summary/content populationに対して実施し、Review 003 F001を含む意味欠落が解消したことを確認。"
+}
