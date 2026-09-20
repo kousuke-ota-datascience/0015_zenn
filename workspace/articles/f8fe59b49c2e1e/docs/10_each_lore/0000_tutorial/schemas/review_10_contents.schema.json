@@ -17,7 +17,10 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "1.0"
+      "enum": [
+        "1.0",
+        "1.1"
+      ]
     },
     "entry_id": {
       "type": "string",
@@ -61,6 +64,9 @@
         },
         "narrative_reconstruction": {
           "$ref": "review_common.schema.json#/$defs/reviewCheck"
+        },
+        "salient_content_completeness": {
+          "$ref": "review_common.schema.json#/$defs/auditCheck"
         }
       }
     },
@@ -397,7 +403,8 @@
               "variant_boundary",
               "uncertainty_preservation",
               "content_analysis_contamination",
-              "narrative_reconstruction"
+              "narrative_reconstruction",
+              "salient_content_completeness"
             ]
           },
           "summary": {
@@ -459,5 +466,28 @@
     "review_notes": {
       "type": "string"
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "1.1"
+          }
+        },
+        "required": [
+          "schema_version"
+        ]
+      },
+      "then": {
+        "properties": {
+          "checks": {
+            "required": [
+              "salient_content_completeness"
+            ]
+          }
+        }
+      }
+    }
+  ]
 }

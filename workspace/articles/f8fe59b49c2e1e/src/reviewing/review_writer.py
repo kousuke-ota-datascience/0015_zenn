@@ -37,6 +37,12 @@ RESERVED_FIELDS = frozenset(
 )
 SEVERITY_RANK = {"Minor": 1, "Moderate": 2, "Major": 3}
 RANK_VERDICT = {0: "Pass", 1: "Minor", 2: "Moderate", 3: "Major"}
+REVIEW_SCHEMA_VERSION = "1.1"
+SEMANTIC_GATE_CATEGORIES = {
+    "00": ("salient_evidence_completeness", "salient_evidence_completeness"),
+    "10": ("salient_content_completeness", "salient_content_completeness"),
+    "20": ("content_layer_bypass", "content_layer_bypass"),
+}
 
 
 @dataclass(frozen=True)
@@ -242,6 +248,44 @@ def _validate_cycle_is_current(cycle: ReviewCycleSnapshot) -> None:
         )
 
 
+def _validate_semantic_gate(artifact: str, body: Mapping[str, Any]) -> None:
+    """Keep schema-v1.1 semantic gate status and Finding category consistent."""
+    check_name, category = SEMANTIC_GATE_CATEGORIES[artifact]
+    checks = body.get("checks")
+    if not isinstance(checks, Mapping):
+        raise ValueError(f"Review {artifact} checks must be an object")
+
+    check = checks.get(check_name)
+    if not isinstance(check, Mapping):
+        raise ValueError(f"Review {artifact} requires checks.{check_name}")
+
+    status = check.get("status")
+    if status not in {"PASS", "FINDING"}:
+        raise ValueError(
+            f"Review {artifact} checks.{check_name}.status must be PASS or FINDING"
+        )
+
+    findings = body.get("findings")
+    if not isinstance(findings, list):
+        raise ValueError(f"Review {artifact} findings must be an array")
+    matching = [
+        item
+        for item in findings
+        if isinstance(item, Mapping) and item.get("category") == category
+    ]
+
+    if status == "FINDING" and not matching:
+        raise ValueError(
+            f"Review {artifact} checks.{check_name}=FINDING requires "
+            f"a {category} Finding"
+        )
+    if status == "PASS" and matching:
+        raise ValueError(
+            f"Review {artifact} checks.{check_name}=PASS conflicts with "
+            f"a {category} Finding"
+        )
+
+
 def _validate_review10_coverage_contract(entry_id: str, body: Mapping[str, Any]) -> None:
     """Require complete salient-unit audit for the current 10 Contents contract."""
     snapshot = load_entry_git_state(entry_id)
@@ -321,6 +365,7 @@ def _build_payloads(
         body = reviews[artifact]
         if not isinstance(body, Mapping):
             raise ValueError(f"reviews.{artifact} must be an object")
+        _validate_semantic_gate(artifact, body)
         if artifact == "10":
             _validate_review10_coverage_contract(cycle.entry_id, body)
 
@@ -337,7 +382,7 @@ def _build_payloads(
         target["reviewed_at"] = reviewed_at
 
         payload = {
-            "schema_version": "1.0",
+            "schema_version": REVIEW_SCHEMA_VERSION,
             "entry_id": cycle.entry_id,
             "artifact": artifact,
             "review_seq": cycle.review_seq,

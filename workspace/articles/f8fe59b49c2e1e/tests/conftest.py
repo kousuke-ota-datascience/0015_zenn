@@ -168,6 +168,10 @@ def review_bodies():
         "findings": [],
     }
 
+    review_00["checks"]["salient_evidence_completeness"] = _check(
+        notes="all salient source information represented in Evidence"
+    )
+
     probes = [
         {
             "probe_id": f"P{i:02d}",
@@ -207,6 +211,10 @@ def review_bodies():
         "findings": [],
     }
 
+    review_10["checks"]["salient_content_completeness"] = _check(
+        notes="all salient Evidence information represented in Content"
+    )
+
     review_checks = {
         key: _check()
         for key in (
@@ -230,6 +238,7 @@ def review_bodies():
                 "d21_reality_anchor",
                 "evidence_confidence_ceiling",
                 "entry_classification",
+                "content_layer_bypass",
             )
         }
     )

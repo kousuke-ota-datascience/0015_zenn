@@ -149,6 +149,7 @@ def test_write_cycle_schema_validates_and_is_append_only(
     for artifact in ("00", "10", "20"):
         path = review_root / f"0001/Review_0001_{artifact}_001.json"
         assert path.is_file()
+        assert json.loads(path.read_text(encoding="utf-8"))["schema_version"] == "1.1"
 
     with pytest.raises(FileExistsError, match="overwrite is forbidden"):
         review_writer.write_review_cycle(
@@ -236,3 +237,77 @@ def test_review10_coverage_contract_accepts_complete_pass(
     review_writer._validate_review10_coverage_contract(
         "0001", copy.deepcopy(review_bodies["10"])
     )
+
+
+def test_review_state_v10_backward_compatible_without_semantic_gate(
+    tmp_path, monkeypatch, review_payloads
+):
+    root = tmp_path / "reviews"
+    monkeypatch.setattr(review_state, "REVIEW_ROOT", root)
+    payload = copy.deepcopy(review_payloads["00"])
+    payload["checks"].pop("salient_evidence_completeness")
+    _write_json(root / "0001/Review_0001_00_001.json", payload)
+
+    snapshot = review_state.load_entry_review_state("0001")
+    assert not any(
+        issue.startswith("review_schema_invalid:") for issue in snapshot.issues
+    )
+
+
+def test_semantic_gate_finding_requires_matching_finding(review_bodies):
+    body = copy.deepcopy(review_bodies["10"])
+    body["checks"]["salient_content_completeness"] = {
+        "status": "FINDING",
+        "notes": "salient Evidence is missing from Content",
+    }
+    with pytest.raises(
+        ValueError, match="requires a salient_content_completeness Finding"
+    ):
+        review_writer._validate_semantic_gate("10", body)
+
+
+def test_review10_population_finding_blocks_pass_with_clean_coverage(
+    tmp_path, monkeypatch, review_bodies
+):
+    path = tmp_path / "0001_10_contents.json"
+    _write_json(path, {"summary": {"coverage_refs": ["CNT-001"]}})
+    monkeypatch.setattr(
+        review_writer,
+        "load_entry_git_state",
+        lambda entry_id: SimpleNamespace(
+            artifacts={"10": SimpleNamespace(path=path)}
+        ),
+    )
+
+    body = copy.deepcopy(review_bodies["10"])
+    assert body["reconstruction"]["coverage_audit"][0]["difference"] == "NONE"
+    body["checks"]["salient_content_completeness"] = {
+        "status": "FINDING",
+        "notes": "EVD-002 contains a salient event absent from all Content Units",
+    }
+    body["findings"] = [
+        {
+            "finding_id": "F001",
+            "severity": "Major",
+            "category": "salient_content_completeness",
+            "summary": "salient Content Unit missing",
+            "rationale": (
+                "coverage_refs are internally complete but the Evidence "
+                "population is underrepresented"
+            ),
+            "impact": (
+                "summary and downstream Analysis cannot reconstruct "
+                "the omitted event"
+            ),
+            "fix_direction": (
+                "add the missing Content Unit, then rebuild summary "
+                "coverage and Analysis"
+            ),
+            "evidence_refs": ["EVD-002"],
+        }
+    ]
+
+    review_writer._validate_review10_coverage_contract("0001", body)
+    review_writer._validate_semantic_gate("10", body)
+    assert body["reconstruction"]["verdict"] == "PASS"
+    assert review_writer.aggregate_verdict(body["findings"]) == "Major"
