@@ -1,0 +1,62 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2008-08-26を「現在確認できる起点」として保持し、伝承の絶対的起源とは断定していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "現行EVD-001〜004自体は各locatorの意味範囲内で、相互矛盾や出典取り違えは確認しない。ただし母集団の意味保存不足はsalient_evidence_completenessで別途Findingとする。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-001をdirect_derivative、SRC-002をindirect_derivativeとして扱い、一次資料そのものと同一視していない。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001全文とEvidence母集団を照合すると、因果・領域・防護・追跡・長期制約に関わるsalient meaningが複数未抽出。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は原投稿本文の保存再掲、SRC-002は後代整理として区別され、primaryとの距離を過大評価していない。一次ページ未固定という制約も残している。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-001〜004の記述は対応Sourceで支持され、実在地・実話性・絶対的起源をSource以上に補完していない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "元2ちゃんねるページ未固定、実話性、具体的舞台、由来の不確実性を保っている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0188",
+  "findings": [
+    {
+      "category": "salient_evidence_completeness",
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "SRC-001を再抽出し、少なくとも領域封印、伝承内で語られる捕捉時帰結、防護を担う人物と手順、護送時の追跡、血縁配置、長期的な帰還禁止を独立したEvidenceとして意味保存する。伝承内主張と外部事実性は分離し、不確実性を各Evidenceに残す。",
+      "impact": "SourceからContentへ渡る意味母集団が欠落し、物語再構成だけでなくD13/D15/D17/D20/D21等の後続判定が不完全なEvidence上で行われる。局所修正ではなくEvidence再抽出と下流再評価が必要である。",
+      "rationale": "SRC-001には、八尺様が地区境界の四体の地蔵で封じられているという領域ルール、魅入られた者は数日内に死亡するとされる帰結、Kによる札・塩・祈り等の防護、血縁者で囲む護送、脱出車への並走・窓叩きによる追跡、以後その土地へ戻れないという長期制約等が含まれる。しかし現行EVD-001〜004は「標的化→封じた部屋→複数人護送→地蔵破損による残余脅威」へ圧縮し、これらをEvidenceとして保持していない。",
+      "severity": "Major",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "summary": "SRC-001の主要な因果・防護・領域ルールがEvidence層から大幅に脱落している。"
+    }
+  ],
+  "review_notes": "Review cycle 003。旧Reviewの判定を正解として用いず、current Source→Evidenceを再監査。schema v1.1 semantic completeness gateでMajor Finding。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_00_sources.json",
+    "blob_sha": "1457762d662033af64be6b24077cb27dae48d9e7",
+    "commit_sha": "722671db609af1a8e898eb20f38aa5bd97a072de",
+    "reviewed_at": "2026-09-20T05:21:00Z"
+  },
+  "verdict": "Major"
+}
