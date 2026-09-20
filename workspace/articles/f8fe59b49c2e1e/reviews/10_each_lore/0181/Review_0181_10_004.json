@@ -1,0 +1,226 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-001〜009の既存主張はそれぞれ参照EVDによって概ね支持され、後続2008年材料／呪法推測をVAR-001へ遡及していない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "現行coverage_refs=9件の具体的意味はsummaryから再構成でき、前版で問題だった多段階展開・人物役割・未解決終端・資料層境界も保持されている。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-002の『呪いを封入した箱』という因果源の具体性と、EVD-007の『血統を断つため女性・子どもに作用する』という作用理由がContent Unit自体に明示されていない。両者はsummaryには現れるため、summaryがContent populationを越えている。",
+      "status": "FINDING"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12は現Content Unit集合に対して全件NONE。人物役割、時系列、作用対象、管理、行方不明終端、variant境界をsummaryから復元できる。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "意味保存密度自体はGolden Reference水準に近づいたが、summary中の『呪い封入』『血統断絶目的』に対応するContent Unitがなく、canonical Content→summary圧縮経路が完全には監査できない。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "原投稿未固定、史実・呪術未確認、成立直後再述と後続検討の境界をsummary・variants・uncertaintiesで保持している。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001は2005年成立直後の複数情報層を認識論的地位を区別して含め、VAR-002の2007–2008年以後をScope外として分離している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0181",
+  "findings": [
+    {
+      "category": "salient_content_completeness",
+      "content_refs": [
+        "CNT-002",
+        "CNT-006"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-007"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "EVD-002に対応して呪いを封入した呪物性をContent Unitへ明示し、EVD-007に対応して血統断絶目的という成立直後参加者説明を別Content UnitまたはCNT-006へ追加する。参加者再述であるuncertaintyは維持し、summaryは追加後のContentから再生成する。",
+      "impact": "Content Unitsを正本母集団として独立再構成するとD10のCURSED_OBJECT性やD12/D13の対象選択理由をsummaryと同じ粒度で再現できない。coverage_refs全件がNONEでもpopulation completeness gateを満たさず、Content→summary→Analysisの監査経路が非対称になる。",
+      "rationale": "EVD-002は『強い呪いを封入したとされる組木の小箱』という因果源の性質を固定するが、CNT-002は未知の組木箱とMの危険認識までで『呪い封入』を保持しない。EVD-007は女性・子どもに作用する理由を血統断絶とする成立直後参加者の説明を固定するが、CNT-006は対象と死亡級作用までで理由を保持しない。一方summary.causal_agent / mechanismには両detailが書かれており、summaryが対応Content Unitのない意味を直接保持している。",
+      "severity": "Moderate",
+      "summary": "Evidence上salientな因果源の性質と作用理由がContent Unit化されず、summaryだけが保持している。",
+      "variant_refs": [
+        "VAR-001"
+      ]
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryには『呪い封入』と『血統断絶目的』がある一方、対応Content Unitがないため、summaryからはD10/D13周辺をContent Units単独より強く再構成できる。population correction後に再判定が必要。",
+      "status": "FINDING"
+    },
+    "blind_decode": "2005年成立直後のログでは、小箱氏の体験談を発端に、友人Sが正体不明の組木の小箱『ことりばこ』を持ち込み、神社の跡取り息子Mが危険を察して対処する。体験談後に専用スレが立ち、小箱氏とMはS家で追加情報を聞き出す。箱は『子取り箱』と呼ばれ、百数十年前に抑圧された村人が外部への武器として作り、村が代々管理してきたと説明される。成立直後の再述・検討では女性・子どもへの重篤・死亡級の作用、M父との相談、複数箱種、隠岐騒動時の来訪者による製法伝来が語られる。史実性・呪術効果は未確認で創作可能性も明示され、最も強いとされる1箱が行方不明という未解決状態が残る。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "体験談を発端に専用スレが立ち、その後S家で追加の話を聞き出す。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningはsummaryから復元可能。",
+        "salient_meaning": "原体験談→専用スレ→S家追加聴取という多段階成立。"
+      },
+      {
+        "blind_reconstruction": "Sが正体を知らず箱を持ち込み、Mが危険を察する。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningはsummaryから復元可能。",
+        "salient_meaning": "Sが未知の組木箱を持ち込みMが危険を察して対処。"
+      },
+      {
+        "blind_reconstruction": "Mの危険認識とM父への相談が再構成できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningはsummaryから復元可能。",
+        "salient_meaning": "Mが危険識別者で、M父と今後を相談。"
+      },
+      {
+        "blind_reconstruction": "百数十年前の村人が外部への武器として作ったと説明される。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningはsummaryから復元可能。",
+        "salient_meaning": "抑圧された村人が外部への武器として子取り箱を作ったという物語内由来。"
+      },
+      {
+        "blind_reconstruction": "複数箱の世代管理と最も強い1箱の行方不明が再構成できる。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningはsummaryから復元可能。",
+        "salient_meaning": "村の世代管理と最強格1箱の行方不明。"
+      },
+      {
+        "blind_reconstruction": "女性・子どもが主要対象で、近接でも死亡級の害とされる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningはsummaryから復元可能。",
+        "salient_meaning": "女性・子どもへの近接による重篤・死亡級作用。"
+      },
+      {
+        "blind_reconstruction": "隠岐騒動時に来た人物が製法を伝えた由来が再構成できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningはsummaryから復元可能。",
+        "salient_meaning": "隠岐騒動時の来訪者が製法を伝えたという由来。"
+      },
+      {
+        "blind_reconstruction": "複数の箱種と組木の小箱という識別情報が再構成できる。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningはsummaryから復元可能。",
+        "salient_meaning": "イッポウ〜ハッカイ等の箱種と組木の小箱。"
+      },
+      {
+        "blind_reconstruction": "創作可能性が留保され真偽が未確定のまま検討される。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningはsummaryから復元可能。",
+        "salient_meaning": "成立直後から創作可能性・推論性を明示し真偽を開く。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "小箱氏、友人S、神社の跡取り息子M、M父、箱を管理してきた村側。",
+        "difference": "NONE",
+        "notes": "主要人物と役割はsummaryから再構成できる。",
+        "probe_id": "P01",
+        "reference": "小箱氏、S、M、M父、村側がそれぞれ発端・危険認識・相談・管理に関与する。"
+      },
+      {
+        "blind": "女性・子ども。",
+        "difference": "NONE",
+        "notes": "対象集団は明示される。",
+        "probe_id": "P02",
+        "reference": "女性・子どもが主要な作用対象。"
+      },
+      {
+        "blind": "Sが正体を知らずに組木の小箱を小箱氏宅へ持ち込む。",
+        "difference": "NONE",
+        "notes": "entry triggerはstructureで具体化される。",
+        "probe_id": "P03",
+        "reference": "Sによる未知の箱の持ち込みが発端。"
+      },
+      {
+        "blind": "呪いを封入したとされる『ことりばこ／子取り箱』。",
+        "difference": "NONE",
+        "notes": "現Contentの危険物としての箱は再構成可能。summary内の『呪い封入』はContent population不足として別途扱う。",
+        "probe_id": "P04",
+        "reference": "危険な組木の小箱『ことりばこ／子取り箱』が因果源。"
+      },
+      {
+        "blind": "近接・所持に伴い女性・子どもへ重篤ないし死亡級の害。参加者層では血統断絶目的とも説明される。",
+        "difference": "NONE",
+        "notes": "現Content Unitの作用・帰結は保持。血統断絶理由はEvidence→Content completeness Findingで扱う。",
+        "probe_id": "P05",
+        "reference": "女性・子どもへ近接による重篤・死亡級の害が生じる。"
+      },
+      {
+        "blind": "持ち込み→Mの危険認識・対処→専用スレ→S家追加聴取→由来・管理・行方不明箱の開示。",
+        "difference": "NONE",
+        "notes": "主要transitionは保持。",
+        "probe_id": "P06",
+        "reference": "同じ多段階の成立直後展開。"
+      },
+      {
+        "blind": "初回体験後も掲示板追跡と追加聴取で情報が増補される。",
+        "difference": "NONE",
+        "notes": "単一瞬間へ縮約されていない。",
+        "probe_id": "P07",
+        "reference": "初回体験→専用スレ→追加聴取という継続展開。"
+      },
+      {
+        "blind": "女性・子どもが主要対象、箱へ不用意に所持・近接しない、複数箱種。",
+        "difference": "NONE",
+        "notes": "現Contentで保持される規則はsummaryから復元できる。",
+        "probe_id": "P08",
+        "reference": "女性・子どもへの選択的作用と箱への近接危険。"
+      },
+      {
+        "blind": "Mの対処、M父への相談、村による世代管理。",
+        "difference": "NONE",
+        "notes": "制御主体の多層性は保持。ただし具体的祓いは00上流 omission。",
+        "probe_id": "P09",
+        "reference": "M/M父の対処相談と村の継続管理。"
+      },
+      {
+        "blind": "個別事件は対処へ進む一方、最も強い1箱が行方不明。",
+        "difference": "NONE",
+        "notes": "terminal stateをgenericな『管理』だけにしていない。",
+        "probe_id": "P10",
+        "reference": "最強格の箱1個が行方不明という未解決終端。"
+      },
+      {
+        "blind": "原投稿本文未固定、歴史・呪術未確認、隠岐由来・箱種等の帰属確度、後続作成法を初期形へ遡及しない。",
+        "difference": "NONE",
+        "notes": "主要留保は保持。",
+        "probe_id": "P11",
+        "reference": "同じ不確実性と資料層境界。"
+      },
+      {
+        "blind": "原体験談要約、専用スレ・S家追加聴取、成立直後再述・検討、2007–2008年以後を区別。",
+        "difference": "NONE",
+        "notes": "variant/data-layer boundaryはsummaryから復元可能。",
+        "probe_id": "P12",
+        "reference": "VAR-001の成立直後層とVAR-002の後続検討層を分離。"
+      }
+    ],
+    "reference_story": "現Content layerは、原体験談→専用スレ→S家追加聴取という成立直後の多段階展開、Sによる組木箱の持ち込み、Mの危険認識とM父への相談、村人が外部への武器として箱を作ったという物語内由来、村による世代管理と最強格1箱の行方不明、女性・子どもへの重篤・死亡級作用、隠岐由来、複数箱種、成立直後からの創作可能性留保を含む。原投稿本文、歴史的由来、呪術効果、成立直後再述の原投稿帰属は未確定で、後続2007–2008年の詳細作成法等はScope外である。",
+    "verdict": "FINDING"
+  },
+  "review_notes": "独立再Review cycle 004。0180 Golden Referenceは粒度校正にのみ使用。現0181のsummaryは前版の過圧縮を大幅に解消しており、coverage_refs集合内部のLOSSは検出しなかった。残る問題はsummaryの短さではなく、Evidence→Content populationとsummaryの層間非対称である。",
+  "review_seq": 4,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "docs/10_each_lore/0181_kotoribako/0181_10_contents.json",
+    "blob_sha": "6312f5fb87f463e6153a783be836f0e5151e4a0f",
+    "commit_sha": "52bd2a824b61ff235031405190c4bd85b6c1c6b2",
+    "reviewed_at": "2026-09-20T05:02:11Z"
+  },
+  "verdict": "Moderate"
+}
