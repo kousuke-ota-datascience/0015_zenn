@@ -1,0 +1,193 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "Contentの主要具体要素はSRC-001本文には存在するが、参照先canonical Evidence本文には十分固定されておらず、00 Evidenceのみから10を再構成できない。",
+      "status": "FINDING"
+    },
+    "narrative_reconstruction": {
+      "notes": "coverage_refs全4件を監査した結果、CNT-002でsalient meaningのLOSSを検出した。",
+      "status": "FINDING"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12の構造要素にはLOSS/CONFLICTを認めない。coverage_auditで検出したCNT-002の由来目的は12 probeの外側のsalient meaningとして別途Finding化する。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "主要な持ち込み・害・隔離・不確実性は復元できるが、CNT-002の『意図的に呪物を作り、怨恨を他者へ向ける器とした』という由来の主体性・目的がsummaryで弱化している。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "原投稿本文の全細部、箱・由来伝承の実在、歴史的事実性を未確定として保持している。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "2005年成立直後の主要形をVAR-001として扱い、後年の派生設定・地域起源仮説を除外する境界は一貫している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0181",
+  "findings": [
+    {
+      "category": "evidence_content_support",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "まず00でSRC-001の該当箇所を具体的なEvidence unitとして追加・分割し、そのEvidence IDを各CNTへ付け直す。必要に応じてContent本文の強さをEvidenceに合わせて調整する。",
+      "impact": "全4 coverage unitのうち複数の主要具体要素でEvidence-faithful再構成を監査できず、10_contents.json全体の根拠追跡可能性が損なわれる。00のEvidence拡充と10のevidence_refs再確認が必要。",
+      "rationale": "Workflow 10は00_sources.jsonのEvidenceのみを根拠にContentを再構成する契約である。ところがCNT-001の祖父母宅・危険認識、CNT-002の共同体による意図的作成と怨恨転嫁、CNT-003の病・死、CNT-004の隔離・回収といった具体要素は、参照されるEVD-001/EVD-002のcanonical contentに十分記録されていない。SRC-001本文には対応描写が存在するため内容そのものの虚偽を指摘するものではないが、canonical 00→10経路を迂回しなければ検証できない。",
+      "severity": "Major",
+      "summary": "10の主要Contentが参照先canonical Evidence本文だけでは支持できない。",
+      "variant_refs": [
+        "VAR-001"
+      ]
+    },
+    {
+      "category": "narrative_reconstruction",
+      "content_refs": [
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "史実性未確認の留保を維持したまま、『共同体が怨恨を外部へ向けるため呪物として作ったと語られる』程度の短い節をsummaryへ追加する。",
+      "impact": "由来説明の重要な意味がgenericな『怨恨との関連』へ弱化し、salient unitの意味保存圧縮要件に反する。",
+      "rationale": "CNT-002は、過去の共同体が箱を呪物として作り、怨恨を他者へ向ける器としたという由来の主体性・目的を持つ。summaryは『由来は被差別共同体の怨恨と結び付けて語られる』まで圧縮しており、誰が何のために箱を作ったと語られるのかが失われる。coverage_refsにCNT-002を含めている以上、この意味はsummaryから復元可能である必要がある。",
+      "severity": "Moderate",
+      "summary": "summaryからCNT-002の意図的な呪物作成・怨恨転嫁目的を再構成できない。",
+      "variant_refs": [
+        "VAR-001"
+      ]
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryのCNT-002由来目的のLOSSは物語の由来説明を弱めるが、呪物への接触、女性・子どもへの害、隔離という現行Analysisの主要因果核はsummaryからなお再構成できる。",
+      "status": "PASS"
+    },
+    "blind_decode": "知人が未知の精巧な木箱を持ち込み、その箱が女性・子どもへ致命的な害を及ぼす呪物だと判明する。事情を知る人物が箱を隔離・回収して接触を断つ。箱の由来は被差別共同体の怨恨と結び付けて語られる一方、その歴史的実在は裏付けられていない。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "知人が未知の精巧な木箱を持ち込み、事情を知る人物が危険な呪物と認識する。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "notes": "祖父母宅という細部はsummary本文では省略されるが、主要進行・主体・転換は保持される。",
+        "salient_meaning": "知人が祖父母宅で見つけた精巧な木箱を持ち込み、事情を知る人物が危険を認識する。"
+      },
+      {
+        "blind_reconstruction": "被差別共同体の怨恨と結び付いた由来を持つ呪物。",
+        "content_ref": "CNT-002",
+        "difference": "LOSS",
+        "notes": "『意図的に作った』『怨恨を他者へ向ける器』という主体性・目的がsummaryから復元できない。",
+        "salient_meaning": "過去の共同体が呪物として箱を作り、怨恨を他者へ向けるための器としたという物語内由来。"
+      },
+      {
+        "blind_reconstruction": "女性・子どもへ致命的な害を及ぼす。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "女性と子どもへ重く作用し、病や死に至らせうる。"
+      },
+      {
+        "blind_reconstruction": "事情を知る人物が隔離・回収して接触を断つ。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "危険を知る人物が隔離・回収し、接触を避けて被害拡大を防ぐ。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "箱を持ち込む知人、危険を知る人物、語り手",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "主要当事者は知人、危険を知る人物、語り手である。"
+      },
+      {
+        "blind": "女性、子ども",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "主要な被作用対象は女性と子どもである。"
+      },
+      {
+        "blind": "正体を知らずに箱を所持・持ち込むこと",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "未知の箱を持ち込み接触圏へ入ることが入口となる。"
+      },
+      {
+        "blind": "呪物とされる木箱",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "因果源として扱われるのは呪物とされる木箱である。"
+      },
+      {
+        "blind": "箱の呪いが近接者、とくに女性・子どもへ害を及ぼす",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "箱の作用が女性・子どもへ重い害を及ぼす。"
+      },
+      {
+        "blind": "未知の工芸品から危険な呪物として認識され、隔離される",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "持ち込まれた未知の箱が危険物と認識され、隔離・回収へ移る。"
+      },
+      {
+        "blind": "持ち込み後に危険が判明し、回収・隔離へ進む単一エピソード",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "持ち込み、危険認識、隔離・回収の順に進行する。"
+      },
+      {
+        "blind": "箱へ不用意に近づかず、女性・子どもを近づけない",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "接触回避、とくに女性・子どもを遠ざける規則が中心となる。"
+      },
+      {
+        "blind": "事情を知る者による隔離・回収",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "事情を知る人物が隔離・回収することが制御手段となる。"
+      },
+      {
+        "blind": "箱を危険物として管理し、当事者が接触を断つ",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "箱を管理下へ移し接触を断つ方向で終端する。"
+      },
+      {
+        "blind": "原話の史実性、箱・由来伝承の実在、原投稿と後続再話の細部差が不確実",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "原投稿の全細部と歴史的実在・呪術効果は確定していない。"
+      },
+      {
+        "blind": "2005年成立直後の掲示板形を対象にし、後年の派生設定・地域起源説を除外",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001の2005年主要形を対象とし、後代派生をScope外とする。"
+      }
+    ],
+    "reference_story": "知人が祖父母宅で見つけた精巧な木箱を持ち込み、箱を知る人物が強い危険を認識する。箱は過去の共同体で作られた呪物で、怨恨を他者へ向けるための器だったと説明される。箱の影響はとりわけ女性と子どもに重く、病や死に至らせうるとされる。危険を知る人物が箱を隔離・回収し、以後の接触を避けて被害拡大を防ごうとする。ただし原投稿本文の全細部、箱や由来伝承の実在は未確定である。",
+    "verdict": "FINDING"
+  },
+  "review_notes": "再レビューcycle 002。summary blind decodeを先に行い、その後coverage_refs、Content、Evidenceを照合した。",
+  "review_seq": 2,
+  "schema_version": "1.0",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0181_kotoribako/0181_10_contents.json",
+    "blob_sha": "a3792622a9c59a1c82b721395cd74cf4ef06043d",
+    "commit_sha": "50b09e1c46b547b84fc64804e667420db625b47f",
+    "reviewed_at": "2026-09-20T03:26:09Z"
+  },
+  "verdict": "Major"
+}

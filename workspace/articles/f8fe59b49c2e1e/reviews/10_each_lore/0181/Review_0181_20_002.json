@@ -1,0 +1,189 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Contentのみから独立再構成するとD06=T6/D、D20=LOCAL_RESIDENT、D21=A2を同じ確度で再現できない。",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "D09→D10→D11→D12→D13→D15→D17の中心因果モデル自体は、呪物・接触・特定対象への害・隔離というContentの核と概ね整合する。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12=女性・子ども、D13=呪いによる災厄まではEVD-002に直接対応するが、D15=DEATH/DはEVD-002本文では死亡を固定しておらずEvidence ceilingを超える。",
+      "status": "FINDING"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみで、受容者感染や社会現実効果を追加推定していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19はOPEN_FORUM_WEBに留まり、公開可能性からNATIONAL_PUBLIC等の人口普及を推定していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "NO_ONE_KNOWSへの短絡はしていない。ただしLOCAL_RESIDENTを選ぶためのContent根拠不足はsemantic_traceability Findingとして扱う。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "D21=A2の根拠とする『島根県方面』はScoped Contentに含まれない。Sourceに存在する地理情報を20で直接再導入してはならない。",
+      "status": "FINDING"
+    },
+    "dimension_semantics": {
+      "notes": "D06は後続スレッドの真偽論争を伝承自身の真実性提示へ変換しており、D20/D21はContentにない具体情報をコードへ持ち込んでいる。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "macro_category=ネット怪談、entry_type=呪物怪談はScoped Contentの中心構造と整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "D06=T6/DとD15=DEATH/Dは参照canonical Evidenceの記述より強く、さらに上流00→10のEvidence固定不足があるため現状の確度を維持できない。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "D20の『地元・家系の人物』とD21の『島根県方面』は、参照Contentに記載がなく、20が10を越えてSource側の具体情報を再導入している。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "D06をEVD-003の外部的な真偽論争だけでDirectとするのはcoding ruleのD06定義に合わない。D15=DEATH/Dもcanonical EVD-002本文の『重い害』より強い。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "今回の問題はtaxonomy不足ではなく、Evidence/Contentから既存Childへ到達する推論とStatusの強さにある。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "VAR-001の2005年掲示板主要形へScopeを限定し、後代派生設定を除外する方針は10と整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0181",
+  "findings": [
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D05",
+        "D06"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "原話の提示スタンスを固定するEvidenceを00へ追加してD06を再判定する。現canonical Evidenceだけで一意に決められない場合はUへ保守化し、T6を後続批判の存在から導かない。",
+      "impact": "D05の経験談形式との関係を含む真実性提示次元が誤って確定され、Status=Dも過大になる。",
+      "rationale": "coding rulesのD06は『研究者の真偽判定ではなく、伝承が要求する認識論的スタンス』をコードする。現D06の根拠EVD-003は後続スレッドで創作説等が競合するという外部的受容事実であり、それだけでは原話が受容者へT6=真偽未確定を要求していたことをDirectに示さない。",
+      "severity": "Moderate",
+      "summary": "D06=T6/Dが伝承自身の真実性提示ではなく後続読者の真偽論争に依存している。"
+    },
+    {
+      "category": "semantic_traceability",
+      "content_refs": [
+        "CNT-001",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D20"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "地域・家系内部者であることがScope上salientならEvidence→Contentへ明示してからD20を再判定する。Contentを変更しないならD20はU等へ保守化する。",
+      "impact": "特権情報保持者の類型が上流Contentより具体化され、独立コーダーが同じ入力からD20を再現できない。",
+      "rationale": "10が保持するのは『危険を知る人物』『事情を知る者』までであり、その人物が地元住民・家系の内部者であることはContentとして固定されていない。20はContentを根拠に判断する契約のため、Source側で知っている詳細を直接コードへ戻せない。",
+      "severity": "Moderate",
+      "summary": "D20=LOCAL_RESIDENTはScoped Contentにない『地元・家系』属性を追加している。"
+    },
+    {
+      "category": "semantic_traceability",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D21"
+      ],
+      "finding_id": "F003",
+      "fix_direction": "具体地域をScopeに含めるなら00 Evidenceと10 Contentへ追跡可能に固定する。現10を維持するならD21をContentから再判定し、A2を撤回する。",
+      "impact": "現実アンカーがContent境界を越えて強化され、Version Scopeとsemantic traceabilityが崩れる。",
+      "rationale": "D21のrationaleは島根県方面という具体地域設定を前提にするが、10_contents.jsonのcontent_units、summary、variant descriptionには当該地理情報がない。D21はSourceが実在することではなくScoped Content自体が現実へどの程度固定されるかを測るため、この経路ではA2を支持できない。",
+      "severity": "Moderate",
+      "summary": "D21=A2はScoped Contentにない『島根県方面』を現実アンカーとして導入している。"
+    },
+    {
+      "category": "status_reasoning",
+      "content_refs": [
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D12",
+        "D13",
+        "D15"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "finding_id": "F004",
+      "fix_direction": "00で死亡に関する該当Evidenceを明示的に固定しCNT-003を支えるか、現Evidenceの範囲に合わせてD15のcode/statusを再評価する。",
+      "impact": "D12→D13→D15の終端領域とDirectnessがEvidence ceilingを超え、分析の確度表示が過大になる。",
+      "rationale": "D15はCNT-003の『病や死に至らせうる』を根拠とするが、そのCNTが参照するEVD-002本文は女性・子どもへの『重い害』までしか固定していない。Source本文には死亡に関する描写が存在しても、現canonical Evidence層を経由しない限りD15をDirectとして確定できない。",
+      "severity": "Moderate",
+      "summary": "D15=DEATH/Dは参照canonical Evidenceの確度を超える。"
+    }
+  ],
+  "review_notes": "再レビューcycle 002。10 Contentから21次元を独立再構成し、coding rulesとcanonical Evidence ceilingを照合した。",
+  "review_seq": 2,
+  "schema_version": "1.0",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "model": "知人が未知の木箱を持ち込み、箱が呪物として女性・子どもへ重い害を及ぼすと理解され、事情を知る人物が隔離・回収する。Contentは過去の共同体による呪物作成という由来を含むが、その歴史的実在は未確認である。Contentだけからは、伝承自身の真実性提示をT6へ固定すること、特権情報保持者を地元住民・家系へ限定すること、具体的実在地域を島根方面へ固定することは再構成できない。",
+    "notes": "中心因果核は再構成できるが、D06/D20/D21とD15の確度は現canonical上流から不変に再現できない。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0181_kotoribako/0181_20_analysis.json",
+    "blob_sha": "e0956c5e97ea86ad349a2a1934eef176bd25c76f",
+    "commit_sha": "1e68fcca6ee83bd6016cf7f1ed0c2bfb88fc9674",
+    "reviewed_at": "2026-09-20T03:26:09Z"
+  },
+  "verdict": "Moderate"
+}
