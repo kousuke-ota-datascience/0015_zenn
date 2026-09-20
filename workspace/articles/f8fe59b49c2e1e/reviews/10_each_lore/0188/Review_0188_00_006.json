@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0188",
+  "artifact": "00",
+  "review_seq": 6,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_00_sources.json",
+    "commit_sha": "44b49b2452d843fc61eb65081c1e45c06689c913",
+    "blob_sha": "d8ba020b3aea68520cc18145b0c3abb9fb4bbb4d",
+    "reviewed_at": "2026-09-20T08:25:47Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "5ch過去ログのレス908-916をSRC-003として一次／同時代記録に採録し、再掲SRC-001・後代整理SRC-002との資料階層が明確になった。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001〜012は各locatorの内容を過剰に拡張せず、物語内主張と外部事実性を分離している。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "最古確認、遭遇、封印、防護、擬態誘引、護送、身代わり、帰還禁止、若年標的パターンまで、利用する主要意味が採録Sourceへ追跡できる。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "SRC-003=primary、SRC-001=direct_derivative、SRC-002=indirect_derivativeの関係が明示され、一次記録を優先して主要Evidenceを再アンカーしている。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2008年8月26日・2ちゃんねるオカルト板・レス908-916・同一IDの連続投稿を一次ログで直接確認できる。これを生成時点とは別に扱う余地も保持している。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "投稿内容の外部事実性、由来・周辺集落の取り決め、若年被害傾向の外部統計性を確定事項へ変換していない。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "Review 005で欠落した祖父声への擬態・誘引、盛り塩の黒変・窓叩き、若年標的パターンをEVD-011/012へ追加し、既存の身代わり準備・Kの念仏も保持されている。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 006。Review 005のSource hierarchyとsemantic completeness Findingを、一次ログとcurrent canonical 00のみで再監査。"
+}
