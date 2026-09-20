@@ -20,9 +20,10 @@
       "CNT-006",
       "CNT-007",
       "CNT-008",
-      "CNT-009"
+      "CNT-009",
+      "CNT-010"
     ],
-    "notes": "2007–2008年以後の検証・批判・材料／呪法推測は初期形へ遡及せずScope外とする。隠岐由来・箱種など成立直後参加者の再述は、その認識論的地位を保持したまま含める。"
+    "notes": "2007–2008年以後の検証・批判・血や指などの具体材料／詳細作成法・呪法推測は初期形へ遡及せずScope外とする。隠岐由来・箱種・材料関係など成立直後参加者の再述は、その認識論的地位を保持したまま含める。"
   },
   "dimensions": [
     {
@@ -185,11 +186,10 @@
         "parent_id": "D10.OBJ"
       },
       "secondary": [],
-      "rationale": "因果源は呪いを封入したとされる物体としての「ことりばこ」である。",
+      "rationale": "因果源は、強い呪いを封入したとされる物体としての「ことりばこ」である。",
       "manifestation": "組木の小箱自体が危険な呪物として扱われる。",
       "content_refs": [
-        "CNT-002",
-        "CNT-008"
+        "CNT-002"
       ]
     },
     {
@@ -289,19 +289,23 @@
       "dimension_id": "D17",
       "status": "I",
       "primary": {
-        "code_id": "D17.CST.CONTAINMENT",
-        "parent_id": "D17.CST"
+        "code_id": "D17.RIT.RITUAL_CLOSURE",
+        "parent_id": "D17.RIT"
       },
       "secondary": [
+        {
+          "code_id": "D17.RIT.RELIGIOUS_SPECIALIST",
+          "parent_id": "D17.RIT"
+        },
         {
           "code_id": "D17.CST.ONGOING_MANAGEMENT",
           "parent_id": "D17.CST"
         }
       ],
-      "rationale": "個別事件ではMが危険物として対処し、背景設定では村が箱を完全除去せず世代管理してきたとされる。",
-      "manifestation": "危険な箱の隔離・対処と、複数箱の継続管理が制御方式として描かれる。",
+      "rationale": "成立直後の冒頭要約では、神社の跡取り息子Mが箱の危険を察して祓いを行い、その場を収める。背景設定では、村が複数の箱を完全除去せず世代管理してきたとされる。祓いの記述は原投稿本文ではなく直後の要約を介するため、statusは保守的にIとする。",
+      "manifestation": "宗教的な祓いによる個別事件の収束と、複数箱の継続管理が併存する。",
       "content_refs": [
-        "CNT-003",
+        "CNT-002",
         "CNT-005"
       ]
     },
