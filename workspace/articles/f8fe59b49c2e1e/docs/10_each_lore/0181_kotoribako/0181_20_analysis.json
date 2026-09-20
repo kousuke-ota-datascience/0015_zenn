@@ -4,7 +4,7 @@
   "macro_category": "ネット怪談",
   "entry_type": "呪物怪談",
   "version_scope": {
-    "description": "2005年成立直後の主要形。保存ログの冒頭テンプレートが要約する原体験談・直後の専用スレ・S家追加聴取と、2005-06-13までの近接した再述・検討を、資料層を区別して対象とする。",
+    "description": "2005年成立直後の主要形。保存ログの冒頭テンプレートが要約する原体験談・直後の専用スレ・S家追加聴取、成立直後の再述、2005-06-13までの参加者推測を、認識論的地位を区別して対象とする。",
     "included_variants": [
       "VAR-001"
     ],
@@ -21,9 +21,11 @@
       "CNT-007",
       "CNT-008",
       "CNT-009",
-      "CNT-010"
+      "CNT-010",
+      "CNT-011",
+      "CNT-012"
     ],
-    "notes": "2007–2008年以後の検証・批判・血や指などの具体材料／詳細作成法・呪法推測は初期形へ遡及せずScope外とする。隠岐由来・箱種・材料関係など成立直後参加者の再述は、その認識論的地位を保持したまま含める。"
+    "notes": "2005-06-13の指・血・臍の緒や作成法は成立直後参加者の推測としてScopeに含めるが、原話の確定設定へ昇格させない。2007–2008年以後の再提示・追加考察はVAR-002としてScope外とする。隠岐由来・箱種・材料関係などの再述も帰属確度を保持する。"
   },
   "dimensions": [
     {
@@ -100,12 +102,17 @@
       "dimension_id": "D05",
       "status": "I",
       "primary": {
-        "code_id": "D05.EXP.RETROSPECTIVE_1P",
+        "code_id": "D05.EXP.EXPERIENCE_SUMMARY",
         "parent_id": "D05.EXP"
       },
-      "secondary": [],
-      "rationale": "発端は小箱氏の体験談として提示され、その後に追加聴取が接続される。",
-      "manifestation": "当事者周辺の出来事を回顧する経験叙述を核にする。",
+      "secondary": [
+        {
+          "code_id": "D05.HYB.COLLAB_THREAD",
+          "parent_id": "D05.HYB"
+        }
+      ],
+      "rationale": "現canonicalで固定できる発端は、小箱氏の個人経験が保存ログ冒頭で短く要約され、その要約を起点に専用スレと参加者検討が接続される形式である。原投稿本文を直接確認できず一人称回想形式は固定できないため、EXPERIENCE_SUMMARYを主とし、成立直後の共同検討スレッド性をsecondaryとする。",
+      "manifestation": "個人経験の要約を入口に、公開スレッド上の共同検討・増補へ展開する。",
       "content_refs": [
         "CNT-001",
         "CNT-002"
@@ -200,8 +207,8 @@
         "parent_id": "D11.MAN"
       },
       "secondary": [],
-      "rationale": "発端はSが箱を見つけて持ち出し、小箱氏宅へ持ち込むことにある。",
-      "manifestation": "所持・運搬によって危険な箱が生活空間へ入る。",
+      "rationale": "成立直後の再述では、Sが『面白い物が見つかった』として箱を見つけて持ち出し、小箱氏宅へ持ち込むことが発端とされる。",
+      "manifestation": "発見した物を所持・運搬することで危険な箱が生活空間へ入る。",
       "content_refs": [
         "CNT-002"
       ]
@@ -344,9 +351,14 @@
         "code_id": "D20.INS.LOCAL_RESIDENT",
         "parent_id": "D20.INS"
       },
-      "secondary": [],
-      "rationale": "物語内では箱を世代管理してきた村側に由来・管理情報が偏在し、事件側でもMとM父が危険性・対処について情報優位を持つ。",
-      "manifestation": "地域・家系内部の人物が箱の由来と扱い方に関する追加情報を保持する。",
+      "secondary": [
+        {
+          "code_id": "D20.EXP.RELIGIOUS_FOLKLORE",
+          "parent_id": "D20.EXP"
+        }
+      ],
+      "rationale": "物語内では箱を世代管理してきた村側という地域内部者に由来・管理情報が偏在し、事件側では神社の跡取り息子Mが箱の危険を識別して祓いを行い、M父と対処を相談する。家族・血縁だけが知るとは固定できないためFAMILY_BLOODLINEは採用せず、LOCAL_RESIDENTをprimary、宗教・伝承専門家としての情報優位をsecondaryとする。",
+      "manifestation": "地域内部者が由来・管理情報を、神職系の専門家が危険性・対処情報を保持する複数holder構造。",
       "content_refs": [
         "CNT-003",
         "CNT-005"
