@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0188",
+  "artifact": "20",
+  "review_seq": 6,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_20_analysis.json",
+    "commit_sha": "ed2be1f9a6b1fb82412e653c964b2783185ef24a",
+    "blob_sha": "d610430c51a624c12ebbdb69aacb47d207a2706f",
+    "reviewed_at": "2026-09-20T08:25:47Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "2008年8月26日の一次ログで確認できるVAR-001のみをScopeとし、後代派生を除外する境界はcurrent Contentと整合する。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "Review 005で問題となったD01/D11/D16を修正済み。D01は生成時点不明としてU、D11は偶発的標的化をPrimary、D16は数日内の期限をPrimaryとし、追加Contentに基づきD13/D17も再評価されている。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "current判断は既存taxonomyのD11.PAS.SPONTANEOUS_SELECTION、D13.REL.MIMICRY/LURING、D16.DLY.DEADLINE、D17.CST.TRANSFER_SUBSTITUTE等で表現可能で、未解決のtaxonomy gapはない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "偶発遭遇→標的化→夜間防護と擬態誘引→血縁者/Kによる護送・身代わり準備→追跡→境界外脱出→長期帰還制約という因果列がScoped Contentから再構成できる。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "D01〜D21の主要判断はCNT-001〜009またはVAR-001へ追跡可能で、Review 005で追加された意味もContent層を経由している。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "semantic completeness修正後のcurrent Contentを前提に、必要だったD11/D13/D16/D17の変更はAnalysisへ反映済みで、残るsummary差分から追加の主要コード変更は要求されない。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D02/D03は現在、5ch過去ログの一次記録EVD-001へ直接アンカーされておりDirect statusのconfidence ceilingを満たす。D01は最古確認記録と生成時点を分離してUとされる。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "作用対象=語り手(D12)、主作用=追跡(D13)、主帰結=死亡脅威(D15)が接続し、実際の語り手は制御手順により死亡を回避した点も区別されている。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18はL1のみで、独立X Evidenceを要する社会現実層を付与していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公開掲示板という流通範囲をOPEN_FORUM_WEBに留め、全国的大衆流通へ拡張していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "祖父母・親族・Kを特権情報保持者としてコードし、資料不足や公開性を『誰も知らない』へ短絡していない。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "匿名化された親類宅・地域境界を一般的現実背景A1に留め、推測地名やSourceの実在性を現実アンカーへ転写していない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "媒体・提示形式等の直接性は一次ログSRC-003/EVD-001・009で支えられ、生成時点のようにEvidenceが届かない事項はUへ保守化されている。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "ネット掲示板上の一人称怪異遭遇・追跡・回避譚というScoped Contentは、macro_category=ネット怪談、entry_type=怪異遭遇譚と整合する。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "擬態誘引、若年標的、身代わり準備、Kの念仏はいずれもCNT-007〜009/CNT-004へ昇格後にAnalysisへ反映され、Evidence-only detailの直接持込みはない。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Scoped Contentでは、語り手は高校時代に親類宅で八尺様とされる異常な高身長存在へ偶発的に遭遇し、その後標的化されたと説明される。八尺様は東西南北4体の地蔵で地区内に封じられ、魅入られた者は数日内に死亡するとされる。語り手はKの札・盛り塩・仏像等による夜間防護を受けるが、八尺様は祖父に酷似した声で外へ誘い、窓を叩く。翌朝、血縁者に囲まれKの念仏を受けながら退避し、最悪時には祖父または父が身代わりになる準備もされる。八尺様は車を追跡するが、語り手は境界外へ逃れ、以後その土地への帰還を禁じられる。若年者、とくに子どもが被害に遭いやすいとの物語内説明もある。2008年8月26日は最古確認記録であり、生成時点自体は確定しない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-009"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-004",
+      "EVD-005",
+      "EVD-006",
+      "EVD-007",
+      "EVD-008",
+      "EVD-009",
+      "EVD-011",
+      "EVD-012"
+    ],
+    "status": "PASS",
+    "notes": "current Scoped Contentだけで中心因果と主要Dimensionを再構成でき、Source/Evidenceはconfidence確認にのみ使用した。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 006。Review 10完了後、current Scoped Contentから独立にsense-makingを再構成し、D01〜D21とconfidence ceilingを監査。"
+}
