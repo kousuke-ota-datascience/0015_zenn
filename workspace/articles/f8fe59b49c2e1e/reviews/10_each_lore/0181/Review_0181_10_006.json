@@ -1,0 +1,263 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "既存Contentの肯定的主張は概ねEvidenceで支持されるが、『2005年成立直後に確認できるのは村内間引き児という高位関係までで、血・指等の具体形は後年』という否定的な時期境界はEVD-010だけでは立証できない。Review 00では2005年成立直後Sourceに具体材料・作成法推測が存在することも確認した。",
+      "status": "FINDING"
+    },
+    "narrative_reconstruction": {
+      "notes": "coverage_refsの大半は具体的に再構成できるが、CNT-008の具体名称列にLOSSがある。",
+      "status": "FINDING"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-005のSが『面白い物を見つけて持ち出す』という発見→持ち出し経路と、EVD-008の20cm四方という物体識別情報がContent Unit本文に固定されていない。",
+      "status": "FINDING"
+    },
+    "structural_probe": {
+      "notes": "P04のみLOSS。因果源の名称・組木性は保持されるが、Contentが持つ具体的箱種名をsummaryから復元できない。",
+      "status": "FINDING"
+    },
+    "summary_reconstruction": {
+      "notes": "主要展開・人物・作用・祓い・未解決終端は十分保持される一方、CNT-008のイッポウ〜ハッカイという伝承識別上の具体名称列が『複数の箱種』へ過度に抽象化される。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "血統断絶説を参加者説明として留保している点は改善しているが、同時期の競合説明がEvidence層で欠落しているため、現10だけでは作用理由の競合を保持できない。",
+      "status": "FINDING"
+    },
+    "variant_boundary": {
+      "notes": "VAR-002とuncertaintiesは血・指等の具体材料／詳細作成法を主に2007–2008年以後へ配置するが、current Evidenceは2005年中の不存在を支持せず、Review 00では2005-06-13検討層にも該当推測がある。",
+      "status": "FINDING"
+    }
+  },
+  "entry_id": "0181",
+  "findings": [
+    {
+      "category": "salient_content_completeness",
+      "content_refs": [
+        "CNT-002",
+        "CNT-008"
+      ],
+      "evidence_refs": [
+        "EVD-005",
+        "EVD-008"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "CNT-002または別Content UnitにSの発見→持ち出し→持ち込みを明示し、CNT-008等に20cm四方という再述上の具体サイズをuncertainty付きで固定する。summaryへの採否はsalienceを再評価する。",
+      "impact": "entry triggerの具体的経路が短縮され、物体識別情報も失われる。とくにD11は現20で『見つけて持ち出し』をrationaleへ使用しており、Content layer bypassを誘発している。",
+      "rationale": "EVD-005はSが『面白い物が見つかった』として箱を持ち出す発端を固定するが、CNT-002は小箱氏宅への持ち込みから始まり、発見→持ち出しを落とす。EVD-008はM由来の20cm四方という具体サイズを独立Evidenceとして固定するが、CNT-008本文には具体値がなくnotesで『サイズ等』とだけ触れる。",
+      "severity": "Moderate",
+      "summary": "発見→持ち出し経路と20cm四方という識別detailがEvidenceからContent Unitへ十分に抽出されていない。",
+      "variant_refs": [
+        "VAR-001"
+      ]
+    },
+    {
+      "category": "summary_reconstruction",
+      "content_refs": [
+        "CNT-008"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "summary narrativeまたはstructureに、少なくともイッポウ〜ハッカイという具体名称列を意味保存可能な形で残す。",
+      "impact": "物語の大筋や主要Analysis codeは維持されるが、対象伝承を具体的に再構成するための識別情報がsummaryから失われる。",
+      "probe_refs": [
+        "P04"
+      ],
+      "rationale": "CNT-008はイッポウ、ニホウ、サンポウ、シッポウ、ゴホウ、ロッポウ、チッポウ、ハッカイという固有の名称列を保持する。Blind Decodeではsummaryの『複数の箱種』からその具体名称を復元できない。0180 Golden Referenceで校正する意味保存契約上、伝承識別に寄与する具体名称をgenericな数量表現だけへ置換するのはLOSSである。",
+      "severity": "Moderate",
+      "summary": "CNT-008の具体的箱種名称列がsummaryで『複数の箱種』へ抽象化され、識別可能な意味が失われている。"
+    },
+    {
+      "category": "variant_boundary",
+      "evidence_refs": [
+        "EVD-010"
+      ],
+      "finding_id": "F003",
+      "fix_direction": "00で2005年成立直後の推測Evidenceを追加した後、10では原話／再述／成立直後推測／2008年後続検討を分け、具体材料・作成法を内容そのものではなく各層の認識論的地位付きで再配置する。",
+      "impact": "2005年成立直後の『参加者推測』と2008年後続検討の差が、初期形／後年という単純な二分へ変換され、variantとuncertaintyの認識論的境界を誤る。",
+      "rationale": "VAR-002およびuncertaintiesは、2005年成立直後に確認できるのは村内の間引き児という高位関係までで、血・指等の具体材料や詳細作成法は後続検討層に現れるとする。しかしEVD-010は2008年での存在を示すだけで2005年での不存在を証明しない。Review 00では2005-06-13の成立直後参加者検討にも血・指・作成法推測があることを確認したため、現在の時期境界は監査不能である。",
+      "severity": "Moderate",
+      "summary": "血・指等の具体材料／作成法を後年層へ寄せる境界が、current EvidenceとSource監査に対して強すぎる。",
+      "variant_refs": [
+        "VAR-001",
+        "VAR-002"
+      ]
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "主要D07〜D21構造はsummaryから概ね再構成できるが、Evidence→Contentで落ちた発見→持ち出し経路がD11 rationaleに直接使われ、さらにvariant boundaryが上流Source監査で不完全と判明したため完全なinvarianceは保証できない。",
+      "status": "FINDING"
+    },
+    "blind_decode": "2005年成立直後のログでは、小箱氏の体験談を発端に、友人Sが強い呪いを封入したとされる組木の小箱『ことりばこ』を正体を知らずに持ち込み、神社の跡取り息子Mが危険を察して祓いを行う。体験談後に専用スレが立ち、小箱氏とMはS家で追加情報を聞く。箱は『子取り箱』と呼ばれ、百数十年前に抑圧された村人が外部への武器として作り、代々秘密管理したと説明される。成立直後の再述では、村内で間引かれた子どもを材料とし村外の女性・子どもへ害を向ける関係、近接でも死亡級となる作用、血統断絶という参加者説明、M父との相談、複数箱種、隠岐由来が語られる。史実性・呪術効果は未確認で創作可能性も留保され、最も強い箱1個が行方不明のまま残る。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "体験談、専用スレ、S家追加聴取を再構成できる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningは保持。",
+        "salient_meaning": "原体験談→専用スレ→S家追加聴取という多段階成立。"
+      },
+      {
+        "blind_reconstruction": "呪い封入、持ち込み、Mの祓いを再構成できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningは保持。",
+        "salient_meaning": "Sが呪いを封入した組木箱を持ち込み、Mが祓って収束。"
+      },
+      {
+        "blind_reconstruction": "M/M父の役割を再構成できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningは保持。",
+        "salient_meaning": "Mが危険識別者で、M父と今後を相談。"
+      },
+      {
+        "blind_reconstruction": "武器としての由来を再構成できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningは保持。",
+        "salient_meaning": "抑圧された村人が外部への武器として子取り箱を作ったという物語内由来。"
+      },
+      {
+        "blind_reconstruction": "世代管理と行方不明終端を再構成できる。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningは保持。",
+        "salient_meaning": "村の世代管理と最強格1箱の行方不明。"
+      },
+      {
+        "blind_reconstruction": "作用対象・帰結・参加者説明を再構成できる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningは保持。",
+        "salient_meaning": "女性・子どもへの近接による死亡級作用と血統断絶説。"
+      },
+      {
+        "blind_reconstruction": "隠岐由来を再構成できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningは保持。",
+        "salient_meaning": "隠岐騒動時の来訪者が製法を伝えたという由来。"
+      },
+      {
+        "blind_reconstruction": "summaryでは『複数の箱種』としか復元できず、具体名称列は失われる。",
+        "content_ref": "CNT-008",
+        "difference": "LOSS",
+        "notes": "具体名称をgenericな『複数』へ縮約。",
+        "salient_meaning": "イッポウ、ニホウ、サンポウ、シッポウ、ゴホウ、ロッポウ、チッポウ、ハッカイという箱種名称列と組木形態。"
+      },
+      {
+        "blind_reconstruction": "創作可能性留保を再構成できる。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningは保持。",
+        "salient_meaning": "成立直後から創作可能性・推論性を明示し真偽を開く。"
+      },
+      {
+        "blind_reconstruction": "同じ高位関係を再構成できる。",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "notes": "現Content Unitのsalient meaningは保持。",
+        "salient_meaning": "村内の間引き児を材料とし、村外の女性・子どもを害するという作成側犠牲／作用対象関係。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "小箱氏、友人S、神社の跡取り息子M、M父、箱を管理する村側。",
+        "difference": "NONE",
+        "notes": "主要人物と役割は保持。",
+        "probe_id": "P01",
+        "reference": "同じ主要主体が発端、危険認識、祓い、相談、世代管理を担う。"
+      },
+      {
+        "blind": "女性・子ども。",
+        "difference": "NONE",
+        "notes": "対象は明示。",
+        "probe_id": "P02",
+        "reference": "女性・子どもが主要な被作用対象。"
+      },
+      {
+        "blind": "Sが正体不明の組木箱を小箱氏宅へ持ち込む。",
+        "difference": "NONE",
+        "notes": "現Contentのtriggerはsummaryから復元可能。発見→持ち出しはContent population不足として別Finding。",
+        "probe_id": "P03",
+        "reference": "Sによる箱の持ち込みが発端。"
+      },
+      {
+        "blind": "呪いを封入した組木の小箱『ことりばこ／子取り箱』。複数の箱種がある。",
+        "difference": "LOSS",
+        "notes": "summaryは『複数の箱種』へ抽象化し、伝承識別に有用な具体名称列を復元できない。",
+        "probe_id": "P04",
+        "reference": "呪いを封入した組木箱で、CNT-008ではイッポウ〜ハッカイという具体的名称列が保持される。"
+      },
+      {
+        "blind": "近接・所持により女性・子どもへ重篤ないし死亡級の害。参加者層では血統断絶目的とも説明。",
+        "difference": "NONE",
+        "notes": "現Contentの意味はsummaryから復元可能。",
+        "probe_id": "P05",
+        "reference": "同じ作用対象・帰結・参加者説明をContentが保持。"
+      },
+      {
+        "blind": "持ち込み→Mの危険認識・祓い→専用スレ→S家追加聴取→由来・管理・行方不明箱開示。",
+        "difference": "NONE",
+        "notes": "主要transitionは保持。",
+        "probe_id": "P06",
+        "reference": "同じ多段階展開。"
+      },
+      {
+        "blind": "初回体験で終わらず、追跡と追加聴取で情報が増補。",
+        "difference": "NONE",
+        "notes": "時間構造は保持。",
+        "probe_id": "P07",
+        "reference": "原体験談→専用スレ→追加聴取の継続展開。"
+      },
+      {
+        "blind": "女性・子どもへの選択的作用、近接危険、村内間引き児と村外対象の関係、複数箱種。",
+        "difference": "NONE",
+        "notes": "現Content範囲では保持。",
+        "probe_id": "P08",
+        "reference": "同じ規則・関係をContentが保持。"
+      },
+      {
+        "blind": "Mの祓い、M父への相談、村の世代管理。",
+        "difference": "NONE",
+        "notes": "具体的controlは保持。",
+        "probe_id": "P09",
+        "reference": "祓い・相談・継続管理が並存。"
+      },
+      {
+        "blind": "個別事件は祓いで収束するが、最強格1箱が行方不明。",
+        "difference": "NONE",
+        "notes": "terminal stateは具体的。",
+        "probe_id": "P10",
+        "reference": "同じ未解決終端。"
+      },
+      {
+        "blind": "原投稿未固定、史実・呪術未確認、参加者再述の帰属不確実、後続検討との境界。",
+        "difference": "NONE",
+        "notes": "ただし2005/後年境界自体の妥当性はvariant Findingで扱う。",
+        "probe_id": "P11",
+        "reference": "同じ不確実性をContentが保持。"
+      },
+      {
+        "blind": "原体験談要約、専用スレ・追加聴取、成立直後検討、2007–2008年以後を分離。",
+        "difference": "NONE",
+        "notes": "構造自体はsummaryから復元可能だが、実際の境界配置は別Finding。",
+        "probe_id": "P12",
+        "reference": "VAR-001/VAR-002で同様に分離。"
+      }
+    ],
+    "reference_story": "現Content layerは、原体験談→専用スレ→S家追加聴取という成立直後の多段階展開、Sによる呪いを封入した組木箱の持ち込みとMの祓い、M父への相談、村人が外部への武器として子取り箱を作ったという由来、村による世代管理と最強格1箱の行方不明、女性・子どもへの死亡級作用と血統断絶説、隠岐由来、イッポウ〜ハッカイの箱種、成立直後からの創作可能性留保、村内の間引き児を材料とし村外の女性・子どもへ作用させる関係を保持する。原投稿本文・史実性・呪術効果は未確定で、後続検討層を初期形へ無条件に遡及しない。",
+    "verdict": "FINDING"
+  },
+  "review_notes": "独立Review cycle 006。0180 Golden Referenceは意味保存粒度の比較校正にのみ使用。coverage_refs 10件を全件監査し、CNT-008のみLOSS。Source-only detailはReference Storyへ直接再導入していない。",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "docs/10_each_lore/0181_kotoribako/0181_10_contents.json",
+    "blob_sha": "40748529a61e599bc1397c7a927048080fbb4516",
+    "commit_sha": "38a4690efcd9e4dd1385f80c715d56434dcb8958",
+    "reviewed_at": "2026-09-20T07:11:44Z"
+  }
+}
