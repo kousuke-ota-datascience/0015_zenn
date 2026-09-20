@@ -3,110 +3,30 @@
   "entry_id": "0188",
   "lore_name": "八尺様",
   "summary": {
-    "narrative": "田舎の親類宅で異常に背の高い女性様の怪異を目撃した語り手が、地元で「八尺様」と呼ばれる存在に狙われたと告げられ、封じた部屋で夜を越した後、親族らに囲まれて地域外へ逃れるネット怪談。後日の境界地蔵の破損によって脅威の継続可能性を残す。",
+    "narrative": "十年以上前の高校時代の体験を一人称で回顧する投稿として、語り手が田舎の親類宅で白い服と帽子を身につけた異常に背の高い女性様の存在を目撃し、独特の「ぽぽぽ」という声を聞く。親族はその存在を「八尺様」と呼び、地区境界の地蔵で封じられ、目を付けられた者は数日内に取り殺されると説明する。語り手はKが札・盛り塩・仏像などで防護した部屋で一夜を過ごし、翌朝は血縁者に囲まれて車で地区外へ避難するが、その途中も八尺様が車に並走して窓を叩く。境界を越えて当面は逃れるものの、その後は地域への帰還を禁じられ、後年の地蔵破損によって脅威の継続可能性が残る。",
     "structure": {
-      "primary_actors": {
-        "status": "known",
-        "value": [
-          "語り手",
-          "八尺様",
-          "祖父母・親族"
-        ]
-      },
-      "affected_targets": {
-        "status": "known",
-        "value": "八尺様に目を付けられた語り手"
-      },
-      "entry_trigger": {
-        "status": "known",
-        "value": "八尺様を目撃し、その声を聞くこと"
-      },
-      "causal_agent": {
-        "status": "known",
-        "value": "八尺様"
-      },
-      "mechanism": {
-        "status": "known",
-        "value": "標的にした人物へ接近・追跡し、地域から逃げるまで脅威を継続する"
-      },
-      "state_transition": {
-        "status": "known",
-        "value": "偶然の目撃者から、怪異の標的となり、親族の防護下で避難する"
-      },
-      "temporal_structure": {
-        "status": "known",
-        "value": "目撃当日から一夜の籠城、翌朝の脱出へ進む連続エピソード"
-      },
-      "rules_and_taboos": {
-        "status": "known",
-        "value": [
-          "夜明けまで部屋から出ない",
-          "防護を崩さない",
-          "単独で移動しない"
-        ]
-      },
-      "avoidance_control": {
-        "status": "known",
-        "value": "封鎖した部屋で待機し、複数人の護衛で地域外へ離脱する"
-      },
-      "terminal_state": {
-        "status": "known",
-        "value": "当面は逃れるが再来の可能性が残る"
-      },
-      "uncertainties": {
-        "status": "known",
-        "value": [
-          "物語の実話性",
-          "舞台となる実在地域",
-          "怪異の由来"
-        ]
-      },
-      "variant_boundaries": {
-        "status": "known",
-        "value": "2008年8月26日の初出連投を主要形とし、後代派生を除外"
-      }
+      "primary_actors": {"status": "known", "value": ["語り手", "八尺様", "祖父母・親族", "K"]},
+      "affected_targets": {"status": "known", "value": "八尺様に目を付けられた語り手"},
+      "entry_trigger": {"status": "known", "value": "白い服と帽子の異常に背の高い存在を目撃し、独特の声を聞くこと"},
+      "causal_agent": {"status": "known", "value": "八尺様"},
+      "mechanism": {"status": "known", "value": "地区内に封じられた八尺様が標的にした人物へ接近・追跡し、脱出車にも並走して接触を試みる"},
+      "state_transition": {"status": "known", "value": "偶然の目撃者から怪異の標的となり、夜間の防護と血縁者による護送を経て地区外へ避難し、以後その土地への帰還を禁じられる"},
+      "temporal_structure": {"status": "known", "value": "十年以上後の回顧として、目撃当日、一夜の籠城、翌朝の脱出、後年の地蔵破損へ進む"},
+      "rules_and_taboos": {"status": "known", "value": ["朝7時まで防護した部屋から出ない", "札・盛り塩などの防護を崩さず、異変時は祈る", "単独で移動せず血縁者に囲まれて地区境界を越える", "脱出後はその土地へ戻らない"]},
+      "avoidance_control": {"status": "known", "value": "Kによる札・目張り・盛り塩・仏像を用いた夜間防護と、血縁者が語り手を囲む車列での地区外退避"},
+      "terminal_state": {"status": "known", "value": "当面は地区外へ逃れるが、その土地への帰還禁止が長期に続き、地蔵破損によって再接近可能性が残る"},
+      "uncertainties": {"status": "known", "value": ["物語の外部事実性", "舞台となる実在地域", "八尺様の由来や周辺集落との取り決めの詳細"]},
+      "variant_boundaries": {"status": "known", "value": "2008年8月26日の初出連投を主要形とし、後代派生を除外"}
     },
-    "coverage_refs": [
-      "CNT-001",
-      "CNT-002",
-      "CNT-003",
-      "CNT-004"
-    ]
+    "coverage_refs": ["CNT-001", "CNT-002", "CNT-003", "CNT-004", "CNT-005", "CNT-006"]
   },
   "content_units": [
-    {
-      "content_id": "CNT-001",
-      "type": "event",
-      "text": "親類宅を訪れた語り手が、白い服と帽子を着けた異常に背の高い女性様の存在と、その独特な声を知覚する。",
-      "evidence_refs": [
-        "EVD-002"
-      ]
-    },
-    {
-      "content_id": "CNT-002",
-      "type": "claim",
-      "text": "親族はその存在を「八尺様」と呼び、一度目を付けられた者を追う危険な地域怪異だと説明する。",
-      "evidence_refs": [
-        "EVD-002",
-        "EVD-003"
-      ]
-    },
-    {
-      "content_id": "CNT-003",
-      "type": "rule",
-      "text": "夜間は封じた部屋から出ず、塩などの防護を保ち、翌朝に複数人で囲んで地域外へ退避する。",
-      "evidence_refs": [
-        "EVD-003"
-      ]
-    },
-    {
-      "content_id": "CNT-004",
-      "type": "outcome",
-      "text": "語り手は地域外へ逃れるが、後日の地蔵破損が再接近の可能性を示し、完全な解決を留保して終わる。",
-      "evidence_refs": [
-        "EVD-004"
-      ]
-    }
+    {"content_id": "CNT-001", "type": "event", "text": "語り手は親類宅で、白い服と帽子を身につけた異常に背の高い女性様の存在を目撃し、独特の「ぽぽぽ」という声を聞く。", "evidence_refs": ["EVD-002"]},
+    {"content_id": "CNT-002", "type": "claim", "text": "親族はその存在を「八尺様」と呼び、地区境界の四体の地蔵で封じられており、目を付けられた者は数日内に取り殺されると説明する。", "evidence_refs": ["EVD-003", "EVD-004"]},
+    {"content_id": "CNT-003", "type": "rule", "text": "Kは語り手に札を持たせ、窓を新聞紙と札で塞ぎ、四隅に盛り塩を置き、仏像を置いた部屋で朝7時まで出ず、異変時は祈るよう指示する。", "evidence_refs": ["EVD-005"]},
+    {"content_id": "CNT-004", "type": "action", "text": "翌朝、語り手は血縁者を中心とする複数人に囲まれて車で護送される。八尺様とみられる存在が車に並走して窓を叩く中、車列は地区境界を越えて脱出する。", "evidence_refs": ["EVD-006", "EVD-007"]},
+    {"content_id": "CNT-005", "type": "outcome", "text": "語り手は以後その土地へ戻らないよう命じられ、祖父の葬儀にも戻らなかった。後年、自宅方面へ通じる道の地蔵が壊れたと知らされ、脅威の継続可能性が残る。", "evidence_refs": ["EVD-008"]},
+    {"content_id": "CNT-006", "type": "claim", "text": "この話は、語り手が高校生の頃に経験した出来事を、十年以上後に自身の体験として一人称で回顧する形式で投稿される。", "evidence_refs": ["EVD-009"]}
   ],
   "variants": [
     {
@@ -114,42 +34,13 @@
       "kind": "initial",
       "description": "2008年8月26日の2ちゃんねる連投で成立した主要形。",
       "attestation": "レス908-916として後続保存資料で確認。",
-      "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
-      ],
-      "evidence_refs": [
-        "EVD-001",
-        "EVD-002",
-        "EVD-003",
-        "EVD-004"
-      ]
+      "content_refs": ["CNT-001", "CNT-002", "CNT-003", "CNT-004", "CNT-005", "CNT-006"],
+      "evidence_refs": ["EVD-001", "EVD-002", "EVD-003", "EVD-004", "EVD-005", "EVD-006", "EVD-007", "EVD-008", "EVD-009"]
     }
   ],
   "uncertainties": [
-    {
-      "text": "元2ちゃんねるページを直接固定できず、保存再掲と出典整理を組み合わせて初出形を復元している。",
-      "evidence_refs": [
-        "EVD-001",
-        "EVD-002"
-      ],
-      "content_refs": [
-        "CNT-001"
-      ]
-    },
-    {
-      "text": "地名・事件を裏付ける独立資料はなく、体験談としての真実性は未確定。",
-      "evidence_refs": [
-        "EVD-004"
-      ],
-      "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
-      ]
-    }
+    {"text": "元2ちゃんねるページを直接固定できず、保存再掲と出典整理を組み合わせて初出形を復元している。", "evidence_refs": ["EVD-001", "EVD-002"], "content_refs": ["CNT-001", "CNT-006"]},
+    {"text": "投稿が現実の怪異事件を記録したものかは外部資料で確定しておらず、物語内の死亡・封印・追跡等の主張を外部事実とは扱わない。", "evidence_refs": ["EVD-003", "EVD-004", "EVD-006", "EVD-010"], "content_refs": ["CNT-002", "CNT-004", "CNT-005"]},
+    {"text": "八尺様の由来や周辺集落との取り決めの詳細は、物語内でも確定していない。", "evidence_refs": ["EVD-004"], "content_refs": ["CNT-002"]}
   ]
 }
