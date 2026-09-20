@@ -3,6 +3,20 @@
   "entry_id": "0188",
   "sources": [
     {
+      "source_id": "SRC-003",
+      "source_type": "primary_or_contemporary",
+      "title": "死ぬほど洒落にならない怖い話を集めてみない？196",
+      "locator": "レス908-916（2008年8月26日、ID: VFtYjtRn0）",
+      "accessed_at": "2026-09-20",
+      "relation_to_primary": "primary",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://kako.5ch.io/test/read.cgi/occult/1217949163/908-916",
+      "notes": "2ちゃんねる・オカルト板の当該9投稿を5ch過去ログで直接確認できるネット一次記録。"
+    },
+    {
       "source_id": "SRC-001",
       "source_type": "mirror_reprint_or_restoration",
       "title": "「死ぬ程洒落にならない怖い話を集めてみない？196」八尺様再掲",
@@ -35,65 +49,65 @@
   "evidence": [
     {
       "evidence_id": "EVD-001",
-      "source_id": "SRC-002",
-      "locator": "起源説明",
-      "content": "現在確認できる起点は2008年8月26日の2ちゃんねる・オカルト板「死ぬ程洒落にならない怖い話を集めてみない？196」レス908-916で、同一IDによる連続投稿と整理されている。",
+      "source_id": "SRC-003",
+      "locator": "レス908-916・投稿日時と連続投稿",
+      "content": "2008年8月26日、2ちゃんねる・オカルト板「死ぬほど洒落にならない怖い話を集めてみない？196」のレス908-916に、同一ID「VFtYjtRn0」による9件の連続投稿が記録されている。",
       "representation": "paraphrase"
     },
     {
       "evidence_id": "EVD-002",
-      "source_id": "SRC-001",
-      "locator": "レス908-916・遭遇部分",
+      "source_id": "SRC-003",
+      "locator": "レス908-909・遭遇部分",
       "content": "語り手は田舎の親類宅で、白い服と帽子を身につけた非常に背の高い女のような存在を目撃し、独特の「ぽぽぽ」という声を聞く。",
       "representation": "paraphrase"
     },
     {
       "evidence_id": "EVD-003",
-      "source_id": "SRC-001",
-      "locator": "祖母による八尺様の説明",
+      "source_id": "SRC-003",
+      "locator": "レス910・祖母による八尺様の説明",
       "content": "祖母はその存在を八尺様と呼び、目を付けられた者は数日のうちに取り殺されると地域で語られていると説明する。",
       "representation": "paraphrase",
       "uncertainty": "捕捉時の死亡は物語内で語られる伝承上の帰結であり、外部事実としての死亡事例を確認したものではない。"
     },
     {
       "evidence_id": "EVD-004",
-      "source_id": "SRC-001",
-      "locator": "地区封印・村境地蔵部分",
+      "source_id": "SRC-003",
+      "locator": "レス910・地区封印と村境地蔵",
       "content": "親族の説明では、八尺様は地区内に封じられており、東西南北の村境に計4体の地蔵を祀ることで地区外へ出られないようにしている。旅人について来たという由来説や周辺集落との取り決めの詳細は定かでない。",
       "representation": "paraphrase"
     },
     {
       "evidence_id": "EVD-005",
-      "source_id": "SRC-001",
-      "locator": "K到着後の防護準備・夜間待機部分",
+      "source_id": "SRC-003",
+      "locator": "レス911・防護準備と待機指示",
       "content": "Kは語り手にお札を持たせ、窓を新聞紙と札で塞ぎ、四隅に盛り塩を置き、仏像を置いた部屋で朝7時まで出ず、異変時には仏像へ祈るよう指示する。",
       "representation": "paraphrase"
     },
     {
       "evidence_id": "EVD-006",
-      "source_id": "SRC-001",
-      "locator": "翌朝の護送・地区脱出部分",
+      "source_id": "SRC-003",
+      "locator": "レス914-915・護送と地区脱出",
       "content": "翌朝、語り手は親族を中心とする複数人に囲まれて車で護送され、Kが前席で念仏を唱える中、八尺様とみられる白い服の存在が車に並走して窓を叩くが、車列は地区境界を越えて脱出する。",
       "representation": "paraphrase"
     },
     {
       "evidence_id": "EVD-007",
-      "source_id": "SRC-001",
-      "locator": "護送後の親族説明",
+      "source_id": "SRC-003",
+      "locator": "レス915-916・血縁配置と身代わり準備",
       "content": "護送に加わった者たちは語り手の血縁者で、八尺様の標的を混乱させる意図で語り手を囲んでいたと説明される。状況次第では祖父や父が身代わりになる準備もしていた。",
       "representation": "paraphrase"
     },
     {
       "evidence_id": "EVD-008",
-      "source_id": "SRC-001",
-      "locator": "脱出後・後日談",
+      "source_id": "SRC-003",
+      "locator": "レス916・帰還禁止と後日談",
       "content": "語り手は以後その土地へ戻らないよう強く命じられ、祖父の葬儀にも戻らなかった。後年、自宅方面へ通じる道の地蔵が壊れたと知らされ、脅威の再接近可能性が示唆される。",
       "representation": "paraphrase"
     },
     {
       "evidence_id": "EVD-009",
-      "source_id": "SRC-001",
-      "locator": "投稿冒頭・回顧形式",
+      "source_id": "SRC-003",
+      "locator": "レス908・投稿冒頭の回顧形式",
       "content": "投稿は、語り手が高校生の頃に親類宅で経験した出来事を、十年以上後に自身の体験として一人称で回顧する形式で提示される。",
       "representation": "paraphrase"
     },
@@ -104,7 +118,22 @@
       "content": "後代の出典整理は2008年8月26日のレス908-916を初出として示す一方、この投稿自体を現実の怪異事件が実在したことの証明とは扱っていない。",
       "representation": "paraphrase",
       "uncertainty": "伝承の提示形式と、研究上の外部事実性は区別する。"
+    },
+    {
+      "evidence_id": "EVD-011",
+      "source_id": "SRC-003",
+      "locator": "レス912-913・夜間の擬態誘引と防護反応",
+      "content": "深夜、窓を軽く叩く音に続いて祖父に酷似した声が部屋の外から語り手を誘い、語り手はドアへ近づきかけるが、祖父の事前の言葉を思い出して偽の呼びかけだと判断する。その後、盛り塩が黒く変色し、八尺様の声と窓を叩く音が続く中で仏像へ祈り、室内に留まる。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-012",
+      "source_id": "SRC-003",
+      "locator": "レス916・被害対象の説明",
+      "content": "投稿末尾では、八尺様の被害は成人前の若者、とりわけ子どもに多いと物語内で説明され、不安な状態で身内に似た声をかけられると心を許しやすいのではないかという語り手の推測が添えられる。",
+      "representation": "paraphrase",
+      "uncertainty": "若年者の被害傾向は投稿内の説明であり、外部統計として確認されたものではない。"
     }
   ],
-  "notes": "2008年8月26日の初出連投の主要形を対象とし、後年の映像・ゲーム・派生怪異設定は除外。物語内の主張と外部事実性を分離して記録する。"
+  "notes": "2008年8月26日のレス908-916を5ch過去ログ上の一次記録として直接採録し、その主要形を対象とする。再掲・後代整理は補助資料として保持し、後年の映像・ゲーム・派生怪異設定は除外。物語内の主張と外部事実性を分離して記録する。"
 }
