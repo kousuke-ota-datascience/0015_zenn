@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0188",
+  "artifact": "00",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_00_sources.json",
+    "commit_sha": "f76b2d487a4a46d75f9c750824b41b3f9e257802",
+    "blob_sha": "795e97a18d3b8382a85501fea0b6149d041f98d3",
+    "reviewed_at": "2026-09-20T07:17:37Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "FINDING",
+      "notes": "SRC-002自身が現在アクセス可能な5ch過去ログのレス908-916を一次記録として示しているが、canonical sourcesはSRC-001再掲とSRC-002後代整理のみで、この直接記録を採録していない。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001〜010に記載された内容自体は各source/locatorの範囲内で、物語内主張と外部事実性の分離も維持されている。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "現存EVD-001〜010はSRC-001またはSRC-002で支持される。今回の問題は既存Evidenceの誤記ではなく、Source集合の一次性とsalient Evidence母集団の不足である。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "採録済みSRC-001=direct_derivative、SRC-002=indirect_derivativeという関係付け自体は妥当。ただし直接一次記録がSource集合に欠落する。"
+    },
+    "earliest_attestation": {
+      "status": "FINDING",
+      "notes": "2008-08-26レス908-916という日時・範囲は整合するが、現在は5ch過去ログで当該レスを直接確認できるため、後代整理EVD-001だけを最古確認根拠とする構成は最良証拠を利用していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "投稿内容の外部事実性、実在地域、旅人由来説・周辺集落との協定詳細の不確実性は保持されている。"
+    },
+    "salient_evidence_completeness": {
+      "status": "FINDING",
+      "notes": "SRC-001/一次ログには、祖父の声に酷似した呼びかけで防護室外へ誘う擬態・誘引、盛り塩の黒変と窓叩き、成人前の若者・子どもが被害に遭いやすいという標的パターンがあるが、EVD-001〜010に十分保持されていない。"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "source_assessment",
+      "summary": "現在アクセス可能な一次記録がSource集合から欠落している。",
+      "rationale": "SRC-002の出典一覧は、5ch公式過去ログ上の「死ぬほど洒落にならない怖い話を集めてみない？196」レス908-916をネット一次記録として特定しており、実際に当該URLで同一ID・2008-08-26の9投稿を確認できる。canonicalは再掲SRC-001と後代整理SRC-002のみを採用し、Evidence優先順位1の資料を利用していない。",
+      "impact": "最古確認・媒体・提示形式の根拠が不要に二次・派生資料へ依存し、D01〜D03等のconfidence ceilingを下げる。Source hierarchyの監査可能性も劣化する。",
+      "fix_direction": "5ch過去ログのレス908-916を一次／同時代記録としてSourceへ追加し、2008-08-26・掲示板媒体・一人称投稿形式に関するEvidenceを直接一次記録へ再アンカーする。再掲・後代整理は補助資料として残す。",
+      "source_refs": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-009"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "salient_evidence_completeness",
+      "summary": "擬態・誘引と若年標的パターンがEvidence層から脱落している。",
+      "rationale": "投稿本文では、深夜に祖父へ酷似した声が安全室の外から呼びかけ、語り手を外へ誘おうとする場面があり、後段では成人前の若者、とくに子どもが被害に遭いやすく、身内の声に似せた呼びかけへ心を許しやすいという説明が置かれる。これらは八尺様の作用機構と標的条件を具体化するsalient meaningだが、EVD-001〜010には独立して保存されていない。",
+      "impact": "Content層でD11の発動・接触条件、D13のMIMICRY/LURING候補、作用の具体的再構成を評価できず、Analysisの分類可能性を狭める。",
+      "fix_direction": "祖父声への擬態・防護室外への誘引・窓叩き／防護反応、および若年者が狙われやすいという物語内説明を、外部事実性と分離したEvidenceとして追加し、その後Content/Analysisを再評価する。",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "evidence_refs": [
+        "EVD-005"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review cycle 005。過去ReviewのVerdictを正解として使用せず、現行Source集合と直接アクセス可能な出典を独立監査。"
+}

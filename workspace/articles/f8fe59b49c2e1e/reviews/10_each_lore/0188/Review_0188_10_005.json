@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0188",
+  "artifact": "10",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_10_contents.json",
+    "commit_sha": "e9c4f07cf60c86c34b735ee18db64b79643ab617",
+    "blob_sha": "30ea3bb1af660777e23d663114205075c75e5229",
+    "reviewed_at": "2026-09-20T07:17:37Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "既存CNT-001〜006、VAR-001、uncertaintiesの各主張は対応EVDで支持され、Evidenceを超える実在地・実話性の断定はない。"
+    },
+    "summary_reconstruction": {
+      "status": "FINDING",
+      "notes": "主要因果列は再構成できるが、CNT-002が保持する東西南北4体の境界地蔵という具体的封印構造はsummaryでは「地区境界の地蔵」へ一般化され、個数・四方向配置を復元できない。"
+    },
+    "structural_probe": {
+      "status": "FINDING",
+      "notes": "P01〜P07・P09〜P12は一致。P08で境界封印の4体・四方向配置がsummaryから復元できずLOSS。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001を2008-08-26の初出連投に限定し、後代の映像・ゲーム・追加設定をScopeへ混入していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "一次ページのcanonical未採録、外部事実性、実在地域、由来・周辺集落との取り決めの不確実性を保持する。"
+    },
+    "narrative_reconstruction": {
+      "status": "FINDING",
+      "notes": "summaryから物語の主要展開は復元できるが、CNT-002の封印配置に具体的LOSSがある。"
+    },
+    "salient_content_completeness": {
+      "status": "FINDING",
+      "notes": "current Evidence populationでは、EVD-006の護送中のKの念仏と、EVD-007の最悪時に祖父または父が身代わりになる準備がContentへ十分昇格していない。特に身代わりは独立した回避・制御構造でD17に影響する。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "十年以上前の高校時代の体験を一人称で回顧する投稿として、語り手が田舎の親類宅で白い服と帽子を身につけた異常に背の高い女性様の存在を目撃し、「ぽぽぽ」という声を聞く。親族はそれを八尺様と呼び、地区境界の地蔵で封じられ、目を付けられた者は数日内に取り殺されると説明する。語り手はKが札・盛り塩・仏像等で防護した部屋で一夜を過ごし、翌朝は血縁者に囲まれた車で地区外へ退避するが、八尺様は車に並走して窓を叩く。境界外へ逃れた後もその土地への帰還を禁じられ、後年の地蔵破損で脅威継続可能性が残る。外部事実性・実在地域・由来詳細は未確定で、2008-08-26初出連投のみを主要形とする。",
+    "reference_story": "語り手は高校時代の体験を十年以上後に一人称で回顧し、親類宅で白い服と帽子を身につけた異常に背の高い女性様存在と「ぽぽぽ」という声を知覚する。親族はそれを八尺様と呼び、東西南北の村境に置かれた4体の地蔵で地区内に封じられ、目を付けられた者は数日内に取り殺されると説明する。Kは札、窓の目張り、四隅の盛り塩、仏像と祈りを用いて朝7時まで部屋から出ないよう指示する。翌朝、語り手は血縁者を中心とする複数人に囲まれて車で護送され、八尺様とみられる存在が並走して窓を叩く中で地区境界を越える。以後その土地への帰還を禁じられ、後年に自宅方面の地蔵が壊れたことで再接近可能性が残る。投稿の外部事実性、実在地域、八尺様の由来・周辺集落との取り決めは未確定で、2008-08-26の初出連投VAR-001を主要形とする。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "語り手、八尺様、祖父母・親族、K",
+        "reference": "語り手、八尺様、祖父母・親族、K",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "八尺様に目を付けられた語り手",
+        "reference": "八尺様に目を付けられた語り手",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "白い服と帽子の異常な高身長存在を目撃し、独特の声を聞く",
+        "reference": "白い服と帽子の異常な高身長存在を目撃し、独特の声を聞く",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "八尺様",
+        "reference": "八尺様",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "標的化された人物への接近・追跡と脱出車への並走",
+        "reference": "標的化された人物への接近・追跡と脱出車への並走",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "偶然の目撃者から標的となり、防護・護送後に地区外へ退避し帰還禁止となる",
+        "reference": "偶然の目撃者から標的となり、防護・護送後に地区外へ退避し帰還禁止となる",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "十年以上後の回顧で、目撃当日→一夜の防護→翌朝脱出→後年の地蔵破損",
+        "reference": "十年以上後の回顧で、目撃当日→一夜の防護→翌朝脱出→後年の地蔵破損",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "地区境界の地蔵による封印、朝7時まで防護室から出ない、札・盛り塩・祈り、単独移動禁止、帰還禁止",
+        "reference": "東西南北の村境4体の地蔵による封印、朝7時まで防護室から出ない、札・盛り塩・祈り、血縁者に囲まれた退避、帰還禁止",
+        "difference": "LOSS",
+        "notes": "summaryは境界地蔵を保持するが、4体・四方向という封印配置を保持しない。"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "Kによる夜間防護と血縁者の車列による地区外退避",
+        "reference": "Kによる夜間防護と血縁者の車列による地区外退避",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "地区外へ当面逃れるが、長期帰還禁止と地蔵破損による再接近可能性が残る",
+        "reference": "地区外へ当面逃れるが、長期帰還禁止と地蔵破損による再接近可能性が残る",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "外部事実性、実在地域、由来・周辺集落との取り決め詳細は未確定",
+        "reference": "外部事実性、実在地域、由来・周辺集落との取り決め詳細は未確定",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "2008-08-26初出連投を主要形とし後代派生を除外",
+        "reference": "VAR-001=2008-08-26初出連投。後代派生を除外",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "現行Content集合内では、summaryの4体・四方向配置LOSSは主要Dコードを変えない。一方、Evidence→Contentで身代わり制御が欠落しており、修正後はD17 secondaryの優先順位が変わり得るため、完全性監査済みContentを前提とするAnalysis Invarianceは現時点で確定できない。"
+    },
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "白い服と帽子、異常な高身長、「ぽぽぽ」という声の直接遭遇。",
+        "blind_reconstruction": "白い服と帽子の高身長存在と「ぽぽぽ」の声として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "八尺様の名称、東西南北の村境4体の地蔵による封印、魅入られた者が数日内に死亡するという伝承内帰結。",
+        "blind_reconstruction": "八尺様の名称、地区境界の地蔵による封印、数日内の死亡は復元できるが、4体・四方向配置は復元できない。",
+        "difference": "LOSS",
+        "notes": "具体的な封印構造の粒度LOSS。"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "札、窓の目張り、四隅の盛り塩、仏像、朝7時までの待機と祈り。",
+        "blind_reconstruction": "札・盛り塩・仏像による防護、朝7時まで出ない、異変時に祈る手順として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "血縁者を中心とする複数人による車両護送、八尺様の並走・窓叩き、地区境界越え。",
+        "blind_reconstruction": "血縁者に囲まれた車両護送、並走・窓叩き、地区外脱出として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "長期的な地域帰還禁止、祖父葬儀にも戻らない実践、後年の自宅方面地蔵破損による再接近可能性。",
+        "blind_reconstruction": "長期帰還禁止と後年の地蔵破損による脅威継続可能性として復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "高校時代の体験を十年以上後に一人称で回顧する提示形式。",
+        "blind_reconstruction": "十年以上前の高校時代体験を一人称回顧する投稿として復元できる。",
+        "difference": "NONE"
+      }
+    ],
+    "verdict": "FINDING"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "salient_content_completeness",
+      "summary": "Evidenceにある独立した回避・制御要素がContentから欠落している。",
+      "rationale": "EVD-007は、護送時に最悪の場合は祖父または父が身代わりになる準備までしていたと明示する。これは単なる血縁配置の説明ではなく、危害対象の転嫁・身代わりという独立した制御方式である。またEVD-006には護送中のKの念仏もあるが、CNT-004は血縁者による護送と追跡・脱出へ圧縮している。",
+      "impact": "D17.CST.TRANSFER_SUBSTITUTE等の候補をContentから評価できず、D17 secondary構成とsense-making上の回避モデルを過度に単純化する。",
+      "fix_direction": "身代わり準備を独立したContent UnitまたはCNT-004のsalient detailとして明示し、必要に応じて護送中のKの念仏も防護手順へ保持する。その後D17を再評価する。",
+      "evidence_refs": [
+        "EVD-006",
+        "EVD-007"
+      ],
+      "content_refs": [
+        "CNT-004"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Minor",
+      "category": "summary_reconstruction",
+      "summary": "summaryから4体・四方向の境界地蔵という封印配置を復元できない。",
+      "rationale": "CNT-002は東西南北の村境にある4体の地蔵という具体的封印構造を保持するが、summaryは「地区境界の地蔵で封じられ」と一般化する。因果核は維持されるが、八尺様の地域封印を識別する具体性が一段落ちる。",
+      "impact": "主要Analysisコードは変わらないが、summary単独で伝承固有の封印構造を完全には再構成できない。",
+      "fix_direction": "summary.narrativeまたはstructureに「東西南北の境界4体の地蔵」程度の簡潔な具体性を戻す。",
+      "content_refs": [
+        "CNT-002"
+      ],
+      "probe_refs": [
+        "P08"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review cycle 005。Blind Decodeはsummary.narrative + summary.structureの意味だけから固定し、その後current Evidence→Content population、coverage_refs全6件、P01〜P12を監査。"
+}
