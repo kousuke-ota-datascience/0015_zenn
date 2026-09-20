@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0188",
+  "artifact": "20",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0188_hasshakusama/0188_20_analysis.json",
+    "blob_sha": "487047f7bc843ae2d31a9db35be7886419f5a57e",
+    "commit_sha": "f6858d0c954a26aaba92f7e371f932ce2b4444d8",
+    "reviewed_at": "2026-09-20T07:07:12Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001の2008-08-26初出連投に限定し、後代派生を除外するScopeはcurrent Contentと整合する。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D04は変容H証拠不在によりUへ戻し、D06は外部検証状態ではなく自己体験としての提示に基づきT1へ修正。D15/D17も復元された致死的帰結と制御手順に整合する。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "必要な判断は既存taxonomyのD04 U、D06.T1、D15.BOD.DEATH、D17既存Childで表現でき、gapはない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "遭遇→標的化→追跡→防護・護送→地区外脱出→帰還制約という因果列がContentと整合する。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "各主要Dimensionはcurrent CNT-001〜006を経由し、必要箇所はEVD-001〜010へ追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Scoped Contentから独立再構成した中心モデルと、D04/D05/D06を含むcurrent Analysisの主要判断が一致する。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D04をUとし、D05/D06はContentに明示された提示形式・認識論的スタンスからDirectに判定しており、支持上限を超えない。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=標的となる語り手、D13=追跡、D15=標的化時の致死的帰結を主とし、実際に脱出した語り手の長期的帰還制約をsecondaryとして分離している。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18はL1のみで、Scope外の社会現実効果を追加していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公開掲示板であることを全国人口普及へ拡張せず、OPEN_FORUM_WEBに留めている。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "祖父母・親族・Kという地域内部の情報保持者をコードし、資料不足をNO_ONE_KNOWSへ短絡していない。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "具体的な実在地を推測せず、一般的な親類宅・地域境界という現実背景A1に留める。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "D04は保守化し、D05/D06/D15/D17はcurrent Content/Evidenceで支持される範囲に限定している。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "ネット怪談／怪異遭遇譚という分類はVAR-001の主要形と整合する。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "D05の回顧的一人称とD06の自己体験提示はいずれもCNT-006へ明示的に昇格され、Evidence/SourceからAnalysisへの層飛び越しは解消した。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "高校時代の出来事を十年以上後に自己体験として回顧する語り手が八尺様に遭遇し、親族から地区境界の地蔵で封じられ、標的は死亡すると説明される。Kの防護手順と血縁者の護送で地区外へ逃れる間も追跡され、脱出後は帰還禁止と残余脅威が続く。生成・変容史は単一初出形しか確認できないため未確定とする。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006"
+    ],
+    "dimension_refs": [
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-002",
+      "EVD-003",
+      "EVD-004",
+      "EVD-005",
+      "EVD-006",
+      "EVD-007",
+      "EVD-008",
+      "EVD-009",
+      "EVD-010"
+    ],
+    "status": "PASS",
+    "notes": "Review 003のD04/D05/D06 Findingsと上流semantic completeness Findingはcurrent chainで解消。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review cycle 004。current 00→10→20を独立再構成し、Review 003のF001〜F003および上流由来の影響が解消したことを確認。"
+}
