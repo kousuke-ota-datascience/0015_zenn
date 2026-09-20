@@ -8,11 +8,11 @@
 
 ## Version Scope
 
-2005年成立直後の主要形。保存ログの冒頭テンプレートが要約する原体験談・直後の専用スレ・S家追加聴取と、2005-06-13までの近接した再述・検討を、資料層を区別して対象とする。
+2005年成立直後の主要形。保存ログの冒頭テンプレートが要約する原体験談・直後の専用スレ・S家追加聴取、成立直後の再述、2005-06-13までの参加者推測を、認識論的地位を区別して対象とする。
 
 - Included variants: VAR-001
 - Excluded variants: VAR-002
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006, CNT-007, CNT-008, CNT-009, CNT-010
+- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006, CNT-007, CNT-008, CNT-009, CNT-010, CNT-011, CNT-012
 
 ## Dimensions
 
@@ -62,14 +62,14 @@
 
 ### D05 — I
 
-- Primary: D05.EXP.RETROSPECTIVE_1P (parent: D05.EXP)
-- Secondary: -
+- Primary: D05.EXP.EXPERIENCE_SUMMARY (parent: D05.EXP)
+- Secondary: D05.HYB.COLLAB_THREAD (parent: D05.HYB)
 - Content refs: CNT-001, CNT-002
 - Evidence refs: -
 
-**Rationale:** 発端は小箱氏の体験談として提示され、その後に追加聴取が接続される。
+**Rationale:** 現canonicalで固定できる発端は、小箱氏の個人経験が保存ログ冒頭で短く要約され、その要約を起点に専用スレと参加者検討が接続される形式である。原投稿本文を直接確認できず一人称回想形式は固定できないため、EXPERIENCE_SUMMARYを主とし、成立直後の共同検討スレッド性をsecondaryとする。
 
-**Manifestation:** 当事者周辺の出来事を回顧する経験叙述を核にする。
+**Manifestation:** 個人経験の要約を入口に、公開スレッド上の共同検討・増補へ展開する。
 
 ### D06 — I
 
@@ -133,9 +133,9 @@
 - Content refs: CNT-002
 - Evidence refs: -
 
-**Rationale:** 発端はSが箱を見つけて持ち出し、小箱氏宅へ持ち込むことにある。
+**Rationale:** 成立直後の再述では、Sが『面白い物が見つかった』として箱を見つけて持ち出し、小箱氏宅へ持ち込むことが発端とされる。
 
-**Manifestation:** 所持・運搬によって危険な箱が生活空間へ入る。
+**Manifestation:** 発見した物を所持・運搬することで危険な箱が生活空間へ入る。
 
 ### D12 — D
 
@@ -228,13 +228,13 @@
 ### D20 — I
 
 - Primary: D20.INS.LOCAL_RESIDENT (parent: D20.INS)
-- Secondary: -
+- Secondary: D20.EXP.RELIGIOUS_FOLKLORE (parent: D20.EXP)
 - Content refs: CNT-003, CNT-005
 - Evidence refs: -
 
-**Rationale:** 物語内では箱を世代管理してきた村側に由来・管理情報が偏在し、事件側でもMとM父が危険性・対処について情報優位を持つ。
+**Rationale:** 物語内では箱を世代管理してきた村側という地域内部者に由来・管理情報が偏在し、事件側では神社の跡取り息子Mが箱の危険を識別して祓いを行い、M父と対処を相談する。家族・血縁だけが知るとは固定できないためFAMILY_BLOODLINEは採用せず、LOCAL_RESIDENTをprimary、宗教・伝承専門家としての情報優位をsecondaryとする。
 
-**Manifestation:** 地域・家系内部の人物が箱の由来と扱い方に関する追加情報を保持する。
+**Manifestation:** 地域内部者が由来・管理情報を、神職系の専門家が危険性・対処情報を保持する複数holder構造。
 
 ### D21 — I
 
