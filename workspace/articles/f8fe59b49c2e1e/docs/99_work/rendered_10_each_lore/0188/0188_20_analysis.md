@@ -12,48 +12,48 @@
 
 - Included variants: VAR-001
 - Excluded variants: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006
+- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006, CNT-007, CNT-008, CNT-009
 
 ## Dimensions
 
-### D01 — D
+### D01 — U
 
-- Primary: D01.G6
+- Primary: -
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006
+- Content refs: CNT-006
 - Evidence refs: EVD-001
 
-**Rationale:** 初出が2008年8月26日と日付まで確認できる。
+**Rationale:** 2008年8月26日の一次ログは現在確認できる最古の公開記録を固定するが、伝承がその時点で生成されたことや、それ以前に存在しなかったことを独立に示す証拠はないため、生成年代は確定しない。
 
-**Manifestation:** 2000年代成立。
+**Manifestation:** 生成時点は未確定。2008年8月26日は最古確認記録としてのみ保持する。
 
 ### D02 — D
 
 - Primary: D02.WEB.FORUM (parent: D02.WEB)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006
+- Content refs: CNT-006
 - Evidence refs: EVD-001
 
-**Rationale:** 初出は2ちゃんねるの公開掲示板。
+**Rationale:** 2008年8月26日の2ちゃんねる・オカルト板レス908-916を5ch過去ログ上の一次記録として直接確認できる。
 
-**Manifestation:** オープンWeb掲示板が最古確認媒体。
+**Manifestation:** オープンWeb掲示板が現在確認できる最古流通媒体。
 
 ### D03 — D
 
 - Primary: D03.WEB.FORUM (parent: D03.WEB)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006
-- Evidence refs: EVD-001
+- Content refs: CNT-006
+- Evidence refs: EVD-001, EVD-009
 
-**Rationale:** 既定Scopeはその掲示板連投そのもの。
+**Rationale:** Version Scopeで採る2008年8月26日の主要形は、一次ログ上で公開掲示板の連続投稿として流通したことを直接確認できる。
 
-**Manifestation:** 公開掲示板上で流通。
+**Manifestation:** 公開掲示板上の連続投稿として流通。
 
 ### D04 — U
 
 - Primary: -
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006
+- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006, CNT-007, CNT-008, CNT-009
 - Evidence refs: -
 
 **Rationale:** current Scopeで確認できるのは2008年の一つの初出連投のみで、複数時点・複数版を比較して構造変化の小ささ又は変容を示すH Evidenceがない。
@@ -128,14 +128,14 @@
 
 ### D11 — D
 
-- Primary: D11.SEN.VISUAL_EXPOSURE (parent: D11.SEN)
-- Secondary: -
-- Content refs: CNT-001, CNT-002
-- Evidence refs: EVD-002, EVD-003
+- Primary: D11.PAS.SPONTANEOUS_SELECTION (parent: D11.PAS)
+- Secondary: D11.SEN.VISUAL_EXPOSURE (parent: D11.SEN)
+- Content refs: CNT-001, CNT-002, CNT-008
+- Evidence refs: EVD-002, EVD-003, EVD-012
 
-**Rationale:** 語り手は八尺様とみられる存在を目撃した後、親族からその標的になったと判断される。
+**Rationale:** 語り手は自分から八尺様を呼び出したり特定行為を行ったのではなく、親類宅で偶然現れた存在を目撃した後に『魅入られた』と説明されるため、主条件は受動的・偶発的な標的化である。視覚的遭遇は副次的な接触様式として確認できる。
 
-**Manifestation:** 視覚曝露を契機とする接触。
+**Manifestation:** 偶発的に現れた怪異への遭遇後に標的化される。視覚遭遇を伴う。
 
 ### D12 — D
 
@@ -151,13 +151,13 @@
 ### D13 — D
 
 - Primary: D13.REL.PURSUIT (parent: D13.REL)
-- Secondary: -
-- Content refs: CNT-004
-- Evidence refs: EVD-006
+- Secondary: D13.REL.MIMICRY (parent: D13.REL), D13.REL.LURING (parent: D13.REL)
+- Content refs: CNT-004, CNT-007
+- Evidence refs: EVD-006, EVD-011
 
-**Rationale:** 八尺様は標的となった語り手を追跡・接近し、地区脱出中の車にも並走して窓を叩く。
+**Rationale:** 八尺様は標的となった語り手を一夜から地区脱出まで追跡し、深夜には祖父に酷似した声を模倣して防護室の外へ誘い、翌朝は脱出車に並走して窓を叩く。
 
-**Manifestation:** 標的への持続的追跡。
+**Manifestation:** 持続的追跡を主作用とし、身内の声への擬態と誘引を併用する。
 
 ### D14 — D
 
@@ -183,31 +183,31 @@
 
 ### D16 — D
 
-- Primary: D16.CON.PURSUIT_DURATION (parent: D16.CON)
-- Secondary: -
-- Content refs: CNT-003, CNT-004, CNT-005
-- Evidence refs: EVD-005, EVD-006, EVD-008
+- Primary: D16.DLY.DEADLINE (parent: D16.DLY)
+- Secondary: D16.CON.PURSUIT_DURATION (parent: D16.CON)
+- Content refs: CNT-002, CNT-004, CNT-005
+- Evidence refs: EVD-003, EVD-006, EVD-008
 
-**Rationale:** 標的化後は夜間の籠城から翌朝の地区脱出まで追跡が継続し、後年の地蔵破損で再接近可能性も残る。
+**Rationale:** 主帰結はD15の死亡であり、物語内では『魅入られると数日のうちに取り殺される』と標的化から致死的帰結までの期限が明示される。一方、実際の語り手には一夜から翌朝の脱出まで追跡が継続する。
 
-**Manifestation:** 持続する追跡。
+**Manifestation:** 致死的帰結には数日内という期限があり、回避過程では追跡が持続する。
 
 ### D17 — D
 
 - Primary: D17.RUL.PROCEDURAL_RULE (parent: D17.RUL)
-- Secondary: D17.CST.CONTAINMENT (parent: D17.CST), D17.AVO.FLEE_ESCAPE (parent: D17.AVO)
-- Content refs: CNT-002, CNT-003, CNT-004, CNT-005
-- Evidence refs: EVD-004, EVD-005, EVD-006, EVD-007, EVD-008
+- Secondary: D17.CST.CONTAINMENT (parent: D17.CST), D17.CST.TRANSFER_SUBSTITUTE (parent: D17.CST)
+- Content refs: CNT-002, CNT-003, CNT-004, CNT-007, CNT-009
+- Evidence refs: EVD-004, EVD-005, EVD-006, EVD-007, EVD-011
 
-**Rationale:** 語り手には札・目張り・盛り塩・祈り・朝まで待機という具体的手順が指示され、地域側では境界地蔵による封印、翌朝には血縁者に囲まれた護送での地区外退避が行われる。
+**Rationale:** 語り手には札・窓の目張り・盛り塩・仏像への祈り・朝まで待機という具体的手順が課され、地域側では4体の境界地蔵で怪異を封じる。翌朝は血縁者に囲まれKの念仏を受けながら境界外へ退避し、最悪時には祖父または父が身代わりになる準備もされていた。
 
-**Manifestation:** 手順遵守を中心に、封印と逃走を組み合わせる制御。
+**Manifestation:** 手順遵守を中心に、地域封印と危害対象の代替準備を組み合わせる制御。
 
 ### D18 — D
 
 - Primary: D18.L1
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005
+- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-007, CNT-008, CNT-009
 - Evidence refs: -
 
 **Rationale:** 怪異の因果は物語内部の人物・地域境界に作用する。
@@ -229,7 +229,7 @@
 
 - Primary: D20.INS.LOCAL_RESIDENT (parent: D20.INS)
 - Secondary: -
-- Content refs: CNT-002, CNT-003, CNT-004
+- Content refs: CNT-002, CNT-003, CNT-004, CNT-009
 - Evidence refs: EVD-003, EVD-004, EVD-005, EVD-007
 
 **Rationale:** 物語内部で地元の祖父母・親族とKが怪異名、封印、対処手順を偏って知っている。
@@ -249,4 +249,4 @@
 
 ## Analysis Notes
 
-具体的な実在地を推測で補わない。伝承内主張と外部事実性を分離し、D06は投稿が要求する認識論的スタンスのみで判定する。
+具体的な実在地を推測で補わない。伝承内主張と外部事実性を分離する。D01では最古確認記録と生成時点を区別し、D02/D03は一次ログの直接確認に基づく。D11は偶発的標的化をPrimary、視覚遭遇をSecondaryとして扱う。
