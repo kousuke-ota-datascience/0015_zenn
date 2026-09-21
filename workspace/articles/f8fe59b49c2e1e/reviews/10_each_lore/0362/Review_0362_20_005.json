@@ -1,0 +1,106 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryとScoped Contentはいずれも具体文言未確定の流言イベント型構造を保存し、主要分析可能性は変化しない。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "流言を受け取る預金者（D12）→情報誘発行動としての預金引き出し（D13）→引き出し集中・取付けという市場・社会行動（D15）の中心因果列が一貫する。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysis正当化に用いる意味論的事実はVersion Scope内Contentに存在し、Source/Evidenceにしかないdetailを新たに導入していない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "直接作用対象は流言を受け取る預金者・受容者、作用は情報誘発行動、主帰結は引き出し集中・取付けという市場・社会行動であり、銀行は下流の影響対象として区別される。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "Scoped Contentは実際の預金引き出し・取付けを明示し、公的記録が現実社会上の出来事を独立に支持するためD18.L3と整合する。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19は愛知県豊川地域の具体的事件としてRegionalに限定され、公開資料の存在から全国流通を推定していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "確認できない細部をNO_ONE_KNOWSへ変換せず、制度機関が検証情報を保持するというI判定に留める。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "実在する豊川信用金庫と1973年の取付け事件がScoped Content自体に組み込まれ、資料の実在性だけを現実アンカーとしていない。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D05/D07/D08/D09は具体文言未確定に応じてIへ保守化され、D12/D13/D15は直接対象→作用→市場・集団行動の因果列に整合し、D16は同一事件内の段階進行として裁定されている。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "macro_category『社会流言・パニック』、entry_type『金融流言事件』は、流言受容から取付け・沈静化までを扱うScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "具体的流言文言を固定せず、推論依存DimensionをIへ抑えており、Analysisの確信度はContent/Evidenceの支持強度を超えない。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各主要DimensionはScoped Contentから追跡でき、D08/D16はEvidence-only detailを意味論的根拠として直接持ち込まない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "具体的流言命題に依存するD05/D07/D08/D09はIに抑え、直接記述される事件過程・行動・帰結・対処はDとするため、支持強度とStatusが整合する。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "現在のScoped Contentは既存taxonomyの受容者、情報誘発行動、市場・社会行動、連続エピソード等で表現でき、主要意味を無理に押し込めたtaxonomy gapは認めない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "社会・人心の不安定な背景、流言、取付け、発端解明・沈静化を一つの1973年事件核として扱い、具体的流言文言を固定しないScopeはScoped Contentと整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0362",
+  "findings": [],
+  "review_notes": "補正後canonicalに対する独立再Review。具体的流言文言を固定しないイベント型として再評価した。docs/legacyは参照していない。",
+  "review_seq": 5,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005"
+    ],
+    "dimension_refs": [
+      "D05",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "model": "石油危機下の社会・人心の不安定な状況の中で、豊川信用金庫をめぐる流言を預金者が受け取り、金融判断が変化して預金引き出しが集中し、取付けという市場・社会行動へ集約される。警察・関係機関による発端調査と真相明示が拡大抑制へ働く。具体的な流言文言は固定せず、命題内容に依存するD05/D07/D08/D09は推定強度に留める。",
+    "notes": "Scoped Contentだけで中心因果モデルと主要Dimensionを再構成できる。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_20_analysis.json",
+    "blob_sha": "dde90d8caff97283ee30d3cc831e6b9ace2c5624",
+    "commit_sha": "e0af5352adce73cc112d1f5b758b62f2c89bb812",
+    "reviewed_at": "2026-09-21T02:53:14Z"
+  },
+  "verdict": "Pass"
+}
