@@ -1,0 +1,137 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryとScoped Contentで主要なAnalysis構造は不変。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "受信→期限内転送／停止→幸運／不運という因果列と次受信者への連鎖が保持される。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisの意味論はScoped CNT-001〜006に存在し、Source/Evidence-only detailを直接追加していない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12受信者→D13幸運／不運→D15吉凶領域という因果列はContentと接続する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L3はCNT-006に反映された実流行・警察対応とX Evidence EVD-002/EVD-005に基づく。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "全国流通へ過大化せずREGIONALをIで採用している。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者不明をNO_ONE_KNOWSへ変換せずUとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "資料実在性ではなく一般的な郵便背景に依存する点からA1としている。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D02/D03のconfidenceを除き、各code semanticsはScoped Contentの受信・転送・吉凶・期限・連鎖構造と概ね整合する。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "情報・メタ伝説／規則・チェーン伝承はScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "SRC-002は葉書流行を直接示すが、自己複製チェーン規則の具体構造はSRC-001/SRC-003を介しておりD02/D03のDirectには不足する。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "各Dimensionはversion_scope.content_refsのCNT-001〜006へ追跡できる。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D02/D03はcode選択自体は妥当だが、Direct(D)判定が支持Evidenceの直接性を超える。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "Scoped Contentの主要意味は現行taxonomyで表現できる。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "VAR-001の1922年型だけをScopeに含め、後代型を除外する境界はScoped Contentと整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0024",
+  "findings": [
+    {
+      "category": "status_reasoning",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-006"
+      ],
+      "dimension_refs": [
+        "D02",
+        "D03"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D02とD03のcode_idを維持したままStatusをIへ下げ、rationaleで同時代資料が葉書流行を直接確認する一方、chain structureの具体性はderivative Evidenceに依存することを明記する。",
+      "impact": "媒体code自体ではなく、直接性の比較可能性を過大評価し、他EntryとのD/I基準を不整合にする。",
+      "rationale": "SRC-002の同時代資料は1922年1月下旬に「幸運の為に」という葉書が流行したことを直接示すが、受信者が同文を複写・転送する自己複製構造の具体的確認は主としてSRC-001の研究整理とSRC-003の後代新聞紹介に依存する。したがってD02/D03のcode_idは維持できるが、Status=Dはconfidence ceilingを超える。",
+      "severity": "Moderate",
+      "summary": "D02/D03のDirect判定がチェーンレター構造を支持するEvidenceの直接性を超えている"
+    }
+  ],
+  "review_notes": "Review 20はScoped Contentを意味論的事実源として再構成し、Evidenceは支持強度監査にのみ用いた。",
+  "review_seq": 1,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-006"
+    ],
+    "dimension_refs": [
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-005"
+    ],
+    "model": "1922年型は、受信者がチェーンレターを受け取ることで規則へ入り、24時間以内に同文を9人へ転送すれば9日後の幸運、停止すれば大きな不運が来るとする条件付きの未来予告・制御規則である。転送は次受信者へ同じ規則を複製し、将来の吉凶を行為選択へ結び付ける。",
+    "notes": "意味モデル自体は再構成可能。FindingはD02/D03のevidence confidenceに限定される。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0024_kofuku_no_tegami/0024_20_analysis.json",
+    "blob_sha": "a60fb128a73f1f8b6d40af54f90e08b1f9965a57",
+    "commit_sha": "9358e210577f52b3b455998c29fd650277dbb606",
+    "reviewed_at": "2026-09-21T06:00:00Z"
+  },
+  "verdict": "Moderate"
+}
