@@ -8,24 +8,24 @@
 
 ## Version Scope
 
-1884年にアメリカから日本へ伝播したと研究史上整理され、1887年の井上円了『妖怪玄談』で方法が確認される初期三脚型を分析対象とする。細竹を三脚状に組み、盆・風呂敷等をかぶせ、参加者が手を置いて霊的存在を招き、揺れ方をYes/No等として質問への回答に用いる形。五十音表と硬貨を用いる後代文字盤型、1970年代以降の学校流行、地域差のある終了作法等はScope外。
+1884年にアメリカから日本へ伝播したと研究史上整理され、1887年の井上円了『妖怪玄談』で方法が確認される初期三脚型を分析対象とする。細竹を三脚状に組み、盆・風呂敷等をかぶせ、参加者が手を置いて霊的存在を招き、揺れ方をYes/No等として質問への回答に用いる形。霊的作用機序には器具への直接作用説と参加者の精神・腕を介する間接作用説があり、同一Scope内で競合する。五十音表と硬貨を用いる後代文字盤型、1970年代以降の学校流行、地域差のある終了作法等はScope外。
 
 - Included variants: VAR-001
 - Excluded variants: VAR-002, VAR-003
-- Content refs: CNT-001, CNT-003
+- Content refs: CNT-001, CNT-003, CNT-007
 
 ## Dimensions
 
-### D01 — D
+### D01 — I
 
 - Primary: D01.G1
 - Secondary: -
 - Content refs: CNT-001, CNT-003
 - Evidence refs: EVD-001, EVD-003, EVD-006
 
-**Rationale:** 研究史上、こっくりさんは1884年に日本へ伝播したと整理され、1887年には井上円了『妖怪玄談』が刊行されているため、Scopeの初期三脚型は明治期に成立したと判断できる。
+**Rationale:** 1887年の井上円了『妖怪玄談』刊行は書誌で直接確認できる一方、1884年の伝播・成立は後代研究が研究史上の推定として整理している。明治期（1880年代）という年代コードは合理的だが、DirectではなくInferredとする。
 
-**Manifestation:** 1880年代の明治期に成立した初期三脚型。
+**Manifestation:** 1880年代の明治期に成立・流通していた初期三脚型。1884年導入は研究史上の推定で、1887年刊行は直接確認できる。
 
 ### D02 — U
 
@@ -93,16 +93,16 @@
 
 **Manifestation:** 未知の回答を得たいという情報空白を埋める。
 
-### D08 — I
+### D08 — U
 
-- Primary: D08.CLM.INHERITED_SAYING (parent: D08.CLM)
+- Primary: -
 - Secondary: -
-- Content refs: CNT-001, CNT-006
-- Evidence refs: EVD-001, EVD-007
+- Content refs: CNT-001, CNT-003
+- Evidence refs: EVD-001, EVD-003
 
-**Rationale:** 明治以降、方法や名称を変えながら伝承される占いとして継承されており、既存のやり方自体が実践の手掛かりとなる。
+**Rationale:** Scoped Content（CNT-001・CNT-003）は儀式手順と1880年代の伝播・流行を記すが、「昔からそう言うこと自体」が意味形成の出発点だったとは示さない。Scope外の後代継続情報を持ち込まず、契機は資料不足としてUnknownとする。
 
-**Manifestation:** 受け継がれた実施法に従って再演される。
+**Manifestation:** 初期三脚型の意味形成契機は、Scoped Contentだけでは特定できない。
 
 ### D09 — D
 
@@ -137,27 +137,27 @@
 
 **Manifestation:** こっくりさんの儀式を実施する。
 
-### D12 — D
+### D12 — C
 
-- Primary: D12.FOC.PRACTITIONER (parent: D12.FOC)
+- Primary: -
 - Secondary: -
-- Content refs: CNT-001
-- Evidence refs: EVD-001
+- Content refs: CNT-001, CNT-007
+- Evidence refs: EVD-001, EVD-009
 
-**Rationale:** 直接的に作用を受け、回答を読むのは儀式を実施する参加者である。
+**Rationale:** 同一Scope内で、霊が三脚等の器具へ直接作用する説明と、参加者の精神へ作用して腕を介し器具を動かす説明が競合する。D13主作用の直接対象は前者なら器具、後者なら参加者の精神・身体となるため、一方へ固定できない。
 
-**Manifestation:** 実践者自身が回答を受け取る。
+**Manifestation:** 直接作用対象は、三脚等の器具と参加者の精神・腕の間で競合する。
 
-### D13 — D
+### D13 — C
 
-- Primary: D13.PHY.ENV_OBJECT_MANIPULATION (parent: D13.PHY)
+- Primary: -
 - Secondary: -
-- Content refs: CNT-001
-- Evidence refs: EVD-001
+- Content refs: CNT-001, CNT-007
+- Evidence refs: EVD-001, EVD-009
 
-**Rationale:** 伝承上は、招いた霊的存在の応答が三脚の揺れとして現れ、その物理的運動を回答として読む。
+**Rationale:** 霊的作用機序について、器具への直接作用（D13.PHY.ENV_OBJECT_MANIPULATIONに対応）と、参加者の精神・身体を介する支配・間接操作（D13.INT.POSSESSION_CONTROL等に対応）の説明が同一Scope内で競合し、資料はどちらか一方を確定しない。
 
-**Manifestation:** 三脚器具の運動による応答。
+**Manifestation:** 器具への直接作用説と、参加者の精神・腕を介する間接作用説が競合する。
 
 ### D14 — U
 
@@ -207,23 +207,23 @@
 
 - Primary: D18.L1
 - Secondary: -
-- Content refs: CNT-001
-- Evidence refs: EVD-001
+- Content refs: CNT-001, CNT-007
+- Evidence refs: EVD-001, EVD-009
 
-**Rationale:** Scope内で確認できる主要作用は、霊を招き器具が動いて回答するという伝承内部の因果である。
+**Rationale:** Scope内で確認できる主要作用は、招請された霊的存在が何らかの仕方で運動を生じさせ、その運動が回答として解釈されるという伝承内部の因果である。直接器具操作か精神・腕を介するかはD12/D13で競合として保持する。
 
-**Manifestation:** 伝承内部で霊的存在が器具を動かし回答する。
+**Manifestation:** 伝承内部で霊的存在に由来する運動が回答として現れる。
 
-### D19 — D
+### D19 — I
 
 - Primary: D19.MAS.NATIONAL_PUBLIC (parent: D19.MAS)
 - Secondary: -
 - Content refs: CNT-003
 - Evidence refs: EVD-003
 
-**Rationale:** 研究史は1880年代後半に初期の全国流行があったと整理しており、地域限定より広い流通が明示される。
+**Rationale:** 研究史は1880年代後半に初期の全国流行があったと整理するが、その整理自体は後代研究による推定を含む。全国的流通というコードは維持できるものの、DirectではなくInferredとする。
 
-**Manifestation:** 1880年代後半の全国的流行。
+**Manifestation:** 1880年代後半に全国的流行があったと研究史上整理される。
 
 ### D20 — U
 
