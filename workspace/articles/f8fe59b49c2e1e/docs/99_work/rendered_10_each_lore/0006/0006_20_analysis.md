@@ -8,11 +8,11 @@
 
 ## Version Scope
 
-現在確認できる早い具体形の一つである1995年映画『学校の怪談』の学校内接近型（メリーさんが校門・花壇・昇降口など現在地を電話で告げながら宿直者へ近づき、最後に背後へ到達する形）を分析対象とする。捨てた西洋人形という導入を持つ後代標準型、メール等への媒体転換型はScope外。
+現在確認できる早い具体形の一つである1995年映画『学校の怪談』の学校内接近型を分析対象とする。宿直者への電話が校門、花壇、昇降口と現在地を告げながら接近し、最後の電話の後に振り返ると『すいかのオバケ』が浮かんでいる形である。国立映画アーカイブによる『小中学生の間で語られてきた怪談』という説明は映画全体に関するため、メリーさん型固有の1995年以前の学校口承はScopeの事実として確定しない。捨てた西洋人形という導入と『今、あなたの後ろにいる』終端を持つ後代標準型、メール等への媒体転換型はScope外。
 
 - Included variants: VAR-001
 - Excluded variants: VAR-002, VAR-003
-- Content refs: CNT-001, CNT-002, CNT-003
+- Content refs: CNT-001, CNT-003, CNT-006
 
 ## Dimensions
 
@@ -40,14 +40,16 @@
 
 ### D03 — I
 
-- Primary: D03.ORL.SCHOOL_ORAL (parent: D03.ORL)
+- Primary: -
 - Secondary: -
-- Content refs: CNT-003
+- Content refs: CNT-003, CNT-006
 - Evidence refs: EVD-001, EVD-002
 
-**Rationale:** 1995年映画は小中学生の間で語られてきた怪談を題材とし、作中でも学校内怪談として提示されるため、Scope形の流通環境として学校口承を推定する。
+**Rationale:** Scoped Contentで直接確認できる提示媒体は1995年の劇場映画である。現行D03 taxonomyには劇場映画・劇映画を直接表すChildがなく、D03.ORL.SCHOOL_ORALへ置換すると、映画全体の題材説明をメリーさん型固有の学校口承へ過剰に読み替えるため採らない。
 
-**Manifestation:** 学校内で語られる接近型電話怪談。
+**Manifestation:** 1995年の劇場映画で確認されるフィクション映像型。メリーさん型固有の学校口承は確定しない。
+
+Taxonomy gap: true — D03に、劇場映画・劇映画による伝承の提示／流通を直接表すChildがない。
 
 ### D04 — U
 
@@ -62,25 +64,29 @@
 
 ### D05 — I
 
-- Primary: D05.HRS.SCHOOL_WORK_HEARSAY (parent: D05.HRS)
+- Primary: -
 - Secondary: -
 - Content refs: CNT-003
 - Evidence refs: EVD-001, EVD-002
 
-**Rationale:** 個人の直接体験記録ではなく、学校で共有される怪談として提示されるため学校内伝聞型と判断する。
+**Rationale:** Scoped Contentは1995年劇映画内の場面として提示される。現行D05 taxonomyには劇映画のフィクション映像・台詞提示を直接表すChildがなく、学校内伝聞へ置換する根拠もないためtaxonomy gapとして保持する。
 
-**Manifestation:** 学校内で伝聞される怪談。
+**Manifestation:** 劇場映画内のフィクション場面として、電話による段階接近が提示される。
 
-### D06 — I
+Taxonomy gap: true — D05に、劇場映画におけるフィクション映像・台詞による物語提示を直接表すChildがない。
 
-- Primary: D06.T3
+### D06 — U
+
+- Primary: -
 - Secondary: -
-- Content refs: CNT-003
-- Evidence refs: EVD-001
+- Content refs: CNT-003, CNT-006
+- Evidence refs: EVD-001, EVD-002
 
-**Rationale:** 小中学生の間で語られてきた怪談を題材とするため、個人の一次体験より共同体内で既知の話として提示される。
+**Rationale:** Scoped Contentからは劇映画内の怪談場面は確認できるが、メリーさん型が受容者へどの強度で『本当らしさ』を要求するかは確定できない。映画全体の学校怪談という題材説明だけで共同体既知事実T3へ写像しない。
 
-**Manifestation:** 学校共同体で既知の怪談として語られる。
+**Manifestation:** メリーさん型固有のtruth stanceは不明。
+
+Taxonomy gap: false
 
 ### D07 — I
 
@@ -95,14 +101,16 @@
 
 ### D08 — I
 
-- Primary: D08.STY.COMMUNITY_REPETITION (parent: D08.STY)
+- Primary: D08.DEX.DIRECT_EVENT (parent: D08.DEX)
 - Secondary: -
 - Content refs: CNT-001, CNT-003
-- Evidence refs: EVD-001, EVD-002
+- Evidence refs: EVD-002
 
-**Rationale:** 反復定型の現在地告知と学校怪談としての共有が、話を成立させる主要な語りの手掛かりになっている。
+**Rationale:** Scoped Contentで問題化の直接的な手掛かりになるのは、宿直者がメリーさんを名乗る反復電話と接近に遭遇する出来事である。通話が複数回続くこと自体は共同体反復証言ではなく、時間的な段階進行としてD16で扱う。
 
-**Manifestation:** 共同体内で反復される定型的な接近談。
+**Manifestation:** 宿直者が、現在地を変えながら近づく異常な電話出来事へ直接遭遇する。
+
+Taxonomy gap: false
 
 ### D09 — I
 
@@ -185,12 +193,14 @@
 
 - Primary: D16.EVT.SEQUENTIAL_EPISODE (parent: D16.EVT)
 - Secondary: -
-- Content refs: CNT-001, CNT-002
+- Content refs: CNT-001, CNT-003
 - Evidence refs: EVD-002
 
-**Rationale:** 複数回の電話ごとに位置が変わり、遠方から背後まで順次進行する。
+**Rationale:** 1995年映画型では、電話ごとに現在地が校門、花壇、昇降口へ移り、最後の電話後に振り返ると『すいかのオバケ』が現れるという順次進行が確認できる。
 
-**Manifestation:** 段階接近する複数ステップの事件列。
+**Manifestation:** 複数回の電話で接近が段階的に進む事件列。
+
+Taxonomy gap: false
 
 ### D17 — U
 
@@ -214,16 +224,18 @@
 
 **Manifestation:** 伝承内でメリーさんが接近するL1作用。
 
-### D19 — I
+### D19 — U
 
-- Primary: D19.KIN.SCHOOL_YOUTH (parent: D19.KIN)
+- Primary: -
 - Secondary: -
-- Content refs: CNT-003
-- Evidence refs: EVD-001
+- Content refs: CNT-003, CNT-006
+- Evidence refs: EVD-001, EVD-002
 
-**Rationale:** 1995年作品は小中学生の間で語られてきた怪談を題材とし、Scope形も学校怪談として提示される。
+**Rationale:** 国立映画アーカイブは映画全体を小中学生の間で語られてきた怪談を題材とする作品と説明するが、それだけではメリーさん型そのものの1995年以前の学校・若者集団内流通を確定できない。劇場公開の存在から社会的流通範囲を推測で補わない。
 
-**Manifestation:** 学校・児童集団を中心とした流通。
+**Manifestation:** メリーさん型固有の社会的流通範囲は不明。
+
+Taxonomy gap: false
 
 ### D20 — U
 
@@ -249,4 +261,4 @@
 
 ## Analysis Notes
 
-後代標準型の『捨てた人形』設定を1995年Scopeへ遡及しない。背後到達後の危害もScope本文では確定せずD14/D15をUとした。
+1995年映画で直接確認できる学校内接近型をScopeとし、後代標準型の『捨てた人形』『今、あなたの後ろにいる』を遡及しない。映画全体が学校怪談を題材とすることと、メリーさん型固有の学校口承・流通は区別する。D03/D05は劇場映画／劇映画提示を既存Childへ押し込まずtaxonomy gapとして明示した。反復電話の段階進行はD16へ保持し、D08の共同体反復証言とは分離した。
