@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0362",
+  "artifact": "00",
+  "review_seq": 7,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_00_sources.json",
+    "commit_sha": "6eb3ce7fc45b4402c12a78fcb08055ed5052e1b0",
+    "blob_sha": "a2dfa64d7a6c1615cc09f51f3080667c7f0b18b2",
+    "reviewed_at": "2026-09-21T04:23:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001は事件翌年の警察庁公的記録、SRC-002/003は1974年の同時代研究書誌で、資料種別と本文確認範囲が区別されている。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001/002/005は警察白書本文が支える事件核・沈静化・社会的不安定背景に限定され、EVD-003/004は書誌で確認できる公刊事実に限定される。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "Evidenceは対応Sourceの確認可能範囲を超えず、具体的な流言文言や詳細な伝播鎖を補完していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "警察白書を事件翌年の公的同時代記録として扱い、研究記事は本文未確認の書誌として分離している。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1973年の事件発生と1974年の公的記録・研究公刊を区別し、公刊年を事件起源へ置換していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "具体的流言文言、危険・損失表現、個別伝播経路の細部は固定せず留保されている。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "Version Scopeに必要な流言・取付け・発端解明/沈静化・石油危機下の社会/人心の不安定さというsalient情報がEVD-001/002/005に保持される。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "独立再Review Seq 007。current canonicalのSource→Evidenceを再監査し、事件核・背景条件・不確実性の保存と本文未確認資料の利用限界を確認した。過去ReviewのVerdictは判定根拠に用いていない。"
+}
