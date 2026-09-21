@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0005",
+  "artifact": "20",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0005_murasaki_no_kagami/0005_20_analysis.json",
+    "commit_sha": "b7db48b938b2d81f277336efa3c5ec99d53f2202",
+    "blob_sha": "234aa987928b36e4fd5777757a8465f7ef6e1949",
+    "reviewed_at": "2026-09-21T03:27:40.265Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "成立時のまとまった形を直接固定できないため、1998〜2001年に複数採録で確認できる期限記憶規則型VAR-001を最も早い安定共有核としてScope化し、二語併記・対抗語・具体的襲撃を除外する設計はcoding rulesとScoped Contentに整合する。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D01〜D21をScoped Contentとcodebookに照合した。D02/D03は流通媒体をUへ保守化し、D04は複数採録の期限・帰結変異と少なくとも一例の聴取記述から口承変異をIとする。D05〜D21の各codeもScoped Contentの規則・記憶・期限・帰結・回避・受容者・若者範囲と整合する。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "忘却専用Childはないが、期限まで記憶しないという回避規則はD17.RUL.OBEY_TABOOで機能的に表現可能。その他に現行taxonomyへ収容不能な主要概念は確認しない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "語句を知り記憶する受容者→所定期限まで記憶保持→認知・呪的危害→死/不幸、期限前忘却で回避という因果列はScoped Contentに沿う。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "全dimensionはVersion Scope内CNT-001/002/003/004/008へ追跡でき、Scope外VAR-002〜004の具体要素を中核Analysisへ遡及していない。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Review 10でsummaryとScoped Contentの主要分析可能性が一致し、Analysis側もそのContent由来構造だけで再構成できる。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "原誌本文未実見のDBカード要約という下位資料に依存する次元はIへ抑え、媒体を確定できないD02/D03と生成年代D01はUとする。D/I/Uの使い分けは現行coding rulesに整合する。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12の受容者→D13の記憶を条件とする認知・呪的危害→D15の死亡/不幸という列がCNT-001/004と整合する。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18はL2のみを選択しL3を選択していない。00層のSource metadataにX roleの誤付与はあるが、20_analysisはそれを独立社会効果Evidenceとして利用しておらず、L3を成立させていない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "D19はSCHOOL_YOUTH/Iに限定し、研究DBへの公開や複数県の採録から全国大衆流通を推定していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "D20はNO_ONE_KNOWSではなく、知る・記憶すること自体が危険条件となるDANGEROUS_TO_KNOWを用いる。資料不足を『誰も知らない』へ読み替えていない。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "採録地・資料の実在性と伝承因果の現実アンカーを分離し、特定実在地点・制度・事件を必要としないA0/Iとしている。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "日文研DBカード要約というindirect derivativeしか直接利用していないため、内容コードは原則I、媒体・年代の特定不能箇所はUへ抑えられている。Evidence支持強度を超えるD判定はない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "一定期限まで語句を記憶すると災厄が生じる若者俗信であり、macro_category『若者の俗信・呪いの言葉』、entry_type『命題・規則』はScoped Contentと整合する。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "Analysisの意味論はVersion Scope内CNT-001/002/003/004/008だけで成立し、Source/EvidenceにしかないVAR-002〜004の具体detailや外部効果をAnalysisへ直接再導入していない。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Scoped Contentでは、「紫の鏡／紫鏡」という名称情報を知り記憶した受容者が、16歳・18歳・20歳または高校入学前という期限まで記憶を保持すると、死または不幸に至るという条件規則が核になる。作用源は特定人物・場所ではなく名称・記憶条件で、受容者自身が危害対象となる。20歳型の一部では期限前に忘れることが回避規則として示される。採録は若者・学校年齢層と関連するが、流通媒体そのものや全国的大衆流通は確定しない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-008"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "status": "PASS",
+    "notes": "意味論的再構成はScoped Contentのみから行った。Evidenceは支持強度・上流metadataの監査にのみ使用した。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review 00でSource-level X role誤分類を別Finding化したが、20_analysisはL3を選択しておらず、その誤分類をAnalysis正当化へ利用していないためReview 20自体はPassと判定する。"
+}
