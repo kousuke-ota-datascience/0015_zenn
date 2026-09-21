@@ -8,10 +8,10 @@
 
 ## Version Scope
 
-1884年にアメリカから日本へ伝播したと研究史上整理され、1887年の井上円了『妖怪玄談』で方法が確認される初期三脚型を分析対象とする。細竹を三脚状に組み、盆・風呂敷等をかぶせ、参加者が手を置いて霊的存在を招き、揺れ方をYes/No等として質問への回答に用いる形。霊的作用機序には器具への直接作用説と参加者の精神・腕を介する間接作用説があり、同一Scope内で競合する。五十音表と硬貨を用いる後代文字盤型、1970年代以降の学校流行、地域差のある終了作法等はScope外。
+1884年にアメリカから日本へ伝播したと研究史上整理され、1887年の井上円了『妖怪玄談』で方法が確認される初期三脚型を分析対象とする。細竹を三脚状に組み、盆・風呂敷等をかぶせ、参加者が手を置いて霊的存在を招き、揺れ方をYes/No等として質問への回答に用いる形。霊的作用機序には器具への直接作用説と参加者の精神・腕を介する間接作用説があり、同一Scope内で競合する。五十音表と硬貨を用いる後代文字盤型、1970年代以降の学校流行、地域差のある終了作法等はScope外。 また、同じ「こっくりさん」という名称が用いられる場合があるdowsing（水脈・金属探査）はSRC-001が研究対象から明示的に除外しており、本Entry/Version Scopeにも含めない。
 
 - Included variants: VAR-001
-- Excluded variants: VAR-002, VAR-003
+- Excluded variants: VAR-002, VAR-003, VAR-004
 - Content refs: CNT-001, CNT-003, CNT-007
 
 ## Dimensions
@@ -60,14 +60,14 @@
 
 **Manifestation:** 初期Scope内の変化過程は不明。
 
-### D05 — D
+### D05 — I
 
 - Primary: D05.RUL.RITUAL_PROCEDURE (parent: D05.RUL)
 - Secondary: -
 - Content refs: CNT-001
 - Evidence refs: EVD-001
 
-**Rationale:** 器具を準備し、参加者が手を置き、霊的存在を招き、質問し、揺れを回答として読むという明示的手順がある。
+**Rationale:** 器具を準備し、参加者が手を置き、霊的存在を招き、質問し、揺れを回答として読むという明示的手順がある。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。
 
 **Manifestation:** 複数参加者が所定手順で実施する占い・交霊儀式。
 
@@ -104,36 +104,36 @@
 
 **Manifestation:** 初期三脚型の意味形成契機は、Scoped Contentだけでは特定できない。
 
-### D09 — D
+### D09 — I
 
 - Primary: D09.CTL.RITUAL_RULE (parent: D09.CTL)
 - Secondary: -
 - Content refs: CNT-001
 - Evidence refs: EVD-001
 
-**Rationale:** 器具への接触、霊の招請、質問、揺れの読み取りという規則に従うことが実践成立の中心である。
+**Rationale:** 器具への接触、霊の招請、質問、揺れの読み取りという規則に従うことが実践成立の中心である。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。
 
 **Manifestation:** 霊的回答を得るための儀式ルール。
 
-### D10 — D
+### D10 — I
 
 - Primary: D10.SUP.GHOST_SPIRIT (parent: D10.SUP)
 - Secondary: -
 - Content refs: CNT-001
 - Evidence refs: EVD-001
 
-**Rationale:** 初期型は参加者が『霊的存在』を招いて回答を求める構造として記述される。
+**Rationale:** 初期型は参加者が『霊的存在』を招いて回答を求める構造として記述される。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。
 
 **Manifestation:** 招請される霊的存在。
 
-### D11 — D
+### D11 — I
 
 - Primary: D11.MAN.PERFORM_RITUAL (parent: D11.MAN)
 - Secondary: -
 - Content refs: CNT-001
 - Evidence refs: EVD-001
 
-**Rationale:** 所定の器具を用意して手を置き、霊を呼び質問する行為そのものが発動条件である。
+**Rationale:** 所定の器具を用意して手を置き、霊を呼び質問する行為そのものが発動条件である。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。
 
 **Manifestation:** こっくりさんの儀式を実施する。
 
@@ -170,25 +170,25 @@
 
 **Manifestation:** 価値的帰結は固定されない。
 
-### D15 — D
+### D15 — I
 
 - Primary: D15.KNW.REVELATION_KNOWLEDGE (parent: D15.KNW)
 - Secondary: -
 - Content refs: CNT-001
 - Evidence refs: EVD-001
 
-**Rationale:** 儀式の主要な帰結は、質問に対する答えが示され、参加者が情報を得たと解釈することである。
+**Rationale:** 儀式の主要な帰結は、質問に対する答えが示され、参加者が情報を得たと解釈することである。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。
 
 **Manifestation:** 質問への回答・知識の獲得。
 
-### D16 — D
+### D16 — I
 
 - Primary: D16.EVT.SEQUENTIAL_EPISODE (parent: D16.EVT)
 - Secondary: -
 - Content refs: CNT-001
 - Evidence refs: EVD-001
 
-**Rationale:** 器具準備、招請、質問、運動、回答解釈という複数段階が順に進む。
+**Rationale:** 器具準備、招請、質問、運動、回答解釈という複数段階が順に進む。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。
 
 **Manifestation:** 手順に沿う逐次的儀式エピソード。
 
@@ -203,14 +203,14 @@
 
 **Manifestation:** 終了・回避法は不明。
 
-### D18 — D
+### D18 — I
 
 - Primary: D18.L1
 - Secondary: -
 - Content refs: CNT-001, CNT-007
 - Evidence refs: EVD-001, EVD-009
 
-**Rationale:** Scope内で確認できる主要作用は、招請された霊的存在が何らかの仕方で運動を生じさせ、その運動が回答として解釈されるという伝承内部の因果である。直接器具操作か精神・腕を介するかはD12/D13で競合として保持する。
+**Rationale:** Scope内で確認できる主要作用は、招請された霊的存在が何らかの仕方で運動を生じさせ、その運動が回答として解釈されるという伝承内部の因果である。直接器具操作か精神・腕を介するかはD12/D13で競合として保持する。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。
 
 **Manifestation:** 伝承内部で霊的存在に由来する運動が回答として現れる。
 
@@ -236,17 +236,17 @@
 
 **Manifestation:** 特権情報保持者は不明。
 
-### D21 — D
+### D21 — I
 
 - Primary: D21.A0
 - Secondary: -
 - Content refs: CNT-001
 - Evidence refs: EVD-001
 
-**Rationale:** 初期三脚型は特定の実在地点・制度・事件史を成立条件とせず、一般的な儀式手順のみで成立する。
+**Rationale:** 初期三脚型は特定の実在地点・制度・事件史を成立条件とせず、一般的な儀式手順のみで成立する。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。
 
 **Manifestation:** 特定の現実アンカーを必要としない。
 
 ## Analysis Notes
 
-後代文字盤型の手順・危険談・終了作法を初期三脚型へ遡及しない。D02/D03/D17はEvidence不足をUで保持する。
+後代文字盤型の手順・危険談・終了作法を初期三脚型へ遡及しない。D02/D03/D17はEvidence不足をUで保持する。 Review Seq 004のstatus_reasoning Findingを受け、D05・D09・D10・D11・D15・D16・D18・D21はcode自体を維持したまま、下位資料のみの場合のconfidence ceilingに従いDからIへ再評価した。同名dowsingはVAR-004として明示的にScope外へ固定した。
