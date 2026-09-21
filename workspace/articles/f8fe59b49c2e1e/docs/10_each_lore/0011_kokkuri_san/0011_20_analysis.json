@@ -4,20 +4,21 @@
   "macro_category": "全国型怪異・儀式",
   "entry_type": "儀式伝承",
   "version_scope": {
-    "description": "1884年にアメリカから日本へ伝播したと研究史上整理され、1887年の井上円了『妖怪玄談』で方法が確認される初期三脚型を分析対象とする。細竹を三脚状に組み、盆・風呂敷等をかぶせ、参加者が手を置いて霊的存在を招き、揺れ方をYes/No等として質問への回答に用いる形。霊的作用機序には器具への直接作用説と参加者の精神・腕を介する間接作用説があり、同一Scope内で競合する。五十音表と硬貨を用いる後代文字盤型、1970年代以降の学校流行、地域差のある終了作法等はScope外。",
+    "description": "1884年にアメリカから日本へ伝播したと研究史上整理され、1887年の井上円了『妖怪玄談』で方法が確認される初期三脚型を分析対象とする。細竹を三脚状に組み、盆・風呂敷等をかぶせ、参加者が手を置いて霊的存在を招き、揺れ方をYes/No等として質問への回答に用いる形。霊的作用機序には器具への直接作用説と参加者の精神・腕を介する間接作用説があり、同一Scope内で競合する。五十音表と硬貨を用いる後代文字盤型、1970年代以降の学校流行、地域差のある終了作法等はScope外。 また、同じ「こっくりさん」という名称が用いられる場合があるdowsing（水脈・金属探査）はSRC-001が研究対象から明示的に除外しており、本Entry/Version Scopeにも含めない。",
     "included_variants": [
       "VAR-001"
     ],
     "excluded_variants": [
       "VAR-002",
-      "VAR-003"
+      "VAR-003",
+      "VAR-004"
     ],
     "content_refs": [
       "CNT-001",
       "CNT-003",
       "CNT-007"
     ],
-    "notes": "1884年伝播は研究史上の有力整理だが、具体的伝播経路・単一起点は完全確定とはしない。霊的作用機序も競合説のまま保持し、単一モデルへ確定しない。"
+    "notes": "1884年伝播は研究史上の有力整理だが、具体的伝播経路・単一起点は完全確定とはしない。霊的作用機序も競合説のまま保持し、単一モデルへ確定しない。 同名dowsingは名称一致のみで本Entry対象外とする。"
   },
   "dimensions": [
     {
@@ -85,13 +86,13 @@
     },
     {
       "dimension_id": "D05",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D05.RUL.RITUAL_PROCEDURE",
         "parent_id": "D05.RUL"
       },
       "secondary": [],
-      "rationale": "器具を準備し、参加者が手を置き、霊的存在を招き、質問し、揺れを回答として読むという明示的手順がある。",
+      "rationale": "器具を準備し、参加者が手を置き、霊的存在を招き、質問し、揺れを回答として読むという明示的手順がある。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。",
       "manifestation": "複数参加者が所定手順で実施する占い・交霊儀式。",
       "content_refs": [
         "CNT-001"
@@ -151,13 +152,13 @@
     },
     {
       "dimension_id": "D09",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D09.CTL.RITUAL_RULE",
         "parent_id": "D09.CTL"
       },
       "secondary": [],
-      "rationale": "器具への接触、霊の招請、質問、揺れの読み取りという規則に従うことが実践成立の中心である。",
+      "rationale": "器具への接触、霊の招請、質問、揺れの読み取りという規則に従うことが実践成立の中心である。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。",
       "manifestation": "霊的回答を得るための儀式ルール。",
       "content_refs": [
         "CNT-001"
@@ -168,13 +169,13 @@
     },
     {
       "dimension_id": "D10",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D10.SUP.GHOST_SPIRIT",
         "parent_id": "D10.SUP"
       },
       "secondary": [],
-      "rationale": "初期型は参加者が『霊的存在』を招いて回答を求める構造として記述される。",
+      "rationale": "初期型は参加者が『霊的存在』を招いて回答を求める構造として記述される。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。",
       "manifestation": "招請される霊的存在。",
       "content_refs": [
         "CNT-001"
@@ -185,13 +186,13 @@
     },
     {
       "dimension_id": "D11",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D11.MAN.PERFORM_RITUAL",
         "parent_id": "D11.MAN"
       },
       "secondary": [],
-      "rationale": "所定の器具を用意して手を置き、霊を呼び質問する行為そのものが発動条件である。",
+      "rationale": "所定の器具を用意して手を置き、霊を呼び質問する行為そのものが発動条件である。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。",
       "manifestation": "こっくりさんの儀式を実施する。",
       "content_refs": [
         "CNT-001"
@@ -248,13 +249,13 @@
     },
     {
       "dimension_id": "D15",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D15.KNW.REVELATION_KNOWLEDGE",
         "parent_id": "D15.KNW"
       },
       "secondary": [],
-      "rationale": "儀式の主要な帰結は、質問に対する答えが示され、参加者が情報を得たと解釈することである。",
+      "rationale": "儀式の主要な帰結は、質問に対する答えが示され、参加者が情報を得たと解釈することである。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。",
       "manifestation": "質問への回答・知識の獲得。",
       "content_refs": [
         "CNT-001"
@@ -265,13 +266,13 @@
     },
     {
       "dimension_id": "D16",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D16.EVT.SEQUENTIAL_EPISODE",
         "parent_id": "D16.EVT"
       },
       "secondary": [],
-      "rationale": "器具準備、招請、質問、運動、回答解釈という複数段階が順に進む。",
+      "rationale": "器具準備、招請、質問、運動、回答解釈という複数段階が順に進む。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。",
       "manifestation": "手順に沿う逐次的儀式エピソード。",
       "content_refs": [
         "CNT-001"
@@ -296,12 +297,12 @@
     },
     {
       "dimension_id": "D18",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D18.L1"
       },
       "secondary": [],
-      "rationale": "Scope内で確認できる主要作用は、招請された霊的存在が何らかの仕方で運動を生じさせ、その運動が回答として解釈されるという伝承内部の因果である。直接器具操作か精神・腕を介するかはD12/D13で競合として保持する。",
+      "rationale": "Scope内で確認できる主要作用は、招請された霊的存在が何らかの仕方で運動を生じさせ、その運動が回答として解釈されるという伝承内部の因果である。直接器具操作か精神・腕を介するかはD12/D13で競合として保持する。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。",
       "manifestation": "伝承内部で霊的存在に由来する運動が回答として現れる。",
       "content_refs": [
         "CNT-001",
@@ -345,12 +346,12 @@
     },
     {
       "dimension_id": "D21",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D21.A0"
       },
       "secondary": [],
-      "rationale": "初期三脚型は特定の実在地点・制度・事件史を成立条件とせず、一般的な儀式手順のみで成立する。",
+      "rationale": "初期三脚型は特定の実在地点・制度・事件史を成立条件とせず、一般的な儀式手順のみで成立する。 code semantics自体はScoped Contentで支持されるが、具体的支持EvidenceはSRC-001という信頼できる二次研究を中心とし、一次・同時代資料から直接固定していないため、coding rulesのconfidence ceilingに従いDirectではなくInferredとする。",
       "manifestation": "特定の現実アンカーを必要としない。",
       "content_refs": [
         "CNT-001"
@@ -360,5 +361,5 @@
       ]
     }
   ],
-  "analysis_notes": "後代文字盤型の手順・危険談・終了作法を初期三脚型へ遡及しない。D02/D03/D17はEvidence不足をUで保持する。"
+  "analysis_notes": "後代文字盤型の手順・危険談・終了作法を初期三脚型へ遡及しない。D02/D03/D17はEvidence不足をUで保持する。 Review Seq 004のstatus_reasoning Findingを受け、D05・D09・D10・D11・D15・D16・D18・D21はcode自体を維持したまま、下位資料のみの場合のconfidence ceilingに従いDからIへ再評価した。同名dowsingはVAR-004として明示的にScope外へ固定した。"
 }
