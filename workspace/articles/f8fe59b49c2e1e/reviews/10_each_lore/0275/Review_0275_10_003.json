@@ -1,0 +1,198 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-002〜004の主要意味はEVD-001/002で支持されるが、CNT-001の「巨大な」はEVD-001にもSRC-001要約にも明示されず、現Evidenceからサイズを固定できない。",
+      "status": "FINDING"
+    },
+    "narrative_reconstruction": {
+      "notes": "coverage_refs内部のsalient meaningはBlind Decodeから全件復元でき、具体的終端も保持される。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-003のsalient H情報である1992年attestationがContent Unit/variant/uncertaintyに具体値として保持されず、後続の年代・媒体分析をContent layerだけでは追跡できない。",
+      "status": "FINDING"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12でcoverage集合内部のsalient structureにLOSS/CONFLICTはない。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summaryだけでCNT-001〜004の主要出来事列、封印、祭祀終端、不確実性、variant境界を具体的に再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "成立年代、収録以前の異伝、史実性を未確定として保持する。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "日文研収録資料に示される「荒天被害→弘法大師による箱封印」の主要形へScopeを限定し、収録以前の異伝を確定していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0275",
+  "findings": [
+    {
+      "category": "salient_content_completeness",
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "1992年が確認できる収録資料年であることを、起源年ではないとの留保と一体でContentへ追加する。Review 00修正後は必要なら媒体情報も伝播させる。",
+      "impact": "D02等が1992年を用いるにはEvidenceへ直接戻る必要があり、Content layerを意味論的境界とするAnalysis traceabilityを満たせない。",
+      "rationale": "EVD-003は1992年の収録資料という観測事実と、それが起源年ではないという留保を持つ。現行Contentは収録年一般へ抽象化し、1992という値をContent Unit・variant・uncertaintyに保持しない。",
+      "severity": "Moderate",
+      "summary": "EVD-003の1992年attestationがContent layerで具体値として保持されていない。"
+    },
+    {
+      "category": "evidence_content_support",
+      "content_refs": [
+        "CNT-001"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "CNT-001から「巨大な」を削除するか、巨大さを直接支持するEvidenceを追加する。",
+      "impact": "主要因果列には影響しないが、怪物の具体的形態がEvidenceより強くなる。",
+      "rationale": "EVD-001とSRC-001要約は手長・足長を「怪物」とするが、巨大であるとは明示しない。名称からサイズを推測して確定属性へ追加するのはEvidence supportを超える。",
+      "severity": "Minor",
+      "summary": "CNT-001の「巨大な怪物」というサイズ属性が現Evidenceで支持されない。"
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "現行Content由来の中核因果、終端、地理アンカー、Version Scope/variant境界はsummaryから再構成可能。EVD-003の具体年欠落はpopulation completeness Findingとして別に扱う。",
+      "status": "PASS"
+    },
+    "blind_decode": "磐梯山には手長・足長という怪物がおり、雲を集めて会津一帯を暗くし、洪水や嵐を起こして農作物・地域環境へ反復的な被害を与える。弘法大師が介入し、怪物を小箱へ誘い込んで封じることで被害を終わらせ、封じられた存在はその後、磐梯明神として祀られる。成立年代、収録以前の異伝、史実性は不明で、対象は日文研収録資料に示される主要形に限られる。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "磐梯山の手長・足長という怪物を復元。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "notes": "",
+        "salient_meaning": "磐梯山に手長・足長という怪物がいる。"
+      },
+      {
+        "blind_reconstruction": "雲・暗天・洪水・嵐・農作物被害を復元。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "notes": "",
+        "salient_meaning": "雲を集め会津を暗くし、洪水・嵐で農作物を荒らす。"
+      },
+      {
+        "blind_reconstruction": "弘法大師の介入、小箱への誘引・封印、被害終結を復元。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "notes": "",
+        "salient_meaning": "弘法大師が怪物を小箱へ誘い込み封じ、被害を止める。"
+      },
+      {
+        "blind_reconstruction": "封印後に磐梯明神として祀られる終端を復元。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "notes": "",
+        "salient_meaning": "封じた存在が磐梯明神として祀られる。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "手長・足長が加害主体、弘法大師が介入・封印主体。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P01",
+        "reference": "CNT-001/003で同じ役割。"
+      },
+      {
+        "blind": "会津の地域環境・農作物が被害対象。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P02",
+        "reference": "CNT-002で暗天・洪水・嵐と農作物被害を保持。"
+      },
+      {
+        "blind": "独立した受容者向け発動条件はない。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P03",
+        "reference": "Contentにも独立entry triggerはない。"
+      },
+      {
+        "blind": "因果主体は手長・足長。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P04",
+        "reference": "CNT-001/002で同じ。"
+      },
+      {
+        "blind": "雲を集め、暗天・洪水・嵐で作物を荒らす。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P05",
+        "reference": "CNT-002で同じ。"
+      },
+      {
+        "blind": "加害怪物→小箱に封印→祭祀対象へ遷移。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P06",
+        "reference": "CNT-003/004で同じ。"
+      },
+      {
+        "blind": "反復被害→弘法大師介入→封印→祭祀。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P07",
+        "reference": "CNT-002→003→004で同じ。"
+      },
+      {
+        "blind": "受容者向け規則・禁忌は確認できない。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P08",
+        "reference": "Contentにもない。"
+      },
+      {
+        "blind": "小箱へ誘い込み封じることが制御手段。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P09",
+        "reference": "CNT-003で同じ。"
+      },
+      {
+        "blind": "封じられ、磐梯明神として祀られる。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P10",
+        "reference": "CNT-004で同じ。"
+      },
+      {
+        "blind": "成立年代・収録以前異伝・史実性は不明。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P11",
+        "reference": "uncertaintiesで同じ。"
+      },
+      {
+        "blind": "日文研収録資料の主要形に限定。",
+        "difference": "NONE",
+        "notes": "",
+        "probe_id": "P12",
+        "reference": "VAR-001で同じ境界。"
+      }
+    ],
+    "reference_story": "現行Content layerでは、磐梯山の手長・足長が雲を集めて会津を暗くし、洪水・嵐を起こして農作物を荒らす。弘法大師が怪物を小箱へ誘い込んで封じ、その後は磐梯明神として祀られる。日文研DB収録資料で確認される主要形として区切られ、成立年代、収録以前の異伝、史実性は確定していない。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Blind Decodeはsummary.narrative + summary.structureだけから固定した。Golden Referenceは粒度校正のみに用いた。docs/legacyは参照していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0275_bandaisan_tenaga_ashinaga/0275_10_contents.json",
+    "blob_sha": "40ee630492a5be6bd6eb246abba8586c6061be06",
+    "commit_sha": "aeae63f4c2db043fc5ab4a19e1723adf8afb36d5",
+    "reviewed_at": "2026-09-21T01:46:10Z"
+  },
+  "verdict": "Moderate"
+}

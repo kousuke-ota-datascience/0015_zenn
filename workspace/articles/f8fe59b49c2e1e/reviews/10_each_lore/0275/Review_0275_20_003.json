@@ -1,0 +1,201 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Scoped Content由来の中核因果・作用・終端・地理アンカーはsummaryとContentで主要分析可能性が変わらない。D02/D03のlayer bypassは独立Findingとする。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "手長・足長→雲・荒天→環境/農作物被害→弘法大師による箱封印→祭祀という因果列をScoped Contentから再構成できる。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "D02/D03はMAGAZINEを選ぶがScoped Contentに誌名・媒体種別がない。D02 rationaleの1992年もContentに具体値としてなく、Source/Evidence-only情報をAnalysisへ再導入している。",
+      "status": "FINDING"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12=自然環境 → D13=環境・物体操作 → D15=財産・物損（農作物被害）はScoped Contentの直接因果列として接続する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみでL3を選択しておらず、独立X Evidenceを要求する社会現実層の誤付与はない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19はLOCAL_TRADITIONであり、公開DB/雑誌の存在を全国的大衆流通へ読み替えていない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "NO_ONE_KNOWSは選択しておらず情報欠落を同コードへ変換していない。ただしLOCAL_RESIDENTの根拠不足はdimension_semantics Findingで扱う。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "A2は資料の実在性ではなく、Scoped Contentが磐梯山・会津という具体的地理へ依存することに基づき、コード意味自体は妥当。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "主要因果コードは概ねScoped Contentに整合するが、D04.STB.STABILIZED_CANONは変容史を欠き、D20.INS.LOCAL_RESIDENTは特権情報保持構造をContentから導けない。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "macro_category「古伝承・民俗」とentry_type「退治・封印型地域伝承」は、地域怪物・弘法大師介入・封印というScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "唯一のcanonical Sourceはindirect_derivativeの研究DB要約で原掲載本文を固定していない。Coding Rules §3に照らし、同Source系統だけに依存するD判定はIを上限として再評価が必要。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "D02/D03の「1992年・雑誌」はScoped Contentに媒体・具体年がなくSource/Evidence固有detailへ依存する。D04/D20もContent refsだけでは選択codeの意味を支持しない。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "SRC-001はreliable_secondary_or_researchかつindirect_derivativeで、Coding Rules §3の「下位資料しかない場合はStatus=I」に対し14次元がDとなっている。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "怪物による環境操作、封印、祭祀終端は既存taxonomyで表現可能で、安定した未収容構造は確認しない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "VAR-001とCNT-001〜004に限定したScopeは現行Contentの主要形と一致し、収録以前の異伝や成立年代を混入していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0275",
+  "findings": [
+    {
+      "category": "status_reasoning",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D02",
+        "D03",
+        "D07",
+        "D09",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "D17",
+        "D18",
+        "D19",
+        "D21"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "より直接的なEvidenceを追加できない次元は原則Iへ保守化し、追加Evidenceを固定できた次元だけDを個別再評価する。",
+      "impact": "D/Iの意味がEntry内で体系的に崩れ、他Entryとの比較可能性・confidence interpretationを損なう。",
+      "rationale": "canonical 00はSRC-001をreliable_secondary_or_research / indirect_derivativeとし、1992年『あしなか』原掲載本文そのものは固定していない。Coding Rules §3は下位資料しかない場合Status=Iとする。それにもかかわらずD02,D03,D07,D09,D10,D11,D12,D13,D14,D15,D17,D18,D19,D21がDである。",
+      "severity": "Major",
+      "summary": "indirect derivativeの単一Sourceに対して多数DimensionがDirect(D)となり、Evidence confidence ceilingを体系的に超えている。"
+    },
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D04"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "変容・定型化を示すH Evidenceと対応Contentが追加されない限りD04をUへ戻す。",
+      "impact": "確認できない変容史を「定型化」として埋め、生成・変容パターンを過剰推論する。",
+      "rationale": "Coding Rules D04は変化を示すH証拠がなければUとする。STABILIZED_CANONも「多様な形から代表形が固定された」と定義されるが、Scoped ContentはVAR-001という一形だけで固定過程を示さない。",
+      "severity": "Moderate",
+      "summary": "D04.STB.STABILIZED_CANONは変容・定型化を示すHistory Evidenceなしに選択されている。"
+    },
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D20"
+      ],
+      "finding_id": "F003",
+      "fix_direction": "特権保持者を示すContentがなければD20をUへ戻し、独占的知識Evidenceが得られた場合だけContent化後に再評価する。",
+      "impact": "D20の情報保持軸を地域性の代理変数に変えてしまう。",
+      "rationale": "D20は真相・追加情報・回避情報を偏って保持する主体をコードし、単に噂を知る人を保持者としてはならない。Scoped Contentには地元住民だけが追加情報を持つ構造がない。",
+      "severity": "Moderate",
+      "summary": "D20.INS.LOCAL_RESIDENTは「地域伝承を知る者」と「特権情報保持者」を混同している。"
+    },
+    {
+      "category": "content_layer_bypass",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D02",
+        "D03"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "finding_id": "F004",
+      "fix_direction": "Review 00/10の上流Findingを修正して媒体・attestationをEvidence→Contentへ伝播させ、そのContentを参照してD02/D03を再評価する。上流修正をしない場合はContentだけで支持できる状態へ保守化する。",
+      "impact": "Content→Analysisの層境界が破れ、上流Evidence/Sourceの欠落をAnalysisが直接補完している。",
+      "rationale": "CNT-001〜004は物語内容のみで雑誌という媒体種別を含まず、Content uncertaintyも1992という具体値を保持しない。一方AnalysisはD02/D03をPRT.MAGAZINEとしD02 rationaleで1992年を使う。",
+      "severity": "Moderate",
+      "summary": "D02/D03の雑誌・1992年判定がScoped Contentを飛ばしてSource/Evidence固有情報に依存している。"
+    }
+  ],
+  "review_notes": "Review 20の意味論的根拠はScoped Contentに限定し、Evidenceはconfidence ceilingと上流omission監査にのみ使用した。docs/legacyは参照していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D02",
+      "D03",
+      "D04",
+      "D07",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D20",
+      "D21"
+    ],
+    "model": "Scoped Contentだけからは、磐梯山の手長・足長が雲を集めて会津に暗天・洪水・嵐を生じさせ、農作物を荒らす環境加害主体となる。弘法大師が小箱へ誘い込んで封じ、その後は磐梯明神として祀られる。中核は「超自然主体→環境操作→負の物的帰結→封印による制御→祭祀終端」である。",
+    "notes": "中核因果はContentのみで再構成できるが、current AnalysisのD02/D03はContent外の媒体・年情報、D04は未確認の変容史、D20は未確認の特権情報保持構造を必要とし、Analysis全体はScoped Contentだけでは再構成できない。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0275_bandaisan_tenaga_ashinaga/0275_20_analysis.json",
+    "blob_sha": "ef84397fba552236c817c1beffd2a18c5383eff8",
+    "commit_sha": "e9382aa89a833397a43b0770dda9c62bbcd701be",
+    "reviewed_at": "2026-09-21T01:46:10Z"
+  },
+  "verdict": "Major"
+}
