@@ -33,6 +33,7 @@ Workflow 00自身は、Evidence収集、Content再構成、D01〜D21判定、Rev
 - Workflow 00は、Workflow 10と同様に**Markdown WorkflowをLLMへ与えて実行するオーケストレーション仕様**であり、Workflow 00専用のPythonランナーを前提としない。
 - ユーザーが指定する業務入力は原則 `Entry_ID` のみ。
 - 00 → 10 → 20 の依存方向を崩さない。
+- Workflow 10はReview-readyで停止し、Workflow 20を内部起動しない。Workflow 10完了後にWorkflow 20を実行するか、correction / re-reviewをどう反復するかはWorkflow 00が決定する。
 - Reviewは00 / 10 / 20を同一Review Seqの1 cycleとして扱う。
 - Findingがある場合、必要なartifactから修正を開始し、その下流を再評価する。
 - 上流artifactを変更したら下流artifactを無条件に信用しない。
@@ -141,6 +142,8 @@ Workflow 90内部の `PASS / UPDATED` はWorkflow 00の最終 `PASS` と同義�
 
 Workflow 00はこれらを再実装しない。
 
+Workflow 10はReview-ready確定で停止し、Workflow 20を内部起動しない。Workflow 00はWorkflow 10から制御を受け戻した後、現在状態に応じてWorkflow 20を別Workflowとして実行する。
+
 ## 4.2. Workflow 20
 
 `0000_workflow_20_review.md`
@@ -156,7 +159,7 @@ Workflow 00はこれらを再実装しない。
 - Verdict
 - append-only Review JSON
 
-Workflow 00はReview判断を再実装しない。
+Workflow 00はReview判断を再実装しない。Workflow 00がWorkflow 20を呼び出すのは、REVIEW_READY / STALE_CURRENT / correction後のre-review等、E2E状態分類上Reviewが必要な場合に限る。
 
 ## 4.3. Workflow 90
 
@@ -206,6 +209,10 @@ Workflow 00開始時に、Workflow 90およびGit / Review事実からEntryを�
 Workflow 10
 00 → 10 → 20
 ↓
+Review-readyで停止 / Workflow 00へ制御返却
+↓
+Workflow 00が次実行を決定
+↓
 Workflow 20
 ```
 
@@ -240,9 +247,11 @@ Workflow 20
 ```text
 Workflow 10 correction
 ↓
-validation
+validation / commit / Workflow 90
 ↓
-Workflow 20 re-review
+再Review-readyで停止 / Workflow 00へ制御返却
+↓
+Workflow 00がWorkflow 20 re-reviewを実行
 ```
 
 ## 6.5. STALE_CURRENT
@@ -252,7 +261,7 @@ Workflow 20 re-review
 処理:
 
 - current artifactを未Reviewとして扱う。
-- validation後、Workflow 20へ送る。
+- validation後、Workflow 00がWorkflow 20を別Workflowとして実行する。
 - 古いPassをcurrent版へ流用しない。
 
 ## 6.6. COMPLETE
@@ -317,6 +326,8 @@ Workflow 20 re-review
 
 各canonical commit後、Workflow 90を実行する。
 
+Workflow 10完了時点ではReview-ready状態で制御をWorkflow 00へ戻す。Workflow 10の内部からWorkflow 20が起動されてはならない。
+
 ## 7.3. Phase 2: deterministic validation
 
 Review前に必ず次を満たす。
@@ -331,7 +342,7 @@ python -m src.validation.validate_entry <Entry_ID> --through 20
 
 ## 7.4. Phase 3: Review cycle
 
-Workflow 20を実行する。
+Workflow 00が現在状態を確認した上で、Workflow 20を独立Workflowとして実行する。これはWorkflow 10内の「引渡し」処理ではない。
 
 Review cycleは常に:
 
@@ -374,7 +385,7 @@ validation
 Workflow 20
 ```
 
-へ反復する。
+へ反復する。各 `Workflow 10 → Workflow 20` の接続はWorkflow 00が明示的に判断・起動し、Workflow 10自身は後続Reviewを起動しない。
 
 Verdict severity自体から修正artifactを決めない。
 
@@ -680,6 +691,7 @@ NO_STALE_OR_DIVERGED_STATE
 ```text
 Workflow 00
   = production E2E orchestration / iteration / completion
+  = Workflow 10完了後にWorkflow 20を自動的に接続・反復できる唯一のWorkflow
 
 Workflow 10
   = research / canonical generation / correction
