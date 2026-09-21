@@ -1,0 +1,161 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Summary/Scoped ContentだけからはD03/D05/D06/D08/D19を再構成できず、current Analysisはsummary invarianceを満たさない。",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "CNT-001〜003から受信→段階接近→背後到達というD11/D12/D13/D16の因果列は再構成できる。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "D03/D05/D06/D08/D19が、対応Content UnitにないEVD-001由来の『小中学生の間で語られてきた怪談』『学校共同体で共有』を直接rationaleへ持ち込んでいる。",
+      "status": "FINDING"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12=電話を受ける人物→D13=追跡・接近→D15=背後到達後の最終帰結領域は不明(U)で整合する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L1のみをコードし、L3社会現実効果を付与していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19=SCHOOL_YOUTHは全国流通を主張してはいないが、その学校・児童集団流通自体がScoped Contentにない。映画の存在を学校内流通へ読み替えてはならない。",
+      "status": "FINDING"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者が資料にないだけでNO_ONE_KNOWSへせずUを保持している。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "学校・校門・花壇・昇降口という一般的現実背景をA1とし、特定実在校や史実を成立条件へ昇格していない。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D08 COMMUNITY_REPETITIONは共同体で繰り返し聞く証言を意味するが、Scoped Contentが直接示す反復は物語内の電話反復であり共同体反復ではない。D03/D05/D06/D19もScoped Content外の学校共有情報に依存する。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "『全国型怪異・儀式 / 物語・伝説』という上位分類は電話怪異の物語型EntryというContentと矛盾しない。D19の分布コードとは独立して扱う。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "争点の学校流通系はIであり、Source品質を超えてDへ強めていない。Contentに直接現れる場面構造のD判定も、2022年出演者回想をHistory起源証拠へ拡張していない。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "D03/D05/D06/D08/D19の『小中学生の間で語られてきた』『学校で共有』はScoped Contentに存在せず、Content refsだけでは追跡できない。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "Contentに直接記述される接近列のD11/D12/D13/D16/D18はD、推論系はI、帰結・回避等はUで、問題の中心はD/IラベルよりContent bypassとChild選択にある。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "Version Scopeは1995年映画内で直接確認される形だが、D03媒体taxonomyに劇場映画、D05提示形式taxonomyに劇映画の物語提示を直接表すChildがない。canonicalはSCHOOL_ORAL / SCHOOL_WORK_HEARSAYへ置換している。",
+      "status": "FINDING"
+    },
+    "version_scope": {
+      "notes": "AnalysisはVAR-001の1995年映画学校内接近型に限定し、捨てた人形の後代標準型と媒体派生を除外している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0006",
+  "findings": [
+    {
+      "category": "content_layer_bypass",
+      "content_refs": [
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D03",
+        "D05",
+        "D06",
+        "D08",
+        "D19"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "まずEvidence→Contentで必要な意味と留保を固定し、そのContentだけからD03/D05/D06/D08/D19を再判定する。メリーさん型固有の学校口承を直接示す資料がなければ、その流通形態を確定しない。",
+      "impact": "Content→Analysisの再現性が失われ、5 DimensionがScoped Contentだけでは監査不能になる。一般的な映画題材説明から特定variantの流通形態へ推論が強まる。",
+      "rationale": "CNT-003が保存するのは1995年映画内で宿直者へ校内地点を告げながら接近する場面である。D03/D05/D06/D19は『小中学生の間で語られてきた怪談』『学校で共有』を、D08はさらに『共同体反復』をrationaleへ導入する。これらはEVD-001の映画全体に関する題材説明に由来しContent層に固定されていないうえ、メリーさん型そのものの1995年以前の学校口承を直接示す証拠でもない。",
+      "severity": "Moderate",
+      "summary": "D03/D05/D06/D08/D19がScoped Contentにない学校口承・共同体共有情報を直接利用している。"
+    },
+    {
+      "category": "taxonomy_gap",
+      "content_refs": [
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D03",
+        "D05"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "劇場映画／フィクション映像提示をtaxonomy gapとして扱い、codebook拡張または明示的U/C方針を検討する。別案として口承Scopeへ変更するなら、その口承形を特定できるEvidenceを追加する。",
+      "impact": "媒体・提示形式の比較軸で、映画による確認形が学校口承として集計される。Entry固有修正だけでなくcodebook coverageの問題を示す。",
+      "rationale": "Version Scopeは1995年映画で確認できる学校内接近型を分析対象とする。D03 taxonomyは口承・印刷・放送・初期デジタル・Web・デジタルAV・制度記録を持つが劇場映画を直接表すChildがなく、D05にも劇映画の物語提示に明確対応するChildがない。canonicalはSCHOOL_ORAL / SCHOOL_WORK_HEARSAYで埋めているが、attestation/presentationと異なる。",
+      "severity": "Moderate",
+      "summary": "1995年映画型をScopeにした一方、D03/D05 taxonomyに劇場映画・劇映画提示の直接対応Childがなく、別媒体概念へ置換されている。"
+    },
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D08"
+      ],
+      "finding_id": "F003",
+      "fix_direction": "Scoped Contentに共同体反復証言が追加されない限りD08をUまたはContentで直接支持される別Childへ再判定し、物語内の電話反復はD16に保持する。",
+      "impact": "D08がD16の反復性と流通情報を混ぜたコードになる。",
+      "rationale": "D08.STY.COMMUNITY_REPETITIONは『地域・学校等で繰り返し聞く証言』を意味する。CNT-001/CNT-002が示すのは同一出来事内で電話が複数回かかる反復であり、共同体で同じ証言を繰り返し聞く構造ではない。rationaleの『学校怪談としての共有』もScoped Content外である。",
+      "severity": "Moderate",
+      "summary": "D08 COMMUNITY_REPETITIONが、物語内の反復電話と共同体での反復証言を混同している。"
+    }
+  ],
+  "review_notes": "Review 20の意味論根拠はScoped Content (CNT-001〜003) のみに限定した。docs/legacyは参照していない。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D03",
+      "D05",
+      "D06",
+      "D08",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [],
+    "model": "Scoped Contentだけから再構成すると、1995年映画型ではメリーさんを名乗る電話主が宿直者へ複数回電話し、校内の現在地を告げながら距離を縮め、最終的に背後へ到達する。因果列は受信(D11)→受信者を対象(D12)→追跡・接近(D13)→複数段階の事件列(D16)で、背後到達後の価値的・身体的帰結(D14/D15)、有効な回避(D17)、特権情報保持者(D20)は不明である。Scoped Contentだけからは『学校口承として流通した』『共同体で反復証言された』とは言えない。",
+    "notes": "上流Evidence/Sourceの知識をsense-making modelへ補わず、Contentで再現できない分析前提をFinding化した。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_20_analysis.json",
+    "blob_sha": "de89bead6fd401f41e5be40e4c3fa3072738c43d",
+    "commit_sha": "c020a08ce68d1711eca3cb031d4815ef472e349f",
+    "reviewed_at": "2026-09-21T01:44:00Z"
+  },
+  "verdict": "Moderate"
+}

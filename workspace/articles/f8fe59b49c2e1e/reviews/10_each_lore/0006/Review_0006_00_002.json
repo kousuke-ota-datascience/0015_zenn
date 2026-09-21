@@ -1,0 +1,93 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1995年映画を『現在確認できる早い具体形の一つ』とし、絶対起源とはしていない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-002/EVD-003の一部具体記述が各locatorで確認できる内容を越えている。",
+      "status": "FINDING"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-003のlocatorはNDLサーチの書誌・提供元要約であり、relation_to_primary=primaryはアクセス実体より強い。",
+      "status": "FINDING"
+    },
+    "salient_evidence_completeness": {
+      "notes": "全5 Sourceを意味単位で確認した。SRC-002の映画固有terminal scene（最後の電話後に振り返ると『すいかのオバケ』が浮く）がEVD-002に保存されていない。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "SRC-003はNDLの書誌・要約レコードであり、実際の1999年書籍本文そのものではない。SRC-002は2022年の出演者回想で、その後年性はcanonical notesで保持されている。",
+      "status": "FINDING"
+    },
+    "source_evidence_support": {
+      "notes": "SRC-002は最終電話後に振り返ると『すいかのオバケ』が浮いていると記すが、EVD-002はこれを落とし、同ページに明記されない『今、あなたの後ろにいる』を1995年型へ固定している。SRC-003のNDL表示には『毎晩電話』の記載がない。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "絶対起源、1995年以前の口承形、捨てた人形導入の成立時期を未確定として保持している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0006",
+  "findings": [
+    {
+      "category": "salient_evidence_completeness",
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "EVD-002へ映画固有の終端描写を追加し、2022年出演者回想という確度限界を併記する。後代標準型の終端台詞とは分離する。",
+      "impact": "Analysis Scopeが1995年映画型であるのに固有終端がContent以降へ伝播せず、後代の定型的背後到達へ早期形を平滑化する。",
+      "rationale": "SRC-002は宿直者への電話が校門から花壇・昇降口へ近づいた後、最後の電話で振り返ると『すいかのオバケ』が浮くと説明する。EVD-002は接近列だけを採り、この映画固有のterminal scene/identity revealを保存していない。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-002"
+      ],
+      "summary": "1995年映画型の終端『振り返るとすいかのオバケが浮いている』がEvidence層から欠落している。"
+    },
+    {
+      "category": "source_evidence_support",
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "Sourceで確認できない具体句をEvidenceから除くか、それを直接支える一次本文・映像・信頼できる記録を追加する。",
+      "impact": "1995年型と1999年書籍型の具体的物語情報が参照Sourceより強く固定され、variant比較に誤った確度を持ち込む。",
+      "rationale": "SRC-002本文では1995年型の最終台詞『今、あなたの後ろにいる』は確認できず、代わりに最終電話後のすいかのオバケ描写がある。SRC-003のNDL表示は1999年2月刊行と『人形のおばけ“メリーさん”』を示すが、『毎晩電話がかかる』は同表示にない。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-002",
+        "SRC-003"
+      ],
+      "summary": "EVD-002とEVD-003に、各locatorで直接確認できない具体記述が混入している。"
+    },
+    {
+      "category": "primary_source_relation",
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "finding_id": "F003",
+      "fix_direction": "SRC-003のrelation/source assessmentを実アクセス実体に合わせ、一次本文を利用するなら別Sourceとして明示する。",
+      "impact": "EVD-003の物語内容を一次本文相当の確度で扱う誤読を誘発する。",
+      "rationale": "canonical locatorは1999年書籍本文ではなく、NDLサーチの書誌情報と外部提供元要約である。書誌事実には強いが、物語本文の一次アクセスとは区別すべきである。",
+      "severity": "Minor",
+      "source_refs": [
+        "SRC-003"
+      ],
+      "summary": "SRC-003はNDL書誌レコードを参照しているのにrelation_to_primary=primaryとなっている。"
+    }
+  ],
+  "review_notes": "docs/legacyは参照していない。Source assessmentはcanonical locatorの実アクセス内容を基準に行った。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_00_sources.json",
+    "blob_sha": "a4fdc5a67508b258cae64e2b38ca34e135924339",
+    "commit_sha": "dabb7c74190d70f0c399ca628bfd8d60acf7fcc9",
+    "reviewed_at": "2026-09-21T01:44:00Z"
+  },
+  "verdict": "Moderate"
+}

@@ -1,0 +1,192 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "現行Evidenceの接近列、1995年学校内型、2019年後代標準型、2018年派生名義は対応Contentへ概ね追跡できる。Review 00のSource→Evidence問題はここでSourceから補完していない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "coverage_refs=CNT-001〜CNT-004の具体的意味はsummaryだけから再構成可能。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "Evidence母集団では、EVD-001の『映画全体が小中学生の間で語られてきた怪談を題材とする』事実と、EVD-003の1999年書籍における『人形のおばけ“メリーさん”』という中間層がContentに明示的な意味単位として固定されていない。前者は後段Analysisで実際に使用される。",
+      "status": "FINDING"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12でcoverage集合内部のsalient structureにLOSS/CONFLICTなし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "現行Contentで表現される反復電話→段階接近→背後到達、1995年型／後代人形型／媒体派生、主要不確実性はsummaryから復元できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "起源・1995年以前・人形導入標準化時期を未確定として維持。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "1995年映画型、後代の捨てた人形型、メール等派生は区別され、捨てた人形導入を1999年へ遡及していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0006",
+  "findings": [
+    {
+      "category": "salient_content_completeness",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "EVD-001の事実を『映画全体の題材説明であり、メリーさん型そのものの1995年以前の学校口承を直接証明しない』という留保付きContentとして固定する。EVD-003は『1999年児童書で人形のおばけメリーさんを確認』までを独立表現し、捨てた人形導入はEVD-005の後代標準型と分離する。",
+      "impact": "AnalysisがContent layerを迂回し、学校口承・共同体共有を再現不能な前提として利用する。variant史では1999年の人形関連と2019年の捨て人形導入が同じ層のように読まれやすい。",
+      "rationale": "EVD-001は映画全体が『小中学生の間で語られてきた怪談』を題材とすることを示すが、CNT-003は映画内のメリーさん接近場面しか記述せず、この事実をContent化していない。それにもかかわらずcurrent AnalysisはD03/D05/D06/D08/D19で利用する。またEVD-003が示す1999年書籍の『人形のおばけ“メリーさん”』という中間的な人形関連層も、Contentでは刊行事実の言及に留まり、2019年に確認される『捨てた西洋人形』標準型との歴史的区別が十分固定されていない。",
+      "severity": "Moderate",
+      "summary": "Evidenceにある流通史・variant史のsalient factがContent層に明示的な意味単位として固定されていない。",
+      "variant_refs": [
+        "VAR-001",
+        "VAR-002"
+      ]
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "主要物語構造はSummary/Content間で不変だが、current AnalysisのD03/D05/D06/D08/D19はEVD-001由来の『学校・児童集団での共有』を使っており、その意味がContentにもSummaryにも固定されていない。根因はSummary圧縮ではなくEvidence→Content抽出不足／Analysis bypass。",
+      "status": "FINDING"
+    },
+    "blind_decode": "メリーさんを名乗る電話の主が、複数回の電話で現在地を告げつつ受け手へ段階的に接近し、最後に背後到達を告げる。1995年映画では学校内地点を順に接近、後代標準型では捨てられた西洋人形が元の持ち主へ接近する。起源・1995年以前の口承詳細・人形導入の標準化時期は未確定。明示的回避規則は不明。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "複数回の電話で現在地を告げる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "notes": "反復電話と位置告知を保持。",
+        "salient_meaning": "メリーさんを名乗る相手から電話が繰り返しかかり、毎回現在地を告げる。"
+      },
+      {
+        "blind_reconstruction": "段階的に接近し、最後に背後到達。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "notes": "状態遷移と終端を保持。",
+        "salient_meaning": "現在地が通話ごとに近づき、最終的に受信者の背後へ到達する。"
+      },
+      {
+        "blind_reconstruction": "1995年映画では学校内地点を順に接近する。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "notes": "variant識別に必要な学校内接近構造を保持。具体地点名・役職省略は核を変えない。",
+        "salient_meaning": "1995年映画の学校内型で、校内地点を順に告げながら宿直者へ接近する。"
+      },
+      {
+        "blind_reconstruction": "捨てられた西洋人形が元の持ち主へ接近する後代標準型。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "notes": "発端・主体・対象・接近核を保持。",
+        "salient_meaning": "後代標準型では捨てられた西洋人形メリーが元の持ち主へ電話しながら接近する。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "メリーさんを名乗る電話の主／電話を受ける人物。",
+        "difference": "NONE",
+        "notes": "actor/roleの核は保持。",
+        "probe_id": "P01",
+        "reference": "同じ。1995年型では宿直者が受信者。"
+      },
+      {
+        "blind": "電話を受ける人物が接近対象。",
+        "difference": "NONE",
+        "notes": "対象は明確。",
+        "probe_id": "P02",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "メリーさんを名乗る相手から電話がかかる。",
+        "difference": "NONE",
+        "notes": "entry trigger保持。",
+        "probe_id": "P03",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "メリーさんを名乗る存在が接近主体。",
+        "difference": "NONE",
+        "notes": "cause/agent保持。",
+        "probe_id": "P04",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "現在地を繰り返し告げ、通話ごとに距離を詰める。",
+        "difference": "NONE",
+        "notes": "mechanism保持。",
+        "probe_id": "P05",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "遠方から受信者の背後まで接近する。",
+        "difference": "NONE",
+        "notes": "state transition保持。",
+        "probe_id": "P06",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "複数回の電話で段階的に進行する。",
+        "difference": "NONE",
+        "notes": "反復・順序保持。",
+        "probe_id": "P07",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "明示的な規則・禁忌は不明。",
+        "difference": "NONE",
+        "notes": "unknown保持。",
+        "probe_id": "P08",
+        "reference": "現行Contentにも有効な規則・禁忌は固定されていない。"
+      },
+      {
+        "blind": "回避・制御法は不明。",
+        "difference": "NONE",
+        "notes": "unknown保持。",
+        "probe_id": "P09",
+        "reference": "現行Contentにも有効な回避・制御法はない。"
+      },
+      {
+        "blind": "最終的に背後到達を告げる終端。",
+        "difference": "NONE",
+        "notes": "Source層の映画固有終端欠落はReview 00の上流Findingで扱う。",
+        "probe_id": "P10",
+        "reference": "現行ContentのCNT-002も背後到達を終端とする。"
+      },
+      {
+        "blind": "絶対起源、1995年以前の口承詳細、捨てた人形導入の標準化時期は未確定。",
+        "difference": "NONE",
+        "notes": "不確実性保持。",
+        "probe_id": "P11",
+        "reference": "同じ不確実性に加え、メール派生の本文差は未再構成。"
+      },
+      {
+        "blind": "1995年の学校内接近型、後代の捨てた西洋人形型、メール等への媒体転換を区別。",
+        "difference": "NONE",
+        "notes": "主要variant boundary保持。",
+        "probe_id": "P12",
+        "reference": "同じ3層を区別。"
+      }
+    ],
+    "reference_story": "現行Contentでは、メリーさんを名乗る相手が繰り返し電話し、現在地を告げるたびに受信者へ近づき、最終的に背後へ到達する。1995年映画型では宿直者へ校門・花壇・昇降口など学校内地点を告げながら接近する。後代標準型では少女が捨てた西洋人形メリーがゴミ捨て場や駅などから電話して元の持ち主へ接近する。1999年には同名児童書が刊行され、2018年事典では電話・メール等の派生名義が区別される。絶対起源、1995年以前の口承詳細、捨てた人形導入の標準化時期、媒体派生の詳細本文は未確定。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Golden Reference 0180はsummary/content_unitsの意味保存粒度の校正にのみ参照し、件数・文字数・variant判定を転用していない。docs/legacyは参照していない。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_10_contents.json",
+    "blob_sha": "e98237d442f36ec99df7a119b7dc74589e31e351",
+    "commit_sha": "caf6f4873f9dae61601a46cb2cd7c69ff2057b68",
+    "reviewed_at": "2026-09-21T01:44:00Z"
+  },
+  "verdict": "Moderate"
+}
