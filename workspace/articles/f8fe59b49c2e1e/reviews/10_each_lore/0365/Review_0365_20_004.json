@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0365",
+  "artifact": "20",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "docs/10_each_lore/0365_kanto_earthquake_poison_well_rumor/0365_20_analysis.json",
+    "commit_sha": "7e2d76ff9227bda17b6ee2a068d1738c020fc612",
+    "blob_sha": "33ddee69dc79e1e9e5eac8ccc037dc7dc5cb29b8",
+    "reviewed_at": "2026-09-21T02:20:22.793017Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "FINDING",
+      "notes": "version_scopeが『朝鮮人へ放火・暴動・投毒等を虚偽に帰属する流言群』と『その現実の被害拡大』を一つの主分析対象に結合しており、伝承命題とL3社会効果の分析レイヤーが未分離。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D10〜D15は主として流言受信後の現実社会の因果鎖をコードし、D04とD16にもcodebook定義との不整合がある。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "今回の主要問題は必要なコードが存在しないことではなく、Version Scopeと分析レイヤーの選択、および既存コードの適用方法にある。"
+    },
+    "causality": {
+      "status": "FINDING",
+      "notes": "current D10→D11→D12→D13→D15は『流言情報→受容→朝鮮人を対象とする情報誘発行動→集団暴力』という現実社会のL3因果を主モデル化する。伝承内部の虚偽命題が述べる因果モデルとの分離が必要。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "現行Analysisの各主張自体はcurrent Contentから追跡できる。問題はContentをどの分析レイヤーとして解釈したかであり、Content layer bypassではない。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "Scoped Contentには『朝鮮人が投毒・放火等を行う』という流言内部の主張と、その流言が現実の暴力へ波及した事実の双方があるが、20_analysisは後者をD10〜D16の中心因果へ固定するため、伝承内部の意味形成構造を主要次元で失う。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D04=DERIVATIVE_PROLIFERATION/DおよびD16=CHAIN_SPREAD/Dはcurrent Contentが定義上必要な派生関係・対象間移動を直接確定しておらず、D判定が強すぎる。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "FINDING",
+      "notes": "D12→D13→D15は現実の被害鎖としては整合するが、それ自体がD18.L3で扱うべき社会効果をD10〜D15の主因果モデルへ昇格させている。伝承内部因果の作用対象・機構・帰結を再裁定する必要がある。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "CNT-003およびEVD-002/EVD-003は、流言の流通が現実の朝鮮人殺傷等へつながったL3相当の結果をScope内で支持する。SRC-001とSRC-002は公的整理資料として系譜が重なるため二つの独立一次確認とは扱わないが、L3自体の支持は得られる。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "D19は被災地域・地方圏に限定し、公開資料の存在から全国流通を推定していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "D20はNO_HIDDEN_TRUTHであり、資料不足をNO_ONE_KNOWSへ置換していない。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "1923年関東大震災という史実、当時の情報途絶、流言の歴史的記録がScoped Contentに含まれ、現実アンカーを単に資料の実在性から導いてはいない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "D04の派生増殖とD16の連鎖拡散はcurrent Content/Evidenceが定義上の要件を直接満たしておらず、D statusが支持強度を超える。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "macro_category『災害・流言』、entry_type『差別的災害流言』はEntryの主題自体とは整合する。問題は分類名ではなくVersion Scopeと因果分析単位。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "今回問題とする伝承命題と現実被害の双方はCNT-001〜003に表現されており、Source/Evidence-only detailをAnalysis正当化へ直接持ち込む必要はない。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Scoped Contentから伝承そのものを再構成すると、震災直後の爆発・火災・水の濁り等の不確かな事象を、朝鮮人という外集団が意図的に放火・暴動・井戸への投毒を行っているという虚偽の主体・悪意帰属によって説明する流言群である。したがってD10〜D17の主因果はまずこの流言内部の『誰が何をし、何にどう作用し、何が起こると主張されるか』から再裁定すべきである。別レイヤーとして、その流言の流通が現実の警戒・排斥・殺傷へ波及した事実はD18.L3として保持できる。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18"
+    ],
+    "status": "FINDING",
+    "notes": "current 20_analysisはL3社会効果の因果鎖をD10〜D16へ主モデルとして展開しており、object-level loreとmeta-level circulation effectを分離していない。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Major",
+      "category": "version_scope",
+      "summary": "Version Scopeが流言命題そのものと、その流通が生んだ現実の被害拡大を同一の主分析対象として混在させている。",
+      "rationale": "Entryの伝承内容は『朝鮮人が放火・暴動・井戸への投毒等を行う』という虚偽流言群である一方、version_scopeは『その現実の被害拡大』まで同格に取り込む。理論設計はD07〜D17で伝承に埋め込まれた意味形成・因果構造を比較し、現実社会への波及をD18.L3として別レイヤーで表現できる設計である。current Scopeはこの境界を消している。",
+      "impact": "Entryの分析単位が一意でなくなり、流言系Entryだけが伝承内容ではなく社会的伝播イベントをD10〜D17でコードすることになる。コーパス横断の比較可能性と各Dimensionの意味が大きく変わる。",
+      "fix_direction": "Version Scopeの主対象を、震災直後に朝鮮人へ放火・暴動・投毒等を虚偽に帰属した流言命題群として固定する。現実の排斥・殺傷はContentとして保持しつつ、主にD18.L3等の社会効果レイヤーとして分離する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "D16",
+        "D17",
+        "D18"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Major",
+      "category": "causality",
+      "summary": "D10〜D15の中心因果鎖が伝承内部の虚偽主張ではなく、流言受容後の現実社会のL3因果をコードしている。",
+      "rationale": "current D10=INFORMATION_CONTENT、D11=RECEIVE_MESSAGE、D12=DEMOGRAPHIC_GROUP、D13=INFORMATION_INDUCED_ACTION、D15=COLLECTIVE_VIOLENCE/DEATHは、『流言情報を受け取った人々が朝鮮人へ暴力を行う』という現実の社会作用を表す。これはCNT-003で支持されD18.L3として重要だが、CNT-001が表す伝承内部では、虚偽に加害主体とされた人間集団が放火・暴動・投毒等を行うという別の因果命題が語られている。現行Analysisは後者を主要次元から落としている。",
+      "impact": "D10因果源、D11発動条件、D12作用対象、D13作用機構、D15帰結領域の意味が一段メタ化し、D18.L3との機能重複が生じる。分析結果の中心部分を再コードする必要がある。",
+      "fix_direction": "CNT-001〜002から伝承内部の因果モデルを再構成してD10〜D17を再裁定する。流言受容→現実暴力の因果は削除せず、D18.L3および必要な流通・社会的埋め込み次元へ分離する。D18はL3を維持したうえで、伝承内部因果に対応するL1の扱いも理論・実装に従って再確認する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D15",
+        "D18"
+      ]
+    },
+    {
+      "finding_id": "F003",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D04のDERIVATIVE_PROLIFERATION/Dは、複数の虚偽主張を同一流言群として列挙したことから派生増殖を過剰推定している。",
+      "rationale": "CNT-001とVAR-001は放火・暴動・投毒等の複数主張が存在したことを示すが、一つの形から別形が派生した系譜、パロディ、派生規則等の生成関係までは明示しない。codebook上のDERIVATIVE_PROLIFERATIONをDで置くには不足する。",
+      "impact": "D04の変容型を実証以上に強く固定し、流通中の変容と単なる同時併存・流言群の束ねを混同する。",
+      "fix_direction": "current ContentだけならD04をUへ戻すか、再話・変形等の定義に合う直接Contentが得られた場合のみ該当コードを再選定する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D04"
+      ]
+    },
+    {
+      "finding_id": "F004",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D16=CHAIN_SPREAD/Dは流言の流通・増幅を因果時間構造として誤用している。",
+      "rationale": "D16は『伝承が何年・どのように流通したか』ではなく、原因成立・発動から主作用／主帰結までの時間編成を測る。current rationaleは『災害直後の短期間に流言が反復・増幅して拡散した』という流通史を述べるだけで、CHAIN_SPREADのA→B→Cと対象間を移る作用をContentから示していない。",
+      "impact": "D16がD03/D04/D19に近い流通属性へずれ、因果時間次元として比較不能になる。",
+      "fix_direction": "分析単位を修正した後、伝承内部の原因→作用→帰結の時間関係としてD16を再裁定する。該当構造をContentから確定できなければUとする。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D16"
+      ]
+    }
+  ],
+  "verdict": "Major",
+  "review_notes": "Review Seq 004では、0365のみを対象に、object-levelの虚偽流言命題とmeta-levelの流通・社会効果を明示的に分離して再評価した。D18.L3の現実被害は支持されるが、それをD10〜D17の主因果モデルそのものに置くことは理論設計との整合を欠く。"
+}
