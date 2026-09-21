@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0363",
+  "artifact": "10",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0363_1973_toilet_paper_shortage_rumor/0363_10_contents.json",
+    "commit_sha": "a5943675d5c806ae65a450d267b56a77dd3251c6",
+    "blob_sha": "d33de9668b20107cd5aaf1646415e46faa2488c7",
+    "reviewed_at": "2026-09-21T01:48:20Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "FINDING",
+      "notes": "CNT-001 through CNT-003 are supported by EVD-001 through EVD-003. VAR-002 additionally states an infection-period and manufacturing/import-anxiety premise that is not present in EVD-004 as currently encoded."
+    },
+    "summary_reconstruction": {
+      "status": "FINDING",
+      "notes": "The summary preserves the central 1973 causal loop but cannot reconstruct CNT-002's November sold-out observation or CNT-004's recurrence of hoarding; the coverage audit records these as LOSS."
+    },
+    "structural_probe": {
+      "status": "FINDING",
+      "notes": "P07 loses the concrete November sold-out observation and P12 loses salient detail of the 2020 later-variant recurrence, although the main causal order and scope boundary remain recoverable."
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "The 1973 word-of-mouth episode is kept as the scoped initial form and the 2020 SNS episode is explicitly separated as VAR-002 outside Version Scope."
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "The unknown first speaker/first transmission route is preserved in summary.structure and uncertainties without being converted into an origin claim."
+    },
+    "narrative_reconstruction": {
+      "status": "FINDING",
+      "notes": "Summary-only reconstruction captures rumor→hoarding→scarcity/panic but loses concrete event and later-variant details that are present in the Content layer."
+    },
+    "salient_content_completeness": {
+      "status": "FINDING",
+      "notes": "EVD-001 gives the exact 1973-11-22 Tokyo Tama City supermarket anchor, while CNT-002 retains only '1973年11月' and a generic sold-out display. The exact date/place is a salient event/geographic anchor under the review rules."
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1973年のオイルショック下で、生活必需品、とくにトイレットペーパーがなくなるという噂が口コミで広がる。噂を受けた消費者が買いだめに走り、店頭在庫の減少が不足感と不安をさらに強め、買いだめ・品薄・経済パニックという自己強化的な社会的騒動に至る。最初の発話者・伝播経路と個々の購買判断は不明で、固定した規則や禁忌はなく、制御策も不明である。2020年のSNS流言は1973年の主要形とは別のVariantとしてScope外に置かれる。",
+    "reference_story": "1973年のオイルショック下で、トイレットペーパー等の生活必需品がなくなるという不足予測の噂が広がった。1973年11月には商品の売り切れ表示や物価高・物不足への不安がある中で口コミが拡散し、消費者が買いだめした結果、実際の品薄と経済パニックが拡大した。最初の発話者・最初の伝播経路は不明である。2020年には異なる発生条件でSNS上のトイレットペーパー不足デマと買い占めが再発しており、Contentでは感染症流行時の製造・輸入不安に基づく後代Variantとして1973年Scopeから除外されている。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "噂の受け手・伝達者、消費者、小売店。",
+        "reference": "不足予測の噂を伝達・受容する人々と、買いだめする消費者。売り切れ表示のある小売店が出来事の場になる。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "トイレットペーパー等の生活必需品の需給と消費者行動。",
+        "reference": "生活必需品の店頭在庫・需給と、それに反応する消費者の購買行動。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "生活必需品がなくなるという噂を聞くこと。",
+        "reference": "オイルショックでトイレットペーパー等がなくなるという不足予測の噂への接触。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "不足予測の噂と集団的買いだめ。",
+        "reference": "不足予測の噂が不安下の消費者行動を動かし、買いだめが実際の品薄を生む。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "不足予測が買いだめを誘発し、在庫減少が不安を強化する。",
+        "reference": "口コミによる不足予測が購買判断を変え、買いだめが店頭在庫を減らして不足感を現実化する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "不安と噂の拡散から買いだめ、品薄、パニックへ変化する。",
+        "reference": "不安・不足予測の流通から買いだめ、実際の品薄、経済パニックへ移行する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "噂→買いだめ→品薄の自己強化的連鎖。",
+        "reference": "1973年11月の売り切れ表示という具体的観測を含みつつ、口コミ→買いだめ→品薄・パニックへ進む。",
+        "difference": "LOSS",
+        "notes": "因果順序は保持されるが、Contentにある具体的な月・売り切れ観測はSummary-only reconstructionから復元できない。"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "固定した規則・禁忌はない。",
+        "reference": "再現的な儀式規則・禁忌はContentにない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "回避・制御策は不明。",
+        "reference": "1973年Scopeの回避・制御手順はContentに記録されていない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "買いだめと品薄が社会的騒動・経済パニックになる。",
+        "reference": "買いだめ、実際の品薄、経済パニックの拡大が終端。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "最初の発話者・伝播経路と個々の購買判断は不明。",
+        "reference": "最初の発話者と最初の伝播経路は不明。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "1973年口コミ流言が主要形、2020年SNS流言は別Variantとして除外。",
+        "reference": "VAR-001は1973年オイルショック下の口コミ不足予測→買いだめ。VAR-002は2020年感染症流行時のSNS不足デマ→買い占めで、1973年Scope外。",
+        "difference": "LOSS",
+        "notes": "境界そのものは保持されるが、Summaryは2020年Variantの発生条件と買い占め再発を復元できない。"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "1973年Scopeの不足予測、口コミ、買いだめ、品薄、パニックという分析骨格と2020年の除外境界はsummaryから再構成できる。失われた具体日付・地点およびscope外 variant detailは、現行D07-D21の主要分析可能性を変えない。"
+    },
+    "verdict": "FINDING",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "オイルショック下でトイレットペーパー等がなくなるという不足予測の噂が広がった。",
+        "blind_reconstruction": "オイルショック下で生活必需品、とくにトイレットペーパーがなくなるという噂が口コミで広がる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "1973年11月、売り切れ表示と物価高・物不足への不安の中で噂が口コミ拡散した。",
+        "blind_reconstruction": "1973年のオイルショック下で噂が口コミで広がり、不安が買いだめへつながる。",
+        "difference": "LOSS",
+        "notes": "Summaryから1973年11月という月と売り切れ表示の具体的観測を復元できない。"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "消費者の買いだめが実際の品薄と経済パニックを拡大させた。",
+        "blind_reconstruction": "消費者の買いだめが在庫を減らし、品薄と経済パニックを増幅する。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "2020年にも異なる発生条件のSNS不足デマと買い占めが起きたが、1973年主要形とは区別される。",
+        "blind_reconstruction": "2020年のSNS流言は別Variantとして1973年Scopeから除外される。",
+        "difference": "LOSS",
+        "notes": "媒体と除外境界は復元できるが、異なる発生条件と買い占め再発が落ちる。"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Minor",
+      "category": "evidence_content_support",
+      "summary": "VAR-002 contains 2020 infection-period and manufacturing/import-anxiety details not represented in EVD-004.",
+      "rationale": "EVD-004 records only that a toilet-paper shortage misinformation spread on SNS in 2020 and caused hoarding. VAR-002 adds infection-period context and manufacturing/import anxiety. Those details exist on SRC-001 but, under the layer rules, Source-only meaning cannot directly support Content.",
+      "impact": "The later variant is more specific than its Evidence-layer support, creating a Source→Content bypass for scope-external comparison detail.",
+      "fix_direction": "First repair Review 00/EVD-004 to encode the missing source detail, then retain VAR-002; alternatively simplify VAR-002 to the meaning actually present in EVD-004.",
+      "evidence_refs": [
+        "EVD-004"
+      ],
+      "content_refs": [
+        "CNT-004"
+      ],
+      "variant_refs": [
+        "VAR-002"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Minor",
+      "category": "salient_content_completeness",
+      "summary": "CNT-002 drops the exact 1973-11-22 Tokyo Tama City supermarket anchor carried by EVD-001.",
+      "rationale": "EVD-001 preserves an exact date and geographic/store anchor, while CNT-002 generalizes it to '1973年11月' and generic sold-out displays. The review workflow explicitly treats concrete event and geographic anchors as salient completeness candidates.",
+      "impact": "The Content population loses a concrete historical anchor useful for reconstructing and distinguishing the documented event, even though the main causal analysis remains unchanged.",
+      "fix_direction": "Enrich CNT-002 or add a dedicated event Content Unit preserving 1973-11-22 and the Tokyo Tama City supermarket anchor, with EVD-001 as support.",
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "content_refs": [
+        "CNT-002"
+      ]
+    },
+    {
+      "finding_id": "F003",
+      "severity": "Minor",
+      "category": "summary_reconstruction",
+      "summary": "The summary cannot reconstruct salient details of CNT-002 and CNT-004.",
+      "rationale": "Coverage audit finds LOSS for CNT-002 because the November sold-out observation is omitted, and LOSS for CNT-004 because the 2020 recurrence of buying/hoarding and different conditions are omitted. The core causal loop remains reconstructable.",
+      "impact": "A reader using only summary.narrative + summary.structure receives the correct analytical skeleton but not the full concrete Content-layer account or later-variant detail.",
+      "fix_direction": "Add the observed November sell-out detail and enough 2020 recurrence detail to preserve the Content-layer meaning while keeping VAR-002 explicitly outside the 1973 Version Scope.",
+      "content_refs": [
+        "CNT-002",
+        "CNT-004"
+      ],
+      "probe_refs": [
+        "P07",
+        "P12"
+      ]
+    }
+  ],
+  "verdict": "Minor",
+  "review_notes": "Blind Decode was constrained to summary.narrative + summary.structure. Reference Story, population completeness, coverage audit, probes, and analysis invariance were evaluated afterward."
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0363",
+  "artifact": "00",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0363_1973_toilet_paper_shortage_rumor/0363_00_sources.json",
+    "commit_sha": "658098632ea5a3f733b8af08523f74b9fe4c2f83",
+    "blob_sha": "e484c184cdfc2754715c4d97ba5d4925b9bbbcdb",
+    "reviewed_at": "2026-09-21T01:48:20Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001 is an official Showakan chronology page but is retrospective; its declared source_type=reliable_secondary_or_research is appropriate for the current record."
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001 through EVD-004 are marked as paraphrases and stay within statements present on SRC-001; no quotation/paraphrase mismatch was found."
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "The Showakan 1973 section supports the 11/22 Tama City sold-out notice, word-of-mouth shortage rumor, hoarding, oil-price/inflation context, economic panic, and a 2020 SNS comparison."
+    },
+    "primary_source_relation": {
+      "status": "FINDING",
+      "notes": "SRC-001 is a retrospective chronology and the current metadata does not identify the primary record from which it directly derives; direct_derivative is therefore not independently established by the record."
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "The artifact uses the 1973 material as an event/history anchor and does not claim that the 11/22 sold-out notice identifies the first utterance or first transmission of the rumor."
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "EVD-004 is explicitly marked as a later comparison outside the 1973 scope; the artifact does not convert the documented 1973 event into a claim about an identified originator."
+    },
+    "salient_evidence_completeness": {
+      "status": "FINDING",
+      "notes": "SRC-001 gives salient detail for the 2020 comparison—COVID-19 context and the specific false claim that toilet paper was manufactured/imported from China—but EVD-004 reduces this to a generic shortage misinformation statement. This detail matters because the downstream VAR-002 uses manufacturing/import anxiety to distinguish the later variant."
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Minor",
+      "category": "primary_source_relation",
+      "summary": "SRC-001 is labeled direct_derivative without an identified direct primary-source chain.",
+      "rationale": "The source is a later Showakan chronology. Neither the locator nor bibliographic metadata identifies a primary record that SRC-001 directly reproduces or derives from, so the stronger relation label is not demonstrable from the current artifact.",
+      "impact": "The historical content remains usable as a reliable secondary source, but the provenance relation is stated more strongly than the stored metadata supports.",
+      "fix_direction": "Change relation_to_primary to unknown or document the specific primary source/record that establishes a direct derivative relationship.",
+      "source_refs": [
+        "SRC-001"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Minor",
+      "category": "salient_evidence_completeness",
+      "summary": "EVD-004 omits the specific 2020 misinformation premise and COVID-19 context present in SRC-001.",
+      "rationale": "SRC-001 states that in February 2020, during the global COVID-19 outbreak, misinformation claimed toilet paper would become scarce because it was manufactured/imported from China; EVD-004 records only a generic shortage misinformation spread on SNS and hoarding.",
+      "impact": "The Evidence layer does not contain all salient meaning used to distinguish the later 2020 comparison, and downstream VAR-002 currently contains details not represented in Evidence.",
+      "fix_direction": "Expand EVD-004 (or add a separate Evidence item) to preserve the COVID-19 context and manufacturing/import claim if VAR-002 is retained; otherwise remove those unsupported downstream details.",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "evidence_refs": [
+        "EVD-004"
+      ]
+    }
+  ],
+  "verdict": "Minor",
+  "review_notes": "Independent semantic review of the fixed 0363/00 target. The core 1973 evidence is supported; findings concern provenance strength and completeness of the scope-external 2020 comparison."
+}
