@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1995年映画を現在確認できる早い具体形の一つとして扱い、絶対起源・最古口承とはしていない。1999年人形層と後代標準型も分離されている。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001〜005は各locatorの確認可能範囲に収まり、1995年映画の校門→花壇→昇降口→すいかのオバケ、1999年『人形のおばけ“メリーさん”』、後代の捨て人形→駅→背後終端を混同していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "映画本編を直接閲覧した扱いにはせず、出演者本人の後年回想、NDL書誌・提供元要約、書誌DB、後代紹介記事の認識論的位置を区別している。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "5 Sourceについて主体、反復接近列、1995年固有終端、1999年人形層、後代標準型、媒体派生、資料限界を監査し、後続Content/Analysisを変えるsalient omissionは確認しない。"
+    },
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "Source種別・locator・一次資料との関係は用途に対して保守的で、後年回想や二次書誌を絶対起源の証拠へ昇格していない。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜005の各主張は対応Sourceで支持され、Sourceにない電話頻度・成立年代・口承経路を補完していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "絶対起源、メリーさん型固有の1995年以前の学校口承、1999年層の詳細進行、後代標準型の標準化時期を未確定として保持する。"
+    }
+  },
+  "entry_id": "0006",
+  "findings": [],
+  "review_notes": "Seq 005再Review。現行5 Sourceのlocatorを必要範囲だけ再照合し、Source→Evidenceを独立監査した。docs/legacyは参照していない。",
+  "review_seq": 5,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_00_sources.json",
+    "commit_sha": "678355cbaed44acbdb846543e79514b720ba6cd5",
+    "blob_sha": "8eb12c4a27a23592a9de4d77b34aebdd65422c61",
+    "reviewed_at": "2026-09-21T04:24:59Z"
+  },
+  "verdict": "Pass"
+}

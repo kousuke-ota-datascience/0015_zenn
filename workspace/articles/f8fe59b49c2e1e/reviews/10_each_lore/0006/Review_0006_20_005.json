@@ -1,0 +1,105 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Scoped Contentとsummaryの双方から、反復電話→校内地点の段階接近→最後の電話→振り返り→すいかのオバケ顕現という1995年型の主構造を再構成でき、Analysisも同じ終端を用いている。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "D12=宿直者→D13=追跡・接近→D14=観測・顕現の中立帰結→D15=怪異の存在が明らかになる、という因果列がCNT-001/CNT-003内で閉じている。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "全Dimensionのcontent_refsはVersion Scope内CNT-001/CNT-003/CNT-006に限定され、Scope外CNT-002をAnalysis根拠へ再導入していない。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "宿直者が対象となり、電話主が距離を縮め、最後に怪異の姿が明らかになるというD12→D13→D15の列がScoped Contentと整合する。D15は内的認識変化を直接明示しないためIに抑えている。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18はL1のみであり、独立X EvidenceなしにL3社会現実効果を付与していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "映画公開や映画全体の題材説明からメリーさん型固有の全国／学校流通を推定せずD19=Uを保持する。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "特権情報保持者がContentにないことをNO_ONE_KNOWSへ強めずUとしている。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "一般的な学校・校内地点をA1とし、資料の実在性や特定校史実を成立条件へ転写していない。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D13は実際の段階接近をPURSUIT、D14は危害・利益を伴わない観測終端をNEU、D15は怪異の姿が明らかになる帰結をREVELATION_KNOWLEDGE/Iとしており、D16の順次進行とも役割分離できている。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "全国型怪異・儀式／物語・伝説という上位分類は電話怪異の物語型Entryと矛盾しない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "成立年代・媒体・流通はU/Iに抑え、D15も認識変化の推論性をIへ反映する。1995年場面の明示イベント列だけをD判定に用いる。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "D07/D09/D10/D12〜D15/D17/D18/D20を含む全DimensionがVersion Scope内Contentへ追跡可能で、Scope外CNT-002参照は残っていない。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D14.NEUは明示された観測終端に対応してD、D15の知識獲得は内的変化を推定するためI、回避・流通・特権情報は不足をUとしており支持強度と整合する。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "D03/D05のみ劇場映画／劇映画提示の既存Child欠落をtaxonomy gapとして明示し、それ以外の修正対象は既存codebook内で表現できる。"
+    },
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001の1995年映画型だけを対象とし、VAR-002/003およびCNT-002を明示的に分析Scope外として維持する。"
+    }
+  },
+  "entry_id": "0006",
+  "findings": [],
+  "review_notes": "Seq 005再Review。Review意味論根拠はVersion Scope内Content (CNT-001/CNT-003/CNT-006) に限定し、Source/Evidence-only情報やScope外CNT-002で補完していない。docs/legacyは参照していない。",
+  "review_seq": 5,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-003",
+      "CNT-006"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [],
+    "model": "Scoped Contentだけから再構成すると、1995年映画型では宿直者がメリーさんを名乗る電話を複数回受け、電話主は校門→花壇→昇降口と現在地を告げながら距離を縮める。最後の電話後、宿直者が振り返ると『すいかのオバケ』が浮かんでいる。主作用は宿直者への追跡・接近、終端は身体危害ではなく怪異の観測・顕現であり、その姿が明らかになることを知識帰結としてIで扱う。映画全体が学校怪談を題材とすることは、メリーさん型固有の先行学校口承や流通を確定しない。",
+    "notes": "Scope外の後代『今、あなたの後ろにいる』型は意味論的根拠へ使用していない。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_20_analysis.json",
+    "commit_sha": "42e0a03cf629b07d95b42432f8fbd4dc124651ae",
+    "blob_sha": "2b96e74419ca307008fdbfc9ffd085571e7b2a66",
+    "reviewed_at": "2026-09-21T04:24:59Z"
+  },
+  "verdict": "Pass"
+}
