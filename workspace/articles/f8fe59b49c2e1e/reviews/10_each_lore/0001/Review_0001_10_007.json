@@ -1,0 +1,209 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-005はEVD-010の問いかけ・裂けた口提示までに一致し、CNT-014の雑誌部分はEVD-002/EVD-003を追加してtraceされた。CNT-019はEVD-015の後代専門家解釈として認識論的地位を明示する。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryから先行候補、VAR-001、後代の問いかけ・正体提示型、増補群、流通史、6月の地域差、主要不確実性を再構成できる。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "後代代表形の終端を裂けた口の提示までに限定し、それ以後を未固定とする境界を含め、具体的展開をsummaryだけから復元できる。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "現Evidence母集団には対応Contentまたはuncertaintyが存在する。新規EVD-015はCNT-019に対応し、後代専門家解釈としてVAR-001の伝承内容と分離されている。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12でsalientなLOSS/CONFLICTは確認しない。初期危害命題と後代代表形の具体化を混同せず、終端未固定も保存する。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "1978年末の先行候補、VAR-001の初期安定核、VAR-002の問いかけ・正体提示型、VAR-003の属性・能力・回避法増補を分離し、後代専門家解釈CNT-019もVAR-001へ混入していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "起源、新聞本文未実見、口の提示以後の代表形の展開、後代要素の初出・共存、媒体効果、社会対応一次記録等の留保を保持する。"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryと完全Contentの比較で、Version ScopeおよびD01〜D21を左右するsalientな構造差は確認しない。CNT-019は後代専門家解釈としてScope外に明示されている。"
+    },
+    "blind_decode": "1978年暮れごろ、岐阜の八百津町（場所は諸説あり）で農家の高齢女性が庭先に口の裂けた女性を見たという噂が広がり始めたと後代専門家整理が紹介するが、これは最初期候補であり単一起源とはしない。1979年1月には新聞記事所在を確認でき、後代整理では報道後に子どもたちの間で反復され話が増補されたとされる。1979年春までには、口の裂けた女性が小中学生を襲う危害型の噂が複数地域へ広がった。VAR-001では接触条件・具体的遭遇列・最終帰結は固定できない。後代代表形では見知らぬマスク姿の女性が通りがかりの子どもへ容姿を問い、返答後に裂けた口を示すが、それ以後の展開は現Evidenceから固定しない。さらにマスク、赤いコート、鎌、高速走行、ポマード、べっこう飴等の属性・能力・回避法が増補される。子ども同士、塾、電話、新聞・雑誌・テレビ等が流通回路として整理されるが媒体別の因果効果は固定しない。1979年6月には全国的風説・登校拒否騒ぎとして報じられる一方、岐阜側では騒ぎが下火とされ、地域ごとの流行位相は一様でない。教師・保護者のパトロールや集団下校は後代整理で、地域別一次記録は固定しない。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "1978年末候補と報道後の子ども間反復として復元",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "1978年末頃の岐阜で噂が始まり、新聞報道後に子ども間で反復されたとの後代整理"
+      },
+      {
+        "blind_reconstruction": "1979年1月の新聞記事所在として復元",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "1979-01-26『岐阜日日新聞』関連記事所在"
+      },
+      {
+        "blind_reconstruction": "春までの複数地域への危害型噂拡大として復元",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "1979年4月、口の裂けた女性が小中学生を襲う噂が各地へ拡大"
+      },
+      {
+        "blind_reconstruction": "後代代表形として問いかけ・裂けた口の提示までを復元し、それ以後は未固定として復元",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "後代代表形の問いかけと裂けた口の提示。口の提示以後は現Evidenceから未固定"
+      },
+      {
+        "blind_reconstruction": "後代増補として復元",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "マスク・赤いコート・鎌・高速走行等の属性・能力増補"
+      },
+      {
+        "blind_reconstruction": "後代回避法として復元",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "ポマード・べっこう飴等の弱点・回避法"
+      },
+      {
+        "blind_reconstruction": "6月の全国的風説として復元",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "1979年6月の全国的小中学生恐怖・風説"
+      },
+      {
+        "blind_reconstruction": "登校拒否騒ぎとして復元",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "同時代見出しの登校拒否騒ぎ"
+      },
+      {
+        "blind_reconstruction": "複数起源説・単一起源未確定として復元",
+        "content_ref": "CNT-012",
+        "difference": "NONE",
+        "salient_meaning": "発信地に美濃加茂・八百津・岐阜市等の複数説"
+      },
+      {
+        "blind_reconstruction": "社会対応と一次記録未固定を復元",
+        "content_ref": "CNT-013",
+        "difference": "NONE",
+        "salient_meaning": "教師・保護者のパトロール・集団下校は後代整理"
+      },
+      {
+        "blind_reconstruction": "複数流通回路と媒体効果未確定として復元",
+        "content_ref": "CNT-014",
+        "difference": "NONE",
+        "salient_meaning": "子ども・塾・電話・新聞・雑誌・テレビ等の複数流通回路"
+      },
+      {
+        "blind_reconstruction": "全国化と並行する岐阜側沈静化として復元",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "1979-06-15時点で岐阜側では騒ぎが下火"
+      },
+      {
+        "blind_reconstruction": "後代整理による先行候補場面として復元",
+        "content_ref": "CNT-018",
+        "difference": "NONE",
+        "salient_meaning": "1978年末頃の八百津町（諸説あり）の庭先目撃噂"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "主要主体は口裂け女。社会対応側に教師・保護者が現れる。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "主要主体は口裂け女。教師・保護者は後続の社会対応に現れる。"
+      },
+      {
+        "blind": "主要な危害対象は小・中学生／子ども。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "主要な危害対象は小・中学生／子ども。"
+      },
+      {
+        "blind": "先行候補は庭先目撃。VAR-001の接触条件は不明。後代代表形は日常空間で遭遇。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "先行候補の庭先目撃、VAR-001の条件未固定、後代遭遇型を分離する。"
+      },
+      {
+        "blind": "作用主体は口裂け女だが起源地点・存在論は固定しない。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "口裂け女を作用主体として保持し、起源や存在論は固定しない。"
+      },
+      {
+        "blind": "先行候補は目撃、VAR-001は子どもへの襲撃命題、後代代表形は問いかけ→裂けた口の提示まで。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "同じ三層の作用差をContentが保持し、口の提示以後を補わない。"
+      },
+      {
+        "blind": "先行目撃→安定危害命題→後代の具体的会話・正体提示型というvariant別の具体化を再構成。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "variant間で具体化が進むが、後代の未確認展開を追加せず初期形にも遡及しない。"
+      },
+      {
+        "blind": "1978年末候補→1979年1月記事→春に複数地域→6月全国化と岐阜沈静化→9月分析記事。",
+        "difference": "NONE",
+        "notes": "summaryは3月京都を個別名では保持しないが、春の複数地域拡大として時間・地理的意味を保存しており、主要再構成を変えない。",
+        "probe_id": "P07",
+        "reference": "同じ時間骨格に、3月京都・4月各地という中間アンカーが含まれる。"
+      },
+      {
+        "blind": "VAR-001の固定規則なし。後代代表形に問いかけ、増補群に回避法。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "同左。回答分岐規則は固定しない。"
+      },
+      {
+        "blind": "VAR-001の回避法は不明。後代にポマード・べっこう飴。社会側にパトロール・集団下校。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "同じ回避／社会対応の層を区別する。"
+      },
+      {
+        "blind": "先行候補とVAR-001の最終帰結は不明。後代代表形も現Evidenceで固定できる終端は裂けた口の提示までで、その後の帰結は不明。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "同左。追跡・危害等の具体的終端を追加しない。"
+      },
+      {
+        "blind": "1978年末・発信地・1月本文・後代要素初出・媒体効果・社会対応一次記録が不確実。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "同じ不確実性に、9月記事本文未精査も保持する。"
+      },
+      {
+        "blind": "先行候補、VAR-001安定核、VAR-002会話・正体提示型、VAR-003属性・能力・回避増補を分離。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "同じvariant境界を保持する。"
+      }
+    ],
+    "reference_story": "現行Contentでは、1978年末頃の八百津町（諸説あり）の庭先目撃噂を後代整理による先行候補として保持し、1979年初頭〜春の安定共有核VAR-001とは分離する。1979年1月26日の新聞記事所在、3月の京都到達見出し、4月の『口の裂けた女性が小中学生を襲う』という各地の噂見出しが初期アンカーである。後代VAR-002では見知らぬマスク姿の女性の問いかけと裂けた口の提示までを代表形として保持し、その後の展開は固定しない。VAR-003では服装・武器・速度・ポマード・べっこう飴等が増補される。複数流通回路、6月の全国化と岐阜側沈静化、社会対応を保持しつつ、起源・媒体効果・個別対応の詳細を未確定とする。後代専門家の不審者情報／不安投影解釈はCNT-019として伝承内容そのものと区別する。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Blind Decodeはcurrent summaryの具体的意味だけから再構成したものとして固定し、その後Evidence→Content completeness、coverage population、P01〜P12、Analysis Invarianceを監査した。docs/legacy配下は参照していない。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_10_contents.json",
+    "commit_sha": "6dbb87cf3c4a86e86ea93c3474b9509f7ea1bd72",
+    "blob_sha": "08f73718b7ba76d8885294abe5456fb1a8a7510f",
+    "reviewed_at": "2026-09-21T04:20:35Z"
+  },
+  "verdict": "Pass"
+}

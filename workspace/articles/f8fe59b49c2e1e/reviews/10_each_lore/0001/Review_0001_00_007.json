@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "同時代資料、所在確認レファレンス、後代専門家整理、書誌確認の役割が区別され、本文未実見資料の利用範囲も限定されている。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "一次・同時代資料そのものと後代整理を混同せず、source_typeとrelation_to_primaryがEvidenceの認識論的位置を保持している。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EVD-010はSRC-005で直接確認できる問いかけと裂けた口の提示までに縮約され、EVD-015も同Sourceの不審者情報／不安投影という専門家解釈に対応する。その他のEvidenceも対応Sourceの支持範囲内にある。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "代表形、流通史、後代増補、社会対応、専門家解釈を別Evidenceとして区別し、Sourceにない追跡・危害をparaphraseへ混入していない。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1978年末の八百津町候補は後代整理として留保し、1979-01-26の新聞記事所在を同時代アンカーとして扱い、起源確定へ昇格していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "発信地複数説、新聞本文未実見、後代要素の初出・地域差、専門家解釈が後代分析であること等の主要留保を保持する。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "SRC-005の『不審者情報／見知らぬ大人に傷つけられるかもしれない不安の投影』はEVD-015としてEvidence化された。対象Entryの再構成・variant境界・後続分析を左右する追加のsalient omissionは確認しない。"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [],
+  "review_notes": "独立再Review。現行Source→Evidenceの支持範囲とsalient information completenessを再監査した。docs/legacy配下は参照していない。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_00_sources.json",
+    "commit_sha": "cffabed12502ce2d2efcc893a503c2426d0447ab",
+    "blob_sha": "17b374004264cb4dbf3c5c3e279d9fa4314d4187",
+    "reviewed_at": "2026-09-21T04:20:35Z"
+  },
+  "verdict": "Pass"
+}

@@ -1,0 +1,111 @@
+{
+  "artifact": "20",
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001とCNT-001〜004をScoped Contentとして維持し、先行候補、VAR-002/003、CNT-019の後代専門家解釈、6月以降の社会反応をScope外として明示している。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D07はCNT-004の『小中学生を襲う』に直接対応するD07.ICT.ABDUCTION_ASSAULTへ再分類され、D17は回避情報不足をUとして保持する。他次元も各定義とScoped Contentに整合する。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "現Scoped Contentの主要構造は既存taxonomyで表現でき、新規Childを要する安定構造は確認しない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "対象=小中学生、作用=襲撃、負の方向、最終帰結不明という因果列を保ち、接触条件・具体的時間列・回避法を推測で補っていない。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "D07はCNT-004/EVD-003へ直接traceし、D17はversion_scopeのCNT-001〜004全体に回避・制御情報がないことをU理由として明示する。Scope外CNT-007へのtraceは除去された。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Scoped Contentだけから独立再構成しても、D07=襲撃危険、D11/D15/D16/D17=Unknown等の主要判定を再現できる。後代専門家解釈を導入しなくても現Analysisが成立する。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D07はScoped Contentの直接命題に基づくD、D17は資料不足に基づくUであり、支持強度とstatusの対応が妥当。他のD/I/UもEvidence ceilingを越えない。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "CNT-004から対象=小中学生、作用=襲う、具体的最終帰結=未確定という列を一貫して保持し、武器・重傷・死亡等を補っていない。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "Scope内はL1のみとし、6月の登校拒否等の後続X EvidenceをL3へ流用していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "SCHOOL_YOUTHは後代整理からIndirect、REGIONALは春の京都・各地拡散から保持し、公開媒体の存在だけで全国的大衆へ昇格していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "資料不足をNO_ONE_KNOWS等の積極的主張へ変換せずUを維持する。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "岐阜・京都等の流通史上の実在地をScoped lore内部の特定地点因果へ昇格せずA1に留める。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "同時代見出しで直接支えられる襲撃危険はDとし、後代整理に依存する媒体・流通等はIまたはUとして上限を守る。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "全国型怪異・儀式／物語・伝説という分類はEntry全体のContentと整合し、個別Dimensionの根拠を代替していない。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "D07の後代『見知らぬ他者への不安』解釈はScope外に留め、D17もScope外CNT-007を参照しない。Scoped Content外の意味をAnalysisへ逆流させる箇所は確認しない。"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [],
+  "review_notes": "Review 20はVersion ScopeのCNT-001〜004だけから独立再構成し、Source/Evidenceは支持強度の確認にのみ使用した。後代専門家解釈CNT-019はScope外のためsense-making modelへ追加していない。docs/legacy配下は参照していない。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "model": "Scoped CNT-001〜004から再構成できる最小モデルは、1978年末頃の岐阜で噂が始まったとの後代整理と、1979年1〜4月の新聞・雑誌アンカーを通じて、『口裂け女』という名前付き女性が小中学生を襲うという危害命題が子ども間で反復され、複数地域・印刷媒体へ広がったというもの。直接支持される意味形成対象は襲撃・暴行リスクであり、対象=子ども、作用=物理的襲撃、負の方向、L1、地域拡散を保持する。接触条件、存在論、最終帰結、回避法、具体的エピソード時間構造はScoped Contentから固定できずUnknownとする。後代の不審者情報／不安投影解釈はScope外である。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "status": "PASS",
+    "notes": "current AnalysisはScoped Contentだけで再構成可能で、Seq 006で検出されたD07/D17のlayer bypassは解消している。"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_20_analysis.json",
+    "commit_sha": "4f9686f89880616a30fd9007c66bff3aca23909b",
+    "blob_sha": "3a64c3bb211607662e2c3dc0375460e95b6dd73a",
+    "reviewed_at": "2026-09-21T04:20:35Z"
+  },
+  "verdict": "Pass"
+}
