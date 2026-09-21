@@ -129,11 +129,11 @@
         "parent_id": "D07.ANO"
       },
       "secondary": [],
-      "rationale": "この伝承がなければ説明されないのは、電話の相手が何者で、どのように現実空間を接近してくるのかという未知の存在・現象である。",
-      "manifestation": "正体不明の電話主が段階的に接近する。",
+      "rationale": "このScopeで説明対象となるのは、メリーさんを名乗る正体不明の電話主が校内地点を告げながら接近し、最後に怪異として顕現する現象である。",
+      "manifestation": "正体不明の電話主が段階的に接近し、怪異として顕現する。",
       "content_refs": [
         "CNT-001",
-        "CNT-002"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002"
@@ -168,11 +168,11 @@
         "parent_id": "D09.AGN"
       },
       "secondary": [],
-      "rationale": "複数の電話と接近は、メリーさんを名乗る存在の意図的行為として物語化される。",
-      "manifestation": "電話主に接近行為の主体性を帰属する。",
+      "rationale": "複数の電話と段階接近は、メリーさんを名乗る存在の一連の行為として物語化される。",
+      "manifestation": "電話主に段階接近の主体性を帰属する。",
       "content_refs": [
         "CNT-001",
-        "CNT-002"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002"
@@ -186,11 +186,11 @@
         "parent_id": "D10.SUP"
       },
       "secondary": [],
-      "rationale": "電話の主は通常の人間ではなく、怪談上の超自然的存在として扱われる。",
-      "manifestation": "メリーさんを名乗る怪異的存在。",
+      "rationale": "Scope終端では電話主が『すいかのオバケ』として顕現し、通常の人間ではない怪異的存在として提示される。",
+      "manifestation": "メリーさんを名乗り、最後に怪異として姿を現す存在。",
       "content_refs": [
         "CNT-001",
-        "CNT-002"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002"
@@ -221,11 +221,11 @@
         "parent_id": "D12.FOC"
       },
       "secondary": [],
-      "rationale": "接近の直接対象は電話を受ける当人である。",
-      "manifestation": "電話を受ける人物が追跡対象となる。",
+      "rationale": "段階接近の直接対象は、電話を受け続ける宿直者である。",
+      "manifestation": "宿直者が電話主の接近対象となる。",
       "content_refs": [
         "CNT-001",
-        "CNT-002"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002"
@@ -239,11 +239,11 @@
         "parent_id": "D13.REL"
       },
       "secondary": [],
-      "rationale": "現在地を告げながら段階的に距離を詰め、最終的に背後へ到達するため追跡・接近が主要作用である。",
-      "manifestation": "遠方から背後まで段階的に追跡する。",
+      "rationale": "電話主は校門の前、花壇、昇降口と現在地を告げながら宿直者との距離を段階的に縮めるため、主要作用は追跡・接近である。最後の電話後には、宿直者が振り返ると怪異が顕現する。",
+      "manifestation": "校内地点を順に移動しながら宿直者へ接近し、終端で怪異として顕現する。",
       "content_refs": [
         "CNT-001",
-        "CNT-002"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002"
@@ -251,13 +251,15 @@
     },
     {
       "dimension_id": "D14",
-      "status": "U",
-      "primary": null,
+      "status": "D",
+      "primary": {
+        "code_id": "D14.NEU"
+      },
       "secondary": [],
-      "rationale": "Scopeの保存内容は背後への到達で終わり、その後の価値的帰結を確定できない。",
-      "manifestation": "最終到達後の帰結評価は不明。",
+      "rationale": "Scopeの最終帰結は、宿直者が振り返った際に怪異が浮かんでいるという観測・顕現であり、身体危害・損失や利益はContent上の必須帰結として示されないため中立と判定する。",
+      "manifestation": "接近の終端で怪異を目撃するが、危害・利益は確定しない。",
       "content_refs": [
-        "CNT-002"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002"
@@ -265,13 +267,16 @@
     },
     {
       "dimension_id": "D15",
-      "status": "U",
-      "primary": null,
+      "status": "I",
+      "primary": {
+        "code_id": "D15.KNW.REVELATION_KNOWLEDGE",
+        "parent_id": "D15.KNW"
+      },
       "secondary": [],
-      "rationale": "Scope内Contentでは背後到達後の身体・心理・社会的結果を確定していない。",
-      "manifestation": "具体的結果は不明。",
+      "rationale": "最後の電話後に振り返ることで、電話主に対応する怪異の存在が視覚的に明らかになるため、終端は新たな情報の獲得として解釈できる。ただしContentは宿直者の内的認識変化を明示しないためInferredとする。",
+      "manifestation": "宿直者が振り返り、接近していた怪異の姿を目撃する。",
       "content_refs": [
-        "CNT-002"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002"
@@ -303,11 +308,11 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "電話を切る等の行動が有効な回避策として明示されておらず、不可避とも断定できない。",
+      "rationale": "Scope内では、電話を切る・逃げる等の行動が有効な回避策として明示されず、不可避とも断定できない。",
       "manifestation": "有効な回避・制御法は不明。",
       "content_refs": [
         "CNT-001",
-        "CNT-002"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002"
@@ -320,11 +325,11 @@
         "code_id": "D18.L1"
       },
       "secondary": [],
-      "rationale": "Scopeで確認できる作用は、電話と接近という伝承内部の因果のみである。",
-      "manifestation": "伝承内でメリーさんが接近するL1作用。",
+      "rationale": "Scopeで確認できる作用は、反復電話による接近と最終顕現という伝承内部の因果である。",
+      "manifestation": "伝承内で電話主が宿直者へ接近し、怪異として顕現するL1作用。",
       "content_refs": [
         "CNT-001",
-        "CNT-002"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002"
@@ -354,11 +359,11 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "真相・追加情報・回避情報を特権的に保持する主体はScopeから確認できないが、不在を積極的に断定するEvidenceもない。",
+      "rationale": "Scope内Contentからは、真相・追加情報・回避情報を特権的に保持する主体を確認できないが、その不在自体を積極的に断定する根拠もない。",
       "manifestation": "特権情報保持者は不明。",
       "content_refs": [
         "CNT-001",
-        "CNT-002"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002"
@@ -382,5 +387,5 @@
       ]
     }
   ],
-  "analysis_notes": "1995年映画で直接確認できる学校内接近型をScopeとし、後代標準型の『捨てた人形』『今、あなたの後ろにいる』を遡及しない。映画全体が学校怪談を題材とすることと、メリーさん型固有の学校口承・流通は区別する。D03/D05は劇場映画／劇映画提示を既存Childへ押し込まずtaxonomy gapとして明示した。反復電話の段階進行はD16へ保持し、D08の共同体反復証言とは分離した。"
+  "analysis_notes": "1995年映画で直接確認できる学校内接近型をScopeとし、後代標準型の『捨てた人形』『今、あなたの後ろにいる』を遡及しない。映画全体が学校怪談を題材とすることと、メリーさん型固有の学校口承・流通は区別する。D03/D05は劇場映画／劇映画提示を既存Childへ押し込まずtaxonomy gapとして明示する。反復電話の段階進行はD16、接近作用はD13、終端の怪異顕現はD14/D15でScope内Contentから再評価し、Scope外CNT-002は全Dimensionの根拠から除外した。"
 }
