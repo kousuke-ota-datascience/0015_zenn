@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1922年1月下旬の日本流行を最古確認層として扱い、手紙自身の米国人将校起源主張を実際の起源と混同していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "1922年流行、転送規則、吉凶条件、由来主張、社会反応をparaphraseとして分離し、新聞原紙未実見の限界を明示している。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-002のみを同時代primaryとし、研究ノートと後代記事はderivativeとして区別している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "Source母集団から、1922年の存在、具体的転送条件、正負帰結、由来主張、社会反応、後代変化というsalient informationがEVD-001〜006へ保持されている。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は研究ノート、SRC-002は1922年同時代資料、SRC-003は後代の新聞紹介として用途とsource_typeを区別している。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-001〜006は各Sourceの役割と参照範囲に対応し、数値条件を後代紹介から直接史実へ昇格していない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "新聞原紙未実見、実際の移入経路、吉凶の実在、後代型との差を留保している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0024",
+  "findings": [],
+  "review_notes": "Review Seq 002。00 canonicalはSeq 001から不変で、current targetを再固定してSource→Evidence監査を再確認した。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0024_kofuku_no_tegami/0024_00_sources.json",
+    "blob_sha": "a34eb5b7878a0c210432f111203733d169f463f4",
+    "commit_sha": "105c9e4ab0ab5550b550095ef06af3ac822f20e2",
+    "reviewed_at": "2026-09-21T06:05:00Z"
+  },
+  "verdict": "Pass"
+}

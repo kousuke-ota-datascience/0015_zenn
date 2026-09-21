@@ -1,0 +1,172 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-001〜007はEVD-001〜006の範囲内で再構成され、吉凶の実在や起源をEvidence以上に強めていない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "summaryから誰が何を受け、いつ何人へ送り、遵守・停止で何が起こるとされるかを具体的に復元できる。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-001〜006を母集団として、発動条件・規則・正負帰結・由来主張・流通反応と後代variant境界に必要なsalient informationがContentへ対応している。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12でLOSS/CONFLICTなし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summaryだけで受信、期限・人数、正負帰結、由来の留保、1922年流行、後代variant境界を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "新聞原紙未実見、吉凶の実在、起源・移入経路、文面差の留保を保持する。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "1922年型を初期Scope、後代再流行・不幸前景型を後代として明確に分離している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0024",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryだけでも後続Analysisに必要な受信、転送規則、正負帰結、期限・遅延、流通・variant境界を保持する。",
+      "status": "PASS"
+    },
+    "blind_decode": "1922年の日本で流行した幸福の手紙は、受信者が同じ文面を24時間以内に9人へ送り、実行すれば9日後に幸運が訪れ、連鎖を止めれば大きな不運が来るとする郵便チェーンレターである。受信が規則参加の開始で、転送により次の受信者へ同じ条件が複製される。文面は米国人将校に始まる等の由来を主張するが史実とは確定しない。1922年1月下旬の流行と社会的不安・警察対応が記録され、後代には再流行や不幸をより前景化する型があるが初期Scopeとは分ける。吉凶の実在や具体的移入経路は未確定である。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "受信すると規則の対象になる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "手紙受信が規則参加の開始条件。"
+      },
+      {
+        "blind_reconstruction": "24時間以内・9人・同文転送を再構成できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "24時間以内に同文を9人へ送る転送規則。"
+      },
+      {
+        "blind_reconstruction": "9日後の幸運を再構成できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "遵守すると9日後に幸運。"
+      },
+      {
+        "blind_reconstruction": "停止時の不運を再構成できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "連鎖停止で大きな不運。"
+      },
+      {
+        "blind_reconstruction": "由来主張と史実留保を再構成できる。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "米国人将校等の由来は文面内主張で史実未確定。"
+      },
+      {
+        "blind_reconstruction": "1922年同時代流行と不安・警察対応を再構成できる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "1922年流行と社会反応。"
+      },
+      {
+        "blind_reconstruction": "後代変化を初期Scope外として再構成できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "後代再流行と不幸前景型への変化。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "現在の受信者・転送者と次の受信者。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "Contentでも同じ主体を保持する。"
+      },
+      {
+        "blind": "現在の受信者の吉凶と、転送により規則へ参加する次の受信者。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "Contentの対象と一致する。"
+      },
+      {
+        "blind": "幸福の手紙を受け取ること。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "CNT-001と一致する。"
+      },
+      {
+        "blind": "手紙が提示する自己複製規則と吉凶の条件付き主張。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "Contentは特定超自然主体を追加しない。"
+      },
+      {
+        "blind": "期限内転送なら幸運、停止なら不運。転送により規則が複製される。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "CNT-002〜004と一致する。"
+      },
+      {
+        "blind": "受信→24時間以内の転送判断→9日後の幸運または停止時の不運。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "状態遷移を再構成できる。"
+      },
+      {
+        "blind": "24時間の期限、9日の遅延、次受信者への連鎖。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "時間構造と一致する。"
+      },
+      {
+        "blind": "同文を9人へ、24時間以内に送り、連鎖を止めない。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "CNT-002〜004と一致する。"
+      },
+      {
+        "blind": "規定どおり転送することが文面上の幸運獲得・不運回避手段。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "Contentと一致する。"
+      },
+      {
+        "blind": "遵守なら幸運、停止なら大きな不運という二分岐。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "CNT-003/004と一致する。"
+      },
+      {
+        "blind": "吉凶の実在、実際の起源・移入経路、文面差は未確定。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "uncertaintiesと一致する。"
+      },
+      {
+        "blind": "1922年初期型、後代再流行、後代の不幸前景型を区別。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001〜003と一致する。"
+      }
+    ],
+    "reference_story": "Content layerは、幸福の手紙の受信、24時間以内に9人へ同文を送る規則、遵守時の9日後の幸運、停止時の大きな不運、文面内の起源物語、1922年の流行・社会反応、後代の再流行と不幸前景型への変化を保持する。1922年型をVAR-001として初期Scopeに置き、後代VAR-002/003を分離し、吉凶の実在・実起源・新聞原紙未実見の不確実性を閉じない。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Review Seq 002。10 canonicalはSeq 001から不変。Blind Decodeとcoverage/probe監査をcurrent targetに対して再確認した。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0024_kofuku_no_tegami/0024_10_contents.json",
+    "blob_sha": "c7197bae229e3e9e425e7087c5477e602fff521c",
+    "commit_sha": "d783b6ac718597ac595b291f1d2fa8f1ae9e9e98",
+    "reviewed_at": "2026-09-21T06:05:00Z"
+  },
+  "verdict": "Pass"
+}
