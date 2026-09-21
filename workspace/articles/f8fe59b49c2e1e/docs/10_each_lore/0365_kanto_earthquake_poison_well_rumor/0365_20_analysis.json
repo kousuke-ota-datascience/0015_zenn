@@ -4,7 +4,7 @@
   "macro_category": "災害・流言",
   "entry_type": "差別的災害流言",
   "version_scope": {
-    "description": "1923年関東大震災直後、放火・暴動・投毒等を朝鮮人へ虚偽に帰属した流言群と、その現実の被害拡大。",
+    "description": "1923年関東大震災直後、放火・暴動・井戸への投毒等を朝鮮人へ虚偽に帰属した流言命題群。",
     "included_variants": [
       "VAR-001"
     ],
@@ -15,7 +15,7 @@
       "CNT-003",
       "CNT-004"
     ],
-    "notes": "噂の内容は虚偽・根拠なしとしてのみ記述する。"
+    "notes": "主分析対象は流言内部の虚偽命題とする。CNT-003の現実の排斥・殺傷はContentとして保持するが、D10〜D17の主因果モデルへ混在させず、D18.L3の社会現実層として分離する。噂の内容は虚偽・根拠なしとしてのみ記述する。"
   },
   "dimensions": [
     {
@@ -67,14 +67,11 @@
     },
     {
       "dimension_id": "D04",
-      "status": "D",
-      "primary": {
-        "code_id": "D04.COL.DERIVATIVE_PROLIFERATION",
-        "parent_id": "D04.COL"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "放火・暴動・投毒など複数の虚偽主張が混乱下で派生・増幅した。",
-      "manifestation": "派生流言の増殖。",
+      "rationale": "放火・暴動・投毒等の複数主張が同一流言群に併存することは確認できるが、一形態から別形態が派生した系譜・再話・派生規則はScoped Contentから確定できない。",
+      "manifestation": "変容・派生関係は未確定。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
@@ -186,87 +183,65 @@
       "dimension_id": "D10",
       "status": "D",
       "primary": {
-        "code_id": "D10.OBJ.INFORMATION_CONTENT",
-        "parent_id": "D10.OBJ"
+        "code_id": "D10.HUM.INFORMAL_GROUP",
+        "parent_id": "D10.HUM"
       },
       "secondary": [],
-      "rationale": "実際の因果モデルでは、加害主体とされた集団そのものではなく、放火・暴動・投毒等を虚偽に帰属する流言情報が行動を誘発する因果源となる。",
-      "manifestation": "差別的虚偽流言という情報内容。",
+      "rationale": "流言内部では、朝鮮人という民族的属性で括られた人間集団が放火・暴動・井戸への投毒等を意図的に行う加害主体として虚偽に置かれる。",
+      "manifestation": "特定民族集団を人間の加害主体として置く虚偽の因果帰属。",
       "content_refs": [
         "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-002"
       ],
       "evidence_refs": [
-        "EVD-001",
-        "EVD-002",
         "EVD-003",
-        "EVD-004"
+        "EVD-005"
       ]
     },
     {
       "dimension_id": "D11",
-      "status": "D",
-      "primary": {
-        "code_id": "D11.INF.RECEIVE_MESSAGE",
-        "parent_id": "D11.INF"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "流言情報を受け取り受容することが、警戒・排斥・暴力行動へつながる前段条件として機能する。",
-      "manifestation": "流言情報の受信・受容。",
+      "rationale": "流言命題は加害行為が起きていると主張するが、その因果系へ入る独立した発動・接触条件をScoped Contentは示さない。受容者が流言を受け取ることはL3社会効果側の条件であり、L1の発動条件へ混在させない。",
+      "manifestation": "伝承内の発動条件は未確定。",
       "content_refs": [
         "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
-      ],
-      "evidence_refs": [
-        "EVD-001",
-        "EVD-004"
+        "CNT-002"
       ]
     },
     {
       "dimension_id": "D12",
       "status": "D",
       "primary": {
-        "code_id": "D12.GRP.DEMOGRAPHIC_GROUP",
-        "parent_id": "D12.GRP"
+        "code_id": "D12.OTD.DEVICE_INFRA",
+        "parent_id": "D12.OTD"
       },
       "secondary": [],
-      "rationale": "現実の被害対象は、流言によって虚偽に加害者とされた朝鮮人という民族的属性集団である。",
-      "manifestation": "民族的属性集団。",
+      "rationale": "流言内部で最も識別的かつ直接に作用対象が明示される井戸を主対象とする。放火・暴動の対象はScoped Contentでは同じ粒度に固定されないためSecondaryへ補わない。",
+      "manifestation": "井戸という生活インフラ。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-002",
-        "EVD-003"
+        "EVD-005"
       ]
     },
     {
       "dimension_id": "D13",
       "status": "D",
       "primary": {
-        "code_id": "D13.COG.INFORMATION_INDUCED_ACTION",
-        "parent_id": "D13.COG"
+        "code_id": "D13.PHY.ENV_OBJECT_MANIPULATION",
+        "parent_id": "D13.PHY"
       },
       "secondary": [],
-      "rationale": "虚偽流言が受容者の判断・信念を変え、警戒・排斥・殺傷などの通常行動を誘発したことが公的資料で確認される。",
-      "manifestation": "流言による行動誘発。",
+      "rationale": "流言内部の識別的中核では、加害主体とされた集団が井戸へ毒を投入し、環境・設備へ物理的に作用すると主張される。放火・暴動の詳細機構は追加推定せず、同一Primaryへ過剰統合しない。",
+      "manifestation": "井戸へ毒物を投入するという虚偽の環境・物体操作。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-001"
       ],
       "evidence_refs": [
-        "EVD-002",
-        "EVD-003",
-        "EVD-004"
+        "EVD-005"
       ]
     },
     {
@@ -276,59 +251,42 @@
         "code_id": "D14.NEG"
       },
       "secondary": [],
-      "rationale": "主張される内容も、現実の社会効果も重大な危害を伴う。",
+      "rationale": "主分析対象である流言内部の放火・暴動・投毒という加害行為は、主張内容上明確に負の帰結を志向する。",
       "manifestation": "負。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-001"
       ]
     },
     {
       "dimension_id": "D15",
-      "status": "D",
-      "primary": {
-        "code_id": "D15.COL.COLLECTIVE_VIOLENCE",
-        "parent_id": "D15.COL"
-      },
-      "secondary": [
-        {
-          "code_id": "D15.BOD.DEATH",
-          "parent_id": "D15.BOD"
-        }
-      ],
-      "rationale": "流言の現実の主要帰結は朝鮮人への集団的な排斥・暴力であり、殺傷事件による死亡も直接確認される。",
-      "manifestation": "集団暴力・差別、および死亡。",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "Scoped Contentは放火・暴動・井戸投毒という加害行為自体を記録するが、流言内部でそれらの後に生じる終端結果の領域を一つに固定していない。現実の排斥・殺傷はL3社会効果であり、L1のD15へ代入しない。",
+      "manifestation": "伝承内の終端帰結領域は未確定。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
-        "CNT-003",
-        "CNT-004"
-      ],
-      "evidence_refs": [
-        "EVD-002",
-        "EVD-003"
+        "CNT-003"
       ]
     },
     {
       "dimension_id": "D16",
       "status": "D",
       "primary": {
-        "code_id": "D16.TRN.CHAIN_SPREAD",
-        "parent_id": "D16.TRN"
+        "code_id": "D16.STA.STATIC_ASSOCIATION",
+        "parent_id": "D16.STA"
       },
       "secondary": [],
-      "rationale": "災害直後の短期間に流言が反復・増幅して拡散した。",
-      "manifestation": "連鎖拡散。",
+      "rationale": "流言命題は、特定集団と放火・暴動・投毒等の加害行為を結び付ける静的な対応・因果帰属として提示され、発動から帰結までの段階進行や対象間伝播を命題内部で要求しない。",
+      "manifestation": "特定集団と加害行為を結び付ける静的対応。",
       "content_refs": [
         "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-002"
       ],
       "evidence_refs": [
-        "EVD-004"
+        "EVD-003",
+        "EVD-005"
       ]
     },
     {
@@ -336,34 +294,36 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "Scope内の流言そのものに受容者向けの確立した回避・解除法はない。",
-      "manifestation": "制御法不明。",
+      "rationale": "主分析対象の流言命題内部に、主張された加害行為を回避・解除・制御する確立した方法は示されない。情報がないことから不可避性は推定しない。",
+      "manifestation": "伝承内の制御法は未確定。",
       "content_refs": [
         "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-002"
       ]
     },
     {
       "dimension_id": "D18",
       "status": "D",
       "primary": {
-        "code_id": "D18.L3"
+        "code_id": "D18.L1"
       },
-      "secondary": [],
-      "rationale": "公的資料は流言拡大が現実の朝鮮人殺傷事件等へつながったと記録する。",
-      "manifestation": "社会現実層の重大な被害。",
+      "secondary": [
+        {
+          "code_id": "D18.L3"
+        }
+      ],
+      "rationale": "放火・暴動・井戸投毒を特定集団へ虚偽に帰属する因果命題は伝承内因果層L1に属する。これとは独立に、CNT-003および公的資料は流言の拡大が現実の朝鮮人への排斥・殺傷へ波及した社会現実層L3を支持する。",
+      "manifestation": "虚偽流言の内部因果（L1）と、流言受容が現実に生んだ差別・殺傷（L3）を分離して保持。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-002",
         "EVD-003",
-        "EVD-004"
+        "EVD-004",
+        "EVD-005"
       ]
     },
     {
@@ -428,5 +388,5 @@
       ]
     }
   ],
-  "analysis_notes": "中心因果鎖は、虚偽流言という情報内容→受容→情報誘導による行動→朝鮮人という属性集団への集団暴力・死亡として記述する。虚偽主張内部の『朝鮮人が投毒・放火した』という架空因果を実因果源へ置かない。D18 L3のみ、流言が現実の殺傷へ波及したX evidenceを用いる。"
+  "analysis_notes": "主分析単位は、震災直後の不確かな災害現象を、朝鮮人という外集団が放火・暴動・井戸投毒等を意図的に行っているという虚偽の主体・悪意帰属で説明する流言命題群とする。D10〜D17はこの伝承内部のL1意味形成・因果構造をコードし、流言情報→受容→現実の排斥・殺傷という社会効果はD18.L3へ分離する。D04は派生系譜を推定せずU、D16は流通史ではなく命題内部の静的対応として裁定する。"
 }
