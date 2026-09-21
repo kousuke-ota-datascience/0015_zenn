@@ -1,0 +1,184 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "EVD-002の1995年映画固有終端はCNT-003、EVD-001の映画全体の学校怪談題材説明と留保はCNT-006、EVD-003の1999年『人形のおばけ“メリーさん”』はCNT-007、後代標準型はCNT-002/CNT-004へ分離して追跡できる。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryだけから、反復電話・段階接近、1995年型のすいかのオバケ終端、1999年の人形おばけ層、後代の捨て人形＋背後到達型を区別して再構成できる。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "Scope/variant識別に必要なEvidence母集団を監査し、映画全体の学校怪談題材説明とその限界、1999年人形層、1995年映画固有終端が独立Content/uncertaintyとして保持されている。salient omissionは確認しない。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12で主体・対象・発端・作用・反復順序・終端・不確実性・variant境界を確認し、summaryとContent間にLOSS/CONFLICTなし。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryは現行Content母集団の具体的終端とvariant境界を抽象化し過ぎず保持している。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "映画全体の題材説明をメリーさん型固有の学校口承へ強めず、1999年確認範囲と後代標準型の境界も留保している。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "1995年映画型、1999年に確認される人形おばけ層、後代の捨て人形標準型、メール等媒体派生を混同していない。"
+    }
+  },
+  "entry_id": "0006",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Summaryと完全性監査済みContentの双方から、1995年Scope、D03/D05の映画提示taxonomy gap、D06/D19の不確定性、D08の直接出来事、D16の段階進行を同じ方向で再構成できる。"
+    },
+    "blind_decode": "メリーさんを名乗る相手から電話が繰り返しかかり、現在地を告げながら受け手へ近づく。1995年映画型では校門・花壇・昇降口と接近し、最後の電話後に振り返ると『すいかのオバケ』が浮かぶ。映画全体は学校怪談を題材とするが、この説明だけでメリーさん型固有の事前口承は確定しない。1999年には『人形のおばけ“メリーさん”』の児童書層が確認でき、後代標準型では捨てた西洋人形が元の持ち主へ近づき最後に背後到達を告げる。",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "反復電話と現在地告知による接近という共通核。",
+        "blind_reconstruction": "反復電話と現在地告知による段階接近。",
+        "difference": "NONE",
+        "notes": "共通核を保持。"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "後代標準型の背後到達終端。",
+        "blind_reconstruction": "後代標準型では最後に背後到達を告げる。",
+        "difference": "NONE",
+        "notes": "1995年型と分離。"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "1995年映画型の校門・花壇・昇降口の接近とすいかのオバケ終端。",
+        "blind_reconstruction": "1995年映画の学校内接近と固有終端。",
+        "difference": "NONE",
+        "notes": "variant識別detailを保持。"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "後代標準型の捨て人形導入と元持ち主への接近。",
+        "blind_reconstruction": "捨てた西洋人形が元の持ち主へ接近する。",
+        "difference": "NONE",
+        "notes": "1999年層へ遡及していない。"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "映画全体の学校怪談題材説明と、メリーさん型固有口承へは直接適用できない留保。",
+        "blind_reconstruction": "映画全体の学校怪談題材説明とその適用限界。",
+        "difference": "NONE",
+        "notes": "留保を保持。"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "1999年児童書で『人形のおばけ“メリーさん”』を確認。",
+        "blind_reconstruction": "1999年の人形おばけメリーさん層。",
+        "difference": "NONE",
+        "notes": "後代標準型と分離。"
+      }
+    ],
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "メリーさんを名乗る電話主／人形、電話を受ける人物。",
+        "reference": "同じ。1995年型では宿直者。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "電話を受ける人物が接近対象。",
+        "reference": "同じ。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "メリーさんを名乗る相手から電話がかかる。",
+        "reference": "同じ。後代標準型では人形を捨てたことが導入。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "メリーさんを名乗る存在が接近主体。",
+        "reference": "同じ。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "現在地を告げる電話を反復しながら距離を詰める。",
+        "reference": "同じ。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "電話の現在地が段階的に受け手へ接近する。",
+        "reference": "同じ。1995年型と後代標準型で終端は異なる。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "複数回の電話で順次進行する。",
+        "reference": "同じ。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "明示的な規則・禁忌は固定されていない。",
+        "reference": "同じ。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "有効な回避・制御法は固定されていない。",
+        "reference": "同じ。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "1995年型は振り返るとすいかのオバケ、後代標準型は背後到達告知。",
+        "reference": "同じ。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "絶対起源、メリーさん型固有の事前学校口承、1999年層の詳細設定、標準化時期は未確定。",
+        "reference": "同じ。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "1995年映画型、1999年人形層、後代捨て人形標準型、媒体派生を区別。",
+        "reference": "同じ。",
+        "difference": "NONE",
+        "notes": "salient meaningを保持。"
+      }
+    ],
+    "reference_story": "Content層では、反復する現在地電話という共通核に対し、1995年映画の学校内接近＋すいかのオバケ終端、1999年の人形のおばけメリーさん層、後代の捨て人形＋背後到達型、メール等の媒体派生を区別する。映画全体が学校怪談を題材とする事実は留保付きで保持し、メリーさん型固有の1995年以前の学校口承を確定しない。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Blind Decodeをsummaryのみから固定した後、Evidence→Content母集団、coverage_refs全件、P01〜P12、Analysis Invarianceを再監査。docs/legacyは判定根拠に使用していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_10_contents.json",
+    "blob_sha": "d406fc509f16ddf4a0a99157dac7599544ae1014",
+    "commit_sha": "42e659ad3627c9125d2cc5600c353a3638994576",
+    "reviewed_at": "2026-09-21T03:13:00Z"
+  },
+  "verdict": "Pass"
+}
