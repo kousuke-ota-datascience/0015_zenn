@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0365",
+  "artifact": "10",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "docs/10_each_lore/0365_kanto_earthquake_poison_well_rumor/0365_10_contents.json",
+    "commit_sha": "85626867c4eed46c175099b27bb13cfd773fff0f",
+    "blob_sha": "2e3e19d1201d2e9bbee4316d9e3c923890ee88d0",
+    "reviewed_at": "2026-09-21T01:47:37Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "FINDING",
+      "notes": "CNT-002〜004は現在Evidenceで十分支持される。CNT-001のうち『朝鮮人が井戸に毒を入れている』という具体的帰属だけは、EVD-001の一般的投毒流言とEVD-003の朝鮮人への放火・武装蜂起帰属を組み合わせても直接支持にならない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summary.narrative + summary.structureだけで、流言内容、発生条件、加害帰属、実害、軍・警察の一部の関与、主要不確実性を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12でLOSS/CONFLICTなし。SummaryはContentの主要構造を保持している。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "放火・暴動・投毒等を一つの震災直後の差別的流言クラスとして扱う境界はContent内で一貫している。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "一点起源・具体的伝播経路を確定せず、unknown/uncertaintyとして保持している。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "Blind DecodeとContent参照後のReference Storyで、中心因果・actor・outcomeに実質差はない。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "現在のEVD-001〜004に含まれるsalient meaningはCNT-001〜004へ概ね人口している。00で指摘したSource→Evidenceの欠落は、このEvidence→Content completeness判定へ逆流させない。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1923年の関東大震災直後、通信・報道の途絶と異常現象への不確かな意味づけを契機に、朝鮮人が放火・暴動・投毒を行うという虚偽流言が拡散し、集団への疑念・敵視から現実の殺傷・抑圧へ移行した。初期には軍隊・警察の一部も流言に巻き込まれ増幅側となった。個々の発話起点・地域別伝播経路は未確定である。",
+    "reference_story": "1923年関東大震災直後、通信・報道の機能停止と爆発・飛び火・水の濁り等をめぐる断片情報の解釈から、朝鮮人が放火・暴動を起こし井戸へ毒を入れる等の根拠のない流言が広がった。流言は朝鮮人への警戒・排斥・殺傷に波及し、自警団に加えて軍隊・警察の一部も初期には流言に巻き込まれた。公的災害教訓資料はこれを事実情報ではなく流言として検証・記録する。個々の最初の発話者と地域別伝播経路は確定しない。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "流言の伝達者・受容者、虚偽に加害者とされた朝鮮人、自警団、軍隊・警察の一部。",
+        "reference": "同左",
+        "difference": "NONE",
+        "notes": "主要actorは保持。"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "朝鮮人の人々と被災地域の社会秩序が被害対象。",
+        "reference": "同左",
+        "difference": "NONE",
+        "notes": "affected targetsは保持。"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "震災直後の通信・報道途絶と爆発・飛び火・水の濁り等への不確かな解釈。",
+        "reference": "同左",
+        "difference": "NONE",
+        "notes": "entry triggerは保持。"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "根拠のない放火・暴動・投毒流言が因果源。",
+        "reference": "同左",
+        "difference": "NONE",
+        "notes": "causal agentは保持。"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "断片情報を特定集団の悪意へ結び付け、反復する流言が警戒・排斥・暴力を正当化する。",
+        "reference": "同左",
+        "difference": "NONE",
+        "notes": "mechanismは保持。"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "災害混乱→虚偽流言→疑念・敵視→現実の殺傷・抑圧。",
+        "reference": "同左",
+        "difference": "NONE",
+        "notes": "state transitionは保持。"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "震災直後の数日間に急速に拡散・増幅。",
+        "reference": "同左",
+        "difference": "NONE",
+        "notes": "temporal structureは保持。"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "確立した禁忌・儀式規則はない。",
+        "reference": "rules_and_taboosはnot_applicable。",
+        "difference": "NONE",
+        "notes": "規則不在を保持。"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "流言への確立した回避・制御手段はSummaryからは特定できない。",
+        "reference": "avoidance_controlはunknown。",
+        "difference": "NONE",
+        "notes": "unknownを過剰補完していない。"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "現実の差別・殺傷被害が発生し、後世に災害教訓として検証される。",
+        "reference": "同左",
+        "difference": "NONE",
+        "notes": "terminal stateは保持。"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "最初の発話者と地域ごとの具体的伝播経路は不確定。",
+        "reference": "同左",
+        "difference": "NONE",
+        "notes": "uncertaintyは保持。"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "放火・暴動・投毒等を朝鮮人へ帰属した震災直後の虚偽流言群を一つの流言クラスとして扱う。",
+        "reference": "同左",
+        "difference": "NONE",
+        "notes": "variant boundaryは保持。"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Summaryから復元した中心因果はD07〜D15/D18等の主要分析に必要な意味を保持する。CNT-001の井戸投毒帰属にはEvidence支持欠損があるが、Summaryの意味保存自体の欠損ではない。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "震災直後、朝鮮人が放火・暴動・井戸投毒を行うという根拠のない流言が広まった。",
+        "blind_reconstruction": "放火・暴動・投毒を朝鮮人へ帰属する虚偽流言が拡散したと再構成できる。",
+        "difference": "NONE",
+        "notes": "意味保存はできているが、Evidence支持は別Finding。"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "通信・報道途絶、爆発・飛び火・水の濁り、断片情報と予備知識が流言形成条件。",
+        "blind_reconstruction": "情報途絶と異常現象への不確かな意味づけがtriggerとして再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "流言が朝鮮人への警戒・排斥・殺傷へ波及し、軍隊・警察の一部も巻き込まれた。",
+        "blind_reconstruction": "疑念・敵視から殺傷・抑圧へ移行し、軍・警察の一部も増幅側になったと再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "公的災害教訓資料はこれらを事実ではなく流言として検証・記録する。",
+        "blind_reconstruction": "後世に災害教訓として検証されることまでSummaryから再構成できる。",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "evidence_content_support",
+      "summary": "CNT-001の『朝鮮人が井戸へ毒を入れた』という具体的主張が、現在のEvidence refsで直接支持されない。",
+      "rationale": "EVD-001は井戸水等の異常を投毒とみなす一般的な流言を示すが主体を朝鮮人に限定しない。EVD-003は朝鮮人に武装蜂起・放火を帰属する流言を示すが井戸投毒を含まない。両者を合成しても『朝鮮人による井戸投毒流言』という一つの具体的命題を直接裏づけたことにはならない。",
+      "impact": "エントリ名・variant・CNT-001の識別的中核がEvidence層から直接追跡できず、Contentの一部がEvidenceより強い命題になっている。",
+      "fix_direction": "00で該当する直接Evidenceを追加し、CNT-001のevidence_refsへそのEvidenceを付与する。直接Evidenceを追加しない場合は、CNT-001を現在Evidenceが支持する粒度まで狭める。",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ],
+      "content_refs": [
+        "CNT-001"
+      ],
+      "variant_refs": [
+        "VAR-001"
+      ],
+      "notes": "Summary/Contentの意味保存粒度自体は十分であり、Golden Referenceの長さ・Unit数を機械的に模倣する必要はない。"
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Blind Decode→Reference Story比較では意味欠落なし。FindingはEvidence→Contentの直接支持鎖に限定される。"
+}
