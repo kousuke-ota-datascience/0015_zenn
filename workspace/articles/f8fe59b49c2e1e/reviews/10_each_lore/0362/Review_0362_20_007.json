@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0362",
+  "artifact": "20",
+  "review_seq": 7,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_20_analysis.json",
+    "commit_sha": "08042965244184af027551000202c1f1fb308efe",
+    "blob_sha": "949a23d6de1be10f751251ee73cf1132716b4a96",
+    "reviewed_at": "2026-09-21T04:23:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "1973年の流言→預金引き出し集中・取付け→発端解明・沈静化と社会的不安定背景を事件核とし、具体的流言文言を固定しないScopeはScoped Contentと整合する。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D01〜D21はcurrent Scoped Contentとcodebookの中心質問に接続する。D19は社会的・地理的流通範囲を資料不足としてUにし、事件所在地からREGIONALを導かない。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "D19を含め必要な流通範囲コードは既存taxonomyに存在する。問題はtaxonomy欠落ではなく、現在のEvidence/Contentでどの範囲まで固定できるかという適用・確信度の問題。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "D12=`READER_LISTENER`→D13=`INFORMATION_INDUCED_ACTION`→D15=`MARKET_SOCIAL_BEHAVIOR`は、流言を受けた預金者の判断変化から引き出し集中・取付けへ至る主因果列と整合する。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "各主要Dimensionの根拠はScoped Contentへ追跡可能で、D19も『範囲を特定できない』という保守的裁定としてContentの証拠限界と整合する。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryとScoped Contentの主要分析可能性は一致し、D19についても『流言が広まった』ことと地理的流通範囲が別問題であることを再評価できる。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D/I/Uの使い分けはcoding rulesと整合する。D19はDirect/Inferenceに必要な流通範囲情報を欠くためUとされ、primary/secondaryも空である。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "修正版ではD12の直接作用対象を流言受容者、D13を情報誘発、D15を取付けという市場・社会行動変化として接続しており、中心因果鎖は整合する。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "Scoped Contentに現実の預金引き出し・取付けがあり、EVD-001/002という独立した公的記録が社会現実層の成立を支える。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "D19は事件所在地・媒体公開性・全国流通のいずれからも流通範囲を過推定せず、current Contentで社会範囲を固定できないためUとしている。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "D20はNO_ONE_KNOWSを用いず、警察による原因調査・真相明示というContentから制度的情報保持主体をIとして保守的に推定している。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "実在する豊川信用金庫と1973年の取付け事件がScoped Contentの因果モデルそのものを構成し、単に資料が実在することからA4を付与してはいない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "主要Dimensionの確信度はContent/Evidenceの支持強度内に収まり、D19も不明な流通範囲をUとして証拠上限を越えない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "macro_category『社会流言・パニック』、entry_type『金融流言事件』は、流言が現実の預金引き出し・取付けへ波及したScoped Contentと整合する。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "現行Analysisの意味論的根拠はScoped Contentで表現されており、Source/Evidenceにしかない具体的流言文言等をAnalysisへ直接持ち込んでいない。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Scoped Contentから再構成できる主モデルは、石油危機下の社会・人心の不安定な背景の中で豊川信用金庫をめぐる流言が受容され、預金者の引き出し行動へ波及し、多数の引き出しが取付け騒ぎという市場・社会行動へ集積し、警察・関係機関の発端調査と真相明示で拡大とパニック化が抑制される流言イベントである。D12→D13→D15、D16、D17、D18はこのモデルへ整合し、D19は事件所在地と社会的流通範囲を分離して資料不足のUとする。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "status": "PASS",
+    "notes": "中心因果モデルとD01〜D21の裁定に、Scoped Contentを越える残存Findingを認めない。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "独立再Review Seq 007。current Scoped Contentとcurrent codebook/coding rulesからD01〜D21を再照合した。D19は事件所在地と流通範囲を区別してUへ保守化されており、過去ReviewのVerdictは判定根拠に用いていない。"
+}
