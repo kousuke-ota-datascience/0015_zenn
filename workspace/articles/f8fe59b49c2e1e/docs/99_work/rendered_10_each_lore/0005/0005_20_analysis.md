@@ -29,29 +29,29 @@
 
 Taxonomy gap: false
 
-### D02 — I
+### D02 — U
 
-- Primary: D02.ORL.SCHOOL_ORAL (parent: D02.ORL)
+- Primary: -
 - Secondary: -
 - Content refs: CNT-008
 - Evidence refs: EVD-007
 
-**Rationale:** 1999年採録の一例が、小学校時にこの話を聞いたと明示するため、確認できる早期流通媒体として学校内口承を推定できる。ただし今回の最古公刊採録1998年について元の伝達媒体は確定しない。
+**Rationale:** 1999年採録の一例は男子生徒が小学校時にこの話を聞いたことを示すが、聞いた場所・相手・集団は示さない。また、今回確認できる最古の公刊採録である1998年資料も、元の伝達媒体を特定しない。したがって、最古確認流通媒体を学校内口承その他の具体的媒体へ確定できない。
 
-**Manifestation:** 若者・学校文化内で口頭で聞いた俗信として記録される。
+**Manifestation:** 聴取時期と話者属性は確認できるが、初期の流通媒体は特定できない。
 
 Taxonomy gap: false
 
-### D03 — I
+### D03 — U
 
-- Primary: D03.ORL.SCHOOL_ORAL (parent: D03.ORL)
+- Primary: -
 - Secondary: -
 - Content refs: CNT-008
 - Evidence refs: EVD-007, EVD-008
 
-**Rationale:** Scope内の採録には、小学校時に聞いたとの記述と中学生からの採録があり、学校・若者集団での口承流通が示唆される。ただし聞いた場所・相手まで直接確定できないためInferenceとする。
+**Rationale:** Scope内資料には「小学校時に聞いた」例と中学三年男子からの採録があるが、これは話者・採録対象の属性と聴取時期を示すにとどまり、学校内・同輩間などの流通場所や共同体を直接示さない。現行Evidenceから現在／後続の主要流通媒体を具体的Childへ確定できない。
 
-**Manifestation:** 学校年齢の若者が「紫の鏡」の規則を聞き、記憶するという採録から学校内口承を推定する。
+**Manifestation:** 若年層からの採録は確認できるが、流通媒体・共同体は不明。
 
 Taxonomy gap: false
 
@@ -68,7 +68,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D05 — D
+### D05 — I
 
 - Primary: D05.RUL.JINX_RULE (parent: D05.RUL)
 - Secondary: D05.PRP.PREDICTIVE_CLAIM (parent: D05.PRP)
@@ -81,7 +81,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D06 — D
+### D06 — I
 
 - Primary: D06.T5
 - Secondary: -
@@ -94,7 +94,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D07 — D
+### D07 — I
 
 - Primary: D07.DCF.FATE_OMEN (parent: D07.DCF)
 - Secondary: -
@@ -107,7 +107,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D08 — D
+### D08 — I
 
 - Primary: D08.CLM.UNSUPPORTED_ASSERTION (parent: D08.CLM)
 - Secondary: -
@@ -120,7 +120,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D09 — D
+### D09 — I
 
 - Primary: D09.PPR.CORRELATION_RULE (parent: D09.PPR)
 - Secondary: D09.NOR.TABOOIZATION (parent: D09.NOR)
@@ -133,7 +133,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D10 — D
+### D10 — I
 
 - Primary: D10.OBJ.SYMBOL_NAME_IMAGE (parent: D10.OBJ)
 - Secondary: -
@@ -146,7 +146,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D11 — D
+### D11 — I
 
 - Primary: D11.INF.SAY_NAME_REMEMBER (parent: D11.INF)
 - Secondary: D11.CON.AGE_LIFESTAGE (parent: D11.CON)
@@ -159,7 +159,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D12 — D
+### D12 — I
 
 - Primary: D12.AUD.READER_LISTENER (parent: D12.AUD)
 - Secondary: -
@@ -172,7 +172,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D13 — D
+### D13 — I
 
 - Primary: D13.COG.COGNITION_TRIGGERED_HARM (parent: D13.COG)
 - Secondary: D13.FAT.CURSE_MISFORTUNE (parent: D13.FAT)
@@ -185,7 +185,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D14 — D
+### D14 — I
 
 - Primary: D14.NEG
 - Secondary: -
@@ -198,7 +198,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D15 — D
+### D15 — I
 
 - Primary: D15.BOD.DEATH (parent: D15.BOD)
 - Secondary: D15.OPP.LUCK_MISFORTUNE (parent: D15.OPP)
@@ -211,7 +211,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D16 — D
+### D16 — I
 
 - Primary: D16.DLY.DEADLINE (parent: D16.DLY)
 - Secondary: -
@@ -224,7 +224,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D17 — D
+### D17 — I
 
 - Primary: D17.RUL.OBEY_TABOO (parent: D17.RUL)
 - Secondary: -
@@ -237,7 +237,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D18 — D
+### D18 — I
 
 - Primary: D18.L2
 - Secondary: -
@@ -263,7 +263,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D20 — D
+### D20 — I
 
 - Primary: D20.HAZ.DANGEROUS_TO_KNOW (parent: D20.HAZ)
 - Secondary: -
@@ -276,7 +276,7 @@ Taxonomy gap: false
 
 Taxonomy gap: false
 
-### D21 — D
+### D21 — I
 
 - Primary: D21.A0
 - Secondary: -
