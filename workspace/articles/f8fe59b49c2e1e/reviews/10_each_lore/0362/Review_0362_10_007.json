@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0362",
+  "artifact": "10",
+  "review_seq": 7,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_10_contents.json",
+    "commit_sha": "604be3a3b0e58de199d887a9dc09e994dcaef27f",
+    "blob_sha": "cbd7ac01d00d6bfd893c026fdb9e97768b6a280b",
+    "reviewed_at": "2026-09-21T04:23:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜005はEVD-001/002/005の支持範囲内で事件核・金融不安・取付け・沈静化・背景条件をContent化し、具体的流言文言は断定していない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryだけから背景条件→流言受容→預金引き出し集中・取付け→発端解明・沈静化、および具体的文言等の不確実性を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12の全項目でReference StoryとのLOSS/CONFLICTを認めない。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001は1973年事件核と警察白書が示す背景条件に限定され、後年の詳細伝播鎖を初期Scopeへ混入していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "具体的流言文言、危険・損失表現、伝播経路細部、受容者ごとの動機の不確実性が保持される。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs CNT-001〜005のsalient meaningはBlind Decodeからすべて復元可能。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "EVD-001〜005のVersion Scope内salient informationはCNT-001〜005、VAR-001、uncertaintiesのいずれかに保存される。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1973年、愛知県の豊川信用金庫をめぐる流言が、石油危機下で社会や人心が不安定な状況の中で広まり、預金者の金融判断に作用して引き出しが集中し、取付け騒ぎへ発展する。警察・関係機関は発端を調べて真相を明らかにし、流言の伝播拡大とパニック化を抑制する。具体的な流言文言、危険・損失の表現、個々の伝播経路、受容者ごとの動機は固定できない。",
+    "reference_story": "current Contentは、1973年の豊川信用金庫をめぐる流言イベントを、石油危機下の社会・人心の不安定な背景、流言受容、預金引き出しの集中と取付け騒ぎ、警察による発端調査・真相解明・沈静化までの事件核として構成する。具体的な流言文言や詳細伝播鎖は確認範囲外として固定しない。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "流言の受け手・伝達者、豊川信用金庫、預金者、警察・関係機関。",
+        "reference": "流言の受け手・伝達者、豊川信用金庫、預金者、警察・関係機関。",
+        "difference": "NONE",
+        "notes": "主体と役割はsummaryで再構成可能。"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "流言を受けた預金者の金融判断と、多数の引き出しの影響を受ける豊川信用金庫。",
+        "reference": "預金者の金融判断が直接の受容・作用対象で、豊川信用金庫は取付けによる影響対象。",
+        "difference": "NONE",
+        "notes": "直接対象と下流影響対象の区別を保持。"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "豊川信用金庫をめぐる流言を受け取ること。",
+        "reference": "豊川信用金庫をめぐる流言の受容。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "豊川信用金庫をめぐる流言。",
+        "reference": "豊川信用金庫をめぐる流言。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "流言受容が預金引き出しへ波及し、多数の引き出しが取付け騒ぎへ集積する。",
+        "reference": "流言が預金引き出し行動へ波及し、取付け騒ぎという社会的影響を生じさせる。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "平常の預金行動から引き出し集中・取付けへ移行し、真相解明後に沈静化する。",
+        "reference": "流言拡大から引き出し集中・取付けへ進み、警察の真相解明後に沈静化する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "流言の拡大→預金引き出し集中・取付け→発端解明・沈静化。",
+        "reference": "同一事件内で流言、取付け、発端解明、沈静化が段階進行する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "固有の規則・禁忌はない。",
+        "reference": "固有の規則・禁忌は設定されていない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "発端調査と真相の明示による流言訂正。",
+        "reference": "警察・関係機関の調査、発端解明、真相明示による拡大抑制。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "流言の伝播拡大とパニック化が抑制される。",
+        "reference": "真相解明により流言の拡大とパニック化が抑制される。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "具体的流言文言、個々の伝播経路、受容者ごとの動機は不確実。",
+        "reference": "具体的流言文言・危険や損失の表現、詳細な伝播鎖、個別動機は固定しない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "警察白書で確認できる社会的不安定背景、流言、取付け、沈静化の事件核を対象とし、後年の詳細伝播鎖は含めない。",
+        "reference": "VAR-001として1973年事件核と社会的不安定背景を固定し、本文未確認の詳細伝播鎖はScope外。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryとContentの双方から、流言受容者→情報誘発行動→市場・社会行動変化、段階進行、検証・訂正、現実社会上の成立を再構成でき、流通範囲そのものは未確定として再評価可能。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "1973年、豊川信用金庫をめぐる流言が広まり、預金引き出しが集中する取付け騒ぎが発生。",
+        "blind_reconstruction": "1973年の流言拡大から引き出し集中・取付け騒ぎへの発展として復元。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "流言が金融不安として受け取られ、預金引き出しへ波及するが、具体的文言は固定しない。",
+        "blind_reconstruction": "流言受容が引き出し行動へ波及し、具体的流言文言は不確実として復元。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "流言が現実の預金引き出しへ波及し、取付け騒ぎという社会的影響を生む。",
+        "blind_reconstruction": "預金引き出しの集中と取付け騒ぎという社会的帰結として復元。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "警察が発端調査・真相解明・関係機関連携によって拡大とパニック化を抑制。",
+        "blind_reconstruction": "警察・関係機関の発端調査と真相明示による沈静化として復元。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "石油危機下の社会・人心の不安定な状況と些細な契機がパニック現象の背景。",
+        "blind_reconstruction": "石油危機に伴う社会・人心の不安定さの中で流言イベントが発生した背景として復元。",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "独立再Review Seq 007。summary.narrative + summary.structureだけからBlind Decodeを先に固定し、その後にEvidence→Content、coverage_refs、P01〜P12、variant/uncertaintyを照合した。過去ReviewのVerdictは判定根拠に用いていない。"
+}
