@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0001",
+  "artifact": "10",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_10_contents.json",
+    "commit_sha": "3b98c49a42fc9a661931aad13ddf53f8af4915c7",
+    "blob_sha": "9c967dbf96508fc7d16df92c8b5f273342db610f",
+    "reviewed_at": "2026-09-21T01:42:24Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "現行Evidenceレコードを入力としたEvidence→Content対応は各Content Unitへ追跡できる。SRC-005に対するEVD-008/EVD-013の上流支持問題はReview 00 Findingとして分離し、Review 10でSource直読により補完・再判定していない。"
+    },
+    "summary_reconstruction": {
+      "status": "FINDING",
+      "notes": "coverage_refs集合内部は全件復元できるが、Content母集団のCNT-011（6月15日時点の岐阜側沈静化）がsummaryから落ち、全国拡散と地域的下火の同時進行を再構成できない。"
+    },
+    "structural_probe": {
+      "status": "FINDING",
+      "notes": "P07でLOSS。流行の時間構造における地域差・局所的沈静化がsummaryにない。他のP01〜P06/P08〜P12は保存される。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "初期VAR-001、後代代表形VAR-002、属性・能力・回避等の増補VAR-003を分離し、後代要素を最初期核へ遡及していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "1978年末時点、単一起源、1月記事本文、後代要素の初出・共存、媒体効果、社会対応の一次記録など主要不確実性をsummaryとContentで保持する。"
+    },
+    "narrative_reconstruction": {
+      "status": "FINDING",
+      "notes": "中心人物・危害・variant境界・不確実性は復元できるが、CNT-011の岐阜側沈静化が欠けるため、1979年6月の流行状況を一方向の全国拡大としてしか読めない。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "現行EVD-001〜EVD-013を母集団としてContent Unit/variant/uncertaintyへの抽出を監査し、Evidenceに存在するsalient meaningのContent化漏れは確認しなかった。Review 00で検出したSource→Evidence omissionはここでSource直読により補わない。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1978年末頃の岐阜で子どもの噂として流通していたとの後代整理があり、1979年1月26日には新聞記事の所在が確認できる。発信地は美濃加茂市・八百津町・岐阜市など複数説で単一起源は確定しない。1979年春までには、口の裂けた女性が小中学生を襲う危害型の噂が複数地域へ広がった。最初期共有核では接触条件、定型質問、武器・能力、回避規則、最終帰結は固定できない。後代の代表形では口元を隠した女性が容姿を問い、裂けた口を示して追跡・危害へ進み、マスク、赤いコート、鎌、高速走行、ポマード、べっこう飴、回答規則、由来説明などが増補され、一部では回避成功も語られる。流通回路は子ども同士、塾、電話、新聞・雑誌・テレビなど複数で、媒体ごとの加速効果は未確定。1979年6月には全国的風説・登校拒否騒ぎとして扱われ、教師・保護者のパトロールや集団下校も後代整理にあるが地域別一次記録は固定できない。9月には社会・教育現象を扱う記事の書誌が確認できる。",
+    "reference_story": "現行Contentでは、1978年末頃の岐阜で子どもの噂として流通したとの後代整理と、1979年1月26日の新聞記事所在が最初期の手掛かりで、起源地点は複数説のまま未確定である。3月には京都到達を示す雑誌見出し、4月には口の裂けた女性が小中学生を襲う噂が各地へ広がったことが確認される。後代の代表形では口元を隠した女性の問いかけ、裂けた口の提示、追跡・危害が語られ、さらに服装・武器・速度・ポマード・べっこう飴・回答分岐・由来説明・結末差が増補される。子ども間、塾、電話、新聞・雑誌・テレビが流通回路として整理される。6月15日には全国的風説と登校拒否騒ぎが報じられる一方、岐阜側の記事では騒ぎが下火になったことも示され、地域ごとの流行位相は一様でない。パトロール・集団下校は後代専門家整理で、9月には社会・教育現象分析記事の書誌が確認される。最初期VAR-001には定型質問、能力、回避法、固定由来を遡及せず、VAR-002/003を後代代表形・増補群として分離する。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "口裂け女が主要主体。教師・保護者は社会対応側に現れる。",
+        "reference": "口裂け女が主要主体。教師・保護者は後続の社会対応に現れる。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "主要な危害対象は小・中学生／子ども。",
+        "reference": "主要な危害対象は小・中学生／子ども。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "初期共有核の接触条件は固定不能。後代代表形では日常空間で遭遇する。",
+        "reference": "初期共有核の接触条件は固定不能。後代代表形では遭遇型が整理される。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "脅威主体は口裂け女だが、その存在論や起源は確定しない。",
+        "reference": "脅威主体は口裂け女だが、単一起源・存在論は確定しない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "初期は『子どもを襲う』。後代は問いかけ→裂けた口の提示→追跡・危害。",
+        "reference": "初期は危害型の襲撃。後代は問いかけ、正体提示、追跡・危害に具体化する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "日常空間→危険主体との遭遇→脅威・襲撃。後代一部では回避成功。",
+        "reference": "日常の脅威噂から、後代では会話・正体提示・追跡・回避へ展開が増補される。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "1978年末後代整理→1979年1月記事→春に複数地域→6月全国風説→9月分析記事。",
+        "reference": "同じ大枠に加え3月京都到達、6月15日に全国的騒ぎと同時に岐阜側では下火という地域差を保持する。",
+        "difference": "LOSS",
+        "notes": "summaryは6月時点の岐阜ローカルな沈静化（CNT-011）を落としており、流行の非同期性を復元できない。"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "初期の固定規則なし。後代に回答規則等が付加。",
+        "reference": "初期の固定規則なし。後代に回答分岐等が付加。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "初期の回避法なし。後代にポマード・べっこう飴等。社会側ではパトロール・集団下校。",
+        "reference": "同左。初期形への遡及は禁止される。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "初期の最終帰結は未確定。後代には危害進行と回避成功の双方。",
+        "reference": "初期の最終帰結は未確定。後代variantで結末が分岐する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "起源、1978年末時点、1月記事本文、媒体効果、後代要素の初出・共存等が不確実。",
+        "reference": "これらに加え地域別社会対応の一次記録も未固定。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "VAR-001初期最小核、VAR-002後代会話・正体提示、VAR-003属性・能力・回避等の増補。",
+        "reference": "同じ3層境界を保持する。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "LOSSは6月の地域的沈静化で、20_analysisのVersion Scope（1979年初頭〜春・VAR-001）外。D07〜D21、Version Scope、variant boundaryの主要判断可能性はsummaryとContentで実質的に変わらない。"
+    },
+    "verdict": "FINDING",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "1978年末頃の岐阜で子どもの噂として流通したとの後代整理",
+        "blind_reconstruction": "1978年末頃の岐阜の子どもの噂として復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "1979-01-26の『岐阜日日新聞』関連記事所在",
+        "blind_reconstruction": "1979年1月26日の新聞記事所在として復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "春までに口の裂けた女性が小中学生を襲う噂が複数地域へ拡大",
+        "blind_reconstruction": "小中学生を襲う危害型噂が春に複数地域へ広がると復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "後代代表形の問いかけ→裂けた口提示→追跡・危害",
+        "blind_reconstruction": "後代代表形として具体展開を復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "マスク・赤いコート・鎌・高速走行等の属性増補",
+        "blind_reconstruction": "属性・能力の増補として復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "ポマード・べっこう飴等の回避要素",
+        "blind_reconstruction": "後代回避法として復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-009",
+        "salient_meaning": "1979年6月の全国的な小中学生恐怖・風説",
+        "blind_reconstruction": "6月の全国的風説として復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-010",
+        "salient_meaning": "同時代見出しに登校拒否騒ぎが現れる",
+        "blind_reconstruction": "登校拒否騒ぎとして復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-012",
+        "salient_meaning": "発信地に美濃加茂・八百津・岐阜市等の複数説",
+        "blind_reconstruction": "複数起源説・単一起源未確定として復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-013",
+        "salient_meaning": "教師・保護者のパトロール・集団下校は後代整理",
+        "blind_reconstruction": "社会対応と一次記録未固定の留保まで復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-014",
+        "salient_meaning": "子ども・塾・電話・新聞・雑誌・テレビ等の複数流通回路",
+        "blind_reconstruction": "複数流通回路と因果効果未確定として復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-016",
+        "salient_meaning": "後代に由来説明・設定が増殖し初出・共存は未確定",
+        "blind_reconstruction": "後代増補と初出・共存未確定として復元",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-017",
+        "salient_meaning": "後代variantで回答・結末が分岐し初期核には固定できない",
+        "blind_reconstruction": "回答規則・結末分岐を後代として復元",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Minor",
+      "category": "narrative_reconstruction",
+      "summary": "6月15日時点の岐阜側で騒ぎが下火になったという地域的沈静化がsummaryから失われている。",
+      "rationale": "CNT-011は1979年6月15日の岐阜側記事が騒ぎの下火を示す。一方summaryは同時期を『全国的風説』『登校拒否騒ぎ』としてのみ記述するため、発信地域では沈静化しつつ他地域では拡大していたという非同期の流行構造をBlind Decodeから復元できない。",
+      "impact": "伝承の中心的危害構造やVAR-001のAnalysisは変わらないが、1979年6月の伝播史が単純な全国拡大型に見え、地域ごとの位相差を失う。",
+      "fix_direction": "summary.narrativeまたはsummary.structure.temporal_structureへ、6月15日時点で岐阜側では騒ぎが下火とされたことを留保付きで追加し、CNT-011をcoverage_refsへ加える。",
+      "content_refs": [
+        "CNT-011"
+      ],
+      "probe_refs": [
+        "P07"
+      ]
+    }
+  ],
+  "verdict": "Minor",
+  "review_notes": "Blind Decodeはsummary.narrative + summary.structureのみを読んだ時点で固定した。Golden Reference 0180は具体的意味を失わない粒度の校正にのみ使用し、内容・variant・D01〜D21判断は転用していない。"
+}

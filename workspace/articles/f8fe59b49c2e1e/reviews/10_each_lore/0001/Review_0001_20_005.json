@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0001",
+  "artifact": "20",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_20_analysis.json",
+    "commit_sha": "ee3773c44685454dc7392b7a4dd1de85683d4159",
+    "blob_sha": "e14ce0f124f75c92c93d43b75c3c0363b7faa962",
+    "reviewed_at": "2026-09-21T01:42:24Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "FINDING",
+      "notes": "Scope定義自体はVAR-001/CNT-001〜004へ限定しているが、D04は除外VAR-003のCNT-006/CNT-007を用いてACCRETION/ORAL_VARIATIONを正当化し、宣言Scopeを越えている。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D05はScoped Contentにない学校・塾圏の伝聞をprimary化し、D11は接触条件不明からSPONTANEOUS_SELECTIONを導き、D16は一般的な襲撃命題からSINGLE_EPISODEを導いている。D19も被害対象と流通範囲を混同する。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "検出事項はいずれも既存コードの再選択、status=U、またはScope/trace修正で表現可能で、新規taxonomyは不要。"
+    },
+    "causality": {
+      "status": "FINDING",
+      "notes": "D12→D13→D15の対象・作用・最終帰結は整合するが、D11/D16で未提示の『偶然の遭遇』『一回の遭遇エピソード』を因果入口・時間構造として補っている。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D04はout-of-scope CNT-006/007、D05はScoped Contentにない学校・塾圏、D11/D16はCNT-004にない入口・時間構造、D19はCNT-003/004から学校・若者流通を再現できない。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "Scoped CNT-001〜004だけから独立再構成すると、子どもを狙う攻撃命題・地域拡散・媒体存在は復元できるが、D04増補、D05学校/塾伝聞、D11偶発選択、D16単一エピソード、D19学校若者流通/D statusは同じ形では復元できない。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D11/D16のIは意味自体の根拠が不足し、D19のDは同時代見出しが直接示す『被害対象が学生』を『学生文化での流通』へ読み替えているため支持強度を超える。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "CNT-004から対象=小中学生、作用=襲う、最終帰結領域=未確定というD12/D13/D15の列は一貫し、武器・重傷・死亡等を補っていない。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "Scope内ではL1のみを選び、6月の登校拒否等をScope内L3へ流用していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "FINDING",
+      "notes": "全国流通への誤昇格はしていないが、CNT-003/004が直接示す地域拡散と学生『被害対象』を、D19.KIN.SCHOOL_YOUTHという学生文化内『流通範囲』の直接根拠にしている。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "特権情報保持者を確認できないことをNO_ONE_KNOWS/NO_HIDDEN_TRUTHへ昇格せずUを維持する。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "岐阜・京都というEvidence/流通史上の実在地を、Scoped lore内部の特定地点因果へ昇格せずA1に留める。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "D19 primary=SCHOOL_YOUTHのstatus Dは、参照する同時代見出しが学生を受容集団として直接示していないため過大。子どもの噂としての流通を保持するCNT-001は後代整理由来で、同codeを支持してもIが上限。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "全国的に流通した怪異伝承としてのmacro_categoryと物語・伝説のentry_typeは、Entry全体のContentと整合し、初期Scopeの危害型噂とも矛盾しない。"
+    },
+    "content_layer_bypass": {
+      "status": "FINDING",
+      "notes": "D05 rationaleの『学校・塾圏』はScoped CNT-001〜004に存在しない。D04もexcluded VAR-003のCNT-006/007をAnalysis根拠へ再導入しており、Scoped ContentだけというReview基準を満たさない。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Scoped Content（CNT-001〜004）から再構成できる最小モデルは、1978年末頃の岐阜で子どもの噂として流通したとの後代整理と、1979年1〜4月の新聞・雑誌所在／見出しを通じて、名前付きの『口の裂けた女性』が小中学生を襲うという危害命題が複数地域へ広がった、というもの。安定して復元できるのは対象=子ども、作用=襲撃、負の価値、伝承内作用L1、地域拡散・媒体再提示であり、接触条件、存在論、最終帰結、回避法、詳細な一回遭遇シーケンスは固定できない。後代の属性・弱点増補や塾圏流通をVAR-001のDimension根拠へ持ち込まない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "status": "FINDING",
+    "notes": "独立再構成と現AnalysisはD12/D13/D14/D15/D18/D20/D21等では整合する一方、D04/D05/D11/D16/D19でScope・意味・支持強度の差がある。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "version_scope",
+      "summary": "D04がVersion Scopeから除外したVAR-003の増補要素をprimary/secondary判定へ再導入している。",
+      "rationale": "version_scopeはVAR-001、CNT-001〜004に限定し、特定の服装・武器・能力・ポマード・べっこう飴等を除外する。しかしD04はCNT-006/CNT-007とEVD-008を根拠にACCRETIONおよびORAL_VARIATIONを選び、rationaleも『属性・能力・弱点が追加』を中心に置く。これは宣言したScoped Contentでは再現できない。",
+      "impact": "D04の主codeと変容モデルがVersion Scopeに依存せず後代variantへ引っ張られ、初期共有核のAnalysisとして不整合になる。",
+      "fix_direction": "D04をScoped CNT-001〜004だけから再判定する。媒体移行をprimaryにできるかを検討し、増補・口承変異を保持するならVersion Scopeを明示的に広げるか、別variant分析へ分離する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-006",
+        "CNT-007"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-007",
+        "EVD-008"
+      ],
+      "dimension_refs": [
+        "D04"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "content_layer_bypass",
+      "summary": "D05はScoped Contentに存在しない『学校・塾圏で共有される伝聞』をprimary codeの根拠にしている。",
+      "rationale": "D05のcontent_refsはCNT-001/CNT-004で、前者は『子どもの噂として流通』、後者は『小中学生を襲う』という被害命題である。どちらも学校・塾という共有場面を表現しない。塾等の流通回路は別Contentに存在するがVersion Scope外であり、Scoped ContentだけからD05.HRS.SCHOOL_WORK_HEARSAYを再構成できない。",
+      "impact": "presentation形式のDimensionが、対象集団や後続流通経路をScope内の提示形式へ読み替えた状態になる。",
+      "fix_direction": "VAR-001内で学校・塾伝聞を保持できるContent/EvidenceがあるならScopeへ明示的に取り込み、なければD05をUまたはScoped Contentから再現できる提示codeへ再判定する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D05"
+      ]
+    },
+    {
+      "finding_id": "F003",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D11とD16が、Scoped Contentで固定されない偶発遭遇・単一エピソード構造を推定している。",
+      "rationale": "CNT-004が直接保持するのは『口の裂けた女性が小中学生を襲う』という危害命題で、初期接触条件や出来事列は示さない。現Content summaryも初期共有核の接触条件は固定できないとする。それにもかかわらずD11は本人の選択によらない偶発遭遇をSPONTANEOUS_SELECTIONとして、D16は『一回の遭遇と襲撃』をSINGLE_EPISODEとして採用している。『他の条件がない』ことは、この2つの具体構造の正証拠ではない。",
+      "impact": "初期VAR-001に存在しないentry conditionと時間構造をAnalysisが具体化し、後代遭遇型の構造を暗黙に遡及する。",
+      "fix_direction": "D11はUを基本に再評価する。D16もScoped Contentが一般命題しか保持しないことを踏まえUまたは静的関係codeを検討し、単一エピソードを保持するなら対応Contentを先に明示する。",
+      "content_refs": [
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D11",
+        "D16"
+      ]
+    },
+    {
+      "finding_id": "F004",
+      "severity": "Moderate",
+      "category": "semantic_traceability",
+      "summary": "D19は『学生が被害対象』であることを『学校・若者集団で流通』した直接証拠として扱っている。",
+      "rationale": "D19の参照CNT-003/CNT-004は京都・各地への地域拡散と、小中学生が襲撃対象であることを示すが、学校・学生文化の内部で噂が共有されたことを直接記述しない。学校・若者流通に最も近いCNT-001は子どもの噂という後代整理であり、これを使っても支持はIndirect相当である。",
+      "impact": "D19.KIN.SCHOOL_YOUTHのprimary選択とstatus Dが再現不能で、流通範囲と被害対象のDimensionが混同される。",
+      "fix_direction": "D19のprimary/secondaryとstatusを再判定する。SCHOOL_YOUTHを保持する場合はCNT-001等の適切なContentへtraceしstatusをI以下にし、同時代見出しで直接確認できる地域拡散との役割を分離する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003",
+        "EVD-007"
+      ],
+      "dimension_refs": [
+        "D19"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review 20はVersion Scopeに属するCNT-001〜004を意味論的根拠として独立再構成した。Evidenceは支持強度の確認にのみ用い、Source/Evidence固有detailをAnalysis正当化へ追加していない。"
+}
