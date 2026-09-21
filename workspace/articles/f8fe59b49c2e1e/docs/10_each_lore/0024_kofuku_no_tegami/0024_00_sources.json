@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0024",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "「幸運の手紙」についての一考察",
+      "locator": "国立歴史民俗博物館研究報告 第174集（2012）, pp.309-317",
+      "accessed_at": "2026-09-21",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X"
+      ],
+      "url": "https://doi.org/10.15024/00002041",
+      "bibliographic_info": "丸山泰明, 2012年3月",
+      "notes": "日本の幸運の手紙の歴史と文面例を検討する研究ノート。1922年の新聞資料や後続事例を用いる。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "primary_or_contemporary",
+      "title": "奇態流行史",
+      "locator": "序文。1922年刊、NDLデジタル化資料（NDL927419）",
+      "accessed_at": "2026-09-21",
+      "relation_to_primary": "primary",
+      "evidence_role": [
+        "H",
+        "X"
+      ],
+      "url": "https://doi.org/10.11501/927419",
+      "bibliographic_info": "宮武外骨, 1922年",
+      "notes": "1922年1月下旬に「幸運の為に」とする葉書が流行していたことを同時代に記す。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "later_summary_or_commentary",
+      "title": "日本に上陸した謎の『幸運の手紙』――100年前のチェーンレター騒動",
+      "locator": "Web Mu, 1922年1月27日・29日『東京朝日新聞』記事の紹介部分",
+      "accessed_at": "2026-09-21",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X"
+      ],
+      "url": "https://web-mu.jp/history/27356/",
+      "notes": "1922年新聞記事の文面・流行・警察対応を後代に紹介する二次資料。原紙を直接閲覧した証拠としては扱わない。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "本文・1922年の日本流行層に関する検討",
+      "representation": "paraphrase",
+      "content": "1922年初頭、日本で『幸運の手紙』型のチェーンレターが流行したことが研究史上確認され、一定時間内に同文を複数人へ送る自己複製規則と、遵守時の幸運・連鎖停止時の不運を結び付ける文面が記録されている。",
+      "uncertainty": "1922年新聞原紙を本実行で直接閲覧したものではなく、研究ノートによる史料整理を介している。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-002",
+      "locator": "序文",
+      "representation": "paraphrase",
+      "content": "宮武外骨は1922年1月下旬に『幸運の為に』という葉書が流行しているのを見たことを、流行現象を扱う本書執筆の契機の一つとして記した。",
+      "uncertainty": "序文は流行の存在を直接示すが、個々の葉書文面の全規則までは固定しない。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-003",
+      "locator": "1922年1月27日『東京朝日新聞』紹介",
+      "representation": "paraphrase",
+      "content": "紹介された1922年1月27日記事では、受信者に24時間以内に同じ文面を9人へ送るよう求め、実行すれば9日後に幸運が来る一方、連鎖を止めると大きな不運が来るとする葉書が報じられている。",
+      "uncertainty": "新聞原紙の直接閲覧ではなく、後代記事による再紹介。数値・条件はSRC-001の研究整理と整合する範囲で採用する。"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-003",
+      "locator": "1922年1月27日記事の文面紹介",
+      "representation": "paraphrase",
+      "content": "葉書は起源説明として米国人将校に始まると称し、連鎖が世界を巡ったという由来を付していたと紹介される。",
+      "uncertainty": "これは葉書自身が主張する由来であり、実際の起源・移入経路を確定する歴史事実ではない。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-003",
+      "locator": "1922年1月29日『東京朝日新聞』紹介",
+      "representation": "paraphrase",
+      "content": "流行した葉書は受信者に不安を与え、警察が差出人への対応を検討・実施したと紹介される。",
+      "uncertainty": "社会反応の詳細は後代記事による新聞紹介に依存するため、全国一様の反応へ一般化しない。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-001",
+      "locator": "後続事例・変遷の検討",
+      "representation": "paraphrase",
+      "content": "同系統の幸運を約束するチェーンレターは1920年代以降も再流通し、時代が下ると不転送時の不幸を前面に出す型など文面の重点が変化した事例がある。",
+      "uncertainty": "後代形は1922年初期Scopeとは分けて扱い、初期文面へ遡及しない。"
+    }
+  ],
+  "notes": "0024は『幸福の手紙』として調査する。1922年の日本流行層を主要な早期確認形とし、受信→期限内複写転送→幸運／停止時の不運という文面構造をEvidence化する。実際に幸運・不運が生じるかは検証済み事実として扱わない。docs/legacyは参照していない。"
+}
