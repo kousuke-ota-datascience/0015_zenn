@@ -1,0 +1,105 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Scoped Content/Summaryの双方から、映画提示のtaxonomy gap、メリーさん型固有の流通不明、直接遭遇と段階進行の分離を再構成できる。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "1995年Scopeでは、電話受信→現在地告知による接近→複数回の順次進行→最後の電話後の振り返りとすいかのオバケ出現という因果・時間列がContentと整合する。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "D03/D05/D06/D08/D19はCNT-003/CNT-006を通して再判定され、Source/Evidence-onlyの学校口承情報をAnalysisへ直接持ち込んでいない。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12の受信者を対象とする接近、D13の追跡・接近作用はContentと整合し、出現後の身体・価値的帰結をD15で過剰確定していない。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "L1内の物語構造に限定し、独立X EvidenceなしにL3社会現実効果を付与していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "劇場公開や映画全体の学校怪談題材説明からメリーさん型の学校・全国流通を推定せず、D19=Uとしている。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "情報保持構造が未確認であることをNO_ONE_KNOWSへ変換せず、不明を不明のまま保持している。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "学校内の一般的現実背景をアンカーとし、資料の実在性や特定校史実を伝承成立条件へ昇格していない。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D08は出来事への直接遭遇、D16は反復電話の順次進行へ分離した。D03/D05は映画提示を学校口承へ誤写像せずtaxonomy gap、D06/D19は支持不足をUとしている。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "電話怪異の物語型Entryというmacro_category / entry_typeはScoped Contentと矛盾しない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "映画全体の学校怪談説明からメリーさん型固有の口承・流通を確定せずUへ保守化し、後年回想を起源証拠へ拡張していない。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "各修正Dimensionのrationale/manifestationはVersion Scope内のCNT-001/CNT-003/CNT-006へ追跡でき、後代CNT-002/CNT-004を1995年Scopeへ混入していない。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "D03/D05はtaxonomy gapをI、D06/D19は不明をU、D08はContent支持に基づくI、D16はScope内の明示的順次進行としてDとし、支持強度と整合する。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "劇場映画／劇映画提示に直接対応するD03/D05 Child欠落をtaxonomy_gap.present=trueとして明示し、既存の学校口承・学校伝聞Childへ押し込めていない。"
+    },
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001の1995年映画型に限定し、後代の捨て人形＋背後到達型と媒体派生を明示的に除外している。"
+    }
+  },
+  "entry_id": "0006",
+  "findings": [],
+  "review_notes": "Review 20はVersion Scope内のContentだけを意味論的根拠として再監査。Review Seq 002のbypass/taxonomy/D08 Findingが解消していることを確認。docs/legacyは判定根拠に使用していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-003",
+      "CNT-006"
+    ],
+    "dimension_refs": [
+      "D03",
+      "D05",
+      "D06",
+      "D08",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [],
+    "model": "Scoped Contentだけから再構成すると、1995年映画型では宿直者がメリーさんを名乗る反復電話へ直接遭遇し、電話主は校門、花壇、昇降口と現在地を変えながら受信者へ接近する。最後の電話後、受信者が振り返ると『すいかのオバケ』が浮かんでいる。映画全体が学校怪談を題材とする事実はあるが、メリーさん型固有の1995年以前の学校口承・流通は確定できないためD06/D19はU。提示媒体／形式は劇場映画・劇映画でありD03/D05はtaxonomy gap、出来事への遭遇はD08、反復の時間構造はD16で表す。",
+    "notes": "後代標準型の『捨てた人形』『今、あなたの後ろにいる』はScope外としてモデルへ混入していない。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_20_analysis.json",
+    "blob_sha": "c4ce68cfd81ef1439a9a207717375101de5fefd6",
+    "commit_sha": "e850974654798c0cf4564a3a74294648618cc8b0",
+    "reviewed_at": "2026-09-21T03:14:00Z"
+  },
+  "verdict": "Pass"
+}
