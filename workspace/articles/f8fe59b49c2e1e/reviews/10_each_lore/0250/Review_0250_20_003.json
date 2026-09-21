@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0250",
+  "artifact": "20",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0250_shichinin_misaki/0250_20_analysis.json",
+    "commit_sha": "9cc42e7961064888320badf4f81bf8924e4c99d3",
+    "blob_sha": "ae5ba21dafa32b7bc2a9989832a66758b6b9aa8a",
+    "reviewed_at": "2026-09-21T01:37:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "20_analysisのScopeは現行ContentのVAR-001/CNT-001〜003と内部的に一致。VAR-001のEvidence支持問題はReview 10で扱う。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D04.LOCALIZATIONとD20.LOCAL_RESIDENTは各定義を満たす具体意味がScoped Contentにない。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "D04/D20はtaxonomy不足ではなく証拠不足であり、他に不適切な近似押込みは確認しない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "七人ミサキ→新規犠牲者取込み→最古参離脱→七人維持としてContentに接続する。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D04の複数地域localizationとD20の地元住民が特権保持者という具体意味がScoped Contentにない。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryとScoped Content間で主要循環・標的・作用・帰結・時間構造・地理アンカーの分析可能性は変わらない。D04/D20はsummary lossではなくContent外追加。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D04/D20をIとする合理的推定を支えるScoped Contentが不足し、現状はUが保守的。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=次に引かれる人→D13=構成員関係が次の人へ移る→D15=新規犠牲者の死亡をIで推定、の因果列はCNT-001/002と整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18はL1のみでL3を選択しておらず独立X Evidence要求条件に該当しない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "全国大衆流通へ拡張せずREGIONALに留まり、公開媒体と全国流通を同一視していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "NO_ONE_KNOWSは使用していない。LOCAL_RESIDENTの別の支持不足はF001。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "D21.A2はSource実在性でなく、Scoped Contentが高知県という実在地域へ接続することに基づく。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "D04/D20はScoped Contentに必要事実がなくIでも支持上限を超える。D15死亡はIに抑制される。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "古伝承・民俗／循環型死霊伝承はScoped Contentに整合。"
+    },
+    "content_layer_bypass": {
+      "status": "FINDING",
+      "notes": "D04の複数地域localizationとD20の地元住民が特権情報保持者という意味をContent外からAnalysisへ追加している。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Scoped Contentから再構成できる中心モデルは、七人の死者・霊的存在からなる集団が新たな人を一人引き、その犠牲者が構成員として循環へ入り、最古参が成仏・離脱することで常に七人を維持する反復更新則である。発動条件・回避法・成立年代は確定せず、高知県という実在地理へ接続する。Contentだけから具体的地域化過程や地元住民だけが追加情報を保持する構造は再構成できない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D21"
+    ],
+    "status": "FINDING",
+    "notes": "モデル本体はContentから再構成可能だがD04/D20はContent-derived modelを越える。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "content_layer_bypass",
+      "summary": "D20.LOCAL_RESIDENT/IはScoped Contentにない「地元住民が特権的追加情報保持者」という意味を導入している。",
+      "rationale": "D20は真相・追加情報・回避情報を偏って保持する主体を問う。CNT-001〜003は高知県での記録を述べるが、地元住民だけが追加情報を持つとは記述しない。",
+      "impact": "地域性から未記述の特権性を推定し、Content→Analysis layer contractとD20定義を破る。",
+      "fix_direction": "現行ContentならD20をUへ保守化する。LOCAL_RESIDENTを維持するなら誰が何の追加情報を偏って保持するかEvidence→Contentで明示する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D20"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D04.VAR.LOCALIZATION/IはScoped Contentに実際の地域化・置換過程がなく定義を満たさない。",
+      "rationale": "ContentはVAR-001の一形だけで「地域ごとの異伝差」はuncertainty。具体的な複数地域版や地域置換は記述されず、Analysisの「複数地域・同一核の地域異伝」は再構成できない。",
+      "impact": "変容未確認なのに特定変容パターンをIで埋め、D04の「変化を示す証拠がなければU」に反する。",
+      "fix_direction": "現行ContentならD04をUとする。LOCALIZATION維持にはVersion Scope内の具体的地域版差分と置換関係をContent化する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D04"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review 20の意味論的根拠はVersion Scope内Contentに限定した。"
+}

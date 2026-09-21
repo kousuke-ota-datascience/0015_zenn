@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0250",
+  "artifact": "00",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0250_shichinin_misaki/0250_00_sources.json",
+    "commit_sha": "5472298354d26b96734b6abeb2b3fe0010dd51b6",
+    "blob_sha": "1e562b0731615cc84c19e250305b8d12a91d2102",
+    "reviewed_at": "2026-09-21T01:37:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001/SRC-002は日文研の研究DB系二次資料で、indirect_derivativeと明示されている。"
+    },
+    "evidence_integrity": {
+      "status": "FINDING",
+      "notes": "EVD-002の「1920年代後半から複数収録」はSRC-002の現行検索結果（最古の関連項目は1935年）と整合しない。"
+    },
+    "source_evidence_support": {
+      "status": "FINDING",
+      "notes": "EVD-001/EVD-003はSRC-001と整合するが、EVD-002の1920年代後半という年代はSRC-002から支持されない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "一次資料そのものとは扱っておらず、primary relationの過大主張はない。"
+    },
+    "earliest_attestation": {
+      "status": "FINDING",
+      "notes": "現行SRC-002で確認できる最古の関連収録は1935年で、1920年代後半という最古確認表現は要修正。成立年と収録年を同一視しない留保は適切。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "資料刊行年を成立年へ遡及しない旨が明示され、起源不確実性は保持される。"
+    },
+    "salient_evidence_completeness": {
+      "status": "FINDING",
+      "notes": "早期資料群の共有核を主張するのに用いる1935年資料の伝承内容がEvidence化されず、1938年形とのvariant差を監査できない。"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Minor",
+      "category": "earliest_attestation",
+      "summary": "EVD-002の「1920年代後半から複数収録」はSRC-002から支持されない。",
+      "rationale": "SRC-002の年代順検索結果で確認できる関連最古項目は1935年『旅と伝説』で、その後に1938年『民間伝承』等が続く。",
+      "impact": "最古確認年代とVAR-001 attestationを実証より早め、来歴・年代根拠を過度に強める。",
+      "fix_direction": "最古確認を1935年以降へ修正するか、1920年代後半を直接支持する別Sourceとlocatorを追加する。",
+      "source_refs": [
+        "SRC-002"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "salient_evidence_completeness",
+      "summary": "早期資料の共有核を検証するのに必要な1935年資料の伝承内容がEvidence層から欠落している。",
+      "rationale": "EVD-002は年代一覧のみで、1935年カードの「7人の人をひきずりこまないと成仏できない」という規則を保持しない。1938年EVD-001の「一人引くごとに最古参が成仏」と比較すべきsalient差である。",
+      "impact": "Source→Evidenceでvariant識別情報が失われ、七人維持・一対一交代を早期資料共通の核としてよいか独立検証できない。",
+      "fix_direction": "1935年カードの内容と書誌を独立Evidenceとして固定し1938年形と比較する。固定しないなら共有核を1938年で直接確認できる形へ狭める。",
+      "source_refs": [
+        "SRC-002"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "docs/legacyは参照せず、Source→Evidenceの支持関係とsalient completenessを監査した。"
+}
