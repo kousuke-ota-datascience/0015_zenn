@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0362",
+  "artifact": "00",
+  "review_seq": 6,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_00_sources.json",
+    "commit_sha": "6eb3ce7fc45b4402c12a78fcb08055ed5052e1b0",
+    "blob_sha": "a2dfa64d7a6c1615cc09f51f3080667c7f0b18b2",
+    "reviewed_at": "2026-09-21T03:10:04.828Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001は事件翌年の警察庁公的記録、SRC-002/003は1974年の同時代研究書誌であり、資料種別・利用範囲・本文未確認の限界が区別されている。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001/002/005は警察白書本文の流言・取付け・発端解明・社会的不安定背景を保守的に要約し、EVD-003/004はNDL書誌で確認できる公刊事実に限定されている。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "各Evidenceは対応Sourceで確認可能な範囲内に収まり、本文未確認の研究記事から事件細部を補完していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "警察白書を事件翌年の公的な同時代記録として扱い、事件そのものの一次証言と同一視していない。研究記事も書誌確認範囲を越えて一次資料扱いしていない。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1973年の事件発生と、1974年の警察白書・現地調査研究の公刊確認を区別し、確認年を起源年へ置換していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "具体的流言文言、詳細な伝播経路、本文未確認の二次的逸話を固定しない留保が明示されている。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "警察白書の事件核、発端解明・沈静化、石油危機下の社会・人心の不安定さと些細な契機というsalient contextはEVD-001/002/005に保存され、研究記事の公刊事実もEVD-003/004に保持されている。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "現行canonicalに対する独立再Review。過去Reviewを正解として使用せず、SRC-001本文とSRC-002/003のNDL書誌を再確認した。docs/legacyは参照していない。"
+}

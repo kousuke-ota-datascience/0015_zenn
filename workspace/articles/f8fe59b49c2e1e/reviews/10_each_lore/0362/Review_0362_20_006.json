@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0362",
+  "artifact": "20",
+  "review_seq": 6,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_20_analysis.json",
+    "commit_sha": "e0af5352adce73cc112d1f5b758b62f2c89bb812",
+    "blob_sha": "dde90d8caff97283ee30d3cc831e6b9ace2c5624",
+    "reviewed_at": "2026-09-21T03:10:04.828Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "1973年の流言→預金引き出し集中・取付け→発端解明・沈静化と社会的不安定背景を事件核とし、具体的流言文言を固定しないScopeはScoped Contentと整合する。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D01〜D18、D20〜D21は概ねScoped Contentとcodebookへ接続するが、D19=`D19.LOC.REGIONAL`は事件所在地を流通範囲へ置換しており、D19の中心質問に適合しない。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "D19を含め必要な流通範囲コードは既存taxonomyに存在する。問題はtaxonomy欠落ではなく、現在のEvidence/Contentでどの範囲まで固定できるかという適用・確信度の問題。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "D12=`READER_LISTENER`→D13=`INFORMATION_INDUCED_ACTION`→D15=`MARKET_SOCIAL_BEHAVIOR`は、流言を受けた預金者の判断変化から引き出し集中・取付けへ至る主因果列と整合する。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D19 rationaleは『愛知県豊川地域の具体的金融機関を中心に発生』という所在地情報しか示さず、『地域・地方圏まで流通した』というD19意味をScoped Contentから追跡できない。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryとScoped Contentの主要分析可能性は一致し、D19についても『流言が広まった』ことと地理的流通範囲が別問題であることを再評価できる。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D19のStatus=DはDirectの基準『典拠に直接明示』を満たさない。Scoped Contentは事件所在地と流言拡大を示すが、市町村・地方圏という流通規模を直接明示しない。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "修正版ではD12の直接作用対象を流言受容者、D13を情報誘発、D15を取付けという市場・社会行動変化として接続しており、中心因果鎖は整合する。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "Scoped Contentに現実の預金引き出し・取付けがあり、EVD-001/002という独立した公的記録が社会現実層の成立を支える。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "FINDING",
+      "notes": "全国流通への誤拡張はないが、D19は公開可能性だけでなく事件所在地とも区別すべき流通範囲軸である。現行D19は『愛知県豊川で事件が発生』したことから`REGIONAL / D`を固定しており、流言が市町村・地方圏へ流通した範囲証拠を欠く。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "D20はNO_ONE_KNOWSを用いず、警察による原因調査・真相明示というContentから制度的情報保持主体をIとして保守的に推定している。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "実在する豊川信用金庫と1973年の取付け事件がScoped Contentの因果モデルそのものを構成し、単に資料が実在することからA4を付与してはいない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "D19=`REGIONAL / D`のみ、Content/Evidenceが示す地理的流通範囲を超えて確信度を上げている。その他の主要DimensionはD/I/Uの区別が概ね支持強度内に収まる。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "macro_category『社会流言・パニック』、entry_type『金融流言事件』は、流言が現実の預金引き出し・取付けへ波及したScoped Contentと整合する。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "現行Analysisの意味論的根拠はScoped Contentで表現されており、Source/Evidenceにしかない具体的流言文言等をAnalysisへ直接持ち込んでいない。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Scoped Contentから再構成できる主モデルは、石油危機下の社会・人心の不安定な背景の中で豊川信用金庫をめぐる流言が受容され、預金者の通常行動である預金引き出しへ波及し、多数の引き出しが取付け騒ぎという市場・社会行動上の帰結へ集積し、警察・関係機関が発端を調査して真相を明示することで拡大とパニック化を抑制する、という流言イベントである。D12→D13→D15、D16、D17、D18はこのモデルへ整合する。一方、Contentが明示するのは事件の所在地と『流言が広まった』ことまでであり、流言が市町村・地方圏という社会範囲まで流通したかは特定できないため、D19の`REGIONAL / D`だけはこのモデルから導出できない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "status": "FINDING",
+    "notes": "中心因果モデルは修正済みで整合。残るFindingはD19の流通範囲と事件所在地の混同。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D19=`D19.LOC.REGIONAL / D`が事件所在地を流言の流通範囲と同一視している。",
+      "rationale": "D19の中心質問は『どの社会範囲まで流通しているか』であり、媒体や事件の所在地とは別軸である。Scoped Contentは1973年に愛知県の豊川信用金庫をめぐる流言が広まり取付け騒ぎが発生したことを示すが、その流言が市町村・地方圏という地域共同体へどこまで流通したか、また主な受容者集合がどの範囲だったかを明示しない。現行rationaleの『愛知県豊川地域の具体的金融機関を中心に発生した』は事件位置の説明であり、`REGIONAL`のDirect根拠にはならない。",
+      "impact": "D19の地域分布比較で、局所的な顧客・関係者への流通と地域社会全体への流通を区別できず、実証されていない地理的拡散をDirectとして過大評価する。",
+      "fix_direction": "現行Evidence/ContentのままならD19をUへ再裁定する。`REGIONAL`を維持する場合は、流言が市町村・地方圏へ流通した範囲を明示するSource→Evidence→Contentを追加し、その支持強度に応じてD/Iを再判定する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D19"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "現行canonicalに対する独立再Review。過去ReviewのVerdictを正解として参照せず、current codebook/coding rulesとScoped Contentから再構成した。docs/legacyは参照していない。"
+}
