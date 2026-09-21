@@ -1,0 +1,440 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0024",
+  "macro_category": "情報・メタ伝説",
+  "entry_type": "規則・チェーン伝承",
+  "version_scope": {
+    "description": "1922年1月に日本で確認できる、郵便葉書・手紙による自己複製型の「幸福の手紙」を分析対象とする。受信者が24時間以内に同文を9人へ送り、遵守すれば9日後に幸運が訪れる一方、連鎖を止めれば大きな不運が訪れるとする条件付き規則を含む形である。米国人将校起源等の由来は文面内部の主張として扱い、実際の起源として採用しない。後代の再流行や、不転送時の不幸をより前景化する型はScope外とする。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [
+      "VAR-002",
+      "VAR-003"
+    ],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006"
+    ],
+    "notes": "1922年新聞原紙を本実行で直接閲覧できていないため、具体的な人数・期限は研究ノートと後代の新聞紹介に基づく。実際の幸運・不運の発生は分析上の事実前提としない。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "D",
+      "primary": {
+        "code_id": "D01.G1"
+      },
+      "secondary": [],
+      "rationale": "1922年1月下旬の流行が宮武外骨の同時代資料で確認でき、1868–1944の年代区分へ直接写像できる。",
+      "manifestation": "日本で1922年に流行が確認される。",
+      "content_refs": [
+        "CNT-006"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D02",
+      "status": "D",
+      "primary": {
+        "code_id": "D02.PRT.CHAIN_LETTER",
+        "parent_id": "D02.PRT"
+      },
+      "secondary": [],
+      "rationale": "同時代資料が「幸運の為に」とする葉書の流行を記し、最古確認層の流通媒体は自己複製型の郵便葉書・手紙として確認できる。",
+      "manifestation": "郵便で届くチェーンレター／チェーン葉書。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-006"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D03",
+      "status": "D",
+      "primary": {
+        "code_id": "D03.PRT.CHAIN_LETTER",
+        "parent_id": "D03.PRT"
+      },
+      "secondary": [],
+      "rationale": "1922年Scopeで実際に受容者へ流通する媒体は、受信者が複写・再送する郵便チェーンレターである。",
+      "manifestation": "葉書・手紙を複写して郵送し、次の受信者へ連鎖させる。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-006"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D04",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "1922年Scope内部で安定した変容パターンを確定できるEvidenceが不足している。後代の変化を初期Scopeへ遡及しない。",
+      "manifestation": "初期Scope内部の変容パターンは不明。",
+      "content_refs": [
+        "CNT-006"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    },
+    {
+      "dimension_id": "D05",
+      "status": "I",
+      "primary": {
+        "code_id": "D05.RUL.CHAIN_INSTRUCTION",
+        "parent_id": "D05.RUL"
+      },
+      "secondary": [],
+      "rationale": "文面は期限・人数・再送を具体的に命じる自己複製規則として再構成できる。ただし詳細規則は研究ノートと新聞紹介を介しているためInferredとする。",
+      "manifestation": "同文を規定人数へ期限内に転送せよ、というチェーン指示。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D06",
+      "status": "I",
+      "primary": {
+        "code_id": "D06.T5"
+      },
+      "secondary": [],
+      "rationale": "「規則に従えば幸運、止めれば不運」というXならY型の条件付き信念として提示され、研究側はその真偽を確定しない。",
+      "manifestation": "転送行為と将来の吉凶を結ぶ条件付き信念。",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D07",
+      "status": "I",
+      "primary": {
+        "code_id": "D07.DCF.FATE_OMEN",
+        "parent_id": "D07.DCF"
+      },
+      "secondary": [],
+      "rationale": "この伝承が説明・制御可能にする中心的な不足は、受信者自身の近未来の幸運・不運という不確かな運命である。",
+      "manifestation": "将来の吉凶を、手紙への対応と結び付けて理解可能にする。",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D08",
+      "status": "I",
+      "primary": {
+        "code_id": "D08.TRC.TEXT_DOCUMENT",
+        "parent_id": "D08.TRC"
+      },
+      "secondary": [],
+      "rationale": "意味形成を開始させる直接の手掛かりは、吉凶と転送規則を記した葉書・手紙そのものの受領である。",
+      "manifestation": "規則と予告を書いた手紙が手元へ届く。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D09",
+      "status": "I",
+      "primary": {
+        "code_id": "D09.PPR.OMEN_FORECAST",
+        "parent_id": "D09.PPR"
+      },
+      "secondary": [
+        {
+          "code_id": "D09.CTL.TRANSMISSION_RULE",
+          "parent_id": "D09.CTL"
+        }
+      ],
+      "rationale": "受信者の未来の吉凶を転送行為から予告することが中心的な意味付与操作であり、その予告を実行可能にする自己複製の転送規則が追加構造となる。",
+      "manifestation": "「送れば幸運、止めれば不運」という予兆化と、連鎖継続規則の組合せ。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D10",
+      "status": "I",
+      "primary": {
+        "code_id": "D10.OBJ.INFORMATION_CONTENT",
+        "parent_id": "D10.OBJ"
+      },
+      "secondary": [],
+      "rationale": "Scope内では特定の神・霊・人物を因果源として固定せず、手紙に記された条件付き規則そのものが吉凶因果を提示する。",
+      "manifestation": "チェーンレターの文面・情報内容が因果規則を担う。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D11",
+      "status": "I",
+      "primary": {
+        "code_id": "D11.INF.RECEIVE_MESSAGE",
+        "parent_id": "D11.INF"
+      },
+      "secondary": [],
+      "rationale": "受信者が転送規則の因果系へ入る条件は、当該葉書・手紙を受け取ることである。",
+      "manifestation": "幸福の手紙を受信する。",
+      "content_refs": [
+        "CNT-001"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D12",
+      "status": "I",
+      "primary": {
+        "code_id": "D12.AUD.READER_LISTENER",
+        "parent_id": "D12.AUD"
+      },
+      "secondary": [],
+      "rationale": "D13の吉凶作用が直接向けられる対象は、文面を受け取り規則に従うか否かを迫られる現在の受信者である。",
+      "manifestation": "手紙を読む現在の受信者。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D13",
+      "status": "I",
+      "primary": {
+        "code_id": "D13.FAT.LUCK_BENEFIT",
+        "parent_id": "D13.FAT"
+      },
+      "secondary": [
+        {
+          "code_id": "D13.FAT.CURSE_MISFORTUNE",
+          "parent_id": "D13.FAT"
+        }
+      ],
+      "rationale": "「幸福の手紙」という1922年Scopeでは、遵守時の幸運付与が正の主作用として明示され、連鎖停止時の不運付与が独立した負の分岐として併置される。",
+      "manifestation": "転送継続には幸運、停止には不運を結び付ける。",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D14",
+      "status": "I",
+      "primary": {
+        "code_id": "D14.MIX"
+      },
+      "secondary": [],
+      "rationale": "遵守時は正、停止時は負という二つの帰結分岐が同一Scope内に明示されるためMixedとする。",
+      "manifestation": "規則遵守なら幸運、違反なら不運。",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D15",
+      "status": "I",
+      "primary": {
+        "code_id": "D15.OPP.LUCK_MISFORTUNE",
+        "parent_id": "D15.OPP"
+      },
+      "secondary": [],
+      "rationale": "因果列の終端で変化すると主張される領域は、受信者の将来の幸運・不運である。",
+      "manifestation": "受信者の運・吉凶が変わるとされる。",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D16",
+      "status": "I",
+      "primary": {
+        "code_id": "D16.DLY.DEADLINE",
+        "parent_id": "D16.DLY"
+      },
+      "secondary": [
+        {
+          "code_id": "D16.TRN.CHAIN_SPREAD",
+          "parent_id": "D16.TRN"
+        }
+      ],
+      "rationale": "受信から24時間以内という行為期限と、幸運まで9日という遅延が時間構造の中心であり、同文が次の受信者へ連鎖的に移る構造も独立して存在する。",
+      "manifestation": "24時間の転送期限と9日後の帰結予告を伴うチェーン拡散。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D17",
+      "status": "I",
+      "primary": {
+        "code_id": "D17.USE.LUCK_EXPLOITATION",
+        "parent_id": "D17.USE"
+      },
+      "secondary": [
+        {
+          "code_id": "D17.RUL.PROCEDURAL_RULE",
+          "parent_id": "D17.RUL"
+        }
+      ],
+      "rationale": "文面上は、規定どおり転送することが幸運を得て不運を避けるための利用・制御手段として提示され、その実行には期限・人数の手順規則が付く。",
+      "manifestation": "指定された人数へ期限内に転送して幸運を得る／不運を避ける。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ]
+    },
+    {
+      "dimension_id": "D18",
+      "status": "I",
+      "primary": {
+        "code_id": "D18.L1"
+      },
+      "secondary": [
+        {
+          "code_id": "D18.L2"
+        },
+        {
+          "code_id": "D18.L3"
+        }
+      ],
+      "rationale": "吉凶の条件付き因果は伝承内層L1にあり、受信者の不安や転送判断という受容者層L2、1922年の実流行と警察対応という社会現実層L3もEvidenceで確認される。L3は外部効果Evidenceに限定して付与する。",
+      "manifestation": "文面内の吉凶因果、受信者への心理・行動圧力、実際の連鎖流通・警察対応が複数層に現れる。",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004",
+        "CNT-006"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-005"
+      ]
+    },
+    {
+      "dimension_id": "D19",
+      "status": "I",
+      "primary": {
+        "code_id": "D19.LOC.REGIONAL",
+        "parent_id": "D19.LOC"
+      },
+      "secondary": [],
+      "rationale": "1922年の日本で流行が確認されるが、今回の直接・準直接Evidenceだけでは全国一様の分布を安全に固定できないため、確認可能な地域的流行として保守的に扱う。",
+      "manifestation": "1922年1月に日本の新聞・同時代記録で確認される地域的流行。",
+      "content_refs": [
+        "CNT-006"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-005"
+      ]
+    },
+    {
+      "dimension_id": "D20",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "真相・追加情報・回避情報を特権的に保持する主体はScope内Evidenceから確定できず、単なる不記載をNO_ONE_KNOWSへ変換しない。",
+      "manifestation": "特権情報保持者は不明。",
+      "content_refs": [
+        "CNT-005"
+      ],
+      "evidence_refs": [
+        "EVD-004"
+      ]
+    },
+    {
+      "dimension_id": "D21",
+      "status": "I",
+      "primary": {
+        "code_id": "D21.A1"
+      },
+      "secondary": [],
+      "rationale": "伝承は特定固有地点・企業・事件を成立条件とせず、一般的な郵便・葉書という現実的な社会背景の上で成立する。",
+      "manifestation": "一般的な郵便制度・葉書という現実背景を利用する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ]
+    }
+  ],
+  "analysis_notes": "1922年の日本流行層を既定Scopeとし、後代の不幸前景型や電子媒体型を混入させない。D04/D20は資料不足をUで保持する。D05以降の具体的規則・意味論は、1922年新聞原紙を本実行で直接閲覧していないため、研究ノート・後代新聞紹介に依拠する部分を原則Iとした。"
+}
