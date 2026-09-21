@@ -2,7 +2,7 @@
 
 ## 0.1. 位置付け
 
-本書は、canonical artifactに対する独立意味論Reviewの正本である。
+本書は、canonical artifactに対する独立意味論Reviewの正本である。Workflow 10とは独立して起動され、Review cycleの実行と保存を担う。
 
 ## 0.2. 設計原則
 
@@ -14,6 +14,7 @@
 - Review結果の正本はGit上のJSONとする。
 - canonical JSONの構造は**Schema上のフィールド監査母集団**を定める。一方、semantic completenessの監査母集団は既存JSON要素に限定せず、Source / Evidence / Content間で保持されるべきsalient meaningを含む。
 - Review JSONのartifact固有Schemaに定義された必須check・監査証跡を省略しない。
+- Workflow 20の実行契機は、ユーザーによる明示実行またはWorkflow 00からの呼出しに限定する。Workflow 10から暗黙に起動しない。
 
 # 1. 目的と責務
 
@@ -72,6 +73,16 @@ Review_<Entry_ID>_20_<Review_Seq>.json -> schemas/review_20_analysis.schema.json
 - Review Seq採番、対象SHA / blob固定、Verdict集約、save-time Schema validation、append-only書込は `src/reviewing/review_writer.py` に委譲する。
 - Reviewerが作成するのはartifact固有のsemantic bodyのみとし、`schema_version / entry_id / artifact / review_seq / target / verdict` はPythonが付与する。
 - 新規Review cycleは `schema_version=1.1` とする。Schemaは既存 `1.0` Reviewのread compatibilityを維持し、`1.1` では semantic completeness gateを追加必須とする。
+
+## 2.3. 実行契機
+
+Workflow 20を開始してよいのは次のいずれかの場合だけとする。
+
+1. ユーザーがWorkflow 20の単独実行を明示的に指示した場合。
+2. Workflow 00がE2E状態分類に基づきWorkflow 20の実行を決定し、呼び出した場合。
+
+- Workflow 10単独実行がReview-readyへ到達したこと自体は、Workflow 20の実行契機ではない。
+- Workflow 20はFinding確定後にWorkflow 10を自動起動しない。Workflow 00配下のE2E実行では制御をWorkflow 00へ戻し、correction開始と再Review順序はWorkflow 00が決定する。
 
 # 3. Review開始条件
 
