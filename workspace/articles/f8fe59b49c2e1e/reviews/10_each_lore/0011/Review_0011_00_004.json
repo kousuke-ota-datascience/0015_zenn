@@ -1,0 +1,61 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1884年伝播は研究史上の推測、1887年刊行は書誌的に確認可能な層として分離されている。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-001〜009の既存記述について、SRC-001本文・抄録、NDL書誌/要約、SRC-004抄録との対応を再確認し、数値・書誌・認識論的留保の重大な不一致は認めない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "1884年起源・初期全国流行は1995年研究による研究史整理、1887年『妖怪玄談』は復刻書誌、2004/2025年資料は後代資料として区別され、一次直接確認へ過度に昇格していない。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001注(1)が、こっくりさんには20種以上の別称・細かな実施法差があり、同名で呼ばれるdowsing用例を本稿の『こっくりさん』から明示的に除外するというentry/variant境界を示すが、現Evidenceにはこの除外境界が保持されていない。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は学術論文、SRC-002はNDL/青空文庫連携の復刻書誌、SRC-003はNDL書誌・要約、SRC-004は学会会議録で、用途とsource_typeは概ね整合する。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "初期三脚型、文字盤型、1884年起源整理、1992年調査、流行期区分、1887年書誌、現代継続、力学モデル、競合作用機序はいずれも参照Sourceで追跡可能。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "1884年の具体経路、時代区分のパイロット性、学齢期年齢境界の6〜18/7〜18併存、霊的作用機序の競合をEvidence層で保持している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0011",
+  "findings": [
+    {
+      "category": "salient_evidence_completeness",
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "SRC-001注(1)から、別称・細部差の存在とdowsing同名用例の明示的除外をEvidenceとして追加し、Content側でも必要最小限のentry/variant境界として保持する。",
+      "impact": "名称だけを基準に後続資料を取り込むと、占い・交霊儀式としてのEntryとdowsingを同一variant群へ混入させる余地が残り、variant識別とentry scopeの再現性を損なう。",
+      "rationale": "SRC-001注(1)は『こっくりさん』に20種以上の別称と実施法差があることに加え、木棒・針金で水脈や金属を探すdowsingを『こっくりさん』と呼ぶ用例がある一方、本稿ではそれを対象に含めないと明示する。現EVD-002は地域・時代による盤面・呼出し句・終了法の差を留保するが、同名でも別実践として除外されるdowsingという境界は固定していない。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "summary": "同名のdowsing用例を除外するSource上のentry境界がEvidence化されていない"
+    }
+  ],
+  "review_notes": "docs/legacyは参照していない。SRC-001はJ-STAGE本文PDFをページ画像でも確認し、SRC-002/003はNDL、SRC-004はJ-STAGE抄録で独立照合した。",
+  "review_seq": 4,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_00_sources.json",
+    "blob_sha": "c503e65217d5d2b3e0179085fc8667fbae35e6ba",
+    "commit_sha": "298abce61ca72c471ec059a7a91e2172f6b459d5",
+    "reviewed_at": "2026-09-21T03:34:30Z"
+  },
+  "verdict": "Moderate"
+}

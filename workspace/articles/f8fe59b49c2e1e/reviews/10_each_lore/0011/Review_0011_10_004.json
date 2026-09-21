@@ -1,0 +1,172 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "EVD-001〜009のうちContent化対象となる主要意味はCNT-001〜007で支持され、調査・流行史・作用機序の留保も強められていない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "具体的な実施手順・型差・歴史整理・調査結果・競合作用機序をsummaryから意味を失わず再構成できる。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-001〜009をEvidence母集団として監査し、Evidence層に存在する主要な手順・歴史・調査・継続・作用機序はContent/variant/uncertaintyへ対応する。Review 00で検出したSource→Evidence omissionは本checkでSourceから直接補完していない。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12でLOSS/CONFLICTなし。主体、対象、trigger、機序、逐次構造、終端、不確実性、variant境界を復元可能。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "coverage_refs 7件のsalient meaningをsummary narrative/structureだけから再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "伝播経路、型移行、時代区分、学齢期年齢境界、作用機序の不確実性をContent/summaryで保持する。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "初期三脚型、後代文字盤・硬貨型、地域・時代差を明確に分離し、後代設定を初期形へ遡及していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0011",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryはScoped初期三脚型の手順、1880年代整理、作用対象/機序の競合を保持し、D07〜D21およびVersion Scopeの主要な分析可能性をContent読解時と実質的に変えない。",
+      "status": "PASS"
+    },
+    "blind_decode": "こっくりさんは、複数人が器具や硬貨に手・指を添え、霊的存在を呼び出して質問し、その運動を回答として解釈する占い・交霊遊戯である。初期三脚型では細竹を三脚状に組み、盆や風呂敷をかぶせて手を置き、揺れ方をYes/No等へ対応させる。伝承上の作用機序は、霊が器具へ直接作用する説明と、参加者の精神へ働きかけ腕を介して器具を動かす説明が競合する。後代の文字盤型では五十音・数字等を書いた紙上の硬貨に複数人が指を置き、移動先の文字を連ねて答えを読む。研究史上は1884年に米国から日本へ伝播し1880年代後半に全国的流行があったと整理されるが、具体的伝播経路や単一起点は確定しない。1992年調査では知識・体験が主に学齢期の集団実践に集中し、学齢期の境界は同一論文内で6〜18歳と7〜18歳が併存する。1930〜45年、1946〜73年、1974〜92年の時代区分と1970年代中頃以降の再流行は示唆段階の研究モデルである。後代研究では方法や名称を変えながら現代まで続くとされる。儀式は器具準備・接触・招請・質問・運動・解釈の順に進み、終端は質問への回答獲得である。共通の終了・回避法は確定せず、初期三脚型、後代文字盤・硬貨型、地域・時代差を区別する。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "細竹三脚、盆/風呂敷、手を置く、霊を呼ぶ、質問し揺れをYes/No等で読む。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "初期三脚型の器具構成・接触・招請・質問・Yes/No等の回答手順。"
+      },
+      {
+        "blind_reconstruction": "五十音・数字等の紙と硬貨を使い、複数人が指を置き、移動先の文字を連ねて回答を読む。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "後代文字盤・硬貨型の五十音/数字・複数人接触・文字列による回答形成。"
+      },
+      {
+        "blind_reconstruction": "1884年伝播・1880年代後半全国流行と、具体経路/単一起点の未確定性。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "1884年米国からの伝播・1880年代後半全国流行という研究史整理と経路不確実性。"
+      },
+      {
+        "blind_reconstruction": "学齢期の集団実践中心と年齢境界の本文内差を明示。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "1992年調査で知識・体験が学齢期・集団実践に集中し、6〜18/7〜18の境界差がある。"
+      },
+      {
+        "blind_reconstruction": "三期区分と再流行を示唆段階の研究モデルとして保持。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "1930〜45安定、1946〜73低迷、1974〜92興隆という未確定モデルと1970年代中頃以降再流行。"
+      },
+      {
+        "blind_reconstruction": "方法や名称を変えながら現代まで続くと再構成。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "明治以降、方法・名称を変えながら現代まで継続するという後代整理。"
+      },
+      {
+        "blind_reconstruction": "二つの霊的作用機序を競合したまま保持。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "霊の直接物体作用説と精神・腕を介する間接作用説の競合。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "複数の参加者と、呼び出される霊的存在。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "複数参加者と霊的存在。"
+      },
+      {
+        "blind": "直接作用説では三脚等の器具、間接作用説では参加者の精神・腕。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "CNT-007が同じ競合対象を保持。"
+      },
+      {
+        "blind": "器具を準備し、参加者が触れ、霊的存在を招請して質問する。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "CNT-001/002の開始条件と一致。"
+      },
+      {
+        "blind": "伝承上は呼び出された霊的存在。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "初期/後代いずれも霊的存在を招請する構造。"
+      },
+      {
+        "blind": "三脚の揺れ又は硬貨の移動を回答として読む。作用機序は二説競合。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "CNT-001/002/007と一致。"
+      },
+      {
+        "blind": "準備・接触→招請→質問→器具運動→回答解釈。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "Contentの儀式手順と一致。"
+      },
+      {
+        "blind": "逐次的儀式であり、歴史的には初期三脚型から後代文字盤型へ展開し、現代まで継続。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "CNT-001/002/006とvariant群が同じ時間構造を保持。"
+      },
+      {
+        "blind": "器具/文字盤を準備し、参加者が触れ、霊を呼び、質問し、動きを読む。地域・時代で呼出し句/終了法等に差。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "Contentとuncertaintyで保持。"
+      },
+      {
+        "blind": "共通の終了・回避法は不明。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "Contentも統一された終了・回避法を確定しない。"
+      },
+      {
+        "blind": "質問に対する回答を得る。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "CNT-001/002の主要終端と一致。"
+      },
+      {
+        "blind": "伝播経路、型の移行、年齢境界、流行期モデル、作用機序、地域手順差が未確定。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "uncertaintiesの主要項目を再構成できる。"
+      },
+      {
+        "blind": "初期三脚型、後代文字盤・硬貨型、地域・時代差の派生群。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001/002/003と一致。"
+      }
+    ],
+    "reference_story": "現Content layerでは、初期三脚型の具体手順、後代文字盤・硬貨型の具体手順、1884年伝播/1880年代後半全国流行という研究史整理、1992年広域調査の学齢期・集団実践、未確定の流行期モデル、明治以降現代までの継続、霊的作用機序の直接作用説/精神・腕媒介説の競合が主要意味として保持される。VAR-001を初期形、VAR-002を後代主要型、VAR-003を地域・時代差の派生群として分け、伝播経路、三脚型から文字盤型への移行、時代区分、年齢境界、作用機序の不確実性を閉じない。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Blind Decodeはsummary.narrative + summary.structureだけを読んだ段階で固定した。Golden Reference 0180は意味保存粒度の校正にのみ用い、0011の内容・variant・Dimension判定を転用していない。",
+  "review_seq": 4,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_10_contents.json",
+    "blob_sha": "622f50d7deee54610a557640f8d5c25d450d16f9",
+    "commit_sha": "d8c1c4ec786599721683abef77e16dc0976268dd",
+    "reviewed_at": "2026-09-21T03:34:30Z"
+  },
+  "verdict": "Pass"
+}
