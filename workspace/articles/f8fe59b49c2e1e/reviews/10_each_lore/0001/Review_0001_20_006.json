@@ -1,0 +1,142 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Scoped Contentだけから独立再構成するとD07は襲撃・暴行リスクまでは支持できるが、STRANGER_THREATの都市的・見知らぬ他者という意味は再現できない。",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "D12対象→D13攻撃→D15最終帰結不明の因果列はScoped Contentと整合し、D11/D16もUnknownとして過剰補完を避けている。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "D07がScoped Contentにない『見知らぬ他者への不安』を導入する。D17もScope外CNT-007をU判定のtraceに用いるため、Scoped Content onlyの原則から外れる。",
+      "status": "FINDING"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "CNT-004から対象=小中学生、作用=襲う、具体的最終帰結=未確定という列を一貫して保持し、武器・重傷・死亡等を補っていない。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "Scope内はL1のみとし、6月の登校拒否等をL3へ流用していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19はSCHOOL_YOUTHをIndirect、REGIONALを春の京都・各地拡散で保持し、公開媒体の存在だけから全国的大衆へ昇格していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "資料不足をNO_ONE_KNOWSへ変換せずUを維持する。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "岐阜・京都等の流通史上の実在地をScoped lore内部の特定地点因果へ昇格せずA1に留めている。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D07 primary=STRANGER_THREATはコード定義上『都市空間の見知らぬ他者への不安』を要するが、Scoped Contentは口の裂けた女性が小中学生を襲うという危害命題までしか保持しない。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "全国的に広がった怪異伝承としてのmacro_categoryと物語・伝説のentry_typeはEntry全体のContentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "D07のSTRANGER_THREATは、現在のScoped Contentでは意味そのものが不足しており、I statusでも支持上限を越える。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "D07の『見知らぬ女性／曖昧な対人危険』はCNT-004から再現できない。D17もexcluded VAR-003のCNT-007をDimension traceに用いている。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "D07 status=Iであっても、推論元となるScoped Contentに『見知らぬ他者』の意味がないため支持強度では救済できない。他の主要statusは概ね妥当。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "検出事項は既存D07/D17コードまたはU判定、trace修正で表現でき、新規taxonomyは不要。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "VAR-001とCNT-001〜004をScoped Contentとして限定し、1978年末の先行候補、後代VAR-002/003、6月以降の社会反応をScope外として明示している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0001",
+  "findings": [
+    {
+      "category": "content_layer_bypass",
+      "content_refs": [
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D07"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "現Scopeを維持するならD07をScoped CNT-004だけから再判定し、襲撃危険を表すcodeを中心にする。STRANGER_THREATを保持する場合は、Sourceの後代専門家解釈をEvidence→Contentへ明示的に通し、その解釈をVAR-001 AnalysisのScopeに含める妥当性を別途示す。",
+      "impact": "D07のprimary codeが独立再構成不能で、Content→Analysisの意味論的traceが切れている。Scoped ContentだけならD07.ICT.ABDUCTION_ASSAULT相当の襲撃危険は支持できるが、STRANGER_THREATをprimaryにする根拠は不足する。",
+      "rationale": "コードブック上D07.ICT.STRANGER_THREATは『都市空間の見知らぬ他者への不安』である。D07が参照するCNT-004は『口の裂けた女性が小中学生を襲う』という危害型の噂を保持するだけで、その女性が見知らぬ他者であること、都市空間での不安であること、曖昧な対人危険を投影することは表現しない。現rationale/manifestationの『日常社会に現れる見知らぬ女性』『曖昧な対人危険』はScoped Contentから再現できない。",
+      "severity": "Moderate",
+      "summary": "D07.ICT.STRANGER_THREATがScoped Contentにない『都市空間の見知らぬ他者への不安』をAnalysisへ導入している。"
+    },
+    {
+      "category": "content_layer_bypass",
+      "content_refs": [
+        "CNT-007"
+      ],
+      "dimension_refs": [
+        "D17"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "D17のcontent_refsからCNT-007を外し、Scoped CNT-001〜004に回避・制御情報が存在しないためUとする形へtraceを修正する。後代回避法はversion_scope.notes等の境界説明に限定する。",
+      "impact": "D17のcode/statusを変える必要性は低いが、Analysisの監査traceがScope外Contentに依存する。",
+      "rationale": "version_scope.content_refsはCNT-001〜004であり、CNT-007はVAR-003の後代回避法でScope外である。D17の最終status=U自体は妥当だが、rationaleとcontent_refsがCNT-007を用いて『後代回避法はあるが初期は不明』と正当化しているため、Review 20のScoped Content onlyルールに反する。",
+      "severity": "Minor",
+      "summary": "D17のUnknown判定がVersion Scope外のCNT-007を直接traceしている。"
+    }
+  ],
+  "review_notes": "Review 20はVersion ScopeのCNT-001〜004だけから独立再構成した。Source/Evidenceは支持強度とupstream omissionの確認にのみ用い、Evidence固有detailをsense-making modelへ追加していない。",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "model": "Scoped CNT-001〜004から再構成できる最小モデルは、1978年末頃の岐阜で噂が始まったとの後代整理と、1979年1〜4月の新聞・雑誌アンカーを通じて、『口裂け女』という名前付き女性が小中学生を襲うという危害命題が子ども間で反復され、複数地域・印刷媒体へ広がったというもの。直接支持されるのは対象=子ども、作用=襲撃、負の帰結方向、L1、地域拡散・媒体再提示であり、接触条件、存在論、最終帰結、回避法、具体的エピソード時間構造、都市空間の見知らぬ他者への不安まではScoped Contentから固定できない。",
+    "notes": "現AnalysisはD02/D04/D05/D11/D16/D19等で前版よりScope整合が改善しているが、D07とD17のtraceにはなおScoped Content only原則からの逸脱が残る。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0001_kuchisake_onna/0001_20_analysis.json",
+    "blob_sha": "420e8452c45afba643eab1c22c054141ea7ca96e",
+    "commit_sha": "b61ce989356157f4ac45a5396f75d10efce558a6",
+    "reviewed_at": "2026-09-21T03:36:02Z"
+  },
+  "verdict": "Moderate"
+}
