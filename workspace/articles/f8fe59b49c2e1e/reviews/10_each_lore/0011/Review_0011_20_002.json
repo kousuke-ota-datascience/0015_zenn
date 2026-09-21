@@ -1,0 +1,182 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Scoped Contentから独立再構成するとD12の直接対象は三脚器具側となり、D08も現行値を再現できない。",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "D12実践者→D13物体操作→D15知識獲得の列で、D13が直接作用する対象とD12が一致していない。",
+      "status": "FINDING"
+    },
+    "content_layer_bypass": {
+      "notes": "Source/Evidenceにしかないdetailを直接Analysisへ入れるEvidence-only bypassは確認しない。D08の問題はContentには存在するがScope外のCNT-006を取り込むversion-scope leakageとして別Findingにした。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D13=ENV_OBJECT_MANIPULATIONの直接対象は三脚器具であり、D12=FOC.PRACTITIONERは規則上不整合。D15=回答/知識獲得はその後段帰結としては整合しうる。",
+      "status": "FINDING"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみで、Scope外の社会効果やX Evidenceを追加していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19は公開媒体の存在だけでなくCNT-003の「1880年代後半の全国流行」というContent claimに基づくため、publicabilityとの混同ではない。問題はclaimの確度に対するstatus Dの強さ。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "D20はUで、資料不足をNO_ONE_KNOWSへ短絡していない。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "初期儀式は特定実在地点・制度・事件を必須アンカーとせずA0判定はScopeと整合する。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D12はD13主作用の直接対象であるべきだが、D13=物体操作に対しD12=実践者となっている。またD08のINHERITED_SAYINGはScoped Content内で支持されない。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "macro_category=オカルト・超常、entry_type=儀式・遊戯型伝承はScoped Contentの中心実践と整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "EVD-003自身が1884起源・1880年代後半流行を「ある程度推測可能」とするのにD01/D19をDとしている。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "D08はversion_scope.content_refsに含まれないCNT-006を参照し、Scoped Contentだけでは追跡できない。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "D01/D19は研究史上「推測可能」とされた起源・全国流行整理にDirect(D)を付与しており、D13の直接物体操作もContent上は少なくとも推論を含む。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "D12にはOBJECT_PRODUCT等の既存codeがあり、今回の不整合はtaxonomy欠落ではなく適用問題。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "ScopeはVAR-001/CNT-001,CNT-003に限定されるが、D08がScope外CNT-006とEVD-007を根拠に取り込む。",
+      "status": "FINDING"
+    }
+  },
+  "entry_id": "0011",
+  "findings": [
+    {
+      "category": "causality",
+      "content_refs": [
+        "CNT-001"
+      ],
+      "dimension_refs": [
+        "D12",
+        "D13",
+        "D15"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "Scoped ContentだけからD12→D13→D15を再構成する。D13=物体操作を維持する場合はD12を器具対象（D12.OTD.OBJECT_PRODUCT等）へ再裁定し、参加者の知識獲得はD15に残す。別のD13を採る場合もD12がその主作用の直接対象になるよう同時に再判定する。",
+      "impact": "作用対象・作用機構・帰結の三層が混線し、D12/D13/D15を使う比較分析の中心因果モデルを誤らせる。",
+      "rationale": "Coding ruleはD12を「D13で記述する主作用が直接向けられる対象」とする。現行D13はD13.PHY.ENV_OBJECT_MANIPULATIONで、Scoped CNT-001の作用表現は三脚の揺れという器具運動であるのに、D12はD12.FOC.PRACTITIONERをPrimaryとしている。codebookにはD12.OTD.OBJECT_PRODUCTが存在するため、D13を物体操作として維持するなら直接対象は三脚器具側へ再裁定すべきである。D15の回答・知識獲得は参加者に生じる下流帰結として分離できる。",
+      "severity": "Major",
+      "summary": "D12-D13-D15の中心因果鎖で「直接作用対象」と「物体操作」が不一致"
+    },
+    {
+      "category": "version_scope",
+      "content_refs": [
+        "CNT-001",
+        "CNT-006"
+      ],
+      "dimension_refs": [
+        "D08"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-007"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "D08をCNT-001/CNT-003だけで再判定し、支持できなければUとする。CNT-006を用いるならversion_scope自体を明示的に再定義する必要がある。",
+      "impact": "後代の継続・変容情報が初期Versionの意味形成契機へ逆流し、version間比較を汚染する。",
+      "rationale": "version_scope.content_refsはCNT-001とCNT-003のみで、VAR-002/003を明示除外している。それにもかかわらずD08はCNT-006/EVD-007の「明治以降、方法や名称を変えながら伝承」を根拠としてD08.CLM.INHERITED_SAYINGを置く。Scoped Content内には「昔からそう言うこと自体が出発点」という当該codeの直接根拠がない。",
+      "severity": "Moderate",
+      "summary": "D08が初期三脚型Scope外のCNT-006を取り込んでいる"
+    },
+    {
+      "category": "status_reasoning",
+      "content_refs": [
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D01",
+        "D19"
+      ],
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-006"
+      ],
+      "finding_id": "F003",
+      "fix_direction": "D01/D19をIへ下げるか、1884成立・全国流通を直接固定する同時代/一次Evidenceを追加する。D01では1887年の確認可能な書誌と1884年起源推定を明確に分離する。",
+      "impact": "生成年代と社会的流通範囲を確定事実として扱うことになり、Evidence confidence ceilingと下流集計の信頼性を損なう。",
+      "rationale": "CNT-003はSRC-001研究史を要約したもので、EVD-003は1884年起源と1880年代後半全国流行を「ある程度は推測可能」とする。EVD-006が直接固定するのは1887年『妖怪玄談』の刊行書誌であり、1884年の成立や1880年代後半の全国一般流通そのものではない。したがってD01.G1やD19.MAS.NATIONAL_PUBLICのcode自体を維持できても、status Dは支持強度を上回る。",
+      "severity": "Moderate",
+      "summary": "D01/D19のDirect statusが起源・全国流行Evidenceの確度を超えている"
+    },
+    {
+      "category": "status_reasoning",
+      "content_refs": [
+        "CNT-001"
+      ],
+      "dimension_refs": [
+        "D13"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "finding_id": "F004",
+      "fix_direction": "現Scoped ContentのままならD13 statusをIへ再評価する。Review 00で競合する作用機序Evidenceを補完した後、そのContent反映を待ってD13 code/statusを再裁定する。",
+      "impact": "D13のdirectnessが過大になり、D12直接対象の誤判定とも結合して中心因果鎖を固定しすぎる。",
+      "rationale": "CNT-001は霊的存在を招請し、質問後の三脚の揺れを回答として読む儀式を記述するが、「霊が物体を直接操作する」という機序を明示的に確定してはいない。現行D13 rationaleはこの因果機序を直接事実として扱いstatus Dとしているため、少なくともI相当の推論を含む。",
+      "severity": "Moderate",
+      "summary": "D13の「霊が物体を操作する」をDirectとする根拠がScoped Content上で強すぎる"
+    }
+  ],
+  "review_notes": "Analysisはversion_scopeで指定されたCNT-001/CNT-003とVAR-001を主事実源として独立再構成した。Evidenceは支持強度確認にのみ用い、Source/Evidence-only detailをAnalysisへ直接導入していない。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D05",
+      "D08",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D19"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-003",
+      "EVD-006"
+    ],
+    "model": "初期三脚型では、参加者が細竹三脚を準備して手を添え、霊的存在を招請して質問し、三脚の揺れを事前対応したYes/No等として読む。Scoped Contentから直接再構成できる中心因果は、儀式実施→器具の運動→運動の意味解釈→回答・知識獲得である。したがってD13を物体操作と置くなら直接作用対象D12は三脚器具側で、参加者は下流の回答受領者である。1884年導入・1880年代後半全国流行は研究史上の推測を含むためstatusはEvidence確度を超えない必要がある。初期Scopeでは具体的な終了法、流通媒体、特権的情報保持者は確定しない。",
+    "notes": "中心儀式モデル自体は再構成可能だが、現行D12/D08/status directnessに不整合がある。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_20_analysis.json",
+    "blob_sha": "923a7bbcd9801f08324050a448f94c0d87e06af4",
+    "commit_sha": "92725e87a26568eb7a360292ca0bf79ad4211b77",
+    "reviewed_at": "2026-09-21T01:37:00Z"
+  },
+  "verdict": "Major"
+}

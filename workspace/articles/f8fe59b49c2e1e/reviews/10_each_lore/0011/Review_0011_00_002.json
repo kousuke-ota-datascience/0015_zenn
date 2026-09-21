@@ -1,0 +1,92 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1884年伝播は研究史上の推測、1887年刊行は書誌確認として分離され、最古形を一次資料直接確認済みとはしていない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-004の学齢期年齢境界がSRC-001結語の「6〜18歳」に対して「概ね7〜18歳」となっており、数値転記が一致しない。",
+      "status": "FINDING"
+    },
+    "primary_source_relation": {
+      "notes": "1884年起源・初期流行をSRC-001の研究史整理として扱い、1887年『妖怪玄談』はdirect_derivative、後代研究はindirect/not_applicableとして区別している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001注(2)が明示する霊的作用機序の競合説（器物への直接作用 vs 人の精神・腕への間接作用）がEvidence化されておらず、D13の機構判定に影響するsalient情報が欠落している。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "SRC-001〜004の種別・書誌・役割は対象用途に対して概ね妥当で、研究論文・復刻/書誌・後代研究を区別している。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "既存Evidenceの主要な手順・流行史・調査・書誌・力学説明は各Sourceの該当箇所で追跡可能。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "EVD-005は地域差への留保は持つが、SRC-001結語の「パイロット調査」「時代区分は確定されたものではない」というより強い認識論的留保を保存していない。",
+      "status": "FINDING"
+    }
+  },
+  "entry_id": "0011",
+  "findings": [
+    {
+      "category": "evidence_integrity",
+      "evidence_refs": [
+        "EVD-004"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "EVD-004を6〜18歳へ訂正し、下流のCNT-004とsummaryの該当年齢境界も整合させる。",
+      "impact": "CNT-004およびsummaryへ同じ7〜18歳が伝播し、調査結果の再現性を損なう。",
+      "rationale": "SRC-001結語は知識の大部分が学齢期「6〜18歳」に同年代の友人・同級生から伝播されたと記すが、EVD-004は「概ね7〜18歳」としている。これは解釈差ではなく数値境界の転記不一致である。",
+      "severity": "Minor",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "summary": "EVD-004の学齢期年齢境界が原文と1年ずれている"
+    },
+    {
+      "category": "salient_evidence_completeness",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-008"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "SRC-001注(2)から競合する霊的作用機序を独立Evidenceとして追加し、どちらか一方を確定せず不確実性を保持したままContent/Analysisへ反映する。",
+      "impact": "Content/Analysisが「霊が器具を直接動かす」モデルへ過度に固定されうる。特にD12-D13の作用対象・作用機構とstatusの判定が変わり得る。",
+      "rationale": "SRC-001注(2)は、霊的存在が硬貨・三脚・腕などの物体へ直接作用する説と、人間の精神へ働きかけ身体（腕）を間接操作する説を区別する。現Evidenceは実施手順（EVD-001/002）と現代の力学説明（EVD-008）を保持する一方、この伝承内部の競合する作用機序を保持していない。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "summary": "SRC-001に明示された霊的作用機序の競合説がEvidence化されていない"
+    },
+    {
+      "category": "uncertainty_preservation",
+      "evidence_refs": [
+        "EVD-005"
+      ],
+      "finding_id": "F003",
+      "fix_direction": "EVD-005のcontent/uncertaintyに「示唆」「パイロット」「時代区分は未確定」を明示し、下流表現も同じ確度へ揃える。",
+      "impact": "下流Contentで「興隆期が確認された」と確定表現へ強化され、流行史の確度が過大評価される。",
+      "rationale": "SRC-001結語は1930〜45/1946〜73/1974〜92を「示唆された」とし、さらに本研究をパイロット調査、提唱した時代区分を「確定されたものではない」と明記する。EVD-005のuncertaintyは全国一様性への留保にとどまり、この認識論的強度を保存していない。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "summary": "EVD-005が流行期区分の「未確定」という原文留保を弱めている"
+    }
+  ],
+  "review_notes": "docs/legacyは参照していない。SRC-001のPDF原文と現canonical Source/Evidenceの対応を独立に確認した。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_00_sources.json",
+    "blob_sha": "8dbb81d081cf4a6dbb4fdf057762908279f0ba60",
+    "commit_sha": "86c396ecc051b7467416fcfe8ce762a8ab9cf689",
+    "reviewed_at": "2026-09-21T01:37:00Z"
+  },
+  "verdict": "Moderate"
+}
