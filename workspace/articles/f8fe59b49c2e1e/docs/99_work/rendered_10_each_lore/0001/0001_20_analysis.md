@@ -8,7 +8,7 @@
 
 ## Version Scope
 
-1979年初頭〜同年春に確認できる最小安定共有核。日常社会の中に『口が裂けた女性（口裂け女）』が出現し、主として小中学生・子どもを脅かし／襲うとされる遭遇・危害型の噂を分析対象とする。定型質問、二段階の正体提示、特定の服装・武器・超人的能力、ポマード・べっこう飴・特定回答等の回避規則、固定由来譚などは含めない。
+1979年初頭〜同年春に確認できる最小安定共有核。『口が裂けた女性（口裂け女）が存在し、主として小中学生・子どもを脅かし／襲う』という危害型の噂命題を分析対象とする。接触条件や具体的な遭遇列、定型質問、二段階の正体提示、特定の服装・武器・超人的能力、ポマード・べっこう飴・特定回答等の回避規則、固定由来譚などは含めない。
 
 - Included variants: VAR-001
 - Excluded variants: VAR-002, VAR-003
@@ -27,20 +27,20 @@
 
 **Manifestation:** 1970年代末に子ども社会で可視化した現代伝承として扱う。新聞掲載日そのものを起源日とはしない。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
-### D02 — I
+### D02 — U
 
-- Primary: D02.ORL.PEER_ORAL (parent: D02.ORL)
+- Primary: -
 - Secondary: -
-- Content refs: CNT-001
-- Evidence refs: EVD-005, EVD-007
+- Content refs: CNT-001, CNT-002
+- Evidence refs: EVD-001, EVD-007
 
-**Rationale:** 後代専門家整理は、1978年末頃の岐阜で子ども同士の噂として流通していたことを示す。原採録ではないためDirectとはしない。
+**Rationale:** 1978年暮れごろの噂開始は後代整理で確認できるが、その最初の提示・流通媒体は固定できない。SRC-005の整理では1979年初めの新聞報道後に子どもたちの間で反復されたとされるため、子ども間口承を最初の媒体と断定しない。
 
-**Manifestation:** 現時点で最古く再構成できる実流通回路は新聞ではなく子ども・同世代間の対人口承である。
+**Manifestation:** 最初の実流通媒体はUnknownとして保持する。新聞報道後の子ども間反復はD03の流通媒体として扱う。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D03 — I
 
@@ -53,33 +53,33 @@ Taxonomy gap: False
 
 **Manifestation:** 子ども同士の口承を中心に、新聞・雑誌が噂の存在と拡大を広域社会へ再提示する複合媒体構造を持つ。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D04 — I
 
-- Primary: D04.VAR.ACCRETION (parent: D04.VAR)
-- Secondary: D04.MIG.MEDIUM_SHIFT (parent: D04.MIG), D04.VAR.ORAL_VARIATION (parent: D04.VAR)
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-006, CNT-007
-- Evidence refs: EVD-002, EVD-007, EVD-008
+- Primary: D04.MIG.MEDIUM_SHIFT (parent: D04.MIG)
+- Secondary: -
+- Content refs: CNT-002, CNT-003, CNT-004
+- Evidence refs: EVD-001, EVD-002, EVD-003
 
-**Rationale:** 子ども間の反復で属性・能力・弱点が追加されたとの専門家整理があり、口承から新聞・雑誌への媒体移行も確認できる。
+**Rationale:** Scoped Contentでは、1979年1月の新聞記事所在と3〜4月の雑誌記事見出しを確認でき、同じ口裂け女噂が複数の印刷媒体へ移って再提示されている。後代VAR-003の属性・能力・弱点の増補はScope外なので、ACCRETIONやORAL_VARIATIONの判定根拠には用いない。
 
-**Manifestation:** 新しい能力・弱点・ルールを付け足す増補に、口承変異と媒体移行が重なる。
+**Manifestation:** 初期共有核の噂が新聞・雑誌へ媒体移行して再提示される構造として扱う。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
-### D05 — I
+### D05 — D
 
-- Primary: D05.HRS.SCHOOL_WORK_HEARSAY (parent: D05.HRS)
-- Secondary: D05.PRP.FACT_CLAIM (parent: D05.PRP)
-- Content refs: CNT-001, CNT-004
-- Evidence refs: EVD-003, EVD-007
+- Primary: D05.PRP.FACT_CLAIM (parent: D05.PRP)
+- Secondary: -
+- Content refs: CNT-004
+- Evidence refs: EVD-003
 
-**Rationale:** 子ども・学校・塾圏で共有される噂として流通し、1979年4月の記事見出しでは危険な女性が小中学生を襲うという事実主張型命題として再提示される。
+**Rationale:** 1979年4月の記事見出しが『口の裂けた女性が小・中学生を襲う』という事実命題を直接提示する。Scoped Contentには学校・塾圏での伝聞形式を直接保持する記録がないため、SCHOOL_WORK_HEARSAYは付与しない。
 
-**Manifestation:** 完成した一人称怪談ではなく、子ども社会の伝聞と危険主体の存在主張が結びつく。
+**Manifestation:** 『口の裂けた女性が小中学生を襲う』という危険主体の存在・作用を事実主張型の命題として提示する。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D06 — U
 
@@ -92,7 +92,7 @@ Taxonomy gap: False
 
 **Manifestation:** 報道側・研究側が『噂』と呼ぶことを、伝承自身の真実性提示へ変換しない。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D07 — I
 
@@ -105,7 +105,7 @@ Taxonomy gap: False
 
 **Manifestation:** 曖昧な対人危険を『口裂け女』という共有可能な脅威対象として切り出す。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D08 — I
 
@@ -118,7 +118,7 @@ Taxonomy gap: False
 
 **Manifestation:** 共同体内で繰り返されること自体が、通常の街路や見知らぬ女性を危険として再解釈させる手掛かりになる。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D09 — I
 
@@ -131,7 +131,7 @@ Taxonomy gap: False
 
 **Manifestation:** 無名の危険を『口裂け女』と呼べる対象にし、その女性主体が子どもを襲うモデルとして共有する。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D10 — U
 
@@ -144,20 +144,20 @@ Taxonomy gap: False
 
 **Manifestation:** 危険主体は名前付き女性像として共有されるが、その存在論は初期Scopeでは未決定のまま残る。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
-### D11 — I
+### D11 — U
 
-- Primary: D11.PAS.SPONTANEOUS_SELECTION (parent: D11.PAS)
+- Primary: -
 - Secondary: -
 - Content refs: CNT-004
 - Evidence refs: EVD-003
 
-**Rationale:** Scope内では質問への回答・儀式・場所進入などの再現的発動条件を固定できず、子どもが本人の選択によらず危険主体へ遭遇する構造として読むのが最小仮定である。
+**Rationale:** Scoped Contentが直接保持するのは『口の裂けた女性が小中学生を襲う』という危害命題であり、接触・選択・進入・回答などの発動条件は固定できない。条件が記録されていないことから偶発遭遇を推定しない。
 
-**Manifestation:** 日常生活の中で偶然に危険主体へ遭遇することが因果系への入口となる。
+**Manifestation:** 初期共有核の発動条件はUnknownとして保持する。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D12 — D
 
@@ -170,7 +170,7 @@ Taxonomy gap: False
 
 **Manifestation:** 個々の主人公ではなく、子どもという属性群が危険対象として一般化される。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D13 — D
 
@@ -183,7 +183,7 @@ Taxonomy gap: False
 
 **Manifestation:** 口裂け女は子どもへ危害を加える攻撃主体として提示される。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D14 — D
 
@@ -196,7 +196,7 @@ Taxonomy gap: False
 
 **Manifestation:** 遭遇・襲撃は危険な出来事として意味付けられる。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D15 — U
 
@@ -209,20 +209,20 @@ Taxonomy gap: False
 
 **Manifestation:** 危険の存在は固定できる一方、攻撃後の最終帰結領域は未確定のまま保持する。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
-### D16 — I
+### D16 — U
 
-- Primary: D16.EVT.SINGLE_EPISODE (parent: D16.EVT)
+- Primary: -
 - Secondary: -
 - Content refs: CNT-004
 - Evidence refs: EVD-003
 
-**Rationale:** 初期Scopeでは一回の遭遇と襲撃として編成され、遅延・周期・長期進行を示す要素は固定されていない。
+**Rationale:** Scoped Contentは一般的な危害命題を示すだけで、遭遇から襲撃までが一続きの単一エピソードで完結するという出来事列を固定できない。遅延・反復が確認できないこともSINGLE_EPISODEの正証拠にはしない。
 
-**Manifestation:** 一度の遭遇エピソード内で危険が成立する構造として読む。
+**Manifestation:** 初期共有核の因果時間構造はUnknownとして保持する。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D17 — U
 
@@ -235,7 +235,7 @@ Taxonomy gap: False
 
 **Manifestation:** 後代の攻略法を初期形へ遡及せず、回避・制御方式はUnknownとして保持する。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D18 — I
 
@@ -248,20 +248,20 @@ Taxonomy gap: False
 
 **Manifestation:** Scoped Versionでは伝承内部の襲撃作用のみを保持し、受容そのものへの怪異作用やScope内社会制度作用は固定しない。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
-### D19 — D
+### D19 — I
 
 - Primary: D19.KIN.SCHOOL_YOUTH (parent: D19.KIN)
 - Secondary: D19.LOC.REGIONAL (parent: D19.LOC)
-- Content refs: CNT-003, CNT-004
-- Evidence refs: EVD-002, EVD-003
+- Content refs: CNT-001, CNT-003, CNT-004
+- Evidence refs: EVD-002, EVD-003, EVD-007
 
-**Rationale:** 小中学生が主要受容集団であることを同時代見出しで確認でき、1979年3月には京都、4月には『各地』への広がりも確認できる。
+**Rationale:** 子どもたちの間で反復されたという後代専門家整理から、学校・若者集団での流通をIndirectに支持する。一方、1979年3月の京都到達と4月の『各地』への拡散は同時代誌面見出しから直接確認できる。被害対象が小中学生であること自体を流通集団の直接証拠にはしない。
 
-**Manifestation:** 学校・若者集団を中核として、春段階で複数地域へ広がる。
+**Manifestation:** 学校・若者集団を中心とする流通はIndirectに保持し、春段階の地域拡散は別の根拠で保持する。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D20 — U
 
@@ -274,7 +274,7 @@ Taxonomy gap: False
 
 **Manifestation:** 誰が真相や追加情報を持つかはScope内Evidenceから決められない。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D21 — I
 
@@ -287,8 +287,8 @@ Taxonomy gap: False
 
 **Manifestation:** 学校・街路・子ども・女性という一般的現実背景に依存し、特定地点へ固定されず移植可能である。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ## Analysis Notes
 
-E2E pilot。Legacy最終Analysisの意味論を、新canonical Content参照と現taxonomy catalogへ再接続した。Unknownは推測で埋めず、後代代表形・回避異伝をVersion Scopeから分離した。Review cycle 1 F001に基づき、D18からScope外の6月Content/Evidence trace refを除去した。
+Review cycle 005の指摘と修正後canonical Contentに基づき、VAR-001のScope内でD02/D04/D05/D11/D16/D19を再評価した。後代VAR-002/VAR-003の要素をScope内判定へ逆流させず、Evidence不足はUnknownとして保持した。
