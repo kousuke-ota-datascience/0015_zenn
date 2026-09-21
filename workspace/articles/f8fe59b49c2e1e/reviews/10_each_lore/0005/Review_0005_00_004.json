@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0005",
+  "artifact": "00",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0005_murasaki_no_kagami/0005_00_sources.json",
+    "commit_sha": "1f14dc101707a5028f6ff5d025b92a57cf291739",
+    "blob_sha": "b7b6f2bd7a1380975c0cc2ec06bc54bbaf670e57",
+    "reviewed_at": "2026-09-21T04:20:30.205Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "8件のカード同定・書誌・要約とSource metadataを再監査した。伝承内容を示すカードにはC、年代・流通史に寄与するSRC-001/004/008にはHを付与し、現実社会で実際に生じた外部効果を示さないSRC-001/002/003/005/006/007/008からXは除外されている。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001〜008はカード要約をparaphraseとして扱い、原誌本文未実見の不確実性を明記する。引用偽装やカード要約を原誌本文と同一視する記述はない。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜008の期限、帰結、忘却回避、紫地蔵、ピンクの鏡、血だらけの女性、話者属性は対応する日文研カード要約に直接対応する。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "全Sourceをindirect_derivativeとし、日文研DBカードを原誌本文そのものへ格上げしていない。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1998年の公刊採録を今回確認範囲の早い確認点とし、起源年・初出とは区別する。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "原誌未実見、期限型の派生順、対抗語・併記語の広がり、襲撃型の中核性を未確定のまま保持する。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "8カード上のsalient informationを全件監査し、期限差、死/不幸、忘却回避、二語条件、正負対照、具体的襲撃終端、話者・聴取時期はいずれもEVD-001〜008へ保持される。Source→Evidenceのsalient omissionは確認しない。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Seq 003 F001のevidence_role誤分類修正を独立再監査した。カード本文・Evidence本文・不確実性は変更されておらず、X roleのみが現行coding rulesの定義に従って除去されている。"
+}
