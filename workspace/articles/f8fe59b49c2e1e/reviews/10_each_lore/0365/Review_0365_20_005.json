@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0365",
+  "artifact": "20",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "docs/10_each_lore/0365_kanto_earthquake_poison_well_rumor/0365_20_analysis.json",
+    "commit_sha": "70f94a80d8f313187757b6d4587388ab6a370775",
+    "blob_sha": "a5d068f2cf870146cdbbf64cf728a6bdd7ee86c1",
+    "reviewed_at": "2026-09-21T04:25:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "FINDING",
+      "notes": "主分析単位をL1の虚偽流言命題へ戻した点は妥当だが、Scopeが放火・暴動・井戸投毒というD12/D13の異なる主張を一つの命題群として含みつつ、実際のD12/D13は井戸投毒だけをPrimaryにしている。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D10/D12/D13/D16の再裁定は概ね整合するが、D09=COORDINATED_INTENTはScoped Contentに複数主体の計画的協調が明示されず、定義を超える。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "主要問題は既存コード不足ではなくScope粒度とD09の適用である。"
+    },
+    "causality": {
+      "status": "FINDING",
+      "notes": "井戸投毒を核としたD10→D12→D13は整合する一方、同じScopeに放火・暴動を含めるため、Scope全体を一つのD12/D13因果列として代表できない。D15をUとしたこと自体は保守的で妥当。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D09の『組織的悪意・協調意図』はCNT-001〜004に明示されない。その他の主要再コードはContentから追跡可能。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "full Contentからは井戸投毒のL1因果を再構成できるが、summary.structureはL3社会過程を中心化しており、summaryだけの場合にD10〜D17の分析レイヤーが不安定。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D04=U、D11=U、D15=U、D17=Uは保守的で妥当。D09をCOORDINATED_INTENT/Dとする確信度のみScoped Contentを超える。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "井戸をD12、井戸への毒物投入をD13とする直接作用は整合し、流言内部の終端帰結領域をContentが確定しないためD15=Uとしたことも過剰推定を避けている。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "current broad ScopeではCNT-003とEVD-002/EVD-003が反朝鮮人流言群から現実の排斥・殺傷へのL3を支持する。ただしScopeを井戸投毒命題へ狭める修正を行う場合、井戸投毒流言単独に対するL3の直接性は再評価が必要。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "D19はREGIONALに留め、公開資料の存在から全国流通を推定していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "NO_HIDDEN_TRUTHを採り、資料不足をNO_ONE_KNOWSへ誤変換していない。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "関東大震災・情報途絶という具体的史実が流言形成契機としてContent内部の因果構造に組み込まれており、資料が実在することだけを根拠にA4としていない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "D09のCOORDINATED_INTENT/Dのみ、Contentが直接示す主体帰属・悪意帰属を超えて計画的協調まで確定している。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "macro_category『災害・流言』、entry_type『差別的災害流言』はEntry内容と整合する。"
+    },
+    "content_layer_bypass": {
+      "status": "FINDING",
+      "notes": "D09 rationaleの『組織的悪意』はScoped Contentに明示されない。EVD-005の一部流言例には計画性を示す記述があるが、そのdetailをContentへ反映せずD09へ直接持ち込むことはできない。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Scoped Contentからは、震災直後の不確かな災害状況を、朝鮮人という外集団が意図的に放火・暴動・井戸投毒等を行っているという虚偽の主体帰属で説明する流言群と、これらの流言が現実の排斥・殺傷へ波及した社会効果を分けて再構成できる。Entry名と直接Evidenceが最も強く固定する井戸投毒命題では、人間集団→井戸→毒物投入というL1因果が中心となる。ただし放火・暴動は異なる作用対象・作用機構を持つため、同一Scope内で井戸投毒のD12/D13が全体を代表するとは限らない。また『協調的計画』はScoped Contentには明示されない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "status": "FINDING",
+    "notes": "L1/L3分離は修正済み。残存問題はVersion Scopeの過広さとD09のContent超過。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "version_scope",
+      "summary": "Version Scopeが井戸投毒流言と、作用対象・作用機構の異なる放火・暴動流言を一つの主分析Scopeへ統合したままである。",
+      "rationale": "coding rulesは成立時の安定した共有核をScopeとし、因果源・発動条件・作用・帰結を変更する競合異伝を無理に統合しないことを求める。current Scopeは放火・暴動・井戸投毒を一つの『流言命題群』に含めるが、D12/D13はEntry名に対応する井戸／毒物投入のみをPrimaryとしており、Scope全体の作用構造を代表していない。",
+      "impact": "D12/D13およびD15/D16の意味が、Scope全体の代表値なのか井戸投毒命題だけの値なのか曖昧になり、Entry間比較の分析単位が不安定になる。",
+      "fix_direction": "Entry 0365のprimary Version Scopeを『朝鮮人が井戸へ毒を入れた』という虚偽流言命題へ狭めるか、放火・暴動を別Variantとして明示しprimary Scopeから除外する。Scope変更後はD18.L3を含む各次元を再裁定する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-005"
+      ],
+      "dimension_refs": [
+        "D12",
+        "D13",
+        "D15",
+        "D16",
+        "D18"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "content_layer_bypass",
+      "summary": "D09=COORDINATED_INTENT/DはScoped Contentにない『複数主体の計画的協調』を確定している。",
+      "rationale": "codebook上COORDINATED_INTENTは複数主体の計画的意図・陰謀を仮定するChildである。CNT-001は朝鮮人が放火・暴動・井戸投毒をしているという虚偽主張、CNT-002はその意味づけ条件を記述するが、計画・協調を明示しない。EVD-005には計画性を含む別の流言例もあるが、その具体的detailはContentへ抽出されておらずReview 20で直接補えない。",
+      "impact": "D09が主体帰属・悪意帰属から『協調的計画』へ一段強くなり、Analysisの確信度がContent支持強度を超える。",
+      "fix_direction": "current Contentだけで裁定するならD09をAGENCY_ATTRIBUTIONまたはMOTIVE_ATTRIBUTION等の直接支持されるChildへ再評価する。COORDINATED_INTENTを維持するなら、該当流言命題をContent/Version Scopeへ明示的に取り込み、その上で再Reviewする。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-005"
+      ],
+      "dimension_refs": [
+        "D09"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "0365のみを対象に、修正版canonicalを新規targetとしてReviewした。L1/L3分離、D04、D16、井戸投毒Evidenceの前回問題は修正済みとして再判定した。"
+}

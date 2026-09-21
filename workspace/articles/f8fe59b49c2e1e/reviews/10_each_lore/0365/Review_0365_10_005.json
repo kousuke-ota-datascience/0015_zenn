@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0365",
+  "artifact": "10",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "docs/10_each_lore/0365_kanto_earthquake_poison_well_rumor/0365_10_contents.json",
+    "commit_sha": "aa6cb3a74c70616bd36416a67097302e8c0dc58c",
+    "blob_sha": "492f6b67e093cf22b700531ad9d40eec6676a4b5",
+    "reviewed_at": "2026-09-21T04:25:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "EVD-005追加によりCNT-001の『朝鮮人が井戸に毒を入れている』という識別的主張を直接追跡できる。CNT-002〜004も既存Evidenceで支持される。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryからcurrent Content layerに存在する流言内容、発生条件、社会的帰結、不確実性を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12のcoverage populationにLOSS/CONFLICTはない。"
+    },
+    "variant_boundary": {
+      "status": "FINDING",
+      "notes": "VAR-001は放火・暴動・井戸投毒という作用対象・作用機構の異なる複数流言を一つのmajor variantへ束ねている。Source表はこれらを複数の流言事例として列挙し、一つの伝承形の派生関係を示していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "発話起点・伝播経路を一点起源へ還元しない留保が維持される。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "current Contentの具体的意味はsummaryから復元可能。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "EVD-001〜005のsalient informationはCNT-001〜004、VAR-001、uncertaintiesに概ね表現され、上流Evidenceの識別的中核もContentへ反映済み。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1923年の関東大震災直後、通信・報道の途絶と混乱の中で、朝鮮人が放火・暴動を行い、井戸へ毒を入れているという根拠のない流言が広がる。流言は特定集団への疑念・敵視を強め、現実の排斥・殺傷へ波及し、軍隊・警察の一部も初期の増幅に巻き込まれた。個々の最初の発話者や地域別の具体的伝播経路は確定していない。",
+    "reference_story": "1923年関東大震災直後、通信・報道途絶や災害現象への不確かな意味づけを背景に、朝鮮人が放火・暴動・井戸への投毒等を行うという複数の虚偽流言が流通した。公的資料はこれらを流言として記録し、その流通が現実の朝鮮人への警戒・排斥・殺傷へ波及したこと、軍隊・警察の一部も初期には流言に巻き込まれたことを整理する。個々の発話起点・伝播経路は一点起源へ還元しない。current Contentは放火・暴動・投毒をVAR-001という一つの流言クラスへ束ねている。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "流言の伝達者・受容者、虚偽に加害者とされた朝鮮人、自警団、軍隊・警察の一部。",
+        "reference": "同じ主体群をContentが保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "朝鮮人の人々、社会秩序に加え、流言命題では井戸も直接作用対象として読み取れる。",
+        "reference": "CNT-001は井戸投毒、CNT-003は現実の朝鮮人への排斥・殺傷を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "震災直後の情報途絶と災害現象への不確かな解釈。",
+        "reference": "CNT-002が同条件を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "流言内部では朝鮮人が加害主体とされる一方、社会効果側では根拠のない流言自体が行動誘発要因となる。",
+        "reference": "CNT-001とCNT-003に二層の因果が共存する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "井戸投毒・放火・暴動という虚偽の加害行為と、流言反復による疑念・排斥・暴力への波及。",
+        "reference": "CNT-001〜003が双方を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "災害混乱→虚偽流言→疑念・敵視→現実被害という社会過程。",
+        "reference": "CNT-002→CNT-001→CNT-003として再構成可能。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "震災直後の数日間に流言が増幅した。",
+        "reference": "CNT-002〜003とuncertaintyから同時期構造を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "確立した規則・禁忌はない。",
+        "reference": "Contentにも再現的規則はない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "確立した回避・制御法は不明。",
+        "reference": "Contentにも制御法はない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "現実の差別・殺傷が発生し、後代資料で検証される。",
+        "reference": "CNT-003〜004が保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "最初の発話者・地域別伝播経路は未確定。",
+        "reference": "uncertaintiesが一点起源へ還元しない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "放火・暴動・投毒等を一つの流言クラスとして扱う。",
+        "reference": "VAR-001も同じ束ね方をしている。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "summary.narrativeは井戸投毒という流言内部命題を保持するが、summary.structureのcausal_agent/mechanism/state_transition/terminal_stateは『流言→受容→現実暴力』のL3社会過程を中心に固定している。修正版20_analysisが採るL1の伝承内部因果をsummary構造から一意に読むには不安定さが残る。"
+    },
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "朝鮮人が放火・暴動・井戸投毒を行うという根拠のない流言が広まった。",
+        "blind_reconstruction": "朝鮮人が放火・暴動を行い井戸へ毒を入れるという根拠のない流言が広がる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "情報途絶、災害現象、断片情報・予備知識が流言形成条件となった。",
+        "blind_reconstruction": "通信・報道途絶と災害現象への不確かな解釈を背景とする。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "流言は朝鮮人への警戒・排斥・殺傷へ波及し、軍隊・警察の一部も巻き込まれた。",
+        "blind_reconstruction": "疑念・敵視から現実の排斥・殺傷へ波及し、軍隊・警察の一部も巻き込まれた。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "公的資料はこれらを事実ではなく流言飛語として検証・記録する。",
+        "blind_reconstruction": "根拠のない流言として再構成され、事実として肯定されない。",
+        "difference": "NONE"
+      }
+    ],
+    "verdict": "PASS"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "variant_boundary",
+      "summary": "VAR-001が作用対象・作用機構の異なる放火・暴動・井戸投毒の各流言を一つのmajor variantへ過度に統合している。",
+      "rationale": "SRC-002表4-1は井戸投毒、放火、暴動等を複数の流言事例として列挙しており、current Evidenceはそれらが一つの伝承形から派生したことや、同一variantとして不可分であることを示さない。Entry名は井戸投毒流言を識別核としている一方、VAR-001とsummary.variant_boundariesは別の作用対象・作用機構を持つ主張まで一クラスにしている。",
+      "impact": "後続20_analysisでD12/D13のPrimaryを井戸投毒に置きながらVersion Scopeは放火・暴動まで含むという粒度不一致が生じ、Entry固有の意味形成構造が不安定になる。",
+      "fix_direction": "井戸投毒流言をprimary/initialなVariantまたはScope核として独立させる。放火・暴動等は同時期の関連流言として別Variant・context・excluded範囲のいずれかに分離し、派生関係が確認できない限り一つのvariantへ統合しない。",
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-005"
+      ],
+      "content_refs": [
+        "CNT-001"
+      ],
+      "variant_refs": [
+        "VAR-001"
+      ],
+      "probe_refs": [
+        "P12"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "content_analysis_contamination",
+      "summary": "summary.structureが伝承内部命題よりも流言受容後の社会的因果を中心構造として固定している。",
+      "rationale": "summary.narrativeには『朝鮮人が井戸へ毒を入れる』という虚偽命題が残る一方、causal_agentは『根拠のない流言』、mechanismは流言反復による排斥・暴力、state_transitionは流言から現実殺傷への遷移として記録される。これはcurrent Contentの一部として事実だが、修正版20_analysisが主分析単位とする伝承内部L1と異なる分析レイヤーをsummary構造上の中心に選択している。",
+      "impact": "summaryだけを用いたAnalysis InvarianceでD10〜D17の主因果モデルがL1とL3のどちらか一意に定まらず、後続Analysisへ旧レイヤー選択を再流入させる余地がある。",
+      "fix_direction": "summary.structureで流言内部の主体・作用対象・作用を主構造として保持し、流言受容による現実の排斥・殺傷は別の社会効果として明示的に分離する。少なくともcausal_agent/mechanism/state_transitionがL1/L3を混同しないよう再記述する。",
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003",
+        "EVD-005"
+      ],
+      "content_refs": [
+        "CNT-001",
+        "CNT-003"
+      ],
+      "probe_refs": [
+        "P04",
+        "P05",
+        "P06",
+        "P10"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Golden Reference 0180は、summary/content_unitsが具体的意味とvariant境界を失わない粒度の校正にのみ使用し、0365の内容・コード判断には転用していない。"
+}

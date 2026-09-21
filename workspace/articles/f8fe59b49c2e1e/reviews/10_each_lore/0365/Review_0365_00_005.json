@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0365",
+  "artifact": "00",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "docs/10_each_lore/0365_kanto_earthquake_poison_well_rumor/0365_00_sources.json",
+    "commit_sha": "34807418e1f128597c2b5db0ae7531b978c7cb50",
+    "blob_sha": "8e1177a272deaed4ce6fc7fb6a0f4ce33f5b5c93",
+    "reviewed_at": "2026-09-21T04:25:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001は内閣府防災白書、SRC-002は中央防災会議の災害教訓報告書で、震災時流言を検討する公的二次・研究資料として適切。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001〜005は流言内容と史実上の被害を区別し、EVD-005も『井戸への投毒』を史実ではなく流言記録として明示している。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜005は各Sourceの該当記述から支持される。EVD-005はSRC-002第4章第1節・表4-1（p.182）の井戸投毒流言例と一致する。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "SRC-002は警視庁編『大正大震火災誌』等を利用した後代報告書であり、一次史料そのものと誤認していない。EVD-005にも表が略記整理である旨の不確実性を保持する。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "個別流言の最初の発話者・伝播起点を確定せず、後代公的資料を実際の起源と同一視していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "表4-1の略記性、流言の伝播経路・一点起源の不確定性、流言内容と事実の区別が保持されている。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "Entry識別上重要な『朝鮮人が井戸へ毒薬を投入した』という流言例がEVD-005として追加され、通信途絶、流言形成、現実被害、初期増幅もEVD-001〜004で保持されている。"
+    }
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Review Seq 005。SRC-002の該当PDF第4章第1節・表4-1（p.182）を含め、Source→Evidenceを再監査した。"
+}
