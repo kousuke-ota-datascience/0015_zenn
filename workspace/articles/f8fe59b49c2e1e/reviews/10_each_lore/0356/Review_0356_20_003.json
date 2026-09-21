@@ -1,0 +1,175 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Scoped Contentだけから独立再構成するとD03/D19の媒体・公開Web流通とD18.L3の社会現実効果を確定できず、現Analysisの一部次元を再現できない。",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "D18.L3は噂の流通が現実の展示・幸運象徴化・人形納めを生じさせた因果を要求するが、現Evidence/Contentはその因果を直接固定しない。",
+      "status": "FINDING"
+    },
+    "content_layer_bypass": {
+      "notes": "D03/D19はSource URL/公式Web掲載というContent化されていない媒体事実をAnalysis理由へ直接導入している。Version Scope内Contentには「Webサイトで流通する」というsemantic factがない。",
+      "status": "FINDING"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "阪神タイガースという組織を作用対象とし、呪い・不運付与を介して長期的な競技成否へ結ぶD12→D13→D15の中心列はScoped Contentから再構成できる。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "KFC公式は回収・修復・幸運象徴化・展示・人形納めという独立した現実行為を示すが、それらが呪い言説の流通によって生じたとは明示しない。CNT-004もこの因果をEvidence以上に強めている。",
+      "status": "FINDING"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "現D19はOPEN_FORUM_WEBに限定し、公開Webの存在からNATIONAL_PUBLICを推定していない。問題は公開Web流通意味がContentに未表現である点で、到達範囲膨張とは別。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "D20はCOMMON_KNOWLEDGEを選び、資料不足をNO_ONE_KNOWSへ短絡していない。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "1985年投げ込み、2009年回収等の実在記録を呪い因果の成立材料へ組み込むA4はScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D10は像そのものをCURSED_OBJECTとするが、Scoped Contentの因果源表現は像への仕打ちに伴う非人格的な「呪い」であり、物体自体が異常作用を保持すると明示していない。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "macro_category=スポーツ、entry_type=スポーツ・ジンクス／呪いは、チーム成績を呪いで説明するScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "D18.L3のDirectは、独立Sourceが示す現実行為と「噂流通がそれを生んだ」という因果の間を埋めるEvidenceがなく、支持強度を超える。D03/D19もContent未表現の媒体事実をDとして用いる。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "D03/D19の「公式Webで流通」という意味はScoped Content Unitに存在せず、D18.L3の現実効果因果もCNT-004の過剰総括に依存する。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "D03/D19をDとするためのWeb媒体意味がContent layerに存在せず、D18.L3も独立した因果Evidenceを欠くためD相当の確信度を維持できない。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "D10にはIMPERSONAL_CURSE、D18にはL1/L3等の既存codeがあり、今回の問題はtaxonomy欠落ではなく適用・根拠の問題。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "1985年投げ込みと成績を呪いで結ぶ中心形をVAR-001/CNT-001〜004で扱い、2009年以後を後続変容として同Scope内で明示する構成は現Contentと整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0356",
+  "findings": [
+    {
+      "category": "content_layer_bypass",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D03",
+        "D19"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "公式Webで伝承自体が流通していることをEvidence→Contentとして明示したContent UnitをVersion Scopeへ追加してからD03/D19を再評価する。Content化しない場合は現Scoped Contentだけで支持できるstatus/codeへ下げる。",
+      "impact": "D03/D19の媒体・流通範囲がContentから追跡不能になり、Sourceの所在情報を伝承意味論として直接コードすることになる。",
+      "rationale": "現version_scopeのCNT-001〜004は投げ込み、呪い説明、回収後の再解釈、文化記憶を記述するが、媒体としてWebサイトで伝承が流通したという意味は表現しない。D03 rationaleとD19 rationaleは公式Web掲載・公式サイトでの公開を根拠にコードを確定しており、Workflow 20のContent Layer Bypass禁止に抵触する。",
+      "severity": "Moderate",
+      "summary": "D03/D19がScoped Contentにない「公式Webでの流通」をSource/Evidence側から直接Analysisへ導入している"
+    },
+    {
+      "category": "causality",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D18"
+      ],
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-004"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "呪い言説が展示・イベント・処遇等の現実行為を生じさせたことを明示する独立Source/Evidenceを追加しContentへ反映するか、現状ではD18をL1のみに再裁定する。",
+      "impact": "伝承内因果L1と、噂流通が社会現実を変えたL3を混同し、D18による社会効果比較を過大評価する。",
+      "rationale": "EVD-003/004はKFC側が像を回収・修復し、幸運の象徴として展示し、後に人形納めした現実行為を確認する。しかしKFC公式資料は、それらが「カーネル・サンダースの呪い」という噂の流通によって生じたとは述べない。CNT-004はその因果を強めているがReview 10でEvidence超過と判定した。したがってL3をDirectで立てる独立X Evidenceを欠く。",
+      "severity": "Moderate",
+      "summary": "D18.L3が要求する「噂の流通→現実社会の行為」という独立因果が固定されていない"
+    },
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "dimension_refs": [
+        "D10"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ],
+      "finding_id": "F003",
+      "fix_direction": "Scoped Contentを基準にD10 PrimaryをD10.SUP.IMPERSONAL_CURSEへ再評価する。CURSED_OBJECTを残す場合は、像自体が異常作用を保持することを示すContent根拠を追加する。",
+      "impact": "物体そのものと非人格的な呪いの力を存在論的に混同し、D10比較で誤分類を生む。",
+      "rationale": "D10.OBJ.CURSED_OBJECTは「異常作用を保持する物体」を因果源とするcodeだが、Scoped Contentはカーネル像自体に内在する呪力を記述せず、像への仕打ち・長期行方不明に伴う「呪い」が阪神の成績を悪化させるという説明を置く。因果源としてはD10.SUP.IMPERSONAL_CURSE（非人格的呪力）の定義により直接整合する。",
+      "severity": "Moderate",
+      "summary": "D10 PrimaryのCURSED_OBJECTはScoped Contentの因果源存在論とずれている"
+    }
+  ],
+  "review_notes": "Sense-making modelはversion_scopeのScoped Contentから先に独立再構成し、Evidenceは支持強度・上流問題の監査にのみ用いた。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D03",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-004"
+    ],
+    "model": "Scoped Contentから再構成できる中心モデルは、1985年の優勝時にファンがカーネル像を選手に見立てて胴上げし道頓堀川へ投棄したこと、像が長く行方不明だったこと、そして阪神のその後の成績を「像への仕打ちに伴う呪い」で説明する俗説が結び付いた、というものである。作用対象は阪神という組織で、作用機構は呪い・不運付与、帰結は長期的な競技上の成否として読める。2009年の回収・修復後は像が「おかえり！カーネル」と名付けられ幸運の象徴として展示され、後に人形納めされても俗説は文化記憶として残る。Contentだけからは、公式WebがVersion Scopeの流通媒体であること、また呪い言説の流通が展示・幸運象徴化・人形納めを因果的に生じさせたことは確定できない。因果源の存在論も、像自体が呪力を保持する呪物というより、像への仕打ちに伴う非人格的な呪いとして記述されている。",
+    "notes": "中心呪いモデルは再構成可能だが、媒体流通・社会現実層・D10存在論について現Analysisをそのまま再現できない。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0356_colonel_sanders_no_noroi/0356_20_analysis.json",
+    "blob_sha": "eaaac85c7cdf2362e6ff2a15ed6c41a0d7054c83",
+    "commit_sha": "d33263b51c645c1db6a4e525be61ea393bd7b812",
+    "reviewed_at": "2026-09-21T01:51:36Z"
+  },
+  "verdict": "Moderate"
+}

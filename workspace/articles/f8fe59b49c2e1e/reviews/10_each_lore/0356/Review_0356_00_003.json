@@ -1,0 +1,73 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "呪い言説の初出時期・初期媒体を確定せず、現行Sourceで確認できる後代記録と実際の起源を混同していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-002はSRC-001の「優勝できない」を「日本一になれない」へ置換しており、競技上異なる帰結へ意味がずれている。",
+      "status": "FINDING"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-002はKFC自身の像の回収・修復・展示・人形納めには一次的だが、1985年ファン行動の意図については後代公式回顧として扱われている。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001は1985年に像がランディ・バースに見立てられたと明記するが、この固有の選手同定がEvidence層に保存されていない。像が選ばれた理由を具体的に再構成するsalient detailである。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は球団公式の後代史料、SRC-002は日本KFC公式の自社立像史料として役割が明示され、出所区分は妥当。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-002の「日本一になれない」はSRC-001の該当記述から直接支持されない。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "超自然因果は実証されないこと、呪い呼称の初出時期を固定できないことが明示されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0356",
+  "findings": [
+    {
+      "category": "evidence_integrity",
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "EVD-002をSRC-001に忠実な「優勝できない」へ修正する。日本一を別途主張する必要がある場合は、その命題を直接支えるSource/Evidenceを追加して分離する。",
+      "impact": "CNT-002が「優勝・日本一」の両方へ拡張され、後続の帰結・成否解釈に原資料以上の意味が混入する。",
+      "rationale": "SRC-001の呪い説明は、行方不明のカーネル像のせいでタイガースが「優勝できない」と言われた、という内容である。EVD-002はこれを「その後日本一になれないこと」としており、リーグ優勝と日本シリーズ制覇を同一視できないためparaphrase fidelityを満たさない。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "summary": "EVD-002がSRC-001の「優勝できない」を「日本一になれない」へ意味変更している"
+    },
+    {
+      "category": "salient_evidence_completeness",
+      "finding_id": "F002",
+      "fix_direction": "SRC-001に基づき、ランディ・バースへの見立てを明示したEvidenceを追加するか、既存Evidenceに出所を区別して追記する。",
+      "impact": "Content/summaryから発端の具体的な選手対応関係を復元できず、伝承の成立場面が過度に一般化される。",
+      "rationale": "SRC-001は、投げ込まれたカーネル像が1985年にランディ・バースに見立てられていたことを明示する。現EVD-001はSRC-002に基づく一般的な「選手に見立てて」に留まり、SRC-001の固有名を保持しない。このdetailはなぜカーネル像が祝勝行為の対象になったかを具体化する。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "summary": "SRC-001の「ランディ・バースに見立てられた」という固有detailがEvidence化されていない"
+    }
+  ],
+  "review_notes": "Source本文とcanonical Evidenceを独立に突合し、Source→Evidenceの意味保存とsalient information populationを監査した。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0356_colonel_sanders_no_noroi/0356_00_sources.json",
+    "blob_sha": "ac5f19398f792df6f1f2f3c034cfb92d2af9e321",
+    "commit_sha": "2138336c0b7fd0a00171dfb86f7fdc3a992f160d",
+    "reviewed_at": "2026-09-21T01:51:36Z"
+  },
+  "verdict": "Moderate"
+}

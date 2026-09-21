@@ -1,0 +1,220 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-002は現EVD-002にない「優勝」を追加し、CNT-004は「大阪の地域文化」「俗説が像の扱いへ現実の文化的意味を与えた」という因果的・文化的総括を引用Evidence以上に強めている。",
+      "status": "FINDING"
+    },
+    "narrative_reconstruction": {
+      "notes": "中核筋は再構成できるが、発端の見立て・胴上げと回収後の固有名/展示というsalientな具体意味がsummaryから脱落する。",
+      "status": "FINDING"
+    },
+    "salient_content_completeness": {
+      "notes": "現canonical Evidence EVD-001〜004の主要意味はContent Unitへ人口として配置されている。SRC-001のランディ・バースdetail欠落はEvidence層自体の不足なのでReview 00へ戻し、Source直読でContentを補完していない。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P03で発端の具体行為、P06で回収後の固有identity/display stateがLOSS。その他の中心因果・時間順序・不確実性は再構成可能。",
+      "status": "FINDING"
+    },
+    "summary_reconstruction": {
+      "notes": "summaryは中核因果を保持するが、CNT-001の具体的な「選手に見立てて胴上げ」とCNT-003の固有名「おかえり！カーネル」・展示状態を復元できない。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "呪いの実因果を事実化せず、呪い呼称の初出時期も不明として保持している。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "1985年投げ込みと成績を呪いで結ぶ中心形と、2009年以後の幸運象徴化を後続変容として区別している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0356",
+  "findings": [
+    {
+      "category": "evidence_content_support",
+      "content_refs": [
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "まずReview 00のEVD-002をSourceに忠実に修正し、その後に修正済みEvidenceだけからCNT-002の「優勝／日本一」表現を再抽出する。",
+      "impact": "Contentの競技上の帰結範囲がEvidence以上に広がり、D15等の成否意味とsummaryの中核説明が不安定になる。",
+      "rationale": "現canonical EVD-002が保持する命題は「日本一になれない」であり、CNT-002はそこへ「優勝」も追加する。Review 00でEVD-002自体のSource fidelityに問題が見つかったが、Review 10はSourceを直接読んで補完できないため、現Evidence→Content関係としては過剰化である。",
+      "severity": "Moderate",
+      "summary": "CNT-002が現EVD-002にない「優勝」を追加し、帰結を「優勝・日本一」へ拡張している"
+    },
+    {
+      "category": "evidence_content_support",
+      "content_refs": [
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003",
+        "EVD-004"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "直接Evidenceがある範囲へCNT-004を縮めるか、呪い言説が現実の展示・扱い・地域文化化を生じさせたことを明示する独立Source/Evidenceを追加してからContent化する。",
+      "impact": "D18.L3の社会現実層など、噂の流通が現実行動を生じさせたという後続Analysisを見かけ上支えるContentになってしまう。",
+      "rationale": "EVD-002は呪い言説の存在、EVD-003/004は回収後の修復・展示・幸運の象徴化をそれぞれ示すが、呪いの流通がKFC等の像の扱いを因果的に生じさせたこと、また「大阪の地域文化の一部」という評価を直接は示さない。CNT-004は別々の事実を因果的・文化的に統合しすぎている。",
+      "severity": "Moderate",
+      "summary": "CNT-004の「大阪の地域文化」「俗説が像の扱いへ文化的意味を与えた」という総括が引用Evidenceを超える"
+    },
+    {
+      "category": "narrative_reconstruction",
+      "content_refs": [
+        "CNT-001",
+        "CNT-003"
+      ],
+      "finding_id": "F003",
+      "fix_direction": "summary narrative/structureへ、選手に見立てた胴上げ→投棄の具体行為と、回収後の「おかえり！カーネル」命名・展示を簡潔に追加する。",
+      "impact": "中核分析コードは大きく変わらなくても、伝承の成立場面と回収後の意味変容を具体的に再構成できず、意味保存粒度が不足する。",
+      "probe_refs": [
+        "P03",
+        "P06"
+      ],
+      "rationale": "Blind Decodeでは投げ込み、長期行方不明、呪い、2009年回収、幸運象徴化までは復元できる。しかしCNT-001の「選手に見立てて胴上げ」とCNT-003の固有名「おかえり！カーネル」および展示状態はsummaryにない。これらは具体的なtriggerとidentity/state transitionであり、genericな上位概念だけでは置換できない。",
+      "severity": "Moderate",
+      "summary": "summaryからCNT-001の具体的発端とCNT-003の回収後identityを完全には復元できない"
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "D07〜D17の中心因果、D20/D21、Version Scopeの主要構造はsummaryから再構成できる。P03/P06の具体detail LOSSは物語再構成上のFindingだが、現行主要分析可能性そのものを必須には変えない。",
+      "status": "PASS"
+    },
+    "blind_decode": "1985年の阪神優勝時、ファンによってカーネル・サンダース像が道頓堀川へ投げ込まれて長く失われ、その後の阪神の勝てない／成績不振を像への仕打ちに対する呪いで説明する俗説が成立・継続した。2009年に像が発見・修復され、呪いの象徴から幸運の象徴へ再解釈された。像は後に人形納めされても俗説は文化記憶として残る。ただし呪い言説の初出時期と実際の因果関係は不明。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "1985年優勝時に像が道頓堀川へ投げ込まれたことは復元できる。",
+        "content_ref": "CNT-001",
+        "difference": "LOSS",
+        "notes": "選手への見立てと胴上げという具体行為が失われる。",
+        "salient_meaning": "1985年優勝時、ファンが像を選手に見立てて胴上げし道頓堀川へ投げ込んだ具体的発端。"
+      },
+      {
+        "blind_reconstruction": "長く失われた像への仕打ちの呪いで阪神が勝てないと説明し、実因果は不明。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "notes": "主要意味と留保を保持。",
+        "salient_meaning": "長期行方不明の像と阪神の成績不振を呪いで因果接続する俗説であり、実因果は事実化しない。"
+      },
+      {
+        "blind_reconstruction": "2009年回収・修復後に幸運の象徴へ再解釈された。",
+        "content_ref": "CNT-003",
+        "difference": "LOSS",
+        "notes": "固有名と展示状態が失われる。",
+        "salient_meaning": "2009年回収・修復後に「おかえり！カーネル」と命名され、幸運の象徴として展示された。"
+      },
+      {
+        "blind_reconstruction": "人形納め後も俗説は文化記憶として残る。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "notes": "地域名の具体性は薄れるが、終端の文化記憶継続という中心意味は保持。",
+        "salient_meaning": "回収後も俗説がスポーツ史・大阪の地域文化の一部として残り、像の扱いに文化的意味を持つという現Contentの総括。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "ファン、カーネル像、阪神タイガース。",
+        "difference": "NONE",
+        "notes": "主要actor/roleは保持。",
+        "probe_id": "P01",
+        "reference": "ファン、カーネル像、阪神タイガース。"
+      },
+      {
+        "blind": "呪いの帰結対象は阪神タイガースの成績。",
+        "difference": "NONE",
+        "notes": "作用対象のチームは復元可能。",
+        "probe_id": "P02",
+        "reference": "阪神タイガースの優勝・日本一等の競技成績。"
+      },
+      {
+        "blind": "1985年にファンが像を道頓堀川へ投げ込み、像が長く失われたこと。",
+        "difference": "LOSS",
+        "notes": "「選手に見立てて胴上げ」という具体的発端がsummaryにない。",
+        "probe_id": "P03",
+        "reference": "1985年優勝時、像を選手に見立てて胴上げした後、道頓堀川へ投げ込んだこと。"
+      },
+      {
+        "blind": "像への仕打ちに伴う呪い。",
+        "difference": "NONE",
+        "notes": "中心因果源の表現は保持。",
+        "probe_id": "P04",
+        "reference": "像を投げ込み長く失ったことに伴う呪いとして成績不振を説明する。"
+      },
+      {
+        "blind": "呪いが阪神を勝てない／成績不振の状態にする。",
+        "difference": "NONE",
+        "notes": "機構の俗説上の意味は保持。",
+        "probe_id": "P05",
+        "reference": "像への仕打ちの呪いが優勝・日本一から遠ざけると説明される。"
+      },
+      {
+        "blind": "祝勝の像→失われた呪いの象徴→2009年回収後の幸運の象徴。",
+        "difference": "LOSS",
+        "notes": "大枠の変容はあるが、回収後の固有identityとdisplay stateを復元できない。",
+        "probe_id": "P06",
+        "reference": "祝勝行為の像→長期行方不明・呪いの象徴→2009年回収・修復→「おかえり！カーネル」と命名され幸運の象徴として展示。"
+      },
+      {
+        "blind": "1985年投げ込み→長期の呪い言説→2009年回収・修復→後年の人形納め。",
+        "difference": "NONE",
+        "notes": "順序・継続・終端は保持。",
+        "probe_id": "P07",
+        "reference": "同じ時系列。回収後も俗説は文化記憶として継続。"
+      },
+      {
+        "blind": "固定した規則・禁忌は現資料から不明。",
+        "difference": "NONE",
+        "notes": "一致。",
+        "probe_id": "P08",
+        "reference": "固定した規則・禁忌は現Contentで確定しない。"
+      },
+      {
+        "blind": "共通の回避・解除手順は不明。回収後は幸運の象徴として扱われる。",
+        "difference": "NONE",
+        "notes": "主要なcontrol/use構造は復元可能。",
+        "probe_id": "P09",
+        "reference": "呪い解除の固定手順は確定しない。回収後の像は幸運の象徴として展示・利用される。"
+      },
+      {
+        "blind": "像は回収・修復され、後に人形納めされるが俗説は文化記憶として残る。",
+        "difference": "NONE",
+        "notes": "終端状態を保持。",
+        "probe_id": "P10",
+        "reference": "回収・修復・展示後、老朽化した像は人形納めされ、俗説は文化的記憶として残る。"
+      },
+      {
+        "blind": "呪い呼称の初出時期と超自然因果は不明。",
+        "difference": "NONE",
+        "notes": "不確実性を保持。",
+        "probe_id": "P11",
+        "reference": "呪い呼称の初出時期は未固定で、成績との超自然因果は実証されない。"
+      },
+      {
+        "blind": "1985年投げ込み＋成績を呪いで結ぶ中心形と、2009年以後の幸運象徴化を区別。",
+        "difference": "NONE",
+        "notes": "variant boundaryは復元可能。",
+        "probe_id": "P12",
+        "reference": "VAR-001の中心形を基準に、2009年回収後の幸運象徴化は後続の意味変容として扱う。"
+      }
+    ],
+    "reference_story": "1985年の阪神優勝時、ファンはカーネル・サンダース像を選手に見立てて胴上げし、道頓堀川へ投げ込んだ。像が長く見つからなかったことと、その後に阪神が優勝・日本一から遠ざかったことを結び付け、「像への仕打ちの呪いで勝てない」と説明する俗説が語られた。像は2009年に発見・修復され、「おかえり！カーネル」と名付けられて幸運の象徴として展示された。後に人形納めされても俗説はスポーツ史・大阪の地域文化の一部として語られる。一方、超自然的な因果は実証されず、呪いという呼称がいつ成立したかも現Contentでは確定しない。",
+    "verdict": "FINDING"
+  },
+  "review_notes": "Blind Decodeはsummary.narrative/structureのみから先に固定した。coverage_auditはsummary.coverage_refsのCNT-001〜004を全件監査し、Golden Referenceは具体的意味を失わない粒度の校正にのみ使用した。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0356_colonel_sanders_no_noroi/0356_10_contents.json",
+    "blob_sha": "2e16fa1b68216fc7fa14a55dbf7f9c22287ea5de",
+    "commit_sha": "ccce01a77e776049a15f50e8dce78a9bde170bb4",
+    "reviewed_at": "2026-09-21T01:51:36Z"
+  },
+  "verdict": "Moderate"
+}
