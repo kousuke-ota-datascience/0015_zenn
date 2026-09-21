@@ -4,7 +4,7 @@
   "macro_category": "全国型怪異・儀式",
   "entry_type": "儀式伝承",
   "version_scope": {
-    "description": "1884年にアメリカから日本へ伝播したと研究史上整理され、1887年の井上円了『妖怪玄談』で方法が確認される初期三脚型を分析対象とする。細竹を三脚状に組み、盆・風呂敷等をかぶせ、参加者が手を置いて霊的存在を招き、揺れ方をYes/No等として質問への回答に用いる形。五十音表と硬貨を用いる後代文字盤型、1970年代以降の学校流行、地域差のある終了作法等はScope外。",
+    "description": "1884年にアメリカから日本へ伝播したと研究史上整理され、1887年の井上円了『妖怪玄談』で方法が確認される初期三脚型を分析対象とする。細竹を三脚状に組み、盆・風呂敷等をかぶせ、参加者が手を置いて霊的存在を招き、揺れ方をYes/No等として質問への回答に用いる形。霊的作用機序には器具への直接作用説と参加者の精神・腕を介する間接作用説があり、同一Scope内で競合する。五十音表と硬貨を用いる後代文字盤型、1970年代以降の学校流行、地域差のある終了作法等はScope外。",
     "included_variants": [
       "VAR-001"
     ],
@@ -14,20 +14,21 @@
     ],
     "content_refs": [
       "CNT-001",
-      "CNT-003"
+      "CNT-003",
+      "CNT-007"
     ],
-    "notes": "1884年伝播は研究史上の有力整理だが、具体的伝播経路・単一起点は完全確定とはしない。"
+    "notes": "1884年伝播は研究史上の有力整理だが、具体的伝播経路・単一起点は完全確定とはしない。霊的作用機序も競合説のまま保持し、単一モデルへ確定しない。"
   },
   "dimensions": [
     {
       "dimension_id": "D01",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D01.G1"
       },
       "secondary": [],
-      "rationale": "研究史上、こっくりさんは1884年に日本へ伝播したと整理され、1887年には井上円了『妖怪玄談』が刊行されているため、Scopeの初期三脚型は明治期に成立したと判断できる。",
-      "manifestation": "1880年代の明治期に成立した初期三脚型。",
+      "rationale": "1887年の井上円了『妖怪玄談』刊行は書誌で直接確認できる一方、1884年の伝播・成立は後代研究が研究史上の推定として整理している。明治期（1880年代）という年代コードは合理的だが、DirectではなくInferredとする。",
+      "manifestation": "1880年代の明治期に成立・流通していた初期三脚型。1884年導入は研究史上の推定で、1887年刊行は直接確認できる。",
       "content_refs": [
         "CNT-001",
         "CNT-003"
@@ -134,21 +135,18 @@
     },
     {
       "dimension_id": "D08",
-      "status": "I",
-      "primary": {
-        "code_id": "D08.CLM.INHERITED_SAYING",
-        "parent_id": "D08.CLM"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "明治以降、方法や名称を変えながら伝承される占いとして継承されており、既存のやり方自体が実践の手掛かりとなる。",
-      "manifestation": "受け継がれた実施法に従って再演される。",
+      "rationale": "Scoped Content（CNT-001・CNT-003）は儀式手順と1880年代の伝播・流行を記すが、「昔からそう言うこと自体」が意味形成の出発点だったとは示さない。Scope外の後代継続情報を持ち込まず、契機は資料不足としてUnknownとする。",
+      "manifestation": "初期三脚型の意味形成契機は、Scoped Contentだけでは特定できない。",
       "content_refs": [
         "CNT-001",
-        "CNT-006"
+        "CNT-003"
       ],
       "evidence_refs": [
         "EVD-001",
-        "EVD-007"
+        "EVD-003"
       ]
     },
     {
@@ -204,36 +202,34 @@
     },
     {
       "dimension_id": "D12",
-      "status": "D",
-      "primary": {
-        "code_id": "D12.FOC.PRACTITIONER",
-        "parent_id": "D12.FOC"
-      },
+      "status": "C",
+      "primary": null,
       "secondary": [],
-      "rationale": "直接的に作用を受け、回答を読むのは儀式を実施する参加者である。",
-      "manifestation": "実践者自身が回答を受け取る。",
+      "rationale": "同一Scope内で、霊が三脚等の器具へ直接作用する説明と、参加者の精神へ作用して腕を介し器具を動かす説明が競合する。D13主作用の直接対象は前者なら器具、後者なら参加者の精神・身体となるため、一方へ固定できない。",
+      "manifestation": "直接作用対象は、三脚等の器具と参加者の精神・腕の間で競合する。",
       "content_refs": [
-        "CNT-001"
+        "CNT-001",
+        "CNT-007"
       ],
       "evidence_refs": [
-        "EVD-001"
+        "EVD-001",
+        "EVD-009"
       ]
     },
     {
       "dimension_id": "D13",
-      "status": "D",
-      "primary": {
-        "code_id": "D13.PHY.ENV_OBJECT_MANIPULATION",
-        "parent_id": "D13.PHY"
-      },
+      "status": "C",
+      "primary": null,
       "secondary": [],
-      "rationale": "伝承上は、招いた霊的存在の応答が三脚の揺れとして現れ、その物理的運動を回答として読む。",
-      "manifestation": "三脚器具の運動による応答。",
+      "rationale": "霊的作用機序について、器具への直接作用（D13.PHY.ENV_OBJECT_MANIPULATIONに対応）と、参加者の精神・身体を介する支配・間接操作（D13.INT.POSSESSION_CONTROL等に対応）の説明が同一Scope内で競合し、資料はどちらか一方を確定しない。",
+      "manifestation": "器具への直接作用説と、参加者の精神・腕を介する間接作用説が競合する。",
       "content_refs": [
-        "CNT-001"
+        "CNT-001",
+        "CNT-007"
       ],
       "evidence_refs": [
-        "EVD-001"
+        "EVD-001",
+        "EVD-009"
       ]
     },
     {
@@ -305,25 +301,27 @@
         "code_id": "D18.L1"
       },
       "secondary": [],
-      "rationale": "Scope内で確認できる主要作用は、霊を招き器具が動いて回答するという伝承内部の因果である。",
-      "manifestation": "伝承内部で霊的存在が器具を動かし回答する。",
+      "rationale": "Scope内で確認できる主要作用は、招請された霊的存在が何らかの仕方で運動を生じさせ、その運動が回答として解釈されるという伝承内部の因果である。直接器具操作か精神・腕を介するかはD12/D13で競合として保持する。",
+      "manifestation": "伝承内部で霊的存在に由来する運動が回答として現れる。",
       "content_refs": [
-        "CNT-001"
+        "CNT-001",
+        "CNT-007"
       ],
       "evidence_refs": [
-        "EVD-001"
+        "EVD-001",
+        "EVD-009"
       ]
     },
     {
       "dimension_id": "D19",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D19.MAS.NATIONAL_PUBLIC",
         "parent_id": "D19.MAS"
       },
       "secondary": [],
-      "rationale": "研究史は1880年代後半に初期の全国流行があったと整理しており、地域限定より広い流通が明示される。",
-      "manifestation": "1880年代後半の全国的流行。",
+      "rationale": "研究史は1880年代後半に初期の全国流行があったと整理するが、その整理自体は後代研究による推定を含む。全国的流通というコードは維持できるものの、DirectではなくInferredとする。",
+      "manifestation": "1880年代後半に全国的流行があったと研究史上整理される。",
       "content_refs": [
         "CNT-003"
       ],
