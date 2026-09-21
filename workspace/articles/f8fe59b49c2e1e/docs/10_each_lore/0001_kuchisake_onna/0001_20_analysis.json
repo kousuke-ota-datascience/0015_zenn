@@ -4,7 +4,7 @@
   "macro_category": "全国型怪異・儀式",
   "entry_type": "物語・伝説",
   "version_scope": {
-    "description": "1979年初頭〜同年春に確認できる最小安定共有核。日常社会の中に『口が裂けた女性（口裂け女）』が出現し、主として小中学生・子どもを脅かし／襲うとされる遭遇・危害型の噂を分析対象とする。定型質問、二段階の正体提示、特定の服装・武器・超人的能力、ポマード・べっこう飴・特定回答等の回避規則、固定由来譚などは含めない。",
+    "description": "1979年初頭〜同年春に確認できる最小安定共有核。『口が裂けた女性（口裂け女）が存在し、主として小中学生・子どもを脅かし／襲う』という危害型の噂命題を分析対象とする。接触条件や具体的な遭遇列、定型質問、二段階の正体提示、特定の服装・武器・超人的能力、ポマード・べっこう飴・特定回答等の回避規則、固定由来譚などは含めない。",
     "included_variants": [
       "VAR-001"
     ],
@@ -18,7 +18,7 @@
       "CNT-003",
       "CNT-004"
     ],
-    "notes": "1979年6月の全国化・登校拒否Evidenceは後続流通史として保持するが、Scoped VersionのD18 L3には流用しない。"
+    "notes": "1978年暮れごろの八百津町（諸説あり）の庭先目撃噂は先行候補としてContent層に保持するが、後代整理でありVAR-001の安定共有核には含めない。1979年6月の全国化・登校拒否Evidenceは後続流通史として保持するが、Scoped VersionのD18 L3には流用しない。"
   },
   "dimensions": [
     {
@@ -45,19 +45,17 @@
     },
     {
       "dimension_id": "D02",
-      "status": "I",
-      "primary": {
-        "code_id": "D02.ORL.PEER_ORAL",
-        "parent_id": "D02.ORL"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "後代専門家整理は、1978年末頃の岐阜で子ども同士の噂として流通していたことを示す。原採録ではないためDirectとはしない。",
-      "manifestation": "現時点で最古く再構成できる実流通回路は新聞ではなく子ども・同世代間の対人口承である。",
+      "rationale": "1978年暮れごろの噂開始は後代整理で確認できるが、その最初の提示・流通媒体は固定できない。SRC-005の整理では1979年初めの新聞報道後に子どもたちの間で反復されたとされるため、子ども間口承を最初の媒体と断定しない。",
+      "manifestation": "最初の実流通媒体はUnknownとして保持する。新聞報道後の子ども間反復はD03の流通媒体として扱う。",
       "content_refs": [
-        "CNT-001"
+        "CNT-001",
+        "CNT-002"
       ],
       "evidence_refs": [
-        "EVD-005",
+        "EVD-001",
         "EVD-007"
       ],
       "taxonomy_gap": {
@@ -103,32 +101,21 @@
       "dimension_id": "D04",
       "status": "I",
       "primary": {
-        "code_id": "D04.VAR.ACCRETION",
-        "parent_id": "D04.VAR"
+        "code_id": "D04.MIG.MEDIUM_SHIFT",
+        "parent_id": "D04.MIG"
       },
-      "secondary": [
-        {
-          "code_id": "D04.MIG.MEDIUM_SHIFT",
-          "parent_id": "D04.MIG"
-        },
-        {
-          "code_id": "D04.VAR.ORAL_VARIATION",
-          "parent_id": "D04.VAR"
-        }
-      ],
-      "rationale": "子ども間の反復で属性・能力・弱点が追加されたとの専門家整理があり、口承から新聞・雑誌への媒体移行も確認できる。",
-      "manifestation": "新しい能力・弱点・ルールを付け足す増補に、口承変異と媒体移行が重なる。",
+      "secondary": [],
+      "rationale": "Scoped Contentでは、1979年1月の新聞記事所在と3〜4月の雑誌記事見出しを確認でき、同じ口裂け女噂が複数の印刷媒体へ移って再提示されている。後代VAR-003の属性・能力・弱点の増補はScope外なので、ACCRETIONやORAL_VARIATIONの判定根拠には用いない。",
+      "manifestation": "初期共有核の噂が新聞・雑誌へ媒体移行して再提示される構造として扱う。",
       "content_refs": [
-        "CNT-001",
         "CNT-002",
         "CNT-003",
-        "CNT-006",
-        "CNT-007"
+        "CNT-004"
       ],
       "evidence_refs": [
+        "EVD-001",
         "EVD-002",
-        "EVD-007",
-        "EVD-008"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -136,26 +123,19 @@
     },
     {
       "dimension_id": "D05",
-      "status": "I",
+      "status": "D",
       "primary": {
-        "code_id": "D05.HRS.SCHOOL_WORK_HEARSAY",
-        "parent_id": "D05.HRS"
+        "code_id": "D05.PRP.FACT_CLAIM",
+        "parent_id": "D05.PRP"
       },
-      "secondary": [
-        {
-          "code_id": "D05.PRP.FACT_CLAIM",
-          "parent_id": "D05.PRP"
-        }
-      ],
-      "rationale": "子ども・学校・塾圏で共有される噂として流通し、1979年4月の記事見出しでは危険な女性が小中学生を襲うという事実主張型命題として再提示される。",
-      "manifestation": "完成した一人称怪談ではなく、子ども社会の伝聞と危険主体の存在主張が結びつく。",
+      "secondary": [],
+      "rationale": "1979年4月の記事見出しが『口の裂けた女性が小・中学生を襲う』という事実命題を直接提示する。Scoped Contentには学校・塾圏での伝聞形式を直接保持する記録がないため、SCHOOL_WORK_HEARSAYは付与しない。",
+      "manifestation": "『口の裂けた女性が小中学生を襲う』という危険主体の存在・作用を事実主張型の命題として提示する。",
       "content_refs": [
-        "CNT-001",
         "CNT-004"
       ],
       "evidence_refs": [
-        "EVD-003",
-        "EVD-007"
+        "EVD-003"
       ],
       "taxonomy_gap": {
         "present": false
@@ -276,14 +256,11 @@
     },
     {
       "dimension_id": "D11",
-      "status": "I",
-      "primary": {
-        "code_id": "D11.PAS.SPONTANEOUS_SELECTION",
-        "parent_id": "D11.PAS"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "Scope内では質問への回答・儀式・場所進入などの再現的発動条件を固定できず、子どもが本人の選択によらず危険主体へ遭遇する構造として読むのが最小仮定である。",
-      "manifestation": "日常生活の中で偶然に危険主体へ遭遇することが因果系への入口となる。",
+      "rationale": "Scoped Contentが直接保持するのは『口の裂けた女性が小中学生を襲う』という危害命題であり、接触・選択・進入・回答などの発動条件は固定できない。条件が記録されていないことから偶発遭遇を推定しない。",
+      "manifestation": "初期共有核の発動条件はUnknownとして保持する。",
       "content_refs": [
         "CNT-004"
       ],
@@ -292,8 +269,7 @@
       ],
       "taxonomy_gap": {
         "present": false
-      },
-      "notes": "後代代表形の定型質問や回答分岐はVAR-002/VAR-003としてScope外。"
+      }
     },
     {
       "dimension_id": "D12",
@@ -373,14 +349,11 @@
     },
     {
       "dimension_id": "D16",
-      "status": "I",
-      "primary": {
-        "code_id": "D16.EVT.SINGLE_EPISODE",
-        "parent_id": "D16.EVT"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "初期Scopeでは一回の遭遇と襲撃として編成され、遅延・周期・長期進行を示す要素は固定されていない。",
-      "manifestation": "一度の遭遇エピソード内で危険が成立する構造として読む。",
+      "rationale": "Scoped Contentは一般的な危害命題を示すだけで、遭遇から襲撃までが一続きの単一エピソードで完結するという出来事列を固定できない。遅延・反復が確認できないこともSINGLE_EPISODEの正証拠にはしない。",
+      "manifestation": "初期共有核の因果時間構造はUnknownとして保持する。",
       "content_refs": [
         "CNT-004"
       ],
@@ -430,7 +403,7 @@
     },
     {
       "dimension_id": "D19",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D19.KIN.SCHOOL_YOUTH",
         "parent_id": "D19.KIN"
@@ -441,15 +414,17 @@
           "parent_id": "D19.LOC"
         }
       ],
-      "rationale": "小中学生が主要受容集団であることを同時代見出しで確認でき、1979年3月には京都、4月には『各地』への広がりも確認できる。",
-      "manifestation": "学校・若者集団を中核として、春段階で複数地域へ広がる。",
+      "rationale": "子どもたちの間で反復されたという後代専門家整理から、学校・若者集団での流通をIndirectに支持する。一方、1979年3月の京都到達と4月の『各地』への拡散は同時代誌面見出しから直接確認できる。被害対象が小中学生であること自体を流通集団の直接証拠にはしない。",
+      "manifestation": "学校・若者集団を中心とする流通はIndirectに保持し、春段階の地域拡散は別の根拠で保持する。",
       "content_refs": [
+        "CNT-001",
         "CNT-003",
         "CNT-004"
       ],
       "evidence_refs": [
         "EVD-002",
-        "EVD-003"
+        "EVD-003",
+        "EVD-007"
       ],
       "taxonomy_gap": {
         "present": false
@@ -498,5 +473,5 @@
       }
     }
   ],
-  "analysis_notes": "E2E pilot。Legacy最終Analysisの意味論を、新canonical Content参照と現taxonomy catalogへ再接続した。Unknownは推測で埋めず、後代代表形・回避異伝をVersion Scopeから分離した。Review cycle 1 F001に基づき、D18からScope外の6月Content/Evidence trace refを除去した。"
+  "analysis_notes": "Review cycle 005の指摘と修正後canonical Contentに基づき、VAR-001のScope内でD02/D04/D05/D11/D16/D19を再評価した。後代VAR-002/VAR-003の要素をScope内判定へ逆流させず、Evidence不足はUnknownとして保持した。"
 }
