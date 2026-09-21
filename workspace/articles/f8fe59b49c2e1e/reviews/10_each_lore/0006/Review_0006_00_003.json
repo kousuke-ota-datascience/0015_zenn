@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1995年映画を現在確認できる早い具体的メディア形の一つとして扱い、絶対的起源とは区別している。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-002は校門→花壇→昇降口の段階接近と、最終電話後に振り返ると『すいかのオバケ』が浮かぶ映画固有終端を保持する。EVD-003から未確認の『毎晩電話』を除外し、後代標準型の背後到達文言も1995年型へ遡及していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "SRC-003はNDL書誌レコード＋同ページ表示要約へのアクセスであることを明示し、source_type=reliable_secondary_or_research / relation_to_primary=indirect_derivativeへ保守化した。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "1995年映画の段階接近と固有終端、1999年『人形のおばけ“メリーさん”』、後代の捨て人形・背後到達型をEvidence層で分離して保持し、Scope/variant識別に必要なsalient omissionは確認しない。"
+    },
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "1995年作品情報、出演者の後年回想、NDL書誌、2018年事典書誌、2019年後代要約の認識論的位置を区別している。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "各Evidenceの具体主張は対応Sourceの確認可能範囲内に収まり、SRC-002/SRC-003から未確認の具体設定を補っていない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "1995年を絶対起源とせず、出演者回想の後年性、NDLが本文一次アクセスではない点、後代標準型の成立時期不明を保持している。"
+    }
+  },
+  "entry_id": "0006",
+  "findings": [],
+  "review_notes": "Review Seq 002のSource→Evidence Findingを対象に再監査し、修正後canonical 00で解消を確認。docs/legacyは判定根拠に使用していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_00_sources.json",
+    "blob_sha": "8eb12c4a27a23592a9de4d77b34aebdd65422c61",
+    "commit_sha": "678355cbaed44acbdb846543e79514b720ba6cd5",
+    "reviewed_at": "2026-09-21T03:12:00Z"
+  },
+  "verdict": "Pass"
+}
