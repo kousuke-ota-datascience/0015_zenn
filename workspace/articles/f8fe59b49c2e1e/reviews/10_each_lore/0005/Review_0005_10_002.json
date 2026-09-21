@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0005",
+  "artifact": "10",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0005_murasaki_no_kagami/0005_10_contents.json",
+    "commit_sha": "c66a57ffeb10f7648f1d8fa075b5edeca95f1e60",
+    "blob_sha": "c72a582bf608615bcc463ce3f5ef901dc7006542",
+    "reviewed_at": "2026-09-21T01:39:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜008の各主張は対応するEVD-001〜008に支持され、Evidenceの留保を越えた断定はContent層では確認しない。"
+    },
+    "summary_reconstruction": {
+      "status": "FINDING",
+      "notes": "中核規則、期限差、忘却回避、襲撃終端、variantの存在は再構成できるが、CNT-005/006のvariant-defining rule条件とCNT-008の具体的採録・流通境界がsummaryで失われる。"
+    },
+    "structural_probe": {
+      "status": "FINDING",
+      "notes": "P08・P11・P12でLOSS。規則型variantの具体条件と、若者採録を流通範囲へ一般化しないための証拠境界がBlind Decodeから復元できない。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001〜004の境界自体はEvidence/Contentと整合し、中核規則型・併記語型・対抗語型・具体的襲撃型を混同していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "起源年・初出、期限差の派生順、対抗語/併記語の広がり、襲撃型の中核性を不明のまま保持する。"
+    },
+    "narrative_reconstruction": {
+      "status": "FINDING",
+      "notes": "中核伝承の展開は具体的に再構成可能だが、coverage_refsに含まれるCNT-005/006/008の具体意味を完全には復元できない。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "EVD-001〜008にある期限差、帰結差、忘却回避、紫地蔵併記、ピンク対抗語、襲撃終端、採録主体・小学校時聴取はCNT-001〜008、variants、uncertaintiesへContent化されており、Evidence→Contentのpopulation omissionは確認しない。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "「紫の鏡／紫鏡」という語句・話を知り、所定の年齢・ライフステージまで記憶していることが死または不幸につながるという規則型。期限は16歳・18歳・20歳・高校入学前などに揺れ、20歳前に忘れることが回避として表現される型、ピンクの鏡という対抗語、紫地蔵併記、血だらけの女性が鏡からかみそりを持って現れ殺す具体的襲撃終端などのvariantがある。起源年・初出、各variantの派生順序は不明。",
+    "reference_story": "現行Content layerでは、「紫の鏡／紫鏡」を一定期限まで記憶すると死または不幸になる規則を中核とし、期限は18歳・20歳・16歳・高校入学前に揺れる。20歳型の一部では期限前に忘れることが死の回避条件になる。別variantとして、紫の鏡と紫地蔵の二語を20歳まで覚えると死ぬ型、20歳まで紫の鏡を覚えるのは悪くピンクの鏡を覚えると良い型、20歳まで忘れないと血だらけの女性が鏡からかみそりを持って現れて殺す型がある。採録は若者・学校年齢層と結び付き、1999年の一例は男子生徒が小学校時に聞いた話、2001年の一例は中学三年男子からの採録だが、これだけで全国・全世代流通は意味しない。1998年は今回確認範囲の早い公刊採録であり起源年・初出ではなく、期限差・派生variantの成立順序や広がりは不明。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "語句・話を知る若者・受容者。襲撃型では血だらけの女性も現れる。",
+        "reference": "中核は語句を知る受容者。別variantでは血だらけの女性が加害主体として現れる。",
+        "difference": "NONE",
+        "notes": "主要主体は保持される。"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "所定期限まで語句を記憶している人物。",
+        "reference": "所定期限まで語句を記憶している受容者。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "probe_id": "P03",
+        "blind": "「紫の鏡／紫鏡」を知り、所定期限まで記憶を保持すること。",
+        "reference": "語句を知ることと、各variantで定められた期限まで記憶を保持すること。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "probe_id": "P04",
+        "blind": "語句と、期限まで記憶しているという条件。襲撃型では血だらけの女性。",
+        "reference": "中核規則では語句・記憶条件そのもの。具体的襲撃型のみ血だらけの女性が人格的加害主体になる。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "probe_id": "P05",
+        "blind": "記憶が期限まで持続すると死・不幸へ結び付く。襲撃型では女性が鏡からかみそりを持って出現し殺す。",
+        "reference": "中核は記憶継続と災厄を結ぶ規則。VAR-004では鏡からの女性出現・かみそりによる殺害へ具体化する。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "probe_id": "P06",
+        "blind": "語句を知る→期限まで覚えている→死または不幸。",
+        "reference": "同左。20歳型の一部では期限前の忘却で回避する分岐がある。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "probe_id": "P07",
+        "blind": "16・18・20歳、高校入学前などの期限差があり、20歳型が複数。",
+        "reference": "18・20・16歳・高校入学前の期限差。20歳型は複数採録される。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "probe_id": "P08",
+        "blind": "所定期限まで紫の鏡を覚えていてはいけない。紫地蔵併記型、ピンクの鏡対抗型がある。",
+        "reference": "中核禁忌に加え、VAR-002は「紫の鏡」と「紫地蔵」の二語を20歳まで記憶すると死ぬ。VAR-003は20歳まで紫の鏡を覚えるのは悪く、ピンクの鏡を覚えると良い。",
+        "difference": "LOSS",
+        "notes": "summaryはVAR-002/003の存在は示すが、二語のAND条件・20歳期限、および紫/ピンクの正負対照を完全には復元できない。"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "20歳前に忘れる型があり、ピンクの鏡を覚えると良い型もある。",
+        "reference": "期限前忘却が明示的回避条件。ピンクの鏡は一variantの対抗語であり全体共通規則ではない。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "probe_id": "P10",
+        "blind": "死が主要帰結。不幸型もあり、襲撃型では血だらけの女性が鏡からかみそりを持って出て殺す。",
+        "reference": "同左。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "probe_id": "P11",
+        "blind": "起源・初出、期限型の派生順、対抗語・併記語の広がり、襲撃型の中核性は不明。",
+        "reference": "同左。加えて若者採録から全国・全世代流通を一般化できない。",
+        "difference": "LOSS",
+        "notes": "CNT-008にある流通範囲の明示的ガードレールはsummaryから復元できない。"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "期限記憶規則型を中核とし、紫地蔵併記・ピンク対抗語・具体的襲撃型を別variantとして区別する。",
+        "reference": "境界自体は同じだが、VAR-002は二語を20歳まで保持するAND条件、VAR-003は20歳期限で紫=悪/ピンク=良の対照を持つ。",
+        "difference": "LOSS",
+        "notes": "variant labelは保持されるがvariant-defining ruleの具体条件が一部欠落する。"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "D05〜D18・D20・D21に必要な中核規則構造はsummaryから概ね復元できる。一方、D02/D03/D19の流通媒体・範囲を評価するために必要なCNT-008の具体的採録文脈と非一般化境界がsummaryから失われるため、Content読解時とsummary読解時で分析可能性が一致しない。"
+    },
+    "verdict": "FINDING",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "紫の鏡／紫鏡を一定期限まで覚えていると死または不幸になる中核規則。",
+        "blind_reconstruction": "語句を一定期限まで記憶すると死または不幸になる規則として復元。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "期限は18歳・20歳・16歳・高校入学前に揺れ、20歳型が複数。",
+        "blind_reconstruction": "16/18/20歳・高校入学前の期限差と20歳型複数を復元。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "20歳型の一部で、20歳前に忘れることが死亡回避条件。",
+        "blind_reconstruction": "20歳前に忘れる条件回避として復元。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "主要帰結は死だが、高校入学前型では不幸になり強度が異なる。",
+        "blind_reconstruction": "死が主要帰結で不幸型もあることを復元。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "紫の鏡と紫地蔵という二つの言葉を20歳まで覚えていると死ぬvariant。",
+        "blind_reconstruction": "紫地蔵と併記する型の存在までは復元できるが、二語をともに20歳まで保持するAND条件と死亡帰結の結合は復元できない。",
+        "difference": "LOSS",
+        "notes": "variant名札は残るが発動条件が圧縮される。"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "20歳まで紫の鏡を覚えるのは良くなく、ピンクの鏡を覚えると良いという対抗語variant。",
+        "blind_reconstruction": "ピンクの鏡を覚えると良い対抗型は復元できるが、20歳期限と紫=悪/ピンク=良の対照全体を一つのruleとして確定できない。",
+        "difference": "LOSS",
+        "notes": "variant-defining deadline/contrastが部分的に失われる。"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "20歳まで忘れないと血だらけの女性が鏡からかみそりを持って現れ殺す具体的終端。",
+        "blind_reconstruction": "同じ具体的終端を復元。",
+        "difference": "NONE",
+        "notes": ""
+      },
+      {
+        "content_ref": "CNT-008",
+        "salient_meaning": "若者・学校年齢層との結び付きの具体例として、1999年男子生徒の小学校時聴取と2001年中学三年男子採録があり、全国・全世代流通は意味しない。",
+        "blind_reconstruction": "若者の俗信・若者受容者までは復元できるが、具体的採録主体・小学校時聴取・全国全世代への非一般化という証拠境界は復元できない。",
+        "difference": "LOSS",
+        "notes": "D02/D03/D19の支持範囲を評価するための具体性がsummaryで失われる。"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "summary_reconstruction",
+      "summary": "summaryがVAR-002/VAR-003の存在を残す一方、variantを定義する具体的規則条件を圧縮している。",
+      "rationale": "CNT-005は「紫の鏡」と「紫地蔵」の二語を20歳まで覚えていると死ぬというAND条件を持つが、summaryは「紫地蔵と併記する型」としか復元させない。CNT-006も20歳期限で「紫の鏡=良くない／ピンクの鏡=良い」という対照規則だが、summaryからは対抗語の存在のみが中心に見える。",
+      "impact": "variantの発動条件・期限・帰結を再構成できず、Content layerの具体的意味保存というReview 10の要件を満たさない。variant比較や将来のScope選択にも影響し得る。",
+      "fix_direction": "summary.narrativeまたはstructureで、VAR-002の二語AND条件＋20歳＋死亡、VAR-003の20歳期限＋紫/ピンクの正負対照を具体的に保持する。",
+      "content_refs": [
+        "CNT-005",
+        "CNT-006"
+      ],
+      "variant_refs": [
+        "VAR-002",
+        "VAR-003"
+      ],
+      "probe_refs": [
+        "P08",
+        "P12"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "summary_reconstruction",
+      "summary": "summaryがCNT-008の具体的採録文脈と流通範囲の非一般化境界を失い、流通系dimensionのAnalysis Invarianceを壊している。",
+      "rationale": "CNT-008は、1999年の一例が男子生徒による小学校時聴取であること、2001年の一例が中学三年男子からの採録であること、そしてこれだけでは全国・全世代流通を意味しないことを保持する。summaryは「若者の俗信」「若者・受容者」まで抽象化し、これらの具体的支持範囲を復元できない。",
+      "impact": "D02/D03/D19の媒体・流通範囲をsummaryだけから監査すると、学校年齢・採録主体と実際の流通媒体/範囲の区別が失われ、Content読解時とsummary読解時で判断可能性が変わる。",
+      "fix_direction": "summaryに、少なくとも「男子生徒が小学校時に聞いた例」「中学三年男子からの採録」「この採録主体情報のみで流通場所・全国性を確定しない」という境界を保持する。",
+      "content_refs": [
+        "CNT-008"
+      ],
+      "probe_refs": [
+        "P11"
+      ],
+      "evidence_refs": [
+        "EVD-007",
+        "EVD-008"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Blind Decodeはsummary.narrative+summary.structureだけを読んだ時点で固定した。Golden Reference 0180はその後、意味保存粒度の校正にのみ参照し、0005固有の内容・variant・分析判定は転用していない。"
+}
