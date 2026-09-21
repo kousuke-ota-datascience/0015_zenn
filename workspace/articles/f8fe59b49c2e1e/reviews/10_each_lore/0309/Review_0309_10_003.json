@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0309",
+  "artifact": "10",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0309_uryujima/0309_10_contents.json",
+    "commit_sha": "efaee71c6fb8e495c2de83d166884f7e3ed758d7",
+    "blob_sha": "96705985af4191a8442a8cbf46afb55f12072be6",
+    "reviewed_at": "2026-09-21T01:46:55Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "FINDING",
+      "notes": "大筋はEVD-001〜003で支持されるが、CNT-001の『別府湾の大分沖』は引用されたEVD-001/002本文には位置情報として現れず、Sourceにしか存在するdetailをContentへ直接持ち込んでいる。"
+    },
+    "summary_reconstruction": {
+      "status": "FINDING",
+      "notes": "coverage_refsのsalient meaning自体はSummaryに保持される一方、Summary.structureはContent Unitにない『住民・港町』を主体・被害対象・機構へ追加している。"
+    },
+    "structural_probe": {
+      "status": "FINDING",
+      "notes": "P01/P02/P05でSummaryの住民・港町追加、P12でVAR-001のinitialラベルと最古形不明の不整合を検出。"
+    },
+    "variant_boundary": {
+      "status": "FINDING",
+      "notes": "現在のEvidenceは1596年災害と島消失の共有核を示すが、それを『initial』版と確定する最古性Evidenceはない。"
+    },
+    "uncertainty_preservation": {
+      "status": "FINDING",
+      "notes": "uncertainties自体は成立時期・最古媒体不明を保持するが、VAR-001.kind='initial'がその不確実性と整合しない。"
+    },
+    "narrative_reconstruction": {
+      "status": "FINDING",
+      "notes": "Coverage omissionはないが、SummaryがContentにない主体・被害対象を足すため、純粋なContent→Summary再構成としては不変でない。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "現行EVD-001〜003を母集団としたEvidence→Content監査では、南蛮貿易・1596年沈没伝説・実在災害と伝説の区別・現代文化表象という主要意味はContent Unitへ配置されている。SRC-002からEvidenceへの上流欠落はReview 00のFindingとして分離した。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "別府湾の大分沖に南蛮貿易で栄えたとされる瓜生島とその住民・港町があり、1596年の豊後地震・津波を契機に島または港町が水没・消失して、繁栄した島から海中に失われた『幻の島』へ転じたとする地域伝説である。1596年の地震・津波自体は実在災害として確認されるが、島の実在形態、全面沈没の実態、後世の史料形成は不確実である。規則・禁忌や回避・制御法は設定されず、現在は地域文化・歴史表象として残る。対象範囲は1596年災害と島消失を結ぶ共有核で、初出・初期形の確定はしない。",
+    "reference_story": "別府湾の大分沖に南蛮貿易で栄えたとされる瓜生島があったと伝えられ、1596年の豊後地震・津波に際して海中へ沈んだという伝説がある。1596年の別府湾地震・津波は現実の災害として確認される一方、島の実在形態や全面沈没の具体像には不確実性が残る。瓜生島は現在も『幻の島』として大分の地域文化・歴史表象に再利用されている。伝承の成立時期と最古の流通媒体は現行Contentでは確定していない。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "瓜生島とその住民・港町。",
+        "reference": "Content Unitが明示する中心対象は瓜生島であり、住民・港町は独立したContent Unitとして記録されていない。",
+        "difference": "CONFLICT",
+        "notes": "SummaryがContentにない主体を追加している。"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "島・港町・住民が被害対象。",
+        "reference": "Content Unitでは瓜生島の沈没・消失が明示されるが、人間被害の対象は明示されない。",
+        "difference": "CONFLICT",
+        "notes": "人間対象を追加するとD12/D15等の分析候補が変わり得る。"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "1596年の豊後地震・津波が転換点。",
+        "reference": "CNT-002/003も1596年の地震・津波を転換点・現実アンカーとして記録する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "大地震・津波が原因。",
+        "reference": "CNT-002は地震・津波による沈没伝説、CNT-003は実在災害との区別を記録する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "地震・津波で島または港町が水没・消失。",
+        "reference": "Content Unitで明示される機構は瓜生島が海中へ沈んだという伝説で、港町の独立した消失は記録されない。",
+        "difference": "CONFLICT",
+        "notes": "港町要素がSummary側で追加されている。"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "繁栄した島から海中に失われた『幻の島』へ変化し、現在は文化表象として残る。",
+        "reference": "CNT-001/002/004が繁栄・沈没伝説・『幻の島』としての現代的再利用を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "1596年の単一災害を主要な時間的転換点とする。",
+        "reference": "CNT-002/003は1596年の災害を中心に構成される。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "安定した規則・禁忌は設定されていない。",
+        "reference": "現行Content Unitには規則・禁忌を示す単位がない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "回避・制御法は設定されていない。",
+        "reference": "現行Content Unitには回避・制御法を示す単位がない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "島は失われたと語られ、現在は伝説・地域文化表象として残る。",
+        "reference": "CNT-002/004が同じ終端像を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "島の実在形態、全面沈没の実態、後世史料形成が不確実。",
+        "reference": "CNT-003およびuncertaintiesが実在形態・全面沈没・成立時期／最古媒体の不確実性を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "1596年災害と島消失を結ぶ共有核を対象とし、初出・初期形の確定はしない。",
+        "reference": "VAR-001は同じ共有核を記述する一方でkind='initial'とされ、同時に成立時期・最古流通媒体は未確定とされている。",
+        "difference": "CONFLICT",
+        "notes": "'initial'という版種ラベルが現在のEvidenceで確定できない。"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "Summaryが住民・港町を明示的な被害対象として追加することで、完全なContent Unitだけからは導けない人間・共同体側のD12/D15候補を開き得る。したがって分析入力として不変ではない。"
+    },
+    "verdict": "FINDING",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "別府湾の大分沖に、南蛮貿易で栄えたとされる瓜生島があったという場所・繁栄像。",
+        "blind_reconstruction": "Summary narrativeの『別府湾の大分沖』『南蛮貿易で栄えた瓜生島』として保持。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "1596年の豊後地震・津波で瓜生島が海中へ沈んだという伝説。",
+        "blind_reconstruction": "Summary narrative/trigger/mechanism/state transitionとして保持。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "1596年の実在災害は確認されるが、島の実在形態・全面沈没像は不確実。",
+        "blind_reconstruction": "Summary narrative/uncertaintiesで明示的に保持。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "瓜生島が現在も『幻の島』として大分の地域文化・歴史表象に再利用される。",
+        "blind_reconstruction": "Summary terminal_stateとnarrative末尾の文化表象として保持。",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Minor",
+      "category": "evidence_content_support",
+      "summary": "CNT-001の位置detailが現行Evidence本文で支持されていない",
+      "rationale": "CNT-001は『別府湾の大分沖』を瓜生島の位置として記録するが、参照先EVD-001は南蛮貿易・幻の島という大分市説明、EVD-002は1596年災害と沈没を結ぶ研究資料の存在を要約するだけで、Evidence本文として当該位置を記録していない。Source本文に位置情報があってもReview 10ではEvidenceを越えて直接補完できない。",
+      "impact": "核心伝承を変えるほどではないが、Evidence→Contentの追跡可能性が一部切れている。",
+      "fix_direction": "SRC-002から位置を明示するEvidenceを追加したうえでCNT-001へ参照させるか、現行Evidenceで支持できる粒度へCNT-001を調整する。",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ],
+      "content_refs": [
+        "CNT-001"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "summary_reconstruction",
+      "summary": "SummaryがContent Unitにない住民・港町を主体・被害対象として追加している",
+      "rationale": "Summary.structureはprimary_actorsを『瓜生島とその住民・港町』、affected_targetsを『島・港町・住民』、mechanismを『島または港町が水没・消失』とするが、現行CNT-001〜004は瓜生島の繁栄・沈没・不確実性・現代的再利用を記録するだけで、住民被害や港町消失を独立したsalient meaningとして保持していない。",
+      "impact": "Summaryだけを分析入力にすると、人間・共同体への作用や被害を示すD12/D15等をContent Unitからは得られない形で選択でき、analysis invarianceを壊す。",
+      "fix_direction": "住民・港町を保持すべきなら先にEvidence支持付きContent Unitへ追加し、そうでなければSummaryから未支持の主体・被害対象を除く。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "probe_refs": [
+        "P01",
+        "P02",
+        "P05"
+      ]
+    },
+    {
+      "finding_id": "F003",
+      "severity": "Moderate",
+      "category": "variant_boundary",
+      "summary": "VAR-001をinitialとする最古性根拠がなく、同一Content内の不確実性と衝突する",
+      "rationale": "VAR-001はkind='initial'だが、現行Evidenceは後世研究資料と現代の公式文化表象しか示しておらず、初出・初期版を確定する資料を含まない。さらにuncertaintiesは『伝承の成立時期・最古流通媒体は確定しない』と明示しているため、initialラベルはエピステミックに過剰である。",
+      "impact": "Version Scopeが共有核ではなく『初期形』を確定済みであるかのように読め、D01/D02や後続の変容分析の前提を誤らせる。",
+      "fix_direction": "最古性を直接支持するEvidenceを追加できない限り、共有核であることと初期形であることを分離し、最古性を主張しないvariant分類へ改める。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "variant_refs": [
+        "VAR-001"
+      ],
+      "probe_refs": [
+        "P12"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Blind Decodeはsummary.narrative/structureだけから作成した内容として固定し、その後にcoverage_refs・Content Unit・Evidenceを参照した。Golden Reference 0180は具体的意味を失わないSummary/Content Unit粒度の校正にのみ用い、0309固有の伝承内容・variant・D01〜D21の正解には使用していない。"
+}
