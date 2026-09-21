@@ -42,14 +42,11 @@
     },
     {
       "dimension_id": "D02",
-      "status": "I",
-      "primary": {
-        "code_id": "D02.ORL.SCHOOL_ORAL",
-        "parent_id": "D02.ORL"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "1999年採録の一例が、小学校時にこの話を聞いたと明示するため、確認できる早期流通媒体として学校内口承を推定できる。ただし今回の最古公刊採録1998年について元の伝達媒体は確定しない。",
-      "manifestation": "若者・学校文化内で口頭で聞いた俗信として記録される。",
+      "rationale": "1999年採録の一例は男子生徒が小学校時にこの話を聞いたことを示すが、聞いた場所・相手・集団は示さない。また、今回確認できる最古の公刊採録である1998年資料も、元の伝達媒体を特定しない。したがって、最古確認流通媒体を学校内口承その他の具体的媒体へ確定できない。",
+      "manifestation": "聴取時期と話者属性は確認できるが、初期の流通媒体は特定できない。",
       "content_refs": [
         "CNT-008"
       ],
@@ -62,14 +59,11 @@
     },
     {
       "dimension_id": "D03",
-      "status": "I",
-      "primary": {
-        "code_id": "D03.ORL.SCHOOL_ORAL",
-        "parent_id": "D03.ORL"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "Scope内の採録には、小学校時に聞いたとの記述と中学生からの採録があり、学校・若者集団での口承流通が示唆される。ただし聞いた場所・相手まで直接確定できないためInferenceとする。",
-      "manifestation": "学校年齢の若者が「紫の鏡」の規則を聞き、記憶するという採録から学校内口承を推定する。",
+      "rationale": "Scope内資料には「小学校時に聞いた」例と中学三年男子からの採録があるが、これは話者・採録対象の属性と聴取時期を示すにとどまり、学校内・同輩間などの流通場所や共同体を直接示さない。現行Evidenceから現在／後続の主要流通媒体を具体的Childへ確定できない。",
+      "manifestation": "若年層からの採録は確認できるが、流通媒体・共同体は不明。",
       "content_refs": [
         "CNT-008"
       ],
@@ -107,7 +101,7 @@
     },
     {
       "dimension_id": "D05",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D05.RUL.JINX_RULE",
         "parent_id": "D05.RUL"
@@ -132,11 +126,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D06",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D06.T5",
         "parent_id": null
@@ -152,11 +147,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D07",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D07.DCF.FATE_OMEN",
         "parent_id": "D07.DCF"
@@ -174,11 +170,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D08",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D08.CLM.UNSUPPORTED_ASSERTION",
         "parent_id": "D08.CLM"
@@ -197,11 +194,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D09",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D09.PPR.CORRELATION_RULE",
         "parent_id": "D09.PPR"
@@ -224,11 +222,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D10",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D10.OBJ.SYMBOL_NAME_IMAGE",
         "parent_id": "D10.OBJ"
@@ -245,11 +244,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D11",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D11.INF.SAY_NAME_REMEMBER",
         "parent_id": "D11.INF"
@@ -274,11 +274,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D12",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D12.AUD.READER_LISTENER",
         "parent_id": "D12.AUD"
@@ -296,11 +297,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D13",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D13.COG.COGNITION_TRIGGERED_HARM",
         "parent_id": "D13.COG"
@@ -323,11 +325,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D14",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D14.NEG",
         "parent_id": null
@@ -345,11 +348,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D15",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D15.BOD.DEATH",
         "parent_id": "D15.BOD"
@@ -373,11 +377,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D16",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D16.DLY.DEADLINE",
         "parent_id": "D16.DLY"
@@ -396,11 +401,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D17",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D17.RUL.OBEY_TABOO",
         "parent_id": "D17.RUL"
@@ -417,11 +423,11 @@
       "taxonomy_gap": {
         "present": false
       },
-      "notes": "taxonomyに『忘却』専用Childはないが、明示された禁忌条件を守るという機能はOBEY_TABOOで表現可能。"
+      "notes": "taxonomyに『忘却』専用Childはないが、明示された禁忌条件を守るという機能はOBEY_TABOOで表現可能。 原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D18",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D18.L2",
         "parent_id": null
@@ -439,7 +445,8 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D19",
@@ -464,7 +471,7 @@
     },
     {
       "dimension_id": "D20",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D20.HAZ.DANGEROUS_TO_KNOW",
         "parent_id": "D20.HAZ"
@@ -482,11 +489,12 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     },
     {
       "dimension_id": "D21",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D21.A0",
         "parent_id": null
@@ -505,7 +513,8 @@
       ],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "原誌本文は未実見で、日文研DBカード要約というindirect derivativeを根拠とするため、コード内容はScoped Contentと整合するが、Evidence confidence ceilingに従いStatus=Iとする。"
     }
   ],
   "analysis_notes": "分析はVAR-001の規則型に限定した。後代の由来物語や、Scope外の具体的襲撃場面を中核因果へ遡及していない。D17は『忘却』専用taxonomy codeがないが、Evidenceが要求する機能は禁忌条件の遵守として現行コードで表現できるためtaxonomy gapとはしない。"
