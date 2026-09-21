@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0362",
+  "artifact": "20",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_20_analysis.json",
+    "commit_sha": "e6a660c39f2ac8cd1236c26485b4a7f1e62e0aba",
+    "blob_sha": "d107ebe322676715e5ff1dae1c13c16f5ea79af8",
+    "reviewed_at": "2026-09-21T01:48:02Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001とCNT-001〜004の1973年事件核に限定し、詳細伝播鎖をScope外とする境界はContentと整合する。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "大半のDimensionはScoped Contentと整合するが、D12の作用対象選択とD08の直接性に修正余地がある。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "今回の主要問題は既存コード不足ではなく、既存コードの対象・支持強度の選択である。"
+    },
+    "causality": {
+      "status": "FINDING",
+      "notes": "D12=金融機関に対する作用と、D13/D15=預金者の認知・意思決定変化が同一因果列で接続していない。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D08の『根拠を伴わない』という意味はScoped Contentに明示されず、Analysis rationaleがEvidenceへ直接依存する。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryとScoped Contentの間では主要分析構造は保存される。上流Evidence→Content支持不足は別Finding。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D08をDとする直接性はScoped Contentだけでは過強で、少なくともI相当の再検討が必要。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "FINDING",
+      "notes": "D12が豊川信用金庫という組織を作用対象にする一方、D13/D15は預金者の判断・引き出し行動を機序・帰結にしており対象が途中で切り替わる。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "Scoped Contentは現実の預金引き出し・取付けを明示し、EVD-001/002はX役割を持つ公的記録として補助確認できる。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "D19は全国流通を主張せず、愛知県豊川の具体的金融機関を中心とする地域アンカーに限定している。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "D20はNO_ONE_KNOWSを用いず、警察・金融機関等の制度的情報優位をIとしている。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "実在資料の存在だけでなく、Scoped Content自体が実在の豊川信用金庫と1973年事件を因果構造に含むため現実アンカーは成立する。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "Review 10で特定したCNT-001/002の支持不足に加え、D08はContentにない『根拠未提示』をDで断定しており確信度が支持強度を上回る。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "社会流言・パニック／金融流言事件はScoped Contentの事件形態と整合する。"
+    },
+    "content_layer_bypass": {
+      "status": "FINDING",
+      "notes": "D08 rationaleが『current Evidenceが直接示す』根拠未提示の金融不安という、Scoped Contentに明示されない意味をAnalysis正当化へ直接持ち込んでいる。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Scoped Contentから再構成すると、1973年に豊川信用金庫に関する流言が預金者の危険認知・金融判断を変え、通常行動である預金引き出しを多数の受け手に誘発して取付け騒ぎという社会的結果を生じさせ、警察・関係機関の発端調査・真相解明が拡大抑制へ働くモデルである。直接作用の中心対象は流言を受けて判断を変える預金者であり、金融機関は集団的引き出しの下流で影響を受ける対象として区別する必要がある。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D08",
+      "D10",
+      "D12",
+      "D13",
+      "D15",
+      "D17",
+      "D18"
+    ],
+    "status": "FINDING",
+    "notes": "D12→D13→D15の対象一貫性と、D08のContent layer bypassを修正すれば、主要な情報誘発行動モデル自体は維持可能。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "causality",
+      "summary": "D12→D13→D15の因果列で作用対象が金融機関から預金者へ途中で切り替わっている。",
+      "rationale": "D12は『作用対象』のDimensionだが、現行D12はD12.ORG.ORGANIZATIONとして豊川信用金庫を主対象にする。一方、D13 INFORMATION_INDUCED_ACTIONは流言が預金者の判断を変え、D15 COMPLIANCE_DECISIONは預金者が引き出しを選ぶことを説明している。Scoped Contentでも直接の認知・行動変化主体は預金者で、金融機関は取付けの下流で影響を受ける。",
+      "impact": "意味形成モデルの中核である対象→作用→帰結の鎖が同一主体に接続せず、D12の意味が『流言の話題対象』と『作用対象』で混同される。",
+      "fix_direction": "D12のPrimaryを預金者群を表すGroup系コード（例: D12.GRP.UNSPECIFIED_PEOPLE等）へ再評価し、必要なら金融機関はSecondaryまたは下流影響対象として扱う。D13/D15と同一作用対象で接続することを確認する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D12",
+        "D13",
+        "D15"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "content_layer_bypass",
+      "summary": "D08がScoped Contentにない『根拠未提示』をEvidenceから直接導入してD判定を正当化している。",
+      "rationale": "D08 rationaleは『current Evidenceが直接示すのは、根拠を伴わない金融不安の流言飛語』とするが、Scoped Contentは『流言』と金融不安の意味・行動誘発を記述するだけで、主張が証拠を伴わず提示されたことを独立に表現していない。Review 20ではEvidence-only detailをContentを飛ばして意味論的根拠にできない。",
+      "impact": "D08 UNSUPPORTED_ASSERTIONの意味とStatus=Dの直接性がContent層を超え、Analysisの確信度が上流支持より強くなる。",
+      "fix_direction": "『根拠未提示の主張』をContentとしてEvidence支持付きで明示できるなら上流を修正する。できない場合はD08をI/Uへ再評価するか、Scoped Contentだけで成立する別のcue codeを検討する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "dimension_refs": [
+        "D08"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review 20のsense-making modelはScoped Contentだけから再構成し、Evidenceは支持強度・上流omission監査にのみ用いた。"
+}

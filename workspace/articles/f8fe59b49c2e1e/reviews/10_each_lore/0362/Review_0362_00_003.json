@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0362",
+  "artifact": "00",
+  "review_seq": 3,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0362_toyokawa_shinkin_bank_run/0362_00_sources.json",
+    "commit_sha": "890112f010f345acae88dd9dfb2891c0d3d0ccf4",
+    "blob_sha": "f484b69c726b6544914b21fe6308a47efd68b605",
+    "reviewed_at": "2026-09-21T01:48:02Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001は事件翌年の警察庁公的記録、SRC-002/003は1974年の同時代研究書誌であり、用途と限界が明示されている。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001/002はSRC-001の記述を概ね保守的に要約し、EVD-003/004は本文未確認の範囲を越えず書誌事項に限定している。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "各Evidenceは対応Sourceの確認可能範囲を越えて独立事実を追加していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "SRC-001を事件翌年の公的記録として中心に置き、SRC-002/003を事件直後研究として区別している。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1973年の事件発生と1974年の公的記録・研究公刊を混同せず、最古確認を起源断定へ拡張していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "本文未確認の二次的逸話を増補しないという限界がnotesで保持される。"
+    },
+    "salient_evidence_completeness": {
+      "status": "FINDING",
+      "notes": "SRC-001は取付け騒ぎを、石油危機下の社会・人心の不安定さと些細な契機からパニック現象が生じた例としても位置付けるが、この同時代の因果文脈がEvidence化されていない。"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Minor",
+      "category": "salient_evidence_completeness",
+      "summary": "SRC-001の社会的不安定性・些細な契機という同時代の因果文脈がEvidence層に落ちていない。",
+      "rationale": "警察白書は豊川信用金庫の取付け騒ぎを流言飛語の事例として扱うだけでなく、1973年末の社会・人心の不安定さの中で些細な契機からパニック現象が生じた例として位置付けている。EVD-001/002は流言、取付け、発端解明、沈静化を保持する一方、この脆弱性・背景条件を保持していない。",
+      "impact": "事件核の同定は損なわないが、後続Content/Analysisが流言だけを十分原因のように単純化し、背景条件を検討できなくなる。",
+      "fix_direction": "SRC-001の該当文脈を、断定を強めないparaphrase Evidenceとして追加するか、既存Evidenceへ背景条件として明示的に統合する。",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    }
+  ],
+  "verdict": "Minor",
+  "review_notes": "独立再レビュー。docs/legacyは参照していない。"
+}
