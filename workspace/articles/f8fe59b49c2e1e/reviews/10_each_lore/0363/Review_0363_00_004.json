@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0363",
+  "artifact": "00",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0363_1973_toilet_paper_shortage_rumor/0363_00_sources.json",
+    "commit_sha": "658098632ea5a3f733b8af08523f74b9fe4c2f83",
+    "blob_sha": "e484c184cdfc2754715c4d97ba5d4925b9bbbcdb",
+    "reviewed_at": "2026-09-21T02:24:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001 is an official Showakan chronology page and is appropriately treated as a retrospective reliable secondary source rather than a primary contemporary record."
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001 through EVD-004 are paraphrases consistent with the cited Showakan passage: 1973-11-22 Tama City sold-out notice; oil-shock shortage rumor spread by word of mouth; hoarding and economic panic; and a 2020 SNS comparison."
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "The source supports both the rumor proposition ('toilet paper and detergent will become unavailable') and the separately reported real-world effects (word-of-mouth spread, hoarding, panic). This distinction is important downstream but is not itself a Source→Evidence support failure."
+    },
+    "primary_source_relation": {
+      "status": "FINDING",
+      "notes": "The artifact labels SRC-001 direct_derivative although it does not identify the specific primary record from which the retrospective chronology directly derives."
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "The record does not claim the 1973-11-22 sold-out notice is the first utterance or first transmission of the rumor."
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "The evidence does not identify the original speaker or first transmission route; EVD-004 remains marked as a 2020 comparison outside the 1973 scope."
+    },
+    "salient_evidence_completeness": {
+      "status": "FINDING",
+      "notes": "The source's 2020 comparison explicitly states the COVID-19 context and the specific false premise that toilet paper was manufactured/imported from China; EVD-004 compresses this to generic shortage misinformation, while downstream VAR-002 uses the omitted premise."
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Minor",
+      "category": "primary_source_relation",
+      "summary": "SRC-001 is marked direct_derivative without an identified direct primary-source chain.",
+      "rationale": "The stored source is a later chronology. The current metadata does not name or locate a primary record that establishes direct derivation.",
+      "impact": "Provenance strength is overstated, although the source remains usable as a reliable secondary source.",
+      "fix_direction": "Set relation_to_primary to unknown unless a specific primary record/direct derivative chain is documented.",
+      "source_refs": [
+        "SRC-001"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Minor",
+      "category": "salient_evidence_completeness",
+      "summary": "EVD-004 omits salient details of the 2020 comparison that are later used in Content.",
+      "rationale": "SRC-001 states the COVID-19 context and the China manufacturing/import premise; EVD-004 only preserves a generic SNS shortage rumor and hoarding.",
+      "impact": "The Evidence layer does not fully support the specificity of VAR-002.",
+      "fix_direction": "Expand EVD-004 (or add Evidence) with the omitted 2020 premise/context, or simplify downstream Content to the meaning actually encoded in Evidence.",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "evidence_refs": [
+        "EVD-004"
+      ]
+    }
+  ],
+  "verdict": "Minor",
+  "review_notes": "The new analysis-unit issue arises downstream: SRC-001 itself distinguishes the shortage proposition from observed social effects sufficiently to permit a proposition-focused lore model plus D18.L3 external-effect coding."
+}
