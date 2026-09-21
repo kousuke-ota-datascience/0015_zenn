@@ -1,0 +1,141 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Scoped ContentではD18.L2/L3を再構成できるが、summaryからはCNT-006の受信者不安・警察対応が落ちており、summary圧縮に対してD18が不変でない。",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "受信→期限内転送／停止→幸運／不運という因果列と次受信者への連鎖がScoped Contentから再構成できる。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisの意味論はScoped CNT-001〜006に存在し、Source/Evidence-only detailを直接Analysisへ追加していない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12受信者→D13幸運／不運→D15吉凶領域の因果列はCNT-001/003/004と接続する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18.L2/L3はScoped CNT-006の受信者不安・警察対応に意味論的根拠があり、EVD-005等は支持強度確認に用いられている。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "全国規模へ過大化していない点は妥当だが、全国を証明できないことから自動的にREGIONAL（市町村・地方圏）へ落とすこともできない。特定地域圏の分布情報がないためD19はUが保守的。",
+      "status": "FINDING"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者の不記載をNO_ONE_KNOWSへ変換せずUとしており、coding ruleと整合する。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "資料実在性ではなく、一般的な郵便制度・葉書という現実背景への依存としてA1を解釈している。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D01〜D18/D20/D21は概ねScoped Contentと整合するが、D19.LOC.REGIONALは「市町村・地方圏等」というtaxonomy意味に対し、CNT-006が特定地域圏を与えないため偽精密化。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "情報・メタ伝説／規則・チェーン伝承はScoped Contentの自己複製規則と整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "詳細規則・媒体・意味論を主にIとし、新聞原紙未実見やderivative Evidenceへの依存を超えてDirectへ強めていない。D19はconfidence ceilingではなくsemantic specificityの問題。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各Dimensionはversion_scope.content_refsのCNT-001〜006へ追跡でき、D19も参照自体はCNT-006へ追跡可能。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D02/D03を含む大半のD/I/U判断はEvidence支持強度に整合する。D19の問題はconfidenceよりcode選択の偽精密化。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "Scoped Contentの主要意味は現行taxonomyで表現可能で、今回のFindingはtaxonomy欠落ではなくD19の適用精度にある。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "VAR-001の1922年型をScopeに含め、後代VAR-002/003を除外する境界はScoped Contentと整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0024",
+  "findings": [
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-006"
+      ],
+      "dimension_refs": [
+        "D19"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-005"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "現ScopeのままならD19をstatus=U、primary=nullへ戻す。REGIONALまたはNATIONAL_PUBLICを付ける場合は、対象社会範囲を直接支持するScoped Content/Evidenceを追加したうえで再判定する。",
+      "impact": "流通範囲の母集団比較で、未知の分布を地域流通として誤分類し、D19集計に系統的なバイアスを入れる。",
+      "rationale": "taxonomyでD19.LOC.REGIONALは「市町村・地方圏等」を表す。CNT-006は1922年1月下旬に日本で流行していたことと新聞紹介上の社会反応を示すが、どの市町村・地方圏まで流通したかを特定しない。「全国一様と証明できない」ことは「地域・地方へ限定できる」ことを意味しないため、REGIONALは根拠のない偽精密化である。",
+      "severity": "Moderate",
+      "summary": "D19.LOC.REGIONALがScoped Contentの分布情報を超えて地域圏を特定している"
+    },
+    {
+      "category": "analysis_invariance",
+      "content_refs": [
+        "CNT-006"
+      ],
+      "dimension_refs": [
+        "D18"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "Review 10のsummary findingを修正し、受信者不安・警察対応をsummaryへ復元する。修正後にD18がsummaryとScoped Contentの双方から同一に再構成できることを再レビューする。",
+      "impact": "summaryを安定インターフェースとして用いる後続分析・再コードでD18の再現性が失われる。",
+      "rationale": "D18は受信者の不安をL2、警察対応をL3としている。これらはCNT-006に存在する一方、summary narrative/structureには保持されていない。したがってScoped Contentを読めばD18は導けるが、summaryだけを分析入力とした場合はL2/L3を失い、分析結果が圧縮表現に依存して変わる。",
+      "severity": "Moderate",
+      "summary": "D18.L2/L3はContentからは成立するがsummaryから再構成できずAnalysis Invarianceを破る"
+    }
+  ],
+  "review_notes": "Review 20はScoped Contentを意味論的事実源として独立再構成し、Evidenceは支持強度監査にのみ用いた。過去Reviewの結論は採用していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-006"
+    ],
+    "dimension_refs": [
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19"
+    ],
+    "model": "1922年型は、受信者がチェーンレターを受け取ることで規則へ入り、24時間以内に同文を9人へ転送すれば9日後の幸運、停止すれば大きな不運が来るとする条件付きの未来予告・制御規則である。転送は次受信者へ同じ規則を複製し、将来の吉凶を行為選択へ結び付ける。Scoped Contentはさらに、流行に伴う受信者の不安と警察対応という受容者層・社会現実層を保持する。一方、Scoped Contentは具体的な市町村・地方圏を特定していないため、流通範囲をREGIONALへ固定することはできない。",
+    "notes": "コアsense-making modelは再構成できるが、D19のcode specificityとsummary→D18 invarianceにFindingが残る。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0024_kofuku_no_tegami/0024_20_analysis.json",
+    "blob_sha": "93b30d705075d650e3834d3c7e598dbb9c414572",
+    "commit_sha": "76f273a7a812a95e8b2cf6b994ba069a04173fb7",
+    "reviewed_at": "2026-09-21T06:28:09Z"
+  },
+  "verdict": "Moderate"
+}

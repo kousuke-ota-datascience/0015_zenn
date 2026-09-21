@@ -1,0 +1,71 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1922年1月下旬の日本流行を最古確認層として扱い、文面内の米国人将校起源主張を実起源と混同していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-001〜006はparaphraseとしてSource由来情報と不確実性を分離し、吉凶や起源主張を史実へ昇格していない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-002を同時代primary、SRC-001/SRC-003をderivativeとして区別しており、後代紹介を一次資料扱いしていない。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001/SRC-003には、初期型で差出人・仲介者の氏名列を写し、自分の名を追記して次へ回すという伝播・経路保持規則が記されるが、EVD-001〜006には保持されていない。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "SRC-001/SRC-002の種別・役割分離は妥当。ただしSRC-003の保存titleは、現在の同URLで確認できるページタイトルと一致せず、書誌的同一性の記録が不正確。",
+      "status": "FINDING"
+    },
+    "source_evidence_support": {
+      "notes": "既存EVD-001〜006の各主張は対応Sourceの範囲内に収まり、1922年新聞原紙未実見の制約も保持されている。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "新聞原紙未実見、実際の起源・移入経路、吉凶の実在、後代型との差を留保している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0024",
+  "findings": [
+    {
+      "category": "salient_evidence_completeness",
+      "finding_id": "F001",
+      "fix_direction": "1922年初期型における氏名列・経路追記規則を、出典の直接性と不確実性を明示したEvidenceとして追加し、その後にContent/variant境界へ反映する。",
+      "impact": "Source→Evidenceで初期型の情報保持構造が欠落し、下流Content/Variant/Analysisが後代の匿名型との差を十分に復元できない。コアの吉凶規則自体は保持されているためMajorではない。",
+      "rationale": "SRC-003の初期型説明は、差出人名に加えて仲介者名のリストを写し、自分の名を追記して次へ回すことを基本規則として記す。SRC-001の研究本文にも、送るごとに宛先を加えて経路を記録することを初期型の特徴とする記述がある。これは単なる装飾ではなく、初期型の伝播機構・匿名性・後代型との差を規定する情報であるが、現Evidenceは人数・期限・吉凶・由来・社会反応までで止まっている。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-001",
+        "SRC-003"
+      ],
+      "summary": "初期型の氏名列・経路追記規則がEvidence化されていない"
+    },
+    {
+      "category": "source_assessment",
+      "finding_id": "F002",
+      "fix_direction": "現ページの正式タイトルへ合わせるか、旧タイトルを用いる根拠となるアーカイブURL・取得時点・旧版情報をsource metadataに明示する。",
+      "impact": "主張内容の支持自体は失われないが、書誌的トレーサビリティと将来の再検証性を低下させる。",
+      "rationale": "SRC-003のURLは現在「”不幸の手紙” その流行と禁止”の現代史／初見健一・昭和こどもオカルト回顧録」というページを返す一方、canonical titleは「日本に上陸した謎の『幸運の手紙』――100年前のチェーンレター騒動」となっており、現URLからそのタイトルを確認できない。",
+      "severity": "Minor",
+      "source_refs": [
+        "SRC-003"
+      ],
+      "summary": "SRC-003の保存titleが現在の参照先ページタイトルと一致しない"
+    }
+  ],
+  "review_notes": "Seq 003 independent semantic review. docs/legacyおよび過去Reviewの結論は正解として参照せず、既存Reviewは採番・対象版固定の履歴確認にのみ使用した。SRC-003現ページとSRC-001の公開本文テキストをSource→Evidence completeness確認に用いた。1922年新聞原紙は直接閲覧していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0024_kofuku_no_tegami/0024_00_sources.json",
+    "blob_sha": "a34eb5b7878a0c210432f111203733d169f463f4",
+    "commit_sha": "105c9e4ab0ab5550b550095ef06af3ac822f20e2",
+    "reviewed_at": "2026-09-21T06:28:09Z"
+  },
+  "verdict": "Moderate"
+}

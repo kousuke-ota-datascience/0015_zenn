@@ -1,0 +1,189 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-001〜007はEVD-001〜006の範囲内で再構成され、由来・吉凶・社会反応をEvidence以上に強めていない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "誰が何を受け、期限内に何人へ送り、遵守・停止で何が起こるかは復元できる。一方、coverage contract上のCNT-006社会反応まで含む完全なsalient reconstructionには欠落がある。",
+      "status": "FINDING"
+    },
+    "salient_content_completeness": {
+      "notes": "現行Evidence EVD-001〜006のsalient informationはContent CNT-001〜007へ対応している。Review 00で検出したSource-only欠落はEvidence層の問題としてここで重複計上しない。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12のコア物語構造にはLOSS/CONFLICTなし。社会反応の欠落はcoverage auditで別途検出した。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summaryはコア規則とvariant境界を復元できるが、coverage_refsに含めるCNT-006の受信者不安・警察対応を保持していない。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "吉凶の実在、起源・移入経路、新聞原紙未実見、文面差の留保をsummaryでも保持する。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "1922年型を初期Scope、後代再流行・不幸前景型を後代として分離している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0024",
+  "findings": [
+    {
+      "category": "summary_reconstruction",
+      "content_refs": [
+        "CNT-006"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-005"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "summary narrativeまたはstructureに、1922年の流行に伴う受信者の不安と警察対応を、後代紹介経由である不確実性を保ったまま追加する。",
+      "impact": "コアのチェーンレター規則は復元できるが、summaryを唯一の圧縮表現として用いた後続分析で社会作用レイヤーが消失し、Analysis Invarianceを破る。",
+      "rationale": "summary.coverage_refsはCNT-006を含むが、summary narrative/structureが保持するのは1922年の流行確認までである。CNT-006に含まれる「不安を覚える受信者」「警察対応」はBlind Decodeから再構成できない。coverage_auditではCNT-006がLOSSとなり、D18の受容者層・社会現実層もsummaryだけでは導出できない。",
+      "severity": "Moderate",
+      "summary": "CNT-006の社会反応がsummaryから欠落し、coverage contractとD18再構成を満たさない"
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryだけではCNT-006の受信者不安・警察対応を復元できず、D18.L2/L3の根拠となる社会反応層が失われるため、後続Analysisはsummaryに対して不変ではない。",
+      "status": "FINDING"
+    },
+    "blind_decode": "1922年の日本で確認される幸福の手紙は、受信者が同じ文面を24時間以内に9人へ送り、実行すれば9日後に幸運が訪れ、連鎖を止めれば大きな不運が来るとする郵便チェーンレターである。受信によって規則へ入り、転送により次の受信者へ同じ条件が複製される。文面は米国人将校に始まる等の由来を主張するが史実とは確定しない。1922年1月下旬の流行は確認され、後代には再流行や不幸をより前景化する型があるが初期Scopeとは分ける。吉凶の実在や具体的移入経路は未確定である。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "受信すると転送規則の対象になる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "手紙受信が規則参加の開始条件。"
+      },
+      {
+        "blind_reconstruction": "24時間以内・9人・同文転送を再構成できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "24時間以内に同文を9人へ送る転送規則。"
+      },
+      {
+        "blind_reconstruction": "9日後の幸運を再構成できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "遵守すると9日後に幸運。"
+      },
+      {
+        "blind_reconstruction": "停止時の不運を再構成できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "連鎖停止で大きな不運。"
+      },
+      {
+        "blind_reconstruction": "由来主張と史実留保を再構成できる。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "米国人将校等の由来は文面内主張で史実未確定。"
+      },
+      {
+        "blind_reconstruction": "1922年の流行は再構成できるが、受信者の不安・警察対応はsummaryから復元できない。",
+        "content_ref": "CNT-006",
+        "difference": "LOSS",
+        "salient_meaning": "1922年流行に加え、受信者の不安と警察対応という社会反応。"
+      },
+      {
+        "blind_reconstruction": "後代変化を初期Scope外として再構成できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "後代再流行と不幸前景型への変化。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "現在の受信者・転送者と次の受信者。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "Contentでも同じ主体を保持する。"
+      },
+      {
+        "blind": "現在の受信者の吉凶と、転送により規則へ参加する次の受信者。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "Contentの主要な対象と一致する。"
+      },
+      {
+        "blind": "幸福の手紙を受け取ること。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "CNT-001と一致する。"
+      },
+      {
+        "blind": "手紙が提示する自己複製規則と吉凶の条件付き主張。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "Contentは特定超自然主体を追加しない。"
+      },
+      {
+        "blind": "期限内転送なら幸運、停止なら不運。転送により規則が複製される。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "CNT-002〜004と一致する。"
+      },
+      {
+        "blind": "受信→24時間以内の転送判断→9日後の幸運または停止時の不運。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "主要状態遷移を再構成できる。"
+      },
+      {
+        "blind": "24時間の期限、9日の遅延、次受信者への連鎖。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "時間構造と一致する。"
+      },
+      {
+        "blind": "同文を9人へ、24時間以内に送り、連鎖を止めない。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "CNT-002〜004と一致する。"
+      },
+      {
+        "blind": "規定どおり転送することが文面上の幸運獲得・不運回避手段。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "Contentと一致する。"
+      },
+      {
+        "blind": "遵守なら幸運、停止なら大きな不運という二分岐。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "CNT-003/004と一致する。"
+      },
+      {
+        "blind": "吉凶の実在、実際の起源・移入経路、文面差は未確定。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "uncertaintiesと一致する。"
+      },
+      {
+        "blind": "1922年初期型、後代再流行、後代の不幸前景型を区別。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001〜003と一致する。"
+      }
+    ],
+    "reference_story": "Content layerは、幸福の手紙の受信、24時間以内に9人へ同文を送る規則、遵守時の9日後の幸運、停止時の大きな不運、文面内の起源物語、1922年の流行に伴う受信者の不安・警察対応、後代の再流行と不幸前景型への変化を保持する。VAR-001を初期Scopeに置き、VAR-002/003を分離し、吉凶の実在・実起源・新聞原紙未実見の不確実性を閉じない。",
+    "verdict": "FINDING"
+  },
+  "review_notes": "Blind Decodeはsummary.narrative + summary.structureだけから固定した。その後にcoverage/content/Evidenceを比較した。Review 00のSource-only欠落はReview 10のEvidence→Content completenessへ直接持ち込まず、層境界を維持した。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0024_kofuku_no_tegami/0024_10_contents.json",
+    "blob_sha": "c7197bae229e3e9e425e7087c5477e602fff521c",
+    "commit_sha": "d783b6ac718597ac595b291f1d2fa8f1ae9e9e98",
+    "reviewed_at": "2026-09-21T06:28:09Z"
+  },
+  "verdict": "Moderate"
+}
