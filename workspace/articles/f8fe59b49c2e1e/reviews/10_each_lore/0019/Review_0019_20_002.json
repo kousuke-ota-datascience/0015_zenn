@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0019",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0019_chiisai_ojisan/0019_20_analysis.json",
+    "commit_sha": "33f4522d74242467d03042ae5bcdc9c430b71b83",
+    "blob_sha": "0bc511d54efc6c34ac4c38fb7b71e29891723401",
+    "reviewed_at": "2026-09-21T01:38:24Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "Scoped Contentは2009年複数目撃型を共有核とし、後代の個人反復・出版集成・創作メディアを除外している。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D07〜D17の中心モデルは、正体不明の小型人型存在を偶発的に視認する目撃型怪異としてScoped Contentから再構成できる。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "現Scoped Contentからは既存code体系で表現不能な安定構造を確認しない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "偶発的な視認→小型存在の顕現・観察→正体不明のまま終わるという最小因果列に抑制されている。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "大部分はContent refsへ追跡できるが、D03のWebサイト媒体判定はScoped Contentに媒体種別が明示されず、Source/Evidence層の情報に依存している。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryとScoped Contentを独立に再構成しても、2009年目撃群を対象とする中心モデルは不変。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D03はWebサイトという媒体種別をScoped Contentから直接確定できないため、Content layerだけを根拠にDとするdirectnessが不足する。その他の主要D/I/U抑制は概ね整合する。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12の目撃者→D13の顕現・視認→D15の正体不明性維持という読みは、目撃型共有核として接続可能。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "L3社会現実効果を付与せず、Scoped Content内の怪異出現L1に限定している。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "Web掲載や後代集成本を2009年Scopeの全国分布へ読み替えずUとしている。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "特権情報保持者が記載されないことからNO_ONE_KNOWSを推定せずUとしている。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "一般的な風呂場・寝室・洗濯機周辺・車庫等を背景とし、特定実在地点を成立条件にしていない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "目撃談を客観的実在証明へ格上げせず、2009年を絶対起源とせず、正体を妖怪・妖精等へ固定していない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "物語・伝説という上位分類の下で、実質は複数目撃型怪異として扱われており、Version Scopeの中心意味と重大な衝突はない。"
+    },
+    "content_layer_bypass": {
+      "status": "FINDING",
+      "notes": "D03.WEB.WEBSITEはScoped Contentに『Webサイト』という媒体種別が明示されないまま、2009年SourceがWeb記事であるというSource/Evidenceレイヤーの事実をAnalysisへ直接持ち込んでいる。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Scoped Contentから再構成できる0019の2009年共有核は、日常空間で通常よりはるかに小さい成人男性様存在を偶発的に目撃する複数の体験談群である。場所・行動は異質で、共通した危害・単一筋書き・固定された正体はなく、妖精・妖怪・UMA等の解釈は未確定のまま残る。後代の個人反復談・出版集成・創作メディアはVersion Scope外である。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-006"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "status": "PASS",
+    "notes": "中心のsense-making model自体はScoped Contentから再構成可能。FindingはD03の媒体コードに限定したContent Layer Bypass。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "content_layer_bypass",
+      "summary": "D03.WEB.WEBSITEのDirect判定がScoped ContentではなくSource/Evidenceレイヤーの媒体情報に依存している。",
+      "rationale": "20_analysisはD03について『Version Scopeの2009年目撃談群は、同時代のWeb記事として具体的に確認できる』としてD03.WEB.WEBSITE/Dを付与する。しかしVersion Scopeが参照するCNT-001/CNT-002/CNT-006は、2009年に複数目撃が流通していたことや後代の話題化を記述するものの、流通媒体がWebサイトであることをContent Unitとして保持していない。Web記事という事実はSource metadata/Evidence側にある。",
+      "impact": "AnalysisがContent層に未populationの情報をSource/Evidenceから直接取得しており、Source→Evidence→Content→Analysisの層間契約を破る。D03のcode値とstatusの再現性がContent-onlyレビューで保証できない。",
+      "fix_direction": "Webサイト媒体をVersion Scope上必要なHistory/Content meaningとして10_contentsへ明示的にpopulationした上でD03を再評価するか、Content層だけで支持できる値/statusへD03を修正する。Source/Evidenceのみを根拠にAnalysisを維持しない。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-006"
+      ],
+      "dimension_refs": [
+        "D03"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review cycle 002。20はScoped Contentのみからsense-makingを再構成し、Source/Evidenceにしかない意味をAnalysisの根拠として使用していないかを別監査した。"
+}

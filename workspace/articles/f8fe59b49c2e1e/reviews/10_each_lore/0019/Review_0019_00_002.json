@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0019",
+  "artifact": "00",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0019_chiisai_ojisan/0019_00_sources.json",
+    "commit_sha": "001c56e86104baaba2c203a75a565a3e6372f179",
+    "blob_sha": "f089d9c64a839d5d6f06aab3e0858fcbf1cd2675",
+    "reviewed_at": "2026-09-21T01:38:24Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "FINDING",
+      "notes": "SRC-001は現行URLで記載内容を直接確認できる一方、SRC-002/003/004/005はcanonical locatorから記載資料を再現できない、または現存する書誌・記事とlocator/媒体帰属が一致しない。"
+    },
+    "evidence_integrity": {
+      "status": "FINDING",
+      "notes": "EVD-001〜003はSRC-001へ追跡できるが、EVD-004〜008は対応するcanonical locatorの不整合により再現性が不足する。"
+    },
+    "source_evidence_support": {
+      "status": "FINDING",
+      "notes": "SRC-002/004の現URLは記載タイトルと無関係な記事、SRC-003はCiNiiのNCIDが現存書誌と不一致、SRC-005は記載媒体URLから対象記事を確認できないため、EVD-004〜008のSource→Evidence支持を現locatorだけでは検証できない。"
+    },
+    "primary_source_relation": {
+      "status": "FINDING",
+      "notes": "SRC-002/004はprimaryとされるが、指定URLが対象記事を指さないため、当該relation_to_primaryをcanonical locatorから独立検証できない。SRC-001のdirect_derivative扱いは記事内容と整合する。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "SRC-001は2009年8月の同時代記事として内容を直接確認できる。canonicalは2009年を絶対起源ではなく『早い同時代集成の一つ』に限定しており、Evidence ceilingを超えない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "実在性、正体、外見・行動の統一性、最初の目撃年代を未確定のまま保持している。"
+    },
+    "salient_evidence_completeness": {
+      "status": "FINDING",
+      "notes": "SRC-001には、イチゴのかじり跡という物理痕跡主張、小さいおばさんを含むペア、髪をドレッド化されたという身体作用、2点の写真確認主張があるが、現Evidence層には意味保存されていない。"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "source_evidence_support",
+      "summary": "SRC-002〜005のcanonical locatorに複数の不整合があり、EVD-004〜008を宣言されたSourceから再現できない。",
+      "rationale": "SRC-002のORICON URLは現時点でタニタの白米カロリー計測器の記事を指し、SRC-004のシネマトゥデイURLは『攻殻機動隊ARISE』関連の記事を指す。SRC-003の記載NCID BB09473235は、現存するCiNii書誌『小さいおじさん』（山口敏太郎・Sel、東邦出版、2012.5）のNCID BB0969468Xと一致しない。SRC-005の記載TOCANA URLから対象記事を確認できず、同一タイトルの現存記事は別媒体で確認される。",
+      "impact": "後代の個人反復談、2012年集成本、2014年メディア展開、2009年前後の話題化を担うEVD-004〜008の追跡可能性が損なわれ、VAR-002/003およびHistory記述をcanonical locatorから再検証できない。",
+      "fix_direction": "SRC-002〜005について正しい現行URL・NCID・媒体帰属・locatorを一次的に再同定し、各ページの本文とEVD-004〜008を再照合する。取得不能資料は取得不能であることを明記し、代替資料へ置換する場合はsource_id/evidenceの関係を再構成する。",
+      "source_refs": [
+        "SRC-002",
+        "SRC-003",
+        "SRC-004",
+        "SRC-005"
+      ],
+      "evidence_refs": [
+        "EVD-004",
+        "EVD-005",
+        "EVD-006",
+        "EVD-007",
+        "EVD-008"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "salient_evidence_completeness",
+      "summary": "主要な2009年同時代記事にある異質な証拠様式・作用・actor情報がEvidence層へ落ちていない。",
+      "rationale": "SRC-001本文には、目撃後のイチゴに『かじった跡』があったという物理痕跡主張、小さいおじさんと小さいおばさんのペア、複数の小さいおじさんに髪をドレッドヘアーにされたという身体作用、筆者が2点の『小さいおっさんの写真』を確認したという画像証拠主張が含まれる。EVD-001〜003は目撃場面の多様性を保持するが、これらのsalient meaningを表現していない。",
+      "impact": "現Evidence populationだけを見ると、伝承が純粋な視覚目撃・成人男性様単独存在・追加作用なしに収束して見えるため、D08の証拠契機、D12〜D15の作用・帰結、actor境界を過度に単純化する可能性がある。",
+      "fix_direction": "SRC-001の各salient claimを、客観的事実とはせず『記事がそう報告する／筆者がそう主張する』というuncertainty付きでEvidenceへ分離登録する。その後、ContentsとAnalysisへの波及を再評価する。",
+      "source_refs": [
+        "SRC-001"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review cycle 002。canonical 2009記事を外部再照合し、Source locatorの再現性とEvidence populationのsemantic completenessを独立監査した。docs/legacyは判断根拠に用いていない。"
+}
