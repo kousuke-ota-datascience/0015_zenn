@@ -2,14 +2,15 @@
 
 ## 0.1. 位置付け
 
-本書は、1つの `Entry_ID` を対象として、典拠調査から canonical artifact 作成、deterministic validation、Git確定、Review引渡し、Review返却後のCoder修正までを統括するCoder側オーケストレーションの正本である。
+本書は、1つの `Entry_ID` を対象として、典拠調査から canonical artifact 作成・修正、deterministic validation、Git確定、Workflow 90同期、Review-ready確定までを統括するcanonical generation / correction Workflowの正本である。Workflow 20の起動・Review orchestrationは本Workflowの責務外とする。
 
 ## 0.2. 設計原則
 
 - Workflow 10は実行順序と意味論上の作成規則を定義する。
 - canonical dataの構造契約はJSON Schemaを正とし、本書ではfield構造を再定義しない。
 - 同一入力に対して機械的に判定できる検査はPythonへ委譲する。
-- 独立した意味論的妥当性判定はWorkflow 20へ委譲する。
+- 独立した意味論的妥当性判定はWorkflow 20へ委譲する。ただしWorkflow 10自身はWorkflow 20を起動しない。
+- Workflow 20を自動的に後続実行する責務はWorkflow 00だけが持つ。Workflow 20単独実行はユーザーの明示指示による。
 - control plane同期・更新はWorkflow 90へ一元化し、本書からNotionを直接更新しない。
 - 外部入力は原則 `Entry_ID` のみとする。
 
@@ -32,7 +33,7 @@
 - 各canonical artifactについてdeterministic validationを実行する。
 - canonical artifactを成果物単位でGit commit / pushする。
 - 必要地点でWorkflow 90を呼び出し、control planeを実状態へ同期させる。
-- Workflow 20へReview対象を引き渡す。
+- 3 canonical artifactをReview可能な状態（Review-ready）まで確定し、Workflow 90同期後に停止する。
 - Review返却後、対象版との対応が確認されたFindingのみをCoder修正へ適用する。
 - 上流artifactを修正した場合、下流artifactへの影響を再評価する。
 
@@ -43,6 +44,8 @@
 - commit graph比較ロジック。
 - Notion control planeの直接取得・更新。
 - Review Seq採番等のReview管理ロジック。
+- Workflow 20の起動、再Review起動、Review cycleの反復制御。
+- Review JSON生成・Verdict判定。
 - Reviewの独立意味論判定。
 
 # 2. インターフェイス
@@ -61,7 +64,7 @@
 
 - canonical artifactのGit commit / push。
 - Workflow 90の呼出しによるcontrol plane同期。
-- Workflow 20へのReview引渡し。
+- Workflow 90同期によるReview-ready / Review待ち状態のcontrol plane反映。
 
 # 3. 依存する正本
 
@@ -90,6 +93,7 @@
 
 ## 3.5. 関連Workflow
 
+- `0000_workflow_00_entry_pipeline.md`
 - `0000_workflow_20_review.md`
 - `0000_workflow_90_sync_controlplane.md`
 
@@ -189,15 +193,19 @@
 - validation通過後、`20_analysis.json` だけを対象とするcommitを作成しpushする。
 - commit後にWorkflow 90を実行する。
 
-## 5.7. Step 6: Review引渡し
+## 5.7. Step 6: Review-ready確定と停止
 
 - 3 canonical artifactのdeterministic validationがすべて通過していることを確認する。
 - Workflow 90を実行し、control planeとGit状態が同期していることを確認する。
-- Workflow 20へ `Entry_ID` を引き渡す。
-- Review対象版、Review Seq、Review結果保存形式はWorkflow 20およびdeterministic処理側を正とする。
+- current canonical 3点がReview可能な状態（Review-ready）であることを確定する。
+- **ここでWorkflow 10を終了する。Workflow 20を起動しない。**
+- `review_writer prepare / write`、Review Seq採番、Review JSON生成、Verdict判定を行わない。
+- Workflow 00から呼び出された場合は、Workflow 10終了後に制御をWorkflow 00へ戻す。Workflow 20を実行するか、どの順序で反復するかはWorkflow 00が決定する。
+- Workflow 10単独実行では、未Reviewのcurrent canonicalが残っていても正常終了条件を満たし得る。未Reviewであること自体を失敗扱いしない。
 
-## 5.8. Step 7: Review返却とCoder修正
+## 5.8. Step 7: Review返却後のCoder修正
 
+- 本Stepは、既存Review Findingに対するcorrectionとしてWorkflow 10が明示的に実行された場合に適用する。
 - Review返却後、最初にWorkflow 90を実行する。
 - stale Review、control plane更新漏れ、Review対象より新しいCoder成果物、divergenceが検出された場合は修正を開始しない。
 - 適用可能なFindingについてcanonical artifactを修正する。
@@ -206,11 +214,18 @@
 - `10_contents.json` を修正した場合、Version Scopeと `20_analysis.json` への影響を再評価する。
 - `20_analysis.json` のみの修正で上流へ影響がない場合、上流artifactを不要に更新しない。
 - 修正したcanonical artifactごとにvalidation、単独commit / push、Workflow 90同期を実行する。
-- 必要な修正後、再度Workflow 20へ引き渡す。
+- 必要な修正後、deterministic validation、成果物単位commit / push、Workflow 90同期を完了し、再Review-ready状態で停止する。Workflow 20は起動しない。
 
-## 5.9. Step 8: 完了処理
+## 5.9. Step 8: Workflow 10終了条件
 
-- Workflow 20上で必要なReviewが完了した後、Workflow 90を実行してcontrol planeを最終同期する。
+Workflow 10は次を満たした時点で終了する。
+
+- 対象canonical artifactに必要なdeterministic validationがPASSしている。
+- 必要なcanonical artifactの成果物単位commit / pushが完了している。
+- Workflow 90が `PASS / UPDATED` で、Git / control plane事実が同期している。
+- 新しいReview Seq / Review JSON / VerdictをWorkflow 10自身が生成していない。
+
+Workflow 10単独実行では、current canonicalが未Reviewまたは再Review待ちであることを終了失敗条件としない。
 
 # 6. Git運用上の不変条件
 
@@ -238,6 +253,8 @@
 
 # 8. 責務境界の不変条件
 
+- **Workflow 00 = Workflow 10 / 20を接続し、Review反復とE2E完了判定を担う唯一の自動オーケストレーター**。
+- **Workflow 10 = canonical generation / correction。Review-readyで停止し、Workflow 20を起動しない**。
 - **LLM = 意味論上の作成・判断**。
 - **JSON Schema = データ構造契約**。
 - **Python = deterministic enforcement**。
