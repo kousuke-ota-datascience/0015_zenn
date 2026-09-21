@@ -1,0 +1,62 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2001-07-07は後代再録で確認できる最古級定点であり、生成時期そのものとは扱わない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "採録済みEvidenceの表現自体は出典の射程を越えず、物理的変身や語り手の後続被害を生成していない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "原2ちゃんねるページ未固定を明示し、SRC-001/SRC-002を再録・保存記録として扱う。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001の2001年再録には白い人物が不自然な方向へ体を曲げつつくねくね動く描写があるが、EVD-001/EVD-002はこの動作モチーフを保持していない。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "2001年後代再録、2003年保存記録、後代解説を区別し、一次資料へ格上げしない。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-001〜EVD-009の各主張は対応Sourceへ追跡可能。完全性の欠落は別のsalient_evidence_completenessで扱う。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "白い存在の正体、医学的因果、兄の物理的変身、語り手の終盤視認後の帰結を未確定として保持する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "salient_evidence_completeness",
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "2001年再録の異常動作をEVD-001の改訂または独立Evidenceとして保持し、その後にContentの2001年型・variant boundaryを再評価する。",
+      "impact": "動作モチーフが2001年型にも存在した事実をEvidence層から再構成できず、2001→2003の変異境界やモチーフの新規増補範囲を誤認する可能性がある。",
+      "rationale": "SRC-001の2001年レス212再録では、白い服の人物がくねくね動き、不自然な方向へ体を曲げる描写が兄の理解以前に置かれる。現行EVD-001は遠方の白い人影、EVD-002は兄の理解と異変のみを保持し、この動作モチーフを落としている。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "summary": "2001年再録に存在する白い人物の「くねくね」した異常動作がEvidence化されていない。"
+    }
+  ],
+  "review_notes": "独立再レビュー。Source→Evidenceのsalient completenessを現行Source本文で再照合し、既存ReviewのPass判定を更新した。docs/legacyは判断根拠に使用していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "3f48ddca17e7c9eef25c086e24582d1f163a9b7a",
+    "commit_sha": "a6f0b5e194edf5020ed5a8a533e99a4a7425ab79",
+    "reviewed_at": "2026-09-21T01:42:40Z"
+  },
+  "verdict": "Moderate"
+}

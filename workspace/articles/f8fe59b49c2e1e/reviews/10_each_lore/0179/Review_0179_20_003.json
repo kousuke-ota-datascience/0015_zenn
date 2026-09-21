@@ -1,0 +1,120 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "集約D-codeは変わりにくいが、2001/2003のVersion Scopeをsummaryとfull Scoped Contentで同一に再構成できない。",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "詳細視認・理解→兄の重大異変→identity崩壊という物語内因果を、現実医学的因果と分離している。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Review 20の意味判定はScoped ContentとAnalysisだけで行い、Source/Evidenceの未Content化情報をD-code根拠へ直接持ち込んでいない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "兄を主要被影響者とし、理解/視認→認知危害/精神影響→自己同一性崩壊を保持する。語り手の終盤視認後の被害は生成しない。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L1=1/L2=0/L3=0の範囲を維持し、読者理解だけで作用する型を混入しない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "公開Web流通を全国的実在分布へ読み替えていない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "祖父を完全な真相保持者とはせず、追加の回避情報保持者として扱う。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "秋田という地域名はあるが具体地点は比定不能としてA1/Iに留める。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D01-D21のコード意味はScoped Contentの集約意味と整合し、未確定事項をU/C/Iへ反映している。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "ネット怪談 / 物語・伝説という分類はScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "再録・保存記録由来の限界を超えてDirect/確定へ格上げしていない。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "集約的Content→Dimension追跡は成立するが、CNT-009のvariant所属が矛盾するためversion-specific traceabilityは不安定。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "原ログ未固定・混成・正体未確定をD01/D06/D10等のstatusへ反映する。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "現行codebook上で必須のtaxonomy gapは認めない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "Analysisは2001型と2003型を明確に区別するが、Scoped ContentのVAR-001が2003年型専用CNT-009を参照しており、そのversion provenanceを一意に導出できない。",
+      "status": "FINDING"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "version_scope",
+      "content_refs": [
+        "CNT-009"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "まず10 ContentsのVAR-001参照集合を修正し、その修正版を入力として20 AnalysisのVersion Scopeと関連dimensionのtraceabilityを再確認する。上流修正が参照整理だけならcode変更は不要でもよい。",
+      "impact": "集約的なD07-D21の意味は概ね維持できるが、variant別の成立史・終端描写・Version Scopeに依存する分析の追跡可能性が損なわれる。",
+      "rationale": "Analysisは2001年型と2003年混成型を区別して記述する一方、Scoped ContentではVAR-001が、本文上2003年型専用のCNT-009をcontent_refsに含む。したがってAnalysisが採るcleanなversion provenanceは現行Contentから一意に導出できない。",
+      "severity": "Moderate",
+      "summary": "Analysisの明確な2001/2003 Version Scopeが、現行Scoped ContentのVAR-001参照集合と整合しない。"
+    }
+  ],
+  "review_notes": "Review 20はScoped Contentのみを意味根拠に使用した。Review 00のSource→Evidence欠落やEVD-008の未Content化部分をD-code判定へ直接持ち込んでいない。docs/legacyは判断根拠に使用していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-006",
+      "CNT-007",
+      "CNT-009",
+      "CNT-011"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D20"
+    ],
+    "model": "正体不明の白い存在を詳しく見て理解した兄が重大異変を起こし、2003年型では白い存在と同様にくねくね動く状態へ至って、語り手には元の兄ではなくなったかのように描かれる。祖父は見るなという回避情報を持ち、終盤では語り手自身も禁じられた対象を間近に見るが、その後の帰結は未確定である。",
+    "notes": "集約的なsense-making modelは再構成可能。ただしvariant-specific provenanceはVAR-001/CNT-009矛盾のため別Findingとする。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "c740bfb7dd13346c8ae78b835ec6d7eff3780d1d",
+    "commit_sha": "b9db7d690250d56b2696211a39dc144f5e51cfe2",
+    "reviewed_at": "2026-09-21T01:42:40Z"
+  },
+  "verdict": "Moderate"
+}
