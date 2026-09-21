@@ -1,0 +1,203 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-002/003は対応Evidenceと整合する。CNT-001およびsummaryの「保証期間」はEVD-001が述べる「一定期間」を超える具体化であり、現Evidenceからは支持されない。",
+      "status": "FINDING"
+    },
+    "narrative_reconstruction": {
+      "notes": "coverage_refs 4件のsalient meaning自体はBlind Decodeから復元できるが、summaryにContent units由来でない買い替え終端が追加されているため具体再構成にCONFLICTがある。",
+      "status": "FINDING"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-001〜003のうち伝承再構成、variant境界、不確実性、後続Analysisに必要なsalient informationはCNT-001〜004・VAR-001・uncertaintiesに収録されている。品質改善施策の細目は伝承構造を変えないため必須unitとはしない。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12を全件比較し、P10のみCONFLICT。その他はNONE。",
+      "status": "FINDING"
+    },
+    "summary_reconstruction": {
+      "notes": "共有核・因果・不確実性は再構成できるが、summary terminal_stateの「買い替え等を迫られる」はContent unitsに存在せず、Reference Storyに対して追加意味を持つ。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "成立年代・最古媒体・意図的設計の実在性はuncertaintiesとsummaryで保持される。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001は「一定期間後の故障をメーカー意図へ帰属する」共有核へ限定し、成立時期不明を後代要素で埋めていない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0349",
+  "findings": [
+    {
+      "category": "evidence_content_support",
+      "content_refs": [
+        "CNT-001"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "保証期間の記述を「一定期間」へ戻すか、保証期間との対応を直接支持するSource/Evidenceを追加してContentとsummaryを再構成する。",
+      "impact": "Version Scopeの発動・時間条件が根拠以上に狭く固定され、D11等の後続分析に未支持の具体条件が流入する。",
+      "probe_refs": [
+        "P03"
+      ],
+      "rationale": "EVD-001は2007年報道の「一定期間で製品が壊れる」という語義を根拠にするが、保証期間との対応は記録していない。にもかかわらずCNT-001、summary.narrative、summary.structure.entry_triggerが保証期間を明示し、Evidenceより具体化している。",
+      "severity": "Moderate",
+      "summary": "CNT-001とsummaryが「保証期間」を故障時期の具体例として追加しているが、参照Evidenceは「一定期間」までしか述べない。"
+    },
+    {
+      "category": "summary_reconstruction",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "terminal_stateをContentで支持される「製品故障」までに狭めるか、買い替えがsalient outcomeなら対応EvidenceとContent Unitを追加する。",
+      "impact": "summaryだけを読む後続処理が、Contentにない消費行動・負担を終端状態として受け取る。",
+      "probe_refs": [
+        "P10"
+      ],
+      "rationale": "CNT-001〜004は俗説の故障、メーカー意図への帰属、2007年の会社応答・流通確認を記録するが、買い替えを具体的終端として記録していない。Blind Decodeはsummaryに従うためこの追加意味を再生し、Reference StoryとのP10比較でCONFLICTになる。",
+      "severity": "Minor",
+      "summary": "summaryのterminal_stateにある「買い替え等を迫られる」がcoverage_refs内Contentから再構成できない。"
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryはD07〜D18、D20〜D21およびVersion Scopeの主要構造をContentと同程度に再構成可能。P10の追加終端は現行Analysisの主要コードを変えないが、summary correctnessのFindingとして分離した。",
+      "status": "PASS"
+    },
+    "blind_decode": "ソニー製品について、購入後の一定期間や保証期間が過ぎると故障するようメーカーが意図的に製品寿命を設計している、という「ソニータイマー」俗説がある。正常稼働から一定期間後の故障へ移り、利用者は製品故障や買い替えを迫られるとされる。回避法は不明で、語の成立時期、実際の故障統計との関係、意図的寿命設計の根拠は未確定である。2007年株主総会では語の存在が公に認識された一方、ソニーは意図的寿命設計を認めず品質向上策を説明した。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "一定期間・保証期間後に故障するよう設計されたという俗説として復元",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "notes": "salient meaningは復元。保証期間のEvidence支持不足は集合内LOSSではなくevidence_content_supportで扱う。",
+        "salient_meaning": "一定時期後に故障する「ソニータイマー」という俗説"
+      },
+      {
+        "blind_reconstruction": "メーカーが意図的に寿命を設計すると復元",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "故障時期をメーカーの意図的設計・寿命設定へ帰属"
+      },
+      {
+        "blind_reconstruction": "同じ会社側の応答と非承認を復元",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "2007年株主総会で語を認識し品質改善を説明、意図的故障設計は非承認"
+      },
+      {
+        "blind_reconstruction": "2007年株主総会で語の存在が公に認識されたと復元",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "notes": "認知範囲のEvidence側の強さはReview 00 Findingを参照。",
+        "salient_meaning": "遅くとも2007年には株主総会で質問される程度に公に流通"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "ソニー（メーカー）とソニー製品利用者",
+        "difference": "NONE",
+        "notes": "主体は保存される。",
+        "probe_id": "P01",
+        "reference": "ソニー側とソニー製品利用者"
+      },
+      {
+        "blind": "ソニー製品と利用者",
+        "difference": "NONE",
+        "notes": "対象構造は保存される。",
+        "probe_id": "P02",
+        "reference": "ソニー製品と利用者の文脈"
+      },
+      {
+        "blind": "購入後一定期間・保証期間の経過と故障",
+        "difference": "NONE",
+        "notes": "summaryとContentは同じ具体化を持つが、保証期間のEvidence支持不足は別Finding。",
+        "probe_id": "P03",
+        "reference": "一定期間・保証期間経過後の故障"
+      },
+      {
+        "blind": "メーカーの意図的設計",
+        "difference": "NONE",
+        "notes": "原因主体は保存される。",
+        "probe_id": "P04",
+        "reference": "メーカー側の意図的設計・寿命設定"
+      },
+      {
+        "blind": "一定期間後に故障するよう寿命を設計",
+        "difference": "NONE",
+        "notes": "機序の具体性は保存される。",
+        "probe_id": "P05",
+        "reference": "故障時期を意図的な設計・寿命設定へ帰属"
+      },
+      {
+        "blind": "正常稼働から一定期間後の故障へ",
+        "difference": "NONE",
+        "notes": "状態遷移は保存される。",
+        "probe_id": "P06",
+        "reference": "一定期間後の製品故障"
+      },
+      {
+        "blind": "一定期間の経過後に発生する遅延",
+        "difference": "NONE",
+        "notes": "遅延構造は保存される。",
+        "probe_id": "P07",
+        "reference": "一定期間後に故障する時間構造"
+      },
+      {
+        "blind": "規則・禁忌なし",
+        "difference": "NONE",
+        "notes": "追加規則はない。",
+        "probe_id": "P08",
+        "reference": "規則・禁忌はContent上提示されない"
+      },
+      {
+        "blind": "回避・制御法は不明",
+        "difference": "NONE",
+        "notes": "未確定性は保存される。",
+        "probe_id": "P09",
+        "reference": "回避・制御法はContent上確定されない"
+      },
+      {
+        "blind": "製品故障に加え、利用者が買い替え等を迫られる",
+        "difference": "CONFLICT",
+        "notes": "「買い替え等を迫られる」はcoverage_refs内Content unitに存在しない。",
+        "probe_id": "P10",
+        "reference": "Content unitsで確定する終端は製品故障まで"
+      },
+      {
+        "blind": "成立時期・故障統計との関係・意図的設計の根拠が未確定",
+        "difference": "NONE",
+        "notes": "主要な不確実性は保持される。",
+        "probe_id": "P11",
+        "reference": "成立年代・最古媒体・意図的設計の実在が未確定"
+      },
+      {
+        "blind": "一定期間後の故障をメーカー意図へ帰属する共有核",
+        "difference": "NONE",
+        "notes": "variant境界は保存される。",
+        "probe_id": "P12",
+        "reference": "VAR-001が同じ共有核をinitialとして定義し、後続major variantは収録しない"
+      }
+    ],
+    "reference_story": "「ソニータイマー」は、ソニー製品が保証期間など一定の時期を過ぎる頃に故障するよう仕込まれているという俗説で、故障時期をメーカー側の意図的な設計・寿命設定へ帰属する。2007年株主総会でソニー側は語の存在を認識し、品質向上策を説明したが、意図的な故障設計は認めていない。Contentは、遅くとも2007年には株主総会で質問される程度に公に流通したと整理する。成立年代・最古媒体と意図的故障設計の実在は未確定である。",
+    "verdict": "FINDING"
+  },
+  "review_notes": "Review cycle 003。Blind Decodeはsummary.narrative + summary.structureだけから固定後、Evidence→Content population、coverage_refs全件、P01〜P12を監査した。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0349_sony_timer/0349_10_contents.json",
+    "blob_sha": "dcb078c5dd19b62e375e42b187d8caf5352c22a4",
+    "commit_sha": "4394eff73134529cf40ecaeebad75c63d28f8c61",
+    "reviewed_at": "2026-09-21T01:47:57.404636Z"
+  },
+  "verdict": "Moderate"
+}

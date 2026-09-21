@@ -1,0 +1,61 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2007年を語の起源・成立年へ短絡せず、遅くとも確認できる時点として扱っている。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "株主の質問、社長による語の認識、品質向上説明をquote/paraphraseの役割を混同せず分離している。EVD-003の認知範囲の強さはsource_evidence_supportで別途Finding化した。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "原初の俗説一次資料を発見したとは扱っておらず、2007年の同時代報道を確認点として用いている。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001のうち伝承再構成・不確実性・後続Content/Analysisに影響する salient 情報（一定期間後故障という語義、語の認識、品質改善回答）はEVD-001〜003に収録されている。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は2007年6月21日の株主総会を同日報道したAV Watch記事として同定できる。資料種別の記載は保守的で、対象記事の同定自体に問題はない。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-001/002は記事本文で支持されるが、EVD-003の「十分に認知された俗称」は単一の公開質疑と社長の認識から言える範囲を超える。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "成立時期、故障統計との関係、意図的寿命設計の実在性は未確定として保持されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0349",
+  "findings": [
+    {
+      "category": "source_evidence_support",
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "EVD-003を「2007年株主総会で公開の質疑に用いられ、社長が語の存在を認識していた」程度へ狭めるか、広範な認知を示す独立資料を追加し、下流Contentも整合させる。",
+      "impact": "Evidenceの確信度が一段強まり、CNT-004の「公に流通していた」という広がりの表現を必要以上に強く支える形になる。",
+      "rationale": "SRC-001が直接示すのは、2007年株主総会で「ソニータイマー」が質問文に使われ、中鉢社長がその言葉の存在を認識していると答えたことまでである。これだけでは、どの範囲でどの程度「十分に」認知されていたかは確定できない。",
+      "severity": "Minor",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "summary": "EVD-003が単一の公開質疑から「十分に認知された俗称」まで認知範囲を強めている。"
+    }
+  ],
+  "review_notes": "Review cycle 003。Source→Evidenceの意味論を独立再監査。salient evidence omissionはないが、EVD-003の認知範囲に軽微な過剰一般化を確認した。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0349_sony_timer/0349_00_sources.json",
+    "blob_sha": "d842ddb1437d61e755f59aa284a622b10fc84756",
+    "commit_sha": "678ff2357e679016029026e47a811ce23f7f71ff",
+    "reviewed_at": "2026-09-21T01:47:57.404636Z"
+  },
+  "verdict": "Minor"
+}

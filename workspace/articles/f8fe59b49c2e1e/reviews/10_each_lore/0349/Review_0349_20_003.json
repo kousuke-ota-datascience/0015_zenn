@@ -1,0 +1,159 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Scoped Contentから主要因果は再構成できるが、D03/D09/D19/D20の現行判断にはContent外または未表現の意味が必要で、完全な再構成性を満たさない。",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "製品→意図的寿命設計という俗説上の機序→一定期間後の故障というD12→D13→D15の核はScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "D03/D19はAV WatchがWebニュース記事であるというSource/Evidence側detailをScoped Contentに明示せずAnalysisへ導入している。",
+      "status": "FINDING"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12=製品、D13=計画的寿命設計taxonomy gap、D15=機器故障はScoped Content上で一続きの因果列になる。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみでL3を選んでおらず、Scope外X Evidenceによる社会現実効果の付与はない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "全国的大衆流通への拡張はしていない。D19のOPEN_FORUM_WEB自体のContent layer不足はcontent_layer_bypassで別途Finding化した。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "NO_ONE_KNOWSへの誤置換はない。ただし特権保持者を企業へ固定する根拠不足はstatus_reasoningでFinding化した。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "Scoped Contentが実在企業ソニーとその製品を明示するためA2は資料の存在だけでなくContent内アンカーに基づく。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D09のMOTIVE_ATTRIBUTIONはScoped Contentに目的・利益動機がなく、rationaleの「利益動機」もContentに存在しない。D20にも過剰推論がある。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "企業・製品故障俗説というmacro_category / entry_typeは共有核と整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "D09の利益動機とD20の秘密保持はScoped Contentの支持強度を超え、D03/D19はContentにないWeb媒体detailを使用する。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "D03/D19のWeb媒体、D09の利益動機、D20の秘密保持構造はScoped Contentだけでは追跡できない。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "D20をIでINSTITUTION_AUTHORITYへ固定するには特権情報保持のContentが不足する。D03/D19のDもWeb媒体をContent外detailで支える。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "D13で「計画的製品寿命設計」に対応する既存Childへ無理に押し込まずtaxonomy_gapを明示している。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "VAR-001とCNT-001〜004の共有核へ限定し、意図的設計の実在を事実化しないScope自体は妥当。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0349",
+  "findings": [
+    {
+      "category": "content_layer_bypass",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D03",
+        "D19"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "Web掲載をVersion Scopeのsalient circulation factとして採るならEvidenceに対応するContent Unit/variant detailを追加する。Contentを増やさない場合はD03/D19を現行Scoped Contentだけで支持できる値・statusへ再評価する。",
+      "impact": "Content→Analysisの追跡可能性が破れ、D03.WEB.WEBSITEとD19.NET.OPEN_FORUM_WEBのコード・D statusがContent層を迂回して成立している。",
+      "rationale": "Version Scope内Contentは株主総会での質問、公的流通、株主総会報道というレベルまでは表現するが、媒体をWebサイトとして確定するContent Unitはない。現行D03 rationaleは「報道記事がWeb上で…」、D19 rationaleは「AV Watchの公開ニュースWeb」とSource/Evidence固有detailを用いている。",
+      "severity": "Moderate",
+      "summary": "D03とD19がScoped Contentにない「Webニュース記事」という媒体detailをSource/Evidenceから直接導入している。"
+    },
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "dimension_refs": [
+        "D09"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "Scoped Contentに基づきD09.CAU.DIRECT_CAUSEまたはD09.CAU.BLAME_RESPONSIBILITY等をtie-break規則で再評価する。MOTIVE_ATTRIBUTIONを維持する場合は、目的を明示するEvidence→Contentを追加する。",
+      "impact": "意味付与操作の分類が一段深い意図・目的へ過剰コードされ、D09比較分析を歪める。",
+      "rationale": "Scoped Contentが示すのは、故障時期をメーカーの「意図的な設計・寿命設定」へ原因帰属することまでで、なぜそうするのかという目的・利益動機は記述しない。TaxonomyのMOTIVE_ATTRIBUTIONは悪意・保護・復讐等の目的付与を要求するため、意図的原因と動機を同一視している。",
+      "severity": "Moderate",
+      "summary": "D09=MOTIVE_ATTRIBUTIONとrationaleの「利益動機」はScoped Contentが表現する意味を超える。"
+    },
+    {
+      "category": "status_reasoning",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D20"
+      ],
+      "finding_id": "F003",
+      "fix_direction": "現行Scoped ContentのままならD20をUへ再評価する。企業内部の秘密保持が伝承のsalient meaningなら、その意味を支持するEvidenceとContent Unitを追加してから再コードする。",
+      "impact": "伝承の社会的情報構造に、Contentにない内部秘密保持を付加している。",
+      "rationale": "Scoped Contentはメーカーによる意図的設計を俗説上の原因として置くが、「企業内部が真相を秘密として知っている」「追加情報や回避情報を偏在的に保持する」とは述べない。D20 coding ruleは、単にもっともらしい保持者を推定せず、特権情報保持構造を確認できない場合はUを検討するよう求める。",
+      "severity": "Moderate",
+      "summary": "D20で企業内部を特権情報保持者とするI判定はScoped Contentに情報保持・秘匿構造がない。"
+    }
+  ],
+  "review_notes": "Review cycle 003。Scoped Contentのみからsense-making modelを再構成し、D01〜D21、critical checks、layer bypassを監査した。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D20",
+      "D21"
+    ],
+    "model": "「ソニータイマー」は、ソニー製品が一定期間後に故障する現象をメーカーによる意図的な製品寿命設計へ帰属して説明する俗説である。Scoped Contentは2007年株主総会で名称が質問され、ソニー側が名称を認識しつつ品質向上を説明し、意図的故障設計は認めていないことを含む。成立年代・最古媒体および意図的設計の実在は未確定で、回避・制御法も確定されていない。",
+    "notes": "因果核は再構成可能だが、現行D03/D09/D19/D20の一部判断はこのScoped Contentモデルからは導けない。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0349_sony_timer/0349_20_analysis.json",
+    "blob_sha": "d3b76c61014a5757644ef837c457e10960f542ac",
+    "commit_sha": "e67dd5e64780f8b5b927833359b0059861c8eb93",
+    "reviewed_at": "2026-09-21T01:47:57.404636Z"
+  },
+  "verdict": "Moderate"
+}
