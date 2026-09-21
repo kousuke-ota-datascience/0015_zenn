@@ -1,0 +1,191 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0011",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "初期三脚型Scopeに必要な手順、起源確度、作用機序競合をContentから安定して復元できる。",
+      "status": "PASS"
+    },
+    "blind_decode": "複数人が器具に手・指を添え、霊的存在を招請して質問し、器具の運動を回答として読む占い・交霊遊戯。初期三脚型と後代文字盤・硬貨型を区別し、霊的作用機序は器具への直接作用説と参加者の精神・腕を介する間接作用説を競合したまま保持する。1884年伝播・1880年代後半流行は研究史上の整理であり、1992年調査の学齢期境界と時代区分にも明示的留保がある。後代には方法や名称を変えながら現代まで続くと整理される。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "招請・質問・三脚の揺れの解釈まで復元可能。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "notes": "意味の欠落・過剰強化なし。",
+        "salient_meaning": "初期三脚型の具体的手順"
+      },
+      {
+        "blind_reconstruction": "文字盤・硬貨による回答形成を復元可能。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "notes": "意味の欠落・過剰強化なし。",
+        "salient_meaning": "後代文字盤・硬貨型の手順"
+      },
+      {
+        "blind_reconstruction": "推定性・経路不確実性とともに復元可能。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "notes": "意味の欠落・過剰強化なし。",
+        "salient_meaning": "1884年伝播・1880年代後半流行の研究史整理"
+      },
+      {
+        "blind_reconstruction": "6〜18歳／7〜18歳の本文内差も保持。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "notes": "意味の欠落・過剰強化なし。",
+        "salient_meaning": "1992年調査の学齢期・集団実践"
+      },
+      {
+        "blind_reconstruction": "パイロット調査・未確定モデルの留保を保持。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "notes": "意味の欠落・過剰強化なし。",
+        "salient_meaning": "流行期区分と1970年代以降の再流行示唆"
+      },
+      {
+        "blind_reconstruction": "方法・名称を変えながら続く意味をsummaryから復元可能。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "notes": "意味の欠落・過剰強化なし。",
+        "salient_meaning": "現代までの継続"
+      },
+      {
+        "blind_reconstruction": "直接作用説と精神・腕を介する間接作用説を復元可能。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "notes": "意味の欠落・過剰強化なし。",
+        "salient_meaning": "競合する霊的作用機序"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "複数の参加者と招請される霊的存在。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P01",
+        "reference": "複数参加者と招請される霊的存在。"
+      },
+      {
+        "blind": "回答を求める参加者が主要な受け手。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P02",
+        "reference": "回答を求める参加者が影響・情報取得の受け手。"
+      },
+      {
+        "blind": "器具へ接触し、招請して質問することが開始条件。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P03",
+        "reference": "器具の準備・接触、霊的存在の招請、質問が開始トリガー。"
+      },
+      {
+        "blind": "伝承上の因果主体は招請された霊的存在。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P04",
+        "reference": "現Contentは伝承上の因果主体を招請された霊的存在として記述する。"
+      },
+      {
+        "blind": "三脚の揺れ又は硬貨の移動を回答として読む。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P05",
+        "reference": "三脚の揺れ/硬貨移動を回答として解釈する。"
+      },
+      {
+        "blind": "準備・接触→招請→質問→運動→解釈→回答。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P06",
+        "reference": "同じ逐次的state transition。"
+      },
+      {
+        "blind": "儀式は逐次進行し、1884年導入→1880年代後半流行→1970年代再流行という歴史順序を持つ。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P07",
+        "reference": "逐次儀式と流行史に加え、後代資料では方法・名称を変えながら現代まで継続するとされる。"
+      },
+      {
+        "blind": "初期は三脚・接触・招請・質問・回答対応、後代は文字盤・硬貨。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P08",
+        "reference": "主要手順は同じ。具体的呼出し・終了法は地域・時代で異なる。"
+      },
+      {
+        "blind": "固定した回避・終了法は不明で、終了手順に地域・時代差がある。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P09",
+        "reference": "現Contentも共通の回避・controlを確定せず、終了手順差をvariant境界とする。"
+      },
+      {
+        "blind": "質問への回答獲得。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P10",
+        "reference": "質問への回答・知識獲得。"
+      },
+      {
+        "blind": "伝播経路/単一起点、呼出し・終了法、三脚→文字盤移行時点が不確実。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P11",
+        "reference": "同じ三点をuncertaintyとして保持。"
+      },
+      {
+        "blind": "初期三脚型、後代の文字盤・硬貨型、地域・時代差を区別。",
+        "difference": "NONE",
+        "notes": "current summary/structureからsalient meaningを復元可能。",
+        "probe_id": "P12",
+        "reference": "VAR-001初期三脚、VAR-002文字盤・硬貨、VAR-003地域・時代差。"
+      }
+    ],
+    "reference_story": "複数人が器具に手・指を添え、霊的存在を招請して質問し、器具の運動を回答として読む占い・交霊遊戯。初期三脚型と後代文字盤・硬貨型を区別し、霊的作用機序は器具への直接作用説と参加者の精神・腕を介する間接作用説を競合したまま保持する。1884年伝播・1880年代後半流行は研究史上の整理であり、1992年調査の学齢期境界と時代区分にも明示的留保がある。後代には方法や名称を変えながら現代まで続くと整理される。",
+    "verdict": "PASS"
+  },
+  "review_notes": "current summary/structureからBlind Decodeし、coverage_refs CNT-001〜007を全件監査。前回の継続性LOSSと確度強化は解消済み。docs/legacyは参照していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_10_contents.json",
+    "blob_sha": "622f50d7deee54610a557640f8d5c25d450d16f9",
+    "commit_sha": "d8c1c4ec786599721683abef77e16dc0976268dd",
+    "reviewed_at": "2026-09-21T03:32:00Z"
+  },
+  "verdict": "Pass"
+}

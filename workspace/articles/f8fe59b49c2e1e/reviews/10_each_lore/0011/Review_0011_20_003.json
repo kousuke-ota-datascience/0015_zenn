@@ -1,0 +1,106 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0011",
+  "findings": [],
+  "review_notes": "version_scopeを先に固定し、Scoped ContentからD01〜D21を再構成して照合。D08 scope leakage、D12/D13因果不整合、D01/D19 directness過大は解消済み。docs/legacyは参照していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-003",
+      "CNT-007"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D05",
+      "D08",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16",
+      "D18",
+      "D19"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-003",
+      "EVD-006",
+      "EVD-009"
+    ],
+    "model": "初期三脚型では、参加者が器具に手を添え、霊的存在を招請して質問し、運動を回答として解釈する。作用機序は器具への直接作用と参加者の精神・腕を介する間接作用が競合するためD12/D13はConflictとする。1884年伝播・1880年代後半全国流行は推定を含むためD01/D19はInferredとする。終了法・流通媒体等はUnknownを保持する。",
+    "notes": "current version_scopeから中心因果・status配置を一貫して再構成できる。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_20_analysis.json",
+    "blob_sha": "a13b6654f7631667d51347f1cc4fcf75d9f83d47",
+    "commit_sha": "05a3569afff987ccebef8af1fdb774b558bf7372",
+    "reviewed_at": "2026-09-21T03:32:00Z"
+  },
+  "verdict": "Pass"
+}

@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "current canonicalを独立再評価し、当該checkに残存Findingを認めない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0011",
+  "findings": [],
+  "review_notes": "Review 002後の修正を含むcurrent 00を再レビュー。年齢境界差、流行期区分の未確定性、競合作用機序がEvidence層で保持されている。docs/legacyは参照していない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_00_sources.json",
+    "blob_sha": "c503e65217d5d2b3e0179085fc8667fbae35e6ba",
+    "commit_sha": "298abce61ca72c471ec059a7a91e2172f6b459d5",
+    "reviewed_at": "2026-09-21T03:32:00Z"
+  },
+  "verdict": "Pass"
+}
