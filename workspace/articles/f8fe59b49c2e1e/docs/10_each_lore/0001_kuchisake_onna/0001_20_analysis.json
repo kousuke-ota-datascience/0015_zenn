@@ -162,19 +162,14 @@
     },
     {
       "dimension_id": "D07",
-      "status": "I",
+      "status": "D",
       "primary": {
-        "code_id": "D07.ICT.STRANGER_THREAT",
+        "code_id": "D07.ICT.ABDUCTION_ASSAULT",
         "parent_id": "D07.ICT"
       },
-      "secondary": [
-        {
-          "code_id": "D07.ICT.ABDUCTION_ASSAULT",
-          "parent_id": "D07.ICT"
-        }
-      ],
-      "rationale": "Version Scopeで確実に保持できるのは、日常社会に現れる見知らぬ女性が子どもを脅かし／襲うという対人脅威構造である。",
-      "manifestation": "曖昧な対人危険を『口裂け女』という共有可能な脅威対象として切り出す。",
+      "secondary": [],
+      "rationale": "Scoped Contentで直接確認できる中心的な不確実性は、口の裂けた女性が小・中学生を襲うという襲撃危険である。『見知らぬ他者への不安』という後代専門家解釈はContent層に別途保持するが、VAR-001のScopeには含めず、D07判定へ流用しない。",
+      "manifestation": "『口裂け女』という女性主体による子どもへの襲撃危険を、共有可能な対人脅威として意味形成する。",
       "content_refs": [
         "CNT-004"
       ],
@@ -369,17 +364,19 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "ポマード、べっこう飴、特定回答等の回避規則は後代増補として確認できるが、VAR-001には含めないため、初期共有核の制御可能性は不明である。",
-      "manifestation": "後代の攻略法を初期形へ遡及せず、回避・制御方式はUnknownとして保持する。",
+      "rationale": "Version Scope内のCNT-001〜004には、回避・逃走・正答・禁忌・介入などの回避／制御方法を示す情報がない。回避法が存在しないと断定するのではなく、初期共有核の制御可能性を資料不足としてUnknownに保持する。",
+      "manifestation": "初期共有核について、利用可能な回避・制御方式は確定できない。",
       "content_refs": [
-        "CNT-007"
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
       ],
-      "evidence_refs": [
-        "EVD-008"
-      ],
+      "evidence_refs": [],
       "taxonomy_gap": {
         "present": false
-      }
+      },
+      "notes": "後代VAR-003のポマード・べっこう飴等はScope外であり、D17の判定根拠には使用しない。"
     },
     {
       "dimension_id": "D18",
@@ -473,5 +470,5 @@
       }
     }
   ],
-  "analysis_notes": "Review cycle 005の指摘と修正後canonical Contentに基づき、VAR-001のScope内でD02/D04/D05/D11/D16/D19を再評価した。後代VAR-002/VAR-003の要素をScope内判定へ逆流させず、Evidence不足はUnknownとして保持した。"
+  "analysis_notes": "Review cycle 006の指摘と修正後canonical Contentに基づき、VAR-001のScopeを維持したままD07をScoped Contentの襲撃危険へ再分類し、D17からScope外Content参照を除去した。後代専門家解釈はContent層に明示するが、VAR-001 Analysisへは流用しない。"
 }
