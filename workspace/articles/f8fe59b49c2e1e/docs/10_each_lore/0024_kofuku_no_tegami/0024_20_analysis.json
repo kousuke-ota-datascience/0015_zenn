@@ -41,13 +41,13 @@
     },
     {
       "dimension_id": "D02",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D02.PRT.CHAIN_LETTER",
         "parent_id": "D02.PRT"
       },
       "secondary": [],
-      "rationale": "同時代資料が「幸運の為に」とする葉書の流行を記し、最古確認層の流通媒体は自己複製型の郵便葉書・手紙として確認できる。",
+      "rationale": "1922年1月下旬に「幸運の為に」という葉書が流行したこと自体は同時代資料で直接確認できる。一方、それが自己複製するchain letterであるという具体的構造は研究ノート・後代新聞紹介を介して確認しているため、媒体codeは維持しつつDirectではなくInferredとする。",
       "manifestation": "郵便で届くチェーンレター／チェーン葉書。",
       "content_refs": [
         "CNT-001",
@@ -59,13 +59,13 @@
     },
     {
       "dimension_id": "D03",
-      "status": "D",
+      "status": "I",
       "primary": {
         "code_id": "D03.PRT.CHAIN_LETTER",
         "parent_id": "D03.PRT"
       },
       "secondary": [],
-      "rationale": "1922年Scopeで実際に受容者へ流通する媒体は、受信者が複写・再送する郵便チェーンレターである。",
+      "rationale": "1922年Scopeで郵便葉書・手紙が実際に流通したことは同時代資料で確認できるが、同文を複写して次受信者へ連鎖させる媒体ポートフォリオの具体性はderivative Evidenceに依存するため、D03.PRT.CHAIN_LETTERをInferredとする。",
       "manifestation": "葉書・手紙を複写して郵送し、次の受信者へ連鎖させる。",
       "content_refs": [
         "CNT-001",
@@ -436,5 +436,5 @@
       ]
     }
   ],
-  "analysis_notes": "1922年の日本流行層を既定Scopeとし、後代の不幸前景型や電子媒体型を混入させない。D04/D20は資料不足をUで保持する。D05以降の具体的規則・意味論は、1922年新聞原紙を本実行で直接閲覧していないため、研究ノート・後代新聞紹介に依拠する部分を原則Iとした。"
+  "analysis_notes": "1922年の日本流行層を既定Scopeとし、後代の不幸前景型や電子媒体型を混入させない。D04/D20は資料不足をUで保持する。D05以降の具体的規則・意味論は、1922年新聞原紙を本実行で直接閲覧していないため、研究ノート・後代新聞紹介に依拠する部分を原則Iとした。 Review Seq 001のstatus_reasoning Findingに従い、D02/D03はcode_idを維持したままEvidence confidence ceilingに合わせてDからIへ修正した。"
 }
