@@ -8,11 +8,11 @@
 
 ## Version Scope
 
-1973年の豊川信用金庫についての金融不安流言が取付け騒ぎを生じ、警察の発端解明・真相周知で沈静化した事件核。
+1973年の豊川信用金庫をめぐる流言が預金引き出しの集中・取付け騒ぎへ発展し、警察・関係機関の発端解明と真相の明示で沈静化した事件核。警察白書が明示する石油危機下の社会・人心の不安定な背景を含むが、具体的な流言文言は固定しない。
 
 - Included variants: VAR-001
 - Excluded variants: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
+- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005
 
 ## Dimensions
 
@@ -60,16 +60,16 @@
 
 **Manifestation:** 生成・変容パターンは未確定。
 
-### D05 — D
+### D05 — I
 
 - Primary: D05.PRP.FACT_CLAIM (parent: D05.PRP)
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
 - Evidence refs: -
 
-**Rationale:** 『信用金庫が危ない』という事実主張として機能する流言。
+**Rationale:** 具体的文言は不明だが、金融不安を伴う流言として受容され預金引き出しへ波及したことから、何らかの事実命題として提示されたと推定する。
 
-**Manifestation:** 金融危機を告げる命題。
+**Manifestation:** 具体文言未確定の金融不安に関する事実主張。
 
 ### D06 — I
 
@@ -78,31 +78,31 @@
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
 - Evidence refs: -
 
-**Rationale:** 受け手の行動を変えるほど現実の金融事実として受容された。
+**Rationale:** 流言が豊川信用金庫をめぐる金融不安として受容されたことから、制度的事実に関する内容として提示されたと推定する。
 
-**Manifestation:** 一般・制度事実らしく提示された。
+**Manifestation:** 金融機関に関する事実らしい内容として受容。
 
-### D07 — D
+### D07 — I
 
 - Primary: D07.INO.SYSTEM_CAPACITY_FAILURE (parent: D07.INO)
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
 - Evidence refs: -
 
-**Rationale:** 意味形成対象は金融機関の安全性・経営継続への不安。
+**Rationale:** 取付けに至る金融不安の意味形成対象として、金融機関が預金を安全に保持できるかという制度能力への不安が中心だったと推定する。具体的な危険・損失文言は固定しない。
 
-**Manifestation:** 制度・金融システムの破綻懸念。
+**Manifestation:** 金融機関の制度能力・安全性への不安。
 
-### D08 — D
+### D08 — I
 
 - Primary: D08.CLM.UNSUPPORTED_ASSERTION (parent: D08.CLM)
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
-- Evidence refs: EVD-001
+- Evidence refs: -
 
-**Rationale:** 信念形成の入口としてcurrent Evidenceが直接示すのは、根拠を伴わない金融不安の流言飛語そのものである。
+**Rationale:** Scoped Contentが事件の起点を流言として記述するため、根拠の提示を伴わない主張系の契機と推定する。ただし『根拠未提示』自体をEvidenceから直接持ち込んでDirectとは判定しない。
 
-**Manifestation:** 根拠未提示の金融不安主張。
+**Manifestation:** 流言として受容された主張。
 
 ### D09 — I
 
@@ -111,9 +111,9 @@
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
 - Evidence refs: -
 
-**Rationale:** 流言は豊川信用金庫を安全ではなく危険な金融機関として受け取らせ、預金引き出し判断へつながったと合理的に推定できる。反復規則の形成まではcurrent Evidenceに固定しない。
+**Rationale:** 金融不安として受容され預金維持・引き出しの判断が変化したことから、豊川信用金庫を安全側に置けないものとして分類する認知操作を含むと推定する。具体的な危険文言は固定しない。
 
-**Manifestation:** 金融機関を危険側へ分類する解釈。
+**Manifestation:** 金融機関を安全側に置けないものとして扱う分類。
 
 ### D10 — D
 
@@ -139,14 +139,14 @@
 
 ### D12 — D
 
-- Primary: D12.ORG.ORGANIZATION (parent: D12.ORG)
+- Primary: D12.AUD.READER_LISTENER (parent: D12.AUD)
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
 - Evidence refs: -
 
-**Rationale:** 流言の主な対象は豊川信用金庫という実在組織。
+**Rationale:** D13の情報誘発作用を直接受けるのは、流言を受け取って金融判断を変える預金者・受容者である。豊川信用金庫は多数の引き出しによる下流の影響対象として区別する。
 
-**Manifestation:** 金融機関。
+**Manifestation:** 流言を受け取る預金者・受容者。
 
 ### D13 — D
 
@@ -172,25 +172,25 @@
 
 ### D15 — D
 
-- Primary: D15.BEH.COMPLIANCE_DECISION (parent: D15.BEH)
+- Primary: D15.COL.MARKET_SOCIAL_BEHAVIOR (parent: D15.COL)
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
 - Evidence refs: -
 
-**Rationale:** 受け手が流言に従って預金を引き出す意思決定が中心。
+**Rationale:** 個々の預金引き出しが集積し、取付け騒ぎという市場・集団行動上の変化に至ることがVersion Scopeの主帰結である。
 
-**Manifestation:** 金融行動の選択。
+**Manifestation:** 預金引き出しの集中と取付け騒ぎ。
 
 ### D16 — D
 
-- Primary: D16.TRN.CHAIN_SPREAD (parent: D16.TRN)
+- Primary: D16.EVT.SEQUENTIAL_EPISODE (parent: D16.EVT)
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
-- Evidence refs: EVD-002
+- Evidence refs: -
 
-**Rationale:** 流言が人から人へ拡大し、行動が連鎖する。
+**Rationale:** 同一事件内で、流言の受容・拡大、預金引き出しの集中・取付け、発端解明・沈静化という複数段階が順に進む。流言の人から人への拡散自体をTRNの十分条件にはしない。
 
-**Manifestation:** 連鎖拡散。
+**Manifestation:** 一つの事件内で段階的に進むエピソード。
 
 ### D17 — D
 
@@ -249,4 +249,4 @@
 
 ## Analysis Notes
 
-L3は警察白書の現実行動記録に限定し、後年の伝播逸話を追加根拠として逆流させない。
+分析単位は流言イベント型を維持する。具体的な流言文言は固定せず、D12（流言受容者）→D13（情報誘発行動）→D15（市場・社会行動変化）の因果列を中心に置く。D16は流言の流通期間ではなく、同一事件内の段階進行として裁定する。石油危機下の社会・人心の不安定な背景はEVD-005/CNT-005で保存する。
