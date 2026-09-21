@@ -1,0 +1,184 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "EVD-001〜005のsalient meaningはCNT-001〜007およびvariants/uncertaintiesへ追跡でき、Source-only情報による補完は行っていない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "coverage_refs 6件の具体的展開・終端・歴史層・留保をsummaryから復元できる。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-001〜005を母集団として、主体、イベント列、terminal state、1995/1999/後代標準型の境界、媒体派生、不確実性を監査した。Evidence上salientな情報のContent化漏れは確認しなかった。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12すべてで現行Contentのsalient structureにLOSS/CONFLICTなし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summaryだけから反復電話による接近、1995年映画型のすいかのオバケ終端、1999年人形層、後代捨て人形型の背後終端、主要不確実性とvariant境界を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "絶対起源・1995年以前のメリーさん型学校口承・1999年層の具体進行・後代標準型の成立時期を未確定として保持する。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "1995年映画型、1999年『人形のおばけ』確認層、2019年に確認される捨て人形標準型、メール等派生を分離し、後代要素を初期形へ遡及していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0006",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryは1995年型と後代型のterminal scene、CNT-006の流通史上の留保、1999年層の不確実性を保持しており、完全性監査済みContentから得られる主要分析可能性を維持する。current Analysis自体のVersion Scope逸脱はReview 20で別途Finding化する。",
+      "status": "PASS"
+    },
+    "blind_decode": "『メリーさん』を名乗る存在から電話が繰り返しかかり、現在地を告げながら受け手へ接近する。1995年映画型では宿直者への電話が校門、花壇、昇降口へ近づき、最後の電話後に振り返ると『すいかのオバケ』が浮かぶ。映画全体は小中学生の怪談を題材とするが、メリーさん型固有の1995年以前の学校口承は確定しない。1999年児童書では『人形のおばけ“メリーさん”』を確認できる。後代標準型では捨てられた西洋人形が元の持ち主へ電話しながら近づき、最後に『今、あなたの後ろにいる』と告げる。絶対起源と各要素の結合・標準化時期は未確定である。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "反復電話と位置告知による段階接近として復元。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "notes": "共通核を保持。",
+        "salient_meaning": "メリーさんを名乗る相手が反復電話で現在地を告げながら受け手へ接近する。"
+      },
+      {
+        "blind_reconstruction": "後代標準型の背後到達終端として復元。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "notes": "1995年型へ遡及せず復元可能。",
+        "salient_meaning": "後代標準型では接近の末に『今、あなたの後ろにいる』と告げる。"
+      },
+      {
+        "blind_reconstruction": "学校内地点の接近とすいかのオバケ終端として復元。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "notes": "初期variant固有終端を保持。",
+        "salient_meaning": "1995年映画型では校門→花壇→昇降口と接近し、最後に振り返るとすいかのオバケが浮く。"
+      },
+      {
+        "blind_reconstruction": "捨てられた西洋人形が元の持ち主へ接近する発端として復元。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "notes": "1999年層と分離。",
+        "salient_meaning": "後代標準型では少女が西洋人形メリーを捨てたことが発端となる。"
+      },
+      {
+        "blind_reconstruction": "映画全体の題材説明とメリーさん型固有の先行口承を区別して復元。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "notes": "留保を保持。",
+        "salient_meaning": "NFAの学校怪談説明は映画全体についてで、メリーさん型固有の1995年以前の学校口承を直接証明しない。"
+      },
+      {
+        "blind_reconstruction": "1999年の人形層と後代捨て人形型を分離して復元。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "notes": "資料限界を保持。",
+        "salient_meaning": "1999年児童書では『人形のおばけ“メリーさん”』まで確認できるが、捨て人形導入等は確定しない。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "メリーさんを名乗る電話主と電話受信者。1995年型では宿直者、後代型では元の持ち主が受信者。",
+        "difference": "NONE",
+        "notes": "主体・役割はvariant別に再構成可能。",
+        "probe_id": "P01",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "接近の対象は電話受信者。",
+        "difference": "NONE",
+        "notes": "affected target保持。",
+        "probe_id": "P02",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "メリーさんを名乗る相手から反復して電話がかかる。",
+        "difference": "NONE",
+        "notes": "entry trigger保持。",
+        "probe_id": "P03",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "接近主体はメリーさんを名乗る存在。後代型では捨てられた西洋人形として説明される。",
+        "difference": "NONE",
+        "notes": "初期型と後代型のidentity境界を保持。",
+        "probe_id": "P04",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "電話ごとに現在地を告げつつ距離を縮める。",
+        "difference": "NONE",
+        "notes": "mechanism保持。",
+        "probe_id": "P05",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "1995年型は学校内地点を接近し最後にすいかのオバケが顕現する。後代型は最終的に受信者の背後へ到達する。",
+        "difference": "NONE",
+        "notes": "summary全体を読むとvariant別state transitionを区別できる。",
+        "probe_id": "P06",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "複数回の電話で段階的に進む。",
+        "difference": "NONE",
+        "notes": "順序・反復保持。",
+        "probe_id": "P07",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "有効な規則・禁忌は確定していない。",
+        "difference": "NONE",
+        "notes": "unknown保持。",
+        "probe_id": "P08",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "有効な回避・制御法は確定していない。",
+        "difference": "NONE",
+        "notes": "unknown保持。",
+        "probe_id": "P09",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "1995年型の終端は振り返るとすいかのオバケが浮く。後代型の終端は『今、あなたの後ろにいる』。",
+        "difference": "NONE",
+        "notes": "異なるterminal sceneを明示的に分離。",
+        "probe_id": "P10",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "絶対起源、メリーさん型固有の1995年以前の学校口承、1999年層の詳細、後代標準型の標準化時期は未確定。",
+        "difference": "NONE",
+        "notes": "主要uncertainty保持。",
+        "probe_id": "P11",
+        "reference": "同じ。"
+      },
+      {
+        "blind": "1995年映画型、1999年の人形のおばけ層、2019年に確認される捨て人形標準型、メール等派生を区別する。",
+        "difference": "NONE",
+        "notes": "variant境界保持。",
+        "probe_id": "P12",
+        "reference": "同じ。"
+      }
+    ],
+    "reference_story": "現行Contentでは、反復電話と位置告知による段階接近が共通核である。1995年映画型では宿直者への電話が校門→花壇→昇降口と近づき、最後の電話後に振り返るとメリーさん役の『すいかのオバケ』が浮かぶ。NFAの学校怪談説明は映画全体に関するため、メリーさん型固有の先行学校口承とはしない。1999年児童書では『人形のおばけ“メリーさん”』まで確認されるが、捨て人形導入や電話進行は確定しない。2019年に確認される後代標準型では、捨てられた西洋人形がゴミ捨て場・駅等から電話し、最後に背後到達を告げる。2018年事典ではメール等の派生名義も確認される。絶対起源と各要素の成立・標準化時期は未確定。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Golden Reference 0180はsummary/content_unitsの意味保存粒度の校正にのみ使用した。docs/legacyは参照していない。",
+  "review_seq": 4,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_10_contents.json",
+    "blob_sha": "d406fc509f16ddf4a0a99157dac7599544ae1014",
+    "commit_sha": "42e659ad3627c9125d2cc5600c353a3638994576",
+    "reviewed_at": "2026-09-21T03:22:13Z"
+  },
+  "verdict": "Pass"
+}

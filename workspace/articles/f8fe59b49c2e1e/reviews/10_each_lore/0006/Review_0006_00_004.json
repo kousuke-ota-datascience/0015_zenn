@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1995年映画を『現在確認できる早い具体形の一つ』とし、絶対起源・最古口承とはしていない。1999年人形層と2019年後代標準型も遡及統合していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-001〜005はSourceで確認できる内容をparaphraseし、逐語未確認・後年回想・書誌要約・後代再話の限界をuncertaintyで保持している。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "映画本編を直接閲覧した扱いにはしていない。SRC-002は出演者本人の後年回想をdirect_derivative、SRC-003/004/005は間接資料として区別している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "全5 Sourceについて人物/主体、接近列、終端、variant境界、資料限界を監査した。Source上で伝承再構成または後続Content/Analysisを変えるsalient情報のEvidence化漏れは確認しなかった。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "全5 Sourceの種別・資料同定・locatorを監査した。NFAは1995年映画の公的作品情報、宇野あゆみ公式サイトは出演者本人の2022年回想、NDLは1999年児童書の書誌・提供元要約、Books.or.jpは2018年事典の書誌・目次、日刊ゲンダイは2019年後代再話の紹介記事として、それぞれの認識論的地位がnotes/relationに区別されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-001の映画全体の題材説明、EVD-002の校門→花壇→昇降口→すいかのオバケ、EVD-003の1999年『人形のおばけ“メリーさん”』、EVD-004の事典目次、EVD-005の捨て人形→ゴミ捨て場/駅→背後終端はいずれも各locatorに支持される。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "メリーさん型固有の1995年以前の学校口承、絶対起源、1999年層における捨て人形導入、後代標準型の標準化時期を未確定として保持する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0006",
+  "findings": [],
+  "review_notes": "docs/legacyは参照していない。外部locatorの実内容を再照合してSource→Evidenceを監査した。",
+  "review_seq": 4,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0006_merry_san_no_denwa/0006_00_sources.json",
+    "blob_sha": "8eb12c4a27a23592a9de4d77b34aebdd65422c61",
+    "commit_sha": "678355cbaed44acbdb846543e79514b720ba6cd5",
+    "reviewed_at": "2026-09-21T03:22:13Z"
+  },
+  "verdict": "Pass"
+}
