@@ -1,0 +1,199 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-001〜009の既存主張は参照Evidenceによって支持され、1970年例の間接性、1977年例の直接性、1922年幸運型の境界が混同されていない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "summary.coverage_refsのCNT-001〜008を1件ずつ監査し、全件NONE。coverage集合内部の意味保存は良好。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-007が保持する1970年頃の全国的社会問題化という地理・社会規模の情報が、現行ContentではCNT-005の「爆発的に流行」へ抽象化され、全国範囲を明示するContent unitがない。新聞相談の多発もContent化されていない。",
+      "status": "FINDING"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12はいずれも現行Contentのsalient meaningに対してLOSS/CONFLICTなし。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summary.narrative + structureから、受信→期限内複製転送→不転送時の不幸警告→次受信者への連鎖、1970/1977のparameter差、行政対応、不確実性を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "1970年原新聞未確認、期限・人数の変異、超自然因果の未検証、幸運型との境界がContentとsummaryに保持される。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "1970年制裁前景型と1977年直接確認例を同一核のparameter variantとして扱い、1922年幸運型は0024側の前史・境界として分離している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0025",
+  "findings": [
+    {
+      "category": "salient_content_completeness",
+      "content_refs": [
+        "CNT-005",
+        "CNT-008"
+      ],
+      "evidence_refs": [
+        "EVD-007"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "EVD-007の「全国的な社会問題化」を、後代資料由来で原新聞未確認という確信度を保ったContent unitまたはCNT-005の拡張として明示する。Review 00で追加すべき小中学生中心の受容層情報もEvidence化後にContentへ取り込み、そのうえでD19を再判定する。",
+      "impact": "D19.NATIONAL_PUBLICの正当化をContentだけから再現できず、Review 20でEvidence層を直接参照する誘因になる。核心因果モデルやCNT-001〜008のsummary再構成は維持されるが、社会的埋め込みの分析可能性が欠損する。",
+      "notes": "coverage_audit全件NONEとは両立する。問題はcoverage集合の外側にあるpopulation completenessである。",
+      "rationale": "EVD-007はSRC-004経由の後代整理として、1970年頃から全国的に社会問題となり新聞へ相談・問い合わせが多数寄せられたことを保持する。現行ContentのCNT-005は「1970年頃に…爆発的に流行」とするが、全国という分布範囲を明示せず、CNT-008は1977年赤池町の局所的行政対応である。そのためEvidence上の全国規模をD19へ利用するために必要な意味がContent母集団から落ちている。これはsummary.coverage_refs内部のLOSSではなくEvidence→Content population omissionである。",
+      "severity": "Moderate",
+      "summary": "EVD-007の全国的流通・社会問題化がContent層で意味保存されていない。",
+      "variant_refs": [
+        "VAR-001"
+      ]
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "現行Contentに存在するD07〜D18・D20〜D21およびvariant境界の主要意味はsummaryから実質的に再構成できる。D19の全国範囲はContent自体に欠けるため、このPASSはcurrent Content→summary間の不変性に限り、population completeness Findingを解消しない。",
+      "status": "PASS"
+    },
+    "blind_decode": "「不幸の手紙」は郵便で受信すると同文を所定人数へ期限内に再送する規則へ入るチェーンレターで、止めると受信者自身に不幸が来ると警告する。転送すれば同じ条件が次の受信者へ再生産される。1970年頃には先行する幸運型から遵守時の幸運要素が消えた制裁前景型が流行し、具体値は1970年後代紹介の50時間・29人、1977年赤池町の数日・20人など変動する。伝承内部の回避は転送であり、1977年の現実側行政対応は破棄または警察への持参である。実際に不幸が発生する因果は確認されず、1922年の幸運型は別境界として扱う。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "受信が規則への入口であると復元できる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "受信すると転送規則の対象になる。"
+      },
+      {
+        "blind_reconstruction": "期限・人数付き転送規則として復元できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "同文を期限内に指定人数へ送る。"
+      },
+      {
+        "blind_reconstruction": "不転送と本人の不幸を結ぶ制裁条件として復元できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "転送しないと受信者に不幸が来ると警告する。"
+      },
+      {
+        "blind_reconstruction": "次受信者への規則再生産・連鎖継続として復元できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "転送すると同じ制裁条件が次の受信者へ再生産され連鎖する。"
+      },
+      {
+        "blind_reconstruction": "1970年頃の幸運要素消失と制裁前景型の流行として復元できる。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "1970年頃、幸運要素が消えた制裁前景型が爆発的に流行したと研究上整理される。"
+      },
+      {
+        "blind_reconstruction": "1970年例の50時間・29人を復元できる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "1970年の後代紹介例は50時間・29人。"
+      },
+      {
+        "blind_reconstruction": "1977年例の数日・20人を復元できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "1977年赤池町の同時代例は数日・20人。"
+      },
+      {
+        "blind_reconstruction": "現実側の行政対応として破棄・警察持参まで復元できる。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "1977年には受取人の困惑があり、行政は破棄または警察持参を勧めた。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "現在の受信者と次の受信者が主要役割。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "CNT-001〜004では受信者が転送義務を負い、転送先が次の受信者となる。"
+      },
+      {
+        "blind": "主な被作用対象は現在の受信者。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "CNT-003は不転送時の不幸対象を現在の受信者としている。"
+      },
+      {
+        "blind": "手紙を受け取ることが規則への入口。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "CNT-001は受信により転送規則の対象になることを明示する。"
+      },
+      {
+        "blind": "因果源は手紙の情報・規則で、不転送と不幸を結び付ける。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "CNT-003/004は制裁条件を情報規則として保持し、実在する超自然主体は確定しない。"
+      },
+      {
+        "blind": "同文を期限内に指定人数へ送り、不転送なら不幸という機構。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "CNT-002〜004が複製・送付・制裁条件・次受信者への再生産を保持する。"
+      },
+      {
+        "blind": "受信者は転送義務状態に入り、転送して連鎖継続するか、止めて制裁警告の対象になる。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "CNT-001〜004に同じ状態遷移がある。"
+      },
+      {
+        "blind": "期限・人数を伴う反復連鎖で、具体値はvariant間で異なる。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "CNT-002, CNT-006, CNT-007が期限・人数と変異を保持する。"
+      },
+      {
+        "blind": "期限内に同文を所定人数へ送ることが規則で、停止は不幸と結び付けられる。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "CNT-002/003に対応する。"
+      },
+      {
+        "blind": "伝承内部では転送が制裁回避手段として機能し、1977年の現実側対応は破棄・警察持参。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "CNT-004とCNT-008が内部規則と外部行政対応を分離して保持する。"
+      },
+      {
+        "blind": "転送すれば連鎖が続き、止めれば不幸が来ると主張されるが、実際の不幸発生は未確認。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "CNT-003/004とuncertaintyが一致する。"
+      },
+      {
+        "blind": "1970年原新聞未確認、期限・人数は一定でない、超自然的因果は未検証。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "ContentのuncertaintiesおよびCNT-006/007の資料階層が一致する。"
+      },
+      {
+        "blind": "1970年制裁前景型と1977年直接確認例を同一核のparameter variantとして扱い、1922年幸運型は境界外。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001/002とCNT-009の境界記述に一致する。"
+      }
+    ],
+    "reference_story": "現行Contentでは、受信により現在の受信者が転送規則の対象となり、同じ文面を期限内に指定人数へ送るよう要求される。不転送は受信者本人の不幸と結び付けられ、転送は同じ制裁条件を次の受信者へ再生産して連鎖を継続する。研究上、1970年頃に幸運要素を落とした制裁前景型が爆発的に流行したと整理される。1970年例は後代資料経由の50時間・29人、1977年赤池町例は同時代資料で数日・20人で、数値は固定されない。1977年資料は受取人の困惑と、破棄または警察持参という現実側行政対応も記録する。超自然的因果は未検証で、1922年の幸運型は前史・境界として別扱いである。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Blind Decodeとcoverage auditはPASS。Review全体がModerateなのは、Evidence→Contentの全国範囲欠落という独立gate Findingによる。",
+  "review_seq": 1,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0025_fuko_no_tegami/0025_10_contents.json",
+    "blob_sha": "91ef1460b4306411a2b0dbafda267467b844b1ae",
+    "commit_sha": "2e4cb8ced9f6ba35acb6ca48ec70d4f1f2a52b74",
+    "reviewed_at": "2026-09-25T10:34:00Z"
+  },
+  "verdict": "Moderate"
+}
