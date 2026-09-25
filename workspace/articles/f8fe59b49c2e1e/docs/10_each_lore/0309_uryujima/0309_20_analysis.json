@@ -4,18 +4,24 @@
   "macro_category": "災害・流言",
   "entry_type": "海没島伝説",
   "version_scope": {
-    "description": "1596年の豊後地震・津波を現実アンカーとして、瓜生島が海没したとする地域伝説の共有核。",
+    "description": "1596年の別府湾地震・津波を現実アンカーとし、瓜生島または沖浜の島・集落が大きく失われ、住民が避難・移住したとする安定した災害核。成立時のまとまった最古形は直接確認できないため、神託・避難救済型と恵比須赤面・悪戯型の因果異伝は統合しない。",
     "included_variants": [
       "VAR-001"
     ],
-    "excluded_variants": [],
+    "excluded_variants": [
+      "VAR-002",
+      "VAR-003"
+    ],
     "content_refs": [
       "CNT-001",
       "CNT-002",
       "CNT-003",
-      "CNT-004"
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-010"
     ],
-    "notes": "現実災害と伝説的沈没像を区別。"
+    "notes": "VAR-002は白馬の老人・島長の警告と避難制御を追加し、VAR-003は恵比須像の赤面・悪戯を原因化するため、共有核の因果源・制御構造を変える異伝としてScope外とする。"
   },
   "dimensions": [
     {
@@ -23,13 +29,16 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "伝説成立年を示す直接証拠を今回の範囲で固定していない。",
+      "rationale": "成立時のまとまった伝承形を直接確認できず、利用資料から生成年代を安全に固定できない。",
       "manifestation": "生成年代不明。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003",
-        "CNT-004"
+        "CNT-006",
+        "CNT-007",
+        "CNT-008",
+        "CNT-010"
       ]
     },
     {
@@ -37,13 +46,16 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "最古の人から人への流通媒体を特定できない。",
+      "rationale": "後世資料中に古記録の引用はあるが、伝承が最初に人から人へ流通した媒体を直接特定できない。",
       "manifestation": "最古確認流通媒体不明。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003",
-        "CNT-004"
+        "CNT-006",
+        "CNT-007",
+        "CNT-008",
+        "CNT-010"
       ]
     },
     {
@@ -54,13 +66,10 @@
         "parent_id": "D03.WEB"
       },
       "secondary": [],
-      "rationale": "現代のVersion Scopeは大分市公式サイト等でも公開流通している。",
-      "manifestation": "公式Webで地域伝説として再提示。",
+      "rationale": "Scoped Contentは、瓜生島伝説が大分市公式Webで公開・再提示されていることを明示する。",
+      "manifestation": "自治体公式Webでの再流通。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-010"
       ],
       "evidence_refs": [
         "EVD-001"
@@ -74,10 +83,10 @@
         "parent_id": "D04.MED"
       },
       "secondary": [],
-      "rationale": "大分市が瓜生島伝説をモチーフとしてスタンプラリー等の現代イベントへ転用しており、商品・観光化系の再利用が直接確認できる。",
-      "manifestation": "地域文化イベント・観光資源としての再利用。",
+      "rationale": "Scoped Contentは、伝説モチーフがスタンプラリー等の地域文化イベントへ転用されていることを明示する。",
+      "manifestation": "イベント・観光的再利用。",
       "content_refs": [
-        "CNT-004"
+        "CNT-010"
       ],
       "evidence_refs": [
         "EVD-001"
@@ -91,13 +100,13 @@
         "parent_id": "D05.PRP"
       },
       "secondary": [],
-      "rationale": "島が消えた理由を地震・津波で説明する命題を核とする。",
-      "manifestation": "説明命題形式。",
+      "rationale": "共有核は、失われた島・集落を1596年の地震・津波に結び付けて説明する命題として再構成できる。",
+      "manifestation": "災害による消失を説明する命題。",
       "content_refs": [
         "CNT-001",
-        "CNT-002",
         "CNT-003",
-        "CNT-004"
+        "CNT-006",
+        "CNT-008"
       ]
     },
     {
@@ -107,16 +116,18 @@
         "code_id": "D06.T6"
       },
       "secondary": [],
-      "rationale": "大分市も『伝説』『幻の島』として扱い、確定史実とは区別する。",
+      "rationale": "Scoped Contentでは、瓜生島は『幻の島』・伝説として提示され、実在形態や全面沈没像の不確実性も保持される。",
       "manifestation": "真偽未確定の地域伝説。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-008",
+        "CNT-010"
       ],
       "evidence_refs": [
-        "EVD-001"
+        "EVD-001",
+        "EVD-002",
+        "EVD-007"
       ]
     },
     {
@@ -127,17 +138,13 @@
         "parent_id": "D07.PSE"
       },
       "secondary": [],
-      "rationale": "意味形成対象は失われた・見えなくなった具体的な島。",
-      "manifestation": "消失地点。",
+      "rationale": "意味形成対象は、かつて存在したとされるが現在は失われ、位置・実在形態も不確実な瓜生島である。",
+      "manifestation": "消失した場所の説明。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
-        "CNT-003",
-        "CNT-004"
-      ],
-      "evidence_refs": [
-        "EVD-001",
-        "EVD-002"
+        "CNT-006",
+        "CNT-008"
       ]
     },
     {
@@ -148,16 +155,15 @@
         "parent_id": "D08.HIS"
       },
       "secondary": [],
-      "rationale": "1596年の実在地震・津波が伝説形成の中心的契機。",
+      "rationale": "1596年の別府湾地震・津波という歴史災害が、島・集落消失を意味づける中心的契機である。",
       "manifestation": "歴史災害。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
         "CNT-003",
-        "CNT-004"
+        "CNT-006"
       ],
       "evidence_refs": [
-        "EVD-003"
+        "EVD-005",
+        "EVD-010"
       ]
     },
     {
@@ -168,16 +174,12 @@
         "parent_id": "D09.HST"
       },
       "secondary": [],
-      "rationale": "島の消失を1596年災害という出来事へ由来化する。",
-      "manifestation": "事件起源化。",
+      "rationale": "瓜生島の消失を1596年の災害という特定出来事に由来させる構造を持つ。",
+      "manifestation": "災害事件への起源帰属。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
         "CNT-003",
-        "CNT-004"
-      ],
-      "evidence_refs": [
-        "EVD-002"
+        "CNT-006",
+        "CNT-008"
       ]
     },
     {
@@ -188,16 +190,12 @@
         "parent_id": "D10.NAT"
       },
       "secondary": [],
-      "rationale": "因果源は地震・津波という自然・物理過程。",
+      "rationale": "Version Scopeは警告・神罰異伝を除外し、主因果源を地震・海退・津波・地盤低下等の自然物理過程に限定する。",
       "manifestation": "自然物理過程。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
         "CNT-003",
-        "CNT-004"
-      ],
-      "evidence_refs": [
-        "EVD-003"
+        "CNT-006",
+        "CNT-008"
       ]
     },
     {
@@ -208,13 +206,12 @@
         "parent_id": "D11.NCR"
       },
       "secondary": [],
-      "rationale": "人間の接触条件なしに災害が地域へ作用する。",
-      "manifestation": "接触不要の環境効果。",
+      "rationale": "Scoped災害核では、個人の能動的接触や儀式を条件とせず、地震・津波が地域環境へ作用する。",
+      "manifestation": "接触不要の環境作用。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
         "CNT-003",
-        "CNT-004"
+        "CNT-006",
+        "CNT-008"
       ]
     },
     {
@@ -225,13 +222,12 @@
         "parent_id": "D12.ENV"
       },
       "secondary": [],
-      "rationale": "作用対象は島・沿岸環境。",
-      "manifestation": "自然環境。",
+      "rationale": "D13の主作用である地震・津波・地盤低下による物理変化が直接向けられる中心対象は、島・海岸・砂州等の自然環境である。",
+      "manifestation": "島・沿岸地形。",
       "content_refs": [
         "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-006",
+        "CNT-008"
       ]
     },
     {
@@ -242,13 +238,11 @@
         "parent_id": "D13.PHY"
       },
       "secondary": [],
-      "rationale": "地震・津波による地形・島の消失として表現される。",
+      "rationale": "因果作用は、地震・津波・低下・洗失によって島・沿岸地形を物理的に変化・消失させるものとして表現される。",
       "manifestation": "環境・地形への物理作用。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-006",
+        "CNT-008"
       ]
     },
     {
@@ -258,47 +252,50 @@
         "code_id": "D14.NEG"
       },
       "secondary": [],
-      "rationale": "島・港町の消失と被害を伴う。",
+      "rationale": "島・集落の喪失と住民の避難・移住を伴うため、共有核の主帰結は負である。",
       "manifestation": "負。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-006",
+        "CNT-007",
+        "CNT-008"
       ]
     },
     {
       "dimension_id": "D15",
-      "status": "D",
-      "primary": {
-        "code_id": "D15.MAT.PROPERTY_DAMAGE",
-        "parent_id": "D15.MAT"
-      },
-      "secondary": [],
-      "rationale": "島・港町という物的環境の喪失が中心。",
-      "manifestation": "物的損失。",
+      "status": "I",
+      "primary": null,
+      "secondary": [
+        {
+          "code_id": "D15.COL.COMMUNITY_CHANGE",
+          "parent_id": "D15.COL"
+        }
+      ],
+      "rationale": "Version Scopeの中心帰結は島・沿岸地形そのものの消失であり、現行D15 taxonomyに自然地形喪失を直接表すChildが見当たらない。一方、生存者の救援・新たな沖浜町形成・周辺地域への移住という共同体変化はContentから確認できるためSecondaryとして保持する。",
+      "manifestation": "自然地形喪失（taxonomy gap）と災後の共同体再編。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
-        "CNT-003",
-        "CNT-004"
-      ]
+        "CNT-006",
+        "CNT-007",
+        "CNT-008"
+      ],
+      "taxonomy_gap": {
+        "present": true,
+        "description": "D15には自然地形・島そのものの喪失を直接表す帰結Childがなく、PROPERTY_DAMAGEへ置換すると財産損害へ意味が変質する。"
+      }
     },
     {
       "dimension_id": "D16",
       "status": "D",
       "primary": {
-        "code_id": "D16.EVT.SINGLE_EPISODE",
+        "code_id": "D16.EVT.SEQUENTIAL_EPISODE",
         "parent_id": "D16.EVT"
       },
       "secondary": [],
-      "rationale": "1596年の一回の災害を決定的転換点とする。",
-      "manifestation": "単一事象。",
+      "rationale": "Scoped Contentは、地震・異常海退・大波による集落消失から、生存者救援・移住へ至る連続した災害経過を記述する。",
+      "manifestation": "連続した災害エピソード。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
         "CNT-003",
-        "CNT-004"
+        "CNT-006",
+        "CNT-007"
       ]
     },
     {
@@ -306,13 +303,16 @@
       "status": "U",
       "primary": null,
       "secondary": [],
-      "rationale": "current Version Scopeは過去災害と島消失を説明するが、回避・解除・制御法の有無を判定できるEvidenceを含まない。",
-      "manifestation": "回避・制御方式は未確定。",
+      "rationale": "白馬の老人・島長の警告と避難はVAR-002として分離され、共有災害核VAR-001には安定した回避・制御規則を確定できるContentを含めない。",
+      "manifestation": "共有核の回避・制御方式は未確定。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003",
-        "CNT-004"
+        "CNT-006",
+        "CNT-007",
+        "CNT-008",
+        "CNT-010"
       ]
     },
     {
@@ -322,13 +322,13 @@
         "code_id": "D18.L1"
       },
       "secondary": [],
-      "rationale": "地震から島の消失への因果は伝承内容内部で構成される。",
+      "rationale": "地震・津波から島・集落の消失へ至る因果は伝承内容内部の出来事として構成される。現実社会効果L3を独立にコードするX EvidenceはこのScopeでは用いない。",
       "manifestation": "伝承内因果層。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
         "CNT-003",
-        "CNT-004"
+        "CNT-006",
+        "CNT-007",
+        "CNT-008"
       ]
     },
     {
@@ -339,36 +339,28 @@
         "parent_id": "D19.LOC"
       },
       "secondary": [],
-      "rationale": "大分・別府湾の地域文化として継承される。",
-      "manifestation": "地域伝承。",
+      "rationale": "歴史地震資料内の地域伝承と、大分市による現在の地域文化表象の双方で、大分・別府湾に結び付くローカルな伝承として確認できる。",
+      "manifestation": "大分・別府湾の地域伝承。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
-        "CNT-003",
-        "CNT-004"
+        "CNT-010"
       ],
       "evidence_refs": [
-        "EVD-001"
+        "EVD-001",
+        "EVD-002"
       ]
     },
     {
       "dimension_id": "D20",
-      "status": "D",
-      "primary": {
-        "code_id": "D20.NON.COMMON_KNOWLEDGE",
-        "parent_id": "D20.NON"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "現代では地域文化・公式情報として公開され、秘密保持者を必要としない。",
-      "manifestation": "特権なし。",
+      "rationale": "公式Web公開や地域文化イベントへの再利用は確認できるが、それだけでは真相・追加情報の特権保持者が存在しないことや、情報が広く一般共有されていることを確定できない。",
+      "manifestation": "特権情報保持構造は未確定。",
       "content_refs": [
-        "CNT-001",
         "CNT-002",
-        "CNT-003",
-        "CNT-004"
-      ],
-      "evidence_refs": [
-        "EVD-001"
+        "CNT-010"
       ]
     },
     {
@@ -378,19 +370,19 @@
         "code_id": "D21.A4"
       },
       "secondary": [],
-      "rationale": "1596年の実在地震・津波という史実を、瓜生島消失の因果構造へ統合する。",
-      "manifestation": "史実・記録の因果統合。",
+      "rationale": "1596年の別府湾地震・津波という実在災害が、瓜生島・集落消失を説明する伝承の因果構造へ直接組み込まれている。これは島の全面沈没を史実認定するものではない。",
+      "manifestation": "史実災害の因果統合。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002",
         "CNT-003",
-        "CNT-004"
+        "CNT-006",
+        "CNT-008"
       ],
       "evidence_refs": [
-        "EVD-002",
-        "EVD-003"
+        "EVD-005",
+        "EVD-007",
+        "EVD-010"
       ]
     }
   ],
-  "analysis_notes": "史実アンカーの存在は伝説内容の全面的史実性を意味しない。"
+  "analysis_notes": "史実アンカーの存在は伝説内容の全面的史実性を意味しない。島の全面深部沈降と部分的低下・浸水・洗失は区別し、D15では自然地形喪失を財産損害へ近似せずtaxonomy gapを明示した。"
 }
