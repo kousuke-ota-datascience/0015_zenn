@@ -88,7 +88,8 @@
 ## 3.4. 決定論的処理
 
 - validation外部入口: `python -m src.validation.validate_entry <Entry_ID> [--through 00|10|20]`。省略時は `20` まで全検証。
-- control plane同期: Workflow 90を介して `python -m src.status_management.sync_controlplane <Entry_ID>`
+- 通常のcontrol plane同期: Workflow 90を介して `python -m src.status_management.sync_controlplane <Entry_ID>`
+- Review Findingへのcorrection開始を明示する場合のみ、Workflow 90へ内部イベント `correction_started: [Artifact...]` を渡す。optional external adapterでは `--correction-started <Artifact>` を使用し、複数artifactはoptionを反復する。
 - `schema_validator.py` / `reference_validator.py` / `taxonomy_validator.py` およびstatus management内部モジュールは本Workflowから直接呼び出さない。
 
 ## 3.5. 関連Workflow
@@ -206,14 +207,20 @@
 ## 5.8. Step 7: Review返却後のCoder修正
 
 - 本Stepは、既存Review Findingに対するcorrectionとしてWorkflow 10が明示的に実行された場合に適用する。
-- Review返却後、最初にWorkflow 90を実行する。
+- Review返却後、最初に通常のWorkflow 90同期を実行する。この同期では `correction_started` を渡さない。
 - stale Review、control plane更新漏れ、Review対象より新しいCoder成果物、divergenceが検出された場合は修正を開始しない。
+- current artifact / control plane post-SHA / latest non-Pass Review targetがexact一致し、適用可能なFindingを持つ修正対象artifactを確定する。
+- **対象artifactを実際に編集し始める直前**に、Workflow 90へ `correction_started: [Artifact...]` を明示して再同期する。
+  - optional external adapterを使用する場合は、対象artifactごとに `--correction-started <Artifact>` を付けて `python -m src.status_management.sync_controlplane <Entry_ID>` を実行する。
+  - Workflow 00経由ですでに同一eventが反映済みでも、重複eventはidempotentなので `PASS` / NOOPを許容する。
+- correction-start同期が `PASS / UPDATED` の場合だけ修正へ進む。対象artifactのStatusはこの時点で `再作業中` でなければならない。
+- correction-start同期が `BLOCKED / ERROR` の場合はartifactを編集せず停止する。
 - 適用可能なFindingについてcanonical artifactを修正する。
 - Review結果そのものをCoderが遡及改変しない。
 - `00_sources.json` を修正した場合、`10_contents.json` と `20_analysis.json` への影響を再評価する。
 - `10_contents.json` を修正した場合、Version Scopeと `20_analysis.json` への影響を再評価する。
 - `20_analysis.json` のみの修正で上流へ影響がない場合、上流artifactを不要に更新しない。
-- 修正したcanonical artifactごとにvalidation、単独commit / push、Workflow 90同期を実行する。
+- 修正したcanonical artifactごとにvalidation、単独commit / push、通常のWorkflow 90同期を実行する。修正commit後は既存契約どおり `再レビュー待` へ収束する。
 - 必要な修正後、deterministic validation、成果物単位commit / push、Workflow 90同期を完了し、再Review-ready状態で停止する。Workflow 20は起動しない。
 
 ## 5.9. Step 8: Workflow 10終了条件
