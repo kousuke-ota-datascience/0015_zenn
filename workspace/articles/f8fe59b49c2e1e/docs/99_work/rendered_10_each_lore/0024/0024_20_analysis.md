@@ -8,11 +8,11 @@
 
 ## Version Scope
 
-1922年1月に日本で確認できる、郵便葉書・手紙による自己複製型の「幸福の手紙」を分析対象とする。受信者が24時間以内に同文を9人へ送り、遵守すれば9日後に幸運が訪れる一方、連鎖を止めれば大きな不運が訪れるとする条件付き規則を含む形である。米国人将校起源等の由来は文面内部の主張として扱い、実際の起源として採用しない。後代の再流行や、不転送時の不幸をより前景化する型はScope外とする。
+1922年1月に日本で確認できる、郵便葉書・手紙による自己複製型の「幸福の手紙」を分析対象とする。受信者が24時間以内に同文を9人へ送り、遵守すれば9日後に幸運が訪れる一方、連鎖を止めれば大きな不運が訪れるとする条件付き規則を含む形である。加えて、後代解説で初期型の特徴として確認できる、差出人・仲介者名の列を書き写して自分の名を追記し、次へ回す経路保持規則もScopeに含める。米国人将校起源等の由来は文面内部の主張として扱い、実際の起源として採用しない。後代の再流行や、不転送時の不幸をより前景化する型はScope外とする。
 
 - Included variants: VAR-001
 - Excluded variants: VAR-002, VAR-003
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006
+- Content refs: CNT-001, CNT-002, CNT-003, CNT-004, CNT-005, CNT-006, CNT-008
 
 ## Dimensions
 
@@ -42,12 +42,12 @@
 
 - Primary: D03.PRT.CHAIN_LETTER (parent: D03.PRT)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-006
-- Evidence refs: EVD-002, EVD-003
+- Content refs: CNT-001, CNT-002, CNT-006, CNT-008
+- Evidence refs: EVD-002, EVD-003, EVD-007
 
-**Rationale:** 1922年Scopeで郵便葉書・手紙が実際に流通したことは同時代資料で確認できるが、同文を複写して次受信者へ連鎖させる媒体ポートフォリオの具体性はderivative Evidenceに依存するため、D03.PRT.CHAIN_LETTERをInferredとする。
+**Rationale:** 1922年Scopeで郵便葉書・手紙が実際に流通したことは同時代資料で確認できる。一方、同文の複写連鎖や、差出人・仲介者名の列を書き写して自分の名を追記する経路保持規則の具体性はderivative Evidenceに依存するため、D03.PRT.CHAIN_LETTERをInferredとする。
 
-**Manifestation:** 葉書・手紙を複写して郵送し、次の受信者へ連鎖させる。
+**Manifestation:** 葉書・手紙を複写して郵送し、初期型では氏名列を追記しながら次の受信者へ連鎖させると説明される。
 
 ### D04 — U
 
@@ -64,12 +64,12 @@
 
 - Primary: D05.RUL.CHAIN_INSTRUCTION (parent: D05.RUL)
 - Secondary: -
-- Content refs: CNT-002, CNT-003, CNT-004
-- Evidence refs: EVD-001, EVD-003
+- Content refs: CNT-002, CNT-003, CNT-004, CNT-008
+- Evidence refs: EVD-001, EVD-003, EVD-007
 
-**Rationale:** 文面は期限・人数・再送を具体的に命じる自己複製規則として再構成できる。ただし詳細規則は研究ノートと新聞紹介を介しているためInferredとする。
+**Rationale:** 文面は期限・人数・再送を具体的に命じる自己複製規則として再構成でき、後代解説では初期型に氏名列の転記・自己名追記という手順も説明される。ただし詳細規則はいずれも研究ノート・後代紹介を介しているためInferredとする。
 
-**Manifestation:** 同文を規定人数へ期限内に転送せよ、というチェーン指示。
+**Manifestation:** 同文を規定人数へ期限内に転送し、初期型では氏名列を書き写して自分の名を追記するというチェーン指示。
 
 ### D06 — I
 
@@ -108,10 +108,10 @@
 
 - Primary: D09.PPR.OMEN_FORECAST (parent: D09.PPR)
 - Secondary: D09.CTL.TRANSMISSION_RULE (parent: D09.CTL)
-- Content refs: CNT-002, CNT-003, CNT-004
-- Evidence refs: EVD-001, EVD-003
+- Content refs: CNT-002, CNT-003, CNT-004, CNT-008
+- Evidence refs: EVD-001, EVD-003, EVD-007
 
-**Rationale:** 受信者の未来の吉凶を転送行為から予告することが中心的な意味付与操作であり、その予告を実行可能にする自己複製の転送規則が追加構造となる。
+**Rationale:** 受信者の未来の吉凶を転送行為から予告することが中心的な意味付与操作であり、その予告を実行可能にする自己複製の転送規則が追加構造となる。初期型の氏名列・経路追記規則は、同じ規則を次受信者へ伝達しながら伝播経路も保持する構造を補強する。
 
 **Manifestation:** 「送れば幸運、止めれば不運」という予兆化と、連鎖継続規則の組合せ。
 
@@ -185,23 +185,23 @@
 
 - Primary: D16.DLY.DEADLINE (parent: D16.DLY)
 - Secondary: D16.TRN.CHAIN_SPREAD (parent: D16.TRN)
-- Content refs: CNT-002, CNT-003
-- Evidence refs: EVD-003
+- Content refs: CNT-002, CNT-003, CNT-008
+- Evidence refs: EVD-003, EVD-007
 
-**Rationale:** 受信から24時間以内という行為期限と、幸運まで9日という遅延が時間構造の中心であり、同文が次の受信者へ連鎖的に移る構造も独立して存在する。
+**Rationale:** 受信から24時間以内という行為期限と、幸運まで9日という遅延が時間構造の中心である。同文が次の受信者へ連鎖的に移り、初期型では氏名列の追記によってその連鎖経路も文面内に保持されると説明される。
 
-**Manifestation:** 24時間の転送期限と9日後の帰結予告を伴うチェーン拡散。
+**Manifestation:** 24時間の転送期限と9日後の帰結予告を伴い、初期型では氏名列を追記しながら連鎖拡散する。
 
 ### D17 — I
 
 - Primary: D17.USE.LUCK_EXPLOITATION (parent: D17.USE)
 - Secondary: D17.RUL.PROCEDURAL_RULE (parent: D17.RUL)
-- Content refs: CNT-002, CNT-003, CNT-004
-- Evidence refs: EVD-001, EVD-003
+- Content refs: CNT-002, CNT-003, CNT-004, CNT-008
+- Evidence refs: EVD-001, EVD-003, EVD-007
 
-**Rationale:** 文面上は、規定どおり転送することが幸運を得て不運を避けるための利用・制御手段として提示され、その実行には期限・人数の手順規則が付く。
+**Rationale:** 文面上は、規定どおり転送することが幸運を得て不運を避けるための利用・制御手段として提示され、その実行には期限・人数の手順規則が付く。後代解説では初期型に氏名列の転記・自己名追記も手順として含まれる。
 
-**Manifestation:** 指定された人数へ期限内に転送して幸運を得る／不運を避ける。
+**Manifestation:** 指定された人数へ期限内に転送し、初期型では氏名列を書き写して自分の名を追記することで、幸運を得る／不運を避けるとされる。
 
 ### D18 — I
 
@@ -214,16 +214,16 @@
 
 **Manifestation:** 文面内の吉凶因果、受信者への心理・行動圧力、実際の連鎖流通・警察対応が複数層に現れる。
 
-### D19 — I
+### D19 — U
 
-- Primary: D19.LOC.REGIONAL (parent: D19.LOC)
+- Primary: -
 - Secondary: -
 - Content refs: CNT-006
 - Evidence refs: EVD-002, EVD-005
 
-**Rationale:** 1922年の日本で流行が確認されるが、今回の直接・準直接Evidenceだけでは全国一様の分布を安全に固定できないため、確認可能な地域的流行として保守的に扱う。
+**Rationale:** 1922年に日本で流行していたことは確認できるが、Scoped Content/Evidenceは特定の市町村・地方圏への分布も、全国規模の公衆流通も直接固定しない。「全国一様と証明できない」ことからREGIONALを導くことはできないため、具体的な社会的・地理的流通範囲はUnknownとする。
 
-**Manifestation:** 1922年1月に日本の新聞・同時代記録で確認される地域的流行。
+**Manifestation:** 1922年1月の日本で流行が確認されるが、具体的な社会的・地理的流通範囲は未確定。
 
 ### D20 — U
 
