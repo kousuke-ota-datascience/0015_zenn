@@ -8,10 +8,10 @@
 
 ## Version Scope
 
-高知県の早期民俗資料で確認できる『七人を維持し、新たな犠牲者と最古参が交代する』共有核。
+1938年の高知県宿毛市資料で確認できる、常に七人で組み、人を一人引くごとに最古参が成仏する形（VAR-002）を分析対象とする。
 
-- Included variants: VAR-001
-- Excluded variants: -
+- Included variants: VAR-002
+- Excluded variants: VAR-001
 - Content refs: CNT-001, CNT-002, CNT-003
 
 ## Dimensions
@@ -32,33 +32,33 @@
 - Primary: D02.PRT.MAGAZINE (parent: D02.PRT)
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-002
+- Evidence refs: EVD-003
 
-**Rationale:** 1920年代から雑誌・民俗資料への収録が確認できる。
+**Rationale:** Version Scope対象VAR-002の最古確認は1938年『民間伝承』の印刷雑誌記録である。1935年資料は別variantとしてScope外とする。
 
-**Manifestation:** 最古確認流通媒体は印刷雑誌。
+**Manifestation:** 1938年の印刷雑誌で確認される。
 
 ### D03 — D
 
 - Primary: D03.PRT.MAGAZINE (parent: D03.PRT)
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-001, EVD-002
+- Evidence refs: EVD-003
 
-**Rationale:** 既定Scopeを支える資料は民俗雑誌への記録。
+**Rationale:** Version Scopeを支える1938年資料は民俗雑誌『民間伝承』への記録である。
 
 **Manifestation:** 印刷雑誌で確認される。
 
-### D04 — I
+### D04 — U
 
-- Primary: D04.VAR.LOCALIZATION (parent: D04.VAR)
+- Primary: -
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-002
+- Evidence refs: -
 
-**Rationale:** 複数地域・複数年の資料があり、同一核を保つ地域異伝が存在する。
+**Rationale:** Version Scope内は1938年宿毛市形（VAR-002）一形のみであり、具体的な地域化・置換過程を示す比較Contentはない。1935年形は規則差を保った別variantとしてScope外であり、両者の変容関係も未確定である。
 
-**Manifestation:** 地域化を伴う変異。
+**Manifestation:** 変容パターン未確定。
 
 ### D05 — I
 
@@ -225,16 +225,16 @@
 
 **Manifestation:** 地域共同体圏。
 
-### D20 — I
+### D20 — U
 
-- Primary: D20.INS.LOCAL_RESIDENT (parent: D20.INS)
+- Primary: -
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003
 - Evidence refs: -
 
-**Rationale:** 地域伝承として地元の語り手・住民が知識保持者となる。
+**Rationale:** Version Scope内Contentは高知県宿毛市への地理的結び付きを示すが、地元住民その他の主体だけが追加・秘密情報を特権的に保持するとする内容はない。
 
-**Manifestation:** 地元内部者。
+**Manifestation:** 特権情報保持者は不明。
 
 ### D21 — D
 
@@ -249,4 +249,4 @@
 
 ## Analysis Notes
 
-成立年代を収録年代へ短絡しない。
+成立年代を収録年代へ短絡しない。1935年形と1938年形の規則差を保持し、Analysisは1938年VAR-002に限定する。地域性から変容パターン（D04）や特権情報保持者（D20）を推定しない。
