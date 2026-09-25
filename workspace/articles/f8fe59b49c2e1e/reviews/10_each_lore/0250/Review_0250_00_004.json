@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0250",
+  "artifact": "00",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0250_shichinin_misaki/0250_00_sources.json",
+    "commit_sha": "b29755f3037ea68b7f69cd9a1a30a66b06ef5ae1",
+    "blob_sha": "c963621095e56873a525d56f965508adbb0374bd",
+    "reviewed_at": "2026-09-25T10:31:15Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001〜003は日文研の研究データベース項目として同定され、source_type=reliable_secondary_or_research / relation_to_primary=indirect_derivative として一次資料未確認の位置づけを保持している。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001/003/004/005の内容・書誌情報は対応する日文研カードの要約・メタデータと整合し、quoteではなくparaphraseとして扱われている。"
+    },
+    "source_evidence_support": {
+      "status": "FINDING",
+      "notes": "EVD-002はSRC-002の四国・ミサキ検索一覧から1935年・1938年の収録を確認できる一方、一覧表示だけでは両件を『高知県資料』と特定できない。地域はSRC-001/SRC-003の個別カードで別途支持される。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "原掲載本文を直接確認した資料として扱わず、全Sourceでindirect_derivativeを明示している。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1935年・1938年は確認できた早期の収録年として扱われ、成立年・起源へ遡及していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "刊行年と成立年を分離し、1935年形と1938年形の規則差・系譜未確定を保持している。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "SRC-001とSRC-003の規則・地域・書誌、SRC-002の早期収録分布を監査した。伝承再構成・variant境界・不確実性・後続Analysisを変える追加のsalient情報脱落は確認しなかった。"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Minor",
+      "category": "source_evidence_support",
+      "summary": "EVD-002の『高知県資料』という地域限定が、参照元SRC-002の検索一覧単独では追跡できない。",
+      "rationale": "SRC-002の検索結果は『四国：ミサキ』として1935年『旅と伝説』と1938年『民間伝承』を列挙するが、一覧表示には各項目の都道府県がない。高知県という地域情報はSRC-001/SRC-003の個別カードには存在するため、主張自体はSource集合全体では支持されるが、EVD-002→SRC-002の直接対応が過剰である。",
+      "impact": "Evidence単位のprovenanceが1箇所不正確になるが、1935年・1938年の地域情報は別Evidenceで独立に支持されており、後続の主要再構成は変わらない。",
+      "fix_direction": "EVD-002から『高知県資料として』を外して検索一覧が直接示す1935年・1938年の収録事実だけに限定するか、地域主張をSRC-001/SRC-003由来のEvidenceへ分離する。",
+      "source_refs": [
+        "SRC-002"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ]
+    }
+  ],
+  "verdict": "Minor",
+  "review_notes": "日文研の現行カード表示と検索一覧を独立に照合した。一次資料本文は未確認であり、その制約はcanonical側で保持されている。"
+}

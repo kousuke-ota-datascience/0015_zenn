@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0250",
+  "artifact": "20",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0250_shichinin_misaki/0250_20_analysis.json",
+    "commit_sha": "07b7576ef68dffc2e083a16facef36c51b1615af",
+    "blob_sha": "19b5884f9376476ead57572aebdcb204e4eb5d4a",
+    "reviewed_at": "2026-09-25T10:31:15Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-002（1938宿毛市形）を含め、規則表現の異なるVAR-001（1935幡多郡形）を除外するScope自体はContentのvariant境界と整合する。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D05/D06は地理的・資料的な記録から提示形式/真実性スタンスを推定し、D19は一つのScoped attestationから地域流通を推定しており、各次元の中心質問に対するContent支持が不足する。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "Scoped Contentの中核構造は既存taxonomyで表現可能であり、新Childを要する安定構造は確認しない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "七人ミサキが人を引く→最古参が成仏→七人維持という1938年形の因果列はContentと整合する。"
+    },
+    "semantic_traceability": {
+      "status": "FINDING",
+      "notes": "D05/D06/D19の一部根拠がScoped Contentから一意に追跡できず、D19はScope外variantを含むEVD-002まで参照している。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Scoped Contentとsummaryのいずれからも、1938年形の作用・交代循環・主要未知事項とVAR-001除外を再構成できる。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "全Sourceがindirect_derivativeなのにD02/D03/D07/D08/D09/D12/D14/D16/D18/D19/D21をDとしており、coding rulesの『下位資料しかない場合はStatus I』というconfidence ceilingを超える。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12の被作用者→D13の人物移行→D15の死亡/死者側への帰結という読みは、D13/D15を推論扱いにした範囲でContentと因果的に接続する。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "NOT_APPLICABLE",
+      "notes": "D18はL1のみで、L3を選択していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "全国流通とは判定していない。ただし地域流通自体の立証不足はdimension_semantics Findingとして別途扱う。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "D20はUであり、資料に情報保持者がないことをNO_ONE_KNOWSへ変換していない。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "Scoped Contentには高知県宿毛市という具体的実在地点が含まれ、A2というアンカー型自体は意味論的に整合する。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "FINDING",
+      "notes": "Sourceはすべてreliable_secondary_or_researchかつindirect_derivativeで、原掲載本文未確認である。多数のD statusはこの支持強度を超える。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "七人集団・人を引く・最古参が成仏する循環を中心とするため、macro_category=古伝承・民俗、entry_type=循環型死霊伝承は大枠でContentと整合する。"
+    },
+    "content_layer_bypass": {
+      "status": "FINDING",
+      "notes": "D05/D06は『民俗資料』『地域で伝えられる』というSource/Evidence側の性格をScoped Contentの提示形式・認識論的スタンスへ持ち込み、D19はScope外情報を含むEVD-002を流通範囲の根拠に使用している。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "Scoped Contentが直接保持する1938年宿毛市形は、七人ミサキが常に七人で組み、人を一人引くごとに最古参が成仏するという循環規則である。常時七人という記述との組合せから、新たに引かれる人が循環へ入り最古参が離脱する交代として推論できる。一方、遭遇条件・回避法・伝承の提示主体/共有スタンス・社会的流通範囲はScoped Contentからは確定できない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-003"
+    ],
+    "status": "FINDING",
+    "notes": "中核因果モデルは再構成可能だが、現行AnalysisのD/I強度とD05/D06/D19の一部はScoped Contentの支持範囲を超える。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "status_reasoning",
+      "summary": "indirect-derivativeのみのEvidenceに対して多数のDimensionをD（Direct）としており、evidence confidence ceilingを超えている。",
+      "rationale": "coding rulesは『下位資料しかない場合はStatusをI』とする。0250_00_sourcesのSRC-001〜003はいずれもreliable_secondary_or_researchかつrelation_to_primary=indirect_derivativeで、原掲載本文は未確認である。それにもかかわらずD02/D03/D07/D08/D09/D12/D14/D16/D18/D19/D21がDとなっている。",
+      "impact": "カテゴリ値の多くは維持できる可能性があるが、Direct/Inferredの区別が系統的に過大評価され、後続集計・信頼度比較を歪める。",
+      "fix_direction": "現Evidenceだけを使うなら、意味論的に支持されるDimensionは原則Iへ下げる。Dを維持するDimensionには一次・同時代本文等のより強いSourceを追加し、Contentまで支持を通す。D05/D06/D19は別Findingに従い値自体も再検討する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003"
+      ],
+      "dimension_refs": [
+        "D02",
+        "D03",
+        "D07",
+        "D08",
+        "D09",
+        "D12",
+        "D14",
+        "D16",
+        "D18",
+        "D19",
+        "D21"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "content_layer_bypass",
+      "summary": "D05/D06はScoped Contentにない『地域の言い伝えとしての提示・共同体既知』をSource/Evidenceの資料性から補っている。",
+      "rationale": "D05.HRS.LOCAL_HEARSAYは地元民・地域内部者からの伝聞としての提示、D06.T3は共同体で既知のこととしての提示を要する。しかしScoped Contentが示すのは七人ミサキの規則と1938年宿毛市というattestationであり、誰が誰に伝えたか、共同体内で既知として提示されたかは表現していない。現行rationaleの『民俗資料』『地域でそう言われている』はContent layer外の解釈を導入している。",
+      "impact": "提示形式と真実性提示の2次元が、地理情報・資料ジャンルを伝承内部の提示構造へ誤変換している。",
+      "fix_direction": "Scoped ContentだけではD05/D06をUとするか、Source/Evidenceに実際の語り手・伝聞形式・共同体既知性が確認できるなら、その意味をまずContentへ抽出してからIで再判定する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D05",
+        "D06"
+      ]
+    },
+    {
+      "finding_id": "F003",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D19.LOC.REGIONALは、Scoped VAR-002の単一地域attestationから社会的な地域流通範囲を推定している。",
+      "rationale": "D19の中心質問は『どの社会範囲まで流通しているか』であり、単にどこで採録されたかではない。Version Scopeは1938年宿毛市のVAR-002に限定されるが、現行rationaleは『高知県を中心とする地域資料に継続して記録』とし、EVD-002（1935年形を含む検索一覧）も参照する。これはScope外variantを含む資料分布とScoped variantの流通範囲を混同している。",
+      "impact": "D19のカテゴリ値とstatusが直接影響を受け、社会分布に関する比較分析で過大な範囲を付与する。",
+      "fix_direction": "VAR-002について複数地点・共同体での流通を示すScoped ContentがなければD19はUとする。地域流通を維持するなら、VAR-002に属する流通Evidenceを追加しContentへ抽出する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "dimension_refs": [
+        "D19"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Review 20はScoped Contentのみから意味形成モデルを再構成し、Evidenceは支持強度と上流traceabilityの監査に限定して使用した。"
+}

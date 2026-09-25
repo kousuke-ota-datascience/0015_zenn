@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0250",
+  "artifact": "10",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0250_shichinin_misaki/0250_10_contents.json",
+    "commit_sha": "12236527ffc7839fc9fc1642dd6df504883fadbb",
+    "blob_sha": "4f1349d15a641b4fecba635b7c865dcb8ff0bf8d",
+    "reviewed_at": "2026-09-25T10:31:15Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001/002は1938年EVD-001、CNT-004は1935年EVD-004に対応し、CNT-003の地域・年次はEVD-003/EVD-005で独立に支持される。CNT-002の構成員交代は逐語情報ではなく再構成であることをnotesで明示している。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryだけから1935年形と1938年形の規則差、1938年形の七人維持・最古参成仏、主要な未知事項を復元できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12の全項目でReference StoryとのsalientなLOSS/CONFLICTを認めない。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001=1935幡多郡形とVAR-002=1938宿毛市形を別variantとして保持し、一対一交代規則を1935年形へ遡及していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "成立年代、遭遇・発動条件、回避法、1935/1938形の系譜関係を未確定のまま保持している。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs 4件の具体的規則・variant差・terminal stateをsummaryから再構成できる。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "EVD-001〜005を母集団として、規則、地域・年次、書誌・variant境界、成立年非同定を監査した。後続Analysisの意味を変えるEvidence→Contentのsalient omissionは確認しなかった。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "高知県の早期資料には規則の異なる二形がある。1935年幡多郡形では七人の人を引きずり込むことが成仏条件とされる。1938年宿毛市形では七人ミサキは常に七人で、人を一人引くごとに最古参が成仏する。後者は新たに引かれる人と最古参が交代して七人を維持する循環として再構成できるが、1935年形へ同じ一対一交代規則を遡及できない。成立年代、発動条件、回避法、両形の系譜関係は不明。",
+    "reference_story": "Content layerは、1935年高知県幡多郡の『七人を引きずり込まなければ成仏できない』形と、1938年高知県宿毛市の『常に七人で、一人引くごとに最古参が成仏する』形を区別する。1938年形では常時七人という記述と一人引くごとの最古参成仏を組み合わせ、新たに引かれる人が循環に入り最古参が離脱する交代として再構成するが、その加入は逐語的明示ではない。発動条件・回避法・成立年代・両variantの系譜は確定しない。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "七人ミサキ。",
+        "reference": "七人ミサキ。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "七人ミサキに引かれる人。",
+        "reference": "七人ミサキに引かれる人。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "遭遇・発動条件は不明。",
+        "reference": "遭遇・発動条件は不明。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "作用主体は七人ミサキ。",
+        "reference": "作用主体は七人ミサキ。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "1935年形は七人を引きずり込むことが成仏条件。1938年形は一人引くごとに最古参が成仏する。",
+        "reference": "同左。1938年形の構成員交代は常時七人という記述との組合せによる再構成。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "1938年形では新たに引かれる人と最古参の交代で七人を維持。1935年形の交代単位は不明。",
+        "reference": "同左。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "1938年形は一人引くたび更新、1935年形は七人を引きずり込むことが条件。",
+        "reference": "同左。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "成仏に関する人数規則は示されるが、遭遇条件・禁忌等は不明。",
+        "reference": "同左。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "回避・制御法は不明。",
+        "reference": "回避・制御法は不明。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "1935年形は七人を引きずり込むことが成仏条件、1938年形は最古参が成仏しても集団は七人で継続。",
+        "reference": "同左。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "成立年代、発動条件、回避法、両variantの系譜関係が未確定。",
+        "reference": "同左。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "VAR-001=1935幡多郡、VAR-002=1938宿毛市。規則差を保持し別variantとして扱う。",
+        "reference": "同左。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryはD07〜D18の中核となる作用・対象・反復・帰結と、Version Scope選択に必要なVAR-001/002境界を保持している。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "1938年宿毛市形では七人ミサキは常に七人で組む。",
+        "blind_reconstruction": "1938年形は常に七人。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "1938年形では一人引くごとに最古参が成仏し、常時七人との組合せから交代循環を再構成するが加入は推論である。",
+        "blind_reconstruction": "一人引くごとに最古参が成仏し、新旧交代で七人維持と再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "1935年幡多郡資料と1938年宿毛市資料が確認される。",
+        "blind_reconstruction": "高知県の1935幡多郡形と1938宿毛市形を区別。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "1935年形は七人を引きずり込むことが成仏条件で、1938年形の一対一交代までは確認できない。",
+        "blind_reconstruction": "1935年形は七人を引きずり込む条件で、1938年の一対一交代を遡及しない。",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Blind Decodeはsummary.narrative/structureのみから先に固定し、その後にContent母集団とcoverage_refsを照合した。"
+}
