@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0060",
+  "macro_category": "交通・インフラ",
+  "entry_type": "物語・伝説",
+  "version_scope": {
+    "description": "現在のEvidenceで最も早いまとまりとして確認できる、池田弥三郎『日本の幽霊』に記録された「帰る」型二話を分析対象とする。書誌上の同書刊行は1959年6月で、後代解説は本文がこれらを昭和5、6年ごろに聞いた話としていると報告する。内容は、深夜に女性客をタクシーへ乗せ、自宅等へ送り届けた後、家人からその女性が既に死亡していると知らされる型である。1969年京都・深泥池型を含む「消える」型、濡れた座席、後代に付加された健康被害等はScope外とする。",
+    "included_variants": ["VAR-001"],
+    "excluded_variants": ["VAR-002", "VAR-003"],
+    "content_refs": ["CNT-001", "CNT-002", "CNT-003", "CNT-006", "CNT-007"],
+    "notes": "VAR-001は絶対起源ではなく、現在のEvidenceで最も早い安定した共有核として扱う。1959年刊年はCiNii Books、本文内容と昭和5、6年ごろという伝承史は後代解説に依存するため、直接性に応じてD/I/Uを使い分ける。"
+  },
+  "dimensions": [
+    {"dimension_id":"D01","status":"U","primary":null,"secondary":[],"rationale":"昭和5、6年ごろに聞いたという記述は遅くともその時点の流通を示すが、成立年代そのものではない。coding rulesに従い最古確認層と生成を混同せずUとする。","manifestation":"生成時期は未確定。","content_refs":["CNT-003"],"evidence_refs":["EVD-003"]},
+    {"dimension_id":"D02","status":"I","primary":{"code_id":"D02.ORL.WORKPLACE_ORAL","parent_id":"D02.ORL"},"secondary":[],"rationale":"後代解説は『日本の幽霊』の記述から、深夜に幽霊を乗せる話がタクシー運転手間で流布していたと整理する。最古確認媒体は職業集団内の口承として推定するが、一次採録を直接確認していないためI。","manifestation":"戦前期までにタクシー運転手間で共有された口頭伝承として確認される。","content_refs":["CNT-003","CNT-007"],"evidence_refs":["EVD-003","EVD-004"]},
+    {"dimension_id":"D03","status":"I","primary":{"code_id":"D03.ORL.WORKPLACE_ORAL","parent_id":"D03.ORL"},"secondary":[],"rationale":"Version Scopeは池田弥三郎が戦前に聞いたとされる初期「帰る」型であり、その受容回路として直接関係するのはタクシー運転手間の口承である。書籍刊行自体は確認できるが、Scopeの成立に構造的に不可欠な媒体は口承側と判断する。","manifestation":"タクシー運転手の職業集団内で対人口承される初期形。","content_refs":["CNT-003","CNT-007"],"evidence_refs":["EVD-003","EVD-004"]},
+    {"dimension_id":"D04","status":"U","primary":null,"secondary":[],"rationale":"初期Scopeに二話があることは確認できるが、その差分が再話・地域化・増補のどれによって形成されたかを追える直接Evidenceがない。","manifestation":"初期形内部の生成・変容過程は不明。","content_refs":["CNT-003"],"evidence_refs":["EVD-003"]},
+    {"dimension_id":"D05","status":"I","primary":{"code_id":"D05.HRS.FOAF","parent_id":"D05.HRS"},"secondary":[],"rationale":"『日本の幽霊』では初期タクシー幽霊が伝聞調で記録され、少なくとも一話は複数段階の伝聞として紹介されたと後代解説が報告する。直接体験記ではなく近接伝聞型として扱う。","manifestation":"運転手の体験談が他者を介して伝聞として再話される。","content_refs":["CNT-003"],"evidence_refs":["EVD-003"]},
+    {"dimension_id":"D06","status":"I","primary":{"code_id":"D06.T2"},"secondary":[],"rationale":"Scopeは運転手が体験したとされる出来事を他者経由で伝える近接伝聞として提示される。研究者による真偽判定ではなく、物語上のtruth stanceをコードする。","manifestation":"身近な伝聞経路を持つ実話的な怪談として提示される。","content_refs":["CNT-002","CNT-003"],"evidence_refs":["EVD-002","EVD-003"]},
+    {"dimension_id":"D07","status":"I","primary":{"code_id":"D07.ANO.UNKNOWN_EXISTENCE","parent_id":"D07.ANO"},"secondary":[],"rationale":"普通の女性客として乗車した人物が、到着後の確認で既に死亡した人物と判明することにより、通常の存在分類では説明できない幽霊の実在が中心問題になる。","manifestation":"死亡済みの女性が通常の乗客として現れたという未知存在の問題。","content_refs":["CNT-001","CNT-002"],"evidence_refs":["EVD-002"]},
+    {"dimension_id":"D08","status":"I","primary":{"code_id":"D08.DEX.DIRECT_EVENT","parent_id":"D08.DEX"},"secondary":[],"rationale":"物語内部ではタクシー運転手が女性客を実際に乗せ、目的地まで運ぶという直接遭遇が意味形成の起点になる。Evidenceは後代整理なのでI。","manifestation":"運転手による異常な乗客との直接遭遇。","content_refs":["CNT-001","CNT-002"],"evidence_refs":["EVD-002"]},
+    {"dimension_id":"D09","status":"I","primary":{"code_id":"D09.AGN.AGENCY_ATTRIBUTION","parent_id":"D09.AGN"},"secondary":[],"rationale":"帰宅先の家族から乗客が既に死亡していると知らされることで、一連の乗車行動を死者・幽霊という主体の行為として再解釈する。","manifestation":"通常の女性客の行動を死者・幽霊の主体的顕現として理解する。","content_refs":["CNT-002"],"evidence_refs":["EVD-002"]},
+    {"dimension_id":"D10","status":"I","primary":{"code_id":"D10.SUP.GHOST_SPIRIT","parent_id":"D10.SUP"},"secondary":[],"rationale":"Scopeの終端では乗客が既に死亡した人物だったと説明され、因果源は死者霊として位置付けられる。","manifestation":"死亡した女性の霊が生者のように乗車する。","content_refs":["CNT-002"],"evidence_refs":["EVD-002"]},
+    {"dimension_id":"D11","status":"I","primary":{"code_id":"D11.MOV.RIDE_BOARD","parent_id":"D11.MOV"},"secondary":[],"rationale":"怪異との接触は、女性客がタクシーへ乗車することで成立する。会話一般より、車両への乗車がこの伝承に固有の発動条件として直接的。","manifestation":"幽霊と後に判明する女性がタクシーへ乗車する。","content_refs":["CNT-001"],"evidence_refs":["EVD-002","EVD-003"]},
+    {"dimension_id":"D12","status":"I","primary":{"code_id":"D12.FOC.PROTAGONIST_EXPERIENCER","parent_id":"D12.FOC"},"secondary":[],"rationale":"異常を経験し、事後に乗客の正体を知る焦点人物はタクシー運転手である。","manifestation":"運転手が幽霊乗客との遭遇を経験する。","content_refs":["CNT-001","CNT-002"],"evidence_refs":["EVD-002"]},
+    {"dimension_id":"D13","status":"I","primary":{"code_id":"D13.MAN.MANIFEST_ONLY","parent_id":"D13.MAN"},"secondary":[],"rationale":"初期「帰る」型の主要作用は、死者が通常の乗客として顕現し移動することであり、身体攻撃・呪い・追跡等の追加作用はScopeの必須要素ではない。","manifestation":"死者霊が生者同様の乗客として顕現する。","content_refs":["CNT-001","CNT-002"],"evidence_refs":["EVD-002"]},
+    {"dimension_id":"D14","status":"I","primary":{"code_id":"D14.NEU"},"secondary":[],"rationale":"初期Scopeで必須の終端は乗客が死者だったという判明であり、身体危害・物的損失・利益は必須帰結ではない。","manifestation":"怪異の正体が判明するが、追加の危害・利益は確定しない。","content_refs":["CNT-002"],"evidence_refs":["EVD-002"]},
+    {"dimension_id":"D15","status":"I","primary":{"code_id":"D15.KNW.REVELATION_KNOWLEDGE","parent_id":"D15.KNW"},"secondary":[],"rationale":"運転手が家人から、乗せた女性が既に死亡していたと知らされることが終端の主要結果であり、異常体験の真相に相当する知識を得る。","manifestation":"乗客が死者だったという新たな情報を獲得する。","content_refs":["CNT-002"],"evidence_refs":["EVD-002"]},
+    {"dimension_id":"D16","status":"I","primary":{"code_id":"D16.EVT.SINGLE_EPISODE","parent_id":"D16.EVT"},"secondary":[],"rationale":"乗車、移動、到着、家人への確認までが一続きの一回の出来事として完結し、長い遅延や反復周期は意味上必須ではない。","manifestation":"一回のタクシー乗車から事後確認までの単一エピソード。","content_refs":["CNT-001","CNT-002"],"evidence_refs":["EVD-002"]},
+    {"dimension_id":"D17","status":"I","primary":{"code_id":"D17.NON.OBSERVATIONAL_ONLY","parent_id":"D17.NON"},"secondary":[],"rationale":"初期「帰る」型では、幽霊乗客の顕現と正体判明が中心で、危害を止めるための手順や逃走は必須要素として示されない。車内の魔除け人形という周辺習慣は存在するが、Scoped narrativeの制御規則としては採らない。","manifestation":"怪異を経験・確認するだけで、物語内に必須の制御手順はない。","content_refs":["CNT-001","CNT-002"],"evidence_refs":["EVD-002","EVD-004"]},
+    {"dimension_id":"D18","status":"I","primary":{"code_id":"D18.L1"},"secondary":[],"rationale":"Scopeで確認する作用は、死者霊がタクシー乗客として顕現し運転手に経験されるという伝承内部の因果である。受容者や社会制度への直接作用はScopeに含めない。","manifestation":"伝承内因果層で幽霊乗客が運転手の経験対象となる。","content_refs":["CNT-001","CNT-002"],"evidence_refs":["EVD-002"]},
+    {"dimension_id":"D19","status":"I","primary":{"code_id":"D19.PRO.OCCUPATIONAL","parent_id":"D19.PRO"},"secondary":[],"rationale":"後代解説は『日本の幽霊』の記述をもとに、幽霊乗客の話がタクシー運転手の間に流布していたと整理する。初期Scopeの社会的流通範囲は職業集団として扱う。","manifestation":"タクシー運転手という職業集団内で共有される怪談。","content_refs":["CNT-007"],"evidence_refs":["EVD-004"]},
+    {"dimension_id":"D20","status":"I","primary":{"code_id":"D20.PER.FAMILY_BLOODLINE","parent_id":"D20.PER"},"secondary":[],"rationale":"「帰る」型の終端では、乗客の家族がその人物が既に死亡していることを知り、運転手へ正体情報を与える。Scope内で追加情報を持つ主体として家族・血縁が機能する。","manifestation":"乗客の家族が、彼女が既に死亡しているという情報を保持する。","content_refs":["CNT-002"],"evidence_refs":["EVD-002"]},
+    {"dimension_id":"D21","status":"I","primary":{"code_id":"D21.A2"},"secondary":[],"rationale":"後代解説による初期例の一つは青山墓地から横浜へ向かう話として特定の実在地名を用いる。場所の実在性を因果条件とまではしないが、具体的現実対象へのアンカーがある。","manifestation":"青山墓地・横浜という具体的地名を舞台にする初期例。","content_refs":["CNT-003"],"evidence_refs":["EVD-003"]}
+  ],
+  "analysis_notes": "D01では最古確認層と生成年代を混同せずUとした。D02/D03/D19の職業口承は後代解説の整理に依存するためI。1969年深泥池型は後代異伝として00/10に保存するが、初期ScopeのD01–D21判定には用いない。"
+}
