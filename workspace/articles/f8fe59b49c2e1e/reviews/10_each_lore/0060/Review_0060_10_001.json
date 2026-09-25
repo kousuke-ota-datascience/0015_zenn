@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0060",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "docs/10_each_lore/0060_ghost_taxi/0060_10_contents.json",
+    "commit_sha": "fcdc40cbfc1efa801d27efc1ffa0b8168f253b62",
+    "blob_sha": "0b77036d248d008c91016f0381a54b7157f24b4b",
+    "reviewed_at": "2026-09-25T10:20:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "各Content Unitの主要主張は参照Evidenceの範囲内にある。"
+    },
+    "summary_reconstruction": {
+      "status": "FINDING",
+      "notes": "coverage_refsに含むCNT-005の具体経路がLOSS、CNT-007の魔除け・職業集団内流通がsummaryから失われ、avoidance_control=unknownとCONFLICTする。F002参照。"
+    },
+    "structural_probe": {
+      "status": "FINDING",
+      "notes": "P09でsummaryとReference StoryがCONFLICTする。その他の中心的物語骨格は復元可能。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "帰る型・消える型・1969年京都型の境界と、後代要素の遡及防止は明示されている。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "絶対起源、池田本本文未確認、1969年転載依存、旧来モチーフとの系譜未確定を保持する。"
+    },
+    "narrative_reconstruction": {
+      "status": "FINDING",
+      "notes": "summaryは中心筋を保つが、coverage対象の具体地理と制御/流通情報を完全には再構成できない。"
+    },
+    "salient_content_completeness": {
+      "status": "FINDING",
+      "notes": "EVD-006の走行中の乗客確認と警察捜索・該当女性不発見がContentへ反映されていない。F001参照。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "深夜、タクシー運転手が女性客を乗せ目的地へ運ぶ。乗客は当初は普通の客として認識されるが、「消える」型では走行中または到着時に姿を消し、ときに濡れた座席を残す。「帰る」型では自宅へ送った後に家族から既に死亡した女性だったと知らされる。池田弥三郎『日本の幽霊』は1959年刊で、後代解説によれば同書には「帰る」型が二話あり、一つは青山墓地から横浜へ向かい、昭和5、6年ごろに聞いた話として紹介される。したがって確認可能な流通は戦前まで遡るが絶対起源は不明。1969年京都・深泥池型は後代の「消える」型地域異伝で、起源とはみなさない。固定された規則・禁忌・回避法はsummaryからは復元できない。",
+    "reference_story": "深夜にタクシー運転手が女性客を乗せる怪談群で、「帰る」型と「消える」型が区別される。「帰る」型では女性を自宅まで送り、家人から既に死亡していると知らされる。池田弥三郎『日本の幽霊』は1959年6月刊で、後代解説によれば同書に「帰る」型が二話あり、一つは青山墓地から横浜へ向かい、本文では昭和5、6年ごろに聞いた話とされる。「消える」型では女性が後部座席から消え、座席が濡れている終端がある。1969年京都型では京都大学医学部前から女性を乗せて深泥池へ向かい、到着時に消失し座席が濡れていたとする届出が新聞記事になった。後代解説は『日本の幽霊』の記述をもとに、当時の運転手が魔除けの小さな人形を車内に下げ、幽霊乗客の話が運転手間で流布していたと整理する。絶対起源、池田本本文の直接未確認、1969年記事本文の転載依存、タクシー以前の消える乗客との直接系譜は未確定である。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "タクシー運転手と女性客。",
+        "reference": "タクシー運転手と女性客。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "主な経験・影響対象は運転手。",
+        "reference": "主な経験・影響対象は運転手。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "深夜に女性客をタクシーへ乗せる。",
+        "reference": "深夜に女性客をタクシーへ乗せる。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "後に死者・幽霊と判明する女性客。",
+        "reference": "後に死者・幽霊と判明する女性客。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "普通の客として乗車し、消失または家族の説明で死者と判明する。",
+        "reference": "普通の客として乗車し、消失または家族の説明で死者と判明する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "通常の乗客認識から死者・幽霊認識へ転換する。",
+        "reference": "通常の乗客認識から死者・幽霊認識へ転換する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "一回の乗車から到着・事後確認まで。",
+        "reference": "一回の乗車から到着・事後確認まで。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "固定された規則・禁忌は不明。",
+        "reference": "固定された発動規則・禁忌はContent上も確定しない。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "回避・制御法は不明。",
+        "reference": "CNT-007は、後代解説が当時の運転手による小さな人形の魔除け使用を整理している。",
+        "difference": "CONFLICT",
+        "notes": "summary.structure.avoidance_control=unknownはcoverage対象CNT-007と整合しない。"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "帰る型は死亡済みと判明、消える型は消失し濡れた座席が残る場合がある。",
+        "reference": "同じ。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "絶対起源、池田本本文細部、古い消える乗客との直接系譜は未確定。",
+        "reference": "同じ。1969年記事本文も非公式転載依存。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "帰る型と消える型を分離し、1969年京都型を後代地域異伝として扱う。",
+        "reference": "同じ。後代の健康被害等も初期Scopeへ遡及しない。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "CNT-007がsummaryから復元不能なため、D02/D03/D19の職業集団内流通とD17の制御判断はsummaryだけでは再現できない。"
+    },
+    "verdict": "FINDING",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "深夜、運転手が女性客を乗せて目的地へ走る。",
+        "blind_reconstruction": "深夜に女性客を乗せ目的地へ運ぶ。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "帰る型では家族から乗客が既に死亡していると知らされる。",
+        "blind_reconstruction": "自宅へ送った後に家族から死亡済みと知らされる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "1959年刊『日本の幽霊』に帰る型二話、青山墓地→横浜の一話、昭和5、6年ごろに聞いたとの後代報告。",
+        "blind_reconstruction": "同じ要点を復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "消える型では女性が消え、濡れた座席が残る場合がある。",
+        "blind_reconstruction": "同じ要点を復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "1969年京都型は京都大学医学部前から深泥池へ向かう具体経路で、消失・濡れた座席・届出の新聞記事化を含む。",
+        "blind_reconstruction": "1969年京都・深泥池型が後代の消える型地域異伝であることまでは復元できるが、京都大学医学部前からの具体的経路と届出の具体性は復元できない。",
+        "difference": "LOSS"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "『日本の幽霊』は中央公論社1959年6月刊。",
+        "blind_reconstruction": "1959年刊まで復元できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "後代解説は、当時の運転手が小さな人形を魔除けとして下げ、幽霊乗客の話が運転手間で流布していたと整理する。",
+        "blind_reconstruction": "職業集団内流通も魔除け人形も復元できず、structureはavoidance_controlをunknownとしている。",
+        "difference": "CONFLICT"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Minor",
+      "category": "salient_content_completeness",
+      "summary": "EVD-006の走行中確認と警察捜索の終端情報がVAR-003のContentへ落ちている。",
+      "rationale": "EVD-006は、運転手が走行中にバックミラーで客を確認した後、到着時に消失したこと、連絡を受けた警察が周辺を捜索しても該当女性を発見できなかったことを含む。CNT-005は乗車地点・目的地・消失・濡れた座席・新聞記事化を保持するが、この二点を保持しない。",
+      "impact": "後代京都異伝の『実際に乗客がいたことの物語内確認』と『公的捜索後も未解決』という終端構造が弱くなる。初期VAR-001の20分析Scope外なので影響は限定的。",
+      "fix_direction": "CNT-005を拡張するか別Content Unitを追加し、走行中確認と警察捜索・不発見を保持する。転載依存の不確実性は維持する。",
+      "evidence_refs": [
+        "EVD-006"
+      ],
+      "content_refs": [
+        "CNT-005"
+      ],
+      "variant_refs": [
+        "VAR-003"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "summary_reconstruction",
+      "summary": "summaryがcoverage対象CNT-007を再構成できず、avoidance_control=unknownとContentが衝突する。",
+      "rationale": "CNT-007は小さな人形を魔除けとして下げる慣行と、幽霊乗客の話が運転手間で流布していたという後代整理を保持する。しかしsummary.narrativeには両者がなく、summary.structure.avoidance_controlはunknownである。さらにCNT-005の京都大学医学部前→深泥池という具体経路もsummaryから失われる。",
+      "impact": "coverage_refsが宣言する意味保存が満たされず、summaryのみからD02/D03/D17/D19を再構成するAnalysis Invarianceが成立しない。",
+      "fix_direction": "CNT-007をcoverage対象として維持するなら、summaryへ職業集団内流通と魔除け慣行を明示し、avoidance_controlをContentと整合させる。意図的に分析外とするならcoverage_refs/variant content_refs/Version Scopeの包含関係を整理する。CNT-005の具体地理もcoverage方針に応じてsummaryへ保持する。",
+      "content_refs": [
+        "CNT-005",
+        "CNT-007"
+      ],
+      "variant_refs": [
+        "VAR-001",
+        "VAR-003"
+      ],
+      "probe_refs": [
+        "P09"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Blind Decodeはsummary.narrative+summary.structureのみから先に固定し、その後でContent/Evidenceを開示して差分を判定した。"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0060",
+  "artifact": "00",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "docs/10_each_lore/0060_ghost_taxi/0060_00_sources.json",
+    "commit_sha": "7b7066d2fea565465ee159201857332598781f3b",
+    "blob_sha": "322166e6e0dbd65a27184201d4b4a9a1f3bcad89",
+    "reviewed_at": "2026-09-25T10:20:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "各Sourceの種別・Evidence role・書誌/転載/二次解説の区別は明示されている。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "既存Evidenceはparaphraseとして記録され、CiNii書誌と二次記事の刊年矛盾も1959年書誌を優先する形で明示されている。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜006の既存記述は各Sourceが実際に支える範囲に概ね収まり、不確実性も付されている。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "原紙面未確認・個人転載・図書館レファレンス記録・後代解説の関係が区別されている。"
+    },
+    "earliest_attestation": {
+      "status": "FINDING",
+      "notes": "SRC-002自身が池田弥三郎『日本の幽霊』を初出とする見方を否定し、田中貢太郎の戦前作品群を挙げるが、この履歴情報がEvidence化されていない。F001参照。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "絶対起源、池田本本文の直接未確認、1969年記事の転載依存など主要な不確実性は保持されている。"
+    },
+    "salient_evidence_completeness": {
+      "status": "FINDING",
+      "notes": "SRC-002の伝承再構成・初期史に重要な情報がEvidenceへ落ちていない。F001参照。"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "salient_evidence_completeness",
+      "summary": "SRC-002の「帰る」型の出来事連鎖と、池田本より前の戦前タクシー幽霊資料に関する記述がEvidence化されていない。",
+      "rationale": "SRC-002は「帰る」型について、女性が家へ入り、戻らないため運転手が家人へ確認し、そこで死亡済みと知らされる連鎖を記す。現行EVD-002は「自宅へ送り、家族から死亡済みと知らされる」まで圧縮し、消失・待機・照会の因果順序を落としている。また同Sourceは池田本がメディア初登場ではないと明記し、1941年没の田中貢太郎作品を集めた『日本怪談実話』に9種のタクシー幽霊譚があると述べるが、EVD-002〜004はこの初期史を全く保持しない。",
+      "impact": "00のsalient completenessとearliest-attestation監査が成立せず、10の「帰る」型再構成および20の既定Version Scopeが、上流で欠落した情報に依存している可能性がある。",
+      "fix_direction": "SRC-002から、(1)「帰る」型の待機→不帰還→家人照会の連鎖、(2)田中貢太郎作品群に関する記述を別Evidenceとして追加する。田中作品の個別初出年はSource自体が未特定で、「大正中心」は解説者の推定であることをuncertaintyとして保持したうえで、最古確認層とVersion Scopeを再評価する。",
+      "source_refs": [
+        "SRC-002"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Source→Evidenceのみを監査。後代Sourceの主張を一次事実へ昇格せず、既存Evidenceの妥当性とsalient omissionを分離して判定した。"
+}
