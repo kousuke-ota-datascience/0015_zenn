@@ -9,10 +9,7 @@
       "locator": "番号2180728／民間伝承 3巻11号（1938）",
       "accessed_at": "2026-09-19",
       "relation_to_primary": "indirect_derivative",
-      "evidence_role": [
-        "C",
-        "H"
-      ],
+      "evidence_role": ["C", "H"],
       "url": "https://www.nichibun.ac.jp/YoukaiCard/2180728.html",
       "notes": "国際日本文化研究センターによる伝承資料メタデータ・要約。"
     },
@@ -23,12 +20,20 @@
       "locator": "七人ミサキ／七人塚の1935年・1938年等の収録一覧",
       "accessed_at": "2026-09-19",
       "relation_to_primary": "indirect_derivative",
-      "evidence_role": [
-        "C",
-        "A"
-      ],
+      "evidence_role": ["C", "A"],
       "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/ksearch.cgi?Area=%E5%9B%9B%E5%9B%BD&Name=%E3%83%9F%E3%82%B5%E3%82%AD&Pref=",
       "notes": "収録資料の年代分布確認に使用。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "reliable_secondary_or_research",
+      "title": "怪異・妖怪伝承データベース「七人ミサキ」",
+      "locator": "番号1232814／『旅と伝説』8巻5号（1935）p.42",
+      "accessed_at": "2026-09-25",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": ["C", "H"],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1232814",
+      "notes": "国際日本文化研究センターによる1935年高知県幡多郡の伝承資料メタデータ・要約。"
     }
   ],
   "evidence": [
@@ -42,10 +47,10 @@
     {
       "evidence_id": "EVD-002",
       "source_id": "SRC-002",
-      "locator": "呼称検索結果",
-      "content": "日文研データベースには「七人ミサキ／七人塚」を含む資料が1920年代後半から複数収録され、1935年の高知県資料なども確認できる。",
+      "locator": "呼称検索結果（四国・ミサキ）",
+      "content": "日文研データベースの四国・ミサキの呼称検索では、「七人ミサキ／七人塚」に関する高知県資料として1935年・1938年などの収録が確認できる。",
       "representation": "paraphrase",
-      "uncertainty": "データベース収録年は伝承の成立年そのものを意味しない。"
+      "uncertainty": "検索結果の収録・刊行年は伝承の成立年そのものを意味しない。"
     },
     {
       "evidence_id": "EVD-003",
@@ -53,7 +58,21 @@
       "locator": "書誌情報",
       "content": "1938年資料は『民間伝承』3巻11号掲載で、地域は高知県宿毛市として整理されている。",
       "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-003",
+      "locator": "要約・高知県幡多郡・1935年",
+      "content": "1935年の高知県幡多郡資料では、七人ミサキは七人の人を引きずり込まなければ成仏できないと伝えられている。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-003",
+      "locator": "書誌情報・掲載箇所",
+      "content": "1935年資料は『旅と伝説』8巻5号の「大阪民俗談話会記録」に収録され、掲載箇所は42頁、地域は高知県幡多郡として整理されている。",
+      "representation": "paraphrase"
     }
   ],
-  "notes": "成立時期そのものを資料刊行年から推測せず、確認できる早期民俗資料の共有核のみをScopeにする。"
+  "notes": "成立時期を資料刊行年から推測しない。1935年幡多郡資料の「七人を引きずり込まなければ成仏できない」形と、1938年宿毛市資料の「常に七人で、一人引くごとに最古参が成仏する」形は規則表現が異なるため、Evidence層では同一の交代規則へ統合しない。"
 }
