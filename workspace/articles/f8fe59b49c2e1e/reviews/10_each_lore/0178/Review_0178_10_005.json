@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0178",
+  "artifact": "10",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_10_contents.json",
+    "commit_sha": "06f474f8c421532cc04a311fe328f43f76dd8faf",
+    "blob_sha": "80af57f17eb8fcb6aa4c15566c9b38e484e1cec9",
+    "reviewed_at": "2026-09-25T10:20:00Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "現行EVD-001〜009で固定された事実・主張はContentへ支持可能な形で接続され、自己申告・予想・後代派生の限定も維持される。"
+    },
+    "summary_reconstruction": {
+      "status": "FINDING",
+      "notes": "主要因果・終端・Variant境界は復元できるが、CNT-003に明示される小人という直接作用主体がsummaryから落ちる。"
+    },
+    "structural_probe": {
+      "status": "FINDING",
+      "notes": "P01 actors と P05 mechanism にLOSS。その他のtrigger、cause、state transition、temporal、rules、control、terminal、uncertainty、variant boundaryは一致。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "2000年型VAR-001と2003年読者側派生VAR-002は混在せず、2003年要素は共有核から明示的に除外される。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "覚醒後音声は自己申告、次回死亡は予想、再発は未確認、原因主体は不明という限定が保持される。"
+    },
+    "narrative_reconstruction": {
+      "status": "FINDING",
+      "notes": "Blind Decodeは筋・因果順序をほぼ再現する一方、身体危害を実行する小人を独立actorとして再構成できない。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "現行Evidenceに存在するsalient factはContentへ人口化されている。Sourceに存在するがEvidenceに未人口化の事項はReview 00のupstream findingとして分離した。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "2000年型は、夢だと自覚した投稿者が薄暗い無人駅で『乗ると怖い目に遭う』との警告を受けながら、自力で覚醒できると考えて恐怖を試すため『お猿さん電車』様の乗り物へ意図的に乗る。車内では後方の乗客から順に放送どおり異なる身体危害が加えられ、投稿者自身にも『挽肉』の順番が迫るため、夢だと認識して覚醒し離脱する。4年後、同じ夢が前回の『えぐり出し』場面から再開して再び『挽肉』へ進み、投稿者は再度覚醒を試みる。終端で『次回は最後』という趣旨の警告を聞いた直後、自室で完全に覚醒したと述べ、最後の音声は現実世界で聞いたと自己申告するが独立確認はない。その後の再発は確認されず、次回死亡は予想に留まる。夢の原因・反復機構・警告主体は不明。2003年の読者側類似夢は後代派生で2000年共有核には含まれない。",
+    "reference_story": "Content層だけから再構成すると、2000年型では明晰夢中の投稿者が薄暗い無人駅で乗車警告を受け、自力覚醒可能と考えて恐怖を試すため意図的にお猿さん電車様の乗り物へ乗る。投稿者は後ろから3番目に座り、車内放送に続いて最後尾の男性と直後の女性が小人による異なる身体危害を受け、次に投稿者へ『挽肉』が告げられ、小人と機械様のものが接近する。投稿者は夢と認識して覚醒する。4年後、夢は前回のえぐり出し場面から再開して再び挽肉局面へ進み、投稿者は再度覚醒する。終端で次回は最後という趣旨の警告を聞き、完全覚醒後の自室で最後の音声を聞いたと自己申告するが独立確認はない。その後の再発は確認されず、次回死亡は予想に留まる。原因、反復理由、放送・警告主体は不明である。2003年の読者側類似夢は後代派生として2000年共有核から分離され、2000年本文自体も原掲示板ページではなく後代保存転載経由で確認される。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "投稿者、夢内の乗客、正体不明の放送話者／作用主体。",
+        "reference": "投稿者、夢内の乗客、放送話者に加え、乗客へ直接身体危害を加え投稿者へ機械を近づける小人が行為主体としてContentに明示される。",
+        "difference": "LOSS",
+        "notes": "Blind Decodeでは小人という直接行為主体を復元できない。"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "投稿者と夢内先行被害者。",
+        "reference": "投稿者と夢内先行被害者。",
+        "difference": "NONE",
+        "notes": "対象構造は一致。"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "睡眠・夢状態に入り、警告を受けたうえで意図的に乗車する。",
+        "reference": "夢状態に加え、『乗ると怖い目に遭う』という警告後の意図的乗車が危険系列への直接接触条件として描かれる。",
+        "difference": "NONE",
+        "notes": "Blind Decodeで復元可能。"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "夢の原因主体は不明。",
+        "reference": "夢、4年後再開、放送・警告の究極原因主体はContent上不明。",
+        "difference": "NONE",
+        "notes": "一致。"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "放送に沿い後方乗客から順に身体危害が起こり、投稿者の挽肉局面が迫る。",
+        "reference": "放送後、小人が先行乗客へ身体危害を加え、投稿者へは小人と機械様のものが接近する。",
+        "difference": "LOSS",
+        "notes": "作用の順序は保持されるが、直接作用主体がBlind Decodeから落ちる。"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "無人駅→警告→乗車→先行被害→挽肉接近→覚醒→4年後再開→再覚醒→終端警告→自室覚醒。",
+        "reference": "同じ状態遷移。",
+        "difference": "NONE",
+        "notes": "一致。"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "後方から順番に進行し、一度覚醒した4年後に同場面から再開する。",
+        "reference": "同じ順序・再発・4年間隔。",
+        "difference": "NONE",
+        "notes": "一致。"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "後方から順に処理される。安定した読者禁忌は2000年核にない。",
+        "reference": "同じ。2003年読者側類似夢は別Variant。",
+        "difference": "NONE",
+        "notes": "一致。"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "夢だと認識し、自力で覚醒して離脱する。",
+        "reference": "初回・4年後とも覚醒を試み離脱する。",
+        "difference": "NONE",
+        "notes": "一致。"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "完全覚醒直前の終端警告と、覚醒後にも声を聞いたという自己申告。死亡は未確認。",
+        "reference": "同じ。以後の再発は確認されず、死亡は予想のみ。",
+        "difference": "NONE",
+        "notes": "一致。"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "体験の事実性、原因、反復理由、警告主体、覚醒後音声、次回死亡は未確定。",
+        "reference": "同じ不確実性がContentに保持される。",
+        "difference": "NONE",
+        "notes": "一致。"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "VAR-001の2000年型とVAR-002の2003年読者側派生を分離。",
+        "reference": "同じVariant境界。",
+        "difference": "NONE",
+        "notes": "一致。"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "直接作用主体の欠落はD10/D13の意味裁定に影響し得るため、summaryのみから開始した分析結果の完全不変性は保証できない。"
+    },
+    "verdict": "FINDING",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "明晰夢状態・薄暗い無人駅",
+        "blind_reconstruction": "夢を自覚した投稿者が薄暗い無人駅にいる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "乗車前警告と恐怖を試すための意図的乗車",
+        "blind_reconstruction": "警告を受け、自力覚醒できると考えて意図的に乗る。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "後方乗客への順次身体危害、小人、投稿者の挽肉順番と機械接近",
+        "blind_reconstruction": "後方乗客から順に危害が加えられ、投稿者の挽肉順番が迫る。",
+        "difference": "LOSS"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "夢と認識して覚醒・離脱",
+        "blind_reconstruction": "夢だと認識して覚醒し離脱する。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "4年後に前回場面から夢が再開",
+        "blind_reconstruction": "4年後、前回のえぐり出し場面から再開する。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "再開夢から再度覚醒・離脱",
+        "blind_reconstruction": "再度覚醒を試みる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "終端警告と覚醒後音声の自己申告",
+        "blind_reconstruction": "次回は最後という警告、完全覚醒後に声を聞いたという自己申告。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-008",
+        "salient_meaning": "原因・反復理由・放送／警告主体が不明",
+        "blind_reconstruction": "夢の原因・反復機構・警告主体は不明。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-009",
+        "salient_meaning": "2003年の読者側類似夢は後代派生",
+        "blind_reconstruction": "2003年読者側類似夢は後代派生で2000年共有核外。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-010",
+        "salient_meaning": "再発未確認と次回死亡予想",
+        "blind_reconstruction": "その後の再発は未確認で、次回死亡は予想のみ。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-011",
+        "salient_meaning": "2000年本文は掲示板投稿として後代整理され現在は保存転載経由",
+        "blind_reconstruction": "2000年型は匿名掲示板投稿として後代資料に整理され、保存転載から確認。",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "narrative_reconstruction",
+      "summary": "summaryから、先行乗客へ身体危害を実行する小人という直接作用主体が脱落している。",
+      "rationale": "CNT-003は小人が最後尾男性と次の女性へ具体的な身体危害を加え、投稿者の『挽肉』局面でも小人と機械様のものが接近すると記述する。一方summary.narrative/structureは『危害が加えられる』『放送話者/作用主体は不明』までに圧縮し、小人をactorとして保持しない。このためBlind Decodeでは作用の存在と順序は復元できても、誰が直接行為を行うかを復元できない。",
+      "impact": "P01/P05にLOSSが生じ、作用主体と作用機構を分けるD10/D13分析で意味の取り違えが起こり得る。",
+      "fix_direction": "summary.narrativeまたはsummary.structure.primary_actors/mechanismに、夢内で先行乗客へ危害を加え投稿者へ機械を近づける小人を、究極的な原因主体とは区別して追加する。",
+      "content_refs": [
+        "CNT-003"
+      ],
+      "probe_refs": [
+        "P01",
+        "P05"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Evidence→Content人口完全性とsummary再構成を分離して監査。upstream Source→Evidence欠落は10の人口漏れとして二重計上していない。"
+}

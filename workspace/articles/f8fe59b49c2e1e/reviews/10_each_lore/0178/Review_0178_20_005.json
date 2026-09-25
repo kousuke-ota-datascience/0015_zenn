@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0178",
+  "artifact": "20",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_20_analysis.json",
+    "commit_sha": "7fd405903b79eeb603bae11a95a36ee39ba7fa2c",
+    "blob_sha": "c559fb854e19fa0a69ec37bd01d18f0ac869de71",
+    "reviewed_at": "2026-09-25T10:20:00Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "2000年保存転載で固定できる共有核を中心とし、2003年読者側類似夢を後代派生として除外するScopeはContentのVariant境界と整合する。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D09はDELIBERATE_NONRESOLUTIONの要件を満たさず、D13は既存TARGETING等で表現可能な構造をtaxonomy gapとしている。その他の主要Dimensionは現Contentと概ね整合する。"
+    },
+    "taxonomy_gap": {
+      "status": "FINDING",
+      "notes": "D17の『覚醒による夢からの離脱』は現行codebookに直接対応しにくいが、D13の『自分の順番が来て処理対象となり機械が接近する』はD13.REL.TARGETING等で表現可能でありgapではない。"
+    },
+    "causality": {
+      "status": "FINDING",
+      "notes": "現行D12は主人公を置く一方D13 Primaryがnullで、D12→D13→D15が因果列として接続しない。D13をTARGETINGとして裁定し直せば主人公を直接対象として接続可能。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "各DimensionのContent refsは現行Contentへ追跡可能で、2003年派生を2000年因果核へ逆輸入していない。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "D09とD13のPrimary裁定を修正すると分析値が変わるため、現行analysisは不変ではない。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "原投稿ページ未固定・保存転載中心というEvidence ceilingを反映し、確定不能箇所をI/Uとして保守化している。問題はD09/D13の意味選択でありStatus過大評価ではない。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "FINDING",
+      "notes": "D12=PROTAGONIST_EXPERIENCER、D13=null taxonomy gap、D15=UNCERTAINTY_PRESERVEDでは『何に→何をする→何が変わる』が成立しない。CNT-003/005では投稿者が次の処理対象として選ばれ機械が接近するため、D13.REL.TARGETINGを第一候補に再裁定できる。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "2000年ScopeではL1のみとし、2003年読者側類似夢や覚醒後音声自己申告を独立X EvidenceなしにL2/L3へ昇格していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公開掲示板／保存Webという流通形態をOPEN_FORUM_WEBとして扱い、全国普及を推定していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "特権情報保持者を探索して不在と確認する構造がないため、NO_ONE_KNOWSへ飛躍せずUとしている。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "夢内駅・列車・自室等は一般的現実背景で、特定実在地点が主張成立に必須ではないためA1は妥当。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "下位・間接SourceしかないDimensionをDへ上げず、I/UでEvidence confidence ceilingを守っている。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "ネット怪談／物語・伝説という分類は、2000年の一人称夢怪談と後代保存転載というContentに対する記述的分類として矛盾しない。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "20の意味裁定はVersion Scope内Content（CNT-001〜008,010,011）だけを事実層として用い、Source本文の追加事実を直接D01–D21へ投入していない。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "夢状態に入った投稿者が乗車警告を受けつつ意図的に列車へ乗り、放送に同期して後方乗客が順次処理されるのを見た後、自分が次の対象として選ばれ機械が接近する。投稿者は夢と認識して覚醒して離脱するが、4年後に同じ夢が前回の場面から再発し、再び対象化される。再度覚醒した終端で次回は最後という警告を聞き、覚醒後にも声を聞いたと自己申告する。ただしその後の再発・死亡・究極原因は確定しない。したがって意味構造は『夢現象＋予告された順次対象化／危害＋覚醒による離脱＋再発＋未確定終端』であり、結論を意図的に開いた複数説提示ではない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-010",
+      "CNT-011"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18"
+    ],
+    "status": "FINDING",
+    "notes": "現行D09とD13がこのContent-only再構成に一致しない。"
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D09 `DELIBERATE_NONRESOLUTION` は現行coding rulesの適用条件を満たさない。",
+      "rationale": "coding rulesはDELIBERATE_NONRESOLUTIONを、複数説を意図的に併置・維持し、結論を閉じないこと自体が提示戦略であるEvidenceがある場合に限定し、『結局わからない』だけでは用いないと明記する。Scope内Contentは原因・反復理由・警告主体が不明であることを保持するが、複数説を提示戦略として併置していない。",
+      "impact": "D09 Primaryが定義不適合となり、Entryの意味付与操作を誤分類する。",
+      "fix_direction": "D09.UNK.DELIBERATE_NONRESOLUTIONを維持せず再裁定する。単純な不可知性を中心に置くならD09.UNK.MYSTERY_LABELを第一候補とし、終端警告・次回死亡予想を意味操作として重視する場合はD09.PPR.OMEN_FORECAST等との比較をContentだけから行う。",
+      "content_refs": [
+        "CNT-007",
+        "CNT-008",
+        "CNT-010"
+      ],
+      "dimension_refs": [
+        "D09"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Moderate",
+      "category": "taxonomy_gap",
+      "summary": "D13のtaxonomy gapはfalse positiveで、既存`D13.REL.TARGETING`が中心構造を表現できる。",
+      "rationale": "CNT-003では後方乗客が順に処理され、投稿者自身も『順番からいくと次』に相当する対象として挽肉を告げられ、小人と機械様のものが接近する。Physical Attackは投稿者には完遂していないが、codebookのTARGETINGは『特定対象を選び固定する』作用を表し、この対象化を直接表現できる。先行乗客への実際の身体危害は必要に応じてPHYSICAL_ATTACKをSecondaryとして保持できる。",
+      "impact": "存在するtaxonomyを欠落扱いするためD13がnullとなり、中核因果列と機械集計の両方が失われる。",
+      "fix_direction": "D13 PrimaryをD13.REL.TARGETING / Parent D13.RELを第一候補に再コードし、先行乗客へのD13.PHY.PHYSICAL_ATTACKをSecondaryとする必要性を再評価する。D13のtaxonomy_gap.presentはfalseへ戻す。",
+      "content_refs": [
+        "CNT-003",
+        "CNT-005"
+      ],
+      "dimension_refs": [
+        "D13"
+      ]
+    },
+    {
+      "finding_id": "F003",
+      "severity": "Moderate",
+      "category": "causality",
+      "summary": "現行D12→D13→D15因果列がD13欠落により接続していない。",
+      "rationale": "coding rulesではD12はD13 Primaryの直接対象として決め、D12→D13→D15を一つの因果列として読める必要がある。現行はD12をPROTAGONIST_EXPERIENCERとしながらD13をgap/nullとするため接続不能である。CNT-003の投稿者への対象化をD13 TARGETINGとすれば、D12主人公→D13標的化→D15終端不確実性という列を再構成できる。",
+      "impact": "D12の根拠が『主人公だから』という禁止された選択に見え、作用対象・作用機構・帰結領域の比較可能性を損なう。",
+      "fix_direction": "D13再コード後にD12のrationaleを『TARGETINGの直接対象が投稿者である』へ書き換え、D15 UNCERTAINTY_PRESERVEDとの接続を明示する。先行乗客への独立作用をSecondary対象／作用として保持するかも同時に再評価する。",
+      "content_refs": [
+        "CNT-003",
+        "CNT-007",
+        "CNT-010"
+      ],
+      "dimension_refs": [
+        "D12",
+        "D13",
+        "D15"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "20はVersion Scope内Contentのみを事実層として再合成。Source→Evidenceのupstream findingはD01–D21の直接根拠に使用していない。"
+}

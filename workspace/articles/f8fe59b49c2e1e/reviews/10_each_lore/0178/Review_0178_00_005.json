@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0178",
+  "artifact": "00",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_00_sources.json",
+    "commit_sha": "af60218080ee46610f02676b33f356f395363708",
+    "blob_sha": "eacd09156c6975f8f3bf8ed9c8b4aa20925e01e6",
+    "reviewed_at": "2026-09-25T10:20:00Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001は後代保存転載、SRC-002は後代整理として種別と限界が明示され、原2ちゃんねるページ未固定を一次資料相当として扱っていない。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001〜009は、夢体験・4年後再開・覚醒後音声の自己申告・死亡予想・2003年派生を、確認事実と自己申告／後代整理を分離して記述している。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "既存Evidenceの各記述は対応Sourceで支持され、覚醒後音声や将来死亡を独立確認済み事実へ昇格していない。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "2000年本文はSRC-001の保存転載経由であり、原投稿ページ未固定という関係が明示されている。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2000-08-02は保存転載で確認できる早期記録として扱われ、絶対的初出とは断定していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "体験の事実性、反復原因、警告主体、覚醒後音声の現実性、次回死亡は未確認として保持されている。"
+    },
+    "salient_evidence_completeness": {
+      "status": "FINDING",
+      "notes": "SRC-001本文の意味形成に関わる二点、(a) 投稿者自身がトンネルとお猿さん電車を子供時代の記憶由来と解釈すること、(b) 初回覚醒翌日に学校の友人全員へ夢を話し、相手は面白がっただけだったこと、がEvidence化されていない。"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "salient_evidence_completeness",
+      "summary": "夢内イメージを過去の記憶由来とする投稿者自身の説明がEvidenceから脱落している。",
+      "rationale": "SRC-001本文では、投稿者がトンネルを子供時代の遊園地のスリラーカー、お猿さん電車も過去の記憶映像だと明示的に解釈し、その時点では怖くないと評価する。この自己説明は単なる情景細部ではなく、不可解な夢へ通常的な由来説明を与える意味形成情報であるが、EVD-001〜009に対応するEvidenceがない。",
+      "impact": "Source→Evidence人口完全性が欠け、下流のD09意味付与操作やD10因果源存在論を再裁定する際に、投稿者自身の通常的説明候補を参照できない。",
+      "fix_direction": "SRC-001に基づき、トンネル／お猿さん電車を過去の記憶映像とみなす投稿者の自己解釈を独立Evidenceとして追加する。夢全体や4年後再発の原因を説明した事実へ拡張せず、『投稿者の解釈』として限定する。",
+      "source_refs": [
+        "SRC-001"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Minor",
+      "category": "salient_evidence_completeness",
+      "summary": "初回覚醒後の友人への伝達と受け手の反応がEvidence化されていない。",
+      "rationale": "SRC-001本文は、初回覚醒の翌日に投稿者が学校で会う友人全員へ夢を話し、友人は面白がっただけだったと記す。これは物語内の情報伝達と受容反応を示すが、現行Evidenceには保持されていない。",
+      "impact": "中核因果列は変えないが、物語内の情報構造・伝達行動を第三者がEvidence層から再構成できない。",
+      "fix_direction": "SRC-001から、友人への伝達と受け手の反応を限定的なEvidenceとして追加し、現実社会で独立確認された伝播効果とは扱わない。",
+      "source_refs": [
+        "SRC-001"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "Source→Evidenceを独立監査。後代解説部を原投稿本文と混同せず、保存転載本文内の意味保持に必要な情報だけを評価した。"
+}
