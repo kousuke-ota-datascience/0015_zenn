@@ -1,0 +1,63 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1970年秋の不幸の手紙は後代研究・解説を介した最古確認として扱われ、1977年の直接確認資料を1970年の一次資料へ昇格していない。1922年の幸運の手紙は0025の直接初出ではなく前史境界として分離されている。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-001〜007は引用ではなくparaphraseとして扱われ、1970年例の50時間・29人や全国的社会問題化はSRC-004経由で原新聞未確認である旨を保持している。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-001は1977年時点の実流通と行政対応を直接記録するcontemporary sourceとして扱われ、SRC-002〜004は研究・後代整理として区別されている。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-004には1970年代の主な流通層が小中学生だったという分布情報、典型的な全文同文転記指示、秘密保持を伴う型、複数variantの存在が記載されるが、既存Evidenceは人数・期限・全国的社会問題化を中心に抽出し、受容層とvariant構造のsalient informationを保持していない。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は1977年の自治体広報という同時代資料、SRC-002/003は研究資料、SRC-004は後代解説として区別され、資料階層は概ね妥当。SRC-004は低位資料として扱う必要があるが、source_type自体は整合する。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "既存EVD-001〜007の各主張は対応Sourceの範囲内にあり、1977年同時代資料と1970年後代紹介の認識論的地位も混同していない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "1970年読売新聞本文未確認、期限・人数の変異、超自然的因果の未検証、1922年型との境界が明示されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0025",
+  "findings": [
+    {
+      "category": "salient_evidence_completeness",
+      "evidence_refs": [
+        "EVD-006",
+        "EVD-007"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "SRC-004から、1970年代の主な小中学生流通、同文転記指示、秘密保持型、複数variantの存在を、後代解説由来であることを明示したEvidenceとして追加する。筆者の因果推測は推測として明示し、原新聞・同時代資料で直接確認できる部分とは分離したうえで10/20を再生成・再評価する。",
+      "impact": "下流で全国的大衆と学校・若者集団のどちらを主要流通範囲とみるか、また1970年代内部の変異をどう扱うかをEvidenceから再現できない。現行の核心的チェーン規則は失われていないが、社会的埋め込みと変容分析に実質的な影響がある。",
+      "notes": "SRC-004は後代解説であり、追加情報の証拠強度自体を高く見積もる趣旨ではない。",
+      "rationale": "SRC-004は1970年頃から全国的な社会問題になったことに加え、主に小中学生の間で大きく拡散したこと、同文転記を求める定型、秘密保持を要求する型、複数の文面variantを記述している。EVD-006/007は1970年例の50時間・29人、全国的社会問題化、新聞への相談を保持する一方、誰の間で流通したかという人口・共同体情報とvariant規則をEvidence層へ抽出していない。これらはD19の流通範囲、D04の変容、variant boundaryを変えうるためsalientである。なおSRC-004の変異生成理由には筆者の推測も含まれるため、追加Evidenceでは観察記述と推測を分離する必要がある。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-004"
+      ],
+      "summary": "SRC-004の受容層・variant構造に関するsalient informationがEvidence化されていない。"
+    }
+  ],
+  "review_notes": "00層の既存Evidenceは核心規則・時期・1977年同時代例・不確実性を良好に保持するが、SRC-004の受容層とvariant構造にsalient omissionが残る。",
+  "review_seq": 1,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0025_fuko_no_tegami/0025_00_sources.json",
+    "blob_sha": "4af9b951ed805e794613bb77010e498356b717ba",
+    "commit_sha": "ad9d36992125175249525cb0b315bd10a9046f6d",
+    "reviewed_at": "2026-09-25T10:34:00Z"
+  },
+  "verdict": "Moderate"
+}
