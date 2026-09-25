@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0011",
+  "artifact": "10",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_10_contents.json",
+    "commit_sha": "8999c5d1d02ee4d7e87461b6445158ecfdef69e8",
+    "blob_sha": "1564eb14d200a36ef4c74b448282a5a1599275e6",
+    "reviewed_at": "2026-09-25T10:31:06Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜008の主張は参照Evidenceにより支持され、EVD-008を霊的因果の実証へ変換していない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryのみから手順・歴史・競合機序・調査史・variant境界・不確実性を具体的に再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "初期三脚型、後代文字盤型、地域・時代差、同名dowsing除外が分離されている。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "伝播経路、型移行、作用機序、時代区分、学齢期年齢境界の不確実性を保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs 8件のsalient meaningをsummaryから再構成可能。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "現行Evidence母集団EVD-001〜010を監査し、Contentへ追加すべきsalient omissionは認めない。Review 00で検出したSource-only omissionはここでSource直読により補完しない。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "複数人が器具に触れて霊的存在を招請し質問し、三脚の揺れや硬貨の移動を回答として読む占い・交霊実践。初期三脚型と後代文字盤型を分け、1884年伝播・1880年代後半流行という研究史上の整理、1992年調査、作用機序の競合、各種不確実性、同名dowsing除外まで復元できる。",
+    "reference_story": "Content layerは初期三脚型、後代文字盤型、1884年伝播・1880年代後半流行、1992年調査と暫定時代区分、明治以降の継続、作用機序の競合、内部variationと同名dowsing除外を保持する。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "複数参加者と霊的存在",
+        "reference": "CNT-001/002/007: 複数参加者と霊的存在",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "直接作用説では器具、間接作用説では参加者の精神・腕",
+        "reference": "CNT-007: 同じ競合対象",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "器具に触れ、招請して質問する",
+        "reference": "CNT-001/002: 同じ開始条件",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "伝承内部では霊的存在が原因主体だが作用機序は競合",
+        "reference": "CNT-001/007: 同じ",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "三脚の揺れ／硬貨移動を回答として読む",
+        "reference": "CNT-001/002/007: 同じ",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "呼び出し→質問→運動→回答解釈",
+        "reference": "CNT-001/002: 同じ逐次展開",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "儀式内の逐次進行。長期史では初期流行・再流行・継続を区別",
+        "reference": "CNT-003/005/006: 同じ",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "器具・文字盤の準備、接触、招請、質問、動きの読解",
+        "reference": "CNT-001/002/006/008: 同じ",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "回答取得のために用いる。初期型の確実な終了・回避法は未確定",
+        "reference": "Contentは回答取得を終端とし、終了・回避を固定しない",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "質問への回答を得る",
+        "reference": "CNT-001/002: 同じ終端",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "伝播経路、型移行、作用機序、時代区分、年齢境界が未確定",
+        "reference": "uncertainties: 同じ未確定事項",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "初期三脚型、後代文字盤型、地域・時代差を分離し、同名dowsingを除外",
+        "reference": "VAR-001〜004: 同じ境界",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryからD07〜D21およびVersion Scope/variant boundaryに必要な主要構造をContent参照時と実質同等に再構成できる。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "初期三脚型の具体手順",
+        "blind_reconstruction": "summaryの三脚型手順から再構成可能",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "後代文字盤・硬貨型の具体手順",
+        "blind_reconstruction": "summaryの文字盤型手順から再構成可能",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "1884年伝播・1880年代後半流行と経路不確実性",
+        "blind_reconstruction": "summary narrative/uncertaintiesから再構成可能",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "1992年調査の学齢期・集団実践・年齢境界差",
+        "blind_reconstruction": "summary narrative/uncertaintiesから再構成可能",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "暫定時代区分と1970年代中頃以降の再流行",
+        "blind_reconstruction": "summary narrative/uncertaintiesから再構成可能",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "明治以降の方法・名称変化と継続",
+        "blind_reconstruction": "summary narrativeから再構成可能",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "直接作用説と精神・腕を介する間接作用説の競合",
+        "blind_reconstruction": "summary narrative/structureから再構成可能",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-008",
+        "salient_meaning": "内部variationと同名dowsing除外",
+        "blind_reconstruction": "summary narrative/variant_boundariesから再構成可能",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Blind Decodeは00/20本文を参照する前にsummaryのみから固定。Evidence→Content completenessはSource-only omissionと分離して判定した。"
+}
