@@ -4,11 +4,11 @@
 # 0363 Analysis
 
 - Macro category: 社会流言・パニック
-- Entry type: 物資不足流言事件
+- Entry type: 物資不足予測流言
 
 ## Version Scope
 
-1973年オイルショック下で、生活必需品不足の噂が口コミで広がり買いだめ・品薄を増幅した主要形。
+1973年のオイルショック下で「トイレットペーパーなどの生活必需品がなくなる」とする不足予測命題を主要形とする。
 
 - Included variants: VAR-001
 - Excluded variants: VAR-002
@@ -21,185 +21,185 @@
 - Primary: D01.G3
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-001
+- Evidence refs: EVD-005, EVD-007, EVD-008
 
-**Rationale:** 事件は1973年。
+**Rationale:** 1973年の不足流言として同時代国会会議録と複数の後代資料で時期が確認できる。
 
-**Manifestation:** 1970年代。
+**Manifestation:** 1970年代（1973年）。
 
 ### D02 — I
 
 - Primary: D02.ORL.PEER_ORAL (parent: D02.ORL)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-002
+- Content refs: CNT-001, CNT-002
+- Evidence refs: EVD-002, EVD-005
 
-**Rationale:** 昭和館は噂が口コミで広がったと記録する。厳密な最初の発話環境は不明だが、対人的口頭伝播として扱う。
+**Rationale:** 後代資料は住民間・口コミで不足デマが広がったと明示するが、最初の発信媒体を同時代一次資料で特定していないため推定扱いとする。
 
-**Manifestation:** 口コミによる口頭伝播。
+**Manifestation:** 対人的な口頭伝播。
 
 ### D03 — I
 
 - Primary: D03.ORL.PEER_ORAL (parent: D03.ORL)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-002
+- Content refs: CNT-001, CNT-002
+- Evidence refs: EVD-002, EVD-005
 
-**Rationale:** Scope内で確認される主要な流通形は口コミ。
+**Rationale:** 1973年Scopeで確認される流通回路として住民間・口コミが記録されるが、直接の同時代流通資料ではない。
 
-**Manifestation:** 対人的口頭流通。
+**Manifestation:** 口コミ・住民間の対人流通。
 
-### D04 — D
+### D04 — U
 
-- Primary: D04.VAR.RETELLING (parent: D04.VAR)
+- Primary: -
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-002
+- Content refs: CNT-001, CNT-002
+- Evidence refs: -
 
-**Rationale:** 不足予測の噂が口コミで広がったことが直接記録されており、別の語り手による再話・再叙述として流通した。派生亜種の生成までは示さない。
+**Rationale:** 口コミ拡散は確認できるが、語りの変形・再叙述・安定異伝などの変容を示すHistory Evidenceはない。
 
-**Manifestation:** 口コミによる再話・再叙述。
+**Manifestation:** 生成・変容パターンは未確定。
 
-### D05 — D
+### D05 — I
 
 - Primary: D05.PRP.PREDICTIVE_CLAIM (parent: D05.PRP)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-002
+- Content refs: CNT-001
+- Evidence refs: EVD-002, EVD-005
 
-**Rationale:** 『これからトイレットペーパー等がなくなる』という未来予測命題。
+**Rationale:** 主要形は「トイレットペーパー等がなくなる」という将来不足の予測命題として後代資料に直接記述される。
 
-**Manifestation:** 不足の予測主張。
+**Manifestation:** 生活必需品不足の予測主張。
 
-### D06 — D
+### D06 — I
 
 - Primary: D06.T5
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-002
+- Content refs: CNT-001
+- Evidence refs: EVD-005
 
-**Rationale:** 不安定な状況下で『なくなるらしい』という条件付き信念として流通した。
+**Rationale:** 「なくなるらしい」という確実性を限定した将来予測として提示され、確定事実より条件付き信念に近い。
 
-**Manifestation:** 条件付き信念。
+**Manifestation:** 条件付き信念としての不足予測。
 
-### D07 — D
+### D07 — I
 
 - Primary: D07.ISU.CRISIS_SCARCITY (parent: D07.ISU)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-003
+- Content refs: CNT-001
+- Evidence refs: EVD-002, EVD-006
 
-**Rationale:** 意味形成対象は危機時の生活必需品不足。
+**Rationale:** この伝承が意味づける中心は、オイルショック下で生活必需品が不足するかもしれないという危機・希少性である。
 
-**Manifestation:** 危機・物資不足。
+**Manifestation:** 危機時の生活必需品不足。
 
-### D08 — D
+### D08 — I
 
 - Primary: D08.HIS.RECENT_INCIDENT (parent: D08.HIS)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-003
+- Content refs: CNT-001
+- Evidence refs: EVD-003, EVD-006
 
-**Rationale:** オイルショック・原油高・物価高という直近の社会経済事象が噂の背景。
+**Rationale:** 原油価格急騰と物不足不安という当時のオイルショックが、不足予測を成立させる直近の社会経済的契機として記述される。
 
-**Manifestation:** 直近危機事象。
+**Manifestation:** オイルショックという直近危機事象。
 
-### D09 — D
+### D09 — I
 
 - Primary: D09.PPR.OMEN_FORECAST (parent: D09.PPR)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: -
+- Content refs: CNT-001
+- Evidence refs: EVD-002, EVD-006
 
-**Rationale:** 現在の危機状況から将来の品切れを予測する。
+**Rationale:** 現在の危機状況を兆候として、将来トイレットペーパー等が不足すると予測する意味付与を行う。
 
-**Manifestation:** 不足予測。
+**Manifestation:** 危機状況から将来不足を予測。
 
-### D10 — D
+### D10 — U
 
-- Primary: D10.OBJ.INFORMATION_CONTENT (parent: D10.OBJ)
+- Primary: -
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
+- Content refs: CNT-001
 - Evidence refs: -
 
-**Rationale:** 直接の行動因果源は不足予測を含む情報内容。
+**Rationale:** 不足予測は「オイルショックの影響」を因果背景として示すが、それをD10のどの存在論的因果源へ固定すべきかを現在のContentは十分に特定しない。
 
-**Manifestation:** 噂情報が購買を駆動。
+**Manifestation:** 因果源の存在論は未確定。
 
-### D11 — D
+### D11 — I
 
-- Primary: D11.INF.RECEIVE_MESSAGE (parent: D11.INF)
+- Primary: D11.NCR.AMBIENT_EFFECT (parent: D11.NCR)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: -
+- Content refs: CNT-001
+- Evidence refs: EVD-006
 
-**Rationale:** 不足の噂を受け取ることが購買行動の入口。
+**Rationale:** 主要形は噂を受信した個人に発動する規則ではなく、オイルショックという社会的危機状況のもとで生活必需品全般に不足が生じるという広域的な予測である。
 
-**Manifestation:** 噂受信。
+**Manifestation:** 個別接触を要しない社会環境条件。
 
-### D12 — D
+### D12 — U
 
-- Primary: D12.OTD.OBJECT_PRODUCT (parent: D12.OTD)
+- Primary: -
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
+- Content refs: CNT-001
 - Evidence refs: -
 
-**Rationale:** 主張が直接対象とするのはトイレットペーパー等の生活必需品。
+**Rationale:** 不足する対象の商品群は明示されるが、D13の主作用機構自体を現Taxonomy上で確定できないため、D12を独立に商品対象へ固定しない。
 
-**Manifestation:** 商品対象。
+**Manifestation:** 主作用の直接対象は未確定。
 
-### D13 — D
+### D13 — U
 
-- Primary: D13.COG.INFORMATION_INDUCED_ACTION (parent: D13.COG)
+- Primary: -
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
+- Content refs: CNT-001
 - Evidence refs: -
 
-**Rationale:** 噂情報が買いだめという行動を誘発する。
+**Rationale:** Contentは生活必需品が不足するという予測結果を示す一方、供給が減少する具体的作用機構を記述しておらず、買いだめという外部社会効果を内部機構として代用しない。
 
-**Manifestation:** 情報誘発行動。
+**Manifestation:** 不足へ至る主作用機構は不明。
 
-### D14 — D
+### D14 — I
 
 - Primary: D14.NEG
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: -
+- Content refs: CNT-001
+- Evidence refs: EVD-002, EVD-005
 
-**Rationale:** 買いだめ・品薄・パニックを生む。
+**Rationale:** 生活必需品の不足・入手困難はVersion Scope内で不利益として提示される。
 
-**Manifestation:** 負。
+**Manifestation:** 負の帰結。
 
-### D15 — D
+### D15 — I
 
-- Primary: D15.BEH.PURCHASE_HOARDING (parent: D15.BEH)
-- Secondary: D15.MAT.RESOURCE_SCARCITY (parent: D15.MAT)
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-002, EVD-003
-
-**Rationale:** 主要な行動帰結は買いだめであり、その結果として実際の品薄・物資不足も生じたことがcurrent Evidenceで直接示される。
-
-**Manifestation:** 買いだめと物資不足。
-
-### D16 — D
-
-- Primary: D16.TRN.CHAIN_SPREAD (parent: D16.TRN)
+- Primary: D15.MAT.RESOURCE_SCARCITY (parent: D15.MAT)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: -
+- Content refs: CNT-001
+- Evidence refs: EVD-002, EVD-005
 
-**Rationale:** 口コミの連鎖と購買行動のフィードバックで拡散する。
+**Rationale:** 不足予測命題の終端はトイレットペーパー等の生活必需品が不足・入手困難になることであり、買いだめ行動そのものは外部効果として分離する。
 
-**Manifestation:** 連鎖拡散。
+**Manifestation:** 生活必需品の資源不足。
+
+### D16 — I
+
+- Primary: D16.STA.STATIC_ASSOCIATION (parent: D16.STA)
+- Secondary: -
+- Content refs: CNT-001
+- Evidence refs: EVD-002, EVD-006
+
+**Rationale:** 主要形は具体的な段階進行や待ち時間を持つ物語ではなく、オイルショック下の危機状況と将来不足を対応づける予測命題である。口コミの連鎖はD16の時間構造には用いない。
+
+**Manifestation:** 危機状況と将来不足の静的対応。
 
 ### D17 — U
 
 - Primary: -
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
+- Content refs: CNT-001
 - Evidence refs: -
 
-**Rationale:** 1973年Scope内で確立した解除・制御手順を直接示す資料を採用していない。
+**Rationale:** 1973年主要形の内部に、検証・訂正を含む確立した回避・制御手順は現在のContentから確認できない。
 
 **Manifestation:** 制御法不明。
 
@@ -207,46 +207,46 @@
 
 - Primary: D18.L3
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-002, EVD-003
+- Content refs: CNT-003
+- Evidence refs: EVD-005, EVD-007, EVD-008
 
-**Rationale:** 昭和館は噂が実際の買いだめ・経済パニックへつながったと記録する。
+**Rationale:** 1973年の現実社会で買いだめ・店頭欠品・パニックが生じたことは地域史資料、同時代記録、原著研究が直接扱っており、社会現実層の外部効果として確認できる。
 
-**Manifestation:** 社会現実層。
+**Manifestation:** 社会現実層での買いだめ・欠品・パニック。
 
-### D19 — U
+### D19 — I
 
-- Primary: -
+- Primary: D19.MAS.NATIONAL_PUBLIC (parent: D19.MAS)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: -
+- Content refs: CNT-002
+- Evidence refs: EVD-005
 
-**Rationale:** current Evidenceは口コミによる流通と1973年の社会騒動を示すが、どの社会範囲まで実際に共有されたかを全国規模まで固定できない。
+**Rationale:** 千里ニュータウン情報館は騒ぎが千里から日本中へ広がったと記述するが、直接の全国分布データではないため全国的大衆への流通を推定扱いとする。
 
-**Manifestation:** 流通範囲はcurrent Evidenceから未確定。
+**Manifestation:** 全国的大衆への広域流通。
 
-### D20 — D
+### D20 — I
 
 - Primary: D20.NON.NO_HIDDEN_TRUTH (parent: D20.NON)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
+- Content refs: CNT-001
 - Evidence refs: -
 
-**Rationale:** 噂の主張自体は公開された不足予測であり、秘密保持者を必要としない。
+**Rationale:** 不足予測は特定の秘密保持者や隠れた真相へのアクセスを構造上要求せず、公開的に流通する予測命題として構成される。
 
-**Manifestation:** 特権情報保持者なし。
+**Manifestation:** 特権的な真相保持者を要求しない。
 
-### D21 — D
+### D21 — I
 
 - Primary: D21.A4
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003
-- Evidence refs: EVD-001, EVD-002, EVD-003
+- Content refs: CNT-001
+- Evidence refs: EVD-003, EVD-006
 
-**Rationale:** 1973年オイルショック、物価高、実際の買いだめ・品薄という歴史事実を因果構造に組み込む。
+**Rationale:** 不足予測は1973年のオイルショックという具体的史実を原因背景として組み込み、そこから将来の物資不足を予測する。買いだめ・欠品そのものはこの内部因果の根拠に用いない。
 
-**Manifestation:** 史実・社会記録を因果統合。
+**Manifestation:** オイルショック史実を不足予測へ因果接続。
 
 ## Analysis Notes
 
-L3は昭和館が記録する実際の買いだめ・経済パニックに限定。2020年類似例はScope外。
+1973年の不足予測命題と、その流通・現実社会効果を分離した。D18.L3のみCNT-003の買いだめ・欠品・パニックを外部効果として扱う。SRC-001は後代年表へ格下げし、同時代国会会議録・公的地域史・原著研究を追加した。
