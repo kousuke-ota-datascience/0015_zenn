@@ -1,0 +1,61 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1922年1月下旬の日本での流行確認を最古確認層として扱い、文面の米国人将校起源主張を歴史的起源へ昇格していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-001〜007は引用と要約を混同せずparaphraseとして保持し、1922年型の規則・同時代流行・文面内由来・社会反応・後代変化・氏名列規則を過度な断定なしに記述している。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-002は同時代一次資料、SRC-001は研究整理、SRC-003は後代解説として区別され、二次資料を一次資料として扱っていない。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "Version Scopeに必要な受信・期限内複写転送、遵守時の幸運、停止時の不運、1922年同時代流行、文面内の由来主張、受信者不安・警察対応、後代変化、初期型の氏名列・経路追記規則までEvidence化されている。Source上のsalient informationが後続Content/Analysisの意味を変える形で欠落しているとは認めない。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001〜003の資料種別と役割は概ね妥当。ただしSRC-002『奇態流行史』でEVD-002が依拠する前置きは原資料上『例言』であり、canonical locatorの『序文』は節名として不正確。",
+      "status": "FINDING"
+    },
+    "source_evidence_support": {
+      "notes": "各Evidenceは対応Sourceの記載範囲に収まり、SRC-003由来の新聞内容は原紙直接実見ではないことが明記されている。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "新聞原紙未実見、幸運・不運の因果的実在未確認、実際の起源・移入経路未確定、氏名列規則の一般化不可という留保が保持されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0024",
+  "findings": [
+    {
+      "category": "source_assessment",
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "SRC-002のlocatorとEVD-002のlocatorを『例言』へ修正し、必要ならページ等の再現可能な位置情報を併記する。",
+      "impact": "主張の意味や1922年流行確認は変わらないが、一次資料への再到達性とreference-location精度が低下する。",
+      "rationale": "『奇態流行史』の該当前置きには『本書編纂発行の動機は…』を含む記述があり、その節見出しは『例言』である。内容自体はEVD-002の要約と整合するが、現行locatorは原資料上の節名を正確に指していない。",
+      "severity": "Minor",
+      "source_refs": [
+        "SRC-002"
+      ],
+      "summary": "SRC-002 / EVD-002のlocatorが『序文』となっているが、該当箇所の見出しは『例言』である。"
+    }
+  ],
+  "review_notes": "独立レビュー。docs/legacyの内容はレビュー根拠に使用していない。Minorはlocator精度のみに限定され、Evidence内容そのものの撤回を要求しない。",
+  "review_seq": 4,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0024_kofuku_no_tegami/0024_00_sources.json",
+    "blob_sha": "4af262572c2b34f4cf43950c763fd8387a12ea9c",
+    "commit_sha": "655e0cf57b7b8a1e414da5fe57d9c8f7b8599c6f",
+    "reviewed_at": "2026-09-25T10:31:15Z"
+  },
+  "verdict": "Minor"
+}
