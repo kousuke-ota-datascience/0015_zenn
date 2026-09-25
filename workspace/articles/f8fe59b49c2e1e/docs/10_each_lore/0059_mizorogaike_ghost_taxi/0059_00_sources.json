@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0059",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "レファレンス協同データベース 管理番号996「深泥池…タクシーを降りた幽霊の話」",
+      "locator": "京都府立図書館 管理番号996／回答・回答プロセス",
+      "accessed_at": "2026-09-25",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": ["C", "H", "X"],
+      "url": "https://crd.ndl.go.jp/reference/entry/index.php?id=1000338368&page=ref_view",
+      "bibliographic_info": "京都府立図書館作成 2023-07-05、レファレンス協同データベース登録番号1000338368。",
+      "notes": "1969年10月7日『朝日新聞』p16京都市内版の記事を、同館職員がマイクロフィルムと朝日新聞クロスサーチで確認。後代書籍の異伝も回答プロセスに記録する。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "primary_or_contemporary",
+      "title": "「車から乗客消えた」 パトカーも“怪談”めいた届出に汗だく",
+      "locator": "『朝日新聞』1969年10月7日 p16 京都市内版",
+      "accessed_at": null,
+      "relation_to_primary": "primary",
+      "evidence_role": ["C", "H", "X"],
+      "bibliographic_info": "朝日新聞大阪本社／編『朝日新聞 京都地方版』。京都府立図書館が掲載を確認。",
+      "archive_info": "京都府立図書館所蔵マイクロフィルム（請求記号 ﾏ ｱｻﾋ/K/、資料番号1400103956）および朝日新聞クロスサーチで閲覧可能。",
+      "notes": "本実行環境では原紙・マイクロフィルム・クロスサーチ本文を直接閲覧していないため、本文細部のEvidenceはSRC-002へ直接帰属させない。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "mirror_reprint_or_restoration",
+      "title": "「深泥池で何が起きたのか タクシー幽霊事件の真実」",
+      "locator": "小説家になろう『オカルトかるとアラカルト』2/2、1969年10月7日朝日新聞京都地方版の転載と称する本文",
+      "accessed_at": "2026-09-25",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": ["C", "X"],
+      "url": "https://ncode.syosetu.com/n9918cx/2/",
+      "notes": "転載者は朝日新聞記事の転載と説明するが、今回その全文を原紙画像と逐語照合していない。記事の日付・版・見出しはSRC-001の図書館調査と整合するため、本文細部の補助Evidenceとしてのみ使用する。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "回答および回答プロセス(4)",
+      "content": "京都府立図書館は『朝日新聞』1969年10月7日p16京都市内版に、車内から乗客が消えた出来事を扱う「車から乗客消えた」という記事が掲載されていることを、マイクロフィルムと朝日新聞クロスサーチで確認した。",
+      "representation": "paraphrase",
+      "notes": "記事の存在・日付・版・見出しの直接確認を示すHistory/Content Evidence。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-003",
+      "locator": "転載本文（乗車から深泥池到着まで）",
+      "content": "転載本文では、深夜の京都でタクシー運転手が女性客を乗せ、客が深泥池付近を行先として告げた後、走行中はバックミラーで確認できたにもかかわらず、到着時に車内から姿が消え、座席に液体で濡れた痕跡が残ったとされる。",
+      "representation": "paraphrase",
+      "uncertainty": "原紙本文との逐語照合を行っていない転載資料に依存するため、人物描写・地点・濡れた座席等の細部は間接証拠として扱う。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-003",
+      "locator": "転載本文（届出・捜索部分）",
+      "content": "転載本文では、運転手が警察へ連絡し、複数のパトカーが周辺を捜索したが該当する女性は見つからず、関係地域でも該当するひき逃げ事故は確認されなかったとされる。",
+      "representation": "paraphrase",
+      "uncertainty": "警察対応の具体的台数・捜索時間などは原紙本文との直接照合未実施。SRC-001で確認された見出し自体は警察への届出を示唆する。"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-001",
+      "locator": "回答プロセス(3) 資料3・資料4",
+      "content": "京都府立図書館の調査では、2015年刊行資料が女性幽霊のタクシー都市伝説を1960年代以降に広まったものと記し、2013年刊行資料は雨の夜に池の脇で若い女性を乗せ、姿が消えて座席だけが水浸しになる異伝を記す。図書館は、深泥池まで乗せる型との食い違いも指摘している。",
+      "representation": "paraphrase",
+      "notes": "後代の伝承史・異伝境界を示すHistory/Content Evidence。"
+    }
+  ],
+  "notes": "1969年新聞記事の存在と書誌情報は京都府立図書館の直接調査で確認する。一方、本実行環境では記事原文を直接閲覧できていないため、記事本文の詳細は転載資料SRC-003を補助的に使用し、後代資料の異伝と混合しない。"
+}
