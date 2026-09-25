@@ -4,17 +4,19 @@
   "macro_category": "古伝承・民俗",
   "entry_type": "循環型死霊伝承",
   "version_scope": {
-    "description": "高知県の早期民俗資料で確認できる『七人を維持し、新たな犠牲者と最古参が交代する』共有核。",
+    "description": "1938年の高知県宿毛市資料で確認できる、常に七人で組み、人を一人引くごとに最古参が成仏する形（VAR-002）を分析対象とする。",
     "included_variants": [
+      "VAR-002"
+    ],
+    "excluded_variants": [
       "VAR-001"
     ],
-    "excluded_variants": [],
     "content_refs": [
       "CNT-001",
       "CNT-002",
       "CNT-003"
     ],
-    "notes": "後代の場所別・水難別の細部異伝は統合しない。"
+    "notes": "1935年高知県幡多郡資料（VAR-001）は『七人を引きずり込まなければ成仏できない』という別の規則表現を持つため、同一の一対一交代規則として統合せず本分析Scopeから除外する。"
   },
   "dimensions": [
     {
@@ -41,15 +43,15 @@
         "parent_id": "D02.PRT"
       },
       "secondary": [],
-      "rationale": "1920年代から雑誌・民俗資料への収録が確認できる。",
-      "manifestation": "最古確認流通媒体は印刷雑誌。",
+      "rationale": "Version Scope対象VAR-002の最古確認は1938年『民間伝承』の印刷雑誌記録である。1935年資料は別variantとしてScope外とする。",
+      "manifestation": "1938年の印刷雑誌で確認される。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003"
       ],
       "evidence_refs": [
-        "EVD-002"
+        "EVD-003"
       ]
     },
     {
@@ -60,7 +62,7 @@
         "parent_id": "D03.PRT"
       },
       "secondary": [],
-      "rationale": "既定Scopeを支える資料は民俗雑誌への記録。",
+      "rationale": "Version Scopeを支える1938年資料は民俗雑誌『民間伝承』への記録である。",
       "manifestation": "印刷雑誌で確認される。",
       "content_refs": [
         "CNT-001",
@@ -68,27 +70,20 @@
         "CNT-003"
       ],
       "evidence_refs": [
-        "EVD-001",
-        "EVD-002"
+        "EVD-003"
       ]
     },
     {
       "dimension_id": "D04",
-      "status": "I",
-      "primary": {
-        "code_id": "D04.VAR.LOCALIZATION",
-        "parent_id": "D04.VAR"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "複数地域・複数年の資料があり、同一核を保つ地域異伝が存在する。",
-      "manifestation": "地域化を伴う変異。",
+      "rationale": "Version Scope内は1938年宿毛市形（VAR-002）一形のみであり、具体的な地域化・置換過程を示す比較Contentはない。1935年形は規則差を保った別variantとしてScope外であり、両者の変容関係も未確定である。",
+      "manifestation": "変容パターン未確定。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
         "CNT-003"
-      ],
-      "evidence_refs": [
-        "EVD-002"
       ]
     },
     {
@@ -352,14 +347,11 @@
     },
     {
       "dimension_id": "D20",
-      "status": "I",
-      "primary": {
-        "code_id": "D20.INS.LOCAL_RESIDENT",
-        "parent_id": "D20.INS"
-      },
+      "status": "U",
+      "primary": null,
       "secondary": [],
-      "rationale": "地域伝承として地元の語り手・住民が知識保持者となる。",
-      "manifestation": "地元内部者。",
+      "rationale": "Version Scope内Contentは高知県宿毛市への地理的結び付きを示すが、地元住民その他の主体だけが追加・秘密情報を特権的に保持するとする内容はない。",
+      "manifestation": "特権情報保持者は不明。",
       "content_refs": [
         "CNT-001",
         "CNT-002",
@@ -385,5 +377,5 @@
       ]
     }
   ],
-  "analysis_notes": "成立年代を収録年代へ短絡しない。"
+  "analysis_notes": "成立年代を収録年代へ短絡しない。1935年形と1938年形の規則差を保持し、Analysisは1938年VAR-002に限定する。地域性から変容パターン（D04）や特権情報保持者（D20）を推定しない。"
 }
