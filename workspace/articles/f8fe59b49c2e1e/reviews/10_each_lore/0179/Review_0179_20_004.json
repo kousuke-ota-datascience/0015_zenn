@@ -1,0 +1,147 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summary/full Contentはいずれも2001初期型と2003混成増補型を明確に分けるため、coding rulesの既定Scope選択を適用すると最古安定核を優先する再分析が自然に導かれる。current Analysisの広い統合ScopeはContentから不変に再構成されない。",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "視認・理解→兄の重大異変という共有核は整合するが、D15=自己同一性崩壊、D17=見ない、家族による終端処理は主に2003年型で明示される。二variantを一Scopeにしたまま一つの終端因果鎖として代表させると、2001年型に後代構造を遡及させる。",
+      "status": "FINDING"
+    },
+    "content_layer_bypass": {
+      "notes": "20の意味判定はcurrent Scoped Contentとcoding rulesのみを根拠とし、Review 00で検出したSource/Evidence上流情報をD-code根拠へ直接持ち込んでいない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12兄→D13認知危害は両型の共有核として読めるが、D15.SELF_IDENTITY_DISRUPTIONを直接支える『元の兄ではなくなったように描かれる』終端はCNT-009の2003年型に限定される。統合Scope全体のD12→D13→D15鎖としては一様でない。",
+      "status": "FINDING"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "current Scoped Contentは伝承内部L1を支持し、読者理解だけで作用する型をCNT-010で明示的に除外する。独立した現実社会効果L3を生成していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "公開Web/掲示板流通をD19.NET.OPEN_FORUM_WEBに留め、公開可能性から全国的大衆流通を推定していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "資料不足をD20.UNK.NO_ONE_KNOWSへ変換してはいない。D20の問題は『家族・血縁だけが知る』までの分布をContentが支持しない点であり、別論点としてdimension_semanticsで扱う。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "秋田という地域名はあるが具体地点を固定せずD21.A1/Iに留めており、公開資料や地名だけからA2以上へ強めていない。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D20.PER.FAMILY_BLOODLINEは『家族・血縁だけが知る』Childだが、Scoped Contentが直接示すのは祖父という特定人物が追加の回避情報を持つことまでで、家族・血縁全体への排他的知識分布は示さない。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "macro_category『ネット怪談』、entry_type『物語・伝説』はcurrent Contentの提示形と整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "Review 20ではContent支持強度を上限とする。D20だけがCNT-007の『祖父が追加の回避情報を持つ』から『家族・血縁だけが知る』へ分布範囲を拡張している。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "各Dimensionは個別Contentへは追跡可能だが、D05/D15/D17/D20等の2003年専用または2003年で強く固定される構造が2001年初期型を含むprimary Version Scope全体の代表値として採用され、Scope→Dimensionの追跡単位が不安定である。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "D20をIでFAMILY_BLOODLINEへ固定するには、特定の祖父が追加情報を持つというCNT-007以上の『家族・血縁だけが知る』根拠が必要であり、current Content支持強度を超える。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "Version Scopeは既存運用規則、D20の支持不足はUで処理でき、現行taxonomyに新Childを追加しなければ表現できない問題ではない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "current Analysisは2001年初期型と、投稿者自身が先行話＋自己体験を混成したとContentが明示する2003年増補型を同一primary Scopeへ統合する。coding rulesの既定Scopeは最古のまとまった形／最も早い安定共有核を優先し、発動条件・作用・帰結を追加変更する後代派生を原則除外するため、この統合は分析単位として過広い。",
+      "status": "FINDING"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "version_scope",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-004",
+        "CNT-006",
+        "CNT-007",
+        "CNT-008",
+        "CNT-009",
+        "CNT-011"
+      ],
+      "dimension_refs": [
+        "D05",
+        "D06",
+        "D09",
+        "D11",
+        "D15",
+        "D17",
+        "D20"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "primary Version Scopeをcurrent Contentから確認できる最古の安定共有核／2001年初期型へ狭め、2003年型はlater variantとして別扱いする。そのScopeでD01〜D21を再裁定し、2003年専用要素をprimary値へ遡及させない。2000年候補など上流Review 00の未修正情報は、Contentへ正規に反映されるまで20へ直接取り込まない。",
+      "impact": "D05/D11/D15/D17/D20等で2003年専用または2003年で強く固定される構造がEntry全体の代表値になり、成立時の意味形成核と後代増補を比較不能にする。局所的なDimension修正だけでは分析単位の混線を解消できない。",
+      "rationale": "current ContentはVAR-001を2001年型、VAR-002を2003年混成増補型として分離し、CNT-004は2003年投稿者自身が先行話と自己体験を混ぜたと明示する。さらに2003年型は双眼鏡による詳細視認、祖父の『見てはならない』警告、兄の模倣的なくねくね状態・自己同一性崩壊様の終端、家族による当地残置、語り手自身の終端視認を追加する。coding rules 5.1は最古のまとまった伝承形／最も早い安定共有核を既定Scopeとし、発動条件・作用・帰結を追加変更する後代派生を原則primary Scopeから除外する。current Analysisはこの境界を再統合している。",
+      "severity": "Major",
+      "summary": "Version Scopeが2001年初期型と、明示的な混成・増補である2003年型を一つのprimary分析単位へ統合している。"
+    },
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-007"
+      ],
+      "dimension_refs": [
+        "D20"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "current ContentのままならD20をUへ再評価する。FAMILY_BLOODLINEを維持する場合は、家族・血縁だけが追加情報を保持することを支持するContentを上流で明示した上で再Reviewする。",
+      "impact": "特権情報の分布単位を個人から血縁集団へ広げ、D20を用いる比較で『家族伝承として秘匿知が継承される型』と誤って同一視し得る。",
+      "rationale": "codebook上D20.PER.FAMILY_BLOODLINEは家族・血縁だけが追加情報を知る場合のChildである。CNT-007が直接示すのは祖父が『見てはならない』と警告し追加の回避情報を持つことまでで、祖母や他の家族が同じ知識を共有すること、あるいは非家族には知り得ないことを示さない。coding rulesは資料不足時に最もありそうな値で埋めずUを使うことを要求する。",
+      "severity": "Moderate",
+      "summary": "D20.PER.FAMILY_BLOODLINEが祖父個人の追加情報保持を『家族・血縁だけが知る』構造へ拡張している。"
+    }
+  ],
+  "review_notes": "Review 20はcurrent Scoped Contentのみを意味根拠として再構成した。Review 00のSource→Evidence FindingはAnalysisへ直接バイパスしていない。docs/legacyは判断根拠に使用していない。",
+  "review_seq": 4,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-004",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-009",
+      "CNT-011"
+    ],
+    "dimension_refs": [
+      "D05",
+      "D06",
+      "D09",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D17",
+      "D20"
+    ],
+    "model": "current Contentからは、2001年初期型の共有核として『遠方の正体不明の白い存在が異常に動き、兄が視認・理解した後に重大異変へ至る』構造を再構成できる。別に2003年型は、投稿者自身が先行話と自己体験を混成した増補型として、双眼鏡、祖父の禁忌、兄の対象模倣的なくねくね状態・自己同一性崩壊様の終端、家族による当地残置、語り手自身の終端視認を追加する。したがって両型を一つのprimary Version Scopeへ統合すると、2003年専用構造がD15/D17/D20等の代表値へ流入する。またCNT-007は祖父個人の追加情報保持を示すが、家族・血縁だけが知ることまでは示さない。",
+    "notes": "主要問題は、variant境界自体はContentで明瞭なのにAnalysisのprimary Scopeがそれを再統合していることと、D20のChild semanticsがContent支持範囲を超えることである。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "910618e914d440d57ae34383a9bd5c43ce0d7993",
+    "commit_sha": "775a257fc8cb890a42cf1848c64795fb86bb3621",
+    "reviewed_at": "2026-09-25T10:33:36Z"
+  },
+  "verdict": "Major"
+}
