@@ -149,7 +149,7 @@ def test_sync_detects_post_update_verification_error(monkeypatch):
     monkeypatch.setattr(
         sc,
         "reconcile",
-        lambda *args: ReconcileResult(
+        lambda *args, **kwargs: ReconcileResult(
             "UPDATE",
             (Mutation("00", {"Status": "レビュー待"}),),
             (),
