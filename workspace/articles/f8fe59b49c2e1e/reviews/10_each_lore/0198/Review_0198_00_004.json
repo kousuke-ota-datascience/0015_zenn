@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0198",
+  "artifact": "00",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_00_sources.json",
+    "commit_sha": "9053015afb3d74101057540012ae76580a280868",
+    "blob_sha": "333a22f79fa3919e6d8cefa23d085ac5d3a85436",
+    "reviewed_at": "2026-09-25T10:35:03Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001は原スレッドそのものではなく保存再掲、SRC-002は後代まとめとして明示され、Source種別と用途が区別されている。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "既存EVD-001〜008のparaphraseは、指定locatorで確認できる投稿内容と概ね整合し、自己申告を客観的事実へ格上げしていない。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "既存Evidenceの主張は参照Sourceで追跡可能で、SRC-002の『発祥』整理も後代整理として限定されている。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "SRC-001をdirect_derivative、SRC-002をindirect_derivativeとする関係付けは妥当で、保存再掲を原一次ページとして扱っていない。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2007-04-18の名称確認と2007-04-21の具体手順を、実際の起源確定から分離している。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "実況上の体験主張、伝聞由来、地域既知主張、後代『発祥』整理の証拠限界は既存Evidenceで保持されている。"
+    },
+    "salient_evidence_completeness": {
+      "status": "FINDING",
+      "notes": "Version Scope内のSRC-001には、終了後の人形廃棄条件、参加者の終了後生還報告と追加知覚報告、初期注意事項等のsalient informationがあるが、現行EVD-001〜008では十分にEvidence化されていない。"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Major",
+      "category": "salient_evidence_completeness",
+      "summary": "Version Scope内Sourceの終端・終了後処理・重要ルールがEvidence層から脱落している。",
+      "rationale": "SRC-001の4月21日ログには、終了手順に続くぬいぐるみの廃棄・最終的な焼却条件、塩水を取り忘れた参加者が終了操作後に無事を報告し追加の視覚体験を述べる終端、さらに開始時の『家の外に出ない』『隠れている間は静かにする』等が記録される。現行EVD-001〜008は怪異実況と終了法までは扱うが、これらの終端・後処理・注意事項を十分に表現していない。",
+      "impact": "Contentのterminal_stateがunknownに固定され、D14/D15の帰結、D17の終了・後処理、summaryの規則集合を正しく再構成できない。Source→Evidenceのsalient母集団が不完全なため、下流が現行Evidenceだけを使ってPassしても意味保存を保証できない。",
+      "fix_direction": "SRC-001の該当レスをlocator付きでEvidence化し、自己申告である不確実性を維持する。少なくとも終了後の人形廃棄条件、参加者の終了後生還・知覚報告、現行summaryで使う初期注意事項をEvidence層へ追加または既存Evidenceへ明示的に統合する。",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-004",
+        "EVD-005",
+        "EVD-006"
+      ],
+      "notes": "Sourceの超常主張を真と認定するFindingではなく、Scope内情報の抽出完全性に関するFinding。"
+    }
+  ],
+  "verdict": "Major",
+  "review_notes": "現行Evidenceの正確性・由来管理は改善されているが、Scope内Sourceのsalient終端と終了後処理が未抽出であるためReview 00はMajor。"
+}
