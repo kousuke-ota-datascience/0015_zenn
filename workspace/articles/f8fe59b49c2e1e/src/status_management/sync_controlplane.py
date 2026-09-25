@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from collections.abc import Iterable
 
 from .git_state import compare_commits, load_entry_git_state
 from .notion_controlplane import apply_mutations, load_entry_state
@@ -26,12 +27,18 @@ def _relations(cp, git, reviews) -> dict[tuple[str, str], str]:
     return facts
 
 
-def sync_controlplane(entry_id: str) -> dict:
+def sync_controlplane(entry_id: str, *, correction_started: Iterable[str] = ()) -> dict:
     try:
         cp = load_entry_state(entry_id)
         git = load_entry_git_state(entry_id)
         reviews = load_entry_review_state(entry_id)
-        result = reconcile(cp, git, reviews, _relations(cp, git, reviews))
+        result = reconcile(
+            cp,
+            git,
+            reviews,
+            _relations(cp, git, reviews),
+            correction_started=correction_started,
+        )
         base = {
             "entry_id": entry_id,
             "reason_code": result.issues[0] if result.issues else None,
@@ -87,10 +94,19 @@ def sync_controlplane(entry_id: str) -> dict:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("entry_id", help="four-digit Entry_ID")
+    parser.add_argument(
+        "--correction-started",
+        dest="correction_started",
+        action="append",
+        choices=("00", "10", "20"),
+        default=[],
+        metavar="ARTIFACT",
+        help="explicit correction-start event for an artifact; repeat for multiple artifacts",
+    )
     args = parser.parse_args(argv)
     if not (len(args.entry_id) == 4 and args.entry_id.isdigit()):
         parser.error("entry_id must be four digits")
-    result = sync_controlplane(args.entry_id)
+    result = sync_controlplane(args.entry_id, correction_started=args.correction_started)
     print(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True))
     return 0 if result["result"] in {"PASS", "UPDATED"} else 1 if result["result"] == "BLOCKED" else 2
 
