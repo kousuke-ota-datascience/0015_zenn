@@ -79,8 +79,9 @@ def reconcile(
     """Derive a mutation plan from already-read facts.
 
     correction_started is an explicit operational event emitted only after
-    Workflow 00 actually enters the correction phase. It is never inferred
-    from Entry_ID, Git, or Review facts.
+    an orchestrating workflow actually enters the correction phase. Workflow 00
+    and an explicitly invoked Workflow 10 correction path may emit it. It is
+    never inferred from Entry_ID, Git, or Review facts.
     """
     issues: list[str] = []
     mutations: list[Mutation] = []

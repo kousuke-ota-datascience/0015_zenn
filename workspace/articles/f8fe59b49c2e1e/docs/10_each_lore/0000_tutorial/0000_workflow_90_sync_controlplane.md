@@ -30,8 +30,8 @@
 内部イベント:
 
 - `correction_started: [Artifact...]`
-  - Workflow 00が実際にcorrection phaseへ遷移した時だけ発行する。
-  - ユーザー入力にはしない。
+  - Workflow 00がWorkflow 10のcorrection phaseへ実遷移した場合、またはWorkflow 10が既存Review Findingへのcorrectionとして明示実行され、対象artifactの修正作業へ実遷移する場合だけ発行する。
+  - ユーザー入力そのものをeventとして扱わない。
   - `Entry_ID` やReview存在だけから推測しない。
   - `reconcile.py` が適用可能性を決定論的に検査する。
 
@@ -96,7 +96,7 @@ Legacy標準Workflowで確定していた状態遷移を継承する。
 - `再レビュー待` では、最新Review targetが現artifactのancestorであることは正常状態であり、stale ReviewとしてBLOCKしない。
 - `再作業中` では、直前の修正要求Reviewが最新Reviewとして残っていても `要修正` へ巻き戻さない。
 - `完了` 後にcanonical artifactが更新された場合、その版は未Reviewなので `再レビュー待` へ戻す。
-- `要修正 -> 再作業中` は、Workflow 00から明示された `correction_started` eventがあり、current artifact / control plane post-SHA / latest non-Pass Review targetがexact一致する場合だけ許可する。
+- `要修正 -> 再作業中` は、Workflow 00または明示的correctionとして実行中のWorkflow 10から `correction_started` eventが渡され、current artifact / control plane post-SHA / latest non-Pass Review targetがexact一致する場合だけ許可する。
 - eventの重複実行はidempotentとし、すでに `再作業中` ならNOOPとする。
 - Pass Review、stale Review、artifact更新後、対象外、未知artifactに対するcorrection startはBLOCKする。
 
@@ -258,17 +258,20 @@ post_update_verification_error
 
 ```text
 python -m src.status_management.sync_controlplane <Entry_ID>
+python -m src.status_management.sync_controlplane <Entry_ID> --correction-started <Artifact>
 ```
 
 は削除しない。
 
-ただしこれは:
+`--correction-started` は明示的なcorrection開始eventを渡すための内部運用optionであり、`00 / 10 / 20` のみを許容する。複数artifactを開始する場合はoptionを反復する。通常syncでは指定してはならない。
+
+ただしこのadapterは:
 
 - Notion Public API tokenを持つbatch / CI / external runtime
 
 向けのoptional adapterであり、本番チャットWorkflow 00/90の必須経路ではない。
 
-adapterも内部では同じ `reconcile.py` を使用しなければならない。
+adapterも内部では同じ `reconcile.py` を使用しなければならず、event指定時も適用可否を独自判定してはならない。
 
 # 6. SHA関係の解釈
 
@@ -305,6 +308,8 @@ Artifact 20 -> review_20_analysis.schema.json
 # 8. Workflowからの呼出し
 
 - Workflow 10は作業開始前、canonical artifact commit後、Review修正後、完了時に必要に応じWorkflow 90を呼ぶ。
+- Workflow 10が既存Review Findingへのcorrectionとして単独実行される場合、通常の事前同期を通過した後、対象artifactを実際に編集し始める直前に `correction_started` を付けてWorkflow 90を再実行する。
+- Workflow 00経由で同じeventが先に反映されている場合、Workflow 10側の重複eventはidempotentなNOOPとして扱う。
 - Workflow 20はcontrol planeを直接更新せず、必要な整合確認をWorkflow 90へ委譲する。
 
 # 9. 不変条件
@@ -322,15 +327,30 @@ Artifact 20 -> review_20_analysis.schema.json
 
 # 10. correction start event
 
-`要修正 -> 再作業中` の未確定事項は解消済みとする。
+`要修正 -> 再作業中` は、correction作業への**実遷移**を表す明示eventによってのみ行う。
 
-発生条件:
+event発生経路:
+
+### 10.1. Workflow 00経由
 
 1. ユーザーがWorkflow 00 + Entry_IDで本番E2E継続を明示依頼している。
 2. Workflow 00が `CORRECTION_REQUIRED` を確認する。
 3. Workflow 00が実際にWorkflow 10 correction phaseへ入る。
 4. その時点で対象artifactに `correction_started` eventを発行する。
-5. `reconcile.py` がcurrent artifact / control plane / non-Pass Reviewのexact一致を検証する。
 
-この5条件を満たした場合だけ `再作業中` へ遷移する。
+### 10.2. Workflow 10単独correction
+
+1. Workflow 10が既存Review Findingへのcorrectionとして明示的に実行されている。
+2. 最初の通常Workflow 90同期が `PASS / UPDATED` であり、修正開始を妨げるstale / divergence / checkpoint不整合がない。
+3. 適用可能なFindingを持つ修正対象artifactが確定している。
+4. 対象artifactを実際に編集し始める直前に `correction_started` eventを発行する。
+
+### 10.3. 共通適用条件
+
+- `reconcile.py` がcurrent artifact / control plane post-SHA / latest non-Pass Review targetのexact一致を検証する。
+- Pass Review、stale Review、artifact更新済み、対象外、未知artifactではBLOCKする。
+- `Entry_ID`、Review存在、通常syncだけからeventを推測しない。
+- 同じeventの重複実行はidempotentとし、すでに `再作業中` ならNOOPとする。
+
+上記のいずれかの明示的event発生経路と共通適用条件を満たした場合だけ `再作業中` へ遷移する。
 
