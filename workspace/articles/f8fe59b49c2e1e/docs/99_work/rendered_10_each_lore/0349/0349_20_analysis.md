@@ -23,7 +23,7 @@
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
 - Evidence refs: -
 
-**Rationale:** 2007年以前からの流通は示唆されるが、成立年代を直接固定する資料を今回の範囲では確定していない。
+**Rationale:** 2007年の株主総会で語が質問に用いられたことは確認できるが、成立年代を直接固定する資料は今回の範囲では確定していない。
 
 **Manifestation:** 生成年代不明。
 
@@ -38,16 +38,16 @@
 
 **Manifestation:** 最古確認流通媒体不明。
 
-### D03 — D
+### D03 — U
 
-- Primary: D03.WEB.WEBSITE (parent: D03.WEB)
+- Primary: -
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
-- Evidence refs: EVD-001
+- Evidence refs: -
 
-**Rationale:** 2007年の報道記事で語と内容が公開流通している。
+**Rationale:** current Scoped Contentは2007年株主総会で語が質問に用いられたことを示すが、伝承が受容者へ流通した媒体ポートフォリオを確定する情報はない。
 
-**Manifestation:** ニュースWebで公的言及。
+**Manifestation:** 確認流通媒体はcurrent Scoped Contentから未確定。
 
 ### D04 — U
 
@@ -106,14 +106,14 @@
 
 ### D09 — D
 
-- Primary: D09.AGN.MOTIVE_ATTRIBUTION (parent: D09.AGN)
+- Primary: D09.CAU.DIRECT_CAUSE (parent: D09.CAU)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
+- Content refs: CNT-001, CNT-002
 - Evidence refs: -
 
-**Rationale:** 故障時期をメーカーの意図・利益動機へ帰属する。
+**Rationale:** 一定期間後の製品故障をメーカー側の意図的な設計・寿命設定が起こすものとして直接因果化する。
 
-**Manifestation:** 企業への動機帰属。
+**Manifestation:** メーカーの意図的設計を製品故障の直接原因として置く。
 
 ### D10 — D
 
@@ -133,7 +133,7 @@
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
 - Evidence refs: -
 
-**Rationale:** 一定期間・保証期間経過が故障との結び付きの条件。
+**Rationale:** 一定期間の経過が故障との結び付きの条件として語られる。
 
 **Manifestation:** 時間条件。
 
@@ -216,27 +216,27 @@ Taxonomy gap: true — 意図的な製品寿命設計・計画的故障を直接
 
 **Manifestation:** 伝承内因果層。
 
-### D19 — D
+### D19 — U
 
-- Primary: D19.NET.OPEN_FORUM_WEB (parent: D19.NET)
-- Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
-- Evidence refs: EVD-003
-
-**Rationale:** 2007年の株主総会での言及が公開ニュースWebで報道され、俗称が公開Web上で流通していることは直接確認できる。全国的大衆への実到達はcurrent Evidenceからは確定しない。
-
-**Manifestation:** 公開Web・ニュースサイト圏。
-
-### D20 — I
-
-- Primary: D20.ORG.INSTITUTION_AUTHORITY (parent: D20.ORG)
+- Primary: -
 - Secondary: -
 - Content refs: CNT-001, CNT-002, CNT-003, CNT-004
 - Evidence refs: -
 
-**Rationale:** 俗説上、意図的設計の真相は企業内部が知る秘密として想定される。
+**Rationale:** current Scoped Contentは2007年株主総会で語が質問に用いられた事実を示すが、どの社会範囲まで流通していたかは確定できない。
 
-**Manifestation:** 企業内部が特権情報保持者とされる。
+**Manifestation:** 社会的流通範囲はcurrent Scoped Contentから未確定。
+
+### D20 — U
+
+- Primary: -
+- Secondary: -
+- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
+- Evidence refs: -
+
+**Rationale:** Scoped Contentはメーカーの意図的設計を俗説上の原因として置くが、真相・追加情報・回避情報を企業内部が偏って保持する構造は示さない。
+
+**Manifestation:** 特権情報保持者はcurrent Scoped Contentから確定できない。
 
 ### D21 — D
 
