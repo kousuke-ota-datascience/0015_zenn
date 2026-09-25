@@ -8,7 +8,7 @@
 
 ## Version Scope
 
-2001年後代再録で確認される『分からないほうがいい』型と、2003年obake.cc保存記録で投稿者自身が先行話と自身の体験を混ぜたと明示する『くねくね』型。秋田・田園・双眼鏡・祖父・『くねくね』という名称は2003年増補として扱い、2001年型へ遡及しない。
+2001年後代再録で確認される『分からないほうがいい』型（白い人物のくねくねした異常動作、兄の詳細視認・理解と重大異変）と、2003年obake.cc保存記録で投稿者自身が先行話と自身の体験を混ぜたと明示する『くねくね』型。白い対象のくねくねした異常動作自体は2001年型にも存在する。秋田・田園・双眼鏡・祖父・『くねくね』という名称、兄が白い存在と同様にくねくね動く終端、家族による終端処置、語り手自身の終端視認は2003年型として扱い、2001年型へ遡及しない。
 
 - Included variants: VAR-001, VAR-002
 - Excluded variants: -
@@ -27,7 +27,7 @@
 
 **Manifestation:** 少なくとも2001年には原型が投稿されたと後代再録から確認できるが、それ以前の形成は不明である。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D02 — I
 
@@ -40,7 +40,7 @@ Taxonomy gap: False
 
 **Manifestation:** 初期確認形は匿名Web掲示板の怪談投稿である。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D03 — I
 
@@ -53,20 +53,20 @@ Taxonomy gap: False
 
 **Manifestation:** 掲示板投稿が保存サイト・再録記事を通じて後代へ残る。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D04 — I
 
 - Primary: D04.VAR.ACCRETION (parent: D04.VAR)
 - Secondary: D04.VAR.RETELLING (parent: D04.VAR)
-- Content refs: CNT-004, CNT-005, CNT-006, CNT-007, CNT-008
-- Evidence refs: EVD-003, EVD-004, EVD-005, EVD-006, EVD-007
+- Content refs: CNT-001, CNT-004, CNT-005, CNT-006, CNT-007, CNT-008
+- Evidence refs: EVD-001, EVD-003, EVD-004, EVD-005, EVD-006, EVD-007
 
-**Rationale:** 2003年投稿者が先行話と自身の体験を混ぜて詳しく書いたと保存記録上で明示し、秋田・双眼鏡・祖父・名称等を追加する。
+**Rationale:** 2003年投稿者が先行話と自身の体験を混ぜて詳しく書いたと保存記録上で明示し、秋田・田園・双眼鏡・祖父・『くねくね』という名称、兄が白い存在と同様にくねくね動く終端、家族による終端処置等を組み込む。白い対象そのもののくねくねした異常動作は2001年再録にもあるため、2003年の新規増補とは扱わない。
 
-**Manifestation:** 先行する匿名怪談を再話しつつ、自身の体験要素を加えて現在型に近い形へ増補する。
+**Manifestation:** 先行する匿名怪談を再話しつつ、自身の体験要素を加えて現在型に近い形へ増補するが、白い対象の異常な運動モチーフ自体は2001年型から継承される。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D05 — I
 
@@ -79,7 +79,7 @@ Taxonomy gap: False
 
 **Manifestation:** 自己体験を材料にした回想形式で提示される。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D06 — C
 
@@ -92,7 +92,7 @@ Taxonomy gap: False
 
 **Manifestation:** 『自分の体験』であることを示しながら、既存怪談を意識的に混ぜた再構成でもある。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D07 — I
 
@@ -105,7 +105,7 @@ Taxonomy gap: False
 
 **Manifestation:** 見えているのに正体を確定できない対象が怪異の中心になる。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D08 — I
 
@@ -118,7 +118,7 @@ Taxonomy gap: False
 
 **Manifestation:** 遠方の異常な対象を目撃するところから謎が始まる。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D09 — I
 
@@ -131,7 +131,7 @@ Taxonomy gap: False
 
 **Manifestation:** 『知る／見るべきではない』という境界が、兄の変貌と語り手の終端視認の双方を通じて保持される。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D10 — U
 
@@ -144,7 +144,7 @@ Taxonomy gap: False
 
 **Manifestation:** 作用主体は『正体不明の白い何か』のまま残る。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D11 — I
 
@@ -157,7 +157,7 @@ Taxonomy gap: False
 
 **Manifestation:** 詳細視認・理解が主要な発動条件で、最終場面ではその視認禁忌を語り手自身が踏む。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D12 — I
 
@@ -170,7 +170,7 @@ Taxonomy gap: False
 
 **Manifestation:** 兄が実現被害の中心で、語り手は最後に危険な視認条件へ入るが、その後の被害成立までは描かれない。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D13 — I
 
@@ -183,7 +183,7 @@ Taxonomy gap: False
 
 **Manifestation:** 『知ること』が危害契機となり、兄の行動・人格状態が怪異の運動を反復するほど大きく変化する。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D14 — I
 
@@ -196,7 +196,7 @@ Taxonomy gap: False
 
 **Manifestation:** 兄の変貌と喪失に加え、語り手にも次の危険が開かれたまま終わる。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D15 — I
 
@@ -209,7 +209,7 @@ Taxonomy gap: False
 
 **Manifestation:** 兄の人格・自己同一性が大きく崩れ、怪異の動きを反復する『変わり果てた兄』として終端化される。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D16 — I
 
@@ -222,7 +222,7 @@ Taxonomy gap: False
 
 **Manifestation:** 一回の遭遇が兄の変貌で終わらず、語り手自身が禁忌へ触れる終端まで段階的に進む。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D17 — I
 
@@ -235,7 +235,7 @@ Taxonomy gap: False
 
 **Manifestation:** 対象を詳しく見ず理解へ進まないことが回避として示されるが、最終場面では語り手自身がそれを破る。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D18 — I
 
@@ -248,7 +248,7 @@ Taxonomy gap: False
 
 **Manifestation:** 作用は白い存在を見た物語内人物に限定される。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D19 — I
 
@@ -261,7 +261,7 @@ Taxonomy gap: False
 
 **Manifestation:** 匿名掲示板を介して不特定受容者へ流通する。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D20 — I
 
@@ -274,7 +274,7 @@ Taxonomy gap: False
 
 **Manifestation:** 祖父が正体そのものではなく、危険な接触を避けるための追加情報を偏在的に持つ。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ### D21 — I
 
@@ -287,8 +287,8 @@ Taxonomy gap: False
 
 **Manifestation:** 実在地域名を持つ一方、怪異地点そのものは特定されない。
 
-Taxonomy gap: False
+Taxonomy gap: false
 
 ## Analysis Notes
 
-summary情報欠落回帰対象。旧Review 004で指摘された無効code IDを現taxonomyへ正規化（D04.VAR.RETELLING、D11.INF/SEN、D12.OTH、D13.COG.MENTAL_INFLUENCE、D15.MND、D17.AVO.DO_NOT_ENGAGE）。意味裁定は維持する。 0179 summary-semantic correctionで、兄が怪異と同様にくねくね動くidentity終端と、語り手自身の終端視認を10へ復元した。D09/D11-D17の結論は維持しつつtraceを更新。
+summary情報欠落回帰対象。旧Review 004で指摘された無効code IDを現taxonomyへ正規化（D04.VAR.RETELLING、D11.INF/SEN、D12.OTH、D13.COG.MENTAL_INFLUENCE、D15.MND、D17.AVO.DO_NOT_ENGAGE）。意味裁定は維持する。0179 summary-semantic correctionで、兄が怪異と同様にくねくね動くidentity終端と、語り手自身の終端視認を10へ復元した。Review Seq 3 correctionでは、2001年型の白い人物の異常運動をEVD-001/CNT-001へ復元し、VAR-001から2003年型専用CNT-009を除外し、祖母の将来処置をCNT-009へ復元した。D01-D21のcode選択は再評価の結果変更せず、D04とversion_scopeのprovenanceを更新した。
