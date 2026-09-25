@@ -1,0 +1,143 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Content/summaryから再構成できる因果モデルはAnalysisと概ね一致するが、D19の全国流通だけはAnalysis側がContentより広い意味を持つ。",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "受信→転送義務→不転送時の不幸警告／転送時の連鎖継続という因果列を、実証済み超自然因果へ昇格せず記述している。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "D19.NATIONAL_PUBLICのrationaleはEVD-007の全国性を直接用いるが、Version Scope内のCNT-005/CNT-008には全国範囲が表現されていない。",
+      "status": "FINDING"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12受信者→D13不幸・呪い作用→D15幸運/不運という列はCNT-003/004の制裁条件と整合する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L1/L2はCNT-003/004の伝承内制裁と現実の受信者対象化で支持され、L3はCNT-008に1977年の受取人の困惑と行政対応がContent化されているため、Evidence-onlyの社会結果を逆輸入していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "current Scoped Contentは1970年頃の流行と1977年赤池町の局所例を示すが、全国的一般社会への流通を明示しない。D19.NATIONAL_PUBLICを成立させる全国性はEVD-007にのみ明示されている。",
+      "status": "FINDING"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "D20.NON.NO_HIDDEN_TRUTHは起源不明をNO_ONE_KNOWSへ変換したものではなく、current Content上の規則が手紙本文に明示され追加の特権保持者を必要としないという限定的推論として記述されている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "D21.A1は郵便・手紙という一般的現実背景を対象とし、1977年赤池町というEvidenceの実在地点を伝承成立条件へ昇格していない。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D01〜D18・D20〜D21はcurrent Scoped Contentと概ね整合する。一方D19.NATIONAL_PUBLICは、CNT-005の「爆発的に流行」とCNT-008の局所的行政対応だけでは全国的大衆流通を意味論的に確定できない。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "macro_category=情報・メタ伝説、entry_type=規則・チェーン伝承は、手紙そのものが規則を担い転送により自己複製するcurrent Contentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "1970年初出・全国性等はI、1977年同時代資料で直接支えられる規則・行政反応等はDとするなど、証拠強度の上限は概ね守られている。D19は確信度ではなくContent欠落が問題。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "D19のrationaleはEVD-007の「全国的」というdetailを必要とするが、その意味は参照CNT-005/CNT-008に存在しない。他Dimensionの主要rationaleはScoped Contentから追跡可能。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "直接同時代資料で支えられる規則・1977年現象と、1970年初出・全国性・D17/D20等の推論をD/Iで概ね保守的に区別している。D19の問題はIという確信度ではなく、意味自体のContent layer bypassである。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "D04で期限・人数のparameter変異を既存RETELLING/ACCRETIONへ無理に押し込めずtaxonomy_gapとしている判断はcurrent Contentに対して保守的で妥当。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "1970年頃の制裁前景型と1977年直接確認例を、受信→期限内転送→不転送時の不幸という共有核のparameter variantとしてまとめ、1922年幸運型を除外するScopeはcurrent Contentと整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0025",
+  "findings": [
+    {
+      "category": "content_layer_bypass",
+      "content_refs": [
+        "CNT-005",
+        "CNT-008"
+      ],
+      "dimension_refs": [
+        "D19"
+      ],
+      "evidence_refs": [
+        "EVD-007"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "先に00層でSRC-004の受容層情報をEvidence化し、10層でEVD-007の全国性と追加Evidenceの学校・若者流通をContentへ意味保存する。その後、D19.MAS.NATIONAL_PUBLICとD19.KIN.SCHOOL_YOUTH等のprimary/secondaryをcurrent Scopeに対して再判定する。Content修正前にEvidenceを直接根拠としてD19を固定しない。",
+      "impact": "Content→Analysisの意味論的再現性がD19で破れ、D19.MAS.NATIONAL_PUBLICの妥当性をcanonical Contentだけから監査できない。さらにReview 00で欠落している小中学生中心の受容層をEvidence化すると、D19のprimary/secondary構成自体が変わる可能性がある。",
+      "notes": "D18 L3はCNT-008に独立した社会現実反応があるため、このFindingの対象外。",
+      "rationale": "D19はprimary=D19.MAS.NATIONAL_PUBLICとし、rationaleで1970年頃の全国的社会問題化を根拠にする。しかしVersion Scope内で参照されるCNT-005は制裁前景型が「爆発的に流行」したこと、CNT-008は1977年赤池町で受取人が困惑し行政対応があったことしか保持せず、全国的一般社会への流通を明示しない。全国性はEVD-007にのみ明示されているため、現行D19はContent layerを飛ばしてEvidence固有detailを再導入している。",
+      "severity": "Moderate",
+      "summary": "D19.NATIONAL_PUBLICがScoped Contentにない「全国的」情報をEvidenceから直接取り込んでいる。"
+    }
+  ],
+  "review_notes": "大部分のDimensionと因果モデルはScoped Contentから再構成可能。ModerateはD19に限定されたContent layer bypassによる。",
+  "review_seq": 1,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008"
+    ],
+    "dimension_refs": [
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-004",
+      "EVD-006",
+      "EVD-007"
+    ],
+    "model": "Scoped Contentだけから再構成すると、郵便チェーンレターの受信により現在の受信者が期限付き転送規則へ入り、同文を指定人数へ送らなければ本人に不幸が来ると警告される。転送は同じ制裁条件を次の受信者へ再生産し、連鎖を継続する。1970年頃の制裁前景型と1977年赤池町の直接確認例は人数・期限の異なるparameter variantで、1977年には受取人の困惑と行政の破棄・警察持参勧告という現実社会側の反応も確認される。現行Contentは流行の大きさを述べるが、全国的一般社会か学校・若者集団かという分布範囲までは確定しない。",
+    "notes": "D19の全国性だけはContentから再構成不能であり、Evidence参照はその上流欠落を確認する補助証跡に限定した。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0025_fuko_no_tegami/0025_20_analysis.json",
+    "blob_sha": "d24f6d02b3ef6d108d1ab5383d930ae13dcd3ae7",
+    "commit_sha": "ccbceb71bcf93e6a28708b361640eae7738e3fe4",
+    "reviewed_at": "2026-09-25T10:34:00Z"
+  },
+  "verdict": "Moderate"
+}
