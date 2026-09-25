@@ -1,0 +1,131 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Scoped Contentだけから独立再構成しても、D07未知存在、D08目撃報告中心、D11視覚曝露、D13顕現中心、D19=U、D21=A1という中心モデルは維持される。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "偶発的視認→短時間の顕現・相互作用→隠れる／逃げる／終了、例外的に痕跡・身体変化が残るという最小構造に抑制されている。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "D19の「著名人・媒体由来」とD21の「新宿御苑」はScoped Contentにない具体的意味で、Evidenceを補助証跡ではなくAnalysis rationaleの意味論的事実として用いている。",
+      "status": "FINDING"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12は主に体験者、例外的に物体を対象とし、D13の顕現／物体操作／身体外見変化と対応する。D15も不確実性保持を主、身体変化を例外Secondaryとして因果列が整合する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "Scope内では目撃・物体・身体への作用を伝承内部L1に留め、受容者・社会現実層の独立X効果を追加していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "Web掲載や複数目撃の存在から全国分布を推定せずD19=Uとしている。後代の全国集成本を2009年Scopeへ遡及しない点も妥当。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "資料上の特権情報保持者未確定をD20=Uとし、NO_ONE_KNOWSへ短絡していない。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "D21=A1自体は風呂場・洗濯機周辺・寝室・車庫等のScoped Contentから支持できるが、rationale中の「新宿御苑」はCNT-007に存在せずEvidenceからの直接再導入である。",
+      "status": "FINDING"
+    },
+    "dimension_semantics": {
+      "notes": "D01〜D21の主要code/statusはScoped Contentから概ね再構成できる。共有核を偶発的な小型人型の視認とし、物体・身体作用を例外的Secondaryへ置く構造は妥当。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "macro_category「全国型怪異・儀式」、entry_type「物語・伝説」は、小型人型怪異の複数目撃談を扱うEntry分類として中心内容と矛盾しない。D19=UはScope時点の実流通範囲の未確定であり、catalog分類名から全国分布を逆算していない。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "目撃・写真・痕跡の客観的真正性をAnalysisで事実化せず、存在論や起源・分布はU/Iへ抑制している。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "D19 rationaleの「著名人・媒体由来」とD21 rationaleの「新宿御苑」は、各dimensionが掲げるScoped Content refsには明示されず、Evidence層から具体語が再導入されている。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "D01/D02/D04/D10/D19/D20をUへ抑え、媒介証言・推論的次元ではIを用いるなど、確信度は概ね保守的。Content-layer bypass部分も主code/status自体を変更しない。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "現Scoped Contentに、既存taxonomyで表現不能な安定構造は確認しない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "2009年の複数目撃型VAR-001をScopeとし、2012年以降の個人反復・書籍集成・創作メディアを除外する境界はContentと整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0019",
+  "findings": [
+    {
+      "category": "content_layer_bypass",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-007"
+      ],
+      "dimension_refs": [
+        "D19",
+        "D21"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-003",
+        "EVD-012"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D19/D21 rationaleからScoped Contentにない具体語を削除してContentだけで正当化するか、Review 10で必要な具体情報をContentへ昇格した後に再分析する。Review 10のEVD-012→Content omissionを先に解消するのが望ましい。",
+      "impact": "層境界とsemantic traceabilityに違反する。ただしD19=Uは分布Evidence不足、D21=A1は一般的な日常空間だけで独立に支持できるため、現時点では主code/statusの変更を要しない局所的なrationale問題である。",
+      "rationale": "D19は「複数の著名人・媒体由来の報告」、D21は「新宿御苑等の具体地点」をrationaleに用いるが、version_scope.content_refsのCNT-001/002/006/007/008/009には「著名人・媒体由来」や「新宿御苑」という具体意味が存在しない。特に新宿御苑はEVD-012にのみ保持される。EvidenceはContent支持強度の監査には使えるが、Analysis正当化の新たな意味論的事実を供給してはならない。",
+      "severity": "Minor",
+      "summary": "D19/D21 rationaleがScoped Contentにない具体情報をEvidence層から再導入している"
+    }
+  ],
+  "review_notes": "Review 20はScoped Contentから独立再構成して評価した。上流Review 00/10 FindingのSource/Evidence-only情報を直接補完材料には用いていない。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-009"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "model": "2009年Web記事に集成された複数の異質な目撃談を初期Scopeとすると、中心モデルは、日常空間で正体不明の小型人型存在を偶発的に視認し、短時間の顕現・相互作用ののち隠れる／逃げる／消えることが多く、正体は未確定のまま残る、という目撃型怪異である。例外的な物体操作・物的痕跡・身体外見変化は共有必須設定ではなくSecondary構造として保持される。固定した召喚・回避規則や全国分布、特権的真相保持者はScoped Contentから確定できない。",
+    "notes": "主要な意味形成・因果モデルはScoped Contentのみから再構成可能。FindingはD19/D21 rationaleに不要なEvidence-only具体語を混入している層境界違反に限定される。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0019_chiisai_ojisan/0019_20_analysis.json",
+    "blob_sha": "8363b2091faf3118b21c02de141cd17fa370dca0",
+    "commit_sha": "7947bb5ad3f65c39e95682c740dbe4218dfe12e4",
+    "reviewed_at": "2026-09-25T10:35:00Z"
+  },
+  "verdict": "Minor"
+}

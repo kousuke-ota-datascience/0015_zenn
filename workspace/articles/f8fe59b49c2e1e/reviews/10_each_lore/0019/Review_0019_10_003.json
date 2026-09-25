@@ -1,0 +1,234 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "現Contentの各主張は対応するEVDへ追跡でき、上流EVD-003の誤表現「鍋の紐」をContentへ持ち込んでいない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "coverage_auditでCNT-006とCNT-008にLOSSがある。共有核の因果構造は維持されるが、summary.coverage_refsが宣言する全具体意味は再構成できない。",
+      "status": "FINDING"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-012が区別する2点の写真の具体的被写体・文脈、とくに新宿御苑の「小さな侍」という地点付き主張がCNT-007では「写真2点」に圧縮され、Content populationから失われている。",
+      "status": "FINDING"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12の構造レベルではLOSS/CONFLICTなし。具体的なcoverage lossは別監査で記録する。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "中心核・variant境界・例外作用は復元できるが、coverage_refsのCNT-006固有の後代流通時期整理と、CNT-008のポットのコード操作という具体的意味がsummaryからは復元できない。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "実在性、存在論、形態・行動の非統一、痕跡・写真の未認証、起源不明を保持する。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "2009年の初期集成、2012年以降の個人反復、書籍集成・創作メディアを分離し、後代要素を初期共有核へ一般化していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0019",
+  "findings": [
+    {
+      "category": "salient_content_completeness",
+      "content_refs": [
+        "CNT-007"
+      ],
+      "evidence_refs": [
+        "EVD-012"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "CNT-007を拡張するか独立Content Unitを追加し、2点の写真の区別と新宿御苑の地点情報を、真正性未検証の主張として保持する。その後summary.coverage_refsと20_analysisを再評価する。",
+      "impact": "具体地点を含む現実アンカー情報がContent層から欠落し、現20_analysisのD21がEVD-012から「新宿御苑」を直接再導入するContent-layer bypassを生じさせている。",
+      "rationale": "EVD-012は、1点を撮影時に写った小さなヒトガタ、もう1点を新宿御苑で写り込んだ「小さな侍」と区別する。CNT-007は「筆者が『小さいおっさん』の写真を2点確認した」という記録主張までしか保持せず、被写体差・撮影文脈・具体地点を失う。これはSource直読ではなくcanonical Evidence population内で確認できる欠落である。",
+      "severity": "Moderate",
+      "summary": "EVD-012の写真2点の具体的意味がCNT-007で過度に圧縮されている",
+      "variant_refs": [
+        "VAR-001"
+      ]
+    },
+    {
+      "category": "summary_reconstruction",
+      "content_refs": [
+        "CNT-006",
+        "CNT-008"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "summary narrative/structureに、後代解説の2009年前後という流通時期整理と、男女ペアによるポットのコード操作を簡潔に明示する。",
+      "impact": "共有核や主要分析は維持されるが、summary.coverage_refsが全9 Content Unitを再構成可能と宣言する契約に対して2 Unitで具体意味のLOSSがある。",
+      "probe_refs": [],
+      "rationale": "CNT-006は後代解説が「2009年前後に広まった」と位置づける履歴主張だが、summaryは2009年の初期Web集成と起源不明までに留まる。CNT-008は男女ペアが「ポットのコードを引っ張る」具体報告だが、summaryは男女ペアとgenericな物体作用までしか保持しない。",
+      "severity": "Minor",
+      "summary": "coverage_refsのCNT-006/CNT-008の具体的意味がsummaryから完全には復元できない",
+      "variant_refs": [
+        "VAR-001"
+      ]
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryの具体的LOSSおよびEVD-012→Contentの地点詳細欠落を補っても、2009年Scopeの中心モデル（偶発的視認、出現・知覚が共有核、存在論未確定、例外的物体／身体作用）と主要Dimension選択は変わらない。D21の具体地点言及はContent補完またはAnalysis削除が必要だがA1主判定自体は一般日常空間から維持可能。",
+      "status": "PASS"
+    },
+    "blind_decode": "日常空間で小型の成人男性様存在を短時間目撃する複数の独立体験談群。2009年のWeb集成では風呂場・洗濯機付近・寝室・旅館・ガレージなどに現れ、励ます・体操する・隠れる・逃げるなど行動は一定しない。共有核は短時間の出現・知覚で、正体は妖精・妖怪・UMA等に確定しない。例外的にイチゴのかじり跡、小さい男性様存在と女性様存在のペア、髪型変化、筆者が確認した2点の写真という主張があり、いずれも必須設定でも独立検証済みでもない。2012/2014年の釈由美子の反復談と、2012年書籍・2014年フェイクドキュメンタリーは後代層。多くは単発の短い遭遇で、固定した規則・回避手段はなく、起源も未確定。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "2009年Web集成の複数体験談で、存在論は未確定。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "2009年Web記事が複数の目撃談を集成し、妖精・妖怪・UMA等の正体を確定しない。"
+      },
+      {
+        "blind_reconstruction": "日常の複数場所で、励ます・体操する・隠れる・逃げる等の異なる行動がある。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "風呂場・洗濯機・寝室・車庫等で、励ます・現れる・隠れる・逃げるなど多様な行動が並存する。"
+      },
+      {
+        "blind_reconstruction": "2012年にルンバに追われる個体、2014年に3人で一杯やる個体という反復談。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "2012年のルンバ追跡談、2014年の3人で飲酒する談という釈由美子の反復個人談。"
+      },
+      {
+        "blind_reconstruction": "2012年の書籍集成を後代の全国的集成層として区別する。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "2012年に全国の目撃・芸能人証言を集成する書籍が刊行され、存在論を確定しない。"
+      },
+      {
+        "blind_reconstruction": "2014年のフェイクドキュメンタリーを後代の創作メディア層として区別する。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "2014年に小さいおじさん題材のフェイクドキュメンタリー創作が生じる。"
+      },
+      {
+        "blind_reconstruction": "2009年のWeb集成が早い層で、成立初年は未確定と復元できるが、「後代解説が広まりを2009年前後とした」という別個の履歴主張は復元できない。",
+        "content_ref": "CNT-006",
+        "difference": "LOSS",
+        "notes": "summaryは2009年の初期Scopeと起源不明を保持するが、CNT-006固有の後代流通時期整理を明示しない。",
+        "salient_meaning": "2019年の後代解説が、都市伝説の広まりを2009年前後と位置づけるが、起源とはしない。"
+      },
+      {
+        "blind_reconstruction": "イチゴのかじり跡と、筆者が2点の写真を確認したという例外的主張。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "小さな侍がイチゴを食べてかじり跡が残ったという物的痕跡主張と、筆者が2点の写真を確認したという記録主張。"
+      },
+      {
+        "blind_reconstruction": "小さい男性様存在と女性様存在のペア、および個別報告に物体作用があることまでは復元できるが、ポットのコードを引っ張る具体行動は復元できない。",
+        "content_ref": "CNT-008",
+        "difference": "LOSS",
+        "notes": "coverage_refとして宣言する以上、genericな「物体への作用」だけではCNT-008の具体的意味を完全には再構成できない。",
+        "salient_meaning": "小さいおっさんと小さいおばさんのペアがポットのコードを引っ張る個別報告。"
+      },
+      {
+        "blind_reconstruction": "群れた小さいおじさんによるドレッドヘアー化という身体外見作用主張。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "群れた小さいおじさんが的場浩司の髪型をドレッドヘアーにしたという身体外見作用主張。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "小さい成人男性様存在、目撃者、一部に小さい女性様存在。",
+        "difference": "NONE",
+        "notes": "主要actorは一致。",
+        "probe_id": "P01",
+        "reference": "小さい成人男性様存在、目撃者、一部に小さい女性様存在。"
+      },
+      {
+        "blind": "主に目撃者。例外的に周囲の物体や目撃者の身体外見にも作用する。",
+        "difference": "NONE",
+        "notes": "対象カテゴリは復元可能。",
+        "probe_id": "P02",
+        "reference": "主に目撃者。個別報告ではイチゴやポットのコード等の物体、目撃者の髪型にも作用する。"
+      },
+      {
+        "blind": "日常空間で偶発的に小型人型を視認する。",
+        "difference": "NONE",
+        "notes": "一致。",
+        "probe_id": "P03",
+        "reference": "日常空間で偶発的に小型人型を視認する。"
+      },
+      {
+        "blind": "因果源・正体は妖精・妖怪・UMA等に確定しない。",
+        "difference": "NONE",
+        "notes": "一致。",
+        "probe_id": "P04",
+        "reference": "因果源・正体は確定しない。"
+      },
+      {
+        "blind": "共有核は短時間の出現・知覚。例外的に物体作用、身体外見変化、痕跡・写真主張がある。",
+        "difference": "NONE",
+        "notes": "構造レベルでは一致。",
+        "probe_id": "P05",
+        "reference": "共有核は短時間の出現・知覚。例外的に物体操作、身体外見変化、痕跡・写真主張がある。"
+      },
+      {
+        "blind": "通常状態→出現・知覚→隠れる／逃げる／短い相互作用→終了。一部で痕跡・身体変化が残る。",
+        "difference": "NONE",
+        "notes": "一致。",
+        "probe_id": "P06",
+        "reference": "通常状態→出現・知覚→隠れる／逃げる／短い相互作用→終了。一部で痕跡・身体変化が残る。"
+      },
+      {
+        "blind": "多くは短い単発遭遇。後代には釈由美子の反復個人談がある。",
+        "difference": "NONE",
+        "notes": "variant境界を含め一致。",
+        "probe_id": "P07",
+        "reference": "2009年Scopeは短い単発遭遇が中心。2012/2014年には釈由美子の反復個人談がある。"
+      },
+      {
+        "blind": "固定した規則・禁忌はない。",
+        "difference": "NONE",
+        "notes": "一致。",
+        "probe_id": "P08",
+        "reference": "固定した規則・禁忌はない。"
+      },
+      {
+        "blind": "明示的な回避・制御手順はない。",
+        "difference": "NONE",
+        "notes": "一致。",
+        "probe_id": "P09",
+        "reference": "明示的な回避・制御手順はない。"
+      },
+      {
+        "blind": "多くは隠れる・逃げる・消える等で終わり、例外的にかじり跡や髪型変化が残る。",
+        "difference": "NONE",
+        "notes": "一致。",
+        "probe_id": "P10",
+        "reference": "多くは隠れる・逃げる・消える等で終わり、例外的にかじり跡や髪型変化が残る。"
+      },
+      {
+        "blind": "客観的実在、存在論、外見・行動の統一、起源は未確定。",
+        "difference": "NONE",
+        "notes": "一致。",
+        "probe_id": "P11",
+        "reference": "客観的実在、存在論、外見・行動の統一、起源は未確定。"
+      },
+      {
+        "blind": "2009年Web集成を初期層とし、2012年以降の個人反復談、書籍集成、2014年創作を後代層として分離する。",
+        "difference": "NONE",
+        "notes": "一致。",
+        "probe_id": "P12",
+        "reference": "VAR-001=2009年集成、VAR-002=後代個人反復、VAR-003=後代集成・創作メディア。"
+      }
+    ],
+    "reference_story": "2009年の探偵ファイルWeb記事に、日常空間で小型人型存在を目撃する複数の異質な体験談が集成され、正体は妖精・現代妖怪・UMA等に確定されない。風呂場で励ます、洗濯機・寝室・車庫付近に現れて隠れる／逃げるなどが並存し、例外的に小さな侍がイチゴを食べてかじり跡が残る、筆者が2点の写真を確認する、小さいおっさんと小さいおばさんがポットのコードを引っ張る、群れが髪型をドレッドヘアーにするという報告もある。後代解説は2009年前後の広まりと整理するが起源とは確定しない。2012/2014年には釈由美子の反復談、2012年には全国集成本、2014年にはフェイクドキュメンタリーが現れ、初期Scopeとは分離される。客観的実在・写真や痕跡の真正性・統一的存在論は未確定。",
+    "verdict": "FINDING"
+  },
+  "review_notes": "Blind Decodeはsummary.narrative/structureのみを読んだ段階で固定した。Sourceで見つかった上流Evidence omissionはReview 10で直接補完せず、Review 00 Findingとして分離した。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0019_chiisai_ojisan/0019_10_contents.json",
+    "blob_sha": "f7ac0311e486af66123b697afd1750e50087ef4a",
+    "commit_sha": "819dc9f0a71bb23e14e2450dd34d850bf4df30dc",
+    "reviewed_at": "2026-09-25T10:35:00Z"
+  },
+  "verdict": "Moderate"
+}
