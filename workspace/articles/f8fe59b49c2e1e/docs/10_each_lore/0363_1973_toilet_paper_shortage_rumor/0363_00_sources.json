@@ -4,11 +4,11 @@
   "sources": [
     {
       "source_id": "SRC-001",
-      "source_type": "reliable_secondary_or_research",
+      "source_type": "later_summary_or_commentary",
       "title": "昭和の年表",
       "locator": "昭和48年（1973年）「トイレットペーパー騒動」",
-      "accessed_at": "2026-09-19",
-      "relation_to_primary": "direct_derivative",
+      "accessed_at": "2026-09-25",
+      "relation_to_primary": "unknown",
       "evidence_role": [
         "C",
         "H",
@@ -16,7 +16,53 @@
         "A"
       ],
       "url": "https://showakan.jp/about/showa-chronology/",
-      "notes": "国立の歴史資料館・昭和館による年表。1973年の噂・口コミ・買いだめと経済パニックを記録する。"
+      "notes": "showakan.jp は高山昭和館・湯布院昭和館を案内するサイトで、国立の昭和館（showakan.go.jp）とは別主体。出典提示のない後代年表として扱い、制度的権威や一次資料への直接派生関係は仮定しない。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "reliable_secondary_or_research",
+      "title": "トイレットペーパー騒動",
+      "locator": "千里ニュータウン情報館 コラム（2020-04-01）",
+      "accessed_at": "2026-09-25",
+      "relation_to_primary": "unknown",
+      "evidence_role": [
+        "C",
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://senri-nt.com/column/2020-03-30-toiletpaper/",
+      "notes": "吹田市・豊中市千里ニュータウン連絡会議の公式情報サイトによる地域史コラム。1973年10月末の千里中央における特売行列、不足デマ、買いだめ拡大を記述する。一次記録への直接派生関係は明示されていない。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "primary_or_contemporary",
+      "title": "第72回国会 衆議院 物価問題等に関する特別委員会 第5号",
+      "locator": "昭和48年12月12日・発言002 鈴木幸夫参考人",
+      "accessed_at": "2026-09-25",
+      "relation_to_primary": "primary",
+      "evidence_role": [
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://kokkai.ndl.go.jp/simple/detail?minId=107205063X00519731212",
+      "notes": "1973年12月時点の同時代国会会議録。トイレットペーパー・洗剤等の生活物資をめぐる混乱が当時の政策論議で現実の問題として扱われていたことを確認する。"
+    },
+    {
+      "source_id": "SRC-004",
+      "source_type": "reliable_secondary_or_research",
+      "title": "買溜めパニックにおける消費者の意思決定モデル",
+      "locator": "社会心理学研究 1巻1号, 45-53 (1985)",
+      "accessed_at": "2026-09-25",
+      "relation_to_primary": "not_applicable",
+      "evidence_role": [
+        "H",
+        "X"
+      ],
+      "url": "https://www.jstage.jst.go.jp/article/jssp/1/1/1_KJ00003724590/_article/-char/ja",
+      "bibliographic_info": "広瀬幸雄 (1985)「買溜めパニックにおける消費者の意思決定モデル」社会心理学研究 1(1):45-53. DOI:10.14966/jssp.KJ00003724590",
+      "notes": "1973年関西のトイレットペーパー買いだめパニックを4段階に区分して分析する原著論文。流言受容と買いだめ行動を一枚岩の単純因果として扱わないための外部効果・流通史Evidenceとして用いる。"
     }
   ],
   "evidence": [
@@ -24,31 +70,61 @@
       "evidence_id": "EVD-001",
       "source_id": "SRC-001",
       "locator": "昭和48年「トイレットペーパー騒動」",
-      "content": "昭和館は1973年11月22日、東京・多摩市のスーパーに商品「売り切れ」の張り紙が出たことを記録している。",
-      "representation": "paraphrase"
+      "content": "showakan.jp の年表は、1973年11月22日に東京・多摩市のスーパーで商品「売り切れ」の張り紙が出たと記述している。",
+      "representation": "paraphrase",
+      "uncertainty": "後代年表の記述であり、最初の発話・最初の買いだめ・最初の流通地点とは扱わない。SRC-002 が示す千里中央の1973年10月末の記述とは時点・場所が異なる。"
     },
     {
       "evidence_id": "EVD-002",
       "source_id": "SRC-001",
       "locator": "同項目",
-      "content": "オイルショックでトイレットペーパーや洗剤などがなくなるという噂が口コミで広がり、消費者が買いだめに走ったと説明されている。",
+      "content": "showakan.jp の年表は、オイルショックでトイレットペーパーや洗剤などがなくなるという噂が口コミで広がり、消費者が買いだめに走ったと説明している。",
       "representation": "paraphrase"
     },
     {
       "evidence_id": "EVD-003",
       "source_id": "SRC-001",
       "locator": "同項目",
-      "content": "第四次中東戦争を契機とする原油急騰、物価高、物不足への心理的不安が背景となり、異常な経済パニックへ発展したと整理されている。",
+      "content": "showakan.jp の年表は、第四次中東戦争を契機とする原油急騰、物価高、物不足への心理的不安を背景として経済パニックへ発展したと整理している。",
       "representation": "paraphrase"
     },
     {
       "evidence_id": "EVD-004",
       "source_id": "SRC-001",
       "locator": "同項目・2020年比較",
-      "content": "昭和館は2020年にもトイレットペーパー不足のデマがSNSで拡散し買い占めが起きた事例を比較対象として挙げている。",
+      "content": "showakan.jp の年表は、2020年にもトイレットペーパー不足のデマがSNSで拡散し買い占めが起きた事例を比較対象として挙げている。",
       "representation": "paraphrase",
-      "uncertainty": "2020年事例は1973年Scopeの直接内容ではなく、類似する後代の再発例。"
+      "uncertainty": "2020年事例は1973年Version Scopeの直接内容ではなく後代比較。感染症・製造輸入等の詳細は本Evidenceでは採用しない。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-002",
+      "locator": "本文 第1段落",
+      "content": "千里ニュータウン情報館は、1973年10月末に千里中央のスーパーの特売行列を見た住民の間で「トイレットペーパーがなくなるらしい」というデマが広がり、買いだめが町じゅうに拡大し、数日のうちに紙製品が店頭から消え、この騒ぎが日本中へ広がったと記述している。",
+      "representation": "paraphrase",
+      "uncertainty": "同ページは地域史コラムであり、この出来事を全国的流行の唯一の起点または最初の発話と証明する一次記録ではない。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-002",
+      "locator": "本文 第2段落",
+      "content": "同ページは、中東情勢の緊張による原油価格急騰と「石油製品がなくなるのではないか」という全国的な不安が、特売行列と結びついてパニックの背景になったと説明している。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-007",
+      "source_id": "SRC-003",
+      "locator": "発言002 鈴木幸夫参考人",
+      "content": "1973年12月12日の国会審議では、トイレットペーパーや洗剤などの生活物資をめぐる当時の大きな混乱が、国民生活上の現実の問題として言及されている。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-008",
+      "source_id": "SRC-004",
+      "locator": "Abstract",
+      "content": "広瀬(1985)は1973年関西のトイレットペーパー買いだめパニックを前兆・発生・拡大・終息の4段階に分け、初期・中期・後期の消費者で意思決定過程が異なり、低信頼度の流言、新聞報道、入手不能への防衛的不安がそれぞれ異なる形で買いだめに関与したと整理している。",
+      "representation": "paraphrase"
     }
   ],
-  "notes": "1973年の噂と買いだめ騒動をScopeとし、2020年のSNS再発は後代比較として除外する。"
+  "notes": "Version Scopeの伝承本体は1973年の「トイレットペーパー等がなくなる」という不足予測命題とする。口コミ拡散・買いだめ・店頭欠品・パニックは流通史または社会現実側の効果として分離し、2020年SNS型は後代比較として除外する。"
 }
