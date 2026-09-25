@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0025",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "primary_or_contemporary",
+      "title": "第175号 広報あかいけ 昭和52年8月1日「“不幸の手紙”をなくそう！」",
+      "locator": "第175号 広報あかいけ（赤池町）, 1977-08-01, 「“不幸の手紙”をなくそう！」",
+      "accessed_at": "2026-09-25",
+      "relation_to_primary": "primary",
+      "evidence_role": [
+        "C",
+        "H",
+        "X",
+        "A"
+      ],
+      "url": "https://www.town.fukuchi.lg.jp/section/kohoshi/akaikechiku/19770801.pdf",
+      "bibliographic_info": "赤池町, 1977年8月1日",
+      "notes": "同時代の自治体広報。町内で実際に流通していた不幸の手紙の規則と、受信者への行政上の対応勧告を記録する。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "reliable_secondary_or_research",
+      "title": "「不幸の手紙」は忘れた頃にやってくる―100年史の研究に向けて",
+      "locator": "The Research Center for Nonwritten Cultural Materials, No.48, pp.18-20 (2022)",
+      "accessed_at": "2026-09-25",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X"
+      ],
+      "url": "https://kanagawa-u.repo.nii.ac.jp/records/15255",
+      "bibliographic_info": "丸山泰明, 2022年9月30日, 神奈川大学日本常民文化研究所 非文字資料研究センター",
+      "notes": "長期的なチェーンレター研究を要約する研究エッセイ。1920年代の幸運の手紙から1970年頃の不幸の手紙への変化を扱う。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "reliable_secondary_or_research",
+      "title": "［研究ノート］「幸運の手紙」についての一考察",
+      "locator": "国立歴史民俗博物館研究報告 第174集 (2012), pp.309-317",
+      "accessed_at": "2026-09-25",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X"
+      ],
+      "url": "https://doi.org/10.15024/00002041",
+      "bibliographic_info": "丸山泰明, 2012年3月30日",
+      "notes": "1922年以降の日本の幸運の手紙を歴史資料から検討する。0025の直接形ではなく、制裁型への前史・Entry境界の確認に用いる。"
+    },
+    {
+      "source_id": "SRC-004",
+      "source_type": "later_summary_or_commentary",
+      "title": "“不幸の手紙” その流行と禁止の現代史",
+      "locator": "Web Mu, 不幸の手紙の1970年流行と当時の典型例を紹介する箇所",
+      "accessed_at": "2026-09-25",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "H",
+        "X"
+      ],
+      "url": "https://web-mu.jp/history/27356/",
+      "bibliographic_info": "初見健一, Web Mu, 2023年",
+      "notes": "丸山泰明の研究と1970年11月26日付読売新聞等を参照する後代解説。新聞原紙は本実行では直接確認していない。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "「“不幸の手紙”をなくそう！」本文",
+      "content": "1977年8月、赤池町内に「不幸の手紙」が届いており、受信者は数日以内に20人へ同じ文面の手紙を出さなければ必ず不幸が訪れる、とする内容だった。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-001",
+      "locator": "「“不幸の手紙”をなくそう！」本文",
+      "content": "同広報は、受信者の中に悩む人がいることを記し、受け取った場合は破り捨てるか近くの派出所へ届けるよう勧告している。",
+      "representation": "paraphrase",
+      "notes": "これは伝承内部の回避法ではなく、流通に対する現実側の行政対応である。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-002",
+      "locator": "研究エッセイ本文・定義部分",
+      "content": "「不幸の手紙」は、同じ文面を書き写して決められた人数・時間内に送ることを要求し、従わないと不幸になるとするチェーンレターとして説明される。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-002",
+      "locator": "研究エッセイ本文・1970年頃への変化を述べる部分",
+      "content": "従来の「幸運の手紙」から、幸運が訪れる要素が消えた「不幸の手紙」が1970年頃に爆発的に流行した、と整理されている。",
+      "representation": "paraphrase"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-003",
+      "locator": "1922年の日本語・英語チェーンレターを検討する部分",
+      "content": "1922年に確認される先行する「幸運の手紙」では、一定時間内に複数人へ同文を送り、連鎖を止めれば悪運が訪れる一方、連鎖すれば幸運が来るという正負両方の要素があった。",
+      "representation": "paraphrase",
+      "notes": "0025ではなく、0024型との境界を示す前史Evidenceとして用いる。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-004",
+      "locator": "1970年11月26日付読売新聞の紹介部分",
+      "content": "後代解説が紹介する1970年の典型例では、50時間以内に29人へ同文を送るよう要求し、従わなければ不幸が来るとする文面だった。",
+      "representation": "paraphrase",
+      "uncertainty": "1970年の新聞原紙は本実行で直接閲覧しておらず、後代解説を介した確認である。"
+    },
+    {
+      "evidence_id": "EVD-007",
+      "source_id": "SRC-004",
+      "locator": "1970年の流行史を述べる部分",
+      "content": "後代解説は、1970年秋に「不幸の手紙」が出現し、1970年頃から全国的にも社会問題となり、同年11月には新聞が多数の相談・苦情を扱ったとする。",
+      "representation": "paraphrase",
+      "uncertainty": "1970年新聞原紙の直接確認ではない。"
+    }
+  ],
+  "notes": "0025は「不転送時の不幸」を主作用とする戦後の制裁前景型を対象とし、1922年型の「幸運の手紙」は前史・境界確認にのみ使用する。1970年型の具体的な50時間・29人は後代解説経由、1977年型の数日・20人は同時代自治体広報で直接確認できる。"
+}
