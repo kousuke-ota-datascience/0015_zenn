@@ -52,10 +52,13 @@
       "manifestation": "郵便で届くチェーンレター／チェーン葉書。",
       "content_refs": [
         "CNT-001",
+        "CNT-002",
         "CNT-006"
       ],
       "evidence_refs": [
-        "EVD-002"
+        "EVD-001",
+        "EVD-002",
+        "EVD-003"
       ]
     },
     {
