@@ -356,7 +356,9 @@ Review後修正:
 3. 実際の再調査・修正へ入る直前に `research_started` を発行する。
 4. Workflow 90成功後、Statusは `調査中` でなければならない。
 
-Pass Review、stale/diverged Review、artifact更新後、対象外、未知artifactでは開始eventをBLOCKする。重複eventはidempotentとする。
+上流変更によるdownstream invalidation等で、直前ReviewがPassの `完了` artifactを実際に再調査・変更する場合も、current artifact / control plane post-SHA / Pass Review targetがexact一致することを条件に、明示 `research_started` で `完了 -> 調査中` として再オープンできる。
+
+stale/diverged Review、artifact更新済み、対象外、未知artifactでは開始eventをBLOCKする。重複eventはidempotentとする。
 
 ## 10.2. review start event
 
