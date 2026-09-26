@@ -12,7 +12,7 @@ from urllib.request import Request, urlopen
 DEFAULT_DATA_SOURCE_ID = "3dee5855-be39-807e-90c7-000bb6d72cd3"
 NOTION_VERSION = os.environ.get("NOTION_VERSION", "2025-09-03")
 ALLOWED_STATUSES = frozenset(
-    {"未", "レビュー待", "要修正", "再作業中", "再レビュー待", "完了", "－（対象外）"}
+    {"未", "調査中", "レビュー待", "レビュー中", "要修正", "再レビュー待", "完了", "－（対象外）"}
 )
 
 # Current production names are pre/post-commitSHA. The aliases keep the
