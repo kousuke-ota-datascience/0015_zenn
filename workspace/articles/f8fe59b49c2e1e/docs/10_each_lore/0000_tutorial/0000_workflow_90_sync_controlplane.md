@@ -29,11 +29,16 @@
 
 内部イベント:
 
-- `correction_started: [Artifact...]`
-  - Workflow 00がWorkflow 10のcorrection phaseへ実遷移した場合、またはWorkflow 10が既存Review Findingへのcorrectionとして明示実行され、対象artifactの修正作業へ実遷移する場合だけ発行する。
-  - ユーザー入力そのものをeventとして扱わない。
-  - `Entry_ID` やReview存在だけから推測しない。
-  - `reconcile.py` が適用可能性を決定論的に検査する。
+- `research_started: [Artifact...]`
+  - Workflow 00 / 10が、対象artifactについて初回生成またはReview後修正の**調査タスクへ実遷移**した場合だけ発行する。
+  - 初回生成では `未 -> 調査中`、Review後修正では `要修正 -> 調査中` を表す。
+  - `Entry_ID`、artifactの存在、Review Findingの存在だけから推測しない。
+- `review_started: [Artifact...]`
+  - Workflow 20が `review_writer prepare` によりReview targetを固定し、semantic Reviewへ**実遷移**する直前に発行する。
+  - 初回Review / re-reviewを共通に `レビュー中` として表す。
+  - 同一Review cycleで変更のない既Pass artifactも00 / 10 / 20の3点セットとして再Reviewする場合は対象に含めてよい。
+
+両eventとも `reconcile.py` が適用可能性を決定論的に検査する。同一artifactについてresearchとReviewの開始eventを同時に発行してはならない。
 
 ## 2.2. 出力
 
@@ -61,44 +66,50 @@
 
 ## 4.1. Status正本
 
-`Status` は以下の7値のみを許容する。
+`Status` は以下の8値のみを許容する。
 
 | Status | 定義 |
 |---|---|
-| `未` | Coder作業未着手 |
-| `レビュー待` | 初回Coder成果物commit完了、初回Review待ち |
-| `要修正` | Reviewで修正要求が確定し、修正成果物commit前 |
-| `再作業中` | CoderがReview指摘への修正作業中 |
-| `再レビュー待` | 修正成果物commit完了、再Review待ち |
-| `完了` | 対象artifactの最新ReviewがPass |
+| `未` | 調査タスク未着手 |
+| `調査中` | 調査タスク実施中。初回作成とReview後修正を区別せずこの値を使用する |
+| `レビュー待` | 初回canonical artifact commit完了、初回Review待ち |
+| `レビュー中` | Reviewタスク実施中。初回Review / re-reviewを区別せずこの値を使用する |
+| `要修正` | Reviewで修正要求が確定し、次の調査タスク未着手 |
+| `再レビュー待` | Review後の調査・修正成果物commit完了、次Review待ち |
+| `完了` | 対象artifactのlatest applicable Reviewがcurrent版に対してPass |
 | `－（対象外）` | 当該成果物を適用対象外と明示した状態 |
 
+- `再作業中` は廃止し、責務を `調査中` へ統合する。
 - Notion `伝承エントリ調査状況.Status` のSelect optionsを機械的許容値の正本とする。
-- `reconcile.py` は上記7値以外を受け入れずBLOCKする。
+- `reconcile.py` は上記8値以外を受け入れずBLOCKする。
 - `－（対象外）` はGit / Review事実だけから自動付与しない。
 
 ## 4.2. Status遷移
 
-Legacy標準Workflowで確定していた状態遷移を継承する。
-
 | イベント | Status | 最新レビュー版 | pre-SHA | post-SHA |
 |---|---|---|---|---|
+| 初回調査開始 | `調査中` | 変更なし | 変更なし | commit確定まで空欄 |
 | 初回Coder成果物commit完了 | `レビュー待` | 変更なし | 編集入力checkpoint | 新成果物commit |
+| 初回Review開始 | `レビュー中` | 変更なし | 変更なし | 変更なし |
 | Reviewで修正要求確定 | `要修正` | 実施済みReview Seq | 変更なし | 変更なし |
 | Review Pass確定 | `完了` | 実施済みReview Seq | 変更なし | 変更なし |
-| 修正開始 | `再作業中` | 変更なし | `old post-SHA` | commit確定まで`old post-SHA`保持 |
+| Review後の調査開始 | `調査中` | 変更なし | `old post-SHA` | commit確定まで`old post-SHA`保持 |
 | 修正成果物commit完了 | `再レビュー待` | 変更なし | 修正開始時の値を保持 | 新成果物commit |
-| 再Reviewで修正要求 | `要修正` | 新Review Seq | 変更なし | 変更なし |
-| 再Review Pass | `完了` | 新Review Seq | 変更なし | 変更なし |
+| re-review開始 | `レビュー中` | 変更なし | 変更なし | 変更なし |
+| re-reviewで修正要求 | `要修正` | 新Review Seq | 変更なし | 変更なし |
+| re-review Pass | `完了` | 新Review Seq | 変更なし | 変更なし |
 
 追加規則:
 
-- `再レビュー待` では、最新Review targetが現artifactのancestorであることは正常状態であり、stale ReviewとしてBLOCKしない。
-- `再作業中` では、直前の修正要求Reviewが最新Reviewとして残っていても `要修正` へ巻き戻さない。
-- `完了` 後にcanonical artifactが更新された場合、その版は未Reviewなので `再レビュー待` へ戻す。
-- `要修正 -> 再作業中` は、Workflow 00または明示的correctionとして実行中のWorkflow 10から `correction_started` eventが渡され、current artifact / control plane post-SHA / latest non-Pass Review targetがexact一致する場合だけ許可する。
-- eventの重複実行はidempotentとし、すでに `再作業中` ならNOOPとする。
-- Pass Review、stale Review、artifact更新後、対象外、未知artifactに対するcorrection startはBLOCKする。
+- Workflow 00は開始時のstate classification/finalization後、Workflow 10の実作業へ入る直前に `research_started` を発行する。これにより初回作成でも `未 -> 調査中` を明示する。
+- `調査中` では、Review後修正の場合に直前のnon-Pass Reviewがlatest Reviewとして残っていても `要修正` へ巻き戻さない。
+- `再レビュー待` では、latest Review targetがcurrent artifactのancestorであることは正常状態であり、stale ReviewとしてBLOCKしない。
+- Workflow 20はtarget freeze後、semantic Review開始前に `review_started` を発行する。`レビュー中` では新Review JSONが未保存の間、直前ReviewまたはReview未存在の状態を理由に待機状態へ巻き戻さない。
+- 同一Review cycleは00 / 10 / 20の3点セットなので、re-review時に変更されなかった `完了` artifactも、current版と直前Pass Reviewがexact一致する場合は `レビュー中` へ遷移できる。
+- `レビュー中` にcanonical artifactが更新された場合はReview target freeze違反としてBLOCKする。
+- `完了` 後にReview外でcanonical artifactが更新された場合、そのcurrent版は未Reviewなので `再レビュー待` へ戻す。
+- task-start eventの重複実行はidempotentとする。
+- static Git / Review factsだけから `調査中` / `レビュー中` を推測して自動付与しない。
 
 # 5. 実行手順
 
@@ -192,7 +203,8 @@ payload概念形:
     "review_target:00": "exact"
   },
   "events": {
-    "correction_started": []
+    "research_started": [],
+    "review_started": []
   }
 }
 ```
@@ -258,20 +270,17 @@ post_update_verification_error
 
 ```text
 python -m src.status_management.sync_controlplane <Entry_ID>
-python -m src.status_management.sync_controlplane <Entry_ID> --correction-started <Artifact>
+python -m src.status_management.sync_controlplane <Entry_ID> --research-started <Artifact>
+python -m src.status_management.sync_controlplane <Entry_ID> --review-started <Artifact>
 ```
 
-は削除しない。
+- `--research-started` は明示的な調査タスク開始eventを渡す内部運用option。
+- `--review-started` は明示的なReviewタスク開始eventを渡す内部運用option。
+- いずれも `00 / 10 / 20` のみを許容し、複数artifactはoptionを反復する。
+- 通常syncでは指定しない。
+- 同一artifactへ両optionを同時指定してはならない。
 
-`--correction-started` は明示的なcorrection開始eventを渡すための内部運用optionであり、`00 / 10 / 20` のみを許容する。複数artifactを開始する場合はoptionを反復する。通常syncでは指定してはならない。
-
-ただしこのadapterは:
-
-- Notion Public API tokenを持つbatch / CI / external runtime
-
-向けのoptional adapterであり、本番チャットWorkflow 00/90の必須経路ではない。
-
-adapterも内部では同じ `reconcile.py` を使用しなければならず、event指定時も適用可否を独自判定してはならない。
+このadapterはNotion Public API tokenを持つbatch / CI / external runtime向けoptional adapterであり、本番チャットWorkflow 00/90の必須経路ではない。adapterも内部では同じ `reconcile.py` を使用し、event適用可否を独自判定しない。
 
 # 6. SHA関係の解釈
 
@@ -307,10 +316,12 @@ Artifact 20 -> review_20_analysis.schema.json
 
 # 8. Workflowからの呼出し
 
-- Workflow 10は作業開始前、canonical artifact commit後、Review修正後、完了時に必要に応じWorkflow 90を呼ぶ。
-- Workflow 10が既存Review Findingへのcorrectionとして単独実行される場合、通常の事前同期を通過した後、対象artifactを実際に編集し始める直前に `correction_started` を付けてWorkflow 90を再実行する。
-- Workflow 00経由で同じeventが先に反映されている場合、Workflow 10側の重複eventはidempotentなNOOPとして扱う。
-- Workflow 20はcontrol planeを直接更新せず、必要な整合確認をWorkflow 90へ委譲する。
+- Workflow 10は通常の事前同期後、対象artifactの調査・作成・修正へ実際に入る直前に `research_started` を付けてWorkflow 90を実行する。
+- 初回生成でもReview後修正でも同じeventを使用し、作業中Statusは `調査中` に統一する。
+- Workflow 00経由で同じ `research_started` eventが先に反映済みの場合、Workflow 10側の重複eventはidempotentなNOOPとして扱う。
+- Workflow 20はReview開始条件を検査し `review_writer prepare` で00 / 10 / 20のtargetをfreezeした後、semantic Reviewを開始する直前に `review_started: [00, 10, 20]` をWorkflow 90へ渡す。
+- Workflow 20はcontrol planeを直接更新せず、開始・完了時の同期をWorkflow 90へ委譲する。
+- Review JSON write / push後の通常同期で `レビュー中` は新Review結果に応じて `完了` または `要修正` へ収束する。
 
 # 9. 不変条件
 
@@ -325,32 +336,44 @@ Artifact 20 -> review_20_analysis.schema.json
 - mutation直前の再読と更新後verifyを省略しないこと。
 - control planeからEvidence内容やD01〜D21妥当性を推定しないこと。
 
-# 10. correction start event
+# 10. task start events
 
-`要修正 -> 再作業中` は、correction作業への**実遷移**を表す明示eventによってのみ行う。
+## 10.1. research start event
 
-event発生経路:
+`research_started` はWorkflow 10の調査タスクへの**実遷移**を表す。
 
-### 10.1. Workflow 00経由
+初回生成:
 
-1. ユーザーがWorkflow 00 + Entry_IDで本番E2E継続を明示依頼している。
-2. Workflow 00が `CORRECTION_REQUIRED` を確認する。
-3. Workflow 00が実際にWorkflow 10 correction phaseへ入る。
-4. その時点で対象artifactに `correction_started` eventを発行する。
+1. Workflow 00 / 10が対象Entryを確定し、通常Workflow 90同期を完了する。
+2. 対象artifactが `未` で、まだcurrent canonical / Review factが存在しないことを確認する。
+3. 実際の典拠調査・artifact作成へ入る直前に `research_started` を発行する。
+4. Workflow 90成功後、Statusは `調査中` でなければならない。
 
-### 10.2. Workflow 10単独correction
+Review後修正:
 
-1. Workflow 10が既存Review Findingへのcorrectionとして明示的に実行されている。
-2. 最初の通常Workflow 90同期が `PASS / UPDATED` であり、修正開始を妨げるstale / divergence / checkpoint不整合がない。
-3. 適用可能なFindingを持つ修正対象artifactが確定している。
-4. 対象artifactを実際に編集し始める直前に `correction_started` eventを発行する。
+1. applicable non-Pass Reviewと修正対象artifactを確定する。
+2. current artifact / control plane post-SHA / latest non-Pass Review targetがexact一致する。
+3. 実際の再調査・修正へ入る直前に `research_started` を発行する。
+4. Workflow 90成功後、Statusは `調査中` でなければならない。
 
-### 10.3. 共通適用条件
+Pass Review、stale/diverged Review、artifact更新後、対象外、未知artifactでは開始eventをBLOCKする。重複eventはidempotentとする。
 
-- `reconcile.py` がcurrent artifact / control plane post-SHA / latest non-Pass Review targetのexact一致を検証する。
-- Pass Review、stale Review、artifact更新済み、対象外、未知artifactではBLOCKする。
-- `Entry_ID`、Review存在、通常syncだけからeventを推測しない。
-- 同じeventの重複実行はidempotentとし、すでに `再作業中` ならNOOPとする。
+## 10.2. review start event
 
-上記のいずれかの明示的event発生経路と共通適用条件を満たした場合だけ `再作業中` へ遷移する。
+`review_started` はWorkflow 20のReviewタスクへの**実遷移**を表す。
+
+1. Workflow 20開始条件とdeterministic validationを満たす。
+2. `review_writer prepare <Entry_ID>` により00 / 10 / 20のtarget commit/blobと次Review Seqをfreezeする。
+3. semantic Reviewへ入る直前に `review_started: [00, 10, 20]` を発行する。
+4. Workflow 90成功後、Review対象3artifactのStatusは `レビュー中` でなければならない。
+5. Review write / push後の通常Workflow 90同期で、新Review factに従い `完了` または `要修正` へ収束する。
+
+初回Reviewでは `レビュー待 -> レビュー中`、re-reviewでは `再レビュー待 -> レビュー中` を基本とする。同一3点Review cycleで変更されなかったartifactは、直前Reviewがcurrent版にexact一致するPassであれば `完了 -> レビュー中` を許容する。
+
+## 10.3. 共通不変条件
+
+- task開始は `Entry_ID` や静的なGit / Review状態だけから推測しない。
+- 同一artifactに `research_started` と `review_started` を同時に発行しない。
+- event適用可否は `reconcile.py` を唯一の決定論的正本とする。
+- eventの重複実行はidempotentでなければならない。
 
