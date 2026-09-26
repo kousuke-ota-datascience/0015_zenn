@@ -219,6 +219,37 @@ def test_review_start_moves_rereview_wait_to_reviewing():
     assert _changes(result) == {"Status": "レビュー中"}
 
 
+def test_research_start_can_reopen_completed_passed_artifact():
+    cp, git, reviews = _snapshots(
+        _cp("完了", latest=1, post="g" * 40),
+        review00=_review("Pass", seq=1),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
+        research_started={"00"},
+    )
+    assert result.outcome == "UPDATE"
+    assert _changes(result) == {"Status": "調査中"}
+
+
+def test_repeated_research_start_after_completed_reopen_is_idempotent():
+    cp, git, reviews = _snapshots(
+        _cp("調査中", latest=1, post="g" * 40),
+        review00=_review("Pass", seq=1),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
+        research_started={"00"},
+    )
+    assert result.outcome == "NOOP"
+
+
 def test_review_start_can_include_unchanged_completed_artifact():
     cp, git, reviews = _snapshots(
         _cp("完了", latest=1, post="g" * 40),
