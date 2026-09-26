@@ -50,8 +50,27 @@ def _changes(result):
     return result.mutations[0].changes
 
 
-def test_status_un_to_review_wait():
-    cp, git, reviews = _snapshots(_cp("未", post=None))
+def test_initial_research_start_moves_un_to_research():
+    cp, git, reviews = _snapshots(
+        _cp("未"),
+        git00=_git(exists=False, commit=None, blob=None),
+    )
+    result = reconcile(cp, git, reviews, {}, research_started={"00"})
+    assert result.outcome == "UPDATE"
+    assert _changes(result) == {"Status": "調査中"}
+
+
+def test_repeated_initial_research_start_is_idempotent():
+    cp, git, reviews = _snapshots(
+        _cp("調査中"),
+        git00=_git(exists=False, commit=None, blob=None),
+    )
+    result = reconcile(cp, git, reviews, {}, research_started={"00"})
+    assert result.outcome == "NOOP"
+
+
+def test_initial_commit_moves_research_to_review_wait():
+    cp, git, reviews = _snapshots(_cp("調査中", post=None))
     result = reconcile(cp, git, reviews, {})
     assert result.outcome == "UPDATE"
     assert _changes(result) == {"post-SHA": "g" * 40, "Status": "レビュー待"}
@@ -63,13 +82,32 @@ def test_reconcile_idempotent_review_wait_no_review():
     assert result.outcome == "NOOP"
 
 
+def test_review_start_moves_initial_wait_to_reviewing():
+    cp, git, reviews = _snapshots(_cp("レビュー待", post="g" * 40))
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact"},
+        review_started={"00"},
+    )
+    assert result.outcome == "UPDATE"
+    assert _changes(result) == {"Status": "レビュー中"}
+
+
+def test_active_initial_review_without_persisted_review_is_stable():
+    cp, git, reviews = _snapshots(_cp("レビュー中", post="g" * 40))
+    result = reconcile(cp, git, reviews, {("cp_post", "00"): "exact"})
+    assert result.outcome == "NOOP"
+
+
 @pytest.mark.parametrize(
     ("verdict", "expected"),
     [("Pass", "完了"), ("Minor", "要修正"), ("Moderate", "要修正"), ("Major", "要修正")],
 )
-def test_review_exact_sets_status(verdict, expected):
+def test_new_exact_review_finishes_reviewing(verdict, expected):
     cp, git, reviews = _snapshots(
-        _cp("レビュー待", post="g" * 40),
+        _cp("レビュー中", latest=None, post="g" * 40),
         review00=_review(verdict),
     )
     result = reconcile(
@@ -84,10 +122,41 @@ def test_review_exact_sets_status(verdict, expected):
     assert changes["最新レビュー版"] == 1
 
 
-def test_active_rework_does_not_roll_back_to_needs_fix():
+def test_explicit_correction_research_start_moves_needs_fix_to_research():
     cp, git, reviews = _snapshots(
-        _cp("再作業中", latest=None, post="g" * 40),
-        review00=_review("Major"),
+        _cp("要修正", latest=1, post="g" * 40),
+        review00=_review("Major", seq=1),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
+        research_started={"00"},
+    )
+    assert result.outcome == "UPDATE"
+    assert _changes(result) == {"Status": "調査中"}
+
+
+def test_repeated_correction_research_start_is_idempotent():
+    cp, git, reviews = _snapshots(
+        _cp("調査中", latest=1, post="g" * 40),
+        review00=_review("Major", seq=1),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
+        research_started={"00"},
+    )
+    assert result.outcome == "NOOP"
+
+
+def test_active_research_does_not_roll_back_to_needs_fix():
+    cp, git, reviews = _snapshots(
+        _cp("調査中", latest=1, post="g" * 40),
+        review00=_review("Major", seq=1),
     )
     result = reconcile(
         cp,
@@ -95,13 +164,28 @@ def test_active_rework_does_not_roll_back_to_needs_fix():
         reviews,
         {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
     )
-    assert result.outcome == "UPDATE"
-    changes = _changes(result)
-    assert changes == {"最新レビュー版": 1}
+    assert result.outcome == "NOOP"
 
 
-@pytest.mark.parametrize("status", ["要修正", "再作業中", "再レビュー待", "完了"])
-def test_stale_review_moves_correction_states_to_rereview(status):
+def test_research_start_on_passed_review_blocks():
+    cp, git, reviews = _snapshots(
+        _cp("要修正", latest=1, post="g" * 40),
+        review00=_review("Pass", seq=1),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
+        research_started={"00"},
+    )
+    assert result.outcome == "BLOCKED"
+    assert result.mutations == ()
+    assert "research_start_on_passed_review:00" in result.issues
+
+
+@pytest.mark.parametrize("status", ["要修正", "調査中", "再レビュー待", "完了"])
+def test_stale_review_moves_post_research_states_to_rereview(status):
     cp, git, reviews = _snapshots(
         _cp(status, latest=1, post="g" * 40),
         review00=_review("Major", seq=1, commit="o" * 40),
@@ -117,6 +201,53 @@ def test_stale_review_moves_correction_states_to_rereview(status):
     else:
         assert result.outcome == "UPDATE"
         assert _changes(result)["Status"] == "再レビュー待"
+
+
+def test_review_start_moves_rereview_wait_to_reviewing():
+    cp, git, reviews = _snapshots(
+        _cp("再レビュー待", latest=1, post="g" * 40),
+        review00=_review("Major", seq=1, commit="o" * 40),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact", ("review_target", "00"): "left_ancestor"},
+        review_started={"00"},
+    )
+    assert result.outcome == "UPDATE"
+    assert _changes(result) == {"Status": "レビュー中"}
+
+
+def test_review_start_can_include_unchanged_completed_artifact():
+    cp, git, reviews = _snapshots(
+        _cp("完了", latest=1, post="g" * 40),
+        review00=_review("Pass", seq=1),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
+        review_started={"00"},
+    )
+    assert result.outcome == "UPDATE"
+    assert _changes(result) == {"Status": "レビュー中"}
+
+
+def test_repeated_review_start_is_idempotent():
+    cp, git, reviews = _snapshots(
+        _cp("レビュー中", latest=1, post="g" * 40),
+        review00=_review("Major", seq=1, commit="o" * 40),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "exact", ("review_target", "00"): "left_ancestor"},
+        review_started={"00"},
+    )
+    assert result.outcome == "NOOP"
 
 
 def test_completed_artifact_update_becomes_rereview_wait():
@@ -140,6 +271,25 @@ def test_completed_artifact_update_becomes_rereview_wait():
     assert changes["Status"] == "再レビュー待"
 
 
+def test_artifact_change_during_review_blocks():
+    old = "o" * 40
+    new = "n" * 40
+    cp, git, reviews = _snapshots(
+        _cp("レビュー中", latest=1, post=old),
+        git00=_git(commit=new),
+        review00=_review("Pass", seq=1, commit=old),
+    )
+    result = reconcile(
+        cp,
+        git,
+        reviews,
+        {("cp_post", "00"): "left_ancestor", ("review_target", "00"): "left_ancestor"},
+    )
+    assert result.outcome == "BLOCKED"
+    assert result.mutations == ()
+    assert "artifact_changed_during_review:00" in result.issues
+
+
 def test_target_outside_is_never_inferred_or_cleared():
     cp, git, reviews = _snapshots(_cp("－（対象外）"))
     result = reconcile(cp, git, reviews, {})
@@ -153,52 +303,20 @@ def test_diverged_controlplane_blocks_without_mutation():
     assert result.mutations == ()
     assert "unsafe_controlplane_sha_relation:00:diverged" in result.issues
 
-def test_explicit_correction_start_moves_needs_fix_to_active_rework():
-    cp, git, reviews = _snapshots(
-        _cp("要修正", latest=1, post="g" * 40),
-        review00=_review("Major", seq=1),
-    )
+
+def test_conflicting_task_start_events_block():
+    cp, git, reviews = _snapshots(_cp("レビュー待", post="g" * 40))
     result = reconcile(
         cp,
         git,
         reviews,
-        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
-        correction_started={"00"},
-    )
-    assert result.outcome == "UPDATE"
-    assert _changes(result) == {"Status": "再作業中"}
-
-
-def test_repeated_correction_start_is_idempotent():
-    cp, git, reviews = _snapshots(
-        _cp("再作業中", latest=1, post="g" * 40),
-        review00=_review("Major", seq=1),
-    )
-    result = reconcile(
-        cp,
-        git,
-        reviews,
-        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
-        correction_started={"00"},
-    )
-    assert result.outcome == "NOOP"
-
-
-def test_correction_start_on_passed_review_blocks():
-    cp, git, reviews = _snapshots(
-        _cp("要修正", latest=1, post="g" * 40),
-        review00=_review("Pass", seq=1),
-    )
-    result = reconcile(
-        cp,
-        git,
-        reviews,
-        {("cp_post", "00"): "exact", ("review_target", "00"): "exact"},
-        correction_started={"00"},
+        {("cp_post", "00"): "exact"},
+        research_started={"00"},
+        review_started={"00"},
     )
     assert result.outcome == "BLOCKED"
     assert result.mutations == ()
-    assert "correction_start_on_passed_review:00" in result.issues
+    assert "conflicting_task_start_events:00" in result.issues
 
 
 def test_reconcile_payload_is_json_friendly():
@@ -251,13 +369,12 @@ def test_reconcile_payload_is_json_friendly():
             "cp_post:00": "exact",
             "review_target:00": "exact",
         },
-        "events": {"correction_started": ["00"]},
+        "events": {"research_started": ["00"], "review_started": []},
     }
     result = reconcile_payload(payload)
     assert result == {
         "outcome": "UPDATE",
         "summary": "1 artifact state(s) require synchronization",
         "issues": [],
-        "mutations": [{"artifact": "00", "changes": {"Status": "再作業中"}}],
+        "mutations": [{"artifact": "00", "changes": {"Status": "調査中"}}],
     }
-
