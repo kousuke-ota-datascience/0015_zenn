@@ -441,6 +441,7 @@ Workflow 00はtask実行意思を、静的なEntry状態ではなく**実際のW
 
 - NEW / PARTIALで初回生成へ入る場合: `未 -> 調査中`
 - CORRECTION_REQUIREDで修正へ入る場合: `要修正 -> 調査中`
+- 上流変更の影響で直前Passの下流artifactを実際に再調査・変更する場合: exact Pass/current版一致を条件に `完了 -> 調査中`
 - Workflow 00のstate classification / next-task finalization後、対象artifactの実作業へ入る直前に発行する。
 - Review後修正ではcurrent artifact / control plane post-SHA / latest non-Pass Review targetのexact一致をWorkflow 90が検証する。
 - 重複eventはidempotentとする。
