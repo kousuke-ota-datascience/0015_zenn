@@ -51,19 +51,21 @@ def _validate_research_start(
     review_relation: str,
 ) -> str | None:
     """Return an issue code when a research-start event is not applicable."""
-    if cp.status not in {"未", "要修正", "調査中"}:
+    if cp.status not in {"未", "要修正", "調査中", "完了"}:
         return f"research_start_invalid_status:{artifact}:{cp.status}"
 
     # Initial generation: no committed artifact/checkpoint and no Review fact yet.
     if cp.post_sha is None and review is None:
+        if cp.status not in {"未", "調査中"}:
+            return f"research_start_invalid_initial_status:{artifact}:{cp.status}"
         if git is not None and git.exists:
             return f"research_start_initial_artifact_already_committed:{artifact}"
         return None
 
-    # Post-Review correction: the current artifact, control-plane checkpoint,
-    # and latest non-Pass Review target must all identify the same version.
-    if cp.status not in {"要修正", "調査中"}:
-        return f"research_start_invalid_status:{artifact}:{cp.status}"
+    # Any re-opened committed artifact must still match its control-plane
+    # checkpoint. The Review relation then determines which explicit task is
+    # being resumed: correction after non-Pass, or downstream re-research of a
+    # previously passed artifact.
     if git is None or not git.exists or not git.commit_sha or not git.blob_sha:
         return f"research_start_missing_artifact:{artifact}"
     if not cp.post_sha:
@@ -76,9 +78,23 @@ def _validate_research_start(
         return f"research_start_requires_exact_review:{artifact}:{review_relation}"
     if review.target_blob_sha != git.blob_sha:
         return f"review_target_blob_mismatch:{artifact}"
-    if review.verdict == "Pass":
-        return f"research_start_on_passed_review:{artifact}"
-    return None
+
+    if cp.status == "要修正":
+        if review.verdict == "Pass":
+            return f"research_start_on_passed_review:{artifact}"
+        return None
+
+    if cp.status == "完了":
+        if review.verdict != "Pass":
+            return f"research_start_completed_without_pass:{artifact}"
+        return None
+
+    if cp.status == "調査中":
+        # Idempotent repeat after either an explicit correction start or a
+        # deliberate re-open of a previously passed artifact.
+        return None
+
+    return f"research_start_invalid_status:{artifact}:{cp.status}"
 
 
 def _validate_review_start(
