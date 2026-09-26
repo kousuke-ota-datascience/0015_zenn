@@ -287,7 +287,7 @@ python -m src.status_management.sync_controlplane <Entry_ID> --review-started <A
 - `exact`: 対象版一致。
 - control plane `post-SHA` が現artifact SHAのancestor: control planeが古い。事実から一意に更新可能ならpre/postを前進させる。
 - Review対象SHAが現artifact SHAのancestor:
-  - `再レビュー待` または修正commit直後であれば正常。
+  - `再レビュー待`、修正commit直後の `調査中`、またはre-review実施中の `レビュー中` であれば正常。
   - その他の状態ではstale ReviewとしてBLOCKする。
 - 現artifact SHAがReview対象SHAのancestor: Review target aheadとしてBLOCKする。
 - `diverged`: 自動修復せず調査対象。
