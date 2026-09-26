@@ -8,7 +8,7 @@
 
 ## Version Scope
 
-1985年の像投げ込みを起点に、阪神の不振をカーネル像の呪いで説明する共有核。
+1985年の像投げ込みを起点に、阪神が優勝できないことをカーネル像への仕打ちに伴う呪いで説明する共有核。
 
 - Included variants: VAR-001
 - Excluded variants: -
@@ -42,12 +42,12 @@
 
 - Primary: D03.WEB.WEBSITE (parent: D03.WEB)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
-- Evidence refs: EVD-002, EVD-003
+- Content refs: CNT-004
+- Evidence refs: EVD-002
 
-**Rationale:** 現代では球団・企業公式Webで言説と像履歴が流通する。
+**Rationale:** 2009年の阪神球団公式Web史料で、行方不明のカーネル像のせいでタイガースが優勝できないという『カーネル・サンダースの呪い』が公に紹介されている。
 
-**Manifestation:** 公式Web。
+**Manifestation:** 球団公式Webでの公開。
 
 ### D04 — D
 
@@ -64,10 +64,10 @@
 
 - Primary: D05.PRP.EXPLANATORY_CLAIM (parent: D05.PRP)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
+- Content refs: CNT-002
 - Evidence refs: -
 
-**Rationale:** 勝てない理由を呪いで説明する命題が中心。
+**Rationale:** 阪神が優勝できない理由を呪いで説明する命題が中心。
 
 **Manifestation:** 説明命題。
 
@@ -86,10 +86,10 @@
 
 - Primary: D07.DCF.MISFORTUNE_STREAK (parent: D07.DCF)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
+- Content refs: CNT-002
 - Evidence refs: EVD-002
 
-**Rationale:** 長期間日本一になれない等の不運の連続が意味形成対象。
+**Rationale:** 長期間優勝できないとする不運の偏りが意味形成対象。
 
 **Manifestation:** 不運の連続。
 
@@ -117,14 +117,14 @@
 
 ### D10 — I
 
-- Primary: D10.OBJ.CURSED_OBJECT (parent: D10.OBJ)
+- Primary: D10.SUP.IMPERSONAL_CURSE (parent: D10.SUP)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
-- Evidence refs: -
+- Content refs: CNT-002
+- Evidence refs: EVD-002
 
-**Rationale:** 呪いの象徴・媒介は失われたカーネル像。
+**Rationale:** Scoped Contentでは像自体が呪力を保持するとはされず、像への仕打ちに伴う非人格的な『呪い』が競技成績を悪化させる因果源として置かれる。
 
-**Manifestation:** 呪物的対象。
+**Manifestation:** 非人格的な呪い。
 
 ### D11 — D
 
@@ -174,10 +174,10 @@
 
 - Primary: D15.LIF.LIFE_SUCCESS_FAILURE (parent: D15.LIF)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
+- Content refs: CNT-002
 - Evidence refs: -
 
-**Rationale:** 優勝・日本一という成功／失敗が帰結軸。
+**Rationale:** 阪神が優勝できないという競技上の成功／失敗が帰結軸。
 
 **Manifestation:** 成功失敗。
 
@@ -196,32 +196,32 @@
 
 - Primary: -
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
+- Content refs: CNT-002, CNT-003
 - Evidence refs: -
 
-**Rationale:** 像の発見を『解除』とみなす語りはあるが、初期共有核の確立した制御法としては固定しない。
+**Rationale:** 固定した回避・解除手順はScoped Contentから確認できない。
 
 **Manifestation:** 制御法未確定。
 
 ### D18 — D
 
 - Primary: D18.L1
-- Secondary: D18.L3
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
-- Evidence refs: EVD-003, EVD-004
+- Secondary: -
+- Content refs: CNT-002
+- Evidence refs: EVD-002
 
-**Rationale:** 呪いがチーム成績へ作用する因果は伝承内部の核。
+**Rationale:** 像への仕打ちに伴う呪いが阪神の優勝を妨げるという因果は、伝承内部の説明命題として明示される。
 
-**Manifestation:** 伝承内因果層。
+**Manifestation:** 伝承内因果層のみ。
 
 ### D19 — D
 
 - Primary: D19.NET.OPEN_FORUM_WEB (parent: D19.NET)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
-- Evidence refs: EVD-002, EVD-003
+- Content refs: CNT-004
+- Evidence refs: EVD-002
 
-**Rationale:** 球団・日本KFCの公式Webで呪い言説と像の履歴が公開されていることは直接確認できる。全国的大衆への実流通はcurrent Evidenceからは固定しない。
+**Rationale:** 2009年の阪神球団公式Web史料で呪い言説が公開されており、公開Web圏での流通はContent化されている。全国的大衆への実流通までは固定しない。
 
 **Manifestation:** 公開Web圏。
 
@@ -229,10 +229,10 @@
 
 - Primary: D20.NON.COMMON_KNOWLEDGE (parent: D20.NON)
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-003, CNT-004
+- Content refs: CNT-002, CNT-004
 - Evidence refs: -
 
-**Rationale:** 呪いの内容は公開俗説で、秘密保持者を必要としない。
+**Rationale:** 呪い言説は球団公式Webでも公に紹介され、秘密保持者を必要とする内容ではない。
 
 **Manifestation:** 特権なし。
 
@@ -249,4 +249,4 @@
 
 ## Analysis Notes
 
-D18.L3は、俗説が像の展示・『幸運の象徴』化・人形納め等の現実の文化的扱いに接続したことを示す。ただしスポーツ成績への超自然的因果を事実認定しない。
+D18は伝承内部の因果L1のみを採用する。現Evidenceは、呪い言説の流通が像の展示・『幸運の象徴』化・人形納め等の現実行為を生じさせた因果を示さないため、L3は採用しない。
