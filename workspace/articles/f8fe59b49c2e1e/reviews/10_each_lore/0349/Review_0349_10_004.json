@@ -1,0 +1,176 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "EVD-001は一定期間後の故障と『ソニータイマー』呼称を支持するが、CNT-001の『仕込まれたタイマー』、CNT-002の『メーカー側の意図的な設計・寿命設定』までは支持しない。CNT-003の『意図的な故障設計を認めてはいない』もEVD-002より強い。",
+      "status": "FINDING"
+    },
+    "narrative_reconstruction": {
+      "notes": "coverage_refs 4件のsalient meaningはBlind Decodeから復元でき、現行Contentに対するsummary LOSS/CONFLICTはない。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-001〜003のsalient情報はCNT-001〜004、VAR-001、uncertaintiesに対応しており、Evidence→Contentのomissionではなく意味の強化が問題である。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12はいずれも現行Contentとsummaryの間でsalientなLOSS/CONFLICTを確認しない。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summaryは現行Content layerの意図的設計→遅延故障、2007年質疑、品質回答、不確実性を具体的に保持している。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "成立年代・最古媒体、実故障統計との関係、意図的設計の実在性は不確実性として保持されている。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001の共有核を『意図的寿命設計への帰属』とする境界は現Content内部では一貫するが、その核自体がEVD-001の支持範囲を超える。",
+      "status": "FINDING"
+    }
+  },
+  "entry_id": "0349",
+  "findings": [
+    {
+      "category": "evidence_content_support",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "現Evidenceに合わせてContent/VAR/summaryを『一定期間後に壊れるとされるソニータイマー』まで狭めるか、意図的寿命設計を明示するSource/Evidenceを追加してから共有核を維持する。",
+      "impact": "伝承の共有核と因果主体・機序を変えるため、Version ScopeおよびD05/D09/D10/D13等のAnalysis判断に波及する。",
+      "rationale": "EVD-001が直接表すのは『一定期間が過ぎると製品が壊れる』というソニータイマーの意味と語の認識であり、メーカーの意図的設計・寿命設定までは明示しない。にもかかわらずCNT-001は『仕込まれたタイマー』、CNT-002は意図的設計、VAR-001はそれを共有核としている。CNT-003の『意図的な故障設計を認めてはいない』もEVD-002の品質改善回答を超えている。",
+      "severity": "Moderate",
+      "summary": "Contentの中心因果である『意図的寿命設計』が参照Evidenceの支持範囲を超える。",
+      "variant_refs": [
+        "VAR-001"
+      ]
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "現行summaryは、現行Contentから後続Analysisが用いる意図的設計、遅延故障、企業主体、製品対象という主要構造を保持している。",
+      "status": "PASS"
+    },
+    "blind_decode": "ソニー製品は購入後一定期間が経過した頃に故障するようメーカーが意図的に設計している、という俗説が『ソニータイマー』と呼ばれる。2007年の株主総会でこの語が質問に使われ、中鉢社長は語の存在を認識していると答えたが、ソニーは意図的な寿命設計を認めず品質向上策を説明した、という構図である。因果はメーカーの意図的設計→一定期間の遅延→正常稼働から故障への遷移で、確立した回避法や禁忌は示されない。語の成立時期、実際の故障統計との関係、意図的設計の根拠は不確実なままである。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "一定期間後に故障するよう意図的に設計されている俗説",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "一定時期後に故障するよう仕込まれた『タイマー』があるという俗説"
+      },
+      {
+        "blind_reconstruction": "因果源・機序としてメーカーの意図的寿命設計を再構成",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "故障時期をメーカーの意図的設計・寿命設定へ帰属する"
+      },
+      {
+        "blind_reconstruction": "2007年質疑、語の認識、意図的寿命設計を認めず品質向上策を説明",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "2007年に語を認識し品質策を説明、意図的故障設計は認めていない"
+      },
+      {
+        "blind_reconstruction": "2007年株主総会で語が用いられ社長が存在を認識",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "2007年株主総会で語が質問に用いられ中鉢社長が認識した"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "ソニー、ソニー製品の利用者",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "ソニー、ソニー製品の利用者"
+      },
+      {
+        "blind": "ソニー製品と利用者",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "ソニー製品と利用者"
+      },
+      {
+        "blind": "購入後一定期間の経過と故障",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "一定時期経過後の故障"
+      },
+      {
+        "blind": "俗説上はメーカーの意図的設計",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "メーカー側の意図的設計・寿命設定"
+      },
+      {
+        "blind": "一定期間後に故障するよう寿命を設計",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "仕込まれたタイマー／意図的寿命設定"
+      },
+      {
+        "blind": "正常稼働から故障へ",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "一定時期後の製品故障"
+      },
+      {
+        "blind": "一定期間を挟む遅延",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "一定期間後に故障する遅延構造"
+      },
+      {
+        "blind": "確立した規則・禁忌なし",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "規則・禁忌はContentに設定されない"
+      },
+      {
+        "blind": "回避・制御法は不明",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "回避・制御法のContentなし"
+      },
+      {
+        "blind": "製品故障",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "製品故障"
+      },
+      {
+        "blind": "語の成立時期、故障統計との関係、意図的設計の根拠が未確定",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "成立年代・最古媒体と意図的設計の実在性が未確定"
+      },
+      {
+        "blind": "『一定期間後の故障をメーカー意図へ帰属』する共有核",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001として同じ共有核を設定"
+      }
+    ],
+    "reference_story": "現行Content layerでは、『ソニータイマー』はソニー製品に一定時期後の故障を生じさせる仕込み・意図的寿命設定があるという俗説として構成される。2007年株主総会では語が質問に用いられ、中鉢社長が語の存在を認識し、ソニー側は品質向上策を説明して意図的故障設計を認めていないとされる。成立年代・最古媒体と意図的設計の実在性は未確定である。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Golden Reference 0180は粒度校正にのみ用いた。0349のsummary自体は現行Contentの具体意味を十分保持しており、問題はsummary LOSSではなくEvidence→Contentの意味強化である。",
+  "review_seq": 4,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0349_sony_timer/0349_10_contents.json",
+    "blob_sha": "963f00a5adf50a71b9d814274cf17011677c91bd",
+    "commit_sha": "925393c5849181249f29c65564d405c2704f3e32",
+    "reviewed_at": "2026-09-26T16:03:55Z"
+  },
+  "verdict": "Moderate"
+}

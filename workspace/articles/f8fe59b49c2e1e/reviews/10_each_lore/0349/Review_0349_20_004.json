@@ -1,0 +1,137 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Scoped ContentからD07/D08/D09/D10/D11/D12/D13/D15/D16/D18/D21を中心とする同じ意味形成モデルを再構成できる。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "Scoped Content上の企業の意図的寿命設計→一定期間後の製品故障という因果列をAnalysisは一貫して表現する。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisの意味論的根拠はScoped Contentに存在し、Source/Evidence-only detailを飛び越えて新規に導入する箇所は確認しない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12=製品、D13=意図的寿命設計taxonomy gap、D15=機器故障は現行Scoped Contentで一続きの作用列を形成する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみでL3を選択しておらず、独立X Evidenceを要する社会現実効果を付与していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "2007年の公開質疑の存在を全国流通へ拡張せず、D19をUとしている。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者が資料にないことをNO_ONE_KNOWSへ変換せずD20をUとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "D21.A2は典拠の実在性ではなく、Scoped Contentが実在企業ソニーと製品を明示することに基づく。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "各Dimensionの選択値は、現行Scoped Contentを前提にすれば概ねcoding rulesの中心質問と整合する。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "macro_category『企業・商品』、entry_type『企業・製品故障俗説』はScoped Contentの対象と整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "意図的寿命設計という中心因果はEVD-001/002に直接明示されないため、それに依存するDirect判定はEvidence支持強度を上回る。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "主要判断はCNT-001〜004へ参照され、Contentに存在しない新たな意味をSource/Evidenceから直接追加していない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "現行Content内では直接表現されるが、意図的寿命設計に依存するD05/D09/D10/D13をDとして確定する支持強度は上流Evidenceの直接性を超えている。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "D13で意図的寿命設計に直接対応するChildがないことをtaxonomy_gapとして明示し、無理な既存Childへの押し込みを避けている。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "Version Scopeは現行Scoped Contentの『一定期間後の故障をソニーの意図的寿命設計へ帰属』するVAR-001と一致する。上流Evidence支持の問題は別Findingとする。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0349",
+  "findings": [
+    {
+      "category": "status_reasoning",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D05",
+        "D09",
+        "D10",
+        "D13"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "Review 00/10の修正後、修正済みScoped Contentのみを使ってD05/D09/D10/D13のstatus・code・taxonomy_gapを再評価する。意図的寿命設計を明示するSource/Evidenceが追加された場合はDirect判定を再検証する。",
+      "impact": "上流ContentをEvidenceに合わせて狭めた場合、原因帰属・因果主体・機序・提示形式の一部コードが変更され得るため、現行Analysisを確定版としてPassにできない。",
+      "rationale": "Coding rulesではDは典拠に直接明示された場合のDirectである。現行Scoped Contentは意図的設計を明示するためD05/D09/D10/D13の意味論はContent内部では再構成できるが、参照元EVD-001/002は『一定期間で壊れるソニータイマー』と品質回答を示すに留まり、メーカーの意図的寿命設計を直接明示しない。したがって上流修正前にこれらを確定的Directとして維持することはevidence confidence ceilingを超える。",
+      "severity": "Moderate",
+      "summary": "意図的寿命設計に依存するDirect判定が上流Evidenceの支持強度を超える。"
+    }
+  ],
+  "review_notes": "AnalysisのContent layer bypassやD18 L3誤用は確認しない。主問題は上流Evidence支持の不足がAnalysisのDirectnessへ伝播している点である。",
+  "review_seq": 4,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003"
+    ],
+    "model": "現行Scoped Contentでは、一定期間後に起きるソニー製品の故障を、企業側が意図的に設定した製品寿命・仕込みへ原因帰属することで不可解な故障時期を説明する。作用対象は製品、機序は計画された寿命設定、帰結は機器故障、時間構造は遅延であり、実在企業・商品が現実アンカーとなる。一方、成立時期、流通範囲、制御法、特権情報保持者は確定しない。",
+    "notes": "この再構成はScoped Contentだけから成立する。FindingはContent layer bypassではなく、上流Evidenceに対するDirect判定のconfidence ceilingにある。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0349_sony_timer/0349_20_analysis.json",
+    "blob_sha": "3a4a21f93e3294e678b0d302ad41333e7b5b109c",
+    "commit_sha": "68a65f510765386d2ba6251bcbac6d60b735ead9",
+    "reviewed_at": "2026-09-26T16:03:55Z"
+  },
+  "verdict": "Moderate"
+}
