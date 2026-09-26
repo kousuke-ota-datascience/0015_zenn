@@ -89,7 +89,8 @@
 
 - validation外部入口: `python -m src.validation.validate_entry <Entry_ID> [--through 00|10|20]`。省略時は `20` まで全検証。
 - 通常のcontrol plane同期: Workflow 90を介して `python -m src.status_management.sync_controlplane <Entry_ID>`
-- Review Findingへのcorrection開始を明示する場合のみ、Workflow 90へ内部イベント `correction_started: [Artifact...]` を渡す。optional external adapterでは `--correction-started <Artifact>` を使用し、複数artifactはoptionを反復する。
+- 初回生成・Review後修正を問わず、対象artifactの調査タスクへ実際に入る直前にWorkflow 90へ内部イベント `research_started: [Artifact...]` を渡す。optional external adapterでは `--research-started <Artifact>` を使用し、複数artifactはoptionを反復する。
+- `research_started` 成功後、対象artifactのStatusは `調査中` でなければならない。
 - `schema_validator.py` / `reference_validator.py` / `taxonomy_validator.py` およびstatus management内部モジュールは本Workflowから直接呼び出さない。
 
 ## 3.5. 関連Workflow
@@ -120,9 +121,16 @@
 
 1. `Entry_ID` に対応するEntryを解決する。
 2. Entry境界を確認し、別EntryのEvidenceや分析を混入させない。
-3. Workflow 90を実行する。
+3. Workflow 90を**通常同期**として実行する。この時点ではtask-start eventを渡さない。
 4. `BLOCKED / ERROR` の場合は作業を開始しない。
-5. 既存コード、旧Excel、過去Reviewを独立判断前の正解として使用しない。
+5. current canonical / latest Review / control planeから、今回Workflow 10で実際に調査・作成・修正する最初のartifactを確定する。
+6. **そのartifactの実作業へ入る直前**にWorkflow 90へ `research_started: [Artifact]` を渡す。
+7. Workflow 90が `PASS / UPDATED` で、対象artifactのStatusが `調査中` になったことを確認してから作業する。
+8. 既存コード、旧Excel、過去Reviewを独立判断前の正解として使用しない。
+
+初回生成でもReview後修正でも同じ `調査中` を使用する。`未 -> 調査中` と `要修正 -> 調査中` の違いは開始前stateとReview factで決まり、作業中Statusを分けない。
+
+Workflow 00経由の場合、Workflow 00のstate classification / finalization後にWorkflow 10へ制御が渡されるため、最初の `research_started` はそのfinalization後に発行される。
 
 ## 5.2. Step 1: 典拠調査とEvidence収集
 
@@ -137,6 +145,7 @@
 
 ## 5.3. Step 2: `00_sources.json` 作成
 
+- 00が今回の作業対象で、Step 0でまだ `research_started: [00]` が反映されていない場合は、編集開始直前に発行し `Status=調査中` を確認する。
 - Sourceと、そのSourceから実際に利用するEvidence unitを区別して記録する。
 - 短い原文引用は必要最小限とし、参照位置を保持する。
 - SourceのEvidence上の役割、一次資料との関係、不確実性を失わない。
@@ -147,6 +156,7 @@
 
 ## 5.4. Step 3: `10_contents.json` 作成
 
+- 10が今回の作業対象なら、10の実作業開始直前にWorkflow 90へ `research_started: [10]` を発行し、`Status=調査中` を確認する。00作業時のeventを10へ流用しない。
 - `00_sources.json` のEvidenceのみを根拠として伝承内容を再構成する.
 - Evidence / Content層とAnalysis層を分離する。
 - 先に `content_units` をEvidence-faithfulに作成し、その後にsummaryへ残すべきsalient unitを選定する。
@@ -180,6 +190,7 @@
 
 ## 5.6. Step 5: `20_analysis.json` 作成
 
+- 20が今回の作業対象なら、20の実作業開始直前にWorkflow 90へ `research_started: [20]` を発行し、`Status=調査中` を確認する。上流artifactのeventを20へ流用しない。
 - `macro_category` と `entry_type` をEntry内容に基づくcanonical分類として明示する。Notion運用stateへ代替保存しない。
 - Version Scope内のContentを対象としてD01〜D21を独立に判定する。
 - 理論設計、Parent / Child code system、coding rulesを正とし、本Workflow内でコード定義を再定義しない。
@@ -207,18 +218,18 @@
 ## 5.8. Step 7: Review返却後のCoder修正
 
 - 本Stepは、既存Review Findingに対するcorrectionとしてWorkflow 10が明示的に実行された場合に適用する。
-- Review返却後、最初に通常のWorkflow 90同期を実行する。この同期では `correction_started` を渡さない。
+- Review返却後、最初に通常のWorkflow 90同期を実行する。この同期では `research_started` を渡さない。
 - stale Review、control plane更新漏れ、Review対象より新しいCoder成果物、divergenceが検出された場合は修正を開始しない。
 - current artifact / control plane post-SHA / latest non-Pass Review targetがexact一致し、適用可能なFindingを持つ修正対象artifactを確定する。
-- **対象artifactを実際に編集し始める直前**に、Workflow 90へ `correction_started: [Artifact...]` を明示して再同期する。
-  - optional external adapterを使用する場合は、対象artifactごとに `--correction-started <Artifact>` を付けて `python -m src.status_management.sync_controlplane <Entry_ID>` を実行する。
+- **対象artifactを実際に調査・編集し始める直前**に、Workflow 90へ `research_started: [Artifact...]` を明示して再同期する。
+  - optional external adapterを使用する場合は、対象artifactごとに `--research-started <Artifact>` を付けて `python -m src.status_management.sync_controlplane <Entry_ID>` を実行する。
   - Workflow 00経由ですでに同一eventが反映済みでも、重複eventはidempotentなので `PASS` / NOOPを許容する。
-- correction-start同期が `PASS / UPDATED` の場合だけ修正へ進む。対象artifactのStatusはこの時点で `再作業中` でなければならない。
-- correction-start同期が `BLOCKED / ERROR` の場合はartifactを編集せず停止する。
+- research-start同期が `PASS / UPDATED` の場合だけ修正へ進む。対象artifactのStatusはこの時点で `調査中` でなければならない。
+- research-start同期が `BLOCKED / ERROR` の場合はartifactを編集せず停止する。
 - 適用可能なFindingについてcanonical artifactを修正する。
 - Review結果そのものをCoderが遡及改変しない。
-- `00_sources.json` を修正した場合、`10_contents.json` と `20_analysis.json` への影響を再評価する。
-- `10_contents.json` を修正した場合、Version Scopeと `20_analysis.json` への影響を再評価する。
+- `00_sources.json` を修正した場合、`10_contents.json` と `20_analysis.json` への影響を再評価する。下流を実際に変更・再調査する場合、その下流artifactについても作業開始直前に `research_started` を発行する。
+- `10_contents.json` を修正した場合、Version Scopeと `20_analysis.json` への影響を再評価する。20を実際に変更・再調査する場合は `research_started: [20]` を発行する。
 - `20_analysis.json` のみの修正で上流へ影響がない場合、上流artifactを不要に更新しない。
 - 修正したcanonical artifactごとにvalidation、単独commit / push、通常のWorkflow 90同期を実行する。修正commit後は既存契約どおり `再レビュー待` へ収束する。
 - 必要な修正後、deterministic validation、成果物単位commit / push、Workflow 90同期を完了し、再Review-ready状態で停止する。Workflow 20は起動しない。
