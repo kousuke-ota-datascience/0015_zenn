@@ -211,9 +211,10 @@ class OpenAIAgentsAPI:
         Agent, _, ShellTool, SQLiteSession, WebSearchTool = self._sdk()
         session_id = f"workflow00:{entry_id}:creator:{uuid4().hex}"
         session = SQLiteSession(session_id)
+        workflow_10 = _read_text(WORKFLOW_10)
         instructions = f"""You are the Workflow 10 Creator for Entry_ID {entry_id}.
 Follow the repository's current Workflow 10 exactly:
-{WORKFLOW_10}
+{workflow_10}
 
 Boundary rules:
 - Work only as Workflow 10: research, generate/correct canonical 00/10/20,
