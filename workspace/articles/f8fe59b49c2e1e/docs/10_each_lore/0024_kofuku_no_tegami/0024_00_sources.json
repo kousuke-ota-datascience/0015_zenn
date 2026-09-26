@@ -22,7 +22,7 @@
       "source_id": "SRC-002",
       "source_type": "primary_or_contemporary",
       "title": "奇態流行史",
-      "locator": "序文。1922年刊、NDLデジタル化資料（NDL927419）",
+      "locator": "例言。1922年刊、NDLデジタル化資料（NDL927419）",
       "accessed_at": "2026-09-21",
       "relation_to_primary": "primary",
       "evidence_role": [
@@ -61,10 +61,10 @@
     {
       "evidence_id": "EVD-002",
       "source_id": "SRC-002",
-      "locator": "序文",
+      "locator": "例言",
       "representation": "paraphrase",
       "content": "宮武外骨は1922年1月下旬に『幸運の為に』という葉書が流行しているのを見たことを、流行現象を扱う本書執筆の契機の一つとして記した。",
-      "uncertainty": "序文は流行の存在を直接示すが、個々の葉書文面の全規則までは固定しない。"
+      "uncertainty": "例言は流行の存在を直接示すが、個々の葉書文面の全規則までは固定しない。"
     },
     {
       "evidence_id": "EVD-003",
