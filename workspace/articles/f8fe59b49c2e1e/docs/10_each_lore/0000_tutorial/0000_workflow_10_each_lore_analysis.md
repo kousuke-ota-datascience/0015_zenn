@@ -228,8 +228,8 @@ Workflow 00経由の場合、Workflow 00のstate classification / finalization�
 - research-start同期が `BLOCKED / ERROR` の場合はartifactを編集せず停止する。
 - 適用可能なFindingについてcanonical artifactを修正する。
 - Review結果そのものをCoderが遡及改変しない。
-- `00_sources.json` を修正した場合、`10_contents.json` と `20_analysis.json` への影響を再評価する。下流を実際に変更・再調査する場合、その下流artifactについても作業開始直前に `research_started` を発行する。
-- `10_contents.json` を修正した場合、Version Scopeと `20_analysis.json` への影響を再評価する。20を実際に変更・再調査する場合は `research_started: [20]` を発行する。
+- `00_sources.json` を修正した場合、`10_contents.json` と `20_analysis.json` への影響を再評価する。下流を実際に変更・再調査する場合、その下流artifactについても作業開始直前に `research_started` を発行する。直前ReviewがPassでStatusが `完了` のartifactでも、current artifact / control plane post-SHA / Pass Review targetがexact一致する場合は `完了 -> 調査中` として再オープンできる。
+- `10_contents.json` を修正した場合、Version Scopeと `20_analysis.json` への影響を再評価する。20を実際に変更・再調査する場合は同じ条件で `research_started: [20]` を発行する。
 - `20_analysis.json` のみの修正で上流へ影響がない場合、上流artifactを不要に更新しない。
 - 修正したcanonical artifactごとにvalidation、単独commit / push、通常のWorkflow 90同期を実行する。修正commit後は既存契約どおり `再レビュー待` へ収束する。
 - 必要な修正後、deterministic validation、成果物単位commit / push、Workflow 90同期を完了し、再Review-ready状態で停止する。Workflow 20は起動しない。
