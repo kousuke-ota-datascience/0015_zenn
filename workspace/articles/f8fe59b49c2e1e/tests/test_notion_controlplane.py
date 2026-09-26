@@ -98,7 +98,7 @@ def test_apply_mutations_rejects_concurrent_update(monkeypatch):
     assert result.error == "concurrent_update:00"
 
 
-def test_sync_forwards_explicit_correction_start(monkeypatch):
+def test_sync_forwards_explicit_task_start_events(monkeypatch):
     cp = SimpleNamespace(artifacts={}, issues=())
     git = SimpleNamespace(artifacts={})
     reviews = SimpleNamespace(latest={}, issues=())
@@ -110,16 +110,22 @@ def test_sync_forwards_explicit_correction_start(monkeypatch):
     monkeypatch.setattr(sc, "_relations", lambda *args: {})
 
     def fake_reconcile(*args, **kwargs):
-        captured["correction_started"] = tuple(kwargs.get("correction_started", ()))
+        captured["research_started"] = tuple(kwargs.get("research_started", ()))
+        captured["review_started"] = tuple(kwargs.get("review_started", ()))
         return ReconcileResult("NOOP", (), (), "fixture noop")
 
     monkeypatch.setattr(sc, "reconcile", fake_reconcile)
 
-    result = sc.sync_controlplane("0001", correction_started=("00", "20"))
+    result = sc.sync_controlplane(
+        "0001",
+        research_started=("00",),
+        review_started=("20",),
+    )
 
     assert result["result"] == "PASS"
     assert result["verified"]
-    assert captured["correction_started"] == ("00", "20")
+    assert captured["research_started"] == ("00",)
+    assert captured["review_started"] == ("20",)
 
 
 def test_sync_detects_post_update_verification_error(monkeypatch):
