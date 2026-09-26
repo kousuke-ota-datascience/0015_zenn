@@ -8,11 +8,11 @@
 
 ## Version Scope
 
-現在確認できる同時代の早い集成の一つである2009年記事に見られる複数目撃型を分析対象とする。共有核は、日常空間で通常よりはるかに小さい成人男性様存在を短時間目撃し、場所・服装・行動は一定せず、正体も確定しないこと。同じ2009年記事に含まれる物的痕跡・写真、小さい女性様存在、物体操作、身体外見変化の個別報告もScope内に保持するが、共有必須設定へ一般化しない。2012年以降に特定人物が反復して語る個人シリーズ、全国集成本、2014年のフェイクドキュメンタリー等はScope外。
+現在確認できる同時代の早い集成の一つである2009年記事に見られる複数目撃型を分析対象とする。共有核は、日常空間で通常よりはるかに小さい成人男性様存在を短時間目撃し、場所・服装・行動は一定せず、正体も確定しないこと。同じ2009年記事に含まれる物的痕跡・写真、小さい女性様存在、物体操作、身体外見変化、目撃後に犬が毎晩12時に吠えるとされる反復要素、新宿御苑写真を江戸期の狩場・タイムスリップ可能性へ結びつける筆者解釈もScope内に保持するが、共有必須設定や確定因果・存在論へ一般化しない。2012年以降に特定人物が反復して語る個人シリーズ、全国集成本、2014年のフェイクドキュメンタリー等はScope外。
 
 - Included variants: VAR-001
 - Excluded variants: VAR-002, VAR-003
-- Content refs: CNT-001, CNT-002, CNT-006, CNT-007, CNT-008, CNT-009
+- Content refs: CNT-001, CNT-002, CNT-006, CNT-007, CNT-008, CNT-009, CNT-010, CNT-011
 
 ## Dimensions
 
@@ -53,10 +53,10 @@
 
 - Primary: -
 - Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-007, CNT-008, CNT-009
-- Evidence refs: EVD-001, EVD-003, EVD-009, EVD-010, EVD-011, EVD-012
+- Content refs: CNT-001, CNT-002, CNT-007, CNT-008, CNT-009, CNT-010, CNT-011
+- Evidence refs: EVD-001, EVD-003, EVD-009, EVD-010, EVD-011, EVD-012, EVD-013, EVD-014
 
-**Rationale:** 2009年記事内には通常の目撃に加え、物的痕跡・写真・女性様存在・物体操作・身体外見変化という異質な個別報告が並存するが、それらの時間的生成順序・変化経路を示すEvidenceはない。
+**Rationale:** 2009年記事内には通常の目撃に加え、物的痕跡・写真・女性様存在・物体操作・身体外見変化、目撃後の周期的な犬の反応、歴史背景とタイムスリップを結ぶ筆者解釈という異質な個別要素が並存するが、それらが伝承全体としてどの順序で生成・変容したかを示すContentはない。
 
 **Manifestation:** Scope内の異質性は確認できるが、生成・変容の経路は不明。
 
@@ -107,24 +107,24 @@
 ### D09 — I
 
 - Primary: D09.CAT.TYPE_ASSIGNMENT (parent: D09.CAT)
-- Secondary: -
-- Content refs: CNT-001, CNT-002, CNT-007, CNT-008, CNT-009
-- Evidence refs: EVD-001, EVD-003, EVD-009, EVD-010, EVD-011, EVD-012
+- Secondary: D09.HST.HISTORICAL_ANCHOR (parent: D09.HST)
+- Content refs: CNT-001, CNT-002, CNT-007, CNT-008, CNT-009, CNT-010, CNT-011
+- Evidence refs: EVD-001, EVD-003, EVD-009, EVD-010, EVD-011, EVD-012, EVD-013, EVD-014
 
-**Rationale:** 外見・場所・行動・性別・作用が異なる複数報告を『小さいおじさん』という同じ怪異カテゴリーへまとめる意味付与が行われる。例外的な物体作用・身体作用も別の確定存在論へ分離されない。
+**Rationale:** 外見・場所・行動・性別・作用が異なる複数報告を「小さいおじさん」という同じ怪異カテゴリーへまとめる意味付与が中心である。加えて新宿御苑の「小さな侍」写真について、記事筆者は周辺が江戸期の狩場だったという背景をタイムスリップ可能性へ結びつけており、確定因果ではないが歴史的アンカーを用いる補助的意味付与として保持する。
 
-**Manifestation:** 異質な小型人型の目撃を同一類型へ分類する。
+**Manifestation:** 異質な小型人型の目撃を同一類型へ分類し、一部の写真には歴史的背景を結びつける解釈が付加される。
 
 ### D10 — U
 
 - Primary: -
 - Secondary: -
-- Content refs: CNT-001, CNT-007, CNT-008, CNT-009
-- Evidence refs: EVD-001, EVD-009, EVD-010, EVD-011, EVD-012
+- Content refs: CNT-001, CNT-007, CNT-008, CNT-009, CNT-011
+- Evidence refs: EVD-001, EVD-009, EVD-010, EVD-011, EVD-012, EVD-014
 
-**Rationale:** 資料自身が妖精・妖怪・UMA等の複数説を併記し、写真・痕跡・女性様存在・身体作用の個別報告を含めても、因果源の存在論を一つに固定していない。
+**Rationale:** Contentは妖精・妖怪・UMA等の複数説を併記し、新宿御苑写真について記事筆者がタイムスリップ可能性も推測するが、これは解釈仮説に留まり、写真・痕跡・女性様存在・身体作用等を含めても因果源の存在論を一つに固定できない。
 
-**Manifestation:** 正体・存在論は未確定。
+**Manifestation:** 妖精・妖怪・UMA・時間移動仮説など複数の説明候補が併存し、正体・因果源は未確定。
 
 ### D11 — D
 
@@ -184,13 +184,13 @@
 ### D16 — I
 
 - Primary: D16.EVT.SINGLE_OBSERVATION (parent: D16.EVT)
-- Secondary: -
-- Content refs: CNT-002, CNT-007, CNT-008, CNT-009
-- Evidence refs: EVD-002, EVD-003, EVD-009, EVD-010, EVD-011
+- Secondary: D16.REC.PERIODIC (parent: D16.REC)
+- Content refs: CNT-002, CNT-007, CNT-008, CNT-009, CNT-010
+- Evidence refs: EVD-002, EVD-003, EVD-009, EVD-010, EVD-011, EVD-013
 
-**Rationale:** Scope内の各報告は、短時間の目撃・相互作用・物体作用・身体外見変化までを一つの遭遇エピソードとして語るものが中心で、遅延・長期進行・周期等は共通構造ではない。
+**Rationale:** Scope内の共有核は短時間の目撃・相互作用・物体作用・身体外見変化までを一つの遭遇エピソードとして語る単発型である。一方、渡辺徹の個別報告では目撃後に飼い犬2匹が毎晩12時に何者かへ吠えるとされる周期的反復が語られるためSecondaryに保持する。ただし犬の反応と目撃した小男との因果は未検証で、Scope全体の共通時間構造にはしない。
 
-**Manifestation:** 短い単発の遭遇エピソード内で作用が完結する。
+**Manifestation:** 短い単発遭遇が中心だが、個別例では目撃後に毎晩12時の犬の反応という周期的反復が語られる。
 
 ### D17 — I
 
@@ -221,7 +221,7 @@
 - Content refs: CNT-001, CNT-002
 - Evidence refs: EVD-001, EVD-003
 
-**Rationale:** 2009年記事は複数の著名人・媒体由来の報告を集めるが、Scope時点の実流通範囲を全国分布として測定したEvidenceはない。後代の全国集成本を2009年へ遡及しない。
+**Rationale:** 2009年記事は複数の体験談を集成しているが、Scope時点の実流通範囲を全国分布として測定できるContentはない。後代の全国集成本を2009年へ遡及しない。
 
 **Manifestation:** 2009年時点の流通範囲は確定しない。
 
@@ -240,13 +240,13 @@
 
 - Primary: D21.A1
 - Secondary: -
-- Content refs: CNT-002, CNT-007
-- Evidence refs: EVD-002, EVD-003, EVD-012
+- Content refs: CNT-002, CNT-007, CNT-011
+- Evidence refs: EVD-002, EVD-003, EVD-012, EVD-014
 
-**Rationale:** 風呂場、洗濯機周辺、寝室、車庫等の一般的な日常空間が中心で、個別報告に新宿御苑等の具体地点があっても、特定地点・制度・史実はEntry成立条件ではない。
+**Rationale:** 風呂場、洗濯機周辺、寝室、車庫等の一般的な日常空間が中心である。新宿御苑の具体地点と江戸期の狩場という歴史背景をタイムスリップ可能性へ結ぶ個別の筆者解釈もScope内にあるが、特定地点・制度・史実がEntry全体の成立条件ではないため、一般的な現実空間を背景とするA1を維持する。
 
-**Manifestation:** 一般的な家庭・日常空間を現実背景とする。
+**Manifestation:** 一般的な家庭・日常空間を現実背景とし、一部に具体地点・歴史背景を用いた解釈が付加される。
 
 ## Analysis Notes
 
-D10は資料自身が妖精・妖怪・UMA等を併記するためU。D19は後代の『全国』集成を2009年Scopeへ遡及せずU。VAR-001内では出現・視認を共有核としてD13.MAN.MANIFEST_ONLYをPrimary(I)に維持し、物体操作・身体外見変化は個別報告としてD13 Secondaryへ保持した。D08では目撃報告をPrimaryとし、写真・物的痕跡を独立した追加の意味形成契機としてSecondaryに保持した。
+D10は妖精・妖怪・UMA等に加えタイムスリップ仮説もContent上の解釈候補として確認できるが、いずれも確定因果源ではないためU。D19は後代の「全国」集成を2009年Scopeへ遡及せずU。D09は類型付与をPrimary(I)とし、新宿御苑写真に江戸期の狩場を結びつける筆者解釈をD09.HST.HISTORICAL_ANCHORのSecondaryとして保持する。D16は単発目撃をPrimary(I)とし、目撃後に犬が毎晩12時に吠えるという個別報告をD16.REC.PERIODICのSecondaryとして保持するが、小男との因果は未検証。VAR-001内では出現・視認を共有核としてD13.MAN.MANIFEST_ONLYをPrimary(I)に維持し、物体操作・身体外見変化は個別報告としてD13 Secondaryへ保持した。D08では目撃報告をPrimaryとし、写真・物的痕跡を独立した追加の意味形成契機としてSecondaryに保持した。
