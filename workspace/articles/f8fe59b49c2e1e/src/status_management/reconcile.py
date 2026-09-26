@@ -8,7 +8,7 @@ from typing import Any, Iterable, Mapping
 
 ARTIFACTS = ("00", "10", "20")
 ALLOWED_STATUSES = frozenset(
-    {"未", "レビュー待", "要修正", "再作業中", "再レビュー待", "完了", "－（対象外）"}
+    {"未", "調査中", "レビュー待", "レビュー中", "要修正", "再レビュー待", "完了", "－（対象外）"}
 )
 
 
@@ -41,7 +41,7 @@ def _normalize_changes(cp, changes: dict[str, Any]) -> dict[str, Any]:
     return {name: value for name, value in changes.items() if current_by_name.get(name) != value}
 
 
-def _validate_correction_start(
+def _validate_research_start(
     artifact: str,
     cp,
     git,
@@ -50,21 +50,94 @@ def _validate_correction_start(
     cp_relation: str,
     review_relation: str,
 ) -> str | None:
-    """Return an issue code when a correction-start event is not applicable."""
-    if cp.status not in {"要修正", "再作業中"}:
-        return f"correction_start_invalid_status:{artifact}:{cp.status}"
+    """Return an issue code when a research-start event is not applicable."""
+    if cp.status not in {"未", "要修正", "調査中"}:
+        return f"research_start_invalid_status:{artifact}:{cp.status}"
+
+    # Initial generation: no committed artifact/checkpoint and no Review fact yet.
+    if cp.post_sha is None and review is None:
+        if git is not None and git.exists:
+            return f"research_start_initial_artifact_already_committed:{artifact}"
+        return None
+
+    # Post-Review correction: the current artifact, control-plane checkpoint,
+    # and latest non-Pass Review target must all identify the same version.
+    if cp.status not in {"要修正", "調査中"}:
+        return f"research_start_invalid_status:{artifact}:{cp.status}"
     if git is None or not git.exists or not git.commit_sha or not git.blob_sha:
-        return f"correction_start_missing_artifact:{artifact}"
+        return f"research_start_missing_artifact:{artifact}"
+    if not cp.post_sha:
+        return f"research_start_missing_controlplane_post:{artifact}"
     if cp_relation != "exact":
-        return f"correction_start_requires_exact_controlplane:{artifact}:{cp_relation}"
+        return f"research_start_requires_exact_controlplane:{artifact}:{cp_relation}"
     if review is None:
-        return f"correction_start_requires_review:{artifact}"
+        return f"research_start_requires_review:{artifact}"
     if review_relation != "exact":
-        return f"correction_start_requires_exact_review:{artifact}:{review_relation}"
+        return f"research_start_requires_exact_review:{artifact}:{review_relation}"
     if review.target_blob_sha != git.blob_sha:
         return f"review_target_blob_mismatch:{artifact}"
     if review.verdict == "Pass":
-        return f"correction_start_on_passed_review:{artifact}"
+        return f"research_start_on_passed_review:{artifact}"
+    return None
+
+
+def _validate_review_start(
+    artifact: str,
+    cp,
+    git,
+    review,
+    *,
+    cp_relation: str,
+    review_relation: str,
+) -> str | None:
+    """Return an issue code when a review-start event is not applicable."""
+    if cp.status not in {"レビュー待", "再レビュー待", "完了", "レビュー中"}:
+        return f"review_start_invalid_status:{artifact}:{cp.status}"
+    if git is None or not git.exists or not git.commit_sha or not git.blob_sha:
+        return f"review_start_missing_artifact:{artifact}"
+    if not cp.post_sha:
+        return f"review_start_missing_controlplane_post:{artifact}"
+    if cp_relation != "exact":
+        return f"review_start_requires_exact_controlplane:{artifact}:{cp_relation}"
+
+    if cp.status == "レビュー待":
+        if review is not None or cp.latest_review_seq is not None:
+            return f"review_start_initial_review_fact_present:{artifact}"
+        return None
+
+    if cp.status == "再レビュー待":
+        if review is None:
+            return f"review_start_requires_previous_review:{artifact}"
+        if cp.latest_review_seq != review.review_seq:
+            return f"review_start_review_seq_mismatch:{artifact}"
+        if review_relation != "left_ancestor":
+            return f"review_start_requires_stale_previous_review:{artifact}:{review_relation}"
+        return None
+
+    if cp.status == "完了":
+        if review is None:
+            return f"review_start_requires_previous_review:{artifact}"
+        if cp.latest_review_seq != review.review_seq:
+            return f"review_start_review_seq_mismatch:{artifact}"
+        if review_relation != "exact":
+            return f"review_start_completed_requires_exact_review:{artifact}:{review_relation}"
+        if review.target_blob_sha != git.blob_sha:
+            return f"review_target_blob_mismatch:{artifact}"
+        if review.verdict != "Pass":
+            return f"review_start_completed_without_pass:{artifact}"
+        return None
+
+    # Idempotent repeated event while Review is already active.
+    if review is None:
+        if cp.latest_review_seq is not None:
+            return f"review_start_review_seq_without_review:{artifact}"
+        return None
+    if cp.latest_review_seq != review.review_seq:
+        return f"review_start_active_review_seq_mismatch:{artifact}"
+    if review_relation not in {"exact", "left_ancestor"}:
+        return f"review_start_active_unsafe_review_relation:{artifact}:{review_relation}"
+    if review_relation == "exact" and review.target_blob_sha != git.blob_sha:
+        return f"review_target_blob_mismatch:{artifact}"
     return None
 
 
@@ -74,26 +147,43 @@ def reconcile(
     review_snapshot,
     relations: Mapping[tuple[str, str], str],
     *,
-    correction_started: Iterable[str] = (),
+    research_started: Iterable[str] = (),
+    review_started: Iterable[str] = (),
 ) -> ReconcileResult:
     """Derive a mutation plan from already-read facts.
 
-    correction_started is an explicit operational event emitted only after
-    an orchestrating workflow actually enters the correction phase. Workflow 00
-    and an explicitly invoked Workflow 10 correction path may emit it. It is
-    never inferred from Entry_ID, Git, or Review facts.
+    research_started is emitted only when Workflow 00/10 actually enters an
+    initial-generation or post-Review research task. review_started is emitted
+    only when Workflow 20 has frozen a valid Review target and actually begins
+    the semantic Review task. Neither event is inferred from Entry_ID or static
+    Git/Review facts.
     """
     issues: list[str] = []
     mutations: list[Mutation] = []
-    correction_started = frozenset(correction_started)
+    research_started = frozenset(research_started)
+    review_started = frozenset(review_started)
 
-    unknown_events = sorted(correction_started - set(ARTIFACTS))
-    if unknown_events:
+    unknown_research = sorted(research_started - set(ARTIFACTS))
+    unknown_review = sorted(review_started - set(ARTIFACTS))
+    if unknown_research or unknown_review:
+        event_issues = [
+            *(f"invalid_research_start_artifact:{x}" for x in unknown_research),
+            *(f"invalid_review_start_artifact:{x}" for x in unknown_review),
+        ]
         return ReconcileResult(
             "BLOCKED",
             (),
-            tuple(f"invalid_correction_start_artifact:{x}" for x in unknown_events),
-            "correction-start event contains an unknown artifact",
+            tuple(event_issues),
+            "task-start event contains an unknown artifact",
+        )
+
+    overlap = sorted(research_started & review_started)
+    if overlap:
+        return ReconcileResult(
+            "BLOCKED",
+            (),
+            tuple(f"conflicting_task_start_events:{x}" for x in overlap),
+            "an artifact cannot start research and Review simultaneously",
         )
 
     if getattr(controlplane_snapshot, "issues", ()):
@@ -123,29 +213,11 @@ def reconcile(
             issues.append(f"invalid_status_value:{artifact}:{cp.status!r}")
             continue
 
-        if artifact in correction_started and cp.status not in {"要修正", "再作業中"}:
-            issues.append(f"correction_start_invalid_status:{artifact}:{cp.status}")
-            continue
-
-        # Target-outside is explicit operational state; never infer or clear it
-        # from Git/Review facts alone.
-        if cp.status == "－（対象外）":
-            continue
-
-        if git is None or not git.exists:
-            if cp.status != "未" or cp.post_sha or review:
-                issues.append(f"artifact_missing_but_state_present:{artifact}")
-            continue
-        if not git.commit_sha or not git.blob_sha:
-            issues.append(f"artifact_not_committed:{artifact}")
-            continue
-
-        changes: dict[str, Any] = {}
         cp_relation = relations.get(("cp_post", artifact), "missing") if cp.post_sha else "missing"
         review_relation = relations.get(("review_target", artifact), "missing") if review else "missing"
 
-        if artifact in correction_started:
-            event_issue = _validate_correction_start(
+        if artifact in research_started:
+            event_issue = _validate_research_start(
                 artifact,
                 cp,
                 git,
@@ -156,12 +228,48 @@ def reconcile(
             if event_issue:
                 issues.append(event_issue)
                 continue
+            normalized = _normalize_changes(cp, {"Status": "調査中"})
+            if normalized:
+                mutations.append(Mutation(artifact, normalized))
+            continue
+
+        if artifact in review_started:
+            event_issue = _validate_review_start(
+                artifact,
+                cp,
+                git,
+                review,
+                cp_relation=cp_relation,
+                review_relation=review_relation,
+            )
+            if event_issue:
+                issues.append(event_issue)
+                continue
+            normalized = _normalize_changes(cp, {"Status": "レビュー中"})
+            if normalized:
+                mutations.append(Mutation(artifact, normalized))
+            continue
+
+        # Target-outside is explicit operational state; never infer or clear it
+        # from Git/Review facts alone.
+        if cp.status == "－（対象外）":
+            continue
+
+        if git is None or not git.exists:
+            if cp.status not in {"未", "調査中"} or cp.post_sha or review:
+                issues.append(f"artifact_missing_but_state_present:{artifact}")
+            continue
+        if not git.commit_sha or not git.blob_sha:
+            issues.append(f"artifact_not_committed:{artifact}")
+            continue
+
+        changes: dict[str, Any] = {}
 
         if cp.post_sha is None:
             if review is not None:
                 issues.append(f"review_exists_before_controlplane_post:{artifact}")
                 continue
-            if cp.status != "未":
+            if cp.status not in {"未", "調査中"}:
                 issues.append(f"missing_post_sha_for_status:{artifact}:{cp.status}")
                 continue
             changes["post-SHA"] = git.commit_sha
@@ -174,7 +282,13 @@ def reconcile(
                     continue
                 if cp.status == "未":
                     changes["Status"] = "レビュー待"
-                elif cp.status not in {"レビュー待"}:
+                elif cp.status in {"レビュー待", "レビュー中"}:
+                    pass
+                elif cp.status == "調査中":
+                    # A committed artifact with a current checkpoint ends the
+                    # initial research task and becomes initial-Review-ready.
+                    changes["Status"] = "レビュー待"
+                else:
                     issues.append(f"status_requires_review_fact:{artifact}:{cp.status}")
                     continue
 
@@ -182,24 +296,29 @@ def reconcile(
                 if review.target_blob_sha != git.blob_sha:
                     issues.append(f"review_target_blob_mismatch:{artifact}")
                     continue
-                changes["最新レビュー版"] = review.review_seq
-                changes["post-SHA"] = git.commit_sha
-                if review.verdict == "Pass":
-                    changes["Status"] = "完了"
-                elif artifact in correction_started:
-                    changes["Status"] = "再作業中"
-                elif cp.status == "再作業中":
-                    # A sync during active correction must not roll operational
-                    # state back to 要修正 merely because the triggering Review
-                    # remains the latest Review fact.
+
+                if cp.status == "レビュー中" and cp.latest_review_seq == review.review_seq:
+                    # The currently visible Review fact is the pre-existing one;
+                    # keep the explicit operational Review-in-progress state.
                     pass
                 else:
-                    changes["Status"] = "要修正"
+                    changes["最新レビュー版"] = review.review_seq
+                    changes["post-SHA"] = git.commit_sha
+                    if cp.status == "調査中" and review.verdict != "Pass":
+                        # During post-Review research, the triggering non-Pass
+                        # Review remains the latest fact until a new Review cycle.
+                        pass
+                    else:
+                        changes["Status"] = _status_from_review(review.verdict)
 
             elif review_relation == "left_ancestor":
                 # The latest Review targets an older artifact version. This is
-                # normal after a correction commit and before re-review.
-                if cp.status in {"要修正", "再作業中", "再レビュー待", "完了"}:
+                # normal after a research/correction commit and before re-review.
+                if cp.status == "レビュー中":
+                    # The old Review remains the latest persisted fact while a
+                    # new Review cycle is in progress.
+                    pass
+                elif cp.status in {"要修正", "調査中", "再レビュー待", "完了"}:
                     changes["最新レビュー版"] = review.review_seq
                     changes["Status"] = "再レビュー待"
                 else:
@@ -216,6 +335,10 @@ def reconcile(
         elif cp_relation == "left_ancestor":
             # Git contains a newer canonical artifact than the control-plane
             # checkpoint. Advance pre/post and derive the waiting state.
+            if cp.status == "レビュー中":
+                issues.append(f"artifact_changed_during_review:{artifact}")
+                continue
+
             changes["pre-SHA"] = cp.post_sha
             changes["post-SHA"] = git.commit_sha
 
@@ -264,6 +387,7 @@ def reconcile(
         )
     return ReconcileResult("NOOP", (), (), "control plane already matches Git and Review facts")
 
+
 def _namespace_map(items: Mapping[str, Mapping[str, Any]]) -> dict[str, SimpleNamespace]:
     return {key: SimpleNamespace(**dict(value)) for key, value in items.items()}
 
@@ -298,7 +422,8 @@ def reconcile_payload(payload: Mapping[str, Any]) -> dict[str, Any]:
         git,
         reviews,
         relations,
-        correction_started=events.get("correction_started") or (),
+        research_started=events.get("research_started") or (),
+        review_started=events.get("review_started") or (),
     )
     return {
         "outcome": result.outcome,
@@ -309,4 +434,3 @@ def reconcile_payload(payload: Mapping[str, Any]) -> dict[str, Any]:
             for mutation in result.mutations
         ],
     }
-
