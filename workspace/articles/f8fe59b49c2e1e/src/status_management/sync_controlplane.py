@@ -27,7 +27,12 @@ def _relations(cp, git, reviews) -> dict[tuple[str, str], str]:
     return facts
 
 
-def sync_controlplane(entry_id: str, *, correction_started: Iterable[str] = ()) -> dict:
+def sync_controlplane(
+    entry_id: str,
+    *,
+    research_started: Iterable[str] = (),
+    review_started: Iterable[str] = (),
+) -> dict:
     try:
         cp = load_entry_state(entry_id)
         git = load_entry_git_state(entry_id)
@@ -37,7 +42,8 @@ def sync_controlplane(entry_id: str, *, correction_started: Iterable[str] = ()) 
             git,
             reviews,
             _relations(cp, git, reviews),
-            correction_started=correction_started,
+            research_started=research_started,
+            review_started=review_started,
         )
         base = {
             "entry_id": entry_id,
@@ -95,18 +101,31 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("entry_id", help="four-digit Entry_ID")
     parser.add_argument(
-        "--correction-started",
-        dest="correction_started",
+        "--research-started",
+        dest="research_started",
         action="append",
         choices=("00", "10", "20"),
         default=[],
         metavar="ARTIFACT",
-        help="explicit correction-start event for an artifact; repeat for multiple artifacts",
+        help="explicit research-task start event for an artifact; repeat for multiple artifacts",
+    )
+    parser.add_argument(
+        "--review-started",
+        dest="review_started",
+        action="append",
+        choices=("00", "10", "20"),
+        default=[],
+        metavar="ARTIFACT",
+        help="explicit Review-task start event for an artifact; repeat for multiple artifacts",
     )
     args = parser.parse_args(argv)
     if not (len(args.entry_id) == 4 and args.entry_id.isdigit()):
         parser.error("entry_id must be four digits")
-    result = sync_controlplane(args.entry_id, correction_started=args.correction_started)
+    result = sync_controlplane(
+        args.entry_id,
+        research_started=args.research_started,
+        review_started=args.review_started,
+    )
     print(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True))
     return 0 if result["result"] in {"PASS", "UPDATED"} else 1 if result["result"] == "BLOCKED" else 2
 
