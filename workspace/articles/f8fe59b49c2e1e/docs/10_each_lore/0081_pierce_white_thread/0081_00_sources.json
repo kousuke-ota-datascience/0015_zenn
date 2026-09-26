@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0081",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_type": "reliable_secondary_or_research",
+      "title": "ピアスの白い糸 : 日本の現代伝説",
+      "locator": "国立国会図書館サーチ 書誌ID 000002374465",
+      "accessed_at": "2026-09-27",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "H"
+      ],
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002374465",
+      "bibliographic_info": "池田香代子 [ほか]編著、白水社、1994年11月、226p、ISBN 4-560-04044-3。",
+      "notes": "1994年刊行の同時代伝説集の書誌確認に使用。NDL書誌自体は個別章本文を公開していないため、伝承内容の細部はこの資料だけから補わない。"
+    },
+    {
+      "source_id": "SRC-002",
+      "source_type": "mirror_reprint_or_restoration",
+      "title": "ピアスの白い糸―日本の現代伝説（出版社内容情報）",
+      "locator": "紀伊國屋書店ウェブストア「出版社内容情報」",
+      "accessed_at": "2026-09-27",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://www.kinokuniya.co.jp/f/dsg-01-9784560040447",
+      "bibliographic_info": "池田香代子・大島広志・高津美保子・常光徹・渡辺節子 編著、白水社、1994年11月。",
+      "notes": "出版社由来の内容紹介を掲載。ピアス穴から出た糸状物を引くと失明する、という本書収録伝承の核を確認するために使用。"
+    },
+    {
+      "source_id": "SRC-003",
+      "source_type": "reliable_secondary_or_research",
+      "title": "（俗信），糸",
+      "locator": "国際日本文化研究センター 怪異・妖怪伝承データベース No.0890012_009；原資料：吉川祐子「若者の俗信」『静岡県民俗学会誌』通巻19号（1998年）pp.111-132",
+      "accessed_at": "2026-09-27",
+      "relation_to_primary": "direct_derivative",
+      "evidence_role": [
+        "C",
+        "H"
+      ],
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0890012_009",
+      "bibliographic_info": "吉川祐子「若者の俗信」『静岡県民俗学会誌』通巻19号、静岡県民俗学会、1998年12月、pp.111-132。データベース掲載箇所 pp.111-132。",
+      "notes": "1998年の静岡県に関する民俗採録の要約カード。白い糸と失明の因果規則を明示する。"
+    },
+    {
+      "source_id": "SRC-004",
+      "source_type": "later_summary_or_commentary",
+      "title": "エッセイ「ピアスの穴の白い糸」",
+      "locator": "三好耳鼻咽喉科クリニック 3443通信 2021年5月号（No.315）、『宮城耳鼻会報』62号",
+      "accessed_at": "2026-09-27",
+      "relation_to_primary": "indirect_derivative",
+      "evidence_role": [
+        "C",
+        "A"
+      ],
+      "url": "https://www.3443.or.jp/news/?c=18142",
+      "bibliographic_info": "三好彰、2021年5月。耳鼻咽喉科医による解説。",
+      "notes": "後代の医療解説。若者の自己ピアシングを舞台とする語り方、失明以外の変異、現実の医学的説明を確認する。起源推定は著者自身が想像と明記しているため、成立史の確定には用いない。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EVD-001",
+      "source_id": "SRC-001",
+      "locator": "NDL書誌",
+      "content": "『ピアスの白い糸 : 日本の現代伝説』は池田香代子ほか編著、白水社から1994年11月に刊行された226ページの図書で、件名に伝説・怪談・笑話が付されている。",
+      "representation": "paraphrase",
+      "uncertainty": "刊行事実を示す書誌Evidenceであり、この記録だけでは伝承の成立年・初出・最古流通媒体は確定できない。"
+    },
+    {
+      "evidence_id": "EVD-002",
+      "source_id": "SRC-002",
+      "locator": "「出版社内容情報」",
+      "content": "出版社内容情報は、本書に収録された現代伝説の例として、ピアス穴から出た糸状物を引っ張った結果、失明するという話を掲げている。",
+      "representation": "paraphrase",
+      "uncertainty": "短い内容紹介であり、登場人物、語り手、白い糸状物の解剖学的同定、詳細な場面設定までは固定できない。"
+    },
+    {
+      "evidence_id": "EVD-003",
+      "source_id": "SRC-003",
+      "locator": "怪異・妖怪伝承データベース No.0890012_009 要約",
+      "content": "1998年の静岡県の採録要約では、ピアス穴を開けると白い糸のようなものが出て、それを引っ張ると失明するという俗信が記録されている。",
+      "representation": "paraphrase",
+      "uncertainty": "データベース上の要約であり、原論文の話者情報や採集年月などはカード上で示されていない。"
+    },
+    {
+      "evidence_id": "EVD-004",
+      "source_id": "SRC-004",
+      "locator": "4.「ピアスの穴の白い糸」",
+      "content": "後代の耳鼻咽喉科医の解説は、若者同士が安全ピンでピアス穴を開け、そこから出た白い糸を引いたところ見えなくなる、という形の噂を紹介している。",
+      "representation": "paraphrase",
+      "uncertainty": "2021年の後代解説であり、1990年代初頭の形を直接採録した一次資料ではない。"
+    },
+    {
+      "evidence_id": "EVD-005",
+      "source_id": "SRC-004",
+      "locator": "4.「ピアスの穴の白い糸」",
+      "content": "同解説は、白い糸が出る点を共通核としつつ、結果については失明のほか、眼球が動く、顔面神経麻痺になるといった語りの変異があると述べる。",
+      "representation": "paraphrase",
+      "uncertainty": "各変異の初出時期・頻度・地域分布は示されていない。"
+    },
+    {
+      "evidence_id": "EVD-006",
+      "source_id": "SRC-004",
+      "locator": "4.「ピアスの穴の白い糸」",
+      "content": "同解説は、現実にこの噂どおりの失明や顔面神経麻痺を起こした人物は確認されていないとし、ピアスホールの上皮化した皮膚が筒状にはがれて白い糸のように見える場合があると医学的に説明する。",
+      "representation": "paraphrase",
+      "uncertainty": "伝承内の因果主張とは区別すべき外部医学説明であり、伝承の成立原因を直接証明するものではない。"
+    }
+  ],
+  "notes": "現時点で直接確認できる早い公刊Evidenceは1994年の現代伝説集であり、1998年の民俗採録要約が同じ因果核を独立に確認する。成立起源・初出・最古の対人流通媒体は確定しない。一般に知られる『白い糸=視神経』という同定は、今回採用した1994年出版社内容情報と1998年採録要約では直接固定できないため、初期共有核へ補完しない。2021年解説に見られる自己ピアシングや失明以外の結果は後代変異として分離する。docs/legacyは参照していない。"
+}
