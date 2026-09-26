@@ -31,8 +31,8 @@
 
 - Primary: D02.PRT.CHAIN_LETTER (parent: D02.PRT)
 - Secondary: -
-- Content refs: CNT-001, CNT-006
-- Evidence refs: EVD-002
+- Content refs: CNT-001, CNT-002, CNT-006
+- Evidence refs: EVD-001, EVD-002, EVD-003
 
 **Rationale:** 1922年1月下旬に「幸運の為に」という葉書が流行したこと自体は同時代資料で直接確認できる。一方、それが自己複製するchain letterであるという具体的構造は研究ノート・後代新聞紹介を介して確認しているため、媒体codeは維持しつつDirectではなくInferredとする。
 
