@@ -15,6 +15,7 @@
 - canonical JSONの構造は**Schema上のフィールド監査母集団**を定める。一方、semantic completenessの監査母集団は既存JSON要素に限定せず、Source / Evidence / Content間で保持されるべきsalient meaningを含む。
 - Review JSONのartifact固有Schemaに定義された必須check・監査証跡を省略しない。
 - Workflow 20の実行契機は、ユーザーによる明示実行またはWorkflow 00からの呼出しに限定する。Workflow 10から暗黙に起動しない。
+- Reviewタスクの実行中Statusは初回Review / re-reviewとも `レビュー中` に統一し、その遷移はWorkflow 90の明示的 `review_started` eventでのみ行う。
 
 # 1. 目的と責務
 
@@ -88,10 +89,17 @@ Workflow 20を開始してよいのは次のいずれかの場合だけとする
 
 - 対象canonical artifactをGit上で一意に固定できること。
 - `python -m src.validation.validate_entry <Entry_ID>` がPASSしていること。
-- Workflow 90により、Review対象版を阻害するcontrol plane不整合がないこと。
+- 最初にWorkflow 90を**通常同期**として実行し、Review対象版を阻害するcontrol plane不整合がないことを確認する。この同期では `review_started` を渡さない。
 - Review開始時に内部処理として `python -m src.reviewing.review_writer prepare <Entry_ID>` を実行し、00 / 10 / 20の対象commit SHA / blob SHAと次の共有 `Review_Seq` をcycle snapshotとして固定する。
 - prepare時点でcanonical artifactに未commit差分がある、既存Review履歴がSchema不正・不完全cycleである、対象SHA / blobを固定できない場合はfail-stopとする。
+- **prepare成功後、semantic Reviewへ入る直前**にWorkflow 90へ `review_started: [00, 10, 20]` を渡す。
+  - optional external adapterでは各artifactについて `--review-started <Artifact>` を反復指定する。
+  - Workflow 90が `BLOCKED / ERROR` の場合、semantic Reviewへ進まない。
+  - Workflow 90が `PASS / UPDATED` の場合、00 / 10 / 20のReview対象行がすべて `Status=レビュー中` であることを確認する。
+- 初回Reviewでは通常 `レビュー待 -> レビュー中`、修正後re-reviewでは `再レビュー待 -> レビュー中` となる。
+- 同一Review cycleは00 / 10 / 20の完全な3点セットであるため、修正されなかったartifactが直前Review `Pass` により `完了` のままでも、current版と直前Review targetがexact一致する場合は `完了 -> レビュー中` を許容する。
 - semantic Review中はprepareで得たcycle snapshotを保持し、対象版を後から読み替えない。
+- Review中にcanonical artifactが更新された場合はtarget freeze違反であり、Workflow 90の `artifact_changed_during_review` 等によりfail-stopする。
 
 ## 3.1. Review実行順序
 
@@ -301,12 +309,14 @@ ReviewerはFindingの意味論的内容を記述し、独自ルールでVerdict�
 
 # 9. Review保存と再Review
 
+- Review開始時はSection 3に従って `review_writer prepare` 後に `review_started: [00, 10, 20]` を発行し、Review対象3artifactを `レビュー中` へ遷移させる。
 - 00 / 10 / 20のsemantic Reviewが完了したら、prepareで得た `cycle` と3 artifactのsemantic bodyを1つのJSON bundleとして `python -m src.reviewing.review_writer write <Entry_ID>` のstdinへ渡す。
 - writerは保存直前に、Entry validation PASS、次Seq、対象commit/blob、working tree一致を再確認する。prepare後にartifact更新または別Review cycleの追加があれば保存せずERRORとする。
 - writerは3 artifactを同一 `Review_Seq` で一括validationし、3ファイルすべてが有効な場合だけappend-onlyで保存する。
 - 保存後、当該3 Review JSONだけを1つのReview cycle commitとしてcommit / pushする。
-- push後にWorkflow 90を実行してcontrol planeを同期する。
-- 修正後の再Reviewでは再度prepareを行い、新しい対象SHA / blobと新Review Seqを固定する。
+- push後にWorkflow 90を**通常同期**として実行する。`review_started` は再送しない。
+- 新しいReview JSONがcurrent targetとexact一致した時点で、`レビュー中` は各artifactのVerdictに従い `完了` または `要修正` へ収束する。
+- 修正後の再Reviewでは再度prepareを行い、新しい対象SHA / blobと新Review Seqを固定し、同じ `review_started` 手順を反復する。
 - Review JSON作成・再Review時にMarkdownを自動生成しない。
 - Markdown viewが必要な場合は、人からの明示指示を受けて `render_review.py` を個別実行する。
 - 旧Reviewを上書きしない。
