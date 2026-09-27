@@ -2,7 +2,13 @@ node_modules
 .DS_Store
 __pycache__/
 *.py[cod]
+
 workspace/.pytest_cache/
 workspace/articles/*/artifacts/
 workspace/shared/data*/
 *__init__.py
+
+books/.keep
+images/*
+workspace/.python-version
+
