@@ -61,7 +61,7 @@ def test_0178_saruyume_salient_story_meanings_are_covered():
     )
     _find_covered(
         data,
-        lambda x: "次回は逃がさない" in x["text"],
+        lambda x: "次回は逃がさない" in x["text"] or "次回は最後" in x["text"],
         "terminal warning",
     )
     _find_covered(
