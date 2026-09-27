@@ -9,7 +9,7 @@
       "locator": "京都府立図書館 管理番号996／回答・回答プロセス",
       "accessed_at": "2026-09-25",
       "relation_to_primary": "indirect_derivative",
-      "evidence_role": ["C", "H", "X"],
+      "evidence_role": ["C", "H"],
       "url": "https://crd.ndl.go.jp/reference/entry/index.php?id=1000338368&page=ref_view",
       "bibliographic_info": "京都府立図書館作成 2023-07-05、レファレンス協同データベース登録番号1000338368。",
       "notes": "1969年10月7日『朝日新聞』p16京都市内版の記事を、同館職員がマイクロフィルムと朝日新聞クロスサーチで確認。後代書籍の異伝も回答プロセスに記録する。"
@@ -21,7 +21,7 @@
       "locator": "『朝日新聞』1969年10月7日 p16 京都市内版",
       "accessed_at": null,
       "relation_to_primary": "primary",
-      "evidence_role": ["C", "H", "X"],
+      "evidence_role": ["C", "H"],
       "bibliographic_info": "朝日新聞大阪本社／編『朝日新聞 京都地方版』。京都府立図書館が掲載を確認。",
       "archive_info": "京都府立図書館所蔵マイクロフィルム（請求記号 ﾏ ｱｻﾋ/K/、資料番号1400103956）および朝日新聞クロスサーチで閲覧可能。",
       "notes": "本実行環境では原紙・マイクロフィルム・クロスサーチ本文を直接閲覧していないため、本文細部のEvidenceはSRC-002へ直接帰属させない。"
@@ -33,7 +33,7 @@
       "locator": "小説家になろう『オカルトかるとアラカルト』2/2、1969年10月7日朝日新聞京都地方版の転載と称する本文",
       "accessed_at": "2026-09-25",
       "relation_to_primary": "direct_derivative",
-      "evidence_role": ["C", "X"],
+      "evidence_role": ["C"],
       "url": "https://ncode.syosetu.com/n9918cx/2/",
       "notes": "転載者は朝日新聞記事の転載と説明するが、今回その全文を原紙画像と逐語照合していない。記事の日付・版・見出しはSRC-001の図書館調査と整合するため、本文細部の補助Evidenceとしてのみ使用する。"
     },
