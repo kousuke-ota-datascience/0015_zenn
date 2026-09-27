@@ -3,9 +3,9 @@
 Creator and Reviewer are isolated at the Codex thread/process boundary.
 
 - Creator uses one persistent Codex thread and resumes it across correction turns.
-- Every Reviewer cycle launches a fresh ephemeral Codex process.
+- Every Reviewer cycle launches a fresh Codex process and never resumes it.
 - Reviewer receives only a freeze-bound whitelist context and live web search, and
-  runs in a read-only sandbox from a temporary non-repository working directory.
+  runs in a read-only sandbox from a temporary empty Git repository.
 - Authentication is forced to ChatGPT login so this runtime uses Codex/ChatGPT
   entitlement rather than an OpenAI API key.
 """
@@ -234,30 +234,27 @@ class CodexCLIRuntime:
         self,
         *,
         sandbox_mode: str,
-        ephemeral: bool = False,
-        skip_git_repo_check: bool = False,
         approval_policy: str | None = None,
     ) -> list[str]:
+        # Keep the subprocess interface deliberately small for compatibility
+        # across Codex CLI releases. The installed CLI already guarantees
+        # --json and -c/--config; runtime policy is expressed via documented
+        # config keys instead of newer convenience flags.
         args = [
             self.binary,
             "exec",
             "--json",
-            "--search",
-            "--sandbox",
-            sandbox_mode,
             "-c",
             'forced_login_method="chatgpt"',
+            "-c",
+            'web_search="live"',
+            "-c",
+            f'sandbox_mode="{sandbox_mode}"',
         ]
         if approval_policy:
-            # codex exec has no --ask-for-approval flag. Approval policy is a
-            # documented config key and must be passed through -c/--config.
             args += ["-c", f'approval_policy="{approval_policy}"']
         if self.model:
             args += ["--model", self.model]
-        if ephemeral:
-            args.append("--ephemeral")
-        if skip_git_repo_check:
-            args.append("--skip-git-repo-check")
         return args
 
     def _invoke(
@@ -376,21 +373,27 @@ Task:
 
         args = self._common_exec_args(
             sandbox_mode="read-only",
-            ephemeral=True,
-            skip_git_repo_check=True,
             approval_policy="never",
         )
-        # Reviewer must not inherit local MCP/apps/rules that could introduce
-        # non-whitelisted context or side-effecting tools.
-        args += [
-            "--ignore-user-config",
-            "--ignore-rules",
-            "-c",
-            "features.apps=false",
-            "-c",
-            "features.multi_agent=false",
-        ]
         with tempfile.TemporaryDirectory(prefix="workflow00-review-") as tmp:
-            thread_id, output = self._invoke(args, reviewer_prompt, cwd=Path(tmp))
+            review_cwd = Path(tmp)
+            # Older Codex CLI versions require execution from a Git repository.
+            # An empty temporary repository keeps Reviewer process context
+            # separate from the production working tree without relying on
+            # version-specific --skip-git-repo-check/--ephemeral flags.
+            git_init = subprocess.run(
+                ["git", "init", "-q"],
+                cwd=review_cwd,
+                text=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                check=False,
+            )
+            if git_init.returncode != 0:
+                raise CodexCLIExecutionError(
+                    "failed to initialize isolated Reviewer repository: "
+                    + git_init.stderr.strip()
+                )
+            thread_id, output = self._invoke(args, reviewer_prompt, cwd=review_cwd)
         session.thread_id = thread_id
         return RuntimeResult(output)
