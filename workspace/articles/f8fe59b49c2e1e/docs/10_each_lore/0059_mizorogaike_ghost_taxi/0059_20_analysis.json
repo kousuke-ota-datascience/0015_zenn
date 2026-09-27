@@ -117,13 +117,13 @@
     },
     {
       "dimension_id": "D10",
-      "status": "U",
-      "primary": null,
+      "status": "I",
+      "primary": { "code_id": "D10.PHN.UNEXPLAINED_PHYSICAL_PHENOMENON", "parent_id": "D10.PHN" },
       "secondary": [],
-      "rationale": "Scope内には、消失の因果源を幽霊、死者、場所、人間、自然過程のいずれかとして確定する記述がない。後代の幽霊設定は初期形へ遡及しない。",
-      "manifestation": "女性が何者で、何が不在化を生じさせたかは開いたままである。",
-      "content_refs": ["CNT-004", "CNT-007"],
-      "evidence_refs": ["EVD-001", "EVD-003"]
+      "rationale": "Scope内では、走行中まで確認された女性客が到着時に車内から不在となり、濡れた座席痕が残り、捜索後も説明が閉じない。このため、原因主体を幽霊、死者、場所、人間、自然過程のいずれにも確定せず、説明不能な物理的現象として分類する。具体的出来事は原紙未照合のSRC-003由来のEVD-002・EVD-003に依存するためIとする。後代の幽霊設定は初期形へ遡及しない。",
+      "manifestation": "女性客の車内からの不在化と濡れた座席痕は、原因主体を特定しないまま生じる説明不能な現象として提示される。",
+      "content_refs": ["CNT-003", "CNT-004", "CNT-005", "CNT-007"],
+      "evidence_refs": ["EVD-002", "EVD-003"]
     },
     {
       "dimension_id": "D11",
