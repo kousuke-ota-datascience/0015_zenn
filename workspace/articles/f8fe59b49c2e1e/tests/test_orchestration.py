@@ -357,17 +357,17 @@ def test_codex_creator_resumes_the_same_thread(monkeypatch):
     runtime.run_creator(session, "correction task")
 
     assert session.thread_id == "thread-creator"
-    assert "--sandbox" in calls[0][0]
-    assert calls[0][0][calls[0][0].index("--sandbox") + 1] == "danger-full-access"
-    assert "--search" in calls[0][0]
+    assert 'sandbox_mode="danger-full-access"' in calls[0][0]
+    assert 'web_search="live"' in calls[0][0]
     assert 'approval_policy="never"' in calls[0][0]
+    assert "--search" not in calls[0][0]
     assert "--ask-for-approval" not in calls[0][0]
     assert "resume" not in calls[0][0]
     resume_index = calls[1][0].index("resume")
     assert calls[1][0][resume_index + 1] == "thread-creator"
 
 
-def test_codex_reviewer_is_fresh_ephemeral_read_only_and_isolated(monkeypatch):
+def test_codex_reviewer_is_fresh_read_only_and_isolated(monkeypatch):
     monkeypatch.setattr(codex_cli.shutil, "which", lambda _binary: "/usr/bin/codex")
     runtime = codex_cli.CodexCLIRuntime()
     monkeypatch.setattr(runtime, "_ensure_chatgpt_login", lambda: None)
@@ -376,6 +376,7 @@ def test_codex_reviewer_is_fresh_ephemeral_read_only_and_isolated(monkeypatch):
 
     def invoke(args, prompt, *, cwd):
         calls.append((list(args), prompt, cwd))
+        assert (cwd / ".git").exists()
         return "thread-review", '{"reviews":{"00":{},"10":{},"20":{}}}'
 
     monkeypatch.setattr(runtime, "_invoke", invoke)
@@ -390,16 +391,14 @@ def test_codex_reviewer_is_fresh_ephemeral_read_only_and_isolated(monkeypatch):
     args, prompt, cwd = calls[0]
     assert result.output.startswith('{"reviews"')
     assert session.thread_id == "thread-review"
-    assert "--ephemeral" in args
-    assert "--skip-git-repo-check" in args
-    assert "--sandbox" in args
-    assert args[args.index("--sandbox") + 1] == "read-only"
-    assert "--search" in args
-    assert "--ignore-user-config" in args
-    assert "--ignore-rules" in args
-    assert "features.apps=false" in args
-    assert "features.multi_agent=false" in args
+    assert 'sandbox_mode="read-only"' in args
+    assert 'web_search="live"' in args
     assert 'approval_policy="never"' in args
+    assert "--search" not in args
+    assert "--ephemeral" not in args
+    assert "--skip-git-repo-check" not in args
+    assert "--ignore-user-config" not in args
+    assert "--ignore-rules" not in args
     assert "--ask-for-approval" not in args
     assert "resume" not in args
     assert cwd != codex_cli.ARTICLE_ROOT
