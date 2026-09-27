@@ -4,11 +4,11 @@
   "macro_category": "情報・メタ伝説",
   "entry_type": "規則・チェーン伝承",
   "version_scope": {
-    "description": "1970年頃に「幸運の手紙」から幸運獲得要素が消え、不転送時の不幸を主作用として前景化した郵便チェーンレターの共有核を分析対象とする。共有核は「受信→同文を指定人数へ期限内に転送→不転送なら本人に不幸」という構造であり、1970年の後代紹介例（50時間・29人）と1977年赤池町の同時代確認例（数日・20人）を同一Scope内のparameter variantとして含める。具体的な人数・期限は固定しない。1922年型のように転送時の幸運獲得を正の主作用として併置する「幸運の手紙」は0024側の前史としてScope外とする。",
+    "description": "1970年頃に「幸運の手紙」から幸運獲得要素が消え、不転送時の不幸を主作用として前景化した郵便チェーンレターの共有核を分析対象とする。共有核は「受信→同文を指定人数へ期限内に転送→不転送なら本人に不幸」という構造であり、1970年の後代紹介例（50時間・29人）と1977年赤池町の同時代確認例（数日・20人）を同一Scope内のparameter variantとして含める。後代解説が紹介する一字一句の転記指示、秘密保持型、人数・期限・書き出しの複数variantも、この制裁核を共有するとされる範囲で扱うが、各同時代原資料は未確認である。具体的な人数・期限は固定しない。1922年型のように転送時の幸運獲得を正の主作用として併置する「幸運の手紙」は0024側の前史としてScope外とする。",
     "included_variants": ["VAR-001", "VAR-002"],
     "excluded_variants": [],
-    "content_refs": ["CNT-001", "CNT-002", "CNT-003", "CNT-004", "CNT-005", "CNT-006", "CNT-007", "CNT-008"],
-    "notes": "1970年型の具体的数値は後代解説経由で、新聞原紙は本実行で未直接確認。1977年型は自治体同時代資料で直接確認できる。幸運／不運の超自然的因果は事実前提としない。"
+    "content_refs": ["CNT-001", "CNT-002", "CNT-003", "CNT-004", "CNT-005", "CNT-006", "CNT-007", "CNT-008", "CNT-010", "CNT-011"],
+    "notes": "1970年型の具体的数値、全国性、主な小中学生流通、および文面variantは後代解説経由で、新聞原紙・受容者調査・各文面の同時代原資料は本実行で未直接確認。1977年型は自治体同時代資料で直接確認できる。幸運／不運の超自然的因果は事実前提としない。"
   },
   "dimensions": [
     {
@@ -46,10 +46,10 @@
       "status": "I",
       "primary": null,
       "secondary": [],
-      "rationale": "1970年紹介例の50時間・29人と1977年直接例の数日・20人は、自己複製の制裁核を保ちながら人数・期限パラメータが変異することを示す。現行D04のRETELLINGは別の語り手・媒体での再叙述、ACCRETIONは新規要素追加であり、この自己複製文面のparameter mutationを精確には表現しない。",
-      "manifestation": "自己複製の核を保ちながら、転送期限・人数が変異する。",
-      "content_refs": ["CNT-002", "CNT-006", "CNT-007"],
-      "evidence_refs": ["EVD-001", "EVD-006"],
+      "rationale": "1970年紹介例の50時間・29人と1977年直接例の数日・20人に加え、後代解説が紹介する人数・猶予日数・書き出しの複数variantは、自己複製の制裁核を保ちながら文面パラメータが変異することを示す。現行D04のRETELLINGは別の語り手・媒体での再叙述、ACCRETIONは新規要素追加であり、この自己複製文面のparameter mutationを精確には表現しない。",
+      "manifestation": "自己複製の制裁核を保ちながら、転送期限・人数・書き出しが変異する。",
+      "content_refs": ["CNT-002", "CNT-006", "CNT-007", "CNT-011"],
+      "evidence_refs": ["EVD-001", "EVD-006", "EVD-009"],
       "taxonomy_gap": {
         "present": true,
         "description": "自己複製チェーン文面で、因果核を保ったまま期限・送付人数などの規則パラメータが流通過程で変異するパターンに対応するD04 Childがない。D04.VAR.RETELLING/ACCRETIONはいずれも意味がずれる。"
@@ -199,12 +199,12 @@
     {
       "dimension_id": "D19",
       "status": "I",
-      "primary": {"code_id": "D19.MAS.NATIONAL_PUBLIC", "parent_id": "D19.MAS"},
-      "secondary": [{"code_id": "D19.LOC.REGIONAL", "parent_id": "D19.LOC"}],
-      "rationale": "1977年の一次資料で赤池町という地域流通は直接確認でき、後代研究・解説は1970年頃の爆発的・全国的社会問題化を記述する。全国的大衆をPrimaryとするが、その全国性は後代整理に依存するためInferredとする。",
-      "manifestation": "1970年代に広域流行し、個別地域でも同時代に流通が確認される。",
-      "content_refs": ["CNT-005", "CNT-008"],
-      "evidence_refs": ["EVD-002", "EVD-004", "EVD-007"]
+      "primary": {"code_id": "D19.KIN.SCHOOL_YOUTH", "parent_id": "D19.KIN"},
+      "secondary": [{"code_id": "D19.MAS.NATIONAL_PUBLIC", "parent_id": "D19.MAS"}, {"code_id": "D19.LOC.REGIONAL", "parent_id": "D19.LOC"}],
+      "rationale": "後代解説は、1970年頃以降に全国的な社会問題となったとする一方、主に小中学生の間で大きく拡散したと述べる。直接的に記述される主な受容範囲に従い学校・若者集団をPrimaryとし、全国的大衆をSecondaryとする。1977年の一次資料は赤池町という地域流通を直接確認する。全国性と受容層は後代整理に依存するためInferredとする。",
+      "manifestation": "主に小中学生の間で拡散し、全国的社会問題化と個別地域での流通も記録・紹介される。",
+      "content_refs": ["CNT-008", "CNT-010"],
+      "evidence_refs": ["EVD-002", "EVD-007", "EVD-008"]
     },
     {
       "dimension_id": "D20",
@@ -227,6 +227,5 @@
       "evidence_refs": ["EVD-001", "EVD-003"]
     }
   ],
-  "analysis_notes": "Scopeは1970年代の制裁前景型郵便チェーンレターに固定し、0024「幸福の手紙」の正の幸運獲得要素を混入させない。1970年型の具体数値は後代解説経由、1977年型は同時代自治体広報で直接確認。D04は、自己複製文面の期限・人数parameter mutationが現行taxonomyのRETELLING/ACCRETIONに精確に収まらないためtaxonomy_gapを明示した。D17は「不幸そのものの物理的転嫁」ではなく、制裁条件・転送負担の次受信者への再付与という限定された意味でTRANSFER_SUBSTITUTEをInferredとした。"
+  "analysis_notes": "Scopeは1970年代の制裁前景型郵便チェーンレターに固定し、0024「幸福の手紙」の正の幸運獲得要素を混入させない。1970年型の具体数値・全国性・主な小中学生流通・文面variantは後代解説経由、1977年型は同時代自治体広報で直接確認できる。D04は、自己複製文面の期限・人数・書き出しのparameter mutationが現行taxonomyのRETELLING/ACCRETIONに精確に収まらないためtaxonomy_gapを明示した。D17は「不幸そのものの物理的転嫁」ではなく、制裁条件・転送負担の次受信者への再付与という限定された意味でTRANSFER_SUBSTITUTEをInferredとした。"
 }
-

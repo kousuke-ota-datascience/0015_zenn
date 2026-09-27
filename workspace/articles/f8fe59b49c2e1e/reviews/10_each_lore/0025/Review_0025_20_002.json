@@ -1,0 +1,117 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryとScoped Contentの双方から、主要なD07〜D21およびScope境界を実質的に同じ構造で分析できる。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "受信→期限内転送義務→転送なら次受信者への連鎖、停止なら受信者への不幸予告という因果モデルがContentから再構成できる。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisの意味論的判断に必要な受信、転送、制裁、variant、行政対応、流通範囲と不確実性はすべてScoped Contentに存在する。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12の現在の受信者に対し、D13は不転送時の不幸付与を主作用として置き、D15は一般的な幸運・不運領域の変化として記述しており、因果列が接続する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L3の根拠である受信者の困惑と自治体の破棄・届出勧告はCNT-008に反映され、同時代自治体広報由来の独立した現実側反応である。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "全国性を単なる公開媒体から推論せず、後代解説の明示的整理に限定してIとしている。1977年の地域確認もSecondaryに分離されている。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "D20はNO_ONE_KNOWSではなくNO_HIDDEN_TRUTHであり、文面が作動規則と制裁を開示するというContent上の情報構造から限定的にI判定している。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "資料・自治体の実在を伝承内容のアンカーと混同せず、特定の実在地・制度・史実を必要としない一般的な郵便背景として低いA1に留めている。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D01〜D21はScoped Contentの受信・転送義務・不転送制裁・期限・連鎖・現実側対応に整合する。D04は既存Childへの不正確な押込みを避け、taxonomy gapとして明示している。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "「規則・チェーン伝承」および「情報・メタ伝説」は、情報文書が受信者に自己複製的な行為規則と制裁を課すContent構造に整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "1970年型、全国性、受容層、変異の歴史は後代資料依存としてI又は不確実性付きで扱われ、超自然的効力は事実前提にされていない。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各dimensionのmanifestation・rationaleはContent Unitに対応し、Evidence固有の未Content化情報を意味論的根拠として再導入していない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "同時代広報に直接記録された規則・制裁・期限・受信・行政反応はD、後代解説依存又は構造的推定を伴う年代・因果源・流通範囲・情報構造・現実アンカーはIとして区別されている。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "期限・人数等の規則パラメータが因果核を保ったまま変異することはContentで確認できる一方、現行D04 Childに完全一致する分類が提示されていないため、gap提示は妥当である。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "Scopeは、幸運獲得を主作用として併置する1922年型を除外し、不転送制裁を核とする1970年代郵便チェーンレターへ限定されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0025",
+  "findings": [],
+  "review_notes": "Content→Analysis層は、Scope、コード意味論、因果列、証拠強度、および現実側効果の境界を適切に保持している。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-007",
+      "CNT-008",
+      "CNT-010",
+      "CNT-011"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-007",
+      "EVD-008",
+      "EVD-009"
+    ],
+    "model": "この伝承は、受信者に届く文書が「指定人数への期限内転送」を条件として課し、不転送を将来の不幸と結び付けることで、不確かな災厄を行為規則と自己複製的連鎖として意味づける。受信は因果系への入口であり、転送は本人の不転送条件を外すと同時に次受信者へ同じ条件を再付与する。現実側では受信者の困惑と自治体の流通抑止対応が確認されるが、手紙の超自然的効力は確認されない。",
+    "notes": "モデルはScoped Contentに限定して再構成した。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0025_fuko_no_tegami/0025_20_analysis.json",
+    "blob_sha": "03fb7dcec984ea065a9899af993aee38890b02c3",
+    "commit_sha": "fcd7311111aef7464ba811a907ba320abeb9314e",
+    "reviewed_at": "2026-09-27T04:06:11Z"
+  },
+  "verdict": "Pass"
+}

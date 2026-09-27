@@ -1,0 +1,190 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "各Content Unitは参照Evidenceの範囲内であり、超自然的因果を事実化していない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "抽象的分析語だけでなく、受信者、複製・送付義務、期限、転送停止時の不幸、次受信者への連鎖を具体的に再構成できる。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "Evidence母集団にあるScope内のsalientな規則、作用、現実側対応、歴史的位置づけ、variant detail、不確実性および前史境界はContent Unit・variant・uncertainty・summary structureへ反映されている。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12に必要な構造はsummaryに保持されている。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summary.narrativeとsummary.structureから、受信・期限内転送・不転送制裁・連鎖・変異・外部対処を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "1970年原紙未確認、固定値でない期限・人数、全国性等の後代解説依存、不幸因果の未検証がContent層に残されている。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "1970年制裁前景型と1977年直接確認型を同一核のparameter variantとし、正の幸運要素を持つ1922年型をScope外の前史として分離している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0025",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryだけから、規則的提示、条件付き信念、情報内容を因果源とする構造、受信条件、不幸制裁、期限・連鎖、転送による制御、現実側対応、流通範囲の不確実性、低い現実アンカーを分析可能である。",
+      "status": "PASS"
+    },
+    "blind_decode": "受信者は不幸を予告する郵便の連鎖手紙を受け取る。手紙は、同じ文面を所定人数へ期限内に送るよう要求し、従わず連鎖を止めれば受信者に不幸が来ると警告する。送れば同じ負担と制裁条件が次の受信者へ続く。1970年代には人数・期限等に異伝があり、1977年には自治体が受信者に破棄又は派出所への届出を勧告した。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "受信者が手紙を受け取ることを再構成できる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "受信により現受信者が規則の対象となる。"
+      },
+      {
+        "blind_reconstruction": "期限・人数を伴う同文の転送義務を再構成できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "同文を指定人数へ期限内に送る義務。"
+      },
+      {
+        "blind_reconstruction": "連鎖停止と本人への不幸の条件的結合を再構成できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "不転送時には受信者本人に不幸が来るという警告。"
+      },
+      {
+        "blind_reconstruction": "次受信者への条件・負担の連鎖を再構成できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "転送により同じ制裁条件の連鎖が次受信者へ継続する。"
+      },
+      {
+        "blind_reconstruction": "1970年代の制裁前景型という歴史的位置づけを再構成できる。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "1970年頃、幸運獲得要素を失った制裁前景型として流行した。"
+      },
+      {
+        "blind_reconstruction": "1970年代に人数・期限を持つvariantがあることを再構成できる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "1970年紹介例の50時間・29人。"
+      },
+      {
+        "blind_reconstruction": "1977年の自治体対応と併せ、具体的な後続parameter variantを再構成できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "1977年赤池町の数日・20人型。"
+      },
+      {
+        "blind_reconstruction": "1977年の外部的対処として破棄又は届出勧告を再構成できる。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "自治体は破棄又は派出所への届出を勧告した。"
+      },
+      {
+        "blind_reconstruction": "全国的な社会問題化と子ども層への流通という、後代解説由来の位置づけを再構成できる。",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "後代解説は全国的社会問題化と主な小中学生流通を述べる。"
+      },
+      {
+        "blind_reconstruction": "文面の変異と、秘密保持を含む追加規則の紹介・原資料未確認を再構成できる。",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "一字一句の転記、複数parameter variant、秘密保持型が紹介される。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "現在の受信者と次の受信者を連鎖上の役割として再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "現在の受信者が転送義務と制裁の対象で、次受信者が同じ条件を受ける。"
+      },
+      {
+        "blind": "不幸を警告される現受信者を対象として再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "主作用対象は現在の受信者である。"
+      },
+      {
+        "blind": "手紙の受信が因果規則への入口であると再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "受信後に転送義務と不転送制裁が課される。"
+      },
+      {
+        "blind": "手紙の情報内容・条件規則が伝承内因果を担うと再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "特定主体ではなく文面上の条件規則が因果源として置かれる。"
+      },
+      {
+        "blind": "複製・期限内送付要求と不転送時の不幸予告を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "同文転送要求、制裁、次受信者への規則継続。"
+      },
+      {
+        "blind": "受信→義務対象化→転送による連鎖継続又は不転送制裁という遷移を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "現受信者から次受信者へ対象化が反復する。"
+      },
+      {
+        "blind": "期限と受信者間の反復連鎖を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "deadlineとchain spreadが両立する。"
+      },
+      {
+        "blind": "人数・期限・同文転記・不転送制裁を規則として再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "秘密保持型を含むvariantもContentにある。"
+      },
+      {
+        "blind": "伝承内では転送、現実側では破棄又は届出という対処を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "両者は区別されている。"
+      },
+      {
+        "blind": "転送なら連鎖継続、不転送なら不幸の予告という終端を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "実際の不幸発生は確認されない。"
+      },
+      {
+        "blind": "1970年原紙・一部variant原資料・因果効力の未確認を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "不確実性は明示されている。"
+      },
+      {
+        "blind": "制裁前景型の1970年核、1977年後続例、1922年幸運型の除外を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001/002と前史境界の設定。"
+      }
+    ],
+    "reference_story": "「不幸の手紙」の制裁前景型は、受信者に同文を指定人数へ指定期限内に再送させ、不転送なら本人に不幸が訪れるとする郵便チェーンレターである。転送は同じ制裁条件を次受信者へ継続させる。1970年頃の紹介例は50時間・29人、1977年赤池町の同時代例は数日・20人であり、人数・期限・書き出しには変異がある。1970年型の原紙や一部variant原資料は未直接確認であり、因果的効力自体も確認されない。1922年の幸運獲得を併置する型は別Entry側の前史である。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Evidence→ContentおよびContent→summaryの情報保存性に、修正を要する意味論的欠落又は強化は確認されない。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0025_fuko_no_tegami/0025_10_contents.json",
+    "blob_sha": "dc50a978395680dac79421983cbb7fd2fb26262f",
+    "commit_sha": "d40fdc9290ef0198cce2db59fe690f66311282c2",
+    "reviewed_at": "2026-09-27T04:06:11Z"
+  },
+  "verdict": "Pass"
+}
