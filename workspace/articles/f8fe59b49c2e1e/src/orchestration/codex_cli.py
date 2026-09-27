@@ -238,6 +238,7 @@ class CodexCLIRuntime:
         skip_git_repo_check: bool = False,
         shell_enabled: bool = True,
         workspace_network: bool = False,
+        approval_policy: str | None = None,
     ) -> list[str]:
         args = [
             self.binary,
@@ -254,6 +255,8 @@ class CodexCLIRuntime:
             args += ["-c", "features.shell_tool=false"]
         if workspace_network:
             args += ["-c", "sandbox_workspace_write.network_access=true"]
+        if approval_policy:
+            args += ["--ask-for-approval", approval_policy]
         if self.model:
             args += ["--model", self.model]
         if ephemeral:
@@ -303,9 +306,12 @@ class CodexCLIRuntime:
         if session.role != "creator":
             raise ValueError("run_creator requires a creator session")
 
+        # Workflow 10 owns git commit/push. Codex workspace-write deliberately
+        # protects .git, so the Creator needs full repository access for this
+        # unattended orchestration. Run the pipeline only on its dedicated branch.
         args = self._common_exec_args(
-            sandbox_mode="workspace-write",
-            workspace_network=True,
+            sandbox_mode="danger-full-access",
+            approval_policy="never",
         )
 
         if session.thread_id is None:
@@ -378,7 +384,18 @@ Task:
             ephemeral=True,
             skip_git_repo_check=True,
             shell_enabled=False,
+            approval_policy="never",
         )
+        # Reviewer must not inherit local MCP/apps/rules that could introduce
+        # non-whitelisted context or side-effecting tools.
+        args += [
+            "--ignore-user-config",
+            "--ignore-rules",
+            "-c",
+            "features.apps=false",
+            "-c",
+            "features.multi_agent=false",
+        ]
         with tempfile.TemporaryDirectory(prefix="workflow00-review-") as tmp:
             thread_id, output = self._invoke(args, reviewer_prompt, cwd=Path(tmp))
         session.thread_id = thread_id
