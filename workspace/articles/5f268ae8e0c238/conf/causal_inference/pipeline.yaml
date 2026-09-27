@@ -1,0 +1,21 @@
+pipeline:
+  run_id: null
+  random_seed: 42
+  fail_fast: true
+  validate_feature_semantics: true
+  artifact_manifest: true
+
+stages:
+  discovery:
+    enabled: true
+    analysis_config: articles/1ceee528ed7ee8/conf/causal_discovery/analysis.yaml
+    feature_config: articles/1ceee528ed7ee8/conf/causal_discovery/features.yaml
+    output_dir: articles/1ceee528ed7ee8/artifacts/causal_discovery
+
+  inference:
+    enabled: true
+    config: articles/1ceee528ed7ee8/conf/causal_inference/causal_inference_default.yaml
+    feature_config: articles/1ceee528ed7ee8/conf/causal_inference/completejourney_household.yaml
+    feature_semantics: articles/1ceee528ed7ee8/conf/causal_inference/feature_semantics.yaml
+    causal_design: articles/1ceee528ed7ee8/conf/causal_inference/causal_design.yaml
+    output_dir: articles/1ceee528ed7ee8/artifacts/causal_inference
