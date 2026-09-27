@@ -1,0 +1,178 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-001–CNT-007 and CNT-009 are consistently tied to the reprint-derived evidence and carry the relevant uncertainty; CNT-008 is correctly restricted to the later-source evidence.",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "The concrete story can be reconstructed from the summary without consulting content units or evidence.",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "Evidence-level salient content in scope is represented in the Content layer: passenger, driver, destination, observed disappearance, wet seat, police search, no identified woman or matching accident, and the contextual truck coincidence. The later variant is represented separately.",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "All required structural probes are recoverable from the summary; unknown causal agency and control are explicitly retained as unknown rather than invented.",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "The summary preserves the initial-form event sequence, unsuccessful inquiry, unresolved endpoint, reprint limitation, and the distinction from the later variant.",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "The summary neither treats the reprint as a directly verified original nor turns the anatomical-department truck coincidence into an explanation.",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001 is limited to the 1969 article-connected form and VAR-002 is clearly identified as a later, materially different retelling.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "Summaryだけでも、原因不明の一回的消失、偶発的遭遇、女性客への状態変化、未解決終端、伝承内レイヤー、地域新聞による初期提示、および現実地点名という後続分析に必要な構造を再構成できる。",
+      "status": "PASS"
+    },
+    "blind_decode": "深夜の京都で、タクシー運転手は京都大学医学部解剖学教室前から女性客を乗せ、女性の指定した深泥池付近へ向かう。運転手は走行中にバックミラーで女性を確認していたが、到着時には女性は車内におらず、座席には液体で濡れた跡が残る。運転手が警察へ連絡し周辺を探しても女性は発見されず、関連するひき逃げ事故も確認されない。現場近傍で解剖学教室の無人トラックが見つかったという符合は不気味な文脈を加えるが、女性の正体や消失原因は説明しない。本文細部は転載資料に依存し、雨夜に池の脇で乗せる後代型とは区別される。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "深夜の京都で運転手が女性客を乗せる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "深夜の京都で運転手が女性客を乗せる開始場面。"
+      },
+      {
+        "blind_reconstruction": "女性の指定した深泥池付近へ向かう。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "女性は深泥池付近を行先として指定する。"
+      },
+      {
+        "blind_reconstruction": "運転手は走行中にバックミラーで女性を確認していた。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "走行中には運転手がバックミラーで女性を確認している。"
+      },
+      {
+        "blind_reconstruction": "到着時には女性は車内にいない。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "到着時に女性客が車内から消えたこと。"
+      },
+      {
+        "blind_reconstruction": "座席には液体で濡れた跡が残る。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "女性の座席に液体で濡れた痕跡が残ること。"
+      },
+      {
+        "blind_reconstruction": "運転手が警察へ連絡し周辺を探す。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "運転手の届出と警察による周辺捜索。"
+      },
+      {
+        "blind_reconstruction": "女性は発見されず、関連するひき逃げ事故も確認されない。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "女性も該当事故も見つからない未解決終端。"
+      },
+      {
+        "blind_reconstruction": "無人トラックとの符合は不気味な文脈を加えるが、消失原因や正体を説明しない。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "乗車地点と近傍の無人トラックの符合は怪談的文脈であり、原因説明ではない。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "運転手と女性客が主要な役割を担う。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "運転手は観測者・届出者、女性客は消失する人物として描かれる。"
+      },
+      {
+        "blind": "直接に状態変化するのは女性客であり、運転手は異常の観測者である。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "女性客が車内から不在となり、運転手はその発見と届出を行う。"
+      },
+      {
+        "blind": "通常の乗車と深泥池付近への走行中に一回的な出来事が起きる。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "乗車と目的地への移動は物理的文脈であり、再現規則は示されない。"
+      },
+      {
+        "blind": "消失を起こした原因主体は示されない。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "女性の正体および消失の因果源は未確定である。"
+      },
+      {
+        "blind": "同乗を確認されていた女性が到着時に不在となり、濡れた座席が残る。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "女性の消失／車内不在化と濡れた痕跡が初期形の異常である。"
+      },
+      {
+        "blind": "同乗状態から到着時の不在状態へ変化し、捜索後も不在のままである。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "女性客の車内不在化と、その後の未発見が記述される。"
+      },
+      {
+        "blind": "乗車、走行中の確認、到着時の消失、届出・捜索という順序の単一エピソードである。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "一回の送迎を中心に連続する事象列である。"
+      },
+      {
+        "blind": "発動規則、禁忌、再現条件は示されない。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "通常の移動以外に反復可能な条件・規則は確認されない。"
+      },
+      {
+        "blind": "警察への連絡は事後の調査であり、予防・制御法は示されない。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "有効な回避策または制御法は確認されない。"
+      },
+      {
+        "blind": "女性は発見されず、事故も確認されないまま終わる。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "所在・原因・事故との関係が確定しない。"
+      },
+      {
+        "blind": "消失の原因、女性の正体、最終的所在は不明のまま残る。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "未解決性が終端状態として保持される。"
+      },
+      {
+        "blind": "本文細部が転載依存であり、雨夜・池脇乗車の後代型は初期形と別である。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001とVAR-002は場面設定が異なるため分離される。"
+      }
+    ],
+    "reference_story": "1969年10月7日付の京都市内版新聞記事に接続する初期形では、深夜に運転手が解剖学教室前で女性客を乗せ、深泥池付近へ走る途中には客を確認していたのに、到着時には客が消え、濡れた座席だけが残る。届出後の警察捜索でも女性は見つからず、該当するひき逃げ事故も確認されない。近傍の解剖学教室無人トラックと乗車地点の符合は、記事内で届出を怪談めかせる文脈であって因果説明ではない。新聞の存在・見出しは図書館調査により確認される一方、本文細部は未照合の転載に依存する。雨夜・池脇乗車・水浸し座席の型は後代異伝として分離される。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Evidence→Contentの抽出、summaryの具体的再構成性、ならびに初期形と後代異伝の境界は適切である。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_10_contents.json",
+    "blob_sha": "789ca7d1cfbf3322f2861f0d094bd983db80a495",
+    "commit_sha": "9bc4603dad7fac4571e727139a5c179eea2f2354",
+    "reviewed_at": "2026-09-27T04:40:14Z"
+  },
+  "verdict": "Pass"
+}

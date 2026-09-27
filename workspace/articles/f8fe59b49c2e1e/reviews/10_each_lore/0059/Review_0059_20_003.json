@@ -1,0 +1,161 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "The principal analysis remains reconstructable from the scoped summary and Content: an unexplained one-off passenger disappearance, no established causal source, no recurrence rule, and an unresolved endpoint.",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "The analysis does not infer a ghost, death, accident, or supernatural mechanism from the disappearance, wet seat, or truck coincidence.",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "The analysis relies on scoped CNT-001–CNT-007 and CNT-009. It does not import the excluded later ghost tradition or source-only details as semantic premises.",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "The chain is coherent at the available level of description: the specific female passenger is the object of the directly described state change; D13 identifies a documented taxonomy gap rather than inventing a mechanism; the lasting result is unresolved knowledge rather than unsupported death or disappearance coding.",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18 is L1, not L3. No unsupported real-world social effect is inferred from the reported police response or newspaper publication.",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19 is limited to regional circulation based on a Kyoto city-edition newspaper and does not equate public availability with national circulation.",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "The D20 inference is supported by depicted inquiry: driver report, police search, and accident checking fail to establish a holder of explanatory information. It is not based merely on an omitted statement.",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "Named places and an institution occur in Scoped Content, but the artifact itself acknowledges that no independent Anchor evidence establishes their real-world status. A nonzero reality-anchor code requires evidence of the content's connection to actual place or institution, not solely names in an unverified reprint.",
+      "status": "FINDING"
+    },
+    "dimension_semantics": {
+      "notes": "D07 and D14 are assigned Direct status although their substantive event details and the neutral-polarity conclusion depend on reprint-derived, indirectly verified content. D21 also codes a reality-anchor level despite no independent Anchor evidence for the named places or institution.",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "「物語・伝説」 and 「交通・インフラ」 fit a narrative centered on a taxi journey and passenger disappearance.",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "D07 and D14 exceed the confidence ceiling by using D where the operative event sequence is retained as reprint-dependent and not directly checked against the contemporary article.",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "The analytic claims are traceable to Scoped Content. Evidence references are used chiefly to express the confidence limitation already present in Content.",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "The artifact correctly uses U for D10 and D17 and I for several reprint-dependent dimensions, but D07 and D14 do not consistently apply the stated confidence ceiling.",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "The D13 gap is explicitly recorded instead of forcing an unsupported supernatural, spatial-distortion, or reality-alteration mechanism. The schema permits a null primary where a taxonomy gap is present.",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "Scope is appropriately restricted to VAR-001, and excludes the later rain-and-pond-side form rather than importing its ghost identity or setting.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [
+    {
+      "category": "status_reasoning",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004",
+        "CNT-005",
+        "CNT-007"
+      ],
+      "dimension_refs": [
+        "D07",
+        "D14"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D07およびD14をIへ変更し、rationaleを本文細部が未照合転載に依存することと、D14がそこからの解釈であることに合わせて修正する。",
+      "impact": "分析表のDirect/Inferential比率を歪め、初期形の出来事構造への確信を実際の資料強度より高く表示する。",
+      "rationale": "D07の具体的な消失事象とD14の中立的帰結判断は、Scoped Content上では存在するが、その本文細部は原紙未照合のSRC-003由来であることがContent・Analysis双方で明示されている。coding rulesは下位資料しかない場合にIを用いるよう求める。EVD-001は記事の存在と見出しを確認するが、D07の詳細な構造およびD14の解釈をDirectへ引き上げる根拠にはならない。",
+      "severity": "Moderate",
+      "summary": "D07とD14のDirect statusが、転載依存という証拠上限と整合しない。"
+    },
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-009"
+      ],
+      "dimension_refs": [
+        "D21"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-005"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "独立したAnchor Evidenceを追加してContentへ反映した上でD21を再評価する。それを追加できない場合は、D21を不明またはAnchor Evidenceを必要としない低いコードへ、taxonomyの定義に従って改める。",
+      "impact": "伝承内容の現実接続の強さを過大評価し、地点名を持つ未検証の語りと、独立に実在接続が確認された語りを区別できなくする。",
+      "rationale": "Scoped Contentは深泥池付近、解剖学教室前、同教室のトラックという固有名を含む。しかし、実在地・実在施設との接続を確かめるAnchor Evidenceは00_sourcesに存在せず、D21 rationale自身もその欠如を認めている。資料・記事が実在すること、または転載文中に地名があることだけでは、D21の現実アンカー水準を直接支持しない。",
+      "severity": "Moderate",
+      "summary": "D21.A2は、独立したAnchor Evidenceを欠くため正当化されない。"
+    }
+  ],
+  "review_notes": "Scope、分類、因果源不確定性、D13 taxonomy gap、D19、D20、D18は概ね妥当である。ただし、転載依存の本文細部に対するstatus ceilingと、独立Anchor Evidenceを欠くD21の現実アンカーが修正を要する。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-009"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-005"
+    ],
+    "model": "通常の深夜のタクシー移動のなかで、運転手が同乗を確認していた女性客が到着時に車内からいなくなり、濡れた座席が残る。届出と捜索を経ても女性の所在、消失原因、事故との関係は確定しない。したがって、この初期形は、明示的因果源・再現条件・回避策を与えず、一回的な異常事象を未解決のまま保持する語りである。",
+    "notes": "The reconstruction supports the overall scoped model, but not the Direct confidence assigned to D07 and D14 or the unsupported D21 reality-anchor level.",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_20_analysis.json",
+    "blob_sha": "89775ef13b6a16c6f40e853ab8dde989e125a9fa",
+    "commit_sha": "d968dd0ee53e3d55bd0b929a4c7b74412eced094",
+    "reviewed_at": "2026-09-27T04:40:14Z"
+  },
+  "verdict": "Moderate"
+}
