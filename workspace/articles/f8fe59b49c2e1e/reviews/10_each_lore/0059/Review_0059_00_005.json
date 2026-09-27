@@ -1,0 +1,61 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1969年10月7日付記事を最古確認点として扱い、記事掲載日を起源日と同一視していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-005は転載本文の「京大医学部前」を「京都大学医学部解剖学教室前」と言い換えている。転載本文で解剖学教室に明示的に結び付くのは現場近傍の無人トラックであり、乗車地点ではない。",
+      "status": "FINDING"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-002をprimary、SRC-003をdirect_derivative、SRC-001をindirect_derivativeとしており、原紙本文を未閲覧であることも明記している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "各Sourceに含まれる、記事の所在・見出し、初期形の出来事列、捜索未解決、後代異伝、深泥池の実在という分析上salientな情報はEvidence化されている。ただしEVD-005の乗車地点の誤限定は完全性ではなく正確性の問題としてFinding化した。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は所蔵館による記事所在確認、SRC-002は同時代新聞、SRC-003は未照合の転載、SRC-004は公式地理情報として、それぞれの役割と限界がおおむね適切に区別されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-005の乗車地点に関する限定はSRC-003の本文に支持されない。他の主要Evidenceは、示されたSourceの範囲と転載未照合という留保に整合する。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "原紙との逐語照合未実施、転載依存、後代異伝との非混合、地理Anchorの限定を明示している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [
+    {
+      "category": "evidence_integrity",
+      "evidence_refs": [
+        "EVD-005"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "EVD-005を「京大医学部前で乗車し、現場近傍で京大医学部解剖学教室の無人トラックが見つかった」という範囲へ訂正し、派生するContentを同期修正する。",
+      "impact": "CNT-009およびsummaryに同じ誤限定が流入し、乗車地点とトラックの符合の記述精度を損なう。",
+      "rationale": "SRC-003本文は乗車地点を「京大医学部前」とし、解剖学教室への言及は深泥池現場から50メートル先で見つかったトラックの所属としてのみ示す。両者を同一の限定地点として扱うことは転載本文を超える。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-003"
+      ],
+      "summary": "EVD-005が乗車地点を解剖学教室前と誤って限定している。"
+    }
+  ],
+  "review_notes": "外部確認では京都府立図書館の記録が1969年記事の掲載・見出しを支持し、SRC-003検索スニペットはEVD-005の乗車地点限定を支持しなかった。",
+  "review_seq": 5,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_00_sources.json",
+    "blob_sha": "229ddb7a2fe1bbbef2c45fb9fb76ffcee42318c5",
+    "commit_sha": "da44c6d34132db005b43a093b0e23a8336d10609",
+    "reviewed_at": "2026-09-27T04:52:25Z"
+  },
+  "verdict": "Moderate"
+}
