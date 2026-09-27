@@ -167,12 +167,12 @@ class _FakeRuntime:
         self.reviewer_ids = []
 
     def create_creator_session(self, entry_id):
-        return RuntimeSession("creator", f"creator:{entry_id}", object(), object())
+        return RuntimeSession("creator", f"creator:{entry_id}")
 
     def create_reviewer_session(self, entry_id, review_seq):
         session_id = f"reviewer:{entry_id}:{review_seq}:{len(self.reviewer_ids)}"
         self.reviewer_ids.append(session_id)
-        return RuntimeSession("reviewer", session_id, object(), object())
+        return RuntimeSession("reviewer", session_id)
 
     def run_creator(self, session, prompt):
         return RuntimeResult("creator done")
