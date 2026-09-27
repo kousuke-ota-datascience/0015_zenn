@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 from dataclasses import asdict, dataclass
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -341,6 +342,66 @@ def _git(repo: Path, *args: str) -> str:
     return proc.stdout.strip()
 
 
+def _git_optional(repo: Path, *args: str) -> str | None:
+    proc = subprocess.run(
+        ["git", "-C", str(repo), *args],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if proc.returncode != 0:
+        return None
+    value = proc.stdout.strip()
+    return value or None
+
+
+def _resolve_push_remote(repo: Path) -> str:
+    """Resolve a push remote without assuming the conventional name 'origin'."""
+    remotes = tuple(
+        line.strip()
+        for line in _git(repo, "remote").splitlines()
+        if line.strip()
+    )
+    if not remotes:
+        raise RuntimeError("no Git remote is configured")
+
+    configured = os.environ.get("WORKFLOW_GIT_REMOTE")
+    if configured:
+        if configured not in remotes:
+            raise RuntimeError(
+                "WORKFLOW_GIT_REMOTE is not configured in this repository: "
+                f"{configured!r}; available={list(remotes)!r}"
+            )
+        return configured
+
+    branch = _git_optional(repo, "branch", "--show-current")
+    if branch:
+        tracking_remote = _git_optional(
+            repo,
+            "config",
+            "--get",
+            f"branch.{branch}.remote",
+        )
+        if tracking_remote and tracking_remote != "." and tracking_remote in remotes:
+            return tracking_remote
+
+    push_default = _git_optional(repo, "config", "--get", "remote.pushDefault")
+    if push_default and push_default in remotes:
+        return push_default
+
+    if "origin" in remotes:
+        return "origin"
+
+    if len(remotes) == 1:
+        return remotes[0]
+
+    raise RuntimeError(
+        "cannot resolve Git push remote automatically; "
+        f"available={list(remotes)!r}. Set WORKFLOW_GIT_REMOTE explicitly."
+    )
+
+
 def _commit_review_cycle(write_result: Mapping[str, Any]) -> str:
     """Commit only the append-only Review files created by review_writer."""
     repo = Path(_git(ARTICLE_ROOT, "rev-parse", "--show-toplevel")).resolve()
@@ -365,13 +426,14 @@ def _commit_review_cycle(write_result: Mapping[str, Any]) -> str:
         *rel_paths,
     )
     commit_sha = _git(repo, "rev-parse", "HEAD")
-    _git(repo, "push", "origin", "HEAD")
+    remote = _resolve_push_remote(repo)
+    _git(repo, "push", remote, "HEAD")
     return commit_sha
 
 
 def _run_review_cycle(
     entry_id: str,
-    runtime: AgentsRuntime,
+    runtime: OrchestrationRuntime,
 ) -> dict[str, Any]:
     prepared = prepare_review_cycle(entry_id)
     cycle = prepared.to_dict()
