@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1922年の幸運型を前史として分離し、制裁前景型の1970年頃の出現・流行は後代資料経由の最古確認として限定している。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "全Evidenceはparaphraseとして表示され、1970年原紙未確認等の限界も明記されている。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-001をprimary、SRC-002/003/004を派生・後代資料として扱い、原紙未直接確認を一次確認へ誤記していない。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "提示Source群におけるScope内の salient な規則、制裁、人数・期限variant、流通史、行政対応、前史境界はEvidence化されている。SRC-004の筆者推測は事実Evidenceから意図的に除外されており妥当である。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は同時代自治体広報、SRC-002/003は研究資料、SRC-004は後代解説として資料種別・関係が区別されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "郵送・期限・人数・不転送時の不幸、1970年代の変異、1977年の行政対応は各参照Sourceの記述範囲に収まる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "1970年型の原紙、全国性・受容層、各variant原資料の未直接確認がEvidence単位で保存されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0025",
+  "findings": [],
+  "review_notes": "Source→Evidence層は、後代解説由来の歴史主張を同時代一次資料と区別しつつ、対象Scopeの再構成に必要な情報を保持している。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0025_fuko_no_tegami/0025_00_sources.json",
+    "blob_sha": "41ae25b986a7dac817505bf44267b1106fc14d87",
+    "commit_sha": "1e1e49950b4e7c6610e58b84e048c79129c31893",
+    "reviewed_at": "2026-09-27T04:06:11Z"
+  },
+  "verdict": "Pass"
+}
