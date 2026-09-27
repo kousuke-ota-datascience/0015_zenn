@@ -822,9 +822,12 @@ Creator and Reviewer isolation is enforced at runtime:
 - Creator conversation history, rationale, intermediate notes, and mutable
   working-tree canonical copies are excluded from Reviewer input.
 - Reviewer runs in a temporary non-repository working directory with a
-  read-only sandbox, local shell disabled, and live web search enabled.
-- Creator runs against the article repository with workspace-write and network
-  access because Workflow 10 owns canonical edits, validation, commit, and push.
+  read-only sandbox, local shell disabled, user config/rules ignored, apps and
+  multi-agent tools disabled, and live web search enabled.
+- Creator runs against the article repository with danger-full-access and no
+  interactive approval prompts because Workflow 10 owns canonical edits,
+  validation, Git commit, and push. Production execution therefore MUST use a
+  dedicated working branch and a clean working tree.
 - `review_writer.prepare_review_cycle` and `write_review_cycle` continue to
   enforce freeze/current SHA consistency and append-only Review persistence.
 - `MAX_REVIEW_CYCLES_PER_RUN = 5` remains the fail-stop bound.
