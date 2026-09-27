@@ -814,19 +814,18 @@ Creator and Reviewer isolation is enforced at runtime:
 - Workflow 10 uses one persistent Codex Creator thread.
 - The first Creator turn uses `codex exec --json`; subsequent correction turns
   use `codex exec ... resume <thread_id>` so Creator context is preserved.
-- Every Workflow 20 cycle launches a **fresh** `codex exec --ephemeral`
-  Reviewer process; Reviewer threads are never resumed.
+- Every Workflow 20 cycle launches a **fresh** `codex exec` Reviewer process;
+  Reviewer threads are never resumed.
 - Reviewer input is rebuilt from a whitelist containing Entry_ID, Workflow 20,
   the freeze-bound canonical target, schemas, taxonomy/coding rules, and
   external Evidence.
 - Creator conversation history, rationale, intermediate notes, and mutable
   working-tree canonical copies are excluded from Reviewer input.
-- Reviewer runs in a temporary non-repository working directory with a
-  read-only sandbox, user config/rules ignored, apps and multi-agent tools
-  disabled, and live web search enabled. The Reviewer prompt explicitly forbids
-  local shell use and repository working-tree inspection.
-- Creator runs against the article repository with danger-full-access and no
-  interactive approval prompts because Workflow 10 owns canonical edits,
+- Reviewer runs in a temporary empty Git repository with a read-only sandbox
+  and live web search enabled. The Reviewer prompt explicitly forbids local
+  shell use and production repository working-tree inspection.
+- Creator runs against the article repository with `sandbox_mode="danger-full-access"`
+  and `approval_policy="never"` because Workflow 10 owns canonical edits,
   validation, Git commit, and push. Production execution therefore MUST use a
   dedicated working branch and a clean working tree.
 - `review_writer.prepare_review_cycle` and `write_review_cycle` continue to
