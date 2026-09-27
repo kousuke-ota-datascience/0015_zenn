@@ -419,3 +419,60 @@ def test_codex_runtime_rejects_non_chatgpt_login(monkeypatch):
 
     with pytest.raises(codex_cli.CodexCLIAuthError, match="authenticated with ChatGPT"):
         runtime.create_creator_session("0001")
+
+
+
+def test_resolve_push_remote_uses_single_non_origin_remote(monkeypatch, tmp_path):
+    monkeypatch.delenv("WORKFLOW_GIT_REMOTE", raising=False)
+    monkeypatch.setattr(
+        pipeline,
+        "_git",
+        lambda _repo, *args: "0015_zenn" if args == ("remote",) else "",
+    )
+    monkeypatch.setattr(pipeline, "_git_optional", lambda _repo, *args: None)
+
+    assert pipeline._resolve_push_remote(tmp_path) == "0015_zenn"
+
+
+def test_resolve_push_remote_prefers_explicit_environment(monkeypatch, tmp_path):
+    monkeypatch.setenv("WORKFLOW_GIT_REMOTE", "work")
+    monkeypatch.setattr(
+        pipeline,
+        "_git",
+        lambda _repo, *args: "origin\nwork" if args == ("remote",) else "",
+    )
+
+    assert pipeline._resolve_push_remote(tmp_path) == "work"
+
+
+def test_resolve_push_remote_uses_tracking_remote(monkeypatch, tmp_path):
+    monkeypatch.delenv("WORKFLOW_GIT_REMOTE", raising=False)
+    monkeypatch.setattr(
+        pipeline,
+        "_git",
+        lambda _repo, *args: "origin\n0015_zenn" if args == ("remote",) else "",
+    )
+
+    def optional(_repo, *args):
+        if args == ("branch", "--show-current"):
+            return "workflow/0025"
+        if args == ("config", "--get", "branch.workflow/0025.remote"):
+            return "0015_zenn"
+        return None
+
+    monkeypatch.setattr(pipeline, "_git_optional", optional)
+
+    assert pipeline._resolve_push_remote(tmp_path) == "0015_zenn"
+
+
+def test_resolve_push_remote_requires_override_when_ambiguous(monkeypatch, tmp_path):
+    monkeypatch.delenv("WORKFLOW_GIT_REMOTE", raising=False)
+    monkeypatch.setattr(
+        pipeline,
+        "_git",
+        lambda _repo, *args: "alpha\nbeta" if args == ("remote",) else "",
+    )
+    monkeypatch.setattr(pipeline, "_git_optional", lambda _repo, *args: None)
+
+    with pytest.raises(RuntimeError, match="WORKFLOW_GIT_REMOTE"):
+        pipeline._resolve_push_remote(tmp_path)

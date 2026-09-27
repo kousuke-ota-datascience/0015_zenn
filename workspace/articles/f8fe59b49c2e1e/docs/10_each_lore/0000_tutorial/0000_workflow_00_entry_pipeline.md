@@ -799,6 +799,7 @@ Runtime prerequisites are:
   `codex login status` returning `Logged in using ChatGPT`.
 - Existing Workflow 90 Notion credentials.
 - Git credentials that can commit/push the execution branch.
+- The push remote is resolved dynamically; the remote name does not have to be `origin`.
 
 The runtime does **not** require `OPENAI_API_KEY` or the Python
 `openai-agents` package. The Codex subprocess forces
@@ -828,6 +829,10 @@ Creator and Reviewer isolation is enforced at runtime:
   and `approval_policy="never"` because Workflow 10 owns canonical edits,
   validation, Git commit, and push. Production execution therefore MUST use a
   dedicated working branch and a clean working tree.
+- Deterministic Review commits resolve the push remote in this order:
+  `WORKFLOW_GIT_REMOTE` → current branch tracking remote → `remote.pushDefault`
+  → `origin` → the sole configured remote. If multiple remotes remain
+  ambiguous, set `WORKFLOW_GIT_REMOTE` explicitly.
 - `review_writer.prepare_review_cycle` and `write_review_cycle` continue to
   enforce freeze/current SHA consistency and append-only Review persistence.
 - `MAX_REVIEW_CYCLES_PER_RUN = 5` remains the fail-stop bound.
