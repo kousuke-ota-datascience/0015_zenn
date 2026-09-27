@@ -1,0 +1,58 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1969年記事を最古の確認記録としており、伝承の実際の起源と同一視していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-001は図書館の直接確認範囲に限定され、転載依存のEVD-002・003には不確実性が明示されている。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-002をprimary、SRC-003をdirect_derivative、SRC-001をindirect_derivativeとして扱い、原紙未照合を隠していない。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-003には、警察が深泥池の現場から約50m先で京都大学医学部解剖学教室の無人トラックを発見し、乗車地点も同医学部前だったため出来事を一層怪談めかした、という具体的文脈がある。これは異常の意味づけ・初期形の再構成に影響しうるが、Evidence化されていない。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は所蔵館による資料確認記録、SRC-002は同時代新聞、SRC-003は原紙未照合の転載として区別されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "掲載日・版・見出しはSRC-001で確認でき、SRC-003の転載本文はEVD-002・003の出来事列を支持する。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "転載本文の細部、後代異伝、原紙未照合の限界がnotesおよびEvidence uncertaintyに保持されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [
+    {
+      "category": "salient_evidence_completeness",
+      "finding_id": "F001",
+      "fix_direction": "SRC-003由来で原紙未照合である旨を明記したEvidenceを追加し、乗車地点、トラック発見、両者の符合を区別して記録する。",
+      "impact": "ContentおよびAnalysisは、初期記事が含む未解決の文脈的手掛かりを再構成・監査できない。",
+      "rationale": "SRC-003本文は、乗車地点と現場近傍の解剖学教室トラックの符合を、記事自体が怪談性を強める要素として提示する。これは単なる捜索台数等の周辺細部ではなく、異常の解釈可能性と初期形の識別に関わる。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-003"
+      ],
+      "summary": "転載本文にある解剖学教室トラックという初期形の重要な文脈がEvidence層から脱落している。"
+    }
+  ],
+  "review_notes": "外部照合ではSRC-001が1969年10月7日京都市内版の記事・見出し・マイクロフィルムおよびクロスサーチでの確認を明示し、SRC-003は当該記事本文を転載すると称する。",
+  "review_seq": 1,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_00_sources.json",
+    "blob_sha": "ef9333ad1ad0363a9c9baa4d85c453d9b8cdb42c",
+    "commit_sha": "2268f630dffe3ce0fd2d4a6c398dc9fe31c972c9",
+    "reviewed_at": "2026-09-27T04:29:19Z"
+  },
+  "verdict": "Moderate"
+}
