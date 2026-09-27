@@ -1,0 +1,137 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "The scoped Content and summary retain the material distinctions needed for the principal analytical interpretation.",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "The model remains agnostic about cause and does not infer that the pond, truck, anatomy department, or a ghost caused the absence.",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "The analysis uses details represented in the scoped Content layer; evidence references function as confidence provenance rather than new semantic inputs.",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "The chain is auditable as woman passenger → unexplained absence mechanism not represented by the taxonomy → uncertainty preserved. D13's null primary is justified by the declared taxonomy gap.",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18 is L1, and the analysis does not claim a social-real-world effect without X evidence.",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "The local Kyoto city edition is used to support regional, not national, distribution.",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "Police searched for the woman and checked for a corresponding accident, but Scoped Content does not establish that every plausible holder lacks the truth, additional information, or effective control information.",
+      "status": "FINDING"
+    },
+    "d21_reality_anchor": {
+      "notes": "D21 relies only on the named pond's confirmed existence and expressly does not treat that anchor as verification of the event or its cause.",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D20 overstates investigative nonresolution as proof that no privileged information holder exists. The remaining dimensions are semantically compatible with Scoped Content, including D13's explicit taxonomy gap.",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "A narrative/legend entry under transportation and infrastructure is compatible with the scoped taxi-passenger anomaly.",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "Where article-body details depend on the uncollated mirror, the analysis uses I rather than D; direct codes are limited to independently confirmed article/publication and place-anchor facts.",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "Dimension rationales are generally traceable to Scoped Content, with mirror-derived detail consistently limited to inferred status.",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D20 should be U rather than I/NO_ONE_KNOWS; the content documents an unsuccessful search, not the absence of all actual or potential privileged holders of explanation or control information.",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "D13 properly identifies an unrepresented mechanism: a person's unexplained absence without imposing an unsupported supernatural or reality-alteration ontology.",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "The scope correctly fixes the newspaper-connected initial form and excludes the later rainy pondside variant and unsubstantiated ghost/death explanations.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [
+    {
+      "category": "status_reasoning",
+      "content_refs": [
+        "CNT-006",
+        "CNT-007"
+      ],
+      "dimension_refs": [
+        "D20"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "Set D20 to status U with null primary and no secondary, unless Scoped Content is expanded with evidence that plausible holders were actually explored and none possessed relevant explanatory or control information.",
+      "impact": "The analysis overstates the entry's information structure by converting unresolved investigation into a claim that no privileged holder exists.",
+      "rationale": "The coding rule permits inferred NO_ONE_KNOWS only where plausible holders or authorities are actually explored and the scope establishes that none yields truth, additional information, or effective control. CNT-006–007 show a police search and negative hit-and-run check, but do not establish the woman's epistemic status, exclude an unknown person or institution as a holder, or show a sufficiently exhaustive truth/control inquiry.",
+      "severity": "Moderate",
+      "summary": "D20 incorrectly codes NO_ONE_KNOWS from an unsuccessful police search."
+    }
+  ],
+  "review_notes": "One Moderate correction is required: preserve unknown information-holder structure rather than infer NO_ONE_KNOWS.",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-009",
+      "CNT-010"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-005",
+      "EVD-006"
+    ],
+    "model": "A routine taxi journey toward a real, locally named pond becomes an anomalous single episode when a passenger observed during travel is absent at arrival and leaves a wet trace. Subsequent police inquiry does not resolve her location or the event's cause. The story therefore preserves an unexplained-event frame and uncertainty, without establishing a ghost, place-based cause, repeatable trigger, harm polarity, or anyone who possesses the answer.",
+    "notes": "The canonical model is substantively supported except for D20's stronger NO_ONE_KNOWS inference.",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_20_analysis.json",
+    "blob_sha": "a4919c285509abcdd02ce57ed022433c90fc2e9d",
+    "commit_sha": "492b6db1441a14e781bae7c8fe87f834a8d92aa7",
+    "reviewed_at": "2026-09-27T22:48:58Z"
+  },
+  "verdict": "Moderate"
+}

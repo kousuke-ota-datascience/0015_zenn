@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "The artifact identifies the 1969-10-07 newspaper as the earliest confirmed attestation, not as the asserted date of origin.",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "All evidence is paraphrased rather than represented as unverified quotation. The mirror-derived details are explicitly limited and qualified.",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "The inaccessible contemporary article is not misrepresented as directly inspected in this cycle. SRC-001's independent confirmation and SRC-003's direct-derivative status are distinguished.",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "The source population's salient initial-attestation, later-variant, and geographic-anchor information is represented as evidence. The reference record's unverified web claims about timing, police inquiries, and television are not treated as reliable source facts requiring evidence extraction.",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001 is a traceable library reference record that reports direct inspection of the 1969 newspaper; SRC-002 is identified as the contemporary primary item; SRC-003 is appropriately treated as an unverified mirror; SRC-004 is an appropriate official geographic anchor.",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-001 is supported by the library record, EVD-002/003/005 are conservatively attributed to the mirror, EVD-004 to the library's descriptions of later books, and EVD-006 to Kyoto City's page.",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "It preserves uncertainty over article-body details, causal explanation, and whether later ghost-story elements belong to the initial form.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [],
+  "review_notes": "No semantic correction is required in the Source-to-Evidence layer.",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_00_sources.json",
+    "blob_sha": "8653ffdbc3fa93ba77a01fa97a7819a371f321c3",
+    "commit_sha": "d655821bea4f977a8881c5e7b6f1ce8632d11712",
+    "reviewed_at": "2026-09-27T22:48:58Z"
+  },
+  "verdict": "Pass"
+}
