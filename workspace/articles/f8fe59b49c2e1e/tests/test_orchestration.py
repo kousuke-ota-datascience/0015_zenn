@@ -6,8 +6,8 @@ from types import SimpleNamespace
 
 import pytest
 
-from src.orchestration import agents_api
-from src.orchestration.agents_api import AgentRunResult, AgentSession
+from src.orchestration import codex_cli
+from src.orchestration.codex_cli import RuntimeResult, RuntimeSession
 from src.orchestration import entry_pipeline as pipeline
 
 
@@ -123,11 +123,11 @@ def test_reviewer_context_is_frozen_and_creator_context_is_absent(
         encoding="utf-8",
     )
 
-    monkeypatch.setattr(agents_api, "WORKFLOW_20", workflow20)
-    monkeypatch.setattr(agents_api, "TAXONOMY", taxonomy)
-    monkeypatch.setattr(agents_api, "CODING_RULES", coding)
-    monkeypatch.setattr(agents_api, "SCHEMA_ROOT", schemas)
-    monkeypatch.setattr(agents_api, "repository_root", lambda: tmp_path)
+    monkeypatch.setattr(codex_cli, "WORKFLOW_20", workflow20)
+    monkeypatch.setattr(codex_cli, "TAXONOMY", taxonomy)
+    monkeypatch.setattr(codex_cli, "CODING_RULES", coding)
+    monkeypatch.setattr(codex_cli, "SCHEMA_ROOT", schemas)
+    monkeypatch.setattr(codex_cli, "repository_root", lambda: tmp_path)
 
     calls = []
 
@@ -135,7 +135,7 @@ def test_reviewer_context_is_frozen_and_creator_context_is_absent(
         calls.append((commit, blob, path))
         return json.dumps({"artifact_path": path})
 
-    monkeypatch.setattr(agents_api, "_frozen_file", frozen)
+    monkeypatch.setattr(codex_cli, "_frozen_file", frozen)
 
     cycle = {
         "entry_id": "0001",
@@ -150,7 +150,7 @@ def test_reviewer_context_is_frozen_and_creator_context_is_absent(
         },
     }
 
-    context = agents_api.build_reviewer_context("0001", cycle)
+    context = codex_cli.build_reviewer_context("0001", cycle)
 
     assert len(calls) == 3
     assert set(context["frozen_canonical"]) == {"00", "10", "20"}
@@ -167,18 +167,18 @@ class _FakeRuntime:
         self.reviewer_ids = []
 
     def create_creator_session(self, entry_id):
-        return AgentSession("creator", f"creator:{entry_id}", object(), object())
+        return RuntimeSession("creator", f"creator:{entry_id}", object(), object())
 
     def create_reviewer_session(self, entry_id, review_seq):
         session_id = f"reviewer:{entry_id}:{review_seq}:{len(self.reviewer_ids)}"
         self.reviewer_ids.append(session_id)
-        return AgentSession("reviewer", session_id, object(), object())
+        return RuntimeSession("reviewer", session_id, object(), object())
 
     def run_creator(self, session, prompt):
-        return AgentRunResult("creator done")
+        return RuntimeResult("creator done")
 
     def run_reviewer(self, session, context, prompt):
-        return AgentRunResult(
+        return RuntimeResult(
             json.dumps(
                 {"reviews": {"00": {}, "10": {}, "20": {}}},
                 ensure_ascii=False,
@@ -310,3 +310,101 @@ def test_complete_entry_is_idempotent_and_does_not_create_sessions(monkeypatch):
     assert result.canonical_review_exact is True
     assert result.validation_pass is True
     assert result.control_plane_synchronized is True
+
+
+
+def test_parse_codex_jsonl_extracts_thread_and_last_agent_message():
+    stdout = "\n".join(
+        [
+            json.dumps({"type": "thread.started", "thread_id": "thread-1"}),
+            json.dumps(
+                {
+                    "type": "item.completed",
+                    "item": {"type": "agent_message", "text": "first"},
+                }
+            ),
+            json.dumps(
+                {
+                    "type": "item.completed",
+                    "item": {"type": "agent_message", "text": "final"},
+                }
+            ),
+        ]
+    )
+
+    thread_id, output = codex_cli._parse_codex_jsonl(stdout)
+
+    assert thread_id == "thread-1"
+    assert output == "final"
+
+
+def test_codex_creator_resumes_the_same_thread(monkeypatch):
+    monkeypatch.setattr(codex_cli.shutil, "which", lambda _binary: "/usr/bin/codex")
+    runtime = codex_cli.CodexCLIRuntime()
+    monkeypatch.setattr(runtime, "_ensure_chatgpt_login", lambda: None)
+    monkeypatch.setattr(codex_cli, "_read_text", lambda _path: "workflow-10")
+
+    calls = []
+
+    def invoke(args, prompt, *, cwd):
+        calls.append((list(args), prompt, cwd))
+        return "thread-creator", "done"
+
+    monkeypatch.setattr(runtime, "_invoke", invoke)
+
+    session = runtime.create_creator_session("0001")
+    runtime.run_creator(session, "first task")
+    runtime.run_creator(session, "correction task")
+
+    assert session.thread_id == "thread-creator"
+    assert "resume" not in calls[0][0]
+    resume_index = calls[1][0].index("resume")
+    assert calls[1][0][resume_index + 1] == "thread-creator"
+
+
+def test_codex_reviewer_is_fresh_ephemeral_read_only_and_shellless(monkeypatch):
+    monkeypatch.setattr(codex_cli.shutil, "which", lambda _binary: "/usr/bin/codex")
+    runtime = codex_cli.CodexCLIRuntime()
+    monkeypatch.setattr(runtime, "_ensure_chatgpt_login", lambda: None)
+
+    calls = []
+
+    def invoke(args, prompt, *, cwd):
+        calls.append((list(args), prompt, cwd))
+        return "thread-review", '{"reviews":{"00":{},"10":{},"20":{}}}'
+
+    monkeypatch.setattr(runtime, "_invoke", invoke)
+
+    session = runtime.create_reviewer_session("0001", 4)
+    result = runtime.run_reviewer(
+        session,
+        {"entry_id": "0001", "review_seq": 4},
+        "review this frozen cycle",
+    )
+
+    args, prompt, cwd = calls[0]
+    assert result.output.startswith('{"reviews"')
+    assert session.thread_id == "thread-review"
+    assert "--ephemeral" in args
+    assert "--skip-git-repo-check" in args
+    assert 'sandbox_mode="read-only"' in args
+    assert "features.shell_tool=false" in args
+    assert "resume" not in args
+    assert cwd != codex_cli.ARTICLE_ROOT
+    assert "Creator conversation" in prompt
+
+
+def test_codex_runtime_rejects_non_chatgpt_login(monkeypatch):
+    monkeypatch.setattr(codex_cli.shutil, "which", lambda _binary: "/usr/bin/codex")
+
+    class Proc:
+        returncode = 0
+        stdout = ""
+        stderr = "Logged in using an API key - sk-...redacted"
+
+    monkeypatch.setattr(codex_cli.subprocess, "run", lambda *args, **kwargs: Proc())
+
+    runtime = codex_cli.CodexCLIRuntime()
+
+    with pytest.raises(codex_cli.CodexCLIAuthError, match="authenticated with ChatGPT"):
+        runtime.create_creator_session("0001")
