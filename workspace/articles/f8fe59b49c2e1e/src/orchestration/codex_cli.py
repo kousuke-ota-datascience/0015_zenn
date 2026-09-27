@@ -4,8 +4,8 @@ Creator and Reviewer are isolated at the Codex thread/process boundary.
 
 - Creator uses one persistent Codex thread and resumes it across correction turns.
 - Every Reviewer cycle launches a fresh ephemeral Codex process.
-- Reviewer receives only a freeze-bound whitelist context, live web search, no shell
-  tool, and a read-only sandbox in a temporary non-repository working directory.
+- Reviewer receives only a freeze-bound whitelist context and live web search, and
+  runs in a read-only sandbox from a temporary non-repository working directory.
 - Authentication is forced to ChatGPT login so this runtime uses Codex/ChatGPT
   entitlement rather than an OpenAI API key.
 """
@@ -236,27 +236,22 @@ class CodexCLIRuntime:
         sandbox_mode: str,
         ephemeral: bool = False,
         skip_git_repo_check: bool = False,
-        shell_enabled: bool = True,
-        workspace_network: bool = False,
         approval_policy: str | None = None,
     ) -> list[str]:
         args = [
             self.binary,
             "exec",
             "--json",
+            "--search",
+            "--sandbox",
+            sandbox_mode,
             "-c",
             'forced_login_method="chatgpt"',
-            "-c",
-            'web_search="live"',
-            "-c",
-            f'sandbox_mode="{sandbox_mode}"',
         ]
-        if not shell_enabled:
-            args += ["-c", "features.shell_tool=false"]
-        if workspace_network:
-            args += ["-c", "sandbox_workspace_write.network_access=true"]
         if approval_policy:
-            args += ["--ask-for-approval", approval_policy]
+            # codex exec has no --ask-for-approval flag. Approval policy is a
+            # documented config key and must be passed through -c/--config.
+            args += ["-c", f'approval_policy="{approval_policy}"']
         if self.model:
             args += ["--model", self.model]
         if ephemeral:
@@ -361,7 +356,7 @@ Current Workflow 00 task:
 Isolation contract:
 - You have no access to the Creator conversation and must not infer or request it.
 - Use only the whitelist context embedded below plus live web search.
-- Local shell execution is disabled for this run.
+- Do not execute local shell commands or inspect paths outside the supplied context.
 - Do not read the repository working tree and do not modify canonical artifacts.
 - Reconstruct the Review independently from the frozen target.
 
@@ -383,7 +378,6 @@ Task:
             sandbox_mode="read-only",
             ephemeral=True,
             skip_git_repo_check=True,
-            shell_enabled=False,
             approval_policy="never",
         )
         # Reviewer must not inherit local MCP/apps/rules that could introduce
