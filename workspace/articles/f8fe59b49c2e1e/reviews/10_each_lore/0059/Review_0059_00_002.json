@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1969年10月7日付記事を最古確認として扱い、実際の起源・出来事発生日と混同していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-001は図書館回答が直接確認した書誌的事実に限定され、転載由来の本文細部（EVD-002、003、005）には明示的な留保がある。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-002をprimary、SRC-003をdirect_derivative、SRC-001をindirect_derivativeとし、原紙未閲覧を明記している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001に含まれる掲載確認、見出し、後代異伝の差異はEvidence化されている。SRC-001が紹介する未検証のネット上の警察・テレビ報道言及は、同館自身が未確定としており、独立した伝承再構成事実としてEvidence化する必要はない。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は京都府立図書館による照会記録で、掲載日・版・見出しの確認には適切である。SRC-002は同時代新聞、SRC-003は原紙未照合の転載として適切に低い確度で位置付けられている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "各Evidenceは対応Sourceの記述範囲を超えて原因論を主張していない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "転載本文への依存、原紙との未照合、後代異伝との非同一性を保持している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [],
+  "review_notes": "公開中の京都府立図書館レファレンス回答を再確認した。回答は1969年10月7日『朝日新聞』京都市内版p16の掲載・見出しを明記し、後代資料の異伝も記録しており、canonicalの出典関係および留保と整合する。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_00_sources.json",
+    "blob_sha": "cd60f9b58adde23c68e6a645a7a377bbfe4cf58a",
+    "commit_sha": "4a1dd5879fec140ac57c6cfcf2fc7990931274cf",
+    "reviewed_at": "2026-09-27T04:36:32Z"
+  },
+  "verdict": "Pass"
+}
