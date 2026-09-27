@@ -1,0 +1,117 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryとScoped Contentのいずれからも、D07〜D18の異常事象・受動的遭遇・未解決性・単一エピソード、D19〜D21の地域提示・情報保持者不明・地理アンカーを同様に導ける。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "原因主体を未確定のままとし、乗客の不在化、捜索後も残る不確実性を因果説明と混同していない。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "AnalysisはVAR-001に属するCNT-001〜007、009、010に記録済みの意味だけで正当化されており、Evidence固有の新情報を直接導入していない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12は女性客、D13はtaxonomy gapとしての車内からの不在化、D15はその原因・所在が終端まで確定しない知識上の不確実性であり、人物の消失を死亡・被害へ過剰読解していない。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1であり、L3を支える独立X Evidenceを主張していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "京都市内版の新聞掲載を地域圏の確認済み提示として扱い、全国流通へ拡張していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "捜索が不首尾であることをNO_ONE_KNOWSへ短絡せずUとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "実在する深泥池という伝承内の固有地名への接続のみをA2の根拠とし、資料や事件の実在性と混同していない。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D01〜D21は、初期形の一回的で原因未確定な乗客不在化、未解決終端、地域紙提示、実在地接続に概ね整合する。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "タクシー移動中の異常事案であるため、entry_type「物語・伝説」およびmacro_category「交通・インフラ」はContentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "原紙未照合の本文細部を用いる主要判断はIとされ、新聞の存在・版・見出しおよび公式所在地に直接支えられる判断のみDとしている。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各dimensionのmanifestationとrationaleはScoped Contentの出来事列・留保へ接続している。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "転載由来の本文細部に依存する判断をIとし、回避策と特権情報保持者をUとしている。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "D13は原因存在論を強めず人物の不在化自体を表す既存Childが不足するため、primary nullとtaxonomy gapを明示する処理が妥当である。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "最古に確認された1969年記事へ接続する初期形に限定し、後代の雨夜・池脇乗車型と幽霊・死者由来の解釈を除外している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [],
+  "review_notes": "独立再構成では、初期形は原因未確定の乗客不在化を中心とする単発の未解決事案であり、現行Analysisはその証拠強度とvariant境界を適切に保持している。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-009",
+      "CNT-010"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-005",
+      "EVD-006"
+    ],
+    "model": "通常のタクシー送迎中、運転手が確認していた女性客が到着時に車内から不在となり、濡れた座席痕が残る。届出と捜索を経ても女性の所在、事故との関係、原因主体は確定しない。このため伝承は、特定の超自然的原因を確定せず、単一エピソード内で生じる説明不能な出来事を謎として保持する。",
+    "notes": "再構成はScoped Contentに限定し、後代の幽霊設定・雨夜設定や未確認の原因を加えていない。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_20_analysis.json",
+    "blob_sha": "8f830310e1302716314dd506529eedddf02a98ae",
+    "commit_sha": "0d4ccc2f1013f41a86d19b648485975ce5f8f54a",
+    "reviewed_at": "2026-09-27T22:52:40Z"
+  },
+  "verdict": "Pass"
+}

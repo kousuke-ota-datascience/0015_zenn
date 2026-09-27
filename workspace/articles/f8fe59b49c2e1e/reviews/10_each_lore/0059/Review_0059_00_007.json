@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1969年10月7日記事を最古確認として扱い、出来事・伝承の起源日とは同一視していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "転載由来の本文細部はparaphraseかつ不確実性付きであり、原紙確認済みの書誌事項と混同していない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-002をprimary、SRC-003を原紙未照合のdirect derivative、SRC-001をindirect derivativeとして明示している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "提示されたSource群に含まれる記事の所在・見出し、本文細部の由来、後代異伝、実在地アンカーはEvidence層に保持されている。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001の図書館調査、SRC-002の同時代新聞、SRC-003の転載、SRC-004の公式地理情報という資料階層は適切に区別されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "各EVDは対応Sourceの確認可能な範囲に限定され、深泥池の実在を事件や超自然的因果の証拠として扱っていない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "原紙本文未照合、転載依存、後代異伝との非遡及を明示している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [],
+  "review_notes": "外部確認でも京都府立図書館の公開回答は1969年10月7日『朝日新聞』京都市内版p16、見出し、マイクロフィルム／クロスサーチでの確認を明記し、京都市公式ページは深泥池の所在地を確認できる。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_00_sources.json",
+    "blob_sha": "8653ffdbc3fa93ba77a01fa97a7819a371f321c3",
+    "commit_sha": "d655821bea4f977a8881c5e7b6f1ce8632d11712",
+    "reviewed_at": "2026-09-27T22:52:40Z"
+  },
+  "verdict": "Pass"
+}
