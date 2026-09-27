@@ -773,3 +773,49 @@ Git JSON
 Notion
   = operational current state
 ```
+
+# 19. Executable Orchestrator implementation
+
+The Markdown in this document remains the semantic source of truth for Workflow 00.
+The executable orchestration layer is:
+
+```text
+src/orchestration/
+├─ __init__.py
+├─ entry_pipeline.py
+└─ agents_api.py
+```
+
+Public execution remains one input:
+
+```bash
+python -m src.orchestration.entry_pipeline <Entry_ID>
+```
+
+Runtime prerequisites are `OPENAI_API_KEY`, the existing Workflow 90 Notion credentials,
+and the optional OpenAI Agents SDK package (`pip install openai-agents`).
+
+The executable layer does not duplicate Workflow 10 / 20 / 90 deterministic logic.
+It reuses `src.validation`, `src.reviewing`, and `src.status_management`.
+
+Creator and Reviewer isolation is enforced at runtime:
+
+- Workflow 10 uses one Creator session that may persist across correction turns.
+- Every Workflow 20 cycle allocates a new Reviewer session.
+- Reviewer input is rebuilt from a whitelist containing Entry_ID, Workflow 20, the
+  freeze-bound canonical target, schemas, taxonomy/coding rules, and external Evidence.
+- Creator conversation history, rationale, intermediate notes, and mutable working-tree
+  canonical copies are excluded from Reviewer input.
+- Reviewer receives web search but no local shell/file-write tool, so it cannot directly
+  modify canonical artifacts.
+- `review_writer.prepare_review_cycle` and `write_review_cycle` continue to enforce
+  freeze/current SHA consistency and append-only Review persistence.
+- `MAX_REVIEW_CYCLES_PER_RUN = 5` remains the fail-stop bound.
+- A pipeline run returns `PASS` only after deterministic validation, exact current
+  canonical/latest Review target agreement, three Pass verdicts, and final Workflow 90
+  convergence all hold.
+
+This implementation supersedes the pre-orchestrator operational assumption in section
+16.1 that a dedicated Python runner was not part of the current runtime. It does not
+change Workflow 00's public semantics or the responsibility boundaries defined above.
+
