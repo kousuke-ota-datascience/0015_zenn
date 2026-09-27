@@ -357,6 +357,9 @@ def test_codex_creator_resumes_the_same_thread(monkeypatch):
     runtime.run_creator(session, "correction task")
 
     assert session.thread_id == "thread-creator"
+    assert 'sandbox_mode="danger-full-access"' in calls[0][0]
+    assert "--ask-for-approval" in calls[0][0]
+    assert calls[0][0][calls[0][0].index("--ask-for-approval") + 1] == "never"
     assert "resume" not in calls[0][0]
     resume_index = calls[1][0].index("resume")
     assert calls[1][0][resume_index + 1] == "thread-creator"
@@ -389,6 +392,11 @@ def test_codex_reviewer_is_fresh_ephemeral_read_only_and_shellless(monkeypatch):
     assert "--skip-git-repo-check" in args
     assert 'sandbox_mode="read-only"' in args
     assert "features.shell_tool=false" in args
+    assert "--ignore-user-config" in args
+    assert "--ignore-rules" in args
+    assert "features.apps=false" in args
+    assert "features.multi_agent=false" in args
+    assert args[args.index("--ask-for-approval") + 1] == "never"
     assert "resume" not in args
     assert cwd != codex_cli.ARTICLE_ROOT
     assert "Creator conversation" in prompt
