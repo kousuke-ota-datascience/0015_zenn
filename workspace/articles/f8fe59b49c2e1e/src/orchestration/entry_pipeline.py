@@ -1,7 +1,7 @@
 """Executable Workflow 00 entry pipeline.
 
-Public interface: one Entry_ID.  Semantic work is delegated to isolated
-Workflow 10 / Workflow 20 Agents SDK sessions; deterministic enforcement is
+Public interface: one Entry_ID. Semantic work is delegated to isolated
+Workflow 10 / Workflow 20 Codex CLI sessions; deterministic enforcement is
 delegated to the existing validation, review_writer and control-plane modules.
 """
 from __future__ import annotations
@@ -15,9 +15,9 @@ import subprocess
 import sys
 from typing import Any, Mapping
 
-from src.orchestration.agents_api import (
-    AgentsRuntime,
-    OpenAIAgentsAPI,
+from src.orchestration.codex_cli import (
+    CodexCLIRuntime,
+    OrchestrationRuntime,
     build_reviewer_context,
 )
 from src.reviewing.review_writer import prepare_review_cycle, write_review_cycle
@@ -458,7 +458,7 @@ def _result(
 def run_entry_pipeline(
     entry_id: str,
     *,
-    runtime: AgentsRuntime | None = None,
+    runtime: OrchestrationRuntime | None = None,
 ) -> PipelineResult:
     """Run Workflow 00 end-to-end for one Entry_ID."""
     if not _valid_entry_id(entry_id):
@@ -489,7 +489,7 @@ def run_entry_pipeline(
             messages=tuple(str(x) for x in initial_sync.get("messages", [])),
         )
 
-    runtime = runtime or OpenAIAgentsAPI()
+    runtime = runtime or CodexCLIRuntime()
     creator = None
     review_cycles = 0
 
