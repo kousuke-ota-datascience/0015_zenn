@@ -1,0 +1,196 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0019",
+  "artifact": "10",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0019_chiisai_ojisan/0019_10_contents.json",
+    "commit_sha": "2d078e4da3744ebc84f66875749eaa4c274d9493",
+    "blob_sha": "d4f35b32a96feef3ae7da855441bbfc27eb0631a",
+    "reviewed_at": "2026-09-28T15:34:40Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜014のsalient meaningはCNT-001〜011へ対応し、未検証の写真・痕跡・身体作用・タイムスリップ仮説を確定事実へ強めていない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryのみから共有核、例外的作用、犬の反復要素、2009年前後の広まり整理、新宿御苑写真と歴史解釈、後代variant境界まで再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "2009年Web記事内の異質な複数目撃談をVAR-001としてまとめつつ、2012年以降の個人反復・書籍集成・創作メディアを後代層へ分離。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "存在の実在、正体、写真・痕跡真正性、犬反復との因果、タイムスリップ解釈を未確定のまま保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs 11件をsummaryから具体的に再構成でき、前回のCNT-006/CNT-008 LOSSは解消済み。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "現行Evidence母集団EVD-001〜014を監査し、EVD-013/014もCNT-010/011およびsummaryへ伝播済み。追加salient omissionなし。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "日常空間で小型の成人男性様存在を短時間目撃する複数の独立体験談群。2009年Web集成では風呂場・洗濯機・寝室・旅館・ガレージ等で現れ、励ます・体操する・隠れる・逃げるなど行動は一定しない。共有核は短時間の出現・知覚で、正体は妖精・妖怪・UMA等に確定しない。例外的にイチゴのかじり跡、ポットのコードを引く男女様の小型存在、髪型変化、2点の写真、目撃後に犬2匹が毎晩12時に吠える反復要素、新宿御苑写真を江戸期狩場とタイムスリップへ結びつける筆者解釈がある。2019年解説は2009年前後の広まりと整理するが起源とはしない。2012/2014年の釈由美子の反復談、2012年書籍、2014年フェイクドキュメンタリーは後代層である。",
+    "reference_story": "current Contentは2009年Web記事に集成された異質な複数目撃談を初期Scopeとし、短時間の出現・知覚を共有核とする。物的痕跡、写真、物体操作、身体外見変化、周期的な犬の反応、歴史背景を用いたタイムスリップ解釈は例外・補助構造として保持する。後代の反復個人談、全国集成本、創作メディアはScope外へ分離する。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "小さい成人男性様存在、目撃者、一部に小さい女性様存在。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "主に目撃者。例外的に物体や身体外見にも作用。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "日常空間で偶発的に視認。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "正体・因果源は未確定。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "共有核は短時間の出現・知覚。例外的に物体・身体・痕跡・写真作用。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "通常状態→出現・知覚→短時間相互作用→隠れる/逃げる/終了。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "多くは短い単発。犬の毎晩12時の反復要素と後代個人反復談を区別。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "固定規則・禁忌なし。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "明示的な回避・制御手順なし。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "多くは短時間遭遇で終了。例外的に痕跡・身体変化が残る。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "実在、存在論、写真/痕跡真正性、起源、因果は未確定。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "2009年Web集成を初期Scopeとし、2012年以降の反復個人談・書籍・創作を後代分離。",
+        "reference": "一致。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "前回不足していた具体detailを補った後も、偶発的視認、出現・知覚を共有核、存在論未確定という中心モデルと主要Dimension判定は維持される。"
+    },
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "2009年Web記事の複数目撃談集成と存在論未確定",
+        "blind_reconstruction": "2009年Web集成と正体未確定を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "日常空間での多様な出現・行動",
+        "blind_reconstruction": "風呂場・洗濯機・寝室・旅館・ガレージ等で多様な行動を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "2012/2014年の釈由美子による反復個人談",
+        "blind_reconstruction": "2012/2014年の反復個人談を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "2012年の全国集成本",
+        "blind_reconstruction": "2012年書籍集成を後代層として再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "2014年フェイクドキュメンタリー",
+        "blind_reconstruction": "2014年創作メディア展開を後代層として再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "後代解説による2009年前後の話題化整理",
+        "blind_reconstruction": "2019年解説が2009年前後の広まりと整理するが起源とはしない点を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "物的痕跡と2点の写真主張",
+        "blind_reconstruction": "イチゴのかじり跡と2点の写真主張を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-008",
+        "salient_meaning": "小さい男性様/女性様ペアとポットのコード操作",
+        "blind_reconstruction": "小さい男性様/女性様ペアがポットのコードを引く具体例を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-009",
+        "salient_meaning": "群れによるドレッドヘアー化という身体作用",
+        "blind_reconstruction": "ドレッドヘアー化という身体作用を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-010",
+        "salient_meaning": "約30cm小男目撃後の毎晩12時の犬の反応",
+        "blind_reconstruction": "目撃後に犬2匹が毎晩12時に吠える反復要素と因果未検証を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-011",
+        "salient_meaning": "新宿御苑写真と江戸期狩場・タイムスリップ解釈",
+        "blind_reconstruction": "新宿御苑写真と江戸期狩場・タイムスリップ仮説を筆者解釈として再構成できる。",
+        "difference": "NONE"
+      }
+    ],
+    "verdict": "PASS"
+  },
+  "findings": [],
+  "review_notes": "Blind Decodeはcurrent summary.narrative + summary.structureのみから固定。docs/legacyは参照していない。",
+  "verdict": "Pass"
+}
