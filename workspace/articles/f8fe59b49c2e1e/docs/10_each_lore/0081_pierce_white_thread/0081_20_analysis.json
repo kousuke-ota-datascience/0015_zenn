@@ -1,0 +1,460 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0081",
+  "macro_category": "身体・医療・食品",
+  "entry_type": "身体俗信",
+  "version_scope": {
+    "description": "1994年刊『ピアスの白い糸―日本の現代伝説』の出版社内容情報と、1998年の静岡県の民俗採録要約に共通して確認できる早期共有核を分析対象とする。Scopeは「ピアス穴から白い糸状物が現れる／それを引く／失明する」という条件規則に限定する。白い糸状物の解剖学的正体、具体的な人物属性・ピアシング方法、失明以外の結果はScope外とする。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [
+      "VAR-002"
+    ],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "notes": "VAR-001は現時点で確保できた早期の安定共有核であり、絶対的初出形を意味しない。2021年の後代解説に現れる安全ピンによる自己ピアシング、眼球の動き、顔面神経麻痺等は分析Scopeへ遡及しない。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "現在のEvidenceで最も早く確認できる公刊層は1994年だが、これは採録・刊行時点であり伝承の生成年代を示さない。1994年以前の生成時期を年代帯へ安全に写像できない。",
+      "manifestation": "生成年代は不明。",
+      "content_refs": [
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D02",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "1994年刊行以前に伝承がどの媒体で人から人へ流通していたかを示すEvidenceがない。後代の採録書籍・研究DBの存在を最古流通媒体へ置換しない。",
+      "manifestation": "最古確認流通媒体は不明。",
+      "content_refs": [
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D03",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "Version Scopeの共有核が実際に受容者へ流通した媒体を特定できない。1994年の書籍収録や1998年の研究採録は存在するが、それだけでScopeの実流通回路とみなさない。",
+      "manifestation": "Scope内の確認流通媒体は不明。",
+      "content_refs": [
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D04",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "Scope内では1994年内容紹介と1998年採録要約の共通核のみを採用しており、その間の再話・増補・媒体移行などの変容過程を示すHistory Evidenceがない。",
+      "manifestation": "生成・変容パターンは未確定。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D05",
+      "status": "I",
+      "primary": {
+        "code_id": "D05.PRP.PREDICTIVE_CLAIM",
+        "parent_id": "D05.PRP"
+      },
+      "secondary": [],
+      "rationale": "「白い糸状物を引くと失明する」というX→Yの条件付き予測命題が共有核である。明示的な警告文や禁忌命令まではEvidenceから固定しない。",
+      "manifestation": "白い糸状物を引けば失明する、という予測命題。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      },
+      "notes": "原採録全文ではなく出版社内容情報とDB要約を主に用いるため、Evidence confidence ceilingに従いStatus=Iとする。"
+    },
+    {
+      "dimension_id": "D06",
+      "status": "I",
+      "primary": {
+        "code_id": "D06.T5"
+      },
+      "secondary": [],
+      "rationale": "採録は俗信として条件付き因果規則を伝えており、一般的科学事実や制度事実として確定されたものではない。",
+      "manifestation": "「引くと失明するらしい」という条件付き信念。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D07",
+      "status": "I",
+      "primary": {
+        "code_id": "D07.BHF.BODY_ANOMALY",
+        "parent_id": "D07.BHF"
+      },
+      "secondary": [],
+      "rationale": "この伝承がなければ、ピアス穴から現れる白い糸状物と、それを引くことで視覚喪失へ至るという身体構造・生理上の不可解が説明されない。",
+      "manifestation": "ピアス穴と白い糸状物、視覚喪失を結ぶ身体異常の俗説。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D08",
+      "status": "I",
+      "primary": {
+        "code_id": "D08.CLM.UNSUPPORTED_ASSERTION",
+        "parent_id": "D08.CLM"
+      },
+      "secondary": [],
+      "rationale": "Scopeの中核は、事件記録・物的痕跡・権威者証言から導かれるのではなく、「白い糸状物を引くと失明する」という根拠未提示の俗信的主張自体から成立する。",
+      "manifestation": "根拠未提示の身体危険命題が意味形成の出発点となる。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D09",
+      "status": "I",
+      "primary": {
+        "code_id": "D09.CAU.DIRECT_CAUSE",
+        "parent_id": "D09.CAU"
+      },
+      "secondary": [],
+      "rationale": "伝承は白い糸状物を引く行為を失明の直接原因として結び付ける。白い糸状物の正体や中間機序は確定しないが、行為→帰結の直接原因化は共有核に明示される。",
+      "manifestation": "白い糸状物を引くことが失明の原因とされる。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D10",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "Scopeは「白い糸状物を引くと失明する」という因果関係を示すが、その作用を生じさせる因果源の存在論を特定しない。白い糸状物を視神経等へ同定したり、自然生理過程へ補完したりしない。",
+      "manifestation": "因果源の存在論は不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D11",
+      "status": "I",
+      "primary": {
+        "code_id": "D11.MAN.CREATE_ALTER_MANIPULATE",
+        "parent_id": "D11.MAN"
+      },
+      "secondary": [],
+      "rationale": "主帰結を発動させる条件は、ピアス穴から出た白い糸状物を物理的に引っ張る操作である。単に見る・知るだけでは発動しない。",
+      "manifestation": "白い糸状物を引っ張る操作。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D12",
+      "status": "I",
+      "primary": {
+        "code_id": "D12.FOC.PROTAGONIST_EXPERIENCER",
+        "parent_id": "D12.FOC"
+      },
+      "secondary": [],
+      "rationale": "D13の主作用は視覚機能の喪失という生理変化であり、その直接対象は白い糸状物を引いた当事者本人である。",
+      "manifestation": "白い糸状物を引いた当事者の身体・視覚。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D13",
+      "status": "I",
+      "primary": {
+        "code_id": "D13.PHY.PHYSIOLOGICAL_CHANGE",
+        "parent_id": "D13.PHY"
+      },
+      "secondary": [],
+      "rationale": "伝承内の主作用は、白い糸状物を引くことにより当事者の視覚機能が失われるという生理機能変化である。白い糸状物の解剖学的正体はScopeで固定しない。",
+      "manifestation": "視覚機能が失われ、失明する。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D14",
+      "status": "I",
+      "primary": {
+        "code_id": "D14.NEG"
+      },
+      "secondary": [],
+      "rationale": "Version Scopeの終端は失明・視覚喪失であり、明確な身体的損失である。",
+      "manifestation": "負の帰結。",
+      "content_refs": [
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D15",
+      "status": "I",
+      "primary": {
+        "code_id": "D15.BOD.SEVERE_INJURY",
+        "parent_id": "D15.BOD"
+      },
+      "secondary": [],
+      "rationale": "最終的に変化する領域は身体・健康であり、失明は重度の機能障害に該当する。",
+      "manifestation": "失明という重い身体障害。",
+      "content_refs": [
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D16",
+      "status": "I",
+      "primary": {
+        "code_id": "D16.STA.STATIC_RULE",
+        "parent_id": "D16.STA"
+      },
+      "secondary": [],
+      "rationale": "Scopeの核は「白い糸状物を引くと失明する」という俗信上の条件規則で、待ち時間・進行過程・反復周期そのものは意味上重要ではない。",
+      "manifestation": "操作条件と失明を結ぶ静的な俗信規則。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D17",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "「引くと失明する」という危険規則は確認できるが、Scope内資料は「引かないこと」を明示的な回避手順・禁忌として提示していない。対処法の不在から回避法を推定しない。",
+      "manifestation": "回避・制御方式は不明。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D18",
+      "status": "I",
+      "primary": {
+        "code_id": "D18.L1"
+      },
+      "secondary": [],
+      "rationale": "伝承内容内部で、当事者が白い糸状物を引くことにより自身の視覚に因果作用が生じる。聞く・読む受容者自体への作用や、独立した社会現実効果はScopeで確認されない。",
+      "manifestation": "伝承内因果層で当事者の身体へ作用する。",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D19",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "1998年に静岡県の民俗採録が存在することは確認できるが、Version Scopeがどの社会範囲まで流通していたかを直接示す分布Evidenceはない。採録地だけから地域流通へ固定しない。",
+      "manifestation": "流通範囲は不明。",
+      "content_refs": [
+        "CNT-004"
+      ],
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D20",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "Scope内には真相・追加情報・回避情報を偏って保持する主体が提示されず、その不在自体を断定できる探索構造もない。",
+      "manifestation": "特権情報保持者は不明。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    },
+    {
+      "dimension_id": "D21",
+      "status": "I",
+      "primary": {
+        "code_id": "D21.A1"
+      },
+      "secondary": [],
+      "rationale": "伝承はピアス穴という一般的な身体加工・生活背景を前提とするが、特定の地点・人物・企業・制度・史実へは依存しない。",
+      "manifestation": "一般的なピアシングという現実背景に接続する。",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "taxonomy_gap": {
+        "present": false
+      }
+    }
+  ],
+  "analysis_notes": "Version Scopeは1994年内容紹介と1998年採録要約に共通する最小共有核へ限定した。後代の「白い糸=視神経」同定、自己ピアシング場面、失明以外の帰結は分析へ遡及しない。生成時期・流通媒体・因果源・回避法・流通範囲・特権情報保持者はEvidence不足のためUを維持する。"
+}
