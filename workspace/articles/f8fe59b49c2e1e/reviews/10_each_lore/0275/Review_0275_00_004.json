@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0275",
+  "artifact": "00",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0275_bandaisan_tenaga_ashinaga/0275_00_sources.json",
+    "commit_sha": "6071e2546ab77fc06d85a9c160396833fa517d0a",
+    "blob_sha": "27de8129eb1cdd0859d61d2a5472b65780a54cac",
+    "reviewed_at": "2026-09-28T22:38:16Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001は国際日本文化研究センター怪異・妖怪伝承DBの個別カードで、ID、執筆者、論文名、誌名、通巻、発行年、開始頁、地域が明示される。reliable_secondary_or_research / indirect_derivativeの扱いは妥当。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001/002はカード要約の手長・足長による暗天・洪水・嵐・農作物被害と、弘法大師による小箱封印・磐梯明神祭祀を過度に強めずparaphraseする。EVD-003は1992年『あしなか』通巻227号という書誌・地域情報を保持し、成立年へ遡及していない。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "SRC-001要約はEVD-001/002を直接支持し、カードの書誌欄・地域欄はEVD-003を支持する。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "DBカードと1992年『あしなか』原掲載本文を区別し、原掲載本文未確認を明示している。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1992年を確認できる基礎文献の発行年として保持し、伝承の生成・成立年代や最古流通年とはしていない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "原掲載本文未確認、収録以前の異伝、成立年代、史実性を未確定として保持する。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "前回欠落していた媒体・基礎文献情報はEVD-003に『とよた時「天狗・仙人妖怪ばなし」『あしなか』通巻227号（1992年、開始頁8）』として保持された。物語核、封印・祭祀終端、書誌・地域、起源留保に追加salient omissionは認めない。"
+    }
+  },
+  "findings": [],
+  "review_notes": "SRC-001現行公開カードを独立再確認。Golden Referenceは使用せず、docs/legacyは参照していない。",
+  "verdict": "Pass"
+}
