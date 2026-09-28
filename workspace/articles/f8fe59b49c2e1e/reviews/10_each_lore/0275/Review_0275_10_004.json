@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0275",
+  "artifact": "10",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0275_bandaisan_tenaga_ashinaga/0275_10_contents.json",
+    "commit_sha": "5d3bfaeffa4fc214fbcaf1b96ae6dcae11cc9642",
+    "blob_sha": "8856edeee30f8a8210b266f0ed31084b4bfa6b00",
+    "reviewed_at": "2026-09-28T22:38:16Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜005はEVD-001〜003の範囲内に収まり、前回問題だった『巨大な』という未支持属性は削除済み。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryだけから怪物による荒天・洪水・農作物被害、弘法大師の小箱封印、磐梯明神祭祀、1992年基礎文献と成立年非同一性を具体的に再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。主体、対象、作用、状態遷移、反復、制御、終端、不確実性、variant境界を保持する。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "日文研DBカードが要約する主要形をVAR-001として固定し、収録以前の異伝を推測で追加していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "1992年は収録文献年であって成立年・最古流通年ではないこと、原掲載本文未確認、収録以前異伝・史実性未確定を保持する。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs 5件のsalient meaningはBlind Decodeから全件具体的に復元できる。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "EVD-001〜003を母集団として監査。前回欠落していた1992年『あしなか』通巻227号というattestation/media情報はCNT-005、summary、VAR-001、uncertaintyへ伝播済み。追加salient omissionなし。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "磐梯山の手長・足長という怪物が雲を集めて会津一帯を暗くし、洪水や嵐を起こして農作物を荒らしていた。弘法大師が介入し、怪物を小箱へ誘い込んで封じることで被害を止め、その後は磐梯明神として祀られる。日文研DBはこの形の基礎文献を1992年『あしなか』通巻227号と特定するが、原掲載本文は未確認であり、1992年を伝承の成立年・最古流通年とは確定できない。収録以前の異伝や史実性も未確定である。",
+    "reference_story": "current Contentは、手長・足長による暗天・洪水・嵐・農作物被害、弘法大師の小箱封印、磐梯明神祭祀という主要形を保持する。確認資料は日文研DBが基礎文献として示す1992年『あしなか』227号だが、原本文未確認で、成立年・最古流通年へ遡及しない。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "手長・足長が加害主体、弘法大師が介入・封印主体。",
+        "reference": "CNT-001/003で同じ。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "会津の地域環境・農作物が被害対象。",
+        "reference": "CNT-002で同じ。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "受容者側の独立した発動条件はない。",
+        "reference": "structure.entry_trigger=not_applicableと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "因果主体は手長・足長。",
+        "reference": "CNT-001/002で同じ。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "雲を集め、暗天・洪水・嵐を生じさせ農作物を荒らす。",
+        "reference": "CNT-002で同じ。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "加害怪物→小箱へ封印→祭祀対象へ遷移。",
+        "reference": "CNT-003/004で同じ。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "被害の反復→弘法大師介入→封印→祭祀。",
+        "reference": "summary.temporal_structureおよびCNT-002〜004と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "受容者向け規則・禁忌は確認できない。",
+        "reference": "structure.rules_and_taboos=unknownと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "小箱へ誘い込み封じることが制御手段。",
+        "reference": "CNT-003と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "封じられ、磐梯明神として祀られる。",
+        "reference": "CNT-004と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "成立年代・収録以前異伝・史実性・原本文は未確定。",
+        "reference": "summary/uncertaintyと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "日文研DBカードが要約する1992年基礎文献の主要形に限定。",
+        "reference": "VAR-001と一致。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryからD02/D03の1992年雑誌媒体、D04=U、主要因果、封印、祭祀終端、地域アンカー、D20=Uを含む後続Analysisに必要な構造を再構成できる。"
+    },
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "磐梯山に手長・足長という怪物がいる。",
+        "blind_reconstruction": "磐梯山の手長・足長という怪物を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "手長・足長が雲を集め会津を暗くし、洪水・嵐で農作物を荒らす。",
+        "blind_reconstruction": "雲・暗天・洪水・嵐・農作物被害を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "弘法大師が怪物を小箱へ誘い込み、封じて被害を止める。",
+        "blind_reconstruction": "弘法大師の介入、小箱への誘引・封印、被害停止を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "封じた存在は磐梯明神として祀られる。",
+        "blind_reconstruction": "封印後に磐梯明神として祀られる終端を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "日文研DBは基礎文献を1992年『あしなか』227号と特定するが、原本文未確認で成立年・最古流通年とは確定しない。",
+        "blind_reconstruction": "1992年『あしなか』227号という確認資料と、成立・最古流通への非遡及を再構成できる。",
+        "difference": "NONE"
+      }
+    ],
+    "verdict": "PASS"
+  },
+  "findings": [],
+  "review_notes": "Blind Decodeはcurrent summary.narrative + summary.structureのみから固定。Golden Reference 0180は意味保存粒度の校正にのみ使用し、内容判定には転用していない。docs/legacyは参照していない。",
+  "verdict": "Pass"
+}
