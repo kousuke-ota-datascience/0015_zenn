@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0011",
+  "artifact": "10",
+  "review_seq": 6,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0011_kokkuri_san/0011_10_contents.json",
+    "commit_sha": "5ed2db70671ebb1b3a0eda57fe3ac863287dc4d0",
+    "blob_sha": "f58c7b50208f82ba089473071f6311858c383251",
+    "reviewed_at": "2026-09-28T15:28:46Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜012の主張はCNT-001〜010へ適切に伝播し、後代擁護派の用途・注意を実践者一般や初期三脚型の共通規範へ強めていない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryのみから初期/後代手順、歴史、作用機序競合、調査史、entry境界、後代用途・注意とその非遡及を具体的に再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "初期三脚型、後代文字盤型、地域・時代差、同名dowsing除外を区別し、後代擁護派の用途・注意も初期型へ遡及しない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "伝播経路、型移行、作用機序、時代区分、学齢期境界、注意喚起の具体的終了・回避条件の不確実性を保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs 10件のsalient meaningをsummaryから具体的に再構成できる。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "現行Evidence母集団EVD-001〜012を監査し、前回追加されたEVD-011/012はCNT-009/010およびsummary/uncertaintyへ伝播済み。追加すべきsalient omissionは認めない。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "こっくりさんは、複数人が器具や硬貨に触れ、霊的存在を招請して質問し、その動きを回答として読む占い・交霊実践として整理される。初期三脚型では細竹を三脚状に組み、盆や風呂敷をかぶせて参加者が手を置き、揺れ方をYes/No等に対応させる。研究史上は1884年にアメリカから日本へ伝わり1880年代後半に全国流行したとされるが、具体的経路や単一起点は確定しない。後代の文字盤・硬貨型では五十音・数字等の紙上で硬貨の移動を読む。1992年調査では学齢期を中心に学校・家庭・地域での集団実践が多く、年齢境界には表記差がある。作用機序には器具への直接作用説と参加者の精神・腕を介する間接作用説が競合する。後代の擁護派著述は未来予知・判断・心霊探究の手段として賞揚しつつ霊的トラブルにも注意を促すが、これは後代の見解であり初期三脚型の共通用途・危険・終了規則へは遡及しない。同名のdowsingは本Entryから除外される。",
+    "reference_story": "current Content layerは、初期三脚型と後代文字盤型の具体手順、1884年伝播・1880年代後半流行という研究史整理、1992年調査と暫定時代区分、明治以降の継続、作用機序の競合、内部variationと同名dowsing除外を保持する。加えて、後代擁護派が未来予知・判断・心霊探究の用途を賞揚し、霊的トラブルへ注意を促したという研究史上の見解を保持するが、これを初期三脚型や実践者一般の共通規範へ遡及しない。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "複数の参加者と、呼び出される霊的存在。",
+        "reference": "Contentも同じ主体を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "直接作用説では器具、間接作用説では参加者の精神・腕が作用対象。",
+        "reference": "ContentのCNT-007と一致する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "器具に触れ、霊的存在を招請して質問する。",
+        "reference": "初期型・後代型とも同じ開始条件を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "伝承上は霊的存在が原因主体だが、具体作用機序は競合する。",
+        "reference": "Contentは直接作用/間接作用の競合を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "三脚の揺れや硬貨の移動を回答として読む。",
+        "reference": "Contentの具体的mechanismと一致する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "呼び出し前→招請・質問→器具運動→回答解釈。",
+        "reference": "Contentから同じ状態遷移を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "儀式内は逐次進行。長期史では初期流行、低迷、再流行、継続を区別する。",
+        "reference": "CNT-003/005/006と一致する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "器具準備、接触、招請、質問、動きの読解という規則。",
+        "reference": "Contentの手順規則と一致する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "回答取得のために用いられ、後代擁護派は未来予知・判断・心霊探究を用途として賞揚する。注意喚起はあるが具体的回避法は未確定。",
+        "reference": "CNT-009/010まで含め、用途と注意の認識論的境界を保持する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "質問への回答・知識獲得が主要終端。",
+        "reference": "Contentのterminal stateと一致する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "伝播経路、型移行、作用機序、時代区分、年齢境界、後代注意の具体条件が未確定。",
+        "reference": "Contentのuncertaintiesと一致する。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "初期三脚型、後代文字盤型、地域・時代差を分離し、同名dowsingを除外。後代擁護派の用途・注意を初期型へ遡及しない。",
+        "reference": "Contentのvariant/entry boundaryと一致する。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryからVersion Scope、D07〜D21に必要な初期三脚型の主要構造を再構成できる。追加されたCNT-009/010は後代擁護派の見解として境界付けられており、初期三脚型Analysisを変えない。"
+    },
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "初期三脚型の器具準備・接触・招請・質問・揺れによる回答取得。",
+        "blind_reconstruction": "細竹を三脚状に組み、参加者が手を置いて霊を招き、揺れをYes/No等として読む初期型を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "後代文字盤・硬貨型の具体手順。",
+        "blind_reconstruction": "五十音等の文字盤と硬貨を用い、複数人が指を添えて移動先を回答として読む後代型を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "1884年伝播・1880年代後半全国流行という研究史整理と経路不確実性。",
+        "blind_reconstruction": "1884年伝播・1880年代後半流行という整理と、具体経路・単一起点が未確定であることを再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "1992年調査の学齢期集中・集団実践・年齢境界差。",
+        "blind_reconstruction": "学齢期を中心とする知識・体験、学校/家庭・地域での集団型、6〜18/7〜18歳の表記差を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "暫定時代区分と1970年代中頃以降の再流行。",
+        "blind_reconstruction": "1930〜45安定、46〜73低迷、74〜92興隆という未確定モデルと再流行を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "明治以降の方法・名称変化を伴う継続。",
+        "blind_reconstruction": "方法や名称を変えながら現代まで続くという後代整理を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "直接作用説と参加者の精神・腕を介する間接作用説の競合。",
+        "blind_reconstruction": "器具への直接作用と精神・腕を介する間接作用の競合を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-008",
+        "salient_meaning": "内部variationと同名dowsingのentry境界。",
+        "blind_reconstruction": "多数の名称・実施法差を認めつつ、同名dowsingを本Entryから除外する境界を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-009",
+        "salient_meaning": "後代擁護派が未来予知・判断・心霊探究の手段として賞揚したという研究史整理。",
+        "blind_reconstruction": "後代擁護派が簡便な未来予知・判断・心霊探究を可能とみなしたことと、初期型の共通用途へ遡及しない留保を再構成できる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-010",
+        "salient_meaning": "後代擁護派の霊的トラブルへの注意喚起と、具体的回避法が未確定である境界。",
+        "blind_reconstruction": "注意喚起はあるが具体的終了・回避手順や条件は確定できず、初期三脚型へ遡及しないことを再構成できる。",
+        "difference": "NONE"
+      }
+    ],
+    "verdict": "PASS"
+  },
+  "findings": [],
+  "review_notes": "Blind Decodeはcurrent summary.narrative + summary.structureのみから固定した。Evidence→Content completenessはEVD-001〜012を母集団として監査した。docs/legacyおよび過去Reviewを意味論的な正解として使用していない。",
+  "verdict": "Pass"
+}
