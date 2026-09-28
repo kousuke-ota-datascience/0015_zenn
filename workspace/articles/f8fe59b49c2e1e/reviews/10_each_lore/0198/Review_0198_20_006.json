@@ -1,0 +1,101 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Contentとsummaryの双方から、儀式的発動、顕現・知覚、終了儀礼、単一の順次エピソード、公開掲示板圏という主要分析構造を再構成できる。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "儀式実行を入口とし、実践者による異変知覚を主作用、知覚攪乱を帰結として扱う因果モデルは過剰な追跡・攻撃を仮定しない。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisの意味論的根拠はScoped Contentに表現されており、Evidence専有の具体情報を直接導入していない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12の実践者→D13の顕現・知覚→D15の知覚攪乱はContent上の主作用と終端報告に接続する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L3を選択していない。匿名投稿内の実践自己申告を独立した社会現実効果へ読み替えていない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "公開掲示板であることを全国的流通の証拠とせず、OPEN_FORUM_WEBに限定している。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者が不明であることをNO_ONE_KNOWSへ読み替えずUとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "家庭内の浴室・室内・テレビという背景をA1とし、保存サイトや掲示板の実在をアンカー点へ誤用していない。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D01のU、D02–D06のI、D07–D17の儀式・知覚異常構造、D18=L1、D19の公開掲示板圏、D20=U、D21=A1はScoped Contentと規則に整合する。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "実行手順、儀式的発動、参加型ネットスレッドというContentに対し、実行儀式型ネットロア／全国型怪異・儀式は整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "怪異と霊的原因の客観的実在を断定せず、全ての証拠依存判定をIとしている。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各判定のrationaleとmanifestationは対応するContent Unitへ追跡できる。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "保存再掲・匿名自己申告の限界に応じてDではなくIを用い、生成時期・情報保持構造は根拠不足としてUにしている。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "Scoped Contentの意味を表す既存コードがあり、taxonomy gapは必要ない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "初期スレッド内の名称、手順、実況、ライブ補完、追加説明にScopeを限定し、後年派生を含めない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0198",
+  "findings": [],
+  "review_notes": "Content層だけからcanonical Analysisを再構成した結果、D12–D13–D15の因果列を含め主要判定は妥当である。",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-006",
+      "CNT-008",
+      "CNT-011"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D17"
+    ],
+    "model": "実践者がぬいぐるみを加工し、命名・鬼交代・潜伏を含む儀式を行う。潜伏中のテレビ音停止、物音、声、気配、人影等の知覚が説明すべき異常となり、それを霊的な他者の主体性として理解する。原因は霊的存在として提示・推測されるが未検証である。主作用は実践者への追跡や攻撃ではなく、Scopeに明示された顕現・異常知覚であり、塩水と宣言・後処理の儀式で閉じる。",
+    "notes": "D07の説明対象、D08の知覚上の契機、D09の主体帰属、D10の霊的存在論を分離して再構成した。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_20_analysis.json",
+    "blob_sha": "006540732393bf1d259fe5c9504ca93ea25199c1",
+    "commit_sha": "cc5ce36e64261471f17c994af9267cf278b0c310",
+    "reviewed_at": "2026-09-28T23:08:11Z"
+  },
+  "verdict": "Pass"
+}

@@ -1,0 +1,231 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-006はテレビ音停止を含めるが、当該Unitのevidence_refsはEVD-005のみである。テレビ音停止はEVD-003に明示される。",
+      "status": "FINDING"
+    },
+    "narrative_reconstruction": {
+      "notes": "summaryは主要な儀式・実況・終了を再構成可能だが、CNT-008の固有のテレビの機能説明を抽象化しすぎている。",
+      "status": "FINDING"
+    },
+    "salient_content_completeness": {
+      "notes": "Evidence母集団について、手順、実践主張、実況中の異変、終了・後処理、忘却時の対処、伝聞情報連鎖、別称・地域主張および留保はContent層に表現されている。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P08で、テレビを点ける規則のうち霊を引き付けるという提示上の役割がsummaryでは失われる。",
+      "status": "FINDING"
+    },
+    "summary_reconstruction": {
+      "notes": "CNT-008のテレビを霊を引き付けるために使うという追加説明がsummaryから具体的に復元できない。",
+      "status": "FINDING"
+    },
+    "uncertainty_preservation": {
+      "notes": "自己申告、伝聞由来、地域流通の未裏付け、後代の発祥整理の限界はContentとsummaryで保存されている。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001を初期スレッド内の形成層に限定し、後年改訂・動画派生を除外している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0198",
+  "findings": [
+    {
+      "category": "evidence_content_support",
+      "content_refs": [
+        "CNT-006"
+      ],
+      "evidence_refs": [
+        "EVD-003",
+        "EVD-005"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "CNT-006へEVD-003を追加するか、テレビ音停止をEVD-003参照の別Content Unitへ分離する。",
+      "impact": "Content Unit単位の根拠追跡が不正確になる。",
+      "rationale": "CNT-006はテレビ音の停止を記すがevidence_refsはEVD-005のみであり、その具体的報告はEVD-003にある。",
+      "severity": "Minor",
+      "summary": "CNT-006のテレビ音停止に対応するEvidence参照が欠ける。"
+    },
+    {
+      "category": "summary_reconstruction",
+      "content_refs": [
+        "CNT-008"
+      ],
+      "evidence_refs": [
+        "EVD-007"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "summary.narrativeまたはrules_and_taboosに、これは別投稿者の未裏付けの追加説明であることを保ったままテレビの役割を明記する。",
+      "impact": "初期形成層で追加された規則・因果説明の具体性がsummaryから再構成できない。",
+      "probe_refs": [
+        "P08"
+      ],
+      "rationale": "CNT-008はテレビを霊を引き付けるために使うという固有の説明を含むが、summaryはテレビの役割を具体化しない。",
+      "severity": "Minor",
+      "summary": "summaryがテレビの霊的誘引という追加説明を失っている。"
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryだけでもD07–D10、D11–D17、D19–D21の主要構造は概ね再構成できる。CNT-008のテレビの目的の欠落は具体的意味のLOSSだが、現行Analysisの主要判定を実質的には変えない。",
+      "status": "PASS"
+    },
+    "blind_decode": "ぬいぐるみに米と自分の爪を詰めて準備し、深夜に名前を付けた人形を浴槽へ置き、消灯した家で人形を鬼にして隠れる遊びである。実況参加者は塩水を忘れて押し入れに隠れ、テレビ音の停止、物音、声、気配を報告する。投稿者らは塩水を使う終了法や、忘れた場合に注意をそらして取りに行く方法を相談し、参加者は無事と報告するが、最後に子供の姿を見たとも述べる。手順は伝聞由来で、実況中にも補完される。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "名称が初期ログで確認され、起源は未確定と読める。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "保存ログにおける2007年4月18日の名称提示は起源確定ではない。"
+      },
+      {
+        "blind_reconstruction": "準備物と人形への加工を再構成できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "ぬいぐるみ、米、爪、赤糸、塩水、刃物の準備。"
+      },
+      {
+        "blind_reconstruction": "開始手順を再構成できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "命名、浴槽、鬼交代、刺突、消灯、潜伏の開始手順。"
+      },
+      {
+        "blind_reconstruction": "終了法の補完を再構成できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "実況中に補完された塩水による終了法。"
+      },
+      {
+        "blind_reconstruction": "実況参加と塩水忘却を再構成できる。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "別投稿者による実践自己申告と対処相談。"
+      },
+      {
+        "blind_reconstruction": "異変と未検証の霊的解釈を再構成できる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "異変報告、霊的解釈と釣り疑義の併存。"
+      },
+      {
+        "blind_reconstruction": "伝聞由来と対処相談を再構成できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "伝聞由来・詳細不明という情報連鎖と追加対処。"
+      },
+      {
+        "blind_reconstruction": "別称、同居注意、地域主張は読めるが、テレビの具体的な霊的誘引機能は読めない。",
+        "content_ref": "CNT-008",
+        "difference": "LOSS",
+        "salient_meaning": "別称、テレビの霊的誘引という説明、同居注意、地域既知主張。"
+      },
+      {
+        "blind_reconstruction": "消灯し家内で静かに隠れる注意を再構成できる。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "外出禁止、消灯、静粛という潜伏時の注意。"
+      },
+      {
+        "blind_reconstruction": "人形を捨て最終的に燃える形にする後処理を再構成できる。",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "終了後の人形廃棄・焼却方向の後処理。"
+      },
+      {
+        "blind_reconstruction": "追加対処、無事報告、不穏な終端知覚を再構成できる。",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "忘却時の追加対処、無事報告、終端の子供の姿の知覚。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "手順提示者、実況参加者、応答する閲覧者を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "同左。"
+      },
+      {
+        "blind": "儀式を実行して隠れる参加者が異変の受け手である。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "同左。"
+      },
+      {
+        "blind": "ぬいぐるみを使う一連の深夜の儀式実行が入口である。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "同左。"
+      },
+      {
+        "blind": "異変は霊的存在と解釈されるが未検証である。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "同左。"
+      },
+      {
+        "blind": "異変の知覚報告と人形を媒介にした鬼交代を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "同左。"
+      },
+      {
+        "blind": "準備、開始、潜伏、異変、対処、終了の段階が分かる。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "同左。"
+      },
+      {
+        "blind": "単一実況内の順次進行と途中補完が分かる。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "同左。"
+      },
+      {
+        "blind": "消灯、潜伏、塩水、終了宣言等の規則は再構成できる。テレビを霊を引き付けるために使うという役割は復元できない。",
+        "difference": "LOSS",
+        "probe_id": "P08",
+        "reference": "別投稿者によるテレビの霊的誘引という追加説明を含む。"
+      },
+      {
+        "blind": "塩水による終了と忘却時の追加対処を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "同左。"
+      },
+      {
+        "blind": "参加者は無事を報告しつつ子供の姿を見たと述べる。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "同左。"
+      },
+      {
+        "blind": "怪異、起源、地域流通が未検証であることを再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "同左。"
+      },
+      {
+        "blind": "初期スレッド形成層と後年派生の除外を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "同左。"
+      }
+    ],
+    "reference_story": "2007年4月の保存スレッドでは、手足のあるぬいぐるみに米と自分の爪を詰め赤糸で縫い、塩水と刃物を準備する。一人で深夜に人形へ名を付け浴槽へ置き、消灯してテレビを点け、人形を鬼にして隠れる。別投稿者が実践を名乗り、塩水を置き忘れたまま音の停止、叩く音、声、気配等を報告する。提示者は塩水携行の記載漏れを認め、塩水を口に含み人形へ使い勝利宣言をする終了法、人形を捨て最終的に燃える形にする後処理、塩水を忘れた際の追加対処を提示する。別投稿者は一人鬼ごっこという別称、テレビは霊を引き付けるために使うとの説明、同居時の注意、近畿・四国での既知主張を付加する。実践・怪異・霊的原因・先行流通はいずれも独立検証されない。",
+    "verdict": "FINDING"
+  },
+  "review_notes": "Evidence母集団からContentへの抽出は十分だが、Unit単位のEvidence参照とsummary内のCNT-008の具体的説明に軽微な修正が必要である。",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_10_contents.json",
+    "blob_sha": "9c06c1fedb98f6df50d049fdc6022b5ff5935d4f",
+    "commit_sha": "3ff35153b2aa45ce7a94fd21ab5d05655286aef9",
+    "reviewed_at": "2026-09-28T23:08:11Z"
+  },
+  "verdict": "Minor"
+}

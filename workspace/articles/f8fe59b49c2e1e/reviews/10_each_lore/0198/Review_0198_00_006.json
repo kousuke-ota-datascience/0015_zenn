@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2007年4月の保存ログ上の確認とactual originを区別し、2007年以前の伝聞・地域流通示唆を起源確定根拠にしていない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "Evidenceは概ね保存ログの投稿内容をparaphraseとして表現し、自己申告・怪異の客観的未検証性を保持している。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-001を原2ちゃんねる投稿そのものではないdirect derivativeとして扱い、一次資料へ格上げしていない。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "公開保存ログで確認できる、準備・開始・実況・終了・追加対処・情報連鎖・別称と地域主張・不確実性はEvidence化されている。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は保存再掲、SRC-002は後代まとめとして適切に区別され、資料種別・利用限界が明記されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "手順、実況、補完、伝聞由来、別称・地域主張は対応するEvidenceへ分離されている。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "実践、怪異、霊的原因、正確な原型、地域流通、発祥日の不確実性がEvidence単位で明示される。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0198",
+  "findings": [],
+  "review_notes": "外部確認でもSRC-001は2007年4月18日の名称列挙、4月21日の手順・実況・終了法を含む保存再掲として読める。保存再掲という資料上の限界をcanonicalは適切に維持している。",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_00_sources.json",
+    "blob_sha": "4d6257d8440a9e4d8e82b229e69e78395a369276",
+    "commit_sha": "35b0f323d47346acb007fe6dbbaeb9e60d73c295",
+    "reviewed_at": "2026-09-28T23:08:11Z"
+  },
+  "verdict": "Pass"
+}
