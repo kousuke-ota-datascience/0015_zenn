@@ -1,0 +1,58 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "池田本、田中作品群、戦前に聞いたという報告、絶対的起源を区別し、未確認の個別初出から最古確認を断定していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "刊年不一致、転載本文の限界、田中作品群の個別初出未確認をEvidenceの不確実性として明記している。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-002およびSRC-004を一次本文そのものとして扱わず、間接・転載資料として明示している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-002には、池田本の二話が「伝聞調」で記され、その一話は石原慎太郎が語ったとされる、という提示形式・伝承経路に関わる情報がある。しかしEVD-003は二話、青山墓地、昭和5・6年ごろに聞いたという点だけをEvidence化しており、この情報が脱落している。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "SRC-001の書誌、SRC-003の図書館確認、SRC-004の非公式転載、SRC-002の後代コラムという資料階層は概ね適切に区別されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "各Evidenceは対応Sourceの主張範囲を超えないよう概ね限定されている。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "池田本本文未直接確認、転載の細部、田中作品群の初出未確認という主要な不確実性が保持されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0060",
+  "findings": [
+    {
+      "category": "salient_evidence_completeness",
+      "finding_id": "F001",
+      "fix_direction": "SRC-002の該当箇所を、伝聞調であること、語り手帰属が示される範囲、およびその限界を区別したEvidenceとして追加する。",
+      "impact": "Content層ではD05・D06を保守的にUとする根拠が残る一方、Evidence母集団がSourceの有意味な提示情報を完全には保持していない。",
+      "rationale": "SRC-002は池田本の二話を伝聞調とし、少なくとも一話について語り手を示す。これは初期形の提示形式・情報伝達構造を再構成し、D05およびD06の判断にも関係しうるsalient informationである。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-002"
+      ],
+      "summary": "初期「帰る」型の伝聞提示に関するSource上の情報がEvidence化されていない。"
+    }
+  ],
+  "review_notes": "外部確認では、CiNiiの1959年6月刊行記録、および京都府立図書館による1969年記事の所在・見出し確認はcanonicalの記述と整合した。SRC-002は後代コラムであり、本文直接確認の代替にはならない。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0060_ghost_taxi/0060_00_sources.json",
+    "blob_sha": "5d9ff3f482da794cee4f6582fb3aa05cf2b6dd1a",
+    "commit_sha": "18be1ed53050151974732b57d5e4402a84f34e25",
+    "reviewed_at": "2026-09-28T13:03:09Z"
+  },
+  "verdict": "Moderate"
+}
