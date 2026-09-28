@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0024",
+  "artifact": "00",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0024_kofuku_no_tegami/0024_00_sources.json",
+    "commit_sha": "d5af2bd2b207a8fa2fd27d841605b63d27889030",
+    "blob_sha": "a8e748b53f0f4c944eb3bd888ab646aa8a27b623",
+    "reviewed_at": "2026-09-28T15:38:42Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001研究ノート、SRC-002同時代一次資料、SRC-003後代解説の役割分離は妥当。前回不正確だったSRC-002 locatorは原資料見出し『例言』へ修正済み。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001〜007は1922年型の規則・同時代流行・文面内由来・社会反応・後代変化・氏名列規則をparaphraseとして保持し、吉凶の因果を事実化していない。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "各Evidenceは対応Sourceの記載範囲に収まり、SRC-003由来の新聞内容は原紙直接実見ではないことを保持する。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "SRC-002のみをprimaryとして扱い、研究整理・後代解説を一次資料へ格上げしていない。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "1922年1月下旬の日本流行確認を早期確認層として扱い、文面内の米国人将校起源主張を歴史的起源へ転換していない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "新聞原紙未実見、吉凶の因果的実在未確認、実起源・移入経路未確定、氏名列規則の全個体一般化不可を保持。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "受信・期限内複写転送・幸運/不運条件分岐・同時代流行・由来主張・受信者不安/警察対応・後代変化・氏名列/経路追記までEvidence化され、新たなsalient omissionは認めない。"
+    }
+  },
+  "findings": [],
+  "review_notes": "current Source/Evidenceを独立再レビュー。docs/legacyは参照していない。",
+  "verdict": "Pass"
+}
