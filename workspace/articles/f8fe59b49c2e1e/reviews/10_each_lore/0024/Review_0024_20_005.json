@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0024",
+  "artifact": "20",
+  "review_seq": 5,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0024_kofuku_no_tegami/0024_20_analysis.json",
+    "commit_sha": "e3fe5335bcf56841305e625f98a998e0c2553797",
+    "blob_sha": "2f0a7d8a50cd3c54fb7ddcbcfd145e807aa2c017",
+    "reviewed_at": "2026-09-28T15:38:42Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "1922年1月日本の初期型をScopeとし、後代再流行・不幸前景型を除外する境界はContentと整合。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D01〜D21のcode/statusはScoped Contentの中心意味と整合し、Uを推測で埋めていない。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "現行taxonomyで媒体、条件規則、吉凶作用、期限・連鎖、社会層を表現できる。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "受信→規則参加→期限内転送/停止→幸運/不運という条件分岐が一貫。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "前回FindingだったD02はcontent_refsにCNT-002、evidence_refsにEVD-001/EVD-003を含み、chain-letter構造のrationaleから根拠への追跡が成立。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Contentとsummaryの双方から主要DimensionとVersion Scopeを同様に再構成できる。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "一次資料で直接固定可能な範囲とderivative Evidence依存範囲を区別し、I/Uを適切に用いる。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "current recipient→幸運/不運付与→受信者の運・吉凶という因果列がScoped Contentと整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "社会現実層はCNT-006の実流行・受信者不安・警察対応に基づき、伝承内吉凶主張と区別。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "日本で流行・新聞掲載を全国分布へ短絡せずD19=U。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "特権情報保持者の不記載をNO_ONE_KNOWSへ変換せずU。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "郵便・葉書という一般的現実背景をA1とし、資料実在性だけで強いanchorへ上げていない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "具体的chain規則や氏名列規則などderivative Evidence依存の判断はIに抑制。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "情報・メタ伝説／規則・チェーン伝承は自己複製規則を持つContentと整合。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "Analysisの実質意味はScoped Contentに存在し、Evidence-only情報を直接導入していない。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "受信者が『幸福の手紙』を受け取ると文面の自己複製規則へ参加する。1922年型では24時間以内に同文を9人へ送り、遵守すれば9日後の幸運、停止すれば大きな不運が提示される。初期型には氏名列の転記・自己名追記による経路保持も説明される。米国人将校起源等は文面内由来で実起源とは確定しない。社会現実側では流行、受信者不安、警察対応が確認されるが、吉凶の超自然的因果は事実認定しない。後代再流行・不幸前景型はScope外。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-008"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [],
+    "status": "PASS",
+    "notes": "意味論的根拠はcurrent Scoped Contentに限定。"
+  },
+  "findings": [],
+  "review_notes": "current Scoped Contentのみを意味論的根拠として独立再評価し、Review 004のD02 traceability Finding解消を確認。",
+  "verdict": "Pass"
+}
