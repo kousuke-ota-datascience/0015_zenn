@@ -1,0 +1,105 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryからも、D07〜D21の主要な分析構造と初期Scope／後代異伝の境界を再構成できる。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "死者として判明する女性客が通常の乗客として現れ、運転手の経験を通じて死亡の事実が明らかになる因果モデルはScoped Contentから復元できる。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisで用いられる死者判明、運転手との遭遇、魔除け、職業集団内流通、青山墓地・横浜は、いずれもversion_scope.content_refsを含むContent層に表現されている。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "運転手が顕現を経験する対象（D12）、死者霊の乗客としての顕現（D13）、死者だったという情報獲得（D15）は、帰る型の因果列として接続する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1であり、L3のための独立X Evidenceを必要としない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19は全国流通ではなく、職業集団内の共有としてD19.PRO.OCCUPATIONALを選んでいる。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "D20は情報欠如をNO_ONE_KNOWSとせず、家族が死亡情報を保持して運転手へ与える構造をコードしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "D21は資料の実在性ではなく、Scoped Content内の青山墓地・横浜という具体的地名を現実アンカーとして扱う。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D01のU、D05・D06のU、D07〜D16およびD18〜D21のI判定は、Scoped Contentにある帰る型の出来事と資料限界に概ね整合する。D17は既存Childに無理に割り当てずgapとしている。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "タクシー乗車を舞台とする怪談群というContentに対し、entry_type「物語・伝説」とmacro_category「交通・インフラ」は整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "直接本文未確認の帰る型についてD/I/Uを使い分け、D判定へ引き上げていない。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各dimensionのcontent_refsは、Scope内の帰る型、職業集団内流通、地理アンカーの記述に対応する。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "二次的・後代的なContentに基づく分析をIとし、生成時期、提示形式、真実性提示、変容史を資料不足としてUに留めている。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "携帯・常設の魔除け物による予防を表すD17 Childが既存taxonomyにないため、D17をtaxonomy gap付きでprimary nullとした処理は適切である。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "Scopeは、後代地域異伝の京都型と一般的消える型を除外し、池田本に記録されたと報告される帰る型を参照層として限定する。田中作品群の先行可能性を起源・最古確認へ転用していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0060",
+  "findings": [],
+  "review_notes": "Review 00で確認したSource→Evidenceの伝聞提示情報の脱落は上流Findingとして保持する。本Reviewは現行Scoped Contentのみを用いたため、その情報をD05・D06等へ直接補充しない。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-007"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "model": "通常の女性客として現れる人物を運転手が一回の乗車で目的地まで運ぶ。女性が自宅へ入って戻らず、家人がその女性は既に死亡した娘だと告げることで、通常の乗客という知覚は死者霊の顕現という理解へ転換する。主たる帰結は身体的被害ではなく、乗客の正体に関する知識の獲得である。",
+    "notes": "モデルは帰る型のScoped Contentだけから再構成した。魔除けおよび職業集団内流通は、物語内因果とは別にScope内の周辺的社会構造として扱う。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0060_ghost_taxi/0060_20_analysis.json",
+    "blob_sha": "74e2b7f3f4615163471822d31efd37b244637de9",
+    "commit_sha": "7bd5f3ad6606c0b6d8e0f7696764ed217ae21cbe",
+    "reviewed_at": "2026-09-28T13:03:09Z"
+  },
+  "verdict": "Pass"
+}

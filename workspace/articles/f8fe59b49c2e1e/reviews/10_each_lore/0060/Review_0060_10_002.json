@@ -1,0 +1,178 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "各CNTは参照Evidenceの範囲で記述され、転載本文への依存や後代整理であることも注記されている。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "Blind DecodeとReference Storyの間に、現行Content層の具体的展開に関するLOSSまたはCONFLICTはない。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "Evidence EVD-001〜EVD-008について、刊年、二基本型、初期参照層、職業集団内流通・魔除け、京都異伝、田中作品群に関する留保はContent層に保持されている。SRC-002にのみ残る伝聞調・語り手帰属の欠落はReview 00の上流Findingであり、Evidence→Contentの直接の脱落としては判定しない。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01からP12の構造情報はsummaryに保存されている。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summaryだけで「帰る」型、「消える」型、1969年京都型、資料史上の未確定性を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "初期本文未直接確認、田中作品の個別初出未確認、1969年転載の限界がsummaryとuncertaintiesに保持される。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001、VAR-002、VAR-003は帰結構造・地域化・資料確度により区別され、初期Scopeとの境界も明示されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0060",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryは、初期帰る型をScopeとし、消える型・京都型を除外する境界、怪異主体、偶発的遭遇、知識獲得、職業集団内流通・魔除けの留保を保持する。",
+      "status": "PASS"
+    },
+    "blind_decode": "深夜にタクシー運転手が女性客を乗せる。代表的な「帰る」型では、女性は自宅前で金を取りに入ると言って戻らず、運転手が家人に容貌を伝えると、彼女は既に亡くなった娘だと知らされる。「消える」型では、走行後または到着時に女性が後部座席から消え、座席が濡れていることがある。戦前まで遡るとされる帰る型、1969年の京都・深泥池型、より古い可能性があるが未確認の田中貢太郎作品群が区別される。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "深夜のタクシー乗車と運転手・女性客の関係を再構成できる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "深夜に運転手が女性客を乗せて目的地へ運ぶ導入。"
+      },
+      {
+        "blind_reconstruction": "女性が戻らず、家人が死亡した娘だと告げる終端を再構成できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "帰宅先で女性が既に死亡していたと家人から知らされる帰る型の終端。"
+      },
+      {
+        "blind_reconstruction": "1959年刊の池田本と、戦前に聞いたとされる帰る型の参照層を再構成できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "池田本に記録された戦前参照層と、青山墓地から横浜へ向かう例。"
+      },
+      {
+        "blind_reconstruction": "消失と濡れた座席を伴いうる別型を再構成できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "消える型では女性が消え、ときに濡れた座席が残る。"
+      },
+      {
+        "blind_reconstruction": "京都大学医学部前から深泥池へ向かい、到着時に消失する後代地域異伝を再構成できる。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "1969年京都・深泥池型の具体的経路、消失、警察捜索。"
+      },
+      {
+        "blind_reconstruction": "池田本の1959年刊行を再構成できる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "池田本の1959年6月刊行。"
+      },
+      {
+        "blind_reconstruction": "運転手間の流布と魔除けの人形という慣行を再構成できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "運転手間の流布と車内人形による魔除け慣行。"
+      },
+      {
+        "blind_reconstruction": "田中作品群により池田本を最古・起源と確定できない留保を再構成できる。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "田中作品群は先行可能性を示すが、個別初出・本文未確認である。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "運転手、女性客、家人が主要役割として復元される。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "運転手、女性客、家人が帰る型の役割を担う。"
+      },
+      {
+        "blind": "怪異の直接経験者はタクシー運転手である。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "運転手が女性客の消失または死亡情報を経験する。"
+      },
+      {
+        "blind": "深夜に女性客を乗せることが物語への入口である。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "両基本型は深夜の女性客乗車から始まる。"
+      },
+      {
+        "blind": "女性客は後に死者・幽霊として理解される。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "家人による死亡情報または消失が怪異の原因層を形成する。"
+      },
+      {
+        "blind": "女性客は通常の乗客のように乗車・移動し、その後に異常性が明らかになる。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "帰る型と消える型の機構が具体的に記載される。"
+      },
+      {
+        "blind": "通常の乗客という認識が、死者だったという認識へ転換する。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "帰る型の家人説明と消える型の消失が転換を形成する。"
+      },
+      {
+        "blind": "一回の乗車、移動、到着後の確認という順序を復元できる。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "帰る型・消える型・京都型の順序がContentにある。"
+      },
+      {
+        "blind": "再現的な禁忌・発動規則は示されず、深夜の乗車が文脈として示される。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "rules_and_taboosはunknownとして保存される。"
+      },
+      {
+        "blind": "車内の小人形を魔除けとして下げる慣行と、その手順性の不確実性を復元できる。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "CNT-007およびavoidance_controlが同じ留保を含む。"
+      },
+      {
+        "blind": "帰る型は死亡判明、消える型は消失・濡れた座席で終わる。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "terminal_stateに同じ二終端が保存される。"
+      },
+      {
+        "blind": "絶対的起源、池田本本文、田中作品の個別初出には不確実性が残る。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "uncertaintiesに同じ留保が保存される。"
+      },
+      {
+        "blind": "戦前参照層の帰る型、一般的消える型、1969年京都型を区別できる。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001〜003が同じ境界で記載される。"
+      }
+    ],
+    "reference_story": "タクシー幽霊は、女性客を通常の乗客として運んだ運転手が、客の消失または遺族からの説明を通じて死者だったと知る怪談群である。後代整理は、帰宅先で死亡を知らされる「帰る」型と、乗客が消えて濡れた座席が残ることのある「消える」型を区別する。池田弥三郎『日本の幽霊』は1959年刊で、後代解説によれば戦前に聞いた帰る型二話を記録するが、本文は未直接確認である。1969年京都・深泥池型は新聞掲載の所在が確認された後代地域異伝であり、田中貢太郎作品群は先行可能性を示すが個別初出・本文未確認である。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Evidence層に存在する有意味な内容はContent層に適切に抽出され、summaryのcoverage集合内部にも具体的意味の損失は確認されない。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0060_ghost_taxi/0060_10_contents.json",
+    "blob_sha": "b90be605f56c52f66c8772d45d9886724ba2c05a",
+    "commit_sha": "737b84fac955fb716ef7d8ff4fdfd116442ecdc1",
+    "reviewed_at": "2026-09-28T13:03:09Z"
+  },
+  "verdict": "Pass"
+}

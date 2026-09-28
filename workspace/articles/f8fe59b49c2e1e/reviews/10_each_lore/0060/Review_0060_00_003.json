@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "1959年の書誌確認、戦前伝聞の後代報告、田中作品群の先行可能性を区別し、いずれも絶対的起源・最古確認層の確定には用いていない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "各Evidenceは引用でなくparaphraseとして表示され、SRC-004の本文細部とSRC-002の後代的解釈には限定が付されている。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "池田本本文・朝日新聞本文を直接確認していないことを隠さず、SRC-002をindirect derivative、SRC-004をmirror reprintとして扱う。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "Source群から、Scope内の物語骨格、伝聞性、媒体・職業集団の示唆、地域異伝、先行資料層の不確実性を監査した。Content・variant・不確実性に影響する未Evidence化のsalient meaningは検出しなかった。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "CiNii書誌、図書館レファレンス記録、後代解説、個人転載の資料階層が区別されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "刊年、二型の内容、池田本に関する後代報告、1969年記事の所在、および田中作品群に関する未確認情報は、それぞれ対応Sourceの支持範囲内で記述されている。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "本文未確認、伝聞経路不明、転載の細部不確実性、および田中作品の個別初出未確認がEvidence単位で保持される。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0060",
+  "findings": [],
+  "review_notes": "外部確認ではCiNiiの1959年6月刊行記録および京都府立図書館の1969年朝日新聞記事所在確認が一致した。後代解説の1962年刊という記述との矛盾は既に明示的に処理されている。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0060_ghost_taxi/0060_00_sources.json",
+    "blob_sha": "5040efb4c997fe3e80ab010fe9b6d8b6943a0f9e",
+    "commit_sha": "3e2ffcbe8bfcb37a7da400026b465be5e6b4c9a0",
+    "reviewed_at": "2026-09-28T13:14:34Z"
+  },
+  "verdict": "Pass"
+}

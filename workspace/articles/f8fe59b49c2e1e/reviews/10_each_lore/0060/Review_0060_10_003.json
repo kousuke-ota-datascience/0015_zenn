@@ -1,0 +1,178 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-001〜008は各参照Evidenceの範囲を超えず、二次解説・転載由来の情報には対応する限定がある。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "summaryから、女性客が帰宅先へ入り、運転手が家人への照会を通じて死者だったと知る具体的な展開を復元できる。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-001〜008を母集団として監査した。Scope内の帰る型の順序・終端、伝聞性、初期資料層の不確実性、職業集団内の魔除け慣行、消える型と1969年異伝の境界はContent層に保持されている。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12で、主体、対象、遭遇、因果源、作用、認識転換、単一エピソード、制御慣行、終端、不確実性、異伝境界が保持される。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summary.narrativeとstructureだけから、帰る型の出来事列、死者としての再認識、消える型・深泥池型との境界、史料上の未確定性を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "池田本本文・伝聞段階・田中作品の個別初出・深泥池転載の細部に関する不確実性がsummary、units、variants、uncertaintiesで一貫している。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001を参照層、VAR-002を主要異伝、VAR-003を後代地域異伝として区別し、後代の消失・濡れ座席・健康被害を初期Scopeへ遡及していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0060",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryのみで、死者霊、偶発的遭遇、顕現、知識的帰結、単一エピソード、L1、職業集団内流通の示唆、家族の情報保持、地理アンカー、およびScope境界を評価するためのContent由来構造が保存される。",
+      "status": "PASS"
+    },
+    "blind_decode": "深夜にタクシー運転手が女性客を乗せ、彼女の案内する自宅まで運ぶ。女性は料金を取ると言って家に入り戻らない。運転手が家人に乗客の容貌を伝えると、その女性はすでに亡くなった娘だと知らされる。別の広く流通する型では、女性客は車内から消え、濡れた座席が残ることがある。初期の帰る型については、書籍が記録した伝聞話である以上の伝達経路や起源は確定しない。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "深夜のタクシー乗車として復元できる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "深夜に運転手が女性客を乗せて目的地へ向かう開始場面。"
+      },
+      {
+        "blind_reconstruction": "女性が家へ入り戻らず、家人が死亡を告げる展開として復元できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "帰る型の帰宅・待機・家人への照会・死者判明という終端。"
+      },
+      {
+        "blind_reconstruction": "初期参照層が伝聞話で、詳細な経路・起源が未確定であることを復元できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "池田本の二話、伝聞調、青山墓地から横浜への例、伝聞経路の未確定性。"
+      },
+      {
+        "blind_reconstruction": "別型の消失と濡れ座席として復元できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "消える型では女性が消え、濡れた座席が残ることがある。"
+      },
+      {
+        "blind_reconstruction": "後代の京都地域異伝として復元できる。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "1969年京都・深泥池型の新聞掲載と、消失・濡れ座席・捜索の内容。"
+      },
+      {
+        "blind_reconstruction": "書誌上の1959年刊として復元できる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "池田本は1959年6月刊。"
+      },
+      {
+        "blind_reconstruction": "職業集団内の魔除け慣行と流布の示唆として復元できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "運転手間の流布の示唆と、車内人形を魔除けとする慣行。"
+      },
+      {
+        "blind_reconstruction": "先行可能性はあるが最古確認にはできない不確実性として復元できる。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "田中作品群が先行資料層である可能性と、その個別初出未確認。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "運転手、女性客、女性の家人が役割を担う。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "運転手、女性客、家人に加え、伝聞話の記録者・語り手の不確定性がある。"
+      },
+      {
+        "blind": "怪異を直接経験し事後に知識を得るのは運転手である。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "帰る型の焦点人物は運転手である。"
+      },
+      {
+        "blind": "通常の深夜乗車中に女性客と遭遇する。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "通常の乗車業務が遭遇の物理的文脈である。"
+      },
+      {
+        "blind": "女性客は後に死者・幽霊と認識される。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "家人の説明により死亡済み女性として位置づけられる。"
+      },
+      {
+        "blind": "死者である女性が普通の乗客として現れ、家へ入る。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "顕現、移動、帰宅先での消失・不在という作用がある。"
+      },
+      {
+        "blind": "通常の客という認識が、死亡済みの女性という認識へ転換する。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "運転手への家人の説明で正体が判明する。"
+      },
+      {
+        "blind": "一回の乗車、帰宅、待機、照会の順で終わる。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "単一の連続エピソードであり、長期反復は必須でない。"
+      },
+      {
+        "blind": "再現可能な発動規則・禁忌は示されない。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "乗車は文脈であり、規則・禁忌は未確認である。"
+      },
+      {
+        "blind": "運転手の魔除け人形という予防的慣行が示されるが、再現的手順は不明である。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "CNT-007は同じ限定付きの魔除け慣行を記録する。"
+      },
+      {
+        "blind": "帰る型は家人から死亡を告げられて終わり、消える型は消失・濡れ座席で終わる。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "両型の終端が明示される。"
+      },
+      {
+        "blind": "起源、最古確認、伝聞段階、田中作品の個別初出が不明である。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "不確実性群が明示される。"
+      },
+      {
+        "blind": "帰る型を参照層とし、消える型と深泥池型を別異伝として区別できる。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001〜003が同じ境界を記録する。"
+      }
+    ],
+    "reference_story": "参照層は、池田弥三郎『日本の幽霊』に記録されたと後代解説が報告する戦前まで遡る帰る型二話である。女性客は深夜に乗車して帰宅先へ入り、戻らず、運転手は家人から彼女が先日死亡した娘だと知らされる。通夜と遺影の異型もある。池田本は1959年刊だが本文は未直接確認であり、二話の伝聞段階・石原慎太郎が語ったとされる話の体験性・池田への伝達経路は不明である。消える型と1969年京都・深泥池型は後代の別異伝として保存される。田中貢太郎作品群に先行資料層の可能性があるが、個別初出・本文未確認のため最古確認層にはしない。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Coverage母集団の欠落とcoverage_refs集合内部のLOSSはいずれも検出しなかった。",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0060_ghost_taxi/0060_10_contents.json",
+    "blob_sha": "02a8f29a429cabff3f3f833e350ab7a2aa9a0302",
+    "commit_sha": "9be789ad49c73aa9f26b2ae5e8d28d6c834b47c0",
+    "reviewed_at": "2026-09-28T13:14:34Z"
+  },
+  "verdict": "Pass"
+}
