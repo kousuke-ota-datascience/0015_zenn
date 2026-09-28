@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2000年8月2日は最古級の確認記録として扱われ、生成年・絶対的初出とは混同されていない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "各Evidenceはparaphraseとして示され、投稿内叙述と外部確認済み事実の区別が維持されている。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "原投稿未固定であること、保存転載がdirect_derivative、起源記事がindirect_derivativeであることを過大評価していない。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001・SRC-002にあるScope関連の人物、乗車条件、順次危害、覚醒、4年後の再開、終端警告、友人への伝達、派生境界及び不確実性はEvidence化されている。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は原2ちゃんねる頁ではない保存転載、SRC-002は後代解説として適切に区別されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "現行公開ページの保存転載と起源整理は、EVD-001〜011の内容、日時、後代派生の位置付けを支持する。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "実夢か創作か、原頁未固定、覚醒後音声の独立未確認、死亡予想と再発未確認、2003年派生の絶対的初出未確定が保持されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0178",
+  "findings": [],
+  "review_notes": "Source→Evidence連鎖は、保存転載・後代整理への依存を明示したまま、2000年型と2003年派生を分離している。",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_00_sources.json",
+    "blob_sha": "14b043f2a5ff94709f2d3f1b6d712d817640c32a",
+    "commit_sha": "6aca480d5446aff7109c8ccacda5186529be11b9",
+    "reviewed_at": "2026-09-28T13:29:28Z"
+  },
+  "verdict": "Pass"
+}
