@@ -1,0 +1,140 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "The scoped Content and summary support materially the same analysis structure; the D10 correction follows directly from the same Content rather than added evidence.",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "The analysis does not assert that the truck coincidence, the pond, a ghost, or a death caused the reported disappearance.",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "No analysis conclusion depends on a semantic detail absent from the scoped CNT-001–007, CNT-009, and CNT-010 population.",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "The intended chain is coherent at the Content level: the specific female passenger is the directly affected person; the asserted operation is her unexplained car-interior absence; the final domain is unresolved knowledge. D13’s taxonomy-gap treatment prevents unsupported ontology.",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18.L1 concerns events inside the narrated episode. No L3 claim is made, and the artifact does not use the reported police search as evidence of a real social effect of lore circulation.",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "The local Kyoto city-edition newspaper supports regional rather than national-public distribution; no national reach is inferred.",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "The code is based on an actual reported search by the driver and police that fails to produce identity, location, or explanation, rather than mere lack of documentation. It remains an I inference, not a metaphysical claim.",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "D21.A2 relies only on the Scoped Content’s named destination and its separately represented real geographic referent; it does not mistake source existence or the pond’s reality for proof of the event.",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D10 is coded U despite Scoped Content directly describing an unexplained anomalous event. Coding rule D10 requires a phenomenon/experience child when no causal agent is asserted.",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "A taxi-centered anomalous episode is compatible with entry type 物語・伝説 and macro category 交通・インフラ.",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "Reprint-dependent details are consistently coded I or expressly qualified; directly library-confirmed newspaper metadata and official place information are the limited D-level bases.",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "Dimension rationales are generally traceable to Scoped Content and retain the reprint-confidence ceiling.",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "Except for D10’s inappropriate U status, D/I/U decisions distinguish directly verified article metadata from reprint-dependent event detail and do not treat missing evidence as proof.",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "D13 identifies a genuine taxonomy limitation: no listed mechanism describes person-level absence/disappearance without inferring a causal ontology. The gap is more conservative than forcing reality alteration.",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "The scope is correctly limited to VAR-001 and excludes the later rain-night/pondside version; it preserves that initial-form details are reprint-dependent.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-003",
+        "CNT-004",
+        "CNT-005",
+        "CNT-007"
+      ],
+      "dimension_refs": [
+        "D10"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "Change D10 to status I with primary D10.PHN.UNEXPLAINED_PHYSICAL_PHENOMENON, retaining rationale that the source is an unexplained phenomenon rather than a confirmed agent, ghost, place, or mechanism.",
+      "impact": "D10 currently discards an explicit causal-source ontology available at the phenomenon level and makes the D07–D10 sense-making chain less semantically complete.",
+      "rationale": "Scoped CNT-003–005 and CNT-007 describe an anomalous reported state transition: a passenger observed during travel is absent on arrival, with a wet-seat trace and no resolution after search. Coding Rule D10 expressly states that anomalous experiences without an asserted causal agent use a phenomenon/experience child; it also prohibits treating an unknown subject as automatically U. D10.PHN.UNEXPLAINED_PHYSICAL_PHENOMENON is the conservative available child and requires no ghost, place, alternate-world, or reality-alteration assertion.",
+      "severity": "Moderate",
+      "summary": "D10 incorrectly uses U instead of coding the explicitly narrated unexplained phenomenon."
+    }
+  ],
+  "review_notes": "The frozen analysis is generally conservative and Content-grounded. Its material semantic error is confined to D10: unknown causal agency does not erase the directly narrated anomalous-phenomenon level required by the coding rules.",
+  "review_seq": 4,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-009",
+      "CNT-010"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-003",
+      "EVD-005",
+      "EVD-006"
+    ],
+    "model": "通常のタクシー送迎で、運転手が走行中まで確認していた特定の女性客が到着時に車内から不在となり、濡れた座席痕が残る。届出と捜索を経ても女性の所在・事故との関係・異常の原因は解決せず、実在する深泥池という行先名は舞台を固定するだけで原因を説明しない。したがって中心は、原因主体を確定しない不可解な現象として保持される一回的・未解決の出来事である。",
+    "notes": "The reconstruction supports the analysis except that D10 must represent the directly described unexplained phenomenon rather than lack of all codable causal ontology.",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_20_analysis.json",
+    "blob_sha": "67333924e3907c99015479865bae5aca80f3536d",
+    "commit_sha": "b91555a9cc7ca07d5b034ea04b8160a9309afed4",
+    "reviewed_at": "2026-09-27T04:46:58Z"
+  },
+  "verdict": "Moderate"
+}

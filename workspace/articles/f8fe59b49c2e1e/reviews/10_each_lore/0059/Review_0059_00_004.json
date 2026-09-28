@@ -1,0 +1,62 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "The artifact distinguishes the 1969 newspaper attestation from origin and does not claim that the event, story, or legend originated on that date.",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "Evidence IDs, source links, paraphrase labeling, and the distinction between the verified newspaper bibliographic record and unverified reprint details are internally coherent.",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-002 is correctly classified as a contemporary primary source but not treated as directly inspected; SRC-003 is conservatively classified as a direct derivative.",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "The source population’s salient information is represented in Evidence: article attestation, reported event sequence, police search/non-resolution, later variant boundary, contextual truck coincidence, and the real geographic anchor.",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-003 is appropriately identified as an unverified reprint and SRC-001 independently confirms the 1969 article’s existence, date, edition, and headline. However, assigning X to SRC-003/SRC-002 overstates support for a real-world external effect.",
+      "status": "FINDING"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-001 is supported by the Kyoto Prefectural Library record; EVD-002/003/005 are explicitly limited to reprint-derived details; EVD-006 is supported by Kyoto City’s official location information.",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "The lack of direct inspection of the original article and the boundary between the initial form and later variant are repeatedly retained.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [
+    {
+      "category": "source_assessment",
+      "evidence_refs": [
+        "EVD-003"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "Remove X from SRC-003 and from any source role intended to validate the reported police response unless an independently inspectable contemporaneous or official record supports that effect; retain C/H as applicable.",
+      "impact": "The current analysis does not rely on L3/X evidence, so this does not alter the present coding; it weakens source-role precision and could mislead later reuse.",
+      "rationale": "The coding rules reserve X for a real social effect. The police search is described in an unverified reprint (SRC-003), while SRC-001 verifies the article’s existence and headline rather than the underlying police action. The current source-level X labels can be read as stronger factual validation than the artifacts establish.",
+      "severity": "Minor",
+      "source_refs": [
+        "SRC-002",
+        "SRC-003"
+      ],
+      "summary": "External-effect roles are not independently supported for the reported police response."
+    }
+  ],
+  "review_notes": "The directly checkable library record confirms the 1969 article’s bibliographic existence and headline. Kyoto City confirms the named pond’s location. The reprint could not be independently accessed in this review, so its stated limitation remains material.",
+  "review_seq": 4,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_00_sources.json",
+    "blob_sha": "e796e9146bb6bc98b4bfbceb6733052442201c72",
+    "commit_sha": "a8c3a40d978f4749b14e2439157aa951be879d1a",
+    "reviewed_at": "2026-09-27T04:46:58Z"
+  },
+  "verdict": "Minor"
+}

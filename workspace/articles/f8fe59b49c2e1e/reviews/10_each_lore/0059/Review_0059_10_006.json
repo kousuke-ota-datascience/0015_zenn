@@ -1,0 +1,184 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "Each reconstructed event is tied to the appropriate evidence, and mirror-derived narrative details retain their qualification.",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "The narrative gives a concrete episode rather than only abstract anomaly labels.",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "The evidence population's salient sequence, wet-seat trace, unsuccessful search, later variant, initial-form limitation, and real-place anchor are represented in Content.",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "All twelve required structural elements are recoverable, including the unknown cause, lack of a demonstrated control rule, unresolved endpoint, and excluded later variant.",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "The summary preserves the initial story, investigative endpoint, source-confidence boundary, later-variant boundary, and limited geographic anchor.",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "The summary and structured fields do not convert the mirror text into direct newspaper verification or infer ghost/death causation.",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001 and VAR-002 are separated by attestation and by changed setting details; the later rain-and-pondside version is not folded into the initial form.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "The summary retains the information needed to distinguish an unexplained single-episode anomaly, passive encounter, preserved uncertainty, local newspaper circulation, and a limited real-place anchor.",
+      "status": "PASS"
+    },
+    "blind_decode": "A taxi driver in Kyoto takes a woman passenger from in front of Kyoto University’s medical faculty toward Mizorogaike. He can see her during the drive, but when the taxi arrives she is gone and her seat is wet. He reports this to police; searching does not locate her or a related hit-and-run case. The account remains unexplained. A nearby unattended anatomy-department truck is presented only as an eerie coincidence, not an explanation. The named pond is real, while the detailed story is reconstructed from an unverified reprint of a newspaper item whose existence and headline are independently confirmed. A later version instead has a young woman board beside the pond on a rainy night.",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "The driver takes a woman passenger in Kyoto.",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "A Kyoto taxi driver takes a woman passenger at night."
+      },
+      {
+        "blind_reconstruction": "The passenger is taken toward Mizorogaike.",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "The passenger names the Mizorogaike vicinity as destination."
+      },
+      {
+        "blind_reconstruction": "He can see her during the drive.",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "The driver sees the passenger during the journey."
+      },
+      {
+        "blind_reconstruction": "At arrival the passenger is gone; the account is connected to a confirmed 1969 newspaper item.",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "On arrival the passenger is absent, and the 1969 article concerns a passenger disappearing from a vehicle."
+      },
+      {
+        "blind_reconstruction": "Her seat is wet.",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "A liquid-wet trace remains on the passenger seat."
+      },
+      {
+        "blind_reconstruction": "He reports the event to police and a search occurs.",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "The driver contacts police and a search follows."
+      },
+      {
+        "blind_reconstruction": "The search finds neither her nor a related hit-and-run case.",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "Neither the woman nor a related hit-and-run incident is found."
+      },
+      {
+        "blind_reconstruction": "The truck is treated as an eerie coincidence rather than proof of cause.",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "A nearby unattended anatomy-department truck is an eerie correspondence, not a causal explanation."
+      },
+      {
+        "blind_reconstruction": "The pond is real but does not establish the story's cause or truth.",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "Mizorogaike is a real pond, which does not verify the anomalous event."
+      }
+    ],
+    "probes": [
+      {
+        "blind": "Taxi driver and woman passenger; police are subsequent investigators.",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "CNT-001, CNT-006"
+      },
+      {
+        "blind": "The passenger undergoes the anomalous absence; the driver is observer and reporter.",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "CNT-003, CNT-004"
+      },
+      {
+        "blind": "A routine taxi trip toward Mizorogaike precedes the event, without a repeatable trigger rule.",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "CNT-001, CNT-002"
+      },
+      {
+        "blind": "No cause or agent is established.",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "CNT-007, CNT-009"
+      },
+      {
+        "blind": "The passenger is seen in transit but absent at arrival, with a wet seat trace.",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "CNT-003, CNT-004, CNT-005"
+      },
+      {
+        "blind": "The vehicle changes from containing the passenger to not containing her.",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "CNT-003, CNT-004"
+      },
+      {
+        "blind": "A single ordered episode runs from pickup through travel, disappearance, report, and search.",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "CNT-001, CNT-002, CNT-003, CNT-004, CNT-006, CNT-007"
+      },
+      {
+        "blind": "No taboo, rule, or reproducible condition is supplied.",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "summary.structure.rules_and_taboos"
+      },
+      {
+        "blind": "Police investigation is post-event inquiry, not an evidenced preventive or control method.",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "CNT-006, CNT-007"
+      },
+      {
+        "blind": "The woman is not found and the matter has no resolved explanation.",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "CNT-007"
+      },
+      {
+        "blind": "Cause, identity/status of the passenger, and relation of the coincidence remain unknown.",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "CNT-007, CNT-009"
+      },
+      {
+        "blind": "The initial newspaper-connected form is distinct from a later rainy-night, pondside-pickup form.",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "CNT-008, VAR-001, VAR-002"
+      }
+    ],
+    "reference_story": "The initial form connected to the 1969 local Asahi article concerns a Kyoto taxi driver who takes a woman passenger toward Mizorogaike, observes her during travel, then finds her absent on arrival with a wet trace on the seat. Police search without locating the woman or a corresponding hit-and-run case. The reported correspondence between the pickup area and an unattended Kyoto University anatomy-department truck near the scene is not a causal explanation. Mizorogaike is a real pond. The newspaper item and headline are independently confirmed, but episode details depend on an uncollated mirror. The rainy, pondside-pickup version is a later variant and is excluded from the initial scope.",
+    "verdict": "PASS"
+  },
+  "review_notes": "The Content layer preserves salient evidence and the summary is reconstructable without importing source-only detail.",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_10_contents.json",
+    "blob_sha": "8b1b273b8e3049b3fd699543b0933aa83ff1f8f4",
+    "commit_sha": "7ab66669a49fd9a37de4bdc5e0e45b6f4d40718a",
+    "reviewed_at": "2026-09-27T22:48:58Z"
+  },
+  "verdict": "Pass"
+}

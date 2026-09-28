@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "entry_id": "0059",
+  "macro_category": "交通・インフラ",
+  "entry_type": "物語・伝説",
+  "version_scope": {
+    "description": "1969年10月7日『朝日新聞』京都市内版に接続する、タクシー客が走行後に車内から不在となり、届出・捜索でも原因と所在が確定しない初期形を対象にする。乗車地点と現場近傍の無人トラックの符合は、記事内で怪談めいた届出の文脈として扱われる手掛かりに限る。本文細部は転載経由であり、幽霊であること、死者由来、雨夜・池脇での乗車といった後代異伝の設定は含めない。",
+    "included_variants": [
+      "VAR-001"
+    ],
+    "excluded_variants": [
+      "VAR-002"
+    ],
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-009",
+      "CNT-010"
+    ],
+    "notes": "新聞記事の存在・日付・見出しは図書館調査で確認される一方、初期形の本文細部は原紙との逐語照合をしていない転載資料に依存する。"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "D01",
+      "status": "I",
+      "primary": { "code_id": "D01.G2" },
+      "secondary": [],
+      "rationale": "1969年10月の同時代新聞記事が確認点であり、後代資料も1960年代以降の流布を記す。記事日を生成日と同一視せず、確認可能な年代帯として推定する。",
+      "manifestation": "遅くとも1969年までに、タクシー内で乗客が不在となる不可解な出来事として記録・提示されている。",
+      "content_refs": ["CNT-004"],
+      "evidence_refs": ["EVD-001", "EVD-004"]
+    },
+    {
+      "dimension_id": "D02",
+      "status": "D",
+      "primary": { "code_id": "D02.PRT.NEWSPAPER", "parent_id": "D02.PRT" },
+      "secondary": [],
+      "rationale": "現存Evidenceで最古に確認できる受容者への提示は、1969年10月7日付『朝日新聞』京都市内版の記事である。より早い口承その他の流通媒体は確認できない。",
+      "manifestation": "乗客が車から消えたとする届出が、地域新聞の記事として公衆へ提示される。",
+      "content_refs": ["CNT-004"],
+      "evidence_refs": ["EVD-001"]
+    },
+    {
+      "dimension_id": "D03",
+      "status": "D",
+      "primary": { "code_id": "D03.PRT.NEWSPAPER", "parent_id": "D03.PRT" },
+      "secondary": [],
+      "rationale": "Scopeを1969年新聞記事に接続する初期形に限定すると、Evidenceで流通が確認できる媒体は新聞である。後代資料は異伝を示すためのEvidenceであり、Scope内の媒体ではない。",
+      "manifestation": "地域面の記事が、不可解な乗客消失の語りを受容者へ運ぶ媒体となる。",
+      "content_refs": ["CNT-004"],
+      "evidence_refs": ["EVD-001"]
+    },
+    {
+      "dimension_id": "D04",
+      "status": "I",
+      "primary": { "code_id": "D04.VAR.RETELLING", "parent_id": "D04.VAR" },
+      "secondary": [],
+      "rationale": "後代資料では雨夜、池脇での乗車、若い女性、水浸しの座席という異なる型が記されるが、タクシー客の消失という核は保たれる。細部の追加時期や機序まではEvidenceから確定しない。",
+      "manifestation": "初期形とは異なる場面設定を持つ後代異伝が、同じ消失の核を再話する。",
+      "content_refs": ["CNT-004", "CNT-008"],
+      "evidence_refs": ["EVD-004"]
+    },
+    {
+      "dimension_id": "D05",
+      "status": "D",
+      "primary": { "code_id": "D05.DOC.NEWS_STYLE", "parent_id": "D05.DOC" },
+      "secondary": [],
+      "rationale": "Scope内で確認される提示形は新聞記事であり、不可解な届出がニュースとして提示される。",
+      "manifestation": "怪談の語り手による回想ではなく、乗客消失の届出を扱う地域ニュースの形式を取る。",
+      "content_refs": ["CNT-004", "CNT-006"],
+      "evidence_refs": ["EVD-001", "EVD-003"]
+    },
+    {
+      "dimension_id": "D06",
+      "status": "I",
+      "primary": { "code_id": "D06.T1" },
+      "secondary": [],
+      "rationale": "運転手が自ら観測した不在化を警察へ届け出る出来事として構成されるため、体験事実としての提示を推定できる。ただし記事原文の提示態度は直接照合していない。",
+      "manifestation": "運転手が走行中まで確認していた客が到着時にいない、という当事者の経験が事実として届け出られる。",
+      "content_refs": ["CNT-003", "CNT-004", "CNT-006"],
+      "evidence_refs": ["EVD-002", "EVD-003"]
+    },
+    {
+      "dimension_id": "D07",
+      "status": "I",
+      "primary": { "code_id": "D07.ANO.UNEXPLAINED_EVENT", "parent_id": "D07.ANO" },
+      "secondary": [],
+      "rationale": "この伝承がなければ説明されないまま残るのは、走行中に確認された乗客が通常の降車を示さず到着時に車内からいなくなる出来事である。ただし、この具体的な消失事象と痕跡・捜索の細部は原紙との逐語照合をしていないSRC-003由来のEVD-002・EVD-003に依存する。EVD-001は記事の存在と見出しを確認するにとどまるため、Iとする。",
+      "manifestation": "乗客の不在化と濡れた痕跡、さらに乗車地点と現場近傍の無人トラックの符合があっても原因が定まらないことが、異常な出来事として立ち現れる。",
+      "content_refs": ["CNT-003", "CNT-004", "CNT-005", "CNT-007", "CNT-009"],
+      "evidence_refs": ["EVD-001", "EVD-002", "EVD-003", "EVD-005"]
+    },
+    {
+      "dimension_id": "D08",
+      "status": "I",
+      "primary": { "code_id": "D08.DEX.DIRECT_EVENT", "parent_id": "D08.DEX" },
+      "secondary": [],
+      "rationale": "問題化の直接の契機は、運転手が走行中に客を確認した後、到着時にその客がいないと遭遇する一回の出来事である。ただしこの出来事列は、原紙との逐語照合をしていないSRC-003由来のEVD-002に依存するためIとする。",
+      "manifestation": "通常の送迎の最中に、運転手が客の消失を直接経験することで不可解さが生じる。",
+      "content_refs": ["CNT-001", "CNT-003", "CNT-004"],
+      "evidence_refs": ["EVD-002"]
+    },
+    {
+      "dimension_id": "D09",
+      "status": "I",
+      "primary": { "code_id": "D09.UNK.MYSTERY_LABEL", "parent_id": "D09.UNK" },
+      "secondary": [],
+      "rationale": "原因や女性の正体を確定せず、消失事案を不可解な出来事として保持する構成から、原因帰属ではなく謎として把握可能にする操作を推定する。複数説を意図的に併置するEvidenceはない。",
+      "manifestation": "捜索しても女性も事故も確認されず、乗車地点とトラック発見先の符合も因果説明を閉じないため、出来事は説明不能な消失として残る。",
+      "content_refs": ["CNT-004", "CNT-007", "CNT-009"],
+      "evidence_refs": ["EVD-001", "EVD-003", "EVD-005"]
+    },
+    {
+      "dimension_id": "D10",
+      "status": "I",
+      "primary": { "code_id": "D10.PHN.UNEXPLAINED_PHYSICAL_PHENOMENON", "parent_id": "D10.PHN" },
+      "secondary": [],
+      "rationale": "Scope内では、走行中まで確認された女性客が到着時に車内から不在となり、濡れた座席痕が残り、捜索後も説明が閉じない。このため、原因主体を幽霊、死者、場所、人間、自然過程のいずれにも確定せず、説明不能な物理的現象として分類する。具体的出来事は原紙未照合のSRC-003由来のEVD-002・EVD-003に依存するためIとする。後代の幽霊設定は初期形へ遡及しない。",
+      "manifestation": "女性客の車内からの不在化と濡れた座席痕は、原因主体を特定しないまま生じる説明不能な現象として提示される。",
+      "content_refs": ["CNT-003", "CNT-004", "CNT-005", "CNT-007"],
+      "evidence_refs": ["EVD-002", "EVD-003"]
+    },
+    {
+      "dimension_id": "D11",
+      "status": "I",
+      "primary": { "code_id": "D11.PAS.SPONTANEOUS_SELECTION", "parent_id": "D11.PAS" },
+      "secondary": [],
+      "rationale": "乗客を乗せて目的地へ向かうことは異常の物理的文脈だが、同じ行為で再現的に発動する規則としては示されない。したがって運転手が偶発的に当該事案へ遭遇する受動的選択を採る。",
+      "manifestation": "通常の業務中に女性客を乗せた運転手だけが、一回の消失事案に遭遇する。",
+      "content_refs": ["CNT-001", "CNT-002", "CNT-004"],
+      "evidence_refs": ["EVD-002"]
+    },
+    {
+      "dimension_id": "D12",
+      "status": "I",
+      "primary": { "code_id": "D12.OTH.SPECIFIC_OTHER", "parent_id": "D12.OTH" },
+      "secondary": [],
+      "rationale": "主作用を乗客が車内から不在となる変化と捉えると、その直接の対象は運転手ではなく当該女性客である。被害者であることは確定しないためVICTIM_TARGETは採らない。",
+      "manifestation": "運転手は観測者・届出者であり、状態が変わる対象は車内にいた女性客である。",
+      "content_refs": ["CNT-003", "CNT-004"],
+      "evidence_refs": ["EVD-002"]
+    },
+    {
+      "dimension_id": "D13",
+      "status": "I",
+      "primary": null,
+      "secondary": [],
+      "rationale": "主作用は女性客の消失／車内からの不在化だが、現行taxonomyには、原因存在論を強めずにこの状態変化そのものを表すChildがない。現実改変等を選ぶにはEvidenceを超える存在論が必要である。",
+      "manifestation": "走行中に確認された女性客が到着時には車内におらず、座席には濡れた痕跡だけが残る。",
+      "content_refs": ["CNT-003", "CNT-004", "CNT-005"],
+      "evidence_refs": ["EVD-002"],
+      "taxonomy_gap": {
+        "present": true,
+        "description": "因果源や超自然的機構を断定せず、人物がその場から不在となる作用を表すD13 Childがない。"
+      }
+    },
+    {
+      "dimension_id": "D14",
+      "status": "I",
+      "primary": { "code_id": "D14.NEU" },
+      "secondary": [],
+      "rationale": "Scope内では女性客の死亡・負傷、運転手への危害、利益のいずれも確認されない。主帰結は不可解な不在化と未解決性であり、正負を確定できない。ただし、この中立的帰結は原紙未照合のSRC-003由来の消失・捜索本文（EVD-002・EVD-003）からの解釈であるため、Iとする。",
+      "manifestation": "捜索しても所在と原因が判明しないが、伝承本文はそれを確定した損害や救済として描かない。",
+      "content_refs": ["CNT-004", "CNT-007"],
+      "evidence_refs": ["EVD-003"]
+    },
+    {
+      "dimension_id": "D15",
+      "status": "I",
+      "primary": { "code_id": "D15.KNW.UNCERTAINTY_PRESERVED", "parent_id": "D15.KNW" },
+      "secondary": [],
+      "rationale": "終端で女性の所在、消失原因、事故との関係が確定せず、未解決の状態そのものが維持される。死亡・失踪へ読み替えるEvidenceはない。",
+      "manifestation": "警察の捜索と事故確認の後にも、客がなぜいなくなったのかという不確実性が残る。",
+      "content_refs": ["CNT-006", "CNT-007"],
+      "evidence_refs": ["EVD-003"]
+    },
+    {
+      "dimension_id": "D16",
+      "status": "I",
+      "primary": { "code_id": "D16.EVT.SEQUENTIAL_EPISODE", "parent_id": "D16.EVT" },
+      "secondary": [],
+      "rationale": "乗車、行先の指定、走行中の確認、到着時の不在化、届出・捜索、現場近傍のトラック発見が一つの連続したエピソード内で順に起きる。ただしこの時系列は、原紙との逐語照合をしていないSRC-003由来のEVD-002・EVD-003・EVD-005に依存するためIとする。",
+      "manifestation": "出来事は単一の送迎の進行の中で段階的に異常へ転じ、捜索と近傍車両の発見へ続く。",
+      "content_refs": ["CNT-001", "CNT-002", "CNT-003", "CNT-004", "CNT-006", "CNT-007", "CNT-009"],
+      "evidence_refs": ["EVD-002", "EVD-003", "EVD-005"]
+    },
+    {
+      "dimension_id": "D17",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "警察への連絡と捜索は事後の調査であり、消失を回避・制御する有効な方法として提示されない。回避法がないと明示するEvidenceもない。",
+      "manifestation": "届出後にも女性は見つからず、伝承は再現可能な予防策・解決策を示さない。",
+      "content_refs": ["CNT-006", "CNT-007"],
+      "evidence_refs": ["EVD-003"]
+    },
+    {
+      "dimension_id": "D18",
+      "status": "I",
+      "primary": { "code_id": "D18.L1" },
+      "secondary": [],
+      "rationale": "中心となる消失と捜索は、運転手・女性客・車内という伝承内部の出来事として記述される。流通に伴う現実社会の効果を示すX Evidenceはない。ただし伝承内出来事の記述は、原紙との逐語照合をしていないSRC-003由来のEVD-002に依存するためIとする。",
+      "manifestation": "女性客の不在化と濡れた座席は、物語内の送迎場面で生じる異常として作用する。",
+      "content_refs": ["CNT-003", "CNT-004", "CNT-005"],
+      "evidence_refs": ["EVD-002"]
+    },
+    {
+      "dimension_id": "D19",
+      "status": "D",
+      "primary": { "code_id": "D19.LOC.REGIONAL", "parent_id": "D19.LOC" },
+      "secondary": [],
+      "rationale": "確認された初期流通は京都市内版の地域新聞であり、Scope内で直接確認できる流通範囲は地域圏である。全国的・世代横断的流通はScope内Evidenceからは判定しない。",
+      "manifestation": "京都の地域面を通じて、当地のタクシー乗客消失事案として公衆に提示される。",
+      "content_refs": ["CNT-002", "CNT-004"],
+      "evidence_refs": ["EVD-001"]
+    },
+    {
+      "dimension_id": "D20",
+      "status": "U",
+      "primary": null,
+      "secondary": [],
+      "rationale": "運転手の届出後に警察が捜索し、関係地域の事故も確認したが、女性の所在と原因は得られない。しかし、この捜索と事故確認だけでは、女性本人、関係者、専門家、組織等のもっともらしい特権情報保持者が探索され、誰にも真相・追加情報・有効な制御情報がないことまでは確認できない。したがって、特権情報保持者の構造はUとする。",
+      "manifestation": "運転手と警察の捜索は女性の所在や消失の説明へ到達しないが、伝承本文は誰が追加情報を持つか、または誰も持たないかを定めない。",
+      "content_refs": ["CNT-006", "CNT-007"],
+      "evidence_refs": ["EVD-003"]
+    },
+    {
+      "dimension_id": "D21",
+      "status": "D",
+      "primary": { "code_id": "D21.A2" },
+      "secondary": [],
+      "rationale": "Scope内で行先として名指される深泥池は、京都市の公式情報（EVD-006）により京都市北区に所在する実在の池として直接確認できる。したがって、伝承は少なくとも一つの特定の実在地へ接続するA2とする。解剖学教室やトラックの細部はSRC-003由来であり、このAnchor判定の根拠にしない。地理的実在は消失の超自然的原因を裏づけない。",
+      "manifestation": "タクシーの行先として語られる深泥池は、京都市北区に実在する固有の池に接続している。",
+      "content_refs": ["CNT-002", "CNT-010"],
+      "evidence_refs": ["EVD-006"]
+    }
+  ],
+  "analysis_notes": "D01・D04は後代のHistory Evidenceを参照するが、D07〜D21の判断対象はVAR-001のCNT-001〜CNT-007、CNT-009、CNT-010に限る。CNT-009の乗車地点と無人トラックの符合は未解決性・怪談めいた文脈の手掛かりであって、因果源の確定や超自然的機構のEvidenceではない。CNT-010/EVD-006は深泥池の実在地接続だけを直接確認し、タクシー事案本文や他の地名・施設の実在を裏づけない。本文細部の転載依存と、幽霊・死者由来を初期形へ遡及できない点を全判定の留保とする。"
+}

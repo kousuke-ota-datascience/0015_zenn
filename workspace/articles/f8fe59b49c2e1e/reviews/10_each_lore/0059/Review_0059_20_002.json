@@ -1,0 +1,139 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "SummaryとScoped Contentの双方から、未説明の消失事案、偶発的遭遇、未解決終端、単発の順次エピソードという主要分析構造が再構成できる。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "女性客の同乗状態からの不在化、濡れた痕跡、捜索後にも残る未解決性という因果的記述を、原因主体を確定せずに扱っている。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "AnalysisはScopeに含まれるContentを根拠としており、Evidenceだけにある具体情報を新規に導入していない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12の女性客→D13の未コード化された不在化→D15の未解決性保持という連鎖は、D13のtaxonomy gapを明示する限りContentと整合する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1であり、L3を正当化する独立X Evidenceを必要としない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "京都市内版という地域新聞の確認を地域圏の流通として扱い、全国流通へ拡張していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "運転手の届出後に警察の捜索と事故照会が行われても所在・説明が得られないというContent上の探索構造を根拠にしており、単なる資料欠落からNO_ONE_KNOWSを選んではいない。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "固有地名・施設名はScoped Contentにあるが、その実在性を確認するA Evidenceはない。加えて地点・施設名の細部は転載資料依存であるため、D21.A2をDとする確信度は支持強度を超える。",
+      "status": "FINDING"
+    },
+    "dimension_semantics": {
+      "notes": "D01〜D21のChild選択とD13 taxonomy gapの認識は、Scoped Contentの意味構造に概ね整合する。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "一回的なタクシー送迎中の異常事案であり、entry_type「物語・伝説」とmacro_category「交通・インフラ」はContentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "SRC-003由来の本文細部を主根拠とする複数dimensionでDを用いており、canonical自身が記録する原紙未照合という証拠上限を超えている。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "各dimensionのmanifestationとrationaleは、概ねScope内のCNT-001〜007・009へ追跡できる。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D08、D16、D18、D21は、原紙未照合の転載SRC-003に依存するContentを主要根拠としながらDとしている。coding rulesの下位資料のみの場合はIとする規則に整合しない。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "D13では、因果源・存在論を過剰に強めず人物の不在化だけを表すChildがないというgapを適切に記録している。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "1969年記事に接続する初期形にScopeを狭め、後代の雨夜・池脇乗車型と幽霊・死者由来の解釈を除外している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [
+    {
+      "category": "status_reasoning",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003",
+        "CNT-004",
+        "CNT-005",
+        "CNT-006",
+        "CNT-007",
+        "CNT-009"
+      ],
+      "dimension_refs": [
+        "D08",
+        "D16",
+        "D18",
+        "D21"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-003",
+        "EVD-005"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D08、D16、D18、D21のstatusをIへ変更し、それぞれのrationaleに転載資料依存と原紙未照合を明記する。D21は必要なら実在地・施設を確認するAnchor Evidenceを追加した後に再評価する。",
+      "impact": "直接確認済みの新聞掲載事実と、転載に依存する本文細部との区別が曖昧になり、分析の再現可能性と証拠強度の比較可能性を損なう。",
+      "rationale": "D08はEVD-002、D16はEVD-002・003・005、D18はEVD-002、D21はEVD-002・005に主として依拠する。これらはいずれも原紙との逐語照合をしていないSRC-003由来であり、canonicalも間接証拠として留保する。coding rulesは下位資料しかない場合にIを用いるよう求める。",
+      "severity": "Moderate",
+      "summary": "転載資料を主根拠とするD08・D16・D18・D21のD判定が、証拠確信度の上限を超えている。"
+    }
+  ],
+  "review_notes": "Scope内Contentのみから意味形成・因果モデルを再構成した。主な修正点はコード内容ではなく、原紙未照合の転載資料に依拠するdimensionのD/I確信度である。",
+  "review_seq": 2,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-009"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D20",
+      "D21"
+    ],
+    "model": "通常の送迎中、運転手が確認していた女性客が到着時に車内から不在となり、濡れた座席という痕跡だけが残る。警察の捜索と事故照会でも所在・原因は閉じず、伝承は超自然的主体を確定しない未説明の単発事案として意味化する。",
+    "notes": "意味形成モデル自体はScoped Contentから再構成可能である。ただし転載資料のみを根拠とするdimensionのD/I確信度を修正する必要がある。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_20_analysis.json",
+    "blob_sha": "ee619e7167fca0f4ff8cd7c3a869b1210516aff0",
+    "commit_sha": "20e25af036b1d1c239abd8ff48640ecdb4dcc456",
+    "reviewed_at": "2026-09-27T04:36:32Z"
+  },
+  "verdict": "Moderate"
+}

@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "The 1969 newspaper article is treated as the earliest currently confirmed attestation, not as proof that the lore originated in 1969.",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "The evidence records distinguish the library-confirmed existence, date, edition, and headline of the newspaper item from reprint-dependent narrative details.",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "The artifact does not represent the reprint as a directly inspected primary source, and accurately states that the original newspaper was not directly read in this cycle.",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "The live Kyoto Prefectural Library record confirms the salient source-level facts: the 1969-10-07 Kyoto-city edition attestation, headline, library verification process, 1960s circulation statement in a later work, and the later variant's differing setting. These are represented in EVD-001 through EVD-004; the reprint-derived contextual detail is separately represented in EVD-005.",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001 is a traceable library reference record that independently documents the newspaper attestation; SRC-002 is correctly designated as the contemporary primary item; SRC-003 is conservatively classified as an unverified mirror reprint.",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-001 and EVD-004 are supported by the library record. EVD-002, EVD-003, and EVD-005 are explicitly limited to the purported reprint and retain uncertainty about direct comparison with the original.",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "The artifact preserves uncertainty about article-body details, causal explanation, and the relationship between the 1969 form and the later rain-and-pond-side variant.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0059",
+  "findings": [],
+  "review_notes": "Source-to-evidence reconstruction is appropriately cautious. External verification of the Kyoto Prefectural Library reference record confirms the reported newspaper attestation and the later-variant boundary.",
+  "review_seq": 3,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0059_mizorogaike_ghost_taxi/0059_00_sources.json",
+    "blob_sha": "cd60f9b58adde23c68e6a645a7a377bbfe4cf58a",
+    "commit_sha": "4a1dd5879fec140ac57c6cfcf2fc7990931274cf",
+    "reviewed_at": "2026-09-27T04:40:14Z"
+  },
+  "verdict": "Pass"
+}
