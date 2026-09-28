@@ -1,0 +1,123 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "The summary and scoped Content retain a qualified claimed terminal state, but D14/D15 erase it. This produces a material difference in available outcome coding.",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "The D12→D13→D15 chain is not supportable as coded: Content supports reported perceptual manifestations around the practitioner, not an established act of searching/approaching, and it supplies a qualified reported terminal effect.",
+      "status": "FINDING"
+    },
+    "content_layer_bypass": {
+      "notes": "The reviewed analysis relies on Content-layer descriptions; no Source/Evidence-only semantic fact was needed to identify the findings.",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12 practitioner is plausible, but D13 pursuit is an unsupported reconstruction; the content instead directly reports anomalous perceptions and ambient phenomena. D15 should not be U merely because the reports are unverified.",
+      "status": "FINDING"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "Only L1 is assigned. The analysis correctly does not infer an independent L3 social effect from anonymous in-thread participation claims.",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19 confines the attested distribution to an open forum and does not infer national distribution.",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "D20 remains U and does not misuse NO_ONE_KNOWS.",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "D21 distinguishes generic domestic setting from stronger institutional, geographic, or historical anchors.",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D13 overstates pursuit as the established principal mechanism, while D14 and D15 incorrectly treat anonymous self-reported outcomes as no tradition-level outcome.",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "「実行儀式型ネットロア」 and 「全国型怪異・儀式」 are broadly compatible with the scoped ritual-thread Content; the latter should not be read as an evidentiary claim of demonstrated nationwide distribution.",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "Several I statuses properly respect the preservation/anonymous-report ceiling. However, D14/D15 apply an excessive ceiling by removing the lore’s own reported result rather than coding it as a qualified claim.",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "The cited Content does not directly support D13.REL.PURSUIT; D14/D15 rationales discount Content claims because they lack external corroboration, contrary to the rule separating lore claims from researcher verification.",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "Independent verification appropriately limits status to I, but does not justify U where the scoped lore content itself presents a reported effect and ending.",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "The relevant content can be represented by existing taxonomy values; no demonstrated taxonomy gap is required.",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "The selected initial 2007 preserved-thread formation layer matches the scoped Content and excludes later adaptations.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0198",
+  "findings": [
+    {
+      "category": "dimension_semantics",
+      "finding_id": "F001",
+      "fix_direction": "Replace the pursuit coding with D13.MAN.MANIFEST_ONLY at I, or use U if the project determines that reported phenomena alone do not establish a stable primary mechanism; align D12 accordingly with the chosen mechanism.",
+      "impact": "The coded causal mechanism overstates agency and makes D12 practitioner appear more directly targeted than the Content demonstrates.",
+      "rationale": "CNT-003 establishes a hide-and-seek ritual frame and CNT-006 reports sounds, voices, presence, and sightings. Neither Content unit states that the alleged entity searches for, locates, or approaches the practitioner. The canonical rationale adds that action from the game frame and interpretive inference. The most direct represented mechanism is anomalous manifestation/perception; if an intentional action cannot be established at the Content level, D13.MAN.MANIFEST_ONLY is the conservative available code.",
+      "severity": "Moderate",
+      "summary": "D13.REL.PURSUIT is not adequately supported by the scoped Content."
+    },
+    {
+      "category": "status_reasoning",
+      "finding_id": "F002",
+      "fix_direction": "Reassess D14 and D15 from the reported Content, using I with explicit qualification. At minimum, D15.MND.PERCEPTUAL_DISTURBANCE is a candidate for the reported final/ongoing perceptual experience; determine D14 from the dominant claimed outcome rather than treating uncertainty about factual truth as no outcome.",
+      "impact": "The analysis suppresses the tradition-level terminal state and distorts outcome polarity/domain, despite the summary preserving both.",
+      "rationale": "CNT-011 contains a qualified participant claim of being safe and of seeing a childlike figure after the contingency response. The coding rules require separating what researchers can verify from what the tradition claims. Thus lack of corroboration caps confidence at I but does not itself require U. The content also records fear and reported anomalous perceptions during the event.",
+      "severity": "Moderate",
+      "summary": "D14 and D15 wrongly treat lack of independent verification as absence of a scoped lore outcome."
+    }
+  ],
+  "review_notes": "Most scope, provenance, distribution, control, and anchoring decisions are appropriately cautious. The material corrections are limited to mechanism and outcome reasoning: evidentiary uncertainty should qualify tradition-level claims, not erase them.",
+  "review_seq": 5,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-008",
+      "CNT-011"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17"
+    ],
+    "model": "The scoped account makes sense of a deliberately performed doll ritual through reported auditory, visual, and presence anomalies during concealment. Posters can interpret these reports as an additional/spiritual presence associated with the ritual, but the Content does not establish that the presence actively searches for or approaches the participant. The ritual’s own closing rules and the participant’s claimed safe ending with a final childlike sighting remain part of the lore presentation, while objective causation and factual occurrence remain unresolved.",
+    "notes": "D07 unexplained events/perception, D08 perceptual anomalies, D09 agency attribution, and D10 spirit interpretation are broadly defensible at I. The required revision concerns unsupported pursuit and the improper erasure of reported outcomes.",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_20_analysis.json",
+    "blob_sha": "b79fbe59c89fd958298dcb82a4c28ba93feb2670",
+    "commit_sha": "60405e0dff825f0a0ae3f40cf15a9f9351684acc",
+    "reviewed_at": "2026-09-28T22:57:39Z"
+  },
+  "verdict": "Moderate"
+}

@@ -1,0 +1,206 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "Content units accurately preserve the cited evidence as claims, rules, actions, and reported events, with epistemic qualifications retained.",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "The summary alone permits reconstruction of the concrete ritual and its live-thread development.",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "The Evidence-to-Content audit found no salient scoped detail wholly absent from Content; television use and its stated later explanation are represented in CNT-008, and the original procedure is otherwise retained.",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "The structured terminal_state is marked unknown despite CNT-011 preserving a specific claimed ending: the participant reported being safe while also reporting a childlike apparition. Independent verification is absent, but that does not erase the tradition-level reported terminal state.",
+      "status": "FINDING"
+    },
+    "summary_reconstruction": {
+      "notes": "The summary preserves the ritual’s preparation, start, live reported anomalies, missing-saltwater contingency, closure, claimed safety, and uncertainty.",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "The Content layer does not convert anonymous self-reports, alleged spirits, or origin claims into independently established facts.",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001 and the scope boundary consistently limit the reconstruction to the 2007-04-18–21 preserved-thread formation layer.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0198",
+  "findings": [
+    {
+      "category": "structural_probe",
+      "finding_id": "F001",
+      "fix_direction": "Set terminal_state to known with a qualified value describing the participant’s self-reported safety and final childlike sighting; retain the existing independent-verification uncertainty.",
+      "impact": "Downstream analysis can incorrectly treat D14 and D15 as having no folklore-level outcome and lose the distinction between a claimed ending and externally verified fact.",
+      "rationale": "CNT-011 states that the participant reported being safe and reported seeing a childlike figure while going to finish the ritual. The summary correctly retains this as a self-report, but summary.structure.terminal_state is null. Lack of independent corroboration warrants qualification, not deletion of the claimed terminal state from the Content reconstruction.",
+      "severity": "Moderate",
+      "summary": "The structured terminal state improperly converts a reported terminal outcome into unknown."
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "The summary retains the information needed to assess the ritual trigger, reported anomaly, spiritual interpretation, closure, sequential timing, forum circulation, and uncertainty. The structured terminal_state defect does not remove the terminal claim from the narrative.",
+      "status": "PASS"
+    },
+    "blind_decode": "A poster presents a late-night game using a modified stuffed doll, rice, nail clippings, red thread, a blade, and saltwater. The doll is named, placed in a bath, made the oni, stabbed, and left while the player hides in a dark house. A second participant says they perform the game, hide without the saltwater, and then reports loss of television sound, noises, voices, presence, and later a childlike figure. Other posters and the procedure-giver attempt to help. The ending is supplemented during the event: saltwater is held in the mouth and put on the doll with a repeated victory declaration; the doll is then discarded so it will ultimately be burned. The account presents reported uncanny experiences and a claimed safe conclusion, not independently verified supernatural fact.",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "The account is presented as an early preserved thread rather than proven origin.",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "2007 preserved-log name attestation is not actual origin."
+      },
+      {
+        "blind_reconstruction": "Modified doll, rice, nail clippings, red thread, blade, and saltwater are recoverable.",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "Specific doll preparation materials and alterations."
+      },
+      {
+        "blind_reconstruction": "The operational start sequence is recoverable.",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "Naming, bath placement, oni transfer, stabbing, darkness, and hiding start the ritual."
+      },
+      {
+        "blind_reconstruction": "Closure is described as an in-event supplementation.",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "The ending procedure was added during the live thread."
+      },
+      {
+        "blind_reconstruction": "A participant hides without saltwater and seeks help.",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "A second poster claimed to participate and forgot saltwater."
+      },
+      {
+        "blind_reconstruction": "Reported phenomena are presented without treating their cause as established.",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "Reported anomalies coexist with spiritual readings and skepticism."
+      },
+      {
+        "blind_reconstruction": "The ritual is portrayed as transmitted and incompletely known.",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "The procedure-giver claims incomplete, orally relayed knowledge and supplies later information."
+      },
+      {
+        "blind_reconstruction": "Additional same-day explanatory material and a non-established wider provenance are recoverable.",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "A later same-day contributor adds an alternate name, television explanation, household warning, and unverified regional claim."
+      },
+      {
+        "blind_reconstruction": "The behavioral prohibitions are recoverable.",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "Stay inside, dark, and quiet while hiding."
+      },
+      {
+        "blind_reconstruction": "The post-closure disposal instruction is recoverable.",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "Discard and ultimately burn the doll after closing."
+      },
+      {
+        "blind_reconstruction": "The remedy and claimed terminal scene are recoverable.",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "Improvised remedy, self-reported safety, and final childlike sighting."
+      }
+    ],
+    "probes": [
+      {
+        "blind": "A procedure-giver, self-described participant, and responding audience are recoverable.",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "Same roles are represented in CNT-002–CNT-007 and CNT-011."
+      },
+      {
+        "blind": "The ritual performer who hides is the immediate affected person.",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "CNT-005, CNT-006, and CNT-011 identify the self-described participant and reported experiences."
+      },
+      {
+        "blind": "Entry occurs by conducting the specified doll-and-hiding ritual.",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "CNT-002 and CNT-003 specify the preparation and start sequence."
+      },
+      {
+        "blind": "A supernatural or other presence is proposed, but not established.",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "CNT-006 and CNT-008 preserve spiritual interpretation and its uncertainty."
+      },
+      {
+        "blind": "Reported sounds, silence, voices, presence, and a sighting are associated with hiding after the ritual.",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "CNT-005, CNT-006, and CNT-011 retain these reported events."
+      },
+      {
+        "blind": "The account moves from preparation to hiding and reports, then improvised closure.",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "CNT-002–CNT-005 and CNT-011 preserve this sequence."
+      },
+      {
+        "blind": "It is one sequential overnight episode, with a contingency arising during it.",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "CNT-003–CNT-005 and CNT-011 preserve the ordered live progression."
+      },
+      {
+        "blind": "The ritual has detailed preparation and behavioral prohibitions, including darkness, staying inside, quietness, and saltwater.",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "CNT-002, CNT-003, CNT-004, and CNT-009 support these rules."
+      },
+      {
+        "blind": "Saltwater, the declaration, and disposal/burning of the doll are presented as closure; an improvised saltwater-retrieval response is supplied.",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "CNT-004, CNT-007, CNT-010, and CNT-011 retain the controls."
+      },
+      {
+        "blind": "The narrated end is a self-report of safety accompanied by a final childlike sighting.",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "CNT-011 explicitly preserves both elements."
+      },
+      {
+        "blind": "Supernatural causation, the factual status of the reports, and origin remain unresolved.",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "CNT-006–CNT-008 and stated uncertainties preserve these limits."
+      },
+      {
+        "blind": "This is an early live-thread formation, not a later standardized version.",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001 and the scope description delimit that initial layer."
+      }
+    ],
+    "reference_story": "The scoped Content reconstructs an initial 2007 thread formation layer: a transmitted but incompletely known ritual procedure is posted and tested live; an omitted saltwater requirement and closing procedure are added in response to the participant’s reported predicament; anomalous sounds, presence, and sightings are reported and interpreted alongside skepticism; a later contributor supplies an alternate name and additional claims. The participant ultimately self-reports being safe and also reports seeing a childlike figure. The scope does not establish actual supernatural causation, actual prior origin, or independent regional circulation.",
+    "verdict": "PASS"
+  },
+  "review_notes": "The summary reconstructs the Content layer successfully. The material defect is confined to the structured terminal-state representation, which should preserve the reported outcome while retaining its evidentiary qualification.",
+  "review_seq": 5,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_10_contents.json",
+    "blob_sha": "d8ae20cccff0103292ff03366a38a5050252724f",
+    "commit_sha": "ac3795cbbad574b61ab62bd1a535c521b92c67a0",
+    "reviewed_at": "2026-09-28T22:57:39Z"
+  },
+  "verdict": "Moderate"
+}

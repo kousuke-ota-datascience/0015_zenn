@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "The artifact distinguishes the earliest presently confirmed preserved-thread attestation from actual origin.",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "The sampled live page supports the paraphrased 2007-04-18 and 2007-04-21 thread sequence, preparation, concealment, saltwater, and closing instructions.",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "The canonical artifact does not misrepresent the preservation wiki as an original primary record.",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "The source-derived evidence population retains the salient initial name, ritual sequence, live supplementation, anomalous reports, closure instructions, claimed oral provenance, and uncertainty boundaries.",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001 is correctly identified as a mirror/reprint rather than the original 2channel page; SRC-002 is appropriately limited to later commentary.",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "Evidence records are traceable to the stated sources and locators; their paraphrase status is appropriate.",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "Anonymous claims, alleged phenomena, oral antecedents, regional claims, and the later origin claim are consistently qualified.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0198",
+  "findings": [],
+  "review_notes": "The frozen source layer is semantically adequate for the scoped initial-thread reconstruction; live review of the cited preservation page confirmed the central thread sequence.",
+  "review_seq": 5,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_00_sources.json",
+    "blob_sha": "4d6257d8440a9e4d8e82b229e69e78395a369276",
+    "commit_sha": "35b0f323d47346acb007fe6dbbaeb9e60d73c295",
+    "reviewed_at": "2026-09-28T22:57:39Z"
+  },
+  "verdict": "Pass"
+}
