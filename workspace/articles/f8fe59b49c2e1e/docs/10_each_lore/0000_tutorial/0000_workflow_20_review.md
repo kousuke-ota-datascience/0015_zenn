@@ -263,9 +263,21 @@ Review 10では次を独立判定する。
 ## 6.4. Sense-making再構成
 
 - 20_analysisの判定を読むだけで済ませず、Reviewer自身が**Scoped Contentから**意味形成・因果モデルを再構成する。
+- 特にD07〜D10は既存のcanonical codeを起点に逆算せず、Scoped Contentから `D07 → D08 → D09 → D10` の関係を独立に再構成したうえでcanonical Analysisと比較する。
 - `Review_*_20_*.json` の必須 `sensemaking_reconstruction` に、`model / content_refs / dimension_refs / status` を保存する。
 - `evidence_refs` を補助証跡として持たせる場合も、そのEvidenceにしか存在しないdetailをmodelへ追加してはならない。Content不足なら `content_layer_bypass` / Review 10 omissionとしてFinding化する。
 - 再構成結果は新たなcanonical Analysisではなく、20_analysisの意味論を検証した監査証跡である。
+
+### 6.4.1. Sense-making Reviewで参照する文書の役割
+
+D07〜D10を中心とするsense-making Reviewでは、参照文書の責務を次のように分離する。
+
+- `docs/00_research_overview/80_appendix/20_what_is_sense_making.md` は、**何を見るべきかを理解するための理論レンズ**（conceptual guardrail / theoretical lens）として用いる。sense-makingの概念的誤読や、D07 / D08、D09 / D10、D08 / D11等の境界混同を防ぐために参照するが、**normative codebookとして扱わない**。
+- D07〜D10を含む各Dimensionの概念定義・次元境界は `docs/00_research_overview/10_urban_legend_analysis_axes_theoretical_design.md` を正とする。
+- Parent / Child / Valueの測定体系は `docs/00_research_overview/20_urban_legend_parent_child_code_system.md` を正とする。
+- `docs/00_research_overview/30_urban_legend_analysis_coding_rules.md` は、**Evidence / Scoped Contentから具体的コードへ到達し、最終的にどう判定するかの操作規則**として用いる。
+- Reviewerはsense-making補足文書を理論レンズとしてScoped Contentを読み、意味形成モデルを独立再構成する。その後、theoretical designで概念境界、taxonomyで候補値、coding rulesでinclude / exclude・Primary / Secondary・`D / I / U / NA / C` を確認し、canonical Analysisとの一致・不一致を判定する。
+- coding rulesとの形式的一致だけをもってPassとしてはならず、理論上別の問いを同一視していないか、またcanonical codeに引かれてScoped Contentの意味を読み替えていないかを監査する。
 
 
 # 7. Analysis Invarianceと判定順序
