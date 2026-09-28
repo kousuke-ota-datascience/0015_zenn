@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0019",
+  "artifact": "00",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0019_chiisai_ojisan/0019_00_sources.json",
+    "commit_sha": "2d391fd014a849a4dfc199453dd30c56b2dbcd55",
+    "blob_sha": "ccc3eaeeee5e1ad036a6623a2318b2cef3314277",
+    "reviewed_at": "2026-09-28T15:34:40Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "2009年同時代Web記事、2012/2014年本人発言報道、2012年書誌、2019年後代解説の役割分離が妥当。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-003の具体物は『ポットのコード』へ訂正され、EVD-013/014も追加されている。目撃・痕跡・写真・解釈を客観的事実へ格上げしていない。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "既存EVD-001〜014は各Sourceの該当記述と整合し、前回の具体物不一致は解消済み。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "同時代報道による本人発言の再話、後代書誌・解説を区別し、direct/indirect derivativeの扱いは妥当。"
+    },
+    "earliest_attestation": {
+      "status": "PASS",
+      "notes": "2009年記事を現在確認できる早い同時代集成として扱い、成立年・絶対初出へ格上げしていない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "客観的実在、写真・痕跡の真正性、正体、起源、犬の反復と小男の因果、タイムスリップ仮説を未確定のまま保持。"
+    },
+    "salient_evidence_completeness": {
+      "status": "PASS",
+      "notes": "前回欠落していた犬の毎晩12時の反復要素と、新宿御苑写真を江戸期の狩場・タイムスリップ仮説へ結ぶ筆者解釈はEVD-013/014として追加済み。新たなsalient omissionは認めない。"
+    }
+  },
+  "findings": [],
+  "review_notes": "current Source/Evidenceを独立再レビュー。docs/legacyは参照していない。",
+  "verdict": "Pass"
+}
