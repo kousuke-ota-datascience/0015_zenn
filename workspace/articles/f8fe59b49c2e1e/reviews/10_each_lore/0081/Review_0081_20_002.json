@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0081",
+  "artifact": "20",
+  "review_seq": 2,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0081_pierce_white_thread/0081_20_analysis.json",
+    "commit_sha": "b4a54bd5f0047132f893fa6692d225a2fab3fb5b",
+    "blob_sha": "310a037ebcf17f8f0183290ed1d6e223582c0d3f",
+    "reviewed_at": "2026-09-28T15:53:10Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "1994年出版社内容情報と1998年採録要約に共通する『ピアス穴／白い糸状物／引く／失明』へScopeを限定し、2021年の安全ピン・失明以外の帰結・医学説明を除外する境界はContentと整合する。"
+    },
+    "dimension_semantics": {
+      "status": "FINDING",
+      "notes": "D02/D03をUとする判定はcodebookの『最古確認流通媒体』『Version Scopeで確認できる流通媒体』定義と整合しない。1994年刊行書籍への収録はcurrent Contentで確認できるため、書籍媒体として再裁定が必要。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "D02/D03を含め現行taxonomyに必要なcodeが存在し、taxonomy gapではない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "ピアス穴→白い糸状物→引く→失明という条件因果はScoped Contentと整合する。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "各rationaleの意味根拠はScoped Contentへ追跡可能。D02/D03の問題は根拠欠落ではなく、その根拠に対するsemantic adjudicationの誤り。"
+    },
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "Scoped Contentから独立再構成すると1994年刊行書籍が確認流通媒体として残るため、D02/D03=Uは再現されない。他の主要Dimensionは再構成可能。"
+    },
+    "status_reasoning": {
+      "status": "FINDING",
+      "notes": "D02/D03で『1994年以前の流通媒体は不明』ことと『現在確認できる最古／Scope内媒体も不明』ことを同一視してUへ落としている。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "白い糸状物を引いた当事者→視覚機能の生理変化→失明という重度身体障害の列がScoped Contentと整合する。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18=L1のみで、後代医学説明や受容者への外部効果をL2/L3へ混入していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "1994年書籍刊行や1998年静岡県採録から全国流通へ拡張せずD19=Uとしている。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "特権情報保持者の不記載をNO_ONE_KNOWSへ変換せずU。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "一般的なピアシングという現実背景をA1とし、書籍・研究DBの実在性を強い現実アンカーへ変換していない。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "伝承内容は出版社内容情報・研究DB要約等のderivative Evidenceに依存するため、多くのsemantic codeをIへ抑制している。D02/D03再裁定でも原本文未実見を踏まえconfidence ceilingを維持すべき。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "macro_category『身体・医療・食品』、entry_type『身体俗信』は、身体構造と失明を結ぶ条件俗信というScoped Contentと整合する。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "Analysisの実質的意味はScoped Contentに存在し、後代医学説明やSource/Evidence-only detailを初期Scopeの正当化へ直接導入していない。"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "dimension_semantics",
+      "summary": "D02/D03が、1994年刊行書籍という確認可能な流通媒体を無視してUになっている。",
+      "rationale": "codebookでD02は『起源媒体を推測せず、現在の証拠から最も古く確認できる実際の流通回路』、D03は『指定Version Scopeで伝承が受容者へ流通したことを確認できる媒体』をコードする。current ContentのCNT-004とVAR-001は、1994年刊『ピアスの白い糸―日本の現代伝説』の出版社内容情報に当該因果核が収録されていることを明示する。1994年以前の口承媒体が不明であることは、1994年の書籍媒体までUにする根拠にはならない。",
+      "impact": "最古確認媒体とScope内媒体ポートフォリオが欠落し、媒体史に関するD02/D03集計を過小評価する。中心的な身体因果モデルやVersion Scope自体は変わらないため局所再裁定で修正可能。",
+      "fix_direction": "D02をD02.PRT.BOOK、D03をD03.PRT.BOOKとして再裁定する。原書本文を直接実見していないconfidence ceilingを踏まえStatusはIを第一候補とし、より直接的な刊行・収録確認をD相当とするかはEvidence ruleに沿って最終裁定する。『1994年以前の生成・口承媒体は不明』という留保はD01およびrationale/uncertaintyに残す。",
+      "content_refs": [
+        "CNT-004"
+      ],
+      "dimension_refs": [
+        "D02",
+        "D03"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ]
+    }
+  ],
+  "sensemaking_reconstruction": {
+    "model": "早期共有核は、ピアス穴から白い糸状物が現れ、それを引くと失明するという身体俗信である。因果源の存在論や白い糸状物の解剖学的正体は確定せず、失明という負の身体帰結が条件付きで提示される。1994年刊行書籍への収録と1998年採録で核が確認されるため、生成時期は不明でも、確認できる媒体としては少なくとも1994年の書籍が存在する。後代の安全ピン型・別帰結・医学説明は初期Scopeへ遡及しない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [],
+    "status": "FINDING",
+    "notes": "D02/D03のみ独立再構成と不一致。他の主要DimensionはScoped Contentから再構成可能。"
+  },
+  "review_notes": "current Scoped Contentのみを意味論的根拠として独立再評価。docs/legacyおよび旧Markdown Reviewを正解として使用していない。",
+  "verdict": "Moderate"
+}
