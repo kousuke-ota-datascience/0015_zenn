@@ -426,10 +426,13 @@
     {
       "dimension_id": "D17",
       "status": "I",
-      "primary": null,
+      "primary": {
+        "code_id": "D17.AVO.FLEE_ESCAPE",
+        "parent_id": "D17.AVO"
+      },
       "secondary": [],
-      "rationale": "投稿者は乗車時から『恐ければ目を覚ませばよい』と考え、危害接近時に意図的覚醒で二度離脱する。物理的逃走ではなく睡眠状態から抜ける制御なので、既存FLEE系へ近似しない。",
-      "manifestation": "事前に想定した制御手段として意図的覚醒を用い、夢世界から離脱する。",
+      "rationale": "投稿者は乗車時から『恐ければ目を覚ませばよい』と考え、危害接近時に意図的覚醒で二度、夢内の危険場面から離脱する。この覚醒は物語内で実行されたescapeとしてFLEE_ESCAPEに分類する。ただし、投稿者の自己認識と二度の叙述に基づくため、誰にでも再現可能で確実な回避法とは一般化しない。",
+      "manifestation": "事前に想定した意図的覚醒を用い、初回と再開後の双方で夢内の危害場面から離脱する。",
       "content_refs": [
         "CNT-002",
         "CNT-004",
@@ -441,8 +444,7 @@
         "EVD-005"
       ],
       "taxonomy_gap": {
-        "present": true,
-        "description": "夢から意図的に覚醒して離脱する回避・制御方式を表すcodeが現taxonomyにない。"
+        "present": false
       }
     },
     {
