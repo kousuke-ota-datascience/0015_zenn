@@ -4,7 +4,7 @@
   "macro_category": "ネット怪談",
   "entry_type": "物語・伝説",
   "version_scope": {
-    "description": "2000年8月2日の匿名掲示板投稿として後代資料に整理され、保存転載で本文を確認できる一人称反復夢型。乗車前警告と意図的乗車、順次危害、覚醒、4年後の同場面からの再開、再覚醒時の終端警告、覚醒後に現実で音声を聞いたという投稿者の自己申告、未再発と次回死亡予想までを含む。2003年『猿夢＋』の読者側類似夢は後代派生として除外する。",
+    "description": "2000年8月2日の匿名掲示板投稿として後代資料に整理され、保存転載で本文を確認できる一人称反復夢型。夢内イメージを過去の記憶由来とする投稿者の限定的自己解釈、乗車前警告と意図的乗車、小人による順次危害、覚醒、初回覚醒後の友人への伝達、4年後の同場面からの再開、再覚醒時の終端警告、覚醒後に現実で音声を聞いたという投稿者の自己申告、未再発と次回死亡予想までを含む。2003年『猿夢＋』の読者側類似夢は後代派生として除外する。",
     "included_variants": [
       "VAR-001"
     ],
@@ -21,7 +21,9 @@
       "CNT-007",
       "CNT-008",
       "CNT-010",
-      "CNT-011"
+      "CNT-011",
+      "CNT-012",
+      "CNT-013"
     ],
     "notes": "2000年原投稿ページは未固定。Contentは保存転載由来であり、現実身体への危害や2003年読者感染型を初期Scopeへ遡及しない。"
   },
@@ -220,13 +222,19 @@
       "dimension_id": "D09",
       "status": "I",
       "primary": {
-        "code_id": "D09.UNK.DELIBERATE_NONRESOLUTION",
+        "code_id": "D09.UNK.MYSTERY_LABEL",
         "parent_id": "D09.UNK"
       },
-      "secondary": [],
-      "rationale": "夢の原因、放送主体、反復理由、覚醒後音声の成因は説明されず、次回死亡も予想のまま確定しない。",
-      "manifestation": "異常な連続夢と覚醒後音声の主張が提示されるが、真相と次回帰結は閉じられない。",
+      "secondary": [
+        {
+          "code_id": "D09.PPR.OMEN_FORECAST",
+          "parent_id": "D09.PPR"
+        }
+      ],
+      "rationale": "原因、反復理由、放送・警告主体を説明せず異常な夢として把握させるため、複数説を意図的に併置するDELIBERATE_NONRESOLUTIONではなくMYSTERY_LABELとする。二度目の離脱時の『次回は最後』という警告と、次回死亡かもしれないという投稿者の予想は、未来の危険を示すOMEN_FORECASTとしてSecondaryに保持する。",
+      "manifestation": "原因不明の反復夢として提示され、その終端で次回の危険が予告されるが、再発・死亡・究極原因は確定しない。",
       "content_refs": [
+        "CNT-007",
         "CNT-008",
         "CNT-010"
       ],
@@ -300,9 +308,14 @@
         "code_id": "D12.FOC.PROTAGONIST_EXPERIENCER",
         "parent_id": "D12.FOC"
       },
-      "secondary": [],
-      "rationale": "焦点人物は投稿者本人であり、他乗客は投稿者が目撃する先行被害者である。",
-      "manifestation": "他乗客への危害を目撃した後、投稿者自身へ順番が近づく。",
+      "secondary": [
+        {
+          "code_id": "D12.OTH.VICTIM_TARGET",
+          "parent_id": "D12.OTH"
+        }
+      ],
+      "rationale": "D13 Primaryの標的化は、順番上次となった投稿者へ『挽肉』が告げられ小人と機械様のものが接近するという直接作用であるため、投稿者をPrimaryとする。先行乗客はD13 Secondaryの身体攻撃を直接受ける別の対象としてSecondaryに置く。",
+      "manifestation": "投稿者は次の処理対象として標的化され、先行する夢内乗客は実際の身体攻撃を受ける。",
       "content_refs": [
         "CNT-003"
       ],
@@ -316,10 +329,18 @@
     {
       "dimension_id": "D13",
       "status": "I",
-      "primary": null,
-      "secondary": [],
-      "rationale": "他乗客には身体処理が実現するが、投稿者本人は処理される前に覚醒する。D12対象の投稿者に対する作用として既存PHYSICAL_ATTACK等を付けると、実現した他乗客への危害と未実現の投稿者脅威を混同する。",
-      "manifestation": "投稿者は処理順序へ組み込まれ、危害が直前まで迫るが、実害成立前に覚醒する。",
+      "primary": {
+        "code_id": "D13.REL.TARGETING",
+        "parent_id": "D13.REL"
+      },
+      "secondary": [
+        {
+          "code_id": "D13.PHY.PHYSICAL_ATTACK",
+          "parent_id": "D13.PHY"
+        }
+      ],
+      "rationale": "主作用は、後方から進む処理順序の次の対象として投稿者が選ばれ、『挽肉』の放送後に小人と機械様のものが接近する標的化である。投稿者への身体処理は覚醒前に完遂しないため、PrimaryをPHYSICAL_ATTACKとはしない。他方、小人が先行乗客へ実際に身体危害を加える点は、別対象への独立作用としてSecondaryに保持する。",
+      "manifestation": "投稿者は次の処理対象として標的化され、小人と機械様のものが接近する。先行乗客には小人による身体攻撃が実行される。",
       "content_refs": [
         "CNT-003",
         "CNT-004"
@@ -329,8 +350,7 @@
         "EVD-004"
       ],
       "taxonomy_gap": {
-        "present": true,
-        "description": "投稿者本人への『危害が迫る／処理対象として順番が来る』を、実害成立前の脅威として表すcodeが現taxonomyにない。"
+        "present": false
       }
     },
     {
@@ -406,10 +426,13 @@
     {
       "dimension_id": "D17",
       "status": "I",
-      "primary": null,
+      "primary": {
+        "code_id": "D17.AVO.FLEE_ESCAPE",
+        "parent_id": "D17.AVO"
+      },
       "secondary": [],
-      "rationale": "投稿者は乗車時から『恐ければ目を覚ませばよい』と考え、危害接近時に意図的覚醒で二度離脱する。物理的逃走ではなく睡眠状態から抜ける制御なので、既存FLEE系へ近似しない。",
-      "manifestation": "事前に想定した制御手段として意図的覚醒を用い、夢世界から離脱する。",
+      "rationale": "投稿者は乗車時から『恐ければ目を覚ませばよい』と考え、危害接近時に意図的覚醒で二度、夢内の危険場面から離脱する。この覚醒は物語内で実行されたescapeとしてFLEE_ESCAPEに分類する。ただし、投稿者の自己認識と二度の叙述に基づくため、誰にでも再現可能で確実な回避法とは一般化しない。",
+      "manifestation": "事前に想定した意図的覚醒を用い、初回と再開後の双方で夢内の危害場面から離脱する。",
       "content_refs": [
         "CNT-002",
         "CNT-004",
@@ -421,8 +444,7 @@
         "EVD-005"
       ],
       "taxonomy_gap": {
-        "present": true,
-        "description": "夢から意図的に覚醒して離脱する回避・制御方式を表すcodeが現taxonomyにない。"
+        "present": false
       }
     },
     {

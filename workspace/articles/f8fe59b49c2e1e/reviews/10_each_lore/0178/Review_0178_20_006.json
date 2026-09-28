@@ -1,0 +1,131 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryから復元できる夢、意図的乗車、順次危害、覚醒、反復、未確定終端、公開Web流通、不明な情報保持者、低い現実アンカーにより主要分析は維持される。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "警告後の乗車→放送順の標的化・先行乗客への攻撃→投稿者の覚醒離脱と、4年後の再開という因果モデルはScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "D04を含む各分析根拠はCNT-001〜013及びVersion Scopeで表現済みであり、Evidence-onlyのdetailによる正当化は認めない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12の投稿者への作用、D13の投稿者への標的化、D15の未確定終端は、未遂の身体処理を既遂傷害・死亡と誤読しない因果列になっている。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみでありL3を選択していない。Scope内に独立X Evidenceはなく、後代の読者側派生も除外されている。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19はD19.NET.OPEN_FORUM_WEBに留め、公開掲示板であることを全国的流通の証拠として扱っていない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "D20はUであり、原因主体・真相保持者が書かれないことをD20.UNK.NO_ONE_KNOWSへ誤変換していない。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "資料・掲示板の実在と、物語内の現実アンカーを分離し、一般的な駅・自室・学校背景のみを低いアンカーとしている。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D17は、二度実行された意図的覚醒による危害場面からの離脱を既存のD17.AVO.FLEE_ESCAPEへ分類可能であるにもかかわらず、codeなしのtaxonomy gapとしている。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "匿名掲示板の一人称怪談というContentに対し、macro_category=ネット怪談、entry_type=物語・伝説は整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "保存転載・後代整理に依存する内容はIとし、体験・覚醒後音声・死亡予想を外部事実として確定していない。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各Dimensionのmanifestationとrationaleは対応するScoped Contentを参照しており、Contentにない事実を分析根拠へ導入していない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D01及びD20のU、D02〜D19及びD21の保存転載・後代整理に対応したI、死亡を未確認としてD15の不確定終端へ置く判断は支持強度と整合する。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "夢内からの意図的覚醒は物理的移動ではないが、D17の中心質問である回避・制御としては危害からのescapeであり、既存のFLEE_ESCAPEを不適切に排除している。",
+      "status": "FINDING"
+    },
+    "version_scope": {
+      "notes": "2000年一人称反復夢型をScopeとし、2003年読者側派生をD11〜D18へ混入させていない。D04の流通変容のHistory記述はScope外派生を明示しており、Scope侵害ではない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0178",
+  "findings": [
+    {
+      "category": "taxonomy_gap",
+      "content_refs": [
+        "CNT-002",
+        "CNT-004",
+        "CNT-006"
+      ],
+      "dimension_refs": [
+        "D17"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-004",
+        "EVD-005"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D17のprimaryをD17.AVO.FLEE_ESCAPEへ変更し、taxonomy_gap.presentをfalseにする。rationaleには、覚醒が一般化可能な確実な方法ではなく、この投稿者が二度実行した物語内の離脱行為であることを明記する。",
+      "impact": "D17が未コードかつtaxonomy gapとなるため、回避可能性の集計とtaxonomy gapの分析を誤らせる。",
+      "rationale": "投稿者は危害への接近時、初回・再開後の双方で意図的に覚醒し、夢内の脅威場面から離脱している。D17.AVO.FLEE_ESCAPEは回避・制御としての逃走／脱出を表す既存codeであり、物理的な移動に限定する根拠はContentにもtaxonomy catalogにもない。",
+      "severity": "Moderate",
+      "summary": "D17は既存のFLEE_ESCAPEを除外して不必要なtaxonomy gapを立てている。"
+    }
+  ],
+  "review_notes": "Content→Analysisは概ね妥当だが、D17の既存回避codeを不適切に排除したため修正が必要である。",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-010"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D20"
+    ],
+    "model": "投稿者は夢を自覚した状態で危険を告げる猿様の乗り物へ自ら乗り、放送に沿う後方乗客からの危害系列で次の標的となる。危害の実行前に覚醒して離脱するが、4年後に同じ系列の途中から再開し、二度目の離脱時には将来の危険を示す警告を聞く。原因主体・反復機構・最終帰結は確定しない。回避は、投稿者が意図的に覚醒して脅威場面から逃れることである。",
+    "notes": "モデルは現行分析を概ね支持するが、D17のtaxonomy gap判断のみ既存分類との整合を欠く。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_20_analysis.json",
+    "blob_sha": "57204f53cabacd84b061d88fc313ab92ef250283",
+    "commit_sha": "fb38083eea09c494f773dd4689b10e5ba1c5cda5",
+    "reviewed_at": "2026-09-28T13:29:28Z"
+  },
+  "verdict": "Moderate"
+}

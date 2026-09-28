@@ -1,0 +1,208 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-001〜013はいずれも対応するEvidenceの範囲内に留まり、未確認の超常的事実へ変換していない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "抽象的な危害記述だけでなく、無人駅、猿様乗り物、放送順序、覚醒及び再開位置が具体的に再構成可能である。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-001〜011を母集団として確認した結果、Scopeの再構成、分析、異伝境界及び不確実性に必要なsalient meaningはContent unit、variant又はuncertaintyとして保持されている。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12についてContent層の必要な構造がsummaryに保存されている。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summary.narrativeとstructureのみから、具体的な乗車・順次危害・二度の覚醒・4年後の再開・終端警告・派生除外を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "体験の事実性、原投稿、因果主体、終端音声、将来死亡の不確実性がContent層とsummaryに維持されている。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001をScope内、読者側類似夢をVAR-002として後代派生・Scope外に区別している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0178",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryだけでD07〜D18の夢・乗車・標的化・未確定終端・反復・覚醒離脱・L1構造、D19の公開Web流通、D20の不明、D21の低い現実アンカー及びVAR-002除外を再構成できる。",
+      "status": "PASS"
+    },
+    "blind_decode": "投稿者は、自分が夢を見ていると分かった状態で薄暗い無人駅にいる。電車へ乗れば恐ろしい目に遭うという放送を聞くが、怖くなれば目覚めればよいと考えて、遊園地の記憶に結び付く猿様の小型電車へ自ら乗る。放送に応じて後方の乗客から順に身体的な危害が生じ、投稿者の番には「挽肉」と告げられて小人と機械様のものが近付く。投稿者は目覚めて逃れる。4年後、夢は先行乗客への危害の続きから再開し、投稿者は再び覚醒して離脱するが、次回は最後だという声を自室で聞いたと語る。以後の再発や死亡は確認されない。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "夢を自覚した投稿者が無人駅にいる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "自覚夢内の薄暗い無人駅という開始状態。"
+      },
+      {
+        "blind_reconstruction": "危険を聞いたうえで覚醒可能性を頼みに乗車する。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "危険警告を理解した上での意図的乗車。"
+      },
+      {
+        "blind_reconstruction": "後方の乗客から順に危害が起こり、投稿者に小人と機械様のものが近付く。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "放送順に後方から進む先行乗客への危害と投稿者への接近。"
+      },
+      {
+        "blind_reconstruction": "投稿者は危害直前に目覚めて逃れる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "初回の覚醒離脱。"
+      },
+      {
+        "blind_reconstruction": "4年後に危害系列の途中から再開する。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "4年後、前回場面から夢が再開する。"
+      },
+      {
+        "blind_reconstruction": "投稿者は二度目も覚醒して離脱する。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "再開後の再覚醒による離脱。"
+      },
+      {
+        "blind_reconstruction": "次回は最後という声を自室で聞いたと語る。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "終端警告と、覚醒後に現実で聞いたという自己申告。"
+      },
+      {
+        "blind_reconstruction": "夢と警告の究極原因は不明である。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "原因主体・反復理由・放送及び警告主体の不明。"
+      },
+      {
+        "blind_reconstruction": "読者側の夢は初期型と別の後代派生として扱われる。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "2003年の読者側類似夢は後代派生である。"
+      },
+      {
+        "blind_reconstruction": "死亡は確認済みではなく、再発も未確認である。",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "次回死亡は未実現の投稿者予想に過ぎない。"
+      },
+      {
+        "blind_reconstruction": "匿名掲示板への一人称投稿が保存転載で確認される。",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "2000年型は2ちゃんねる投稿として整理され、現存本文は保存転載である。"
+      },
+      {
+        "blind_reconstruction": "猿様の乗り物は投稿者の過去の遊園地記憶と結び付けられる。",
+        "content_ref": "CNT-012",
+        "difference": "NONE",
+        "salient_meaning": "遊園地の記憶由来という限定的な投稿者自己解釈。"
+      },
+      {
+        "blind_reconstruction": "初回後に友人へ話したが、危害の共有や読者感染は成立しない。",
+        "content_ref": "CNT-013",
+        "difference": "NONE",
+        "salient_meaning": "初回覚醒翌日の友人への伝達と非深刻な反応。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "投稿者、先行乗客、小人、正体不明の放送主体が再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "投稿者が体験者、乗客が先行被害者、小人が直接行為者、放送主体は不明として記述される。"
+      },
+      {
+        "blind": "先行乗客と投稿者が危害・標的化の対象として再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "先行乗客への実行済み危害と、投稿者への接近・標的化が区別される。"
+      },
+      {
+        "blind": "夢内で危険を告げられた列車へ自ら乗ることが危害系列への入口である。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "睡眠・夢状態と、警告後の意図的乗車が記述される。"
+      },
+      {
+        "blind": "夢・放送・警告の究極的原因は不明である。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "原因主体、反復機構、警告主体が不明として保存される。"
+      },
+      {
+        "blind": "放送順に後方から危害が進行し、投稿者の番に小人と機械様のものが接近する。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "順次危害、投稿者への「挽肉」告知及び接近が具体的に記述される。"
+      },
+      {
+        "blind": "無人駅、乗車、先行被害、投稿者への接近、覚醒、再開、再覚醒、警告という遷移を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "state_transitionが同じ順序を保持する。"
+      },
+      {
+        "blind": "一度離脱した後、4年を隔てて同じ危害系列の途中から再開する。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "4年後に前回の場面から再開した反復が保存される。"
+      },
+      {
+        "blind": "危険の事前放送、乗車、放送順の進行、覚醒可能性という物語内規則を再構成できる。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "rules_and_taboosが同じ構造を記述する。"
+      },
+      {
+        "blind": "投稿者は夢だと認識して意図的に覚醒し、二度離脱する。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "avoidance_controlが二度の覚醒離脱を保持する。"
+      },
+      {
+        "blind": "二度目の離脱後、次回は最後という声を聞いたと投稿者が語る。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "覚醒後音声の自己申告と未再発がterminal_stateに保持される。"
+      },
+      {
+        "blind": "実夢か創作か、原因、反復、警告の正体、再発・死亡は未確定である。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "uncertaintiesが各不確実性を明示する。"
+      },
+      {
+        "blind": "読者が類似夢を見る型は、この一人称夢体験とは別の後代派生として除外される。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001とVAR-002の境界が明示される。"
+      }
+    ],
+    "reference_story": "2000年型は、匿名掲示板に一人称の夢体験として投稿された保存転載で確認できる。投稿者は明晰な夢の中で無人駅に立ち、危険を告げる放送にもかかわらず、覚醒できると考えて猿様の乗り物へ意図的に乗車する。放送に沿って後方の乗客から順に小人による異なる身体危害が起き、投稿者には「挽肉」の番が迫るが、覚醒して離脱する。翌日には友人へ話すが、4年後に夢は前回の場面から再開し、再び覚醒を試みる。二度目の離脱時には次回は最後という警告を聞き、投稿者はこれを覚醒後の現実で聞いたと主張する。ただし原因主体、反復機構、音声の主体、実夢か創作かは不明であり、死亡・再発も未確認である。2003年の読者側類似夢は後代派生であり、2000年型のScopeには含めない。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Evidence→Contentの抽出母集団及びsummary.coverage_refsの双方に、修正を要する意味損失・競合は認めない。",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0178_saruyume/0178_10_contents.json",
+    "blob_sha": "328e7f3b6d8c0f7f0bde5e792830a0df2e48a9d7",
+    "commit_sha": "d1afdfeca8f2bea8bed183a5772edd805f98bb6c",
+    "reviewed_at": "2026-09-28T13:29:28Z"
+  },
+  "verdict": "Pass"
+}
