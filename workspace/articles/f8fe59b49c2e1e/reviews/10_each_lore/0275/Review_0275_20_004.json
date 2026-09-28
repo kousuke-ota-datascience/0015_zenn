@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0275",
+  "artifact": "20",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0275_bandaisan_tenaga_ashinaga/0275_20_analysis.json",
+    "commit_sha": "d912e070c6bbb7d2ee6f4ef31cf1fe03770b4391",
+    "blob_sha": "adaff94d813b9813cecee2e8286eaba3d2fc3881",
+    "reviewed_at": "2026-09-28T22:38:16Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "日文研DBカードが要約し1992年『あしなか』227号を基礎文献として示す主要形へ限定しており、収録以前の異伝や成立年代をScopeへ推測導入していない。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D02/D03=雑誌/I、D04=U、環境加害→封印→祭祀のD07〜D18、D19=地域伝承/I、D20=U、D21=A2/IはScoped Contentとcodebook定義に整合する。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "環境異常、妖怪主体、環境操作、物損、封印、地域伝承、具体地理は現行taxonomyで表現可能。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "手長・足長→雲・荒天→会津の環境/農作物被害→弘法大師による小箱封印→磐梯明神として祭祀という因果列がScoped Contentと整合。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "D02/D03の1992年『あしなか』雑誌判定はCNT-005へ、主要因果はCNT-001〜004へ追跡可能。前回のEvidence-only媒体情報へのbypassは解消済み。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Scoped Contentとsummaryの双方から、生成時期不明、雑誌媒体/I、環境加害、封印、祭祀終端、地域流通、D20不明、具体地理アンカーという主要判定を再構成できる。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "canonical Sourceがindirect_derivativeで原掲載本文未確認であるため、支持される主要次元を原則I上限とし、生成・変容・情報保持が不足するD01/D04/D20はUとしている。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=自然環境→D13=環境・物体操作→D15=農作物等の財産損壊がScoped Contentの直接因果列と一致。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18=L1のみであり、受容者層・社会現実層の独立X Evidenceを推測追加していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "福島県・磐梯山・会津の地域伝承としてLOCAL_TRADITION/Iに留め、公開DB・雑誌掲載から全国的大衆流通へ拡張していない。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "地域伝承の知識主体を特権情報保持者へ変換せず、Scoped Contentに偏在知識構造がないためUとしている。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "A2は資料の実在性ではなく、Scoped Contentが磐梯山・会津という具体的実在地へ依存することに基づく。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "indirect_derivative単一Sourceという上限を反映し、前回Direct(D)だった主要DimensionをIへ保守化済み。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "macro_category『古伝承・民俗』、entry_type『退治・封印型地域伝承』は、地域怪物の環境加害、弘法大師介入、小箱封印、祭祀終端というScoped Contentと整合する。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "媒体・1992年attestationを含むAnalysisの実質意味はCNT-005へ伝播済みで、Source/Evidence-only detailをContentを飛ばして正当化していない。"
+    }
+  },
+  "findings": [],
+  "sensemaking_reconstruction": {
+    "model": "磐梯山の手長・足長が雲を集めて会津に暗天・洪水・嵐を生じさせ、農作物を荒らす環境加害主体として語られる。弘法大師が怪物を小箱へ誘い込み封じることで加害を停止させ、封じられた存在は磐梯明神として祭祀対象へ転じる。確認できる基礎文献媒体は1992年『あしなか』227号とされるが原本文は未確認で、成立年代・変容史は確定しない。地域伝承としての地理アンカーは明確だが、特権情報保持者は確認できない。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [],
+    "status": "PASS",
+    "notes": "意味論的根拠はcurrent Scoped Contentに限定。"
+  },
+  "review_notes": "Review 20はcurrent Scoped Contentのみを意味論的根拠として独立再評価。Review 003のconfidence ceiling、D04、D20、content-layer bypass Findingの解消を確認。",
+  "verdict": "Pass"
+}
