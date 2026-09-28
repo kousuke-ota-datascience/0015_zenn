@@ -1,0 +1,103 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryと完全性監査済みScoped Contentの間で、主要なD07–D21及びScopeの判定可能性は実質的に変化しない。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "儀式実行→異常知覚・霊的解釈→塩水等による終了操作という因果モデルはContentに支持される。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisの意味論的根拠はCNT-001–011で表現されるScope内Contentに限定されている。Evidence参照は支持強度の補助に留まる。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12の実践者→D13の顕現・知覚→D15の知覚攪乱は、Contentの報告構造と一貫する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみであり、匿名投稿の実況を独立した社会現実効果としてL3へ誤読していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "公開掲示板であることを全国的大衆流通と同一視せず、D19.NET.OPEN_FORUM_WEBに留めている。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者が確定しないことをNO_ONE_KNOWSへ変換せずUとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "家庭内の通常背景を低い現実アンカーとして扱い、資料URLや現実の掲示板を伝承内アンカーと混同していない。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D01–D21はScoped Contentの意味とcoding rulesの区別に整合する。特にD01のU、D14のMIX、D20のUは不確実性を適切に保持する。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "『全国型怪異・儀式』および『実行儀式型ネットロア』は、公開掲示板で共同形成される実行儀式としてのScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "超常原因、実践、終端安全の客観的実在を断定せず、Contentの自己申告性を超える確信を付与していない。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各dimensionのmanifestationとrationaleは対応Contentを参照し、Contentにない意味を主要根拠として導入していない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "保存再掲・匿名自己申告という支持強度を踏まえ、コード値をDではなく主にIとし、確定不能なD01・D20をUとしている。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "Scoped Contentの意味形成、儀式、顕現、終了操作、流通範囲を記述する既存コードが存在し、gapは認めない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "Scopeは初期スレッド内の名称、手順、実況、補完、同日追加説明に限定され、後年派生を混入させない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0198",
+  "findings": [],
+  "review_notes": "Content→Analysisは、Scope内Contentのみに基づく意味形成・因果モデルとして整合し、必須critical checksに不適合はない。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-002",
+      "CNT-003",
+      "CNT-004",
+      "CNT-005",
+      "CNT-006",
+      "CNT-009",
+      "CNT-010",
+      "CNT-011"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D17"
+    ],
+    "model": "実践者がぬいぐるみ、身体由来の爪、塩水、刃物を用いる所定の儀式を行い、人形を鬼役にして隠れる。以後に報告されるテレビ音の停止、物音、声、気配、人影・子供の姿といった説明困難な知覚・出来事が意味形成対象となる。これらの知覚異常を契機に、投稿者・閲覧者は霊または別の存在という主体を帰属し、かくれんぼ・交霊型の怪異として類型化する。Contentは存在の客観的実在を確定しないが、伝承内では実践者に顕現が知覚され、塩水と終了宣言・人形処理による儀式的閉鎖が提示される。",
+    "notes": "独立再構成はcanonicalのD07–D10および因果列と整合する。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_20_analysis.json",
+    "blob_sha": "006540732393bf1d259fe5c9504ca93ea25199c1",
+    "commit_sha": "cc5ce36e64261471f17c994af9267cf278b0c310",
+    "reviewed_at": "2026-09-28T23:15:32Z"
+  },
+  "verdict": "Pass"
+}

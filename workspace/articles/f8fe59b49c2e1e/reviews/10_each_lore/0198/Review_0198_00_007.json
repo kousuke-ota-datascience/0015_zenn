@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2007年4月の保存ログ上の確認とactual originを明確に分離している。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "各Evidenceはparaphraseとして明示され、投稿者自己申告と客観的検証を混同していない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-001を原2ちゃんねる投稿そのものではないdirect derivative、SRC-002をindirect derivativeとする扱いは妥当。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001の初期名称、具体手順、実況報告、終了法、伝聞連鎖、追加説明および留保はEvidence層に保持されている。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001は保存再掲、SRC-002は後代まとめとして資料種別・限界が適切に区別されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "保存再掲で確認できる名称、手順、実況、補完、伝聞由来、別称・地域主張がEvidenceへ対応している。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "超常現象、実践行動、手順の正確性、2007年以前の流通・起源についての不確実性が保持されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0198",
+  "findings": [],
+  "review_notes": "Source→Evidence層は、保存再掲の証拠能力を超えて原投稿・超常現象・実際の起源を断定していない。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_00_sources.json",
+    "blob_sha": "4d6257d8440a9e4d8e82b229e69e78395a369276",
+    "commit_sha": "35b0f323d47346acb007fe6dbbaeb9e60d73c295",
+    "reviewed_at": "2026-09-28T23:15:32Z"
+  },
+  "verdict": "Pass"
+}

@@ -1,0 +1,196 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "各Content Unitは対応Evidenceにより支持され、自己申告・未検証性も必要箇所で明示される。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "具体的な物、手順、実況、対処、終端が抽象化されず再構成可能。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "EVD-001–011のScope内で、伝承再構成・不確実性・分析に必要なsalient meaningはContent、summary、variant又はuncertaintyとして保持されている。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01–P12で必要な人物、対象、発動、原因説明、機構、時系列、規則、対処、終端、不確実性、Scope境界を確認した。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summary.narrativeとstructureから、儀式準備、開始、実況中の異変報告、塩水を用いる終了操作、終了後知覚報告を具体的に再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "怪異の実在、投稿者の現実行動、起源、地域流通、正確な手順に関する不確実性がContentとsummaryに保存されている。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001を初期スレッド内の形成層に限定し、後年改訂・動画派生を除外している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0198",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryのみから、儀式的発動、知覚異常、霊的主体帰属、顕現、逐次エピソード、儀式的終了、公開掲示板圏という主要分析構造を再構成できる。",
+      "status": "PASS"
+    },
+    "blind_decode": "一人で行うかくれんぼ型の儀式として、手足のあるぬいぐるみに米と自分の爪を詰め、赤い糸で縫い、深夜に名付けた人形を浴槽へ置く。消灯後に人形を鬼にして実行者が家内へ隠れる。実況参加者は塩水を台所へ忘れたまま隠れ、テレビ音の停止、物音、声、気配などを報告する。手順は実況中に補完され、塩水を口に含んで人形に用い、勝利を宣言して終える。塩水を忘れた者には音で注意をそらして取りに行く対処が示され、参加者は無事を報告するが、終了時にも子供の姿を見たと述べる。提示者は伝聞由来で詳細不明とし、霊的説明や地域流通主張は未検証である。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "初期層が4月18日の名称提示を含むことを復元できる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "保存ログ上で2007年4月18日に名称が既出であること。"
+      },
+      {
+        "blind_reconstruction": "具体的な材料と準備手順を復元できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "人形、米、爪、赤糸、塩水、刃物を用意する準備。"
+      },
+      {
+        "blind_reconstruction": "開始から潜伏までの順序を復元できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "人形を鬼役にし、消灯後に家内へ隠れる開始行為。"
+      },
+      {
+        "blind_reconstruction": "終了法が固定済み手順でなく実況中に補完されたことを含め復元できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "塩水、探索、終了宣言からなる実況中補完の終了法。"
+      },
+      {
+        "blind_reconstruction": "実況参加者と塩水忘れ、それへの対処相談を復元できる。",
+        "content_ref": "CNT-005",
+        "difference": "NONE",
+        "salient_meaning": "別投稿者が実践を名乗り、塩水忘れを含む状況を逐次報告したこと。"
+      },
+      {
+        "blind_reconstruction": "知覚・音響の異変と未確定な霊的説明を復元できる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "異変報告、霊的解釈、釣り疑義の併存。"
+      },
+      {
+        "blind_reconstruction": "提示者が伝聞由来で詳細不明であることを復元できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "提示者が伝聞由来・詳細不明とし、情報連鎖があること。"
+      },
+      {
+        "blind_reconstruction": "別称・地域主張等が未検証の追加説明として存在することを復元できる。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "別称、テレビの霊的説明、同居注意、地域既知主張。"
+      },
+      {
+        "blind_reconstruction": "家内で消灯して静かに隠れる規則を復元できる。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "外出禁止、消灯、静粛という注意事項。"
+      },
+      {
+        "blind_reconstruction": "終了後の人形処理を復元できる。",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "人形を捨て最終的に燃える形にする後処理。"
+      },
+      {
+        "blind_reconstruction": "例外対処、無事報告、終了時の子供の姿の報告を復元できる。",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "音で注意をそらす追加対処、無事報告、子供の姿の終端知覚。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "手順提示者、実践を名乗る参加者、応答する閲覧者がいる。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "同様の複数役割がContentに明示される。"
+      },
+      {
+        "blind": "主たる作用対象は儀式を実行し隠れる参加者である。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "実践者が異変を報告する。"
+      },
+      {
+        "blind": "所定の人形儀式を実行して隠れることが因果系への入口である。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "具体手順と開始行為が記載される。"
+      },
+      {
+        "blind": "異変は霊的・別存在として説明されるが確定しない。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "霊的解釈と疑義が併存する。"
+      },
+      {
+        "blind": "実践後に音、声、気配、人影等が知覚される。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "同様の異変報告がある。"
+      },
+      {
+        "blind": "準備、開始、潜伏、異変、終了操作へ移行する。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "単一実況内の段階進行として記載される。"
+      },
+      {
+        "blind": "実況中に手順漏れが発覚し、終了法・例外対処が後から足される。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "ライブ補完と追加対処が明示される。"
+      },
+      {
+        "blind": "消灯、外出しない、静かにする、塩水を使う等の規則がある。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "規則と注意事項が保持される。"
+      },
+      {
+        "blind": "塩水、終了宣言、人形処理で儀式を閉じ、例外時は音で注意をそらす。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "同じ制御手順が記載される。"
+      },
+      {
+        "blind": "参加者は無事を報告する一方、終端にも子供の姿を見たと述べる。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "自己申告として同じ終端が記載される。"
+      },
+      {
+        "blind": "怪異、実践、起源、地域流通、正確な手順はいずれも独立確認されない。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "不確実性が明示される。"
+      },
+      {
+        "blind": "対象は2007年4月の初期スレッド形成層で、後年派生は含まれない。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001とScope境界が同じ。"
+      }
+    ],
+    "reference_story": "2007年4月18～21日の保存再掲における初期形成層では、名称提示後、投稿者がぬいぐるみ、米、自分の爪、赤糸、刃物、塩水を用いる一人かくれんぼの手順を提示する。別投稿者が実践を名乗り異変を実況し、塩水の携行漏れを契機に終了法と例外対処がライブに補完される。霊的解釈と釣りへの疑義は併存し、実践・怪異・安全はいずれも独立確認されない。提示者は友人関係からの伝聞で詳細不明と述べ、別投稿者の別称・地域既知主張も未裏付けである。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Evidence→Contentの母集団完全性、summaryのcoverage保存性、具体的物語再構成性はいずれも確認できた。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0198_hitori_kakurenbo/0198_10_contents.json",
+    "blob_sha": "ca0a383b81a873efca887e29e51aff2754b2eef6",
+    "commit_sha": "cce1c342a5f565de50ba7f522478358ed727e08c",
+    "reviewed_at": "2026-09-28T23:15:32Z"
+  },
+  "verdict": "Pass"
+}
