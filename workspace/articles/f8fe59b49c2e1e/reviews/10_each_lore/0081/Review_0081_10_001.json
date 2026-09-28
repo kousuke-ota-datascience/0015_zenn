@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0081",
+  "artifact": "10",
+  "review_seq": 1,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0081_pierce_white_thread/0081_10_contents.json",
+    "commit_sha": "59f67b19c3f26de2ad54b0a36128019888679c31",
+    "blob_sha": "c2dd5fc004fe299a2216a4768778255722b6793f",
+    "reviewed_at": "2026-09-28T15:53:10Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "CNT-001〜007は対応EVDの意味と認識論的留保を保持する。早期共有核へ視神経同定・安全ピン・失明以外の帰結を遡及していない。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryのみから『ピアス穴→白い糸状物→引く→失明』の具体的因果列、早期共有核の未確定事項、後代variant、外部医学説明との層境界を再構成できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。主体、対象、発動、作用、終端、不確実性、variant境界を保持する。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "VAR-001を1994/1998年で共通確認できる早期安定核とし、2021年解説の安全ピン・眼球運動・顔面神経麻痺等をVAR-002として分離している。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "絶対的初出、1994年以前の流通、白い糸状物の解剖学的正体、後代variantの初出・頻度・地域分布を閉じていない。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "coverage_refs 4件のsalient meaningはBlind Decodeから具体的に再構成できる。summaryにはcoverage外の後代variantと外部医学説明も明示され、伝承層との混同はない。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "EVD-001〜006を母集団として監査し、早期共有核はCNT-001〜004、後代variantはCNT-005/006、外部医学説明はCNT-007へ反映済み。伝承再構成・variant識別・不確実性・後続Analysisを変えるsalient omissionは認めない。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "ピアス穴を開ける、または開いた穴から白い糸状物が現れ、それを引っ張ると失明するという身体俗信。1994年刊の現代伝説集の出版社内容情報と1998年の静岡県民俗採録要約でこの因果核が確認されるが、起源・初出・最古の対人流通媒体は確定しない。早期共有核では白い糸状物の解剖学的正体、人物属性、具体的ピアシング方法は固定しない。2021年解説にみられる安全ピンによる自己ピアシング、眼球の動き、顔面神経麻痺は後代variantとして分離される。現実の医学説明は伝承内因果とは別レイヤーである。",
+    "reference_story": "current Contentは、1994年出版社内容情報と1998年静岡県採録要約に共通する『ピアス穴／白い糸状物／引く／失明』をVAR-001として保持し、絶対的初出とはしない。2021年の安全ピン型と失明以外の結果はVAR-002へ分離し、医学的外部説明も伝承内因果から分ける。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "ピアス穴を開ける／持つ人物。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "白い糸状物を引いた人物の視覚・身体。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "ピアス穴から白い糸状物が現れ、それを引く。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "因果源の存在論は未確定。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "白い糸状物を引く行為と失明が因果的に結び付けられる。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "ピアス穴→白い糸状物→引く→失明。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "一続きの段階的出来事で、特定の待ち時間・反復周期はない。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "『白い糸状物を引くと失明する』という条件規則。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "明示的な回避・制御手順は初期共有核から確定しない。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "失明・視覚喪失。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "成立起源・最古流通媒体・白い糸状物の解剖学的正体は未確定。",
+        "reference": "一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "1994/1998年の共有核と、2021年に確認される安全ピン・眼球運動・顔面神経麻痺等の後代変異を分離。",
+        "reference": "一致。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "FINDING",
+      "notes": "D07〜D21の中心的な身体俗信モデルはsummaryから再構成できるが、summaryが1994年刊行書籍への収録を明示するため、D02/D03をともにUとする現行Analysisは独立再構成と一致しない。"
+    },
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "ピアス穴を開ける、または開いた穴から白い糸状物が現れる。",
+        "blind_reconstruction": "ピアス穴から白い糸状物が現れる。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "当事者が白い糸状物を引っ張る。",
+        "blind_reconstruction": "白い糸状物を引く。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "引いた結果、失明・視覚喪失に至る。",
+        "blind_reconstruction": "白い糸を引くと失明する。",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "1994年公刊と1998年採録で因果核を確認するが、生成・初出とはしない。",
+        "blind_reconstruction": "1994年刊行層と1998年採録で共有核が確認されるが、起源は未確定。",
+        "difference": "NONE"
+      }
+    ],
+    "verdict": "PASS"
+  },
+  "findings": [],
+  "review_notes": "Blind Decodeはcurrent summary.narrative + summary.structureのみから固定した。Golden Reference 0180は意味保存粒度の校正にのみ使用。docs/legacyは参照していない。",
+  "verdict": "Pass"
+}
