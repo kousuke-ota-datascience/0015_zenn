@@ -1,0 +1,126 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryから再構成できる初期Scopeの構造に照らして、D07〜D21の主要な判断は維持される。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "理解らしき状態と後続する異変の物語内配置を、現実医学的因果や直接精神操作の証明と混同していない。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisが使用する初期型の意味論的事実はすべてScoped Contentに表現され、Evidence固有の2003年詳細をScope内判断へ再導入していない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "兄→認知に結び付く危害→認知領域の障害、という因果列はScoped Contentに整合する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L1のみであり、L3を選ぶための独立X Evidenceを主張していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19は公開掲示板Webであり、全国的流通とはコードしていない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者の不在をNO_ONE_KNOWSにせずUとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "資料の実在性ではなく、Scope内に特定可能な現実アンカーがないことからA0としている。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D09のFORBIDDEN_INQUIRYは支持されるが、DELIBERATE_NONRESOLUTIONをsecondaryに置くための、複数説を意図的に併置して結論を閉じない提示戦略はScoped Contentにない。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "匿名掲示板で流通する怪談の初期核として、ネット怪談／物語・伝説はContentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "後代再録・FOAF・原ページ未固定という証拠上限を、I/Uと2003年型のScope除外に反映している。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各Dimensionの根拠はScope内のCNT-001、002、003、013に接続している。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "再録・伝聞に由来するコードをIに留め、生成時期、因果源、回避規則、情報保持者をUにした判断は支持強度に整合する。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "既存taxonomyで必要な概念を表せており、gapの提示は不要である。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "最古の直接内容確認形である2001年再録の安定核にScopeを限定し、構造を追加変更する2003年混成型を除外する判断は規則に整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D09"
+      ],
+      "evidence_refs": [
+        "EVD-002"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D09のsecondaryからD09.UNK.DELIBERATE_NONRESOLUTIONを削除し、FORBIDDEN_INQUIRYのみで禁忌化と未開示を表現する。",
+      "impact": "意味付与操作に、存在しないメタ的な提示戦略が加わる。",
+      "rationale": "Scoped Contentは正体を開示せず『分からないほうがいい』とする禁忌化を示すためFORBIDDEN_INQUIRYを支持する。しかし、複数の説明を意図的に併置し、結論を閉じないこと自体を提示戦略にしたというEvidenceはない。coding rulesは単に未解決である場合にDELIBERATE_NONRESOLUTIONを用いないよう定める。",
+      "severity": "Moderate",
+      "summary": "D09 secondaryのDELIBERATE_NONRESOLUTIONはScoped Contentに支持されない。"
+    }
+  ],
+  "review_notes": "Scope設定、因果列、D18〜D21のcritical checks、確信度統制は妥当である。D09のsecondaryのみが操作規則の明示的な除外条件に抵触する。",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-013"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-011"
+    ],
+    "model": "Scope内では、遠方に見える白い人型様の対象の異常な動作が知覚上の問題を開始させる。対象は正体不明のまま、兄が何かを理解したように見え、その知識化を『分からないほうがいい』という禁忌的発話が止める。理解らしき状態の後に兄の認知的異変が伝えられるため、物語は未知の対象を解明するより、知ることの危険として意味づける。ただし因果源の存在論、詳細な視認、現実医学的因果、再現可能な回避手順は確定しない。",
+    "notes": "D09のprimaryは上記モデルに整合するが、意図的な非解決提示をsecondaryとして追加する根拠はない。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "587b1e1be196c76bc49492824df9963da11afc87",
+    "commit_sha": "fdcb5c586e11f4bc611c22259daa0a41181ad10c",
+    "reviewed_at": "2026-09-29T14:31:24Z"
+  },
+  "verdict": "Moderate"
+}

@@ -1,0 +1,58 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2000年候補を確定起源にせず、後代解説が指す未固定の早期記録候補として保持している。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "Evidenceは引用ではなくparaphraseとして明示され、本文の不確実性も概ね分離されている。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-002のrelation_to_primary=direct_derivativeおよびarchive_infoは、確認可能な転載ページ以上の来歴を主張している。",
+      "status": "FINDING"
+    },
+    "salient_evidence_completeness": {
+      "notes": "列挙された三資料から、初期核、2003年混成宣言、追加要素、禁忌、終端、早期記録候補に関するsalient informationはEvidence化されている。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-002のURLは後代ブログ上の再掲ページであり、本文の転載テキストは確認できるが、2003年原投稿を保存した記録であることや直接的な保存連鎖はページ自体から検証できない。",
+      "status": "FINDING"
+    },
+    "source_evidence_support": {
+      "notes": "各Evidenceの叙述内容は、示された再掲・解説資料の範囲では対応している。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "原ページ未固定、2000年記録の間接性、正体・医学的因果・後続帰結の不確実性を保持している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "source_assessment",
+      "finding_id": "F001",
+      "fix_direction": "SRC-002を後代転載として記述し、relation_to_primaryを来歴に即した間接関係へ下げるか、直接保存連鎖を示すアーカイブ証跡を追加する。",
+      "impact": "2003年型の内容自体は後代転載として利用できるが、原投稿への近接性と日付の確度を実際より高く見せる。",
+      "rationale": "ライブで確認できるSRC-002は後代ブログの転載ページであり、投稿本文と2003-03-29という表示は確認できる一方、原スレッドから直接保存された記録であること、または保存連鎖は当該ページから確認できない。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-002"
+      ],
+      "summary": "SRC-002の保存記録・直接派生という資料来歴の記述は検証不足である。"
+    }
+  ],
+  "review_notes": "2000年候補と2001年再掲の区別は適切である。主な修正点は2003年本文再掲の資料来歴であり、内容の真偽や伝承内因果とは別問題である。",
+  "review_seq": 6,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "5d2d2fd295d9b117d340af20721572bcd2e2cc8d",
+    "commit_sha": "c93ffddb7ac4861184f36c12eb1ec41d23339556",
+    "reviewed_at": "2026-09-29T14:31:24Z"
+  },
+  "verdict": "Moderate"
+}
