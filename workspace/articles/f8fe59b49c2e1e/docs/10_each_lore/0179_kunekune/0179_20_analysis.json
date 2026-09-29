@@ -200,12 +200,7 @@
         "code_id": "D09.UNK.FORBIDDEN_INQUIRY",
         "parent_id": "D09.UNK"
       },
-      "secondary": [
-        {
-          "code_id": "D09.UNK.DELIBERATE_NONRESOLUTION",
-          "parent_id": "D09.UNK"
-        }
-      ],
+      "secondary": [],
       "rationale": "兄は何であるか分かったように見えた後、『分からないほうがいい』と答える。正体を開示せず、知ることを避けるべきものとして残す操作がprimary Scopeで確認できる。",
       "manifestation": "対象を説明して解消せず、『分からないほうがよい』とすることで、知識化を禁じられた謎として保持する。",
       "content_refs": [
