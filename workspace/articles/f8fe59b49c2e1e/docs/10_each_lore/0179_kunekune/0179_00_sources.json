@@ -24,15 +24,15 @@
       "title": "obake.cc「くねくね」",
       "locator": "2003-03-29 レス756、759、761〜764",
       "accessed_at": "2026-09-16",
-      "relation_to_primary": "direct_derivative",
+      "relation_to_primary": "indirect_derivative",
       "evidence_role": [
         "C",
         "H"
       ],
       "url": "https://obake.cc/entry/kunekune",
-      "bibliographic_info": "2003年3月29日の掲示板投稿を保存した記録",
-      "archive_info": "obake.cc保存記録",
-      "notes": "レス756で投稿者が先行する『分からないほうがいい』と自身の体験を混ぜて詳しく書いたと明示する。"
+      "bibliographic_info": "2003年3月29日と表示された掲示板投稿文を掲載する後代Web転載",
+      "archive_info": "公開Webページ上の後代転載。原スレッドからの直接保存・転載連鎖は本調査で固定できない。",
+      "notes": "本文および表示日付を確認できる後代転載として使用する。レス756で投稿者が先行する『分からないほうがいい』と自身の体験を混ぜて詳しく書いたと明示するが、原2ちゃんねるページおよび直接保存連鎖は未固定。"
     },
     {
       "source_id": "SRC-003",
