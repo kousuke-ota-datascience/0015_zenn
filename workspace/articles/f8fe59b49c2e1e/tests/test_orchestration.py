@@ -241,6 +241,114 @@ def test_each_review_cycle_gets_a_fresh_reviewer_session(monkeypatch):
     ]
 
 
+class _RetryRuntime(_FakeRuntime):
+    def __init__(self, outputs):
+        super().__init__()
+        self.outputs = iter(outputs)
+        self.reviewer_threads = []
+
+    def run_reviewer(self, session, context, prompt):
+        assert session.thread_id is None
+        session.thread_id = f"thread:{session.session_id}"
+        self.reviewer_threads.append(session.thread_id)
+        return RuntimeResult(next(self.outputs))
+
+
+def _stub_review_cycle_dependencies(monkeypatch, *, write_review_cycle):
+    monkeypatch.setattr(
+        pipeline,
+        "prepare_review_cycle",
+        lambda _entry: SimpleNamespace(
+            review_seq=7,
+            to_dict=lambda: {
+                "entry_id": "0001",
+                "review_seq": 7,
+                "targets": {
+                    a: {
+                        "artifact_path": f"{a}.json",
+                        "commit_sha": "a" * 40,
+                        "blob_sha": "b" * 40,
+                    }
+                    for a in pipeline.ARTIFACTS
+                },
+            },
+        ),
+    )
+    monkeypatch.setattr(
+        pipeline,
+        "sync_controlplane",
+        lambda *_args, **_kwargs: {"result": "PASS", "verified": True},
+    )
+    monkeypatch.setattr(
+        pipeline,
+        "build_reviewer_context",
+        lambda entry, cycle: {"entry_id": entry, "review_seq": cycle["review_seq"]},
+    )
+    monkeypatch.setattr(pipeline, "write_review_cycle", write_review_cycle)
+    monkeypatch.setattr(pipeline, "_commit_review_cycle", lambda _written: "commit")
+
+
+def _successful_write(entry, cycle, reviews):
+    return {
+        "entry_id": entry,
+        "review_seq": cycle["review_seq"],
+        "paths": {a: f"reviews/{a}.json" for a in pipeline.ARTIFACTS},
+        "verdicts": {a: "Pass" for a in pipeline.ARTIFACTS},
+    }
+
+
+def test_review_retry_after_json_parse_failure_uses_fresh_reviewer(monkeypatch):
+    _stub_review_cycle_dependencies(
+        monkeypatch,
+        write_review_cycle=_successful_write,
+    )
+    valid = json.dumps(
+        {"reviews": {"00": {}, "10": {}, "20": {}}},
+        ensure_ascii=False,
+    )
+    runtime = _RetryRuntime(["not-json", valid])
+
+    result = pipeline._run_review_cycle("0001", runtime)
+
+    assert result["review_session_id"] == runtime.reviewer_ids[1]
+    assert runtime.reviewer_ids == [
+        "reviewer:0001:7:0",
+        "reviewer:0001:7:1",
+    ]
+    assert len(set(runtime.reviewer_threads)) == 2
+
+
+def test_review_retry_after_writer_value_error_uses_fresh_reviewer(monkeypatch):
+    calls = 0
+
+    def flaky_write(entry, cycle, reviews):
+        nonlocal calls
+        calls += 1
+        if calls == 1:
+            raise ValueError("schema validation failed")
+        return _successful_write(entry, cycle, reviews)
+
+    _stub_review_cycle_dependencies(
+        monkeypatch,
+        write_review_cycle=flaky_write,
+    )
+    valid = json.dumps(
+        {"reviews": {"00": {}, "10": {}, "20": {}}},
+        ensure_ascii=False,
+    )
+    runtime = _RetryRuntime([valid, valid])
+
+    result = pipeline._run_review_cycle("0001", runtime)
+
+    assert calls == 2
+    assert result["review_session_id"] == runtime.reviewer_ids[1]
+    assert runtime.reviewer_ids == [
+        "reviewer:0001:7:0",
+        "reviewer:0001:7:1",
+    ]
+    assert len(set(runtime.reviewer_threads)) == 2
+
+
 def test_review_cycle_limit_blocks_after_five(monkeypatch):
     classification = pipeline.EntryClassification(
         "0001",
