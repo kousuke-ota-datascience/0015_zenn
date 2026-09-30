@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0309",
+  "artifact": "00",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0309_uryujima/0309_00_sources.json",
+    "commit_sha": "3a8cac03704d795e9477db9ef432b0b7cfd8e727",
+    "blob_sha": "53679d03d722642e0ded6b505ddf773eff783dcf",
+    "reviewed_at": "2026-09-30T14:40:53Z"
+  },
+  "checks": {
+    "source_assessment": {
+      "status": "PASS",
+      "notes": "SRC-001は大分市公式の現代文化表象、SRC-002は未校訂の歴史地震史料DB収録研究文、SRC-003は地震調査研究推進本部の現実災害アンカーとして用途を分離できている。"
+    },
+    "evidence_integrity": {
+      "status": "PASS",
+      "notes": "EVD-001〜010の既存内容は参照Sourceと整合し、公式Web再利用、位置・実在不確実性、警告・避難、海退・津波・島消失、災後移住、全没像への研究批判、恵比須異伝、日付差を過度に事実化していない。"
+    },
+    "source_evidence_support": {
+      "status": "PASS",
+      "notes": "既存Evidenceは各Sourceから支持される。SRC-002の伝承記述とSRC-003の1596年別府湾地震アンカーも区別されている。"
+    },
+    "primary_source_relation": {
+      "status": "PASS",
+      "notes": "SRC-002内部の埋込史料を同時代一次史料と自動認定せず、未校訂・写本・後世編纂・研究解釈を留保している。"
+    },
+    "earliest_attestation": {
+      "status": "FINDING",
+      "notes": "SRC-002は『柴山勘兵衛記』を別の災害叙述資料として挙げ、柴山勘兵衛重成を慶長元年に沖ノ浜へ居住した人物として説明するが、この史料候補の存在・来歴がEvidenceに保持されていない。執筆時期・原本真正性を確定できるという意味ではない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "島の位置・実在範囲、全没対限定的低下・洗失、精密日付、異伝の成立順序、現実災害と伝説内容の区別は保持されている。残る史料来歴欠落はearliest_attestation/salient completenessとして別途Finding化する。"
+    },
+    "salient_evidence_completeness": {
+      "status": "FINDING",
+      "notes": "主要災害核と異伝の大部分はEvidence化されたが、SRC-002が挙げる『柴山勘兵衛記』の史料来歴候補と、『瓜生島崩の由来』中の白馬老人再出現・竹による救助・神灯という警告異伝後半がEvidence層から脱落している。"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "F001",
+      "severity": "Moderate",
+      "category": "salient_evidence_completeness",
+      "summary": "『柴山勘兵衛記』という史料候補とその1596年沖ノ浜居住者への紐付けがEvidence化されていない。",
+      "rationale": "SRC-002は遭難状況を詳述する資料として『瓜生島崩の由来』と『柴山勘兵衛記』を並記し、柴山勘兵衛重成について慶長元年に沖ノ浜の居宅にいた人物と説明する。現行Evidenceは長松寺仙玉『瓜生嶋考』、明治初年編纂とされる幸松氏記録系、後世研究解釈を保持するが、『柴山勘兵衛記』自体の存在・来歴を保持しない。そのため現行Evidenceだけでは、より近接した書面記録候補がSource内に提示されていることを監査できない。",
+      "impact": "伝承の最古確認・史料近接性を評価する際の母集団が不完全になる。D01/D02を直ちに確定できるわけではないが、History Evidenceの評価に必要な来歴差が失われる。",
+      "fix_direction": "SRC-002が『柴山勘兵衛記』をどのように紹介しているかを独立Evidenceとして追加し、柴山勘兵衛重成の1596年沖ノ浜居住という記事内説明も保持する。ただし原本・成立年代・真正性を本調査で独立確認していないことを明記し、最古形や一次史料と断定しない。",
+      "source_refs": [
+        "SRC-002"
+      ]
+    },
+    {
+      "finding_id": "F002",
+      "severity": "Minor",
+      "category": "salient_evidence_completeness",
+      "summary": "警告異伝の後半にある白馬老人の再出現と神明救助モチーフがEvidenceから落ちている。",
+      "rationale": "SRC-002が引用する『瓜生島崩の由来』では、大波後に白馬老人が再び現れて竹を差し出し、勝忠・信重が山際へ到達した後、神灯を見て神明の加護による救命と理解する展開が続く。現行EVD-004/EVD-005は事前警告・避難と津波・島消失までを保持するが、この能動的な超自然救助を保持しない。",
+      "impact": "VAR-002を『神託・避難救済型』として再構成する際、救済が単なる事前退避だけでなく災中の神明救助として語られる具体的意味が失われる。現行20のprimary ScopeはVAR-001のためD01〜D21の主判定への影響は限定的。",
+      "fix_direction": "SRC-002の当該段落を、後世編纂を介した伝承記述である留保付きでEvidence化し、VAR-002のContentに必要か再評価する。",
+      "source_refs": [
+        "SRC-002"
+      ],
+      "evidence_refs": [
+        "EVD-004",
+        "EVD-005"
+      ]
+    }
+  ],
+  "verdict": "Moderate",
+  "review_notes": "current canonicalとライブSourceを独立再監査した。過去Reviewの判定は correctness oracle に用いていない。"
+}

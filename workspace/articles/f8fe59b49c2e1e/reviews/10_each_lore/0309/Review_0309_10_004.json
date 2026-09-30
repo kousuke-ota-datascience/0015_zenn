@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0309",
+  "artifact": "10",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0309_uryujima/0309_10_contents.json",
+    "commit_sha": "e96fca7471109671c01882e12a3970907ca69cfa",
+    "blob_sha": "188260ac44efa24f660cec54dcab656e47142608",
+    "reviewed_at": "2026-09-30T14:40:53Z"
+  },
+  "checks": {
+    "evidence_content_support": {
+      "status": "PASS",
+      "notes": "EVD-001〜010は現行Content/variant/uncertaintyへ追跡可能。Source-only情報は00 Findingとして分離した。"
+    },
+    "summary_reconstruction": {
+      "status": "PASS",
+      "notes": "summaryだけで災害核、警告・赤面異伝、消失・移住、全没像の留保、現代再利用を復元できる。"
+    },
+    "structural_probe": {
+      "status": "PASS",
+      "notes": "P01〜P12にLOSS/CONFLICTなし。"
+    },
+    "variant_boundary": {
+      "status": "PASS",
+      "notes": "共有災害核VAR-001、警告救済型VAR-002、赤面・悪戯型VAR-003を分離し、VAR-001を最古形とは断定しない。"
+    },
+    "uncertainty_preservation": {
+      "status": "PASS",
+      "notes": "位置・実在、沈没範囲、精密日付、成立順、最古流通媒体の不確実性を保持。"
+    },
+    "narrative_reconstruction": {
+      "status": "PASS",
+      "notes": "具体的イベント列・終端・災後移住・異伝差をsummaryから復元可能。"
+    },
+    "salient_content_completeness": {
+      "status": "PASS",
+      "notes": "現行Evidence母集団のsalient meaningはCNT-001〜010等へ保持。00で検出したSource→Evidence欠落は補完していない。"
+    }
+  },
+  "reconstruction": {
+    "blind_decode": "1596年の別府湾地震・津波を契機に、大分沖にあったとされる瓜生島・港町が失われたという伝説。反復地震、事前退避、白馬老人・島長の警告、井戸枯れ、海退、大波、島・十二村の消失、生存者の移住が語られる。島の位置・実在や全面沈没か限定的な低下・洗失かは未確定。警告救済型と恵比須像赤面・悪戯型を別異伝として分け、現代には地域文化イベントで再利用される。",
+    "reference_story": "Contentは1596年災害を現実アンカーとする共有災害核、警告救済型、恵比須赤面・悪戯型を分離し、位置・実在・沈没範囲・成立順を留保する。災害後の救援・移住と現代の公式Web／地域イベント再利用も保持する。",
+    "probes": [
+      {
+        "probe_id": "P01",
+        "blind": "住民、白馬老人・島長、恵比須像に細工した人物。",
+        "reference": "主体・役割と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P02",
+        "blind": "島・港町・沿岸地形、住民。",
+        "reference": "CNT-001/005〜007と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P03",
+        "blind": "1596年の地震・津波。異伝では警告・赤面予兆。",
+        "reference": "CNT-003/004/009と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P04",
+        "blind": "共有核は自然過程、異伝は神意・悪戯を原因化。",
+        "reference": "VAR-001〜003と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P05",
+        "blind": "地震・海退・津波で島・集落喪失。",
+        "reference": "CNT-006/008と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P06",
+        "blind": "居住→災害→消失→救援・移住→現代表象。",
+        "reference": "CNT-003/006/007/010と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P07",
+        "blind": "反復地震→退避→警告→海退→大波→消失→移住。",
+        "reference": "CNT-004〜007と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P08",
+        "blind": "赤面予兆と神託警告。",
+        "reference": "CNT-004/009と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P09",
+        "blind": "警告に従う退去。",
+        "reference": "CNT-004/005と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P10",
+        "blind": "島・十二村消失と生存者移住。",
+        "reference": "CNT-006〜008と一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P11",
+        "blind": "位置・実在・沈没範囲・日付・成立順は未確定。",
+        "reference": "uncertaintiesと一致。",
+        "difference": "NONE"
+      },
+      {
+        "probe_id": "P12",
+        "blind": "共有核、警告救済型、赤面悪戯型を分離。",
+        "reference": "VAR-001〜003と一致。",
+        "difference": "NONE"
+      }
+    ],
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "summaryから現行Analysisの主要意味構造を再構成可能。"
+    },
+    "verdict": "PASS",
+    "coverage_audit": [
+      {
+        "content_ref": "CNT-001",
+        "salient_meaning": "位置・実在不確実性",
+        "blind_reconstruction": "復元可",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-002",
+        "salient_meaning": "現代の幻の島表象",
+        "blind_reconstruction": "復元可",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-003",
+        "salient_meaning": "1596年災害と日付差",
+        "blind_reconstruction": "復元可",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-004",
+        "salient_meaning": "反復地震と警告",
+        "blind_reconstruction": "復元可",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-005",
+        "salient_meaning": "避難と被害",
+        "blind_reconstruction": "復元可",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-006",
+        "salient_meaning": "海退・大波・消失",
+        "blind_reconstruction": "復元可",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-007",
+        "salient_meaning": "救援・移住",
+        "blind_reconstruction": "復元可",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-008",
+        "salient_meaning": "全没像と限定的説明",
+        "blind_reconstruction": "復元可",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-009",
+        "salient_meaning": "赤面・悪戯異伝",
+        "blind_reconstruction": "復元可",
+        "difference": "NONE"
+      },
+      {
+        "content_ref": "CNT-010",
+        "salient_meaning": "現代文化再利用",
+        "blind_reconstruction": "復元可",
+        "difference": "NONE"
+      }
+    ]
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Blind Decodeはsummary.narrative + summary.structureだけで先に固定。Golden Referenceは意味保存粒度の校正に限定。"
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.1",
+  "entry_id": "0309",
+  "artifact": "20",
+  "review_seq": 4,
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0309_uryujima/0309_20_analysis.json",
+    "commit_sha": "71b6b0059809f48d79266b968d2ab92dc3dd0281",
+    "blob_sha": "eb3b7b92169971e0f49a50f61055487de0da8100",
+    "reviewed_at": "2026-09-30T14:40:53Z"
+  },
+  "checks": {
+    "version_scope": {
+      "status": "PASS",
+      "notes": "VAR-001の共有災害核をScopeとし、VAR-002/003を除外する境界はContentと整合。最古形とは断定しない。"
+    },
+    "dimension_semantics": {
+      "status": "PASS",
+      "notes": "D01〜D21の値はScoped Contentとcurrent coding rulesに整合する。"
+    },
+    "taxonomy_gap": {
+      "status": "PASS",
+      "notes": "D15は自然地形喪失に適合するChild不足をtaxonomy gapとして明示し、PROPERTY_DAMAGEへ置換していない。"
+    },
+    "causality": {
+      "status": "PASS",
+      "notes": "自然物理過程→島・沿岸地形の変化・消失→負の帰結・共同体再編として接続する。"
+    },
+    "semantic_traceability": {
+      "status": "PASS",
+      "notes": "各判定はVersion Scope内のCNT-001/002/003/006/007/008/010へ追跡できる。"
+    },
+    "analysis_invariance": {
+      "status": "PASS",
+      "notes": "Scoped ContentだけからVersion Scopeと主要Dimension判定を再構成できる。"
+    },
+    "status_reasoning": {
+      "status": "PASS",
+      "notes": "生成年代、最古媒体、回避、情報保持者など未確定項目はUとして保持する。"
+    },
+    "d12_d13_d15_causal_chain": {
+      "status": "PASS",
+      "notes": "D12=自然環境→D13=環境・物体操作→D15=地形喪失のgap＋共同体変化で整合。"
+    },
+    "d18_scope_independent_x_evidence": {
+      "status": "PASS",
+      "notes": "D18はL1のみ。現代イベントからL3を推定していない。"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "status": "PASS",
+      "notes": "公開Webから全国流通へ飛躍せずLOCAL_TRADITIONに留める。"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "status": "PASS",
+      "notes": "公開性からCOMMON_KNOWLEDGE/NO_ONE_KNOWSを推定せずU。"
+    },
+    "d21_reality_anchor": {
+      "status": "PASS",
+      "notes": "1596年別府湾地震・津波を因果構造へ組み込むためA4はContentから再構成できる。"
+    },
+    "evidence_confidence_ceiling": {
+      "status": "PASS",
+      "notes": "位置・全面沈没像・日付・成立時期の不確実性を越えて確定していない。"
+    },
+    "entry_classification": {
+      "status": "PASS",
+      "notes": "『災害・流言』『海没島伝説』はScoped Contentと整合。"
+    },
+    "content_layer_bypass": {
+      "status": "PASS",
+      "notes": "Web・イベントdetailもCNT-010にあり、Source/EvidenceからContentを飛ばしていない。"
+    }
+  },
+  "sensemaking_reconstruction": {
+    "model": "1596年別府湾地震・津波を現実アンカーに、位置・実在形態が不確実な瓜生島または沖浜の島・集落が自然物理過程で大きく失われ、生存者が救援・移住して共同体が再編されたという共有災害核を再構成できる。一夜全没像は限定的な物理解釈と区別される。現代の公式Web・地域イベント再提示は全国流通やL3社会効果を意味しない。警告救済型と赤面・悪戯型はScope外。",
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-006",
+      "CNT-007",
+      "CNT-008",
+      "CNT-010"
+    ],
+    "dimension_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [],
+    "status": "PASS",
+    "notes": "Review 00のSource→Evidence omissionをAnalysis正当化へ直接導入していない。"
+  },
+  "findings": [],
+  "verdict": "Pass",
+  "review_notes": "Scoped Contentを意味論的上限としてcurrent coding rules/code systemに照らし独立監査した。"
+}
