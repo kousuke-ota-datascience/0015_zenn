@@ -1,0 +1,196 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "Content unitは参照Evidenceの範囲を超えて確定的主張をしていない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "抽象的な危害表現へ還元せず、白い対象の異常運動、兄の変化、2003年型の模倣的運動と未確定終端を保持する。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "Evidence母集団を監査した結果、Scope識別、異伝境界、具体的事件列、情報構造、回避、終端および留保に必要なsalient meaningのContent層からの脱落は認めない。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12を確認し、主要構造はsummaryから復元できる。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summaryは初期型と後代混成型、出来事列、禁忌、終端および不確実性を再構成可能にしている。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "白い存在の正体、兄の物理的変身、医学的因果、終盤の語り手の帰結を未確定としている。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "2001年窓越し観察型と、2003年の屋外・双眼鏡・祖父・終端追加型を明確に分離している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryのみでもScope選択、未知の原因、視認・理解・異変の因果列、初期型と後代型の境界を再構成できる。",
+      "status": "PASS"
+    },
+    "blind_decode": "初期の伝聞怪談では、A君と兄が家の窓から遠くの白い人物らしきものを見て、その不自然な屈曲運動を目撃する。兄は正体を理解したようだが説明を拒み、後に知的障害になったと伝えられる。後代の混成版では舞台・詳細視認・祖父の制止・兄のくねくねした変貌・語り手自身の禁じられた再視認が加わるが、最後の語り手の帰結は示されない。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "初期型の窓越し観察として復元できる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "家内の窓越しの白い対象と異常運動"
+      },
+      {
+        "blind_reconstruction": "説明拒否と兄の後の異変を復元できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "兄の理解らしき発話と後の知的障害"
+      },
+      {
+        "blind_reconstruction": "原因・正体が未解決であると復元できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "対象の正体未確定"
+      },
+      {
+        "blind_reconstruction": "初期型が伝聞怪談として提示されると復元できる。",
+        "content_ref": "CNT-013",
+        "difference": "NONE",
+        "salient_meaning": "投稿者→弟→A君のFOAF提示"
+      },
+      {
+        "blind_reconstruction": "後代型が先行話との混成であると復元できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "2003年投稿者による意図的混成"
+      },
+      {
+        "blind_reconstruction": "後代型の詳細視認と異変を復元できる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "双眼鏡視認後の後代型の兄の異変"
+      },
+      {
+        "blind_reconstruction": "後代型の禁忌・制止として復元できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "祖父の見てはならないとの警告"
+      },
+      {
+        "blind_reconstruction": "初期型へ遡及しない後代要素として復元できる。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "2003年型固有の増補要素"
+      },
+      {
+        "blind_reconstruction": "後代型の兄の変化を物理的変身と断定せず復元できる。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "兄の模倣的運動とidentity喪失的表現"
+      },
+      {
+        "blind_reconstruction": "語り手が見るが帰結は不明と復元できる。",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "語り手の終端視認と後続未確定"
+      },
+      {
+        "blind_reconstruction": "2000年を確定起源にしない留保を復元できる。",
+        "content_ref": "CNT-012",
+        "difference": "NONE",
+        "salient_meaning": "2000年先行記録は未固定の候補"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "A君、兄、語り手側、後代型の祖父と白い対象を復元できる。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "FOAF連鎖と2003年型の人物役割が明示される。"
+      },
+      {
+        "blind": "主な異変の対象は兄である。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "初期型で兄の後の知的障害が伝えられる。"
+      },
+      {
+        "blind": "遠方の白い対象の視認が事件の入口である。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "2001年型は窓越し、2003年型は屋外からの視認である。"
+      },
+      {
+        "blind": "白い対象の正体は確定しない。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "原因主体・存在論は開示されない。"
+      },
+      {
+        "blind": "異常な運動の視認と、兄の理解らしき反応・異変が連なる。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "2003年型には兄の模倣的運動もある。"
+      },
+      {
+        "blind": "目撃後、兄が以前の状態から異変状態へ移る。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "初期型の知的障害と後代型の行動的変化を区別している。"
+      },
+      {
+        "blind": "単発の目撃から反応、後の異変へ進む。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "初期・後代各型の順序を保持する。"
+      },
+      {
+        "blind": "後代型には見てはならないという禁忌がある。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "祖父の警告は2003年型に限定される。"
+      },
+      {
+        "blind": "初期型には再現可能な回避手順はなく、後代型には視認回避の警告がある。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "回避情報のvariant差を保持する。"
+      },
+      {
+        "blind": "後代型の兄は残置され、語り手は終端で対象を近くに見る。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "語り手の後続帰結は不明である。"
+      },
+      {
+        "blind": "正体、因果、語り手のその後は未解決である。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "uncertaintiesに明示される。"
+      },
+      {
+        "blind": "2001年型と、意図的混成で詳細が増補された2003年型を区別できる。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001/VAR-002の境界と増補要素が明示される。"
+      }
+    ],
+    "reference_story": "2001年後代再録のFOAF型では、投稿者が弟から聞いたA君の体験として、家内から窓越しに白い服の人物らしきものを目撃し、その異様な運動を見る。兄は正体を分かったように見えて「分からないほうがいい」と述べ、後に知的障害になったと伝えられる。対象の正体・理解内容・医学的因果は不明である。2003年後代転載の混成型は、投稿者が先行話と自身の体験を混ぜたと明示し、秋田、田園、双眼鏡、祖父の警告、兄の模倣的な異変、家族による残置、語り手の終端視認を追加する。これらは2001年型へ遡及しない。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Evidence→ContentおよびContent→summaryの再構成性はPassである。",
+  "review_seq": 10,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_10_contents.json",
+    "blob_sha": "6f874e888e1ffbfcd50b4eb8bbd391c3e28ef58e",
+    "commit_sha": "23a0e89e65e85b195e8d60866895cfaac5d2c855",
+    "reviewed_at": "2026-09-30T15:17:53Z"
+  },
+  "verdict": "Pass"
+}

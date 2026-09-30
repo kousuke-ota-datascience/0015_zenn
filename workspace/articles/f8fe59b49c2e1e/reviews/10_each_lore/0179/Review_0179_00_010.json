@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2000年記録候補、2001年再録、起源未確定を区別している。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "Evidenceは引用ではなくparaphraseとして表示され、原ページ未固定・転載連鎖未固定の留保も保持している。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "三資料をprimaryとして扱わずindirect_derivativeとしており、関係の過大評価はない。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "Source上の、初期形と2003年混成型の出来事列、禁忌、終端、異伝境界に必要な主要情報はEvidence層に存在する。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001/002はいずれも後代転載であり、SRC-003も後代解説であるという資料階層が明記されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "2001年型、2003年混成型、2000年候補についてのEvidence記述は、各Sourceの提示範囲と整合する。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "正体、医学的因果、2000年原ページ、2001/2003年原投稿ページの未固定性を保持している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "Source→Evidence層は、転載資料への依存を適切に限定し、最古記録候補と確定起源を混同していない。",
+  "review_seq": 10,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "bd89a4e834dd6abafb3343e285b81a8ca021af6f",
+    "commit_sha": "88b20d5b1fac2caec6c8dd6a03ff2bf16b8805f0",
+    "reviewed_at": "2026-09-30T15:17:53Z"
+  },
+  "verdict": "Pass"
+}

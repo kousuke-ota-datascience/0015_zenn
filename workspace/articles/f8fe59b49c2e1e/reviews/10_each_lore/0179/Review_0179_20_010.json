@@ -1,0 +1,128 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryからも視認と理解の双方は復元できるが、理解をPrimary発動条件とするには追加推論を要する。",
+      "status": "FINDING"
+    },
+    "causality": {
+      "notes": "D11が理解を主条件、視認をSecondaryとする因果の優先順位は、Scoped Contentの明示度より強い。",
+      "status": "FINDING"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisは2003年型固有の双眼鏡・祖父・終端等をScope内の次元根拠へ持ち込んでいない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "兄（D12）→認知を契機とする害（D13）→認知領域の障害（D15）はScoped Contentと接続する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "L1のみであり、L3を支える独立X Evidenceを主張していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19.NET.OPEN_FORUM_WEBは公開掲示板という流通範囲を表し、全国流通を主張していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者の不記載をNO_ONE_KNOWSとせずUとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "資料ページの実在性と伝承内の現実アンカーを混同せず、匿名の田舎というScope内容からA0としている。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D11は視認後に理解らしき発話が置かれるだけで、理解そのものが発動条件であることは確定しない。直接支持される接触条件は視覚的曝露である。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "FOAFとして投稿されたネット怪談を「物語・伝説」「ネット怪談」とする分類はScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "D11のI表示自体は適切でも、Primaryの理解条件化はEvidence/Scoped Contentが直接支持する水準を超える。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "D11のrationaleは兄が理解したように見えることを、害の発動条件として扱っており、Contentの並置以上の因果を導入している。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "概ね転載資料由来の支持強度をIとし、未確定なD01、D04、D17、D20をUとしている。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "Scope内で必要な概念は既存taxonomyで表現可能であり、gapの不当な非申告はない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "直接内容を確認できる2001年型をScopeとし、構造を変更する2003年混成・増補型を除外する選択は規則5.1と整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "dimension_refs": [
+        "D11"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-012"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D11 PrimaryをD11.SEN.VISUAL_EXPOSUREへ変更し、理解らしき状態は独立構造として必要ならD11.INF.UNDERSTAND_RECOGNIZEをSecondaryに置く。因果の未確定性をrationaleへ明記する。",
+      "impact": "発動条件の中心が、観察された接触から推定された内的認知状態へ移り、D11の因果解釈が過剰になる。",
+      "rationale": "Scoped Contentは、兄が白い対象を見た後に何であるかを分かったように見え、その後に知的障害になったと伝える。理解内容も因果も未確定であり、理解が発動条件であることは明示されない。他方、異常への直接接触として明示されるのは対象の視認である。",
+      "severity": "Moderate",
+      "summary": "D11は理解・認識ではなく視覚的曝露をPrimaryとすべきである。"
+    }
+  ],
+  "review_notes": "Content→Analysisは概ねScopeを守るが、D11の発動条件にModerateな意味論上の過剰推論がある。",
+  "review_seq": 10,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-013"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-011",
+      "EVD-012"
+    ],
+    "model": "Scope内では、窓越しに白い人物様の異常な動きを見ることにより、正体不明の存在／異常知覚が問題化する。兄は視認後に正体を理解したように振る舞うが説明を拒み、後に知的障害になったと伝えられる。したがって未知を禁じられた問いとして保持する構造は支持される。一方、害への接触条件として直接示されるのは視認であり、理解は害を発動したと確定できない後続の認知状態である。",
+    "notes": "D07〜D10およびD12〜D16は概ね整合するが、D11のPrimary順位は修正を要する。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "8d567e3a7f13d2386837932c8543d9c9ce9bd12c",
+    "commit_sha": "ed394749d4240a2c3399ec9f1379a7d87b49bcce",
+    "reviewed_at": "2026-09-30T15:17:53Z"
+  },
+  "verdict": "Moderate"
+}
