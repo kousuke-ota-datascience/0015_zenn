@@ -1,0 +1,202 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "各Content Unitは対応Evidenceの範囲内で再構成され、2003年要素を2001年型へ遡及していない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "抽象化だけでなく、窓越しの観察、双眼鏡、祖父の警告、兄の模倣的運動、終端視認を具体的に復元できる。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "Evidence母集団を照合したところ、人物役割、順序、禁忌、帰結、未解決終端、情報保持、地理・媒介要素、異伝境界に関するsalient meaningのContent層への脱落は確認されない。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12の全構造要素がsummaryまたはContent層で追跡可能である。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summary.narrativeとsummary.structureだけから、両異伝の具体的出来事、終端、不確実性、異伝境界を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "原ページ未固定、対象の正体、因果の現実性、語り手の終端後、2000年候補、後代設定の安定性に関する留保を保持する。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001を2001年のFOAF型、VAR-002を先行怪談との明示的混成・増補型として区別し、後続設定を個別stable variantとして断定していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryからVAR-001をScopeとして選ぶ根拠、正体不明・理解への移行・認知的異変・回避情報不足・公開Web流通という後続分析の主要構造を再構成できる。",
+      "status": "PASS"
+    },
+    "blind_decode": "初期の語りは、投稿者が弟から聞いた、弟の友人A君の体験だという伝聞である。A君と兄は田舎の家の窓から遠くの白い人影のようなものを見て、その不自然な屈曲と動きを目撃する。兄は正体を理解したように見えるが、教えず「分からないほうがいい」と言い、のちに知的障害になったと伝えられる。2003年の別の語りは、この先行話を自身の子供時代の経験と混ぜて詳述したもので、秋田の田園、双眼鏡、祖父の禁止が加わる。兄は白い存在を詳しく見た後に異変を示し、同じようにくねくね動く。家族は兄を残し、語り手も帰路に禁じられた白い物体を近くで見てしまうが、その後は語られない。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "窓越しの白い人影と不自然な動きとして復元できる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "家内の窓から白い人物様の存在と異常な動きを見る初期場面。"
+      },
+      {
+        "blind_reconstruction": "理解を拒む発話と後の異変として復元できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "兄の理解らしき発話と後に伝えられる知的障害。"
+      },
+      {
+        "blind_reconstruction": "原因存在論が未確定であることを復元できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "白い存在の正体は固定されない。"
+      },
+      {
+        "blind_reconstruction": "初期型が近接伝聞として提示されることを復元できる。",
+        "content_ref": "CNT-013",
+        "difference": "NONE",
+        "salient_meaning": "投稿者→弟→A君のFOAF伝聞経路。"
+      },
+      {
+        "blind_reconstruction": "2003年型が明示的な混成であることを復元できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "2003年投稿者が先行話と自身の体験を混ぜたと明示する。"
+      },
+      {
+        "blind_reconstruction": "双眼鏡と詳細視認後の異変として復元できる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "2003年型で双眼鏡による詳細視認後に兄が異変を示す。"
+      },
+      {
+        "blind_reconstruction": "祖父の禁止として復元できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "祖父による見てはならないという警告。"
+      },
+      {
+        "blind_reconstruction": "これらが後代型の要素であることを復元できる。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "秋田・田園・双眼鏡・祖父・名称は2003年増補である。"
+      },
+      {
+        "blind_reconstruction": "兄が白い存在のように動き、以前の兄ではないかのように扱われ残されることを復元できる。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "兄の模倣的運動、identity喪失的表現、家族による残置。"
+      },
+      {
+        "blind_reconstruction": "終端視認とその後の未確定を復元できる。",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "語り手が最後に禁じられた対象を近くで見るが後続帰結は不明。"
+      },
+      {
+        "blind_reconstruction": "2000年候補を確定起源にしない留保として復元できる。",
+        "content_ref": "CNT-012",
+        "difference": "NONE",
+        "salient_meaning": "2000年記録は後代解説が指す未固定の早期候補である。"
+      },
+      {
+        "blind_reconstruction": "後続設定を初期形や固定異伝として扱わないことを復元できる。",
+        "content_ref": "CNT-014",
+        "difference": "NONE",
+        "salient_meaning": "2003年以降の黒い個体等は後続の追加・発展で、個別安定性は未固定。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "A君、兄、伝聞上の投稿者・弟、白い正体不明の対象が中心的役割を持つ。2003年型では祖父と語り手が加わる。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "Content層のprimary actorsおよびVAR-001/002の人物配置と一致する。"
+      },
+      {
+        "blind": "初期型で後続の異変を受けるのは兄である。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "CNT-002が兄の後の知的障害を伝える。"
+      },
+      {
+        "blind": "窓越しの白い対象の視認から事態が始まり、2003年型では双眼鏡による詳細視認が加わる。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "CNT-001、CNT-006、CNT-011と一致する。"
+      },
+      {
+        "blind": "原因は白い正体不明の存在またはその理解に関わるが、存在論は確定しない。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "CNT-003とsummary.structure.causal_agentのunknownに一致する。"
+      },
+      {
+        "blind": "対象の視認・理解らしき転換の後、兄に認知的・行動的な異変が語られる。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "CNT-002およびCNT-006/CNT-009と一致する。"
+      },
+      {
+        "blind": "初期型は視認→兄の理解らしき発話→後の異変、2003年型は詳細視認→異変→模倣的運動→残置→終端視認の順で進む。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "summary.structure.state_transitionと一致する。"
+      },
+      {
+        "blind": "双方とも一件の出来事を軸に進み、2003年型では帰路の終端まで段階が増える。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "summary.structure.temporal_structureおよびCNT-011と一致する。"
+      },
+      {
+        "blind": "初期型では理解しない方がよいという禁忌が示され、2003年型では祖父が見ないよう警告する。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "CNT-002およびCNT-007と一致する。"
+      },
+      {
+        "blind": "2003年型には対象を見ないという対処が示されるが、初期型には再現可能な回避手順は明示されない。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "summary.structure.avoidance_controlと一致する。"
+      },
+      {
+        "blind": "2003年型の兄は以前の兄ではないかのように扱われ、語り手は禁じられた対象を見る場面で終わる。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "CNT-009およびCNT-011と一致する。"
+      },
+      {
+        "blind": "対象の正体、兄の物理的変身、語り手の後日談、原ページおよび2000年候補の確度が未解決である。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "uncertaintiesとsummary.structure.uncertaintiesに一致する。"
+      },
+      {
+        "blind": "2001年の名称未固定FOAF型と、2003年の明示的混成・増補型が別に扱われ、後続設定は確定した異伝にしない。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "VAR-001、VAR-002、CNT-014と一致する。"
+      }
+    ],
+    "reference_story": "VAR-001は、2001年後代再録で確認されるFOAF型である。A君と兄が家内の窓から遠方の白い服の人物様の存在を見て、その異常な動きを目撃する。兄は理解したように見えて正体を開示せず、「分かった。でも、分からないほうがいい」と述べ、後に知的障害になったと伝えられる。対象の正体、詳細な視認・理解内容、現実医学的因果は不明である。VAR-002は、2003年表示の転載本文における、投稿者自身が明示した先行話と子供時代の体験の混成・増補型である。秋田・田園・双眼鏡・祖父・名称を加え、兄の模倣的な運動、家族による残置、語り手の終端視認を描く。ただし物理的変身および語り手のその後は確定しない。2000年候補と2003年以降の諸設定は、直接固定されない範囲を越えて確定しない。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Blind Decodeはsummary.narrativeとsummary.structureのみで固定し、その後にEvidence・Content・coverage集合を照合した。",
+  "review_seq": 13,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_10_contents.json",
+    "blob_sha": "35aa16f6e3a0d4bbe83f090b5467bc700e930b80",
+    "commit_sha": "ca75922415fb45df4cf2cf03bc3ae4f91528c7be",
+    "reviewed_at": "2026-09-30T15:44:36Z"
+  },
+  "verdict": "Pass"
+}

@@ -1,0 +1,111 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "Scopeを2001年型に固定しても、D07〜D10の未知の存在・直接目撃・禁じられた理解・主体未固定の異常体験、およびD11〜D21の主要判定を再構成できる。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "白い対象の視認、兄だけの理解らしき転換、後に伝えられる認知的異変という叙述上の因果連鎖を、現実医学的因果の証明と混同していない。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisの意味論的根拠はScopeに含まれるContent Unitに存在する。Evidence・Source固有の2000年候補や2003年詳細は、Scopeの限定またはD04の変容記述以外の判定根拠へ直接流入していない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "兄（D12）が、理解らしき認知状態に結び付けられた危害（D13）を受け、認知領域の障害（D15）へ至る因果列はScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみであり、L3を主張していない。Scope内に独立した社会現実効果のX Evidenceはない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19は匿名掲示板を通じた公開Web範囲としてD19.NET.OPEN_FORUM_WEBを選び、全国的流通を主張していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者の証拠不足をUとしており、単なる不記載からD20.UNK.NO_ONE_KNOWSを選んでいない。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "再録資料や投稿媒体の実在ではなく、Scope内に特定の実在地・制度・史実への接続がないことを根拠にD21.A0としている。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D01〜D21はScope内の2001年FOAF型を基準に判定され、後代型固有の双眼鏡、祖父、identity喪失、秋田をprimary値へ混入させていない。",
+      "status": "PASS"
+    },
+    "entry_classification": {
+      "notes": "匿名掲示板上で流通する怪談というContentに、macro_category「ネット怪談」およびentry_type「物語・伝説」は整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "間接再録と未固定原ページに応じてDではなく主にIを用い、対象の正体や現実因果を確定していない。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各dimensionのmanifestation・rationaleはVersion Scopeに含まれるCNT-001/CNT-002/CNT-003/CNT-013およびそれらの不確実性へ遡及できる。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "間接再録への依存があるコードはIとし、形成時期、確定的回避規則、特権情報保持者はUに留める。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "Scope内の意味形成、因果源、接触、対象、帰結、時間構造、流通・アンカーを既存taxonomyで表現でき、gap主張を必要としない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "原ページ未固定の2000年候補を確定起源にせず、直接内容が確認できる最早の安定核としてVAR-001を採る理由はScoped Contentにある。2003年混成型の除外もContent上の追加変更に基づく。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "Content→Analysisの独立監査では、Scopeの限定、不確実性の扱い、D07〜D10のsense-making関係、およびD12→D13→D15因果列に意味論上の修正要求は確認されなかった。",
+  "review_seq": 13,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-013"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-011",
+      "EVD-012"
+    ],
+    "model": "Scope内の意味形成は、窓越しに視認された白い人物様の異常な運動という直接経験を、正体不明の存在として問題化するところから始まる。兄だけが何かを理解したように見えつつその内容を「分からないほうがいい」と閉じるため、伝承は原因主体を妖怪・霊・自然過程のいずれにも確定せず、理解が危険に連結する異常体験として構成される。共有視認だけでは選別的異変を説明し切れない一方、兄の理解らしき転換の後に知的障害が伝えられる。ゆえに理解・認識への移行を中心的接触条件、視覚的曝露を補助条件として読むことは、現実因果を断定しないI判定の範囲で妥当である。",
+    "notes": "再構成はScoped Contentのみを意味論的根拠とし、2003年型の禁忌・双眼鏡・祖父・終端を補っていない。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "8caad189b61faf9e589c99bd88eca51f5547180c",
+    "commit_sha": "cf6db2f4423b0a5601b8d3d92137e4ad864ef285",
+    "reviewed_at": "2026-09-30T15:44:36Z"
+  },
+  "verdict": "Pass"
+}

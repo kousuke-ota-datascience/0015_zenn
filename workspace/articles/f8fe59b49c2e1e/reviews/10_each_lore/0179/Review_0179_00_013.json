@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2000年3月5日の記録をSRC-003が指示する早期候補としてのみ扱い、確定起源・直接確認済み原投稿とはしていない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "引用ではなくparaphraseとして統一され、原ページ未固定・転載連鎖未固定等の限界が各Evidenceに記録されている。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-001/SRC-002をindirect_derivative、SRC-003をlater_summary_or_commentaryとし、原投稿・独立確認ではないことを保持している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001〜003で確認できる、初期形と2003年混成型の境界、FOAF経路、禁忌、兄の異変、後代要素の限定はEvidence層に保持されている。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "3資料はいずれも後代Web上の再録・解説であり、一次資料として扱わないという記述と整合する。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "2001年型、2003年混成型、後続付加・2000年候補の各主張は対応するSRC/EVD参照に追跡できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "白い存在の正体、異変の現実医学的因果、2003年後続設定の初出・安定性、原ページ未固定が明示されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "現在閲覧可能な再録・解説ページとも照合した。資料の二次性は残るが、canonical Evidenceはその限界を原因・事実・後代解釈の区別に反映している。",
+  "review_seq": 13,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "55ea5e75d2dfef51590df05a94003c2ddfb83230",
+    "commit_sha": "6b7bfe60124c3b3f4aba8292f176df137637d80a",
+    "reviewed_at": "2026-09-30T15:44:36Z"
+  },
+  "verdict": "Pass"
+}
