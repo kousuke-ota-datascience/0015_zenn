@@ -449,7 +449,6 @@ def _run_review_cycle(
         )
 
     context = build_reviewer_context(entry_id, cycle)
-    reviewer = runtime.create_reviewer_session(entry_id, prepared.review_seq)
     prompt = (
         "Execute Workflow 20 semantic Review independently for this frozen cycle. "
         "Return only the required JSON bundle. Reconstruct claims from the frozen "
@@ -458,6 +457,10 @@ def _run_review_cycle(
 
     last_error: Exception | None = None
     for attempt in range(1, MAX_REVIEW_RESPONSE_ATTEMPTS + 1):
+        # Reviewer sessions are intentionally one-shot. A deterministic save
+        # failure must retry with a fresh isolated Reviewer, never by resuming
+        # the previous Reviewer's thread.
+        reviewer = runtime.create_reviewer_session(entry_id, prepared.review_seq)
         output = runtime.run_reviewer(reviewer, context, prompt)
         try:
             reviews = _parse_reviewer_output(output.output)
