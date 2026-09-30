@@ -261,19 +261,17 @@
       "dimension_id": "D12",
       "status": "I",
       "primary": {
-        "code_id": "D12.OTH.SPECIFIC_OTHER",
+        "code_id": "D12.OTH.VICTIM_TARGET",
         "parent_id": "D12.OTH"
       },
       "secondary": [],
-      "rationale": "primary Scopeで明示的な異変を受けるのは兄だけである。",
-      "manifestation": "対象を見て理解したように語る兄が、後に伝えられる知的障害の直接の受け手となる。",
+      "rationale": "D13の主作用である認知的危害を直接受けるのは、primary Scopeでは兄である。",
+      "manifestation": "対象を見て理解したように語る兄が、認知的危害として後に伝えられる知的障害を直接受ける。",
       "content_refs": [
-        "CNT-002",
-        "CNT-001"
+        "CNT-002"
       ],
       "evidence_refs": [
-        "EVD-002",
-        "EVD-001"
+        "EVD-002"
       ],
       "taxonomy_gap": {
         "present": false
