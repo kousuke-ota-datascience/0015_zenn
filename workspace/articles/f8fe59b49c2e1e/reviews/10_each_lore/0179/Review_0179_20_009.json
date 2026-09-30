@@ -1,0 +1,126 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "完全性監査済みのScoped Contentから、主要なD07〜D21判断を再構成できる。ただしD10のstatus/valueは修正が必要である。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "理解らしき状態の後に兄の異変が置かれるという、因果を強く断定しない限定的な物語内連鎖として扱われる。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisは2001年ScopeのContentで表現されたFOAF、白い存在、理解らしき発話、兄の後続異変に基づく。Evidence-onlyまたは2003年専用の具体情報をAnalysis根拠へ持ち込んでいない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "兄（D12）→認知に接続して語られる危害（D13）→認知領域の障害（D15）はContentの範囲で接続する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみであり、L3の選択も独立X Evidenceもない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "2001年の匿名掲示板投稿を公開Forum Webとして扱うに留め、全国的流通とはコードしていない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者が確認できないことをNO_ONE_KNOWSへ読み替えずUとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "資料ページの実在ではなく、Scope内で地域名・地点・制度・事件が特定されないことに基づきA0としている。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D10は原因主体を固定できない異常体験をUとするのではなく、D10.PHN.ANOMALOUS_EXPERIENCEをIでコードすべきである。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "匿名掲示板で流通するFOAF怪談というContentは、entry_type「物語・伝説」およびmacro_category「ネット怪談」と整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "間接再録に依存するためD05/D06/D07〜D20の多くをIとし、正体・変容・制御等はUに留めている。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各dimensionはScope内のCNT-001/CNT-002/CNT-003/CNT-013を参照し、2003年専用要素をprimary判定へ導入していない。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D10のUは、Scope内に正体不明の白い存在との遭遇および理解らしき認知後の異変という異常体験が明示されることに比べて過度に保守的である。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "既存taxonomyに、主体を特定しない異常体験を表すD10.PHN.ANOMALOUS_EXPERIENCEがあるためgapではない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "2001年型を、直接内容確認できる早期の共有核として限定し、発動条件・終端・回避規則を追加する2003年混成型を除外する判断はScoped Contentに整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002",
+        "CNT-003"
+      ],
+      "dimension_refs": [
+        "D10"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D10をstatus I、primary D10.PHN.ANOMALOUS_EXPERIENCE（parent D10.PHN）へ修正し、正体・超自然性・外部因果の種別は未確定である旨をrationaleに明記する。",
+      "impact": "D10が不当に情報欠如として扱われ、D07〜D10のsense-making連鎖における「未分類だが異常な体験」という因果源の位置づけを失う。",
+      "rationale": "Scoped Contentは、正体不明の白い人物様存在の異常運動、兄が理解したらしいこと、後に伝えられる認知的異変を表現する。妖怪・霊・物理過程等の主体種別は選べないが、coding rulesは原因主体を立てない異常体験には現象・体験系Childを使うよう求める。D10.PHN.ANOMALOUS_EXPERIENCEが該当する。",
+      "severity": "Moderate",
+      "summary": "D10をUとする判断は、主体未確定の異常体験を表す既存Childを見落としている。"
+    }
+  ],
+  "review_notes": "Version Scope、異伝遮断、因果列、流通範囲および情報保持者・現実アンカーの扱いは妥当である。D10のみ、coding rulesが明示する現象・体験系の選択肢に照らして修正を要する。",
+  "review_seq": 9,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-013"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15",
+      "D16"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-011"
+    ],
+    "model": "Scope内では、田舎で目撃される白い人物様の異常な屈曲・運動と、その何かを理解したらしい兄の後続異変が、説明を閉じない怪異として構成される。意味形成の対象は正体不明の存在／異常な知覚であり、契機は直接の異常視認、操作は「分からないほうがいい」という知識禁忌である。因果源の種別は固定できないが、主体未確定の異常体験自体は語られているため、D10はUではなくD10.PHN.ANOMALOUS_EXPERIENCEをIとするのが適切である。",
+    "notes": "D07〜D09およびD11以降の限定的な因果構造は概ね整合するが、D10の存在論コードが異常体験を不必要にUnknownへ退避させている。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "fcb93e7c62bbf53f85eacb198c2ffb5f2960095f",
+    "commit_sha": "45670f1865d4160e7230ae1e760c69d0e7adf8c9",
+    "reviewed_at": "2026-09-30T15:10:22Z"
+  },
+  "verdict": "Moderate"
+}

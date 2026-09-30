@@ -1,0 +1,61 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2000年記録を確定起源とせず、原ページ未固定の後代解説上の早期記録候補として限定している。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "再録本文で直接読める内容と、後代解説による成立史を区別し、すべてparaphraseとして過度な引用性を主張していない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-001/SRC-002をindirect_derivative、SRC-003をlater_summary_or_commentaryとしており、原投稿との直接性を誤認していない。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-001の2001年再録には、A君と兄が家の中から窓へ行き、窓越しに白い人物を見るという発見場面がある。EVD-001は「田舎の家から遠方」と要約するのみで、窓越し・屋内という、2003年型の屋外・双眼鏡観察との差異を明示する情報をEvidence化していない。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "3資料はいずれも原投稿ではないが、転載・後代解説としての資料種別と限界が明記されている。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "EVD-001〜011は各SRCの提示内容に概ね対応する。現行Web確認でも2001年再録、2003年混成宣言、2000年記録の間接性を確認した。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "原ページ未固定、白い存在の正体、医学的因果、2003年型の混成性を保持している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "salient_evidence_completeness",
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "SRC-001に基づき、2001年型が家の中で窓へ近寄り、窓越しに遠方の白い人物を観察する場面を、2003年型と混同しない独立Evidenceとして追加する。",
+      "impact": "初期形と2003年増補型の境界、および発動・観察条件の上流再構成が不必要に抽象化される。",
+      "rationale": "SRC-001再録本文は、兄が窓へ行き、A君も続いて窓から白い服の人物を見る展開を示す。これは発見場所・観察方法を特定し、2003年型の屋外・双眼鏡による詳細観察と区別するsalient detailである。EVD-001には屋内／窓の情報がない。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-001"
+      ],
+      "summary": "2001年原型の窓越し観察がEvidence層から脱落している。"
+    }
+  ],
+  "review_notes": "資料の間接性は適切に表示されているが、最初期に直接内容確認できる再録の場面構成に一件のsalient omissionがある。",
+  "review_seq": 9,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "7ac88f9cb9af2060bbefcb3a66eac394947d16a0",
+    "commit_sha": "01813abb5d898deedbba41b67509fc7e0e7e0430",
+    "reviewed_at": "2026-09-30T15:10:22Z"
+  },
+  "verdict": "Moderate"
+}
