@@ -1,0 +1,219 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "CNT-010は、Scope内で読者感染型が確認されないという分析上の否定的判定であり、引用されたEVD-002/004の再構成内容ではない。",
+      "status": "FINDING"
+    },
+    "narrative_reconstruction": {
+      "notes": "2001年型の伝聞構造・白い人物・兄の発話と後の異変、および2003年型の双眼鏡、祖父の警告、兄の模倣的状態、語り手の未確定終端が具体的に保存されている。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "Evidence母集団を監査した結果、Version Scopeの2001年核及びlater variantの識別・再構成に必要なsalient meaningはContent unit、variant又はuncertaintyとして表現されている。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12で必要な構造を確認した。CNT-010の分析混入はあるが、伝承再構成に必要な具体的内容の欠落には至っていない。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summary.narrativeとstructureから、2001年核と2003年混成型の具体的事件、変化、終端、不確実性及びvariant境界を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "正体、原ページ・保存連鎖、医学的因果、物理的変身、語り手の帰結、2000年候補の不確実性がContent及びsummaryに保持されている。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001を2001年の確認可能な核、VAR-002を投稿者自身が混成を明示する後代増補型として区別し、秋田・双眼鏡・祖父・名称を2001年型へ遡及していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "content_analysis_contamination",
+      "content_refs": [
+        "CNT-010"
+      ],
+      "evidence_refs": [
+        "EVD-002",
+        "EVD-004"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "CNT-010を削除するか、「物語内で読者への作用は叙述されない」という観察可能な本文記述へ限定し、D18の判断は他のScoped Contentから独立に記述する。",
+      "impact": "Content層とAnalysis層の責務境界が曖昧になり、後続AnalysisがContentに混入した結論を根拠に見える。",
+      "rationale": "EVD-002とEVD-004は物語内人物の視認・理解・異変を示すが、読者感染型一般を検証又は否定する資料ではない。これは、Scope内の出来事を再構成するContent unitではなく、D18等の分析で行うべき限定である。",
+      "severity": "Minor",
+      "summary": "CNT-010がEvidenceからのContent再構成ではなく、分析用の否定的判定をContent層へ混入させている。"
+    }
+  ],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryのみから、初期Scopeを2001年核に限定すべきこと、白い存在の正体不明性、視認・理解と兄の異変の関係、2003年型のScope外性、D17/D20の慎重なU判断に必要な構造を復元できる。",
+      "status": "PASS"
+    },
+    "blind_decode": "これは、投稿者が弟から聞いた、弟の友人A君の実体験だという形で語られる怪談である。A君が兄と田舎の家にいたとき、遠方に白い服の人らしいものが立ち、不自然に体を曲げてくねくね動くのが見える。兄はそれを見た後、何であるか分かったように見えるが、尋ねられても「分かった。でも、分からない方がいい」と答える。後に兄は知的障害になったと伝えられるが、正体、理解内容、因果は分からない。後年の別型では、投稿者が先行話と自分の子供時代の体験を混ぜたと明示し、秋田の田園で双眼鏡を使った兄が異変を示す。祖父は見てはならないと止め、兄は白い存在のようにくねくね動く状態となる。語り手も最後に禁じられた白いものを間近に見るが、その後は示されない。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "白い服の人らしいものが不自然に体を曲げてくねくね動く。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "遠方の白い人物らしい存在が不自然にくねくね動き、人体として不可能らしい方向へ曲がる。"
+      },
+      {
+        "blind_reconstruction": "兄は分かったように見えるが答えず、後に知的障害になったと伝えられる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "兄は理解したように見えた後、正体を答えず、後に知的障害になったと伝えられる。"
+      },
+      {
+        "blind_reconstruction": "正体は分からない。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "白い存在の正体は妖怪・霊等に固定できない。"
+      },
+      {
+        "blind_reconstruction": "投稿者が弟から聞いた、弟の友人A君の実体験だという形で語られる。",
+        "content_ref": "CNT-013",
+        "difference": "NONE",
+        "salient_meaning": "2001年型は投稿者→弟→A君というFOAF提示であり、独立確認ではない。"
+      },
+      {
+        "blind_reconstruction": "後年の別型では投稿者が先行話と自分の体験を混ぜたと明示する。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "2003年投稿者は先行話と自身の体験を混ぜたと明示する。"
+      },
+      {
+        "blind_reconstruction": "双眼鏡を使った兄が異変を示す。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "2003年型では兄が双眼鏡で詳しく見た後に異変を示す。"
+      },
+      {
+        "blind_reconstruction": "祖父は見てはならないと止める。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "祖父は見てはならないと警告する。"
+      },
+      {
+        "blind_reconstruction": "後年の別型に秋田、田園、双眼鏡、祖父が追加される。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "秋田・田園・双眼鏡・祖父・名称は2003年型の増補である。"
+      },
+      {
+        "blind_reconstruction": "兄は白い存在のようにくねくね動く状態となり、元の兄でなくなったように描かれる。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "兄は白い存在のように動き、元の兄ではないように描かれ、家族は当地に残す。"
+      },
+      {
+        "blind_reconstruction": "読者感染型の出来事は再構成されない。",
+        "content_ref": "CNT-010",
+        "difference": "NONE",
+        "salient_meaning": "読者が読むだけで作用する型ではないという否定的分析主張。"
+      },
+      {
+        "blind_reconstruction": "語り手は最後に禁じられた白いものを間近に見るが、その後は示されない。",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "語り手は禁じられた対象を間近に見るが、その後は不明である。"
+      },
+      {
+        "blind_reconstruction": "2000年候補の確度は未解決である。",
+        "content_ref": "CNT-012",
+        "difference": "NONE",
+        "salient_meaning": "2000年記録は原ページ未固定の候補であり、確定起源ではない。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "A君、兄、投稿者、弟、白い正体不明の存在、2003年型の祖父と語り手が区別できる。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "CNT-001、CNT-002、CNT-007、CNT-013"
+      },
+      {
+        "blind": "主な異変の受け手は対象を見て理解したように語る兄である。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "CNT-002、CNT-006、CNT-009"
+      },
+      {
+        "blind": "遠方の白い存在の異常な動きを目撃し、兄が見る／理解したように語ることが事件への入口である。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "CNT-001、CNT-002、CNT-006"
+      },
+      {
+        "blind": "因果源は白い正体不明の存在として示されるが、その存在論は開示されない。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "CNT-003"
+      },
+      {
+        "blind": "視認又は理解らしき認知の後に兄の重大な認知・行動上の異変が置かれる。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "CNT-002、CNT-006、CNT-009"
+      },
+      {
+        "blind": "2001年型と2003年型の両方で、異常な白い対象の発見から兄の変化へ進む。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "CNT-001、CNT-002、CNT-006、CNT-009"
+      },
+      {
+        "blind": "一回の遭遇の進行と、後に伝えられる兄の状態が区別される。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "CNT-002、CNT-009、CNT-011"
+      },
+      {
+        "blind": "2001年型では「分からない方がいい」、2003年型では祖父の「見てはならない」という禁忌が示される。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "CNT-002、CNT-007"
+      },
+      {
+        "blind": "2003年型には対象を見ないという警告があるが、2001年型には再現可能な対処手順はない。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "CNT-007"
+      },
+      {
+        "blind": "2003年型では兄が元の兄でなくなったように描かれ、語り手は禁じられた対象を間近に見る場面で終わる。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "CNT-009、CNT-011"
+      },
+      {
+        "blind": "白い存在の正体、兄の医学的因果、語り手の後日談、2000年候補の確度は未解決である。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "CNT-003、CNT-009、CNT-011、CNT-012"
+      },
+      {
+        "blind": "2001年のFOAF核と、混成を明示して詳細を増補した2003年型が別異伝として分かる。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "CNT-004、CNT-008、CNT-013"
+      }
+    ],
+    "reference_story": "2001年後代再録の「分からないほうがいい」型は、投稿者→弟→弟の友人A君というFOAF提示で、白い服の人物らしい存在の異常運動、兄の理解らしき発話、後に伝えられる知的障害を核とする。正体と因果は確定しない。2003年表示の「くねくね」型は、投稿者が先行話と自身の体験を混ぜたと明示するlater variantであり、秋田、田園、双眼鏡、祖父の警告、兄の模倣的運動と同一性喪失的描写、語り手の未確定終端を追加する。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Evidence→Contentの具体的再構成、summaryの情報保存、variant境界は良好である。一方、読者感染型を否定する分析的文をContent unitとして保持する点のみ修正を要する。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_10_contents.json",
+    "blob_sha": "3bbf81ed8b9c6cff03afab1d578944570c4965b3",
+    "commit_sha": "dfa38b35113050ccdd65af72b91c0bfbd467ada7",
+    "reviewed_at": "2026-09-30T14:25:51Z"
+  },
+  "verdict": "Minor"
+}

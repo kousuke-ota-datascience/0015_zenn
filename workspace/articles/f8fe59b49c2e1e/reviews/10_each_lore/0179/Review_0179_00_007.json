@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2000年3月5日の記録はSRC-003が指示する未固定候補としてのみ保持し、2001年再録を確定起源・原投稿と混同していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "EVD-001/002/011はSRC-001に再録された2001年本文、EVD-003〜009はSRC-002の2003年表示本文と整合する。いずれもparaphraseとしており、引用のように扱っていない。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "SRC-001/002をindirect_derivative、SRC-003をlater_summary_or_commentaryかつindirect_derivativeとし、原2ちゃんねるページ・直接保存連鎖が未固定であることを明示している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "公開中のSRC-001/002本文と既存Evidenceを照合した。2001年核のFOAF提示、白い人物の異常運動、理解らしき発話、後の知的障害、ならびに2003年混成型の詳細視認・祖父の警告・兄の模倣的状態・未確定終端はEvidence化されている。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001とSRC-002は現在も公開され、各々が2001年・2003年表示の本文を再録している。いずれも原スレッドの一次保存ではないという分類・留保は妥当。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "各Evidenceは対応Sourceの本文又はSRC-003の成立経路整理により支持される。2003年型の混成明示、禁忌、終端、2000年候補はいずれも過剰に確定化されていない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "白い存在の正体、兄の異変の現実医学的因果、2003年型の物理的変身、終盤の語り手の帰結、原ページ未固定を適切に留保している。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "Source→Evidence層は、後代再録への依存とその限界を明示した上で、初期核と2003年増補型を区別している。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "7ac88f9cb9af2060bbefcb3a66eac394947d16a0",
+    "commit_sha": "01813abb5d898deedbba41b67509fc7e0e7e0430",
+    "reviewed_at": "2026-09-30T14:25:51Z"
+  },
+  "verdict": "Pass"
+}

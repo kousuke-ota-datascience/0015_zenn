@@ -1,0 +1,121 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryとScoped Contentのどちらからも、2001年FOAF核、正体不明、理解・視認と異変の順序、回避規則及び特権保持者の不足、現実アンカー不在を同様に判断できる。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "Scope内の因果モデルは、異常な白い対象の視認と理解らしき認知が兄の後の異変に物語上接続される、正体未確定の危害として復元できる。直接の医学的因果を主張していない。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisの意味論的根拠はVAR-001に属するCNT-001/002/003/013に置かれている。2003年型の追加詳細をScope内のdimension値へ導入していない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "D12の対象選択だけが、D13の認知的危害とD15の認知領域帰結に対して不必要に一般的である。兄は直接の被害者としてより特定的にコードできる。",
+      "status": "FINDING"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみであり、L3を選んでいない。独立したX Evidenceを要する社会現実層を推定していない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19は公開掲示板Webという到達範囲を選び、全国的流通又はマス流通を主張していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者の記述不足をNO_ONE_KNOWSへ読み替えずUとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "資料ページや再録の実在性ではなく、Scope内の舞台が匿名の田舎に留まることからA0としている。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D12は兄を、主作用である認知的危害の直接の受け手として正しく捉えるが、より具体的なD12.OTH.VICTIM_TARGETではなくD12.OTH.SPECIFIC_OTHERを選んでいる。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "FOAF形式で匿名掲示板に投稿された怪談であるScoped Contentと、macro_category「ネット怪談」およびentry_type「物語・伝説」は整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "原投稿未固定及び伝聞提示に応じてIを使用し、医学的因果・超自然存在論・回避手順・情報保持者を確定していない。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "各dimensionのmanifestationとrationaleは概ねCNT-001/002/003/013で表現されたScope内の意味に追跡できる。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "後代再録由来のD02〜D20を主にIとし、発生年・変容・制御・情報保持者・存在論の支持不足をUとする判断はEvidence/Contentの確信度上限に整合する。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "D10の因果源をUとする理由は、白い存在の正体が未確定であり、既存taxonomyの特定存在論へ押し込めないためである。taxonomy gapの不当な使用はない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "2001年再録の確認可能な共有核をprimary Scopeとし、投稿者自身が混成を明示する2003年増補型を除外する選択は、Version Scope既定選択規則とScoped Contentに整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-002"
+      ],
+      "dimension_refs": [
+        "D12"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D12 PrimaryをD12.OTH.VICTIM_TARGETへ変更し、manifestationとrationaleを「認知的危害を直接受ける兄」と明示する。",
+      "impact": "D12→D13→D15の因果列における対象の意味的精度が下がるが、Scope、帰結領域、上位Parentは変わらない。",
+      "rationale": "D13のPrimaryは兄へのCOGNITION_TRIGGERED_HARM、D15のPrimaryは兄のMEMORY_COGNITIONである。Coding rulesのD12規則に従えば、主作用を直接受ける兄は単なる特定の他者ではなく、直接の被害対象である。",
+      "severity": "Minor",
+      "summary": "D12のPrimaryはD12.OTH.SPECIFIC_OTHERではなくD12.OTH.VICTIM_TARGETとするのが適切である。"
+    }
+  ],
+  "review_notes": "Scope選択、U/Iの慎重さ、後代型の遮断、D19〜D21の必須critical checkは適切である。D12のChild粒度のみ修正を要する。",
+  "review_seq": 7,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-013"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-011"
+    ],
+    "model": "Scope内で説明を要するのは、遠方に見える白い人物らしい対象の異常な運動と、その対象を見て正体を理解したように見える兄の後の認知的異変である。意味形成は直接視認された異常から始まり、兄の「分かった。でも、分からない方がいい」という発話によって、正体を開示せず知識化を禁じられた謎として保持される。原因の存在論は正体不明のままで、妖怪・霊・場所・自然過程等へ決定できない。",
+    "notes": "D07〜D11及びD13〜D16は概ねこの再構成と整合する。D12のみ、直接の危害を受ける兄をgenericなSPECIFIC_OTHERではなくVICTIM_TARGETとして表す方がtaxonomyの中心質問に適合する。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "3e4b17908ed746c7143c04baa1aebad78f425679",
+    "commit_sha": "f85082cbefe98721a3d99f4431c04ce2b6e8e165",
+    "reviewed_at": "2026-09-30T14:25:51Z"
+  },
+  "verdict": "Minor"
+}
