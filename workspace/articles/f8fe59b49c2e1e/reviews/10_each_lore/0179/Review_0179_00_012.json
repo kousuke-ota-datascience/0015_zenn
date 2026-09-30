@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2000年記録はSRC-003が指示する早期記録候補としてのみ保持され、確定起源・原投稿とは混同されていない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "再録本文と照合可能な2001年・2003年の記述はparaphraseとして慎重に要約され、原ページ未固定という限界も併記されている。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "全Sourceがindirect_derivativeであること、および直接保存連鎖・原ページが未固定であることを明示している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "3 Sourceに含まれる初期形・2003年混成形・後代付加、各形を区別する具体的要素、記録の直接性に関するsalient informationはEvidence層に抽出されている。",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001/002はいずれも後代転載、SRC-003は後代解説として適切に類型化され、一次資料としては扱われていない。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "各Evidenceは対応するSourceの本文・成立経路整理によって支持される範囲に留まり、正体・医学的因果・後代設定の初出を確定していない。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "対象の正体、視認と異変の現実医学的因果、2000年原ページ、後代派生の個別初出・安定性が適切に未確定として保存されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "Source→Evidence連鎖は、後代転載・後代解説への依存を過小評価せず、初期記録候補と確定起源を分離している。",
+  "review_seq": 12,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "55ea5e75d2dfef51590df05a94003c2ddfb83230",
+    "commit_sha": "6b7bfe60124c3b3f4aba8292f176df137637d80a",
+    "reviewed_at": "2026-09-30T15:37:01Z"
+  },
+  "verdict": "Pass"
+}

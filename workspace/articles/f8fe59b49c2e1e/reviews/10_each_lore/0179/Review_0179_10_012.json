@@ -1,0 +1,202 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "各Content Unitは参照Evidenceの範囲内で構成され、2003年要素を2001年型へ遡及していない。",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "抽象的な危害へ還元せず、窓越しの白い人物、兄の理解らしき発話、2003年形の双眼鏡・祖父・兄の模倣的運動・終端視認を具体的に再構成できる。",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "Evidence母集団を監査した結果、初期形の伝聞形式・窓越し観察・理解拒否・後続異変、2003年の混成宣言・増補要素・警告・終端、後代追加と記録限界はいずれもContent、variant又はuncertaintyとして保持されている。",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "P01〜P12で必要な人物、被作用者、条件、機序、終端、不確実性およびvariant境界を確認した。",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "summary.narrativeとsummary.structureのみから、二つの異なる伝承形、その具体的展開、不確実性、variant境界を再構成できる。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "正体、現実医学的因果、語り手の終端後、2000年記録、後代派生の個別初出・安定性が保持されている。",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001を2001年のFOAF原型、VAR-002を投稿者自身が混成を明示する2003年増補形として区別し、後代設定増殖を個別stable variantとして断定していない。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "summaryはD07〜D21の判断に必要な、正体不明性、目撃・理解らしき状態、兄の異変、FOAF提示、媒体・variant境界、現実アンカー欠如を保持している。",
+      "status": "PASS"
+    },
+    "blind_decode": "これは二層のネット怪談である。2001年型では、投稿者が弟から聞いた、弟の友人A君の実体験だという話として、A君と兄が家の窓から遠方の白い人影を見る。人影は人間らしくない曲がり方でくねくね動く。兄はそれが何か分かったらしいが、A君には「分からないほうがいい」と答え、後に知的障害になったと伝えられる。対象の正体は不明である。2003年の後代混成形では、秋田の祖母宅近くの田園で兄が双眼鏡により白い物体を詳しく見て異変を示す。祖父は見るなと警告し、兄は対象に似た動きをして以前の兄ではないように描かれ、家族は兄を残す。語り手も帰路に禁じられた対象を間近に見て終わるが、その後は示されない。2000年のより早い記録候補は原ページ未固定であり、黒い個体・水辺・正体説などは後代の付加である。",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "2001年型の窓越しの目撃と白い対象のくねくねした不自然な動きを再構成できる。",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "2001年型の家内・窓越しの白い人物と異常な屈曲運動。"
+      },
+      {
+        "blind_reconstruction": "兄の「分からないほうがいい」と後続異変、因果未確定を再構成できる。",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "兄の理解らしき発話、知識拒否、後に伝えられる知的障害、および因果留保。"
+      },
+      {
+        "blind_reconstruction": "正体不明として再構成できる。",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "白い存在の正体を固定しない。"
+      },
+      {
+        "blind_reconstruction": "弟を介したA君の実体験だというFOAF提示であり、独立確認ではないと再構成できる。",
+        "content_ref": "CNT-013",
+        "difference": "NONE",
+        "salient_meaning": "2001年型の投稿者→弟→A君というFOAF提示と独立確認でないこと。"
+      },
+      {
+        "blind_reconstruction": "2003年形は意図的混成・増補形として再構成できる。",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "2003年投稿者が先行話と自身の体験を混ぜたと明示したこと。"
+      },
+      {
+        "blind_reconstruction": "2003年型の田園での対象観察、双眼鏡、兄の異変を再構成できる。",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "2003年型の白い細長い対象、双眼鏡による詳細視認、兄の異変。"
+      },
+      {
+        "blind_reconstruction": "祖父の警告と、その知識の範囲が不確定であることを再構成できる。",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "祖父の「見てはならない」という警告と、完全な正体知識を断定しない留保。"
+      },
+      {
+        "blind_reconstruction": "これらを2001年型へ遡及しないvariant境界を再構成できる。",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "秋田・田園・双眼鏡・祖父・名称は2003年増補である。"
+      },
+      {
+        "blind_reconstruction": "兄が対象のように動き元の兄でないように描かれ、残されるが、物理的変身は未確定と再構成できる。",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "兄の模倣的運動、identity喪失的描写、家族の残置判断、物理的変身を断定しないこと。"
+      },
+      {
+        "blind_reconstruction": "語り手が禁じられた対象を間近に見て終わり、その後が不明と再構成できる。",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "語り手の終端視認とその後の未確定。"
+      },
+      {
+        "blind_reconstruction": "2000年候補の記録限界を再構成できる。",
+        "content_ref": "CNT-012",
+        "difference": "NONE",
+        "salient_meaning": "2000年早期記録候補は原ページ未固定で、確定起源ではない。"
+      },
+      {
+        "blind_reconstruction": "後代の設定・解釈の追加と、その個別初出・安定性が未固定であることを再構成できる。",
+        "content_ref": "CNT-014",
+        "difference": "NONE",
+        "salient_meaning": "黒い個体、水辺、目撃談、正体説は後代追加で、個別variantとして固定しない。"
+      }
+    ],
+    "probes": [
+      {
+        "blind": "2001年型の投稿者・弟・A君・兄、2003年型の語り手・兄・祖父・家族・白い対象を区別できる。",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "Content層の主要人物と役割はsummaryで保持される。"
+      },
+      {
+        "blind": "主たる異変を受けるのは、対象を理解したように描かれる兄である。",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "2001年型の後続異変と2003年型の兄の変化が保持される。"
+      },
+      {
+        "blind": "2001年型は窓越しの目撃、2003年型は遠方の対象の観察と双眼鏡による詳細視認から展開する。",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "両variantの異なる遭遇条件が保持される。"
+      },
+      {
+        "blind": "白い対象は正体不明であり、超自然的主体や現実的原因は確定しない。",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "causal_agent unknownと不確実性が保持される。"
+      },
+      {
+        "blind": "白い対象の異常な運動、兄の理解らしき状態の後の異変、2003年型での対象との行動的類似が機序として語られる。",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "機序の具体性と因果留保が保持される。"
+      },
+      {
+        "blind": "目撃から理解らしき発話・異変へ進み、2003年型では兄の模倣的運動と語り手の終端視認へ進む。",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "state_transitionの二つの系列が保持される。"
+      },
+      {
+        "blind": "一回の遭遇・叙述内の段階的展開であり、2003年型では帰路の終端場面まで続く。",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "temporal_structureと終端までの順序が保持される。"
+      },
+      {
+        "blind": "2001年型では「分からないほうがよい」という知識化の禁忌があり、2003年型では祖父が見るなと明示的に警告する。",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "rules_and_taboosがvariant別に保持される。"
+      },
+      {
+        "blind": "明示的な回避規則は2003年型の祖父の警告に限られ、2001年型には同じ手順がない。",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "avoidance_controlの限定が保持される。"
+      },
+      {
+        "blind": "2003年型では兄を当地に残し、語り手は禁じられた対象を間近に見たところで終わる。",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "兄の状態、家族の判断、語り手の終端が保持される。"
+      },
+      {
+        "blind": "対象の正体、医学的因果、語り手のその後、2000年候補の原ページ、後代設定の初出は未確定である。",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "uncertaintiesがsummaryに保存される。"
+      },
+      {
+        "blind": "2001年の名称未固定の原型と、2003年の意図的混成・増補形、さらに個別固定されない後代派生を区別できる。",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "variant_boundariesとnarrativeが同じ境界を保持する。"
+      }
+    ],
+    "reference_story": "Content層は、2001年後代再録のFOAF原型と、投稿者自身が先行話との混成を明示した2003年増補形を明確に区別する。前者ではA君と兄が家内の窓から遠方の白服の人物を目撃し、異常な屈曲運動、兄の理解らしき発話と知的障害が伝えられる。後者では秋田・田園・双眼鏡・祖父の警告・兄の模倣的運動・家族による残置・語り手の終端視認が加わる。どちらも正体と現実因果を確定せず、2000年候補と後代派生の記録限界も保存する。",
+    "verdict": "PASS"
+  },
+  "review_notes": "Evidence→Contentの抽出完全性、summaryの具体的再構成性、coverage_refs集合内部の保存性はいずれも確認された。",
+  "review_seq": 12,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_10_contents.json",
+    "blob_sha": "35aa16f6e3a0d4bbe83f090b5467bc700e930b80",
+    "commit_sha": "ca75922415fb45df4cf2cf03bc3ae4f91528c7be",
+    "reviewed_at": "2026-09-30T15:37:01Z"
+  },
+  "verdict": "Pass"
+}

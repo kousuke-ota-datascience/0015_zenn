@@ -1,0 +1,127 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryから、Scope、FOAF提示、正体不明性、目撃、理解らしき転換、兄の異変、媒体、現実アンカー欠如を再構成でき、D11のPrimary再判定を除けば主要分析可能性は維持される。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "D13のCOGNITION_TRIGGERED_HARMを採るなら、D11の中心的接触条件は単なる視覚的曝露ではなく、少なくとも理解・認識への移行として扱う必要がある。",
+      "status": "FINDING"
+    },
+    "content_layer_bypass": {
+      "notes": "Version Scopeと各Dimensionの意味論的根拠はCNT-001/002/003/013に表現されたScoped Contentから取得され、Source/Evidence固有の詳細を直接再導入していない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "兄という被作用者（D12）に対し、理解らしき認知状態に後続する認知的危害（D13）が語られ、認知領域の障害（D15）に至る因果列はScoped Contentと整合する。因果の現実的確定を主張していない点も妥当である。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみであり、L3の現実社会効果を選択していない。Scope内に独立X Evidenceもない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19.NET.OPEN_FORUM_WEBは公開掲示板という流通範囲を表すに留まり、全国的又は国際的な分布を主張していない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者を示す根拠不足をUとし、単なる不明をD20.UNK.NO_ONE_KNOWSへ読み替えていない。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "資料や投稿媒体の実在をアンカーとせず、Scope内の「田舎」という非特定描写に基づきD21.A0としている。",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D11は、兄とA君がともに視認する一方で、兄だけが対象を理解したように描かれ、その後に異変が語られる構造を十分に反映していない。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "ネット掲示板で流通する怪談としてのmacro_category「ネット怪談」とentry_type「物語・伝説」はScoped Contentに整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "主要な実質コードをIとし、後代転載・未固定原ページ・因果不確定というEvidence/Contentの支持上限を超えていない。",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "D11のrationaleは視認だけを直接確認可能な条件として優先するが、CNT-001/CNT-002が示すA君と兄の異なる後続状態、および兄の理解らしき転換をPrimary選択へ十分に反映していない。",
+      "status": "FINDING"
+    },
+    "status_reasoning": {
+      "notes": "D/I/Uの使い分けは概ね妥当であり、原資料が後代転載である制約をIへ反映し、根拠のない不可避性・情報保持者・現実アンカーを付与していない。",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "Scoped Contentの意味形成・因果構造は既存taxonomyの範囲で表現でき、taxonomy gapを要しない。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "最も早く直接内容を確認できる2001年型をScopeとし、因果条件・終端・回避規則を追加変更する2003年混成形を除外する選択はcoding rulesの既定Scopeに整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-001",
+        "CNT-002"
+      ],
+      "dimension_refs": [
+        "D11",
+        "D13"
+      ],
+      "evidence_refs": [
+        "EVD-001",
+        "EVD-002",
+        "EVD-012"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D11 PrimaryをD11.INF.UNDERSTAND_RECOGNIZEへIとして再評価し、視覚的曝露を独立構造として必要ならSecondaryに置く。理解と異変の因果が確定しないという留保はrationaleとstatus Iで保持する。",
+      "impact": "D11が伝承の中心的禁忌を単なる目撃一般へ平板化し、D11-D13間の因果的意味形成を弱める。",
+      "rationale": "CNT-001ではA君と兄がともに白い対象を視認する。CNT-002では兄だけが対象を「分かった」ように振る舞い、「分からないほうがいい」と述べた後に知的障害になったと伝えられる。視認は必要な物理的文脈だが、Scope内で害との選別的な連結を担うのは理解・認識らしき転換である。D13.COG.COGNITION_TRIGGERED_HARMの採用とも整合しない。",
+      "severity": "Moderate",
+      "summary": "D11のPrimaryが視覚的曝露のみとなっており、兄に固有の理解・認識への移行を発動・接触条件から除外している。"
+    }
+  ],
+  "review_notes": "Content→Analysisは概ね慎重であり、Scope外の2003年要素を初期形へ遡及していない。ただし理解・認識と後続異変の選別的連結をD11が取り逃しているため、再コードが必要である。",
+  "review_seq": 12,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-013"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D15"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-011",
+      "EVD-012"
+    ],
+    "model": "2001年型は、窓越しに見える白い人物様の異常な運動という未解決の対象を、直接の目撃を入口として提示する。A君と兄はいずれも対象を見るが、兄だけが「何か分かった」ように転じ、その内容を「分からないほうがよい」と閉ざす。その後に兄の認知的異変が伝えられる。したがって、意味形成は未知の存在／異常知覚（D07）、直接の目撃（D08）、禁じられた探究としての非開示（D09）、正体を固定しない異常体験（D10）からなり、害への中心的接触条件は視認一般よりも理解・認識への移行が適切である。",
+    "notes": "D07〜D10、D12〜D21は概ね再構成と整合するが、D11のPrimaryが因果上の選別条件を取り逃している。",
+    "status": "FINDING"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "d4f1383b48673c1ca27d28687e53205278b3f66a",
+    "commit_sha": "9076378fe60c2d9158e16c738cf1009f57f71241",
+    "reviewed_at": "2026-09-30T15:37:01Z"
+  },
+  "verdict": "Moderate"
+}
