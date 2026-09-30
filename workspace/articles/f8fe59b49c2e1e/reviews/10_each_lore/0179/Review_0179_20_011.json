@@ -1,0 +1,161 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "summaryから復元できる2001年型の意味構造は、D07〜D20の主要判断に必要な情報を保持する。",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "D12の兄→D13の認知に連接して語られる危害→D15の認知領域の障害という主因果列はScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "Analysisの主張はScopeに含まれるCNT-001、CNT-002、CNT-003、CNT-013で表現された意味に基づいており、Evidenceのみの2003年詳細を2001年Scopeの根拠として再導入していない。",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "兄が直接作用対象であり、理解らしき認知状態に後続する害として語られ、最終状態は知的障害という認知領域の変化として接続する。",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18はL1のみであり、L3を選んでいない。独立X Evidenceを要する主張はない。",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "公開掲示板であることをD19.NET.OPEN_FORUM_WEBとしており、全国流通とはコードしていない。",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "情報保持者が確認できないことをNO_ONE_KNOWSへ読み替えずUとしている。",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "実在資料の存在と現実アンカーを混同してはいないが、D21.A0をDとする直接性評価は後代転載というEvidence品質を超える。",
+      "status": "FINDING"
+    },
+    "dimension_semantics": {
+      "notes": "D04は変容を示すContentが存在するにもかかわらずUとしており、D08のSecondaryもPrimaryと独立した追加構造とはいえない。",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "macro_categoryのネット怪談とentry_typeの物語・伝説は、匿名掲示板で提示されるFOAF怪談というScoped Contentと整合する。",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "D21のみが後代転載由来の内容にDを与えており、coding rulesの下位資料はIとする原則に反する。",
+      "status": "FINDING"
+    },
+    "semantic_traceability": {
+      "notes": "主要dimensionのmanifestationとrationaleはScope内のCNT-001/002/003/013に遡れる。",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "D21はSRC-001の後代転載に依拠するためDではなくIが上限である。",
+      "status": "FINDING"
+    },
+    "taxonomy_gap": {
+      "notes": "D04.VAR.ACCRETIONを含め、必要な意味を表す既存taxonomy codeがある。",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "原ページ未固定の2000年候補を確定起源にせず、直接内容を確認できる最も早い安定核として2001年型を採る判断はcoding rulesの既定選択と整合する。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-004",
+        "CNT-008"
+      ],
+      "dimension_refs": [
+        "D04"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "D04を少なくともIとしてD04.VAR.ACCRETIONへ再評価する。2003年型の安定性やそれ以後の派生範囲は別途不確実性として限定する。",
+      "impact": "伝承の成立・変容構造を不明として処理し、明示済みの混成・増補という形成史を分析から失わせる。",
+      "rationale": "CNT-004は投稿者が先行する話と自身の体験を混ぜて詳述したと明示し、CNT-008およびVAR-002は秋田、双眼鏡、祖父、名称等が2003年型の増補要素であると示す。これはD04の変容パターンに直接関わるContentであり、変化を示すH Evidenceがない場合だけUとする規則に該当しない。既存taxonomyにはD04.VAR.ACCRETIONがある。",
+      "severity": "Moderate",
+      "summary": "D04をUとする判断は、Contentが明示する2001年原型から2003年混成・増補への変容と整合しない。"
+    },
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-001"
+      ],
+      "dimension_refs": [
+        "D08"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "D08.DEX.PERCEPTUAL_ANOMALY Secondaryを削除し、D08.DEX.DIRECT_EVENTのみとする。",
+      "impact": "Secondaryが独立構造ではなくPrimaryの言い換えとなり、H3 Secondaryの操作規則を満たさない。",
+      "rationale": "CNT-001の意味形成契機は、窓越しに白い対象の異常な動きを見るという単一の直接視認イベントである。異常知覚はそのイベントの性質であり、Primaryだけでは失われる別個の契機を示すEvidenceはない。",
+      "severity": "Minor",
+      "summary": "D08のPERCEPTUAL_ANOMALY SecondaryはDIRECT_EVENT Primaryと独立した追加構造として示されていない。"
+    },
+    {
+      "category": "status_reasoning",
+      "content_refs": [
+        "CNT-001"
+      ],
+      "dimension_refs": [
+        "D21"
+      ],
+      "evidence_refs": [
+        "EVD-001"
+      ],
+      "finding_id": "F003",
+      "fix_direction": "D21のcode D21.A0は維持しつつstatusをIへ変更し、後代再録に基づく限定をrationaleへ残す。",
+      "impact": "D21だけEvidence品質に対して過大な確信度となり、statusの比較可能性を損なう。",
+      "rationale": "D21の『特定可能な現実アンカーを持たない』という判断自体はCNT-001に整合する。しかしCNT-001の根拠であるEVD-001はSRC-001の後代再録で、SRC-001はindirect_derivativeと明記される。coding rulesは下位資料しかない場合にIとする。",
+      "severity": "Minor",
+      "summary": "D21.A0のstatus Dは、後代転載にのみ依拠するEvidenceの直接性を超えている。"
+    }
+  ],
+  "review_notes": "Scope選択、主要なsense-making、因果列、D18〜D20の限定は妥当である。修正対象は、Scope外として扱われたlater variantをD04の変容次元からも不当に除外した点、D08 Secondaryの重複、D21のEvidence直接性評価である。",
+  "review_seq": 11,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-013"
+    ],
+    "dimension_refs": [
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ],
+    "evidence_refs": [
+      "EVD-001",
+      "EVD-002",
+      "EVD-011",
+      "EVD-012"
+    ],
+    "model": "2001年Scopeでは、意味形成対象は窓外に見える正体不明で人間らしくない白い存在／その異常な運動である。意味形成の契機はその直接視認であり、兄が理解したように見えた後に『分からないほうがいい』と知識化を拒むため、伝承は正体を解決せず禁じられた未知として対象を把握させる。原因主体の種別は固定されないが、対象の異常な視認と後続する兄の異変を結ぶ異常体験として構成される。",
+    "notes": "D07〜D10の主コードはScoped Contentから独立に再構成しても概ね支持される。",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "bf8005cc98751f669cb3123b476636bc375564fc",
+    "commit_sha": "a0acf6b405d7c6c0cbb532514cd6fe0036dcf35e",
+    "reviewed_at": "2026-09-30T15:23:26Z"
+  },
+  "verdict": "Moderate"
+}

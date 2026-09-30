@@ -1,0 +1,58 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "2000年3月5日は後代資料が指示する早期記録候補にとどめ、確定起源・直接確認済み原投稿と混同していない。",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "確認できた転載本文の2001年・2003年の記述と、Evidenceのparaphraseおよび不確実性注記は整合する。",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "原スレッド・2000年原ページ未固定であること、各Web資料がindirect_derivativeであることを保持している。",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "SRC-003は2003年以降に黒い個体、水辺への出現、民俗説・熱中症説等の追加解釈・派生があると記すが、Evidence層には2001→2003の差分しか抽出されていない。後続の派生を個別variantとして採用するかは別判断でも、少なくとも後続の設定増殖が同資料により主張されることはEvidence化すべきである。",
+      "status": "FINDING"
+    },
+    "source_assessment": {
+      "notes": "SRC-001/SRC-002はいずれも後代転載、SRC-003は後代解説であり、canonicalはこの資料階層を概ね明示している。",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "既存EVDは各SRCが示す2001年原型、2003年混成型、早期記録候補の主張を過度に強めずに表現している。",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "原ページ未固定、2000年記録の間接性、白い存在の正体、および現実医学的因果の不明性が保持されている。",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "salient_evidence_completeness",
+      "finding_id": "F001",
+      "fix_direction": "SRC-003の該当箇所を、後続派生・設定増殖が報告されるという限定付きH Evidenceとして追加する。個別派生の内容・安定性を当該資料だけで確定しないことも併記する。",
+      "impact": "00→10→20の連鎖では、伝承が二つの型だけで尽きるかのように読め、D04の変容パターンおよびlater variantの完全な再評価を阻害する。",
+      "rationale": "SRC-003は2001年原型と2003年混成型だけでなく、2003年以降に黒い個体、水辺、民俗的関連、熱中症説などの後続要素・解釈が加わったと明示する。これは伝承の変容史とvariant境界を評価するうえでsalientであるが、EVD-001〜012には対応するEvidenceがない。",
+      "severity": "Moderate",
+      "source_refs": [
+        "SRC-003"
+      ],
+      "summary": "SRC-003が述べる2003年以降の派生・設定増殖がEvidence層から脱落している。"
+    }
+  ],
+  "review_notes": "既存Evidenceの正確性と不確実性保持は概ね良好である。一方、使用済みのSRC-003が示す後続変容史の抽出漏れがある。",
+  "review_seq": 11,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "bd89a4e834dd6abafb3343e285b81a8ca021af6f",
+    "commit_sha": "88b20d5b1fac2caec6c8dd6a03ff2bf16b8805f0",
+    "reviewed_at": "2026-09-30T15:23:26Z"
+  },
+  "verdict": "Moderate"
+}
