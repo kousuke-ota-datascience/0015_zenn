@@ -43,19 +43,17 @@
       "dimension_id": "D02",
       "status": "I",
       "primary": {
-        "code_id": "D02.WEB.FORUM",
+        "code_id": "D02.WEB.WEBSITE",
         "parent_id": "D02.WEB"
       },
       "secondary": [],
-      "rationale": "2001年レス212は後代Web再録から確認するため、媒体写像は可能だがDirectとはしない。",
-      "manifestation": "初期確認形は匿名Web掲示板の怪談投稿である。",
+      "rationale": "後代解説は、2000年3月5日の怪談投稿サイト掲載を2001年の2ちゃんねる再掲より早い原型記録として整理する。原ページは未固定のため、最古確認媒体はwebsiteとIで扱う。",
+      "manifestation": "現在確認できる最古の記録は、2000年に怪談投稿サイトへ掲載されたとされる『分からないほうがいい』である。",
       "content_refs": [
-        "CNT-001",
-        "CNT-002"
+        "CNT-012"
       ],
       "evidence_refs": [
-        "EVD-001",
-        "EVD-002"
+        "EVD-010"
       ],
       "taxonomy_gap": {
         "present": false
@@ -68,16 +66,23 @@
         "code_id": "D03.WEB.FORUM",
         "parent_id": "D03.WEB"
       },
-      "secondary": [],
-      "rationale": "primary Scopeの2001年型は後代再録で確認する匿名掲示板投稿である。再録記事は現在のEvidence取得経路であり、このScope内で受容者へ流通した別媒体としては数えない。",
-      "manifestation": "primary Scopeでは匿名Web掲示板投稿として流通する。",
+      "secondary": [
+        {
+          "code_id": "D03.ORL.FAMILY_ORAL",
+          "parent_id": "D03.ORL"
+        }
+      ],
+      "rationale": "primary Scopeの2001年型は後代再録で確認する匿名掲示板投稿であり、Scope成立に構造的に不可欠なためPrimaryとする。投稿者→弟→A君という明示された伝聞経路は、別個の家族内FOAF流通としてSecondaryとする。再録記事は現在のEvidence取得経路であり、このScope内で受容者へ流通した別媒体としては数えない。",
+      "manifestation": "primary Scopeでは匿名Web掲示板投稿として流通し、投稿者が弟から聞いた話として提示される家族内の伝聞経路も併存する。",
       "content_refs": [
         "CNT-001",
-        "CNT-002"
+        "CNT-002",
+        "CNT-013"
       ],
       "evidence_refs": [
         "EVD-001",
-        "EVD-002"
+        "EVD-002",
+        "EVD-011"
       ],
       "taxonomy_gap": {
         "present": false
