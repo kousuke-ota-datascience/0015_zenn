@@ -1,0 +1,196 @@
+{
+  "artifact": "10",
+  "checks": {
+    "evidence_content_support": {
+      "notes": "Content units accurately reconstruct the evidence while distinguishing reported lore from externally verified fact.",
+      "status": "PASS"
+    },
+    "narrative_reconstruction": {
+      "notes": "The summary permits reconstruction of concrete events rather than merely the later analysis categories.",
+      "status": "PASS"
+    },
+    "salient_content_completeness": {
+      "notes": "Review of EVD-001–011 found salient actors, event order, FOAF chain, unidentified object, warnings, variant-specific additions, outcomes, and evidential limits represented in Content.",
+      "status": "PASS"
+    },
+    "structural_probe": {
+      "notes": "All P01–P12 are represented in the reconstruction record below.",
+      "status": "PASS"
+    },
+    "summary_reconstruction": {
+      "notes": "The narrative and structure preserve the 2001 core, FOAF presentation, uncertainty, and the separately bounded 2003 expansion.",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "The summary preserves unresolved ontology, non-verification of the reported experience, uncertain causal mechanism, and unresolved narrator outcome.",
+      "status": "PASS"
+    },
+    "variant_boundary": {
+      "notes": "VAR-001 and VAR-002 are distinguished without retrojecting Akita, binoculars, grandfather, naming, or terminal transformation into the earlier form.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "reconstruction": {
+    "analysis_invariance": {
+      "notes": "The summary preserves the scoped early-form facts needed to assess ontology uncertainty, visual/recognition conditions, negative cognitive outcome, episodic structure, presentation, and variant exclusion.",
+      "status": "PASS"
+    },
+    "blind_decode": "A poster presents a purported true story heard through the poster’s brother and the brother’s friend A. In the early form, A and A’s older brother see a distant white-clothed human-like figure bend and move in an inhuman, writhing way. The older brother seems to understand what it is but refuses to explain, saying it would be better not to know; he is later said to have developed an intellectual disability. The being remains unidentified. A later, expressly mixed retelling locates a similar incident near a grandmother’s rural home in Akita: binocular viewing is followed by the brother’s severe behavioral change, a grandfather warns against looking, the brother moves like the white thing and is left behind, and the narrator finally looks at the forbidden object, with no stated later outcome.",
+    "coverage_audit": [
+      {
+        "blind_reconstruction": "The anomalous white figure and abnormal writhing motion are reconstructed.",
+        "content_ref": "CNT-001",
+        "difference": "NONE",
+        "salient_meaning": "Distant white human-like figure moves and bends inhumanly."
+      },
+      {
+        "blind_reconstruction": "Recognition, refusal, later reported disability, and uncertainty are reconstructed.",
+        "content_ref": "CNT-002",
+        "difference": "NONE",
+        "salient_meaning": "Older brother apparently understands, refuses disclosure, and is later reported intellectually disabled; causation is not externally established."
+      },
+      {
+        "blind_reconstruction": "The figure remains unidentified.",
+        "content_ref": "CNT-003",
+        "difference": "NONE",
+        "salient_meaning": "The being’s ontology is not fixed."
+      },
+      {
+        "blind_reconstruction": "The poster-to-brother-to-A chain and non-verification are reconstructed.",
+        "content_ref": "CNT-013",
+        "difference": "NONE",
+        "salient_meaning": "The 2001 presentation is a FOAF chain, not independent verification."
+      },
+      {
+        "blind_reconstruction": "The later retelling is described as expressly mixed.",
+        "content_ref": "CNT-004",
+        "difference": "NONE",
+        "salient_meaning": "The 2003 author expressly mixed an earlier story with childhood experience."
+      },
+      {
+        "blind_reconstruction": "Binocular viewing and subsequent behavioral change are reconstructed.",
+        "content_ref": "CNT-006",
+        "difference": "NONE",
+        "salient_meaning": "The later brother uses binoculars and then shows major abnormality."
+      },
+      {
+        "blind_reconstruction": "The later warning is reconstructed.",
+        "content_ref": "CNT-007",
+        "difference": "NONE",
+        "salient_meaning": "The grandfather warns against looking."
+      },
+      {
+        "blind_reconstruction": "The later additions are treated as variant-specific.",
+        "content_ref": "CNT-008",
+        "difference": "NONE",
+        "salient_meaning": "Akita, farmland, binoculars, grandfather, and name are later additions."
+      },
+      {
+        "blind_reconstruction": "The behavioral echo, apparent identity loss, and family disposition are reconstructed.",
+        "content_ref": "CNT-009",
+        "difference": "NONE",
+        "salient_meaning": "The later brother writhes like the figure, appears no longer himself, and is left behind."
+      },
+      {
+        "blind_reconstruction": "The final viewing and unresolved outcome are reconstructed.",
+        "content_ref": "CNT-011",
+        "difference": "NONE",
+        "salient_meaning": "The later narrator sees the forbidden object at the end, with no stated subsequent fate."
+      },
+      {
+        "blind_reconstruction": "The early-record limitation is reconstructed.",
+        "content_ref": "CNT-012",
+        "difference": "NONE",
+        "salient_meaning": "The 2000 early record is only a secondary-source-indicated candidate."
+      }
+    ],
+    "probes": [
+      {
+        "blind": "Poster, brother, A, A’s older brother, unidentified white figure, and in the later form a narrator, grandfather, and family are recoverable.",
+        "difference": "NONE",
+        "probe_id": "P01",
+        "reference": "Primary and later roles are explicitly listed and narrated."
+      },
+      {
+        "blind": "The directly affected person in the early form is A’s older brother; the later narrator may also face danger but has no stated outcome.",
+        "difference": "NONE",
+        "probe_id": "P02",
+        "reference": "Affected-target and terminal-state fields preserve this distinction."
+      },
+      {
+        "blind": "A distant visual encounter with a white, abnormally moving figure initiates the early event.",
+        "difference": "NONE",
+        "probe_id": "P03",
+        "reference": "CNT-001 and the structured entry trigger state this."
+      },
+      {
+        "blind": "No settled causal agent or ontology can be reconstructed beyond an unidentified white figure.",
+        "difference": "NONE",
+        "probe_id": "P04",
+        "reference": "Causal agent is marked unknown and ontology uncertainty is retained."
+      },
+      {
+        "blind": "Recognition or close observation is narratively followed by the brother’s abnormal condition, without a medically established mechanism.",
+        "difference": "NONE",
+        "probe_id": "P05",
+        "reference": "Mechanism field preserves both sequence and causal uncertainty."
+      },
+      {
+        "blind": "The early sequence runs from sighting to apparent recognition/refusal to a later reported disability; the later form adds behavioral transformation-like depiction.",
+        "difference": "NONE",
+        "probe_id": "P06",
+        "reference": "State-transition field separates the two versions."
+      },
+      {
+        "blind": "The story is a one-encounter sequence; the disability is reported afterward, while later-form scenes proceed in order.",
+        "difference": "NONE",
+        "probe_id": "P07",
+        "reference": "Temporal structure and state transition preserve order."
+      },
+      {
+        "blind": "The earlier line makes knowledge dangerous; the later grandfather explicitly says not to look.",
+        "difference": "NONE",
+        "probe_id": "P08",
+        "reference": "Rules/taboos distinguish early implication from later explicit warning."
+      },
+      {
+        "blind": "Only the later form presents a concrete avoidance warning; the early form does not provide a reproducible control procedure.",
+        "difference": "NONE",
+        "probe_id": "P09",
+        "reference": "Avoidance-control field states this boundary."
+      },
+      {
+        "blind": "The early brother’s reported disability is terminal for the early account; the later form ends with the altered brother left behind and a final forbidden sighting.",
+        "difference": "NONE",
+        "probe_id": "P10",
+        "reference": "Terminal-state field preserves both outcomes and limits."
+      },
+      {
+        "blind": "The figure’s identity, real causation, source provenance, and the later narrator’s fate remain unresolved.",
+        "difference": "NONE",
+        "probe_id": "P11",
+        "reference": "Uncertainties field preserves each limit."
+      },
+      {
+        "blind": "The early unnamed FOAF story and the later named, mixed, expanded story are distinguishable.",
+        "difference": "NONE",
+        "probe_id": "P12",
+        "reference": "Variant boundaries explicitly identify VAR-001 and VAR-002."
+      }
+    ],
+    "reference_story": "The content layer preserves an earliest directly content-confirmable 2001 reprint of the unnamed “better not to know” form, presented as FOAF rather than independent fact. It contains a white human-like figure seen from a rural house, its inhuman writhing motion, the older brother’s apparent recognition and refusal to disclose, and the later reported intellectual disability. It separately preserves a 2003 displayed repost whose author says it mixes the earlier story with childhood experience; this later form adds Akita, farmland, binoculars, a grandfather’s warning, the brother’s writhing behavior and apparent loss of former identity, family abandonment/management, and an unresolved final viewing by the narrator. The 2000 record remains only a secondary-source-indicated early-record candidate.",
+    "verdict": "PASS"
+  },
+  "review_notes": "Evidence-to-content and summary reconstruction review found no omitted salient meaning in the frozen Content layer.",
+  "review_seq": 8,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_10_contents.json",
+    "blob_sha": "d72240ba6fcb9fb7f623ecfa73ea51ee8513df18",
+    "commit_sha": "c7f7e6ab1dcfecaaaf1257be8d5bbefb7b3040c7",
+    "reviewed_at": "2026-09-30T14:37:53Z"
+  },
+  "verdict": "Pass"
+}

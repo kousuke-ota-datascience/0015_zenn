@@ -1,0 +1,45 @@
+{
+  "artifact": "00",
+  "checks": {
+    "earliest_attestation": {
+      "notes": "The 2000-03-05 record is retained only as a secondary-source-indicated early-record candidate, not asserted as a verified origin.",
+      "status": "PASS"
+    },
+    "evidence_integrity": {
+      "notes": "The paraphrased EVD-001/002/011 and EVD-003–009 claims match the reprinted texts without treating them as independently verified events.",
+      "status": "PASS"
+    },
+    "primary_source_relation": {
+      "notes": "The artifacts consistently preserve that original 2channel pages and a direct preservation chain are not fixed.",
+      "status": "PASS"
+    },
+    "salient_evidence_completeness": {
+      "notes": "The source-level salient population includes the early-record claim, FOAF transmission, core 2001 sequence, and the 2003 mixed/expanded variant; these are represented as evidence.",
+      "status": "PASS"
+    },
+    "source_assessment": {
+      "notes": "SRC-001/SRC-002 are explicitly classified as indirect later reprints; SRC-003 as later commentary. Current public pages support those classifications.",
+      "status": "PASS"
+    },
+    "source_evidence_support": {
+      "notes": "The cited sources support the evidence claims, including the 2001 FOAF framing, 2003 self-described mixture, and later-added elements.",
+      "status": "PASS"
+    },
+    "uncertainty_preservation": {
+      "notes": "Uncertainty concerning source directness, ontology, real-world causation, and later-versus-earlier elements is retained.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [],
+  "review_notes": "Source-to-evidence review found no semantic correction requiring an upstream artifact change.",
+  "review_seq": 8,
+  "schema_version": "1.1",
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_00_sources.json",
+    "blob_sha": "7ac88f9cb9af2060bbefcb3a66eac394947d16a0",
+    "commit_sha": "01813abb5d898deedbba41b67509fc7e0e7e0430",
+    "reviewed_at": "2026-09-30T14:37:53Z"
+  },
+  "verdict": "Pass"
+}

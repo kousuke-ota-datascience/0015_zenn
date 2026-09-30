@@ -1,0 +1,143 @@
+{
+  "artifact": "20",
+  "checks": {
+    "analysis_invariance": {
+      "notes": "The summary and complete scoped Content support the main early-core analysis without use of excluded 2003 details.",
+      "status": "PASS"
+    },
+    "causality": {
+      "notes": "The analysis appropriately distinguishes narrated succession from real-world medical causation and retains indeterminate causal ontology.",
+      "status": "PASS"
+    },
+    "content_layer_bypass": {
+      "notes": "No analysis rationale depends on a semantic detail absent from the selected CNT-001/002/003/013 scope.",
+      "status": "PASS"
+    },
+    "d12_d13_d15_causal_chain": {
+      "notes": "The chain is coherent at the narrative level: the older brother is the target, the story presents cognition-associated harm, and the stated outcome is cognitive impairment. The analysis does not claim externally established causation.",
+      "status": "PASS"
+    },
+    "d18_scope_independent_x_evidence": {
+      "notes": "D18 is limited to L1; no L3 claim is made and no X-evidence is required.",
+      "status": "PASS"
+    },
+    "d19_publicability_vs_national_distribution": {
+      "notes": "D19 codes open-forum Web circulation rather than inferring national dissemination from publication.",
+      "status": "PASS"
+    },
+    "d20_missing_info_vs_no_one_knows": {
+      "notes": "D20 correctly uses U rather than NO_ONE_KNOWS.",
+      "status": "PASS"
+    },
+    "d21_reality_anchor": {
+      "notes": "D21.A0 correctly concerns the anonymous rural setting in the scoped form, not the existence of source webpages.",
+      "status": "PASS"
+    },
+    "dimension_semantics": {
+      "notes": "D02 does not account for the artifact’s own secondary-source-supported 2000 posting-site record; D03 also omits the explicit interpersonal FOAF transmission channel.",
+      "status": "FINDING"
+    },
+    "entry_classification": {
+      "notes": "「ネット怪談」 and 「物語・伝説」 fit the scoped online horror narrative.",
+      "status": "PASS"
+    },
+    "evidence_confidence_ceiling": {
+      "notes": "The analysis normally remains at I where it relies on indirect reprints and does not elevate lore claims to verified fact.",
+      "status": "PASS"
+    },
+    "semantic_traceability": {
+      "notes": "Except for the D02/D03 medium interpretation finding, dimension rationales are traceable to scoped Content.",
+      "status": "PASS"
+    },
+    "status_reasoning": {
+      "notes": "I statuses generally reflect indirect reprint evidence; U is appropriately retained where the content does not establish ontology, control, or privileged information.",
+      "status": "PASS"
+    },
+    "taxonomy_gap": {
+      "notes": "Available taxonomy values accommodate the scoped content; no unsupported taxonomy gap is needed.",
+      "status": "PASS"
+    },
+    "version_scope": {
+      "notes": "Selecting the 2001 stable shared core is defensible because the alleged 2000 record is not directly fixed and the 2003 form adds rule-changing and terminal structure.",
+      "status": "PASS"
+    }
+  },
+  "entry_id": "0179",
+  "findings": [
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-012"
+      ],
+      "dimension_refs": [
+        "D02"
+      ],
+      "evidence_refs": [
+        "EVD-010"
+      ],
+      "finding_id": "F001",
+      "fix_direction": "Reassess D02 against CNT-012/EVD-010. If the 2000 record is accepted at its stated indirect confidence, code D02.WEB.WEBSITE with status I and explicitly retain the unresolved original-page provenance; otherwise explain why it cannot support any medium determination rather than silently bypassing it.",
+      "impact": "The earliest-attestation medium is misclassified as forum rather than an indirectly evidenced website/posting site, obscuring the documented pre-2channel circulation route.",
+      "rationale": "CNT-012, derived from EVD-010, states that a later source identifies a 2000-03-05 publication on a 怪談投稿サイト as earlier than the 2001 forum repost. The source is indirect, so the status should remain I, but D02 asks for the earliest presently evidenced medium, not only the earliest directly content-confirmed scoped variant.",
+      "severity": "Moderate",
+      "summary": "D02 incorrectly treats the 2001 forum repost as the earliest confirmed circulation medium despite a retained 2000 posting-site early record."
+    },
+    {
+      "category": "dimension_semantics",
+      "content_refs": [
+        "CNT-013"
+      ],
+      "dimension_refs": [
+        "D03"
+      ],
+      "evidence_refs": [
+        "EVD-011"
+      ],
+      "finding_id": "F002",
+      "fix_direction": "Retain D03.WEB.FORUM as primary if preferred, and add the best-supported interpersonal secondary medium, likely D03.ORL.FAMILY_ORAL, at I with a rationale limited to the explicitly narrated transmission chain.",
+      "impact": "The scope’s mixed forum-plus-interpersonal circulation profile is underrepresented.",
+      "rationale": "CNT-013 explicitly presents the 2001 story as poster → sibling → sibling’s friend/A’s experience. Coding rules include FOAF interpersonal circulation in D03 and permit up to two secondary media. The forum is reasonably primary because it is structurally indispensable to this scoped attestation, but the described interpersonal chain is an independent additional circulation structure.",
+      "severity": "Minor",
+      "summary": "D03 omits the scoped FOAF interpersonal transmission channel as a secondary medium."
+    }
+  ],
+  "review_notes": "Content-to-analysis review identifies one moderate earliest-medium error and one minor omission in the scoped distribution portfolio.",
+  "review_seq": 8,
+  "schema_version": "1.1",
+  "sensemaking_reconstruction": {
+    "content_refs": [
+      "CNT-001",
+      "CNT-002",
+      "CNT-003",
+      "CNT-013"
+    ],
+    "dimension_refs": [
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D20",
+      "D21"
+    ],
+    "model": "Scoped Content presents a FOAF-framed anomalous visual encounter: an unidentified white human-like figure is perceived moving in a physically implausible way; the older brother appears to recognize its nature but marks that knowledge as unsafe and refuses disclosure; a later reported cognitive disability supplies the negative narrated consequence. Thus the central sense-making sequence is unknown existence/anomalous perception → direct visual encounter → forbidden inquiry, while causal ontology remains indeterminate rather than supernatural by default.",
+    "notes": "The reconstruction uses only scoped Content and retains the distinction between narrative presentation and externally verified causation.",
+    "status": "PASS"
+  },
+  "target": {
+    "artifact_path": "workspace/articles/f8fe59b49c2e1e/docs/10_each_lore/0179_kunekune/0179_20_analysis.json",
+    "blob_sha": "9c7770967449b0e4230de0338504218c90e1e3f9",
+    "commit_sha": "e0f07c8f913f7c67a13c577c227fdc1eb571f200",
+    "reviewed_at": "2026-09-30T14:37:53Z"
+  },
+  "verdict": "Moderate"
+}
